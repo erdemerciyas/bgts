@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 interface HeroProps {
     title: string
@@ -17,6 +18,7 @@ interface HeroProps {
     layout?: "simple" | "split"
     image?: React.ReactNode
     videoSrc?: string
+    backgroundImage?: string
 }
 
 export default function Hero({
@@ -30,7 +32,8 @@ export default function Hero({
     className,
     layout = "simple",
     image,
-    videoSrc
+    videoSrc,
+    backgroundImage
 }: HeroProps) {
 
     if (layout === "split") {
@@ -135,7 +138,20 @@ export default function Hero({
                         )}
 
                         {/* Dark Overlay for Text Readability */}
-                        <div className="absolute inset-0 bg-slate-900/40" />
+                        <div className="absolute inset-0 bg-slate-900/60" />
+                    </>
+                ) : backgroundImage ? (
+                    <>
+                        <div className="absolute inset-0">
+                            <Image
+                                src={backgroundImage}
+                                alt="Hero Background"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+                        <div className="absolute inset-0 bg-slate-900/70" />
                     </>
                 ) : (
                     <>
@@ -169,7 +185,7 @@ export default function Hero({
                     transition={{ delay: 0.1 }}
                     className={cn(
                         "max-w-4xl mx-auto mb-6 text-5xl font-extrabold tracking-tight md:text-7xl font-heading leading-tight",
-                        videoSrc ? "text-white" : "text-slate-900"
+                        (videoSrc || backgroundImage) ? "text-white" : "text-slate-900"
                     )}
                 >
                     {title}
@@ -181,7 +197,7 @@ export default function Hero({
                     transition={{ delay: 0.2 }}
                     className={cn(
                         "max-w-2xl mx-auto mb-10 text-xl leading-relaxed",
-                        videoSrc ? "text-slate-200" : "text-slate-600"
+                        (videoSrc || backgroundImage) ? "text-slate-200" : "text-slate-600"
                     )}
                 >
                     {subtitle}

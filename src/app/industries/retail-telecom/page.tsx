@@ -2,114 +2,201 @@
 
 import Hero from "@/components/ui/Hero"
 import ContentSection from "@/components/ui/ContentSection"
-import { ShoppingBag, Signal, Globe, Zap, Users, CheckCircle2 } from "lucide-react"
+import Breadcrumb from "@/components/ui/Breadcrumb"
+import CaseStudyCard from "@/components/ui/CaseStudyCard"
+import { ShoppingBag, Signal, Globe, Zap, Users, CheckCircle2, TrendingUp } from "lucide-react"
 
 export default function RetailTelecomPage() {
     return (
         <>
-            <Hero
-                title="Perakende & Telekom"
-                subtitle="Yüksek hacimli, tüketici odaklı sektörler için ölçeklenebilir, yüksek performanslı çözümler."
-                badge="Yüksek Hacim"
-                className="bg-gradient-to-r from-orange-50 to-pink-50"
-            />
+            <div className="bg-white min-h-screen">
+                <Breadcrumb
+                    items={[
+                        { label: "Sektörler", href: "/industries", icon: Globe },
+                        { label: "Perakende & Telekom", href: "/industries/retail-telecom", icon: ShoppingBag }
+                    ]}
+                />
 
-            {/* Retail / E-Commerce Case Studies */}
-            <ContentSection
-                title="E-Ticaret & Perakende"
-                badge="Başarı Hikayeleri"
-                content={
-                    <div className="space-y-8">
-                        <p>
-                            Hızla büyüyen e-ticaret sektöründe; sürdürülebilirlik, güvenlik ve değişen taleplere hızlı yanıt verme zorluklarını çözüyoruz. Pazar liderleri için eğitim maliyetlerini düşüren ve 7/24 kesintisiz hizmet sağlayan çözümler sunuyoruz.
-                        </p>
+                <Hero
+                    title="Perakende & Telekom"
+                    subtitle="Yüksek hacimli, tüketici odaklı sektörler için ölçeklenebilir, yüksek performanslı çözümler."
+                    badge="Yüksek Hacim"
+                    className="bg-indigo-900"
+                    backgroundImage="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80"
+                />
 
-                        <div className="bg-white p-6 rounded-xl border border-orange-100 shadow-sm">
-                            <h4 className="text-lg font-bold text-orange-600 mb-2 flex items-center gap-2">
-                                <ShoppingBag className="w-5 h-5" /> Örnek: Trendyol Uyumlu B2B
-                            </h4>
-                            <p className="text-sm text-slate-600 mb-3">
-                                E-ticaret devinin binlerce iş ortağıyla sorunsuz etkileşim kurmasını sağlayan, destek portalı gibi çalışan merkezi bir B2B platformu geliştirdik.
+                <div className="container mx-auto px-6 py-20">
+                    {/* Retail Section */}
+                    <div className="mb-24">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl font-bold mb-4 font-heading text-slate-900">
+                                E-Ticaret & Perakende
+                            </h2>
+                            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+                                Hızla büyüyen e-ticaret sektöründe; sürdürülebilirlik, güvenlik ve değişen taleplere hızlı yanıt verme zorluklarını çözüyoruz.
                             </p>
-                            <ul className="text-sm space-y-1 text-slate-500">
-                                <li>• İş ortağı eğitim maliyetlerinde önemli düşüş.</li>
-                                <li>• Yüksek yük kapasitesi sağlayan DevOps çözümleri.</li>
-                                <li>• İş gücü sirkülasyonunu yönetmek için özel İK/Yapay Zeka çözümleri.</li>
-                            </ul>
                         </div>
-
-                        <div className="bg-white p-6 rounded-xl border border-red-100 shadow-sm">
-                            <h4 className="text-lg font-bold text-red-600 mb-2 flex items-center gap-2">
-                                <Zap className="w-5 h-5" /> Örnek: Coca-Cola Dağıtım
-                            </h4>
-                            <p className="text-sm text-slate-600 mb-3">
-                                Yüksek hacimli operasyonlar için yönetilen hizmetler (SCCM, Zabbix) ve sürekli hizmet sağlığı için NOC modeli sağladık.
-                            </p>
-                            <ul className="text-sm space-y-1 text-slate-500">
-                                <li>• Ağaç tabanlı servis izleme.</li>
-                                <li>• Yama yönetimi ve altyapı sağlığı.</li>
-                                <li>• ITIL standartlarında uzaktan ve yerinde destek.</li>
-                            </ul>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <CaseStudyCard
+                                title="Trendyol Uyumlu B2B"
+                                description="E-ticaret devinin binlerce iş ortağıyla sorunsuz etkileşim kurmasını sağlayan, destek portalı gibi çalışan merkezi bir B2B platformu geliştirdik."
+                                client="Trendyol"
+                                image="https://images.unsplash.com/photo-1556740737-0e9d516b3e3?auto=format&fit=crop&q=80"
+                                href="/industries/retail-telecom"
+                                metrics={[
+                                    { label: "İş Ortağı", value: "10K+", icon: Users },
+                                    { label: "İşlem", value: "100K+/gün", icon: Zap },
+                                    { label: "Uptime", value: "%99.9", icon: CheckCircle2 }
+                                ]}
+                                color="indigo"
+                                delay={0}
+                            />
+                            <CaseStudyCard
+                                title="Coca-Cola Dağıtım"
+                                description="Yüksek hacimli operasyonlar için yönetilen hizmetler (SCCM, Zabbix) ve sürekli hizmet sağlığı için NOC modeli sağladık."
+                                client="Coca-Cola"
+                                image="https://images.unsplash.com/photo-1556761175-997279832a0?auto=format&fit=crop&q=80"
+                                href="/industries/retail-telecom"
+                                metrics={[
+                                    { label: "Lokasyon", value: "50+", icon: Globe },
+                                    { label: "İş Gücü", value: "500+", icon: Users },
+                                    { label: "Uptime", value: "%99.95", icon: CheckCircle2 }
+                                ]}
+                                color="blue"
+                                delay={0.1}
+                            />
                         </div>
                     </div>
-                }
-                image={
-                    <div className="flex flex-col gap-4 h-full">
-                        <div className="flex-1 bg-orange-500 rounded-2xl flex items-center justify-center text-white p-8">
-                            <div className="text-center">
-                                <span className="text-5xl font-bold block mb-2">%99.9</span>
-                                <span className="text-orange-100 uppercase tracking-widest text-sm">Uptime (Çalışma Süresi)</span>
-                            </div>
-                        </div>
-                        <div className="flex-1 bg-slate-900 rounded-2xl flex items-center justify-center text-white p-8">
-                            <div className="text-center">
-                                <Users className="w-12 h-12 mx-auto mb-2 text-blue-400" />
-                                <span className="font-bold">İş Gücü Optimizasyonu</span>
-                            </div>
-                        </div>
-                    </div>
-                }
-            />
 
-            {/* Telecom */}
-            <ContentSection
-                reverse
-                title="Telekomünikasyon"
-                badge="Telekom"
-                content={
-                    <div className="space-y-4">
-                        <p>
-                            Türkiye'nin önde gelen operatörleri için çağrı merkezleri, saha ekipleri ve bayiler tarafından kullanılan dijital platformları yönetiyoruz. Odağımız, **doğru bilginin doğru kişiye anında** ulaşmasını sağlamaktır.
-                        </p>
-                        <div className="space-y-3 mt-6">
-                            <div className="flex gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
-                                <div>
-                                    <h4 className="font-bold text-slate-900">Dijital Platform & İçerik Yönetimi</h4>
-                                    <p className="text-sm text-slate-600">Kampanya ve cihaz bilgilerinin güncel kalmasını sağlayan, saha ekibi iletişimine yönelik SharePoint tabanlı portaller.</p>
+                    {/* Telecom Section */}
+                    <ContentSection
+                        reverse
+                        title="Telekomünikasyon"
+                        badge="Telekom"
+                        content={
+                            <div className="space-y-6">
+                                <p className="text-lg">
+                                    Türkiye'nin önde gelen operatörleri için çağrı merkezleri, saha ekipleri ve bayiler tarafından kullanılan dijital platformları yönetiyoruz. Odağımız, <strong className="text-indigo-600">doğru bilginin doğru kişiye anında</strong> ulaşmasını sağlamaktır.
+                                </p>
+                                <div className="space-y-6 mt-6">
+                                    <div className="bg-white p-6 rounded-xl border-2 border-indigo-200 shadow-sm">
+                                        <h4 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                            <Signal className="w-5 h-5 text-indigo-600" /> Dijital Platform & İçerik Yönetimi
+                                        </h4>
+                                        <p className="text-slate-600 leading-relaxed">
+                                            Kampanya ve cihaz bilgilerinin güncel kalmasını sağlayan, saha ekibi iletişimine yönelik SharePoint tabanlı portaller.
+                                        </p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-xl border-2 border-slate-200 shadow-sm">
+                                        <h4 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                            <Zap className="w-5 h-5 text-slate-600" /> MSP & Altyapı
+                                        </h4>
+                                        <p className="text-slate-600 leading-relaxed">
+                                            Linux/Windows/Veritabanları için L1/L2 operasyon yönetimi, kapasite planlama ve yedekleme yönetimi.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="flex gap-3">
-                                <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
-                                <div>
-                                    <h4 className="font-bold text-slate-900">MSP & Altyapı</h4>
-                                    <p className="text-sm text-slate-600">Linux/Windows/Veritabanları için L1/L2 operasyon yönetimi, kapasite planlama ve yedekleme yönetimi.</p>
+                        }
+                        image={
+                            <div className="bg-gradient-to-br from-indigo-600 to-blue-600 text-white p-10 h-full flex items-center justify-center rounded-2xl relative overflow-hidden">
+                                <div className="absolute inset-0 opacity-20">
+                                    <Signal className="w-64 h-64 absolute -right-10 -bottom-10" />
                                 </div>
+                                <div className="relative z-10 text-center">
+                                    <Globe className="w-32 h-32 mx-auto mb-6" />
+                                    <h4 className="text-4xl font-bold mb-2">Milyonları Bağlıyoruz</h4>
+                                    <p className="text-xl text-indigo-100">Uçtan Uca Telekom Çözümleri</p>
+                                </div>
+                            </div>
+                        }
+                    />
+
+                    {/* Key Capabilities */}
+                    <div className="mb-24">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl font-bold mb-4 font-heading text-slate-900">
+                                Temel Kapasitelerimiz
+                            </h2>
+                            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+                                Perakende ve telekom sektörlerinde uzmanlaştığımız çözüm alanları
+                            </p>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-2xl border-2 border-indigo-200 hover:shadow-2xl transition-all duration-300">
+                                <ShoppingBag className="w-12 h-12 text-indigo-600 mb-4" />
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">E-Ticaret Platformu</h3>
+                                <p className="text-slate-600 text-sm leading-relaxed">
+                                    B2B/B2C platformları, omnichannel stratejileri
+                                </p>
+                            </div>
+                            <div className="bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-2xl border-2 border-slate-200 hover:shadow-2xl transition-all duration-300">
+                                <Users className="w-12 h-12 text-slate-600 mb-4" />
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">İş Gücü Optimizasyonu</h3>
+                                <p className="text-slate-600 text-sm leading-relaxed">
+                                    AI destekli WFM ve planlama sistemleri
+                                </p>
+                            </div>
+                            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl border-2 border-blue-200 hover:shadow-2xl transition-all duration-300">
+                                <Signal className="w-12 h-12 text-blue-600 mb-4" />
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">Telekom Platformu</h3>
+                                <p className="text-slate-600 text-sm leading-relaxed">
+                                    OSS/BSS ve dijital kanal yönetimi
+                                </p>
+                            </div>
+                            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-2xl border-2 border-indigo-200 hover:shadow-2xl transition-all duration-300">
+                                <Zap className="w-12 h-12 text-indigo-600 mb-4" />
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">MSP Hizmetleri</h3>
+                                <p className="text-slate-600 text-sm leading-relaxed">
+                                    7/24 operasyon ve altyapı yönetimi
+                                </p>
                             </div>
                         </div>
                     </div>
-                }
-                image={
-                    <div className="flex items-center justify-center h-full bg-blue-700 rounded-2xl text-white relative overflow-hidden">
-                        <Signal className="w-40 h-40 opacity-20 absolute -right-10 -bottom-10" />
-                        <div className="z-10 text-center p-8">
-                            <Globe className="w-20 h-20 mx-auto mb-6" />
-                            <h4 className="text-2xl font-bold">Milyonları Bağlıyoruz</h4>
-                            <p className="text-blue-200 mt-2">Uçtan Uca Telekom Çözümleri</p>
+
+                    {/* Success Metrics */}
+                    <div className="bg-gradient-to-br from-indigo-50 to-slate-100 rounded-3xl p-16 mb-24">
+                        <div className="text-center mb-12">
+                            <h2 className="text-4xl font-bold mb-4 font-heading text-slate-900">
+                                Başarı Metrikleri
+                            </h2>
+                            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+                                Sektörde kanıtlanmış başarılarımız
+                            </p>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div className="text-center">
+                                <div className="w-20 h-20 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-600/30">
+                                    <TrendingUp className="w-10 h-10 text-white" />
+                                </div>
+                                <h3 className="text-3xl font-bold text-slate-900 mb-2">%99.9</h3>
+                                <p className="text-slate-600">Ortalama Uptime</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="w-20 h-20 bg-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-slate-600/30">
+                                    <Users className="w-10 h-10 text-white" />
+                                </div>
+                                <h3 className="text-3xl font-bold text-slate-900 mb-2">50M+</h3>
+                                <p className="text-slate-600">Günlük İşlem</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-600/30">
+                                    <ShoppingBag className="w-10 h-10 text-white" />
+                                </div>
+                                <h3 className="text-3xl font-bold text-slate-900 mb-2">100+</h3>
+                                <p className="text-slate-600">Başarı Hikayesi</p>
+                            </div>
+                            <div className="text-center">
+                                <div className="w-20 h-20 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-600/30">
+                                    <CheckCircle2 className="w-10 h-10 text-white" />
+                                </div>
+                                <h3 className="text-3xl font-bold text-slate-900 mb-2">%95</h3>
+                                <p className="text-slate-600">Müşteri Memnuniyeti</p>
+                            </div>
                         </div>
                     </div>
-                }
-            />
+                </div>
+            </div>
         </>
     )
 }

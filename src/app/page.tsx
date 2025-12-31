@@ -1,6 +1,7 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
+import { BreadcrumbStructuredData } from "@/components/seo/StructuredData"
 import Link from "next/link"
 import Image from "next/image"
 import { Settings, Clock, CheckCircle, ArrowRight, Users, Shield, Zap, Globe, BarChart, Code2, GitBranch, Server, Cpu, GraduationCap, Heart, Rocket } from "lucide-react"
@@ -8,6 +9,7 @@ import { Settings, Clock, CheckCircle, ArrowRight, Users, Shield, Zap, Globe, Ba
 export default function Home() {
   return (
     <>
+      <BreadcrumbStructuredData items={[{ name: "Ana Sayfa", url: "/" }]} />
       <Hero
         layout="simple"
         title="Business & Global Technology Solutions"
@@ -222,7 +224,7 @@ export default function Home() {
             </div>
 
             {/* Time & Material Widget */}
-            <div className="group relative p-10 rounded-3xl bg-slate-900 text-white hover:shadow-2xl hover:shadow-slate-900/20 transition-all duration-300">
+            <div className="group relative p-10 rounded-3xl bg-indigo-950 text-white hover:shadow-2xl hover:shadow-indigo-900/20 transition-all duration-300">
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm group-hover:scale-110 transition-transform">
                 <Users className="w-7 h-7 text-white" />
               </div>
@@ -235,7 +237,7 @@ export default function Home() {
                 {["Esnek Ölçeklendirme", "Tam Kontrol & Şeffaflık", "Hızlı Adaptasyon"].map(item => (
                   <div key={item} className="flex items-center gap-3 text-slate-300 font-medium">
                     <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                      <CheckCircle className="w-4 h-4 text-emerald-400" />
+                      <CheckCircle className="w-4 h-4 text-blue-400" />
                     </div>
                     {item}
                   </div>
@@ -255,7 +257,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-6 py-2 rounded-full bg-cyan-500 text-white font-bold text-sm tracking-wide mb-6">
+            <span className="inline-block px-6 py-2 rounded-full bg-blue-600 text-white font-bold text-sm tracking-wide mb-6">
               Sektörler
             </span>
             <h2 className="text-4xl font-bold font-heading text-slate-900 mb-6">
@@ -269,7 +271,7 @@ export default function Home() {
           {/* Grid Layout */}
           <div className="relative bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 shadow-2xl">
             {/* Decorative Central Diamond (Hidden on mobile) */}
-            <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-cyan-500 rotate-45 z-20 border-4 border-white shadow-sm"></div>
+            <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-500 rotate-45 z-20 border-4 border-white shadow-sm"></div>
 
             <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
               {/* Row 1 */}
@@ -312,14 +314,14 @@ export default function Home() {
                   <div className="absolute inset-0 bg-white/50 group-hover:bg-transparent transition-colors duration-500"></div>
 
                   <div className="relative z-10 flex flex-col items-center">
-                    <div className="w-16 h-16 bg-cyan-600 rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-cyan-600/20 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 bg-slate-600 rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-slate-600/20 group-hover:scale-110 transition-transform duration-300">
                       <Users className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-4">Perakende</h3>
                     <p className="text-slate-500 mb-8 leading-relaxed max-w-sm group-hover:text-slate-800 transition-colors">
                       Müşteri deneyimini iyileştirmek ve tedarik zincirini optimize etmek için e-ticaret ve omnichannel stratejileri.
                     </p>
-                    <Link href="/industries/retail-telecom" className="text-slate-500 font-bold border-b-2 border-slate-200 hover:text-cyan-600 hover:border-cyan-600 transition-all pb-1">
+                    <Link href="/industries/retail-telecom" className="text-slate-500 font-bold border-b-2 border-slate-200 hover:text-slate-600 hover:border-slate-600 transition-all pb-1">
                       Perakende Çözümlerini İncele
                     </Link>
                   </div>
@@ -389,7 +391,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <span className="text-orange-500 font-bold tracking-wider text-sm uppercase mb-2 block">Kariyer & Kültür</span>
+              <span className="text-indigo-600 font-bold tracking-wider text-sm uppercase mb-2 block">Kariyer & Kültür</span>
               <h2 className="text-4xl font-bold font-heading text-slate-900 mb-6">Geleceği Birlikte Şekillendirelim</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 Şeffaf iletişim, takım ruhu ve sürekli öğrenme tutkusuyla büyüyen global bir aileyiz. Genç Yetenek Programlarımız ve her seviyeye uygun kariyer yollarımızla potansiyelini keşfet.
@@ -397,8 +399,8 @@ export default function Home() {
 
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <GraduationCap className="w-5 h-5 text-orange-600" />
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
+                    <GraduationCap className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900">Genç Yetenekler</h4>
@@ -406,8 +408,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <Rocket className="w-5 h-5 text-orange-600" />
+                  <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center shrink-0">
+                    <Rocket className="w-5 h-5 text-indigo-600" />
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900">Kariyer Yolları</h4>
@@ -416,21 +418,23 @@ export default function Home() {
                 </div>
               </div>
 
-              <Link href="/hr" className="inline-flex h-12 items-center justify-center rounded-xl bg-orange-600 px-8 text-sm font-bold text-white shadow-lg shadow-orange-600/20 transition-all hover:bg-orange-700 hover:scale-105">
+              <Link href="/hr" className="inline-flex h-12 items-center justify-center rounded-xl bg-indigo-600 px-8 text-sm font-bold text-white shadow-lg shadow-indigo-600/20 transition-all hover:bg-indigo-700 hover:scale-105">
                 Kariyer Fırsatları
               </Link>
             </div>
             <div className="lg:w-1/2 relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative bg-slate-100">
-                {/* Placeholder for Culture Image */}
-                <div className="absolute inset-0 bg-slate-200 animate-pulse flex items-center justify-center text-slate-400">
-                  <Users className="w-20 h-20 opacity-20" />
-                </div>
+                <Image
+                  src="https://images.unsplash.com/photo-1521791165422-a0954674710f?auto=format&fit=crop&q=80"
+                  alt="Office Culture"
+                  fill
+                  className="object-cover"
+                />
               </div>
               {/* Floating Badge */}
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs border border-slate-100 hidden md:block">
                 <div className="flex items-center gap-3 mb-2">
-                  <Heart className="w-6 h-6 text-red-500 fill-current" />
+                  <Heart className="w-6 h-6 text-indigo-600 fill-current" />
                   <span className="font-bold text-slate-900">Great Place to Work</span>
                 </div>
                 <p className="text-sm text-slate-500">Çalışan odaklı kültürümüzle sektörde fark yaratıyoruz.</p>
