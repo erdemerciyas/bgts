@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import {
     ChevronDown, Menu, X, ArrowRight, Code, Activity, Shield, Globe,
     ShoppingBag, Server, Database, Cpu, CheckCircle2, Search, Terminal,
-    PlayCircle, FileText, Linkedin, Briefcase
+    PlayCircle, FileText, Linkedin, Briefcase, Instagram, Twitter, Mail
 } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -152,9 +152,20 @@ export default function Header() {
                         <button className={cn("p-2 transition-colors", isTransparent ? "text-white/80 hover:text-white" : "text-slate-600 hover:text-blue-600")}>
                             <Globe className="w-5 h-5" />
                         </button>
-                        <Link href="/contact" className="ml-2 bg-[#26d6c4] hover:bg-[#20b8a8] text-slate-900 text-sm font-bold py-3 px-6 rounded-md transition-all shadow-lg hover:shadow-cyan-200/50">
-                            Book a discovery call
-                        </Link>
+                        <div className="flex items-center gap-3 pl-4 border-l border-gray-300/30">
+                            <Link href="#" className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-blue-600")}>
+                                <Linkedin className="w-5 h-5" />
+                            </Link>
+                            <Link href="#" className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-blue-600")}>
+                                <Instagram className="w-5 h-5" />
+                            </Link>
+                            <Link href="#" className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-blue-600")}>
+                                <Twitter className="w-5 h-5" />
+                            </Link>
+                            <Link href="/contact" className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-blue-600")}>
+                                <Mail className="w-5 h-5" />
+                            </Link>
+                        </div>
                     </div>
 
                     <button className={cn("lg:hidden p-2 ml-auto", isTransparent ? "text-white" : "text-slate-900")} onClick={() => setMobileMenuOpen(true)}>

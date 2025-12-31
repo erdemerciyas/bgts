@@ -77,74 +77,104 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom Grid Section (3 Columns) */}
+        {/* Bottom Grid Section (3 Columns) - Full Width Strip */}
         <div className="w-full">
-          <div className="grid md:grid-cols-3 min-h-[500px]">
+          <div className="grid md:grid-cols-3 min-h-[600px]">
 
             {/* Managed Services (Blue) */}
-            <div className="relative bg-[#0052cc] text-white p-12 flex flex-col justify-between overflow-hidden group">
-              {/* Abstract Pattern */}
-              <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700"></div>
-              <div className="absolute -right-10 -top-10 w-60 h-60 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 delay-75"></div>
+            <div className="relative bg-[#0052cc] text-white p-16 flex flex-col justify-between overflow-hidden group">
+              {/* Background Image */}
+              <Image
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80"
+                alt="Managed Services"
+                fill
+                unoptimized
+                className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700 mix-blend-overlay"
+              />
+              <div className="absolute inset-0 bg-blue-900/40 pointer-events-none"></div>
 
-              <div className="relative z-10">
+              {/* Abstract Pattern */}
+              <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 z-10"></div>
+              <div className="absolute -right-10 -top-10 w-60 h-60 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 delay-75 z-10"></div>
+
+              <div className="relative z-20">
                 <h3 className="text-3xl font-bold mb-6">Yönetilen Hizmetler</h3>
-                <p className="text-blue-100 text-lg leading-relaxed mb-8">
+                <p className="text-blue-50 text-lg leading-relaxed mb-8">
                   İşletmenizin uzun vadeli hedeflerine ulaşmasına yardımcı olmak, sürdürülebilir büyüme ve rekabet avantajı sağlamak için özelleştirilmiş stratejik planlar oluşturuyor ve uyguluyoruz.
                 </p>
-                <ul className="space-y-3 mb-8 text-blue-50">
-                  <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-blue-300" /> 7/24 İzleme & Destek</li>
-                  <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-blue-300" /> AIOps & Otomasyon</li>
+                <ul className="space-y-4 mb-8 text-blue-50">
+                  <li className="flex items-center gap-3"><CheckCircle className="w-6 h-6 text-blue-300" /> 7/24 İzleme & Destek</li>
+                  <li className="flex items-center gap-3"><CheckCircle className="w-6 h-6 text-blue-300" /> AIOps & Otomasyon</li>
                 </ul>
               </div>
-              <div className="relative z-10">
-                <Link href="/services/managed-services" className="inline-flex items-center font-bold text-white border-b-2 border-transparent hover:border-white transition-all pb-1">
-                  Çözümleri Keşfedin <ArrowRight className="w-4 h-4 ml-2" />
+              <div className="relative z-20">
+                <Link href="/services/managed-services" className="inline-flex items-center font-bold text-white border-b-2 border-transparent hover:border-white transition-all pb-1 text-lg">
+                  Çözümleri Keşfedin <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
             </div>
 
-            {/* Software Development (White/PageBg) */}
-            <div className="relative bg-[#f8f9fc] text-slate-900 p-12 flex flex-col justify-between overflow-hidden group">
-              {/* Abstract Pattern */}
-              <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full border border-slate-200 group-hover:scale-110 transition-transform duration-700"></div>
+            {/* Software Development (Dark) */}
+            <div className="relative bg-[#1e293b] text-white p-16 flex flex-col justify-between overflow-hidden group">
+              {/* Background Image */}
+              <Image
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80"
+                alt="Software Development"
+                fill
+                unoptimized
+                className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700 mix-blend-overlay"
+              />
+              <div className="absolute inset-0 bg-slate-900/50 pointer-events-none"></div>
 
-              <div className="relative z-10">
+              {/* Abstract Pattern */}
+              <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 z-10"></div>
+
+              <div className="relative z-20">
                 <h3 className="text-3xl font-bold mb-6">Yazılım Geliştirme</h3>
-                <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                <p className="text-slate-300 text-lg leading-relaxed mb-8">
                   Java, .NET ve modern frontend teknolojileriyle, kurumunuzun ihtiyaçlarına özel, ölçeklenebilir ve güvenli yazılım çözümleri tasarlıyoruz.
                 </p>
-                <ul className="space-y-3 mb-8 text-slate-600">
-                  <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-blue-600" /> Mikroservis Mimarisi</li>
-                  <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-blue-600" /> API-First Yaklaşım</li>
+                <ul className="space-y-4 mb-8 text-slate-300">
+                  <li className="flex items-center gap-3"><CheckCircle className="w-6 h-6 text-blue-400" /> Mikroservis Mimarisi</li>
+                  <li className="flex items-center gap-3"><CheckCircle className="w-6 h-6 text-blue-400" /> API-First Yaklaşım</li>
                 </ul>
               </div>
-              <div className="relative z-10">
-                <Link href="/services/software-development" className="inline-flex items-center font-bold text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition-all pb-1">
-                  Çözümleri Keşfedin <ArrowRight className="w-4 h-4 ml-2" />
+              <div className="relative z-20">
+                <Link href="/services/software-development" className="inline-flex items-center font-bold text-blue-400 border-b-2 border-transparent hover:border-blue-400 transition-all pb-1 text-lg">
+                  Çözümleri Keşfedin <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
             </div>
 
             {/* DevOps (Blue) */}
-            <div className="relative bg-[#0052cc] text-white p-12 flex flex-col justify-between overflow-hidden group">
-              {/* Abstract Pattern */}
-              <div className="absolute -left-20 -bottom-20 w-80 h-80 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700"></div>
-              <div className="absolute -left-10 -bottom-10 w-60 h-60 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 delay-75"></div>
+            <div className="relative bg-[#0052cc] text-white p-16 flex flex-col justify-between overflow-hidden group">
+              {/* Background Image */}
+              <Image
+                src="https://images.unsplash.com/photo-1667372393119-c85c020799a3?auto=format&fit=crop&q=80"
+                alt="DevOps"
+                fill
+                unoptimized
+                className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700 mix-blend-overlay"
+              />
+              <div className="absolute inset-0 bg-blue-900/40 pointer-events-none"></div>
 
-              <div className="relative z-10">
+              {/* Abstract Pattern */}
+              <div className="absolute -left-20 -bottom-20 w-80 h-80 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 z-10"></div>
+              <div className="absolute -left-10 -bottom-10 w-60 h-60 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 delay-75 z-10"></div>
+
+              <div className="relative z-20">
                 <h3 className="text-3xl font-bold mb-6">DevOps & Cloud</h3>
-                <p className="text-blue-100 text-lg leading-relaxed mb-8">
+                <p className="text-blue-50 text-lg leading-relaxed mb-8">
                   Otomatik dağıtım süreçleri (CI/CD) ve bulut modernizasyonu ile yazılım teslimat hızınızı ve kalitenizi artırarak operasyonel verimlilik sağlıyoruz.
                 </p>
-                <ul className="space-y-3 mb-8 text-blue-50">
-                  <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-blue-300" /> Kubernetes & Konteyner</li>
-                  <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-blue-300" /> Cloud-Native Dönüşüm</li>
+                <ul className="space-y-4 mb-8 text-blue-50">
+                  <li className="flex items-center gap-3"><CheckCircle className="w-6 h-6 text-blue-300" /> Kubernetes & Konteyner</li>
+                  <li className="flex items-center gap-3"><CheckCircle className="w-6 h-6 text-blue-300" /> Cloud-Native Dönüşüm</li>
                 </ul>
               </div>
-              <div className="relative z-10">
-                <Link href="/services/devops" className="inline-flex items-center font-bold text-white border-b-2 border-transparent hover:border-white transition-all pb-1">
-                  Çözümleri Keşfedin <ArrowRight className="w-4 h-4 ml-2" />
+              <div className="relative z-20">
+                <Link href="/services/devops" className="inline-flex items-center font-bold text-white border-b-2 border-transparent hover:border-white transition-all pb-1 text-lg">
+                  Çözümleri Keşfedin <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
             </div>
@@ -248,10 +278,11 @@ export default function Home() {
                 <div className="relative p-12 flex flex-col items-center text-center group min-h-[400px]">
                   {/* Background Image */}
                   <Image
-                    src="https://images.unsplash.com/photo-1565514020176-6c2235c62300?auto=format&fit=crop&q=80"
+                    src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&q=80"
                     alt="Banking Finance"
                     fill
-                    className="object-cover opacity-0 group-hover:opacity-10 transition-opacity duration-700"
+                    unoptimized
+                    className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700"
                   />
                   <div className="absolute inset-0 bg-white/50 group-hover:bg-transparent transition-colors duration-500"></div>
 
@@ -272,10 +303,11 @@ export default function Home() {
                 <div className="relative p-12 flex flex-col items-center text-center group min-h-[400px]">
                   {/* Background Image */}
                   <Image
-                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80"
+                    src="https://images.unsplash.com/photo-1472851294608-4155f2118c67?auto=format&fit=crop&q=80"
                     alt="Retail Store"
                     fill
-                    className="object-cover opacity-0 group-hover:opacity-10 transition-opacity duration-700"
+                    unoptimized
+                    className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700"
                   />
                   <div className="absolute inset-0 bg-white/50 group-hover:bg-transparent transition-colors duration-500"></div>
 
@@ -300,10 +332,11 @@ export default function Home() {
                 <div className="relative p-12 flex flex-col items-center text-center group min-h-[400px]">
                   {/* Background Image */}
                   <Image
-                    src="https://images.unsplash.com/photo-1519389950476-29a5e7e2113e?auto=format&fit=crop&q=80"
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
                     alt="Technology Network"
                     fill
-                    className="object-cover opacity-0 group-hover:opacity-10 transition-opacity duration-700"
+                    unoptimized
+                    className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700"
                   />
                   <div className="absolute inset-0 bg-white/50 group-hover:bg-transparent transition-colors duration-500"></div>
 
@@ -324,10 +357,11 @@ export default function Home() {
                 <div className="relative p-12 flex flex-col items-center text-center group min-h-[400px]">
                   {/* Background Image */}
                   <Image
-                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80"
+                    src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80"
                     alt="Cyber Security"
                     fill
-                    className="object-cover opacity-0 group-hover:opacity-10 transition-opacity duration-700"
+                    unoptimized
+                    className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700"
                   />
                   <div className="absolute inset-0 bg-white/50 group-hover:bg-transparent transition-colors duration-500"></div>
 
