@@ -4,6 +4,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Heading, Text as UIText } from "@/components/ui/Typography"
 
 interface ContactCardProps {
   title: string
@@ -125,18 +126,18 @@ export default function ContactCard({
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: delay + 0.3 }}
       >
-        <h3 className={cn("text-xl font-bold mb-2", colors.title)}>
+        <Heading variant="h4" className={cn("mb-2", colors.title)}>
           {title}
-        </h3>
+        </Heading>
         {description && (
-          <p className="text-slate-600 text-sm mb-4 leading-relaxed">
+          <UIText variant="small" className="text-slate-600 mb-4 leading-relaxed">
             {description}
-          </p>
+          </UIText>
         )}
         {contactInfo && (
           <div className="text-slate-800 font-semibold mb-4">
             {typeof contactInfo === 'string' ? (
-              <p>{contactInfo}</p>
+              <UIText className="text-slate-800">{contactInfo}</UIText>
             ) : (
               contactInfo
             )}

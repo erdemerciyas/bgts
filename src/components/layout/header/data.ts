@@ -29,7 +29,7 @@ export const STYLES = {
     iconLarge: "w-6 h-6", // For featured sections
 
     // Image Styles
-    imageThumbnail: "w-24 h-16 rounded-lg object-cover shadow-sm border border-slate-100 group-hover:shadow-md transition-all group-hover:scale-105",
+    imageThumbnail: "w-24 h-16 rounded-2xl object-contain bg-transparent transition-all group-hover:scale-110",
     imageCard: "relative w-full h-32 rounded-xl overflow-hidden mb-6 shadow-sm border border-slate-100",
 }
 

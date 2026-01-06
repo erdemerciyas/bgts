@@ -1,17 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-outfit);
+  --font-sans: var(--font-exo);
+  --font-heading: var(--font-exo);
+
+  --color-corporate-blue: #0070BA;
+  --color-action-blue: #0070BA;
+  --color-corporate-dark: #404567;
+  --color-deep-navy: #05081A;
+  --color-navy: #0B0F25;
+  --color-glacial-blue: #E0ECF4;
+  --color-text-main: #212121;
 
   --animate-blob: blob 7s infinite;
 }
 
 @keyframes blob {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
 @utility animation-delay-2000 {
@@ -24,12 +43,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: #212121;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #020617;
+    --background: #05081A;
     --foreground: #f8fafc;
   }
 }
@@ -40,6 +59,11 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading), system-ui, sans-serif;
 }

@@ -25,14 +25,14 @@ export const ServicesMenu = () => (
                         <Server className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Veri Merkezi & Uygulama</h4><p className={STYLES.itemDesc}>Platform ve uygulama katmanlarında uzman yönetilen hizmetler.</p></div>
-                            <Image src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?w=150&q=80" alt="Data Center" width={96} height={64} className={STYLES.imageThumbnail} />
+                            <Image src="/images/navigation/services/bgts-data-center-infrastructure.png" alt="Data Center" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                     <Link href="/services/managed-services" className={STYLES.linkGroup}>
                         <Activity className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Yönetilen Hizmetler</h4><p className={STYLES.itemDesc}>Yapay zeka destekli kesintisiz IT desteği ve operasyonel verimlilik.</p></div>
-                            <Image src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=150&q=80" alt="Managed Services" width={96} height={64} className={STYLES.imageThumbnail} />
+                            <Image src="/images/navigation/services/bgts-managed-it-services.png" alt="Managed Services" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                 </div>
@@ -40,7 +40,7 @@ export const ServicesMenu = () => (
             <div className="w-[60%] bg-white p-10 flex flex-col justify-start">
                 <h3 className={STYLES.columnHeader}>YAZILIM GELİŞTİRME</h3>
                 <div className="grid grid-cols-2 gap-x-12 gap-y-10">
-                    {[{ title: "Veri Hizmetleri", desc: "Büyük veri ve analitik altyapılar.", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=150&q=80", icon: Database }, { title: "DevOps & SRE", desc: "CI/CD ve güvenilir teslimat.", img: "https://images.unsplash.com/photo-1667372393119-c85c020799a3?w=150&q=80", icon: Code }, { title: "Power Platform", desc: "Modern mimarisel çözümler.", img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=150&q=80", icon: Activity }, { title: "Yapay Zeka", desc: "Otomasyon ve akıllı öngörüler.", img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=150&q=80", icon: Cpu }].map(s => (
+                    {[{ title: "Veri Hizmetleri", desc: "Büyük veri ve analitik altyapılar.", img: "/images/navigation/services/bgts-big-data-analytics-services.png", icon: Database }, { title: "DevOps & SRE", desc: "CI/CD ve güvenilir teslimat.", img: "/images/navigation/services/bgts-devops-sre-services.png", icon: Code }, { title: "Power Platform", desc: "Modern mimarisel çözümler.", img: "/images/navigation/services/bgts-power-platform-solutions.png", icon: Activity }, { title: "Yapay Zeka", desc: "Otomasyon ve akıllı öngörüler.", img: "/images/navigation/services/bgts-artificial-intelligence-automation.png", icon: Cpu }].map(s => (
                         <Link key={s.title} href="/services" className={STYLES.linkGroup}>
                             <s.icon className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-3"><div className="flex-1"><h4 className={STYLES.itemTitle}>{s.title}</h4><p className={STYLES.itemDesc}>{s.desc}</p></div><Image src={s.img} alt={s.title} width={96} height={64} className={STYLES.imageThumbnail} /></div>
@@ -69,14 +69,14 @@ export const IndustriesMenu = () => (
                         <Globe className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Bankacılık & Finans</h4><p className={STYLES.itemDesc}>Dijital kanallar ve regülasyon uyumu için uçtan uca çözümler.</p></div>
-                            <Image src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&q=80" alt="Banking" width={96} height={64} className={STYLES.imageThumbnail} />
+                            <Image src="/images/navigation/industries/bgts-banking-finance.png" alt="Banking" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                     <Link href="/industries/defense" className={STYLES.linkGroup}>
                         <Shield className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Savunma Sanayi</h4><p className={STYLES.itemDesc}>15288 & 12207 standartlarına uygun kritik görev sistemleri.</p></div>
-                            <Image src="https://images.unsplash.com/photo-1589254065878-42c9da997008?w=300&q=80" alt="Defense" width={96} height={64} className={STYLES.imageThumbnail} />
+                            <Image src="/images/navigation/industries/bgts-defense-industry.png" alt="Defense" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                 </div>
@@ -88,14 +88,14 @@ export const IndustriesMenu = () => (
                         <Server className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Telekomünikasyon</h4><p className={STYLES.itemDesc}>OSS/BSS ve dijital kanal platformlarında 7/24 erişilebilirlik.</p></div>
-                            <Image src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=300&q=80" alt="Telecom" width={96} height={64} className={STYLES.imageThumbnail} />
+                            <Image src="/images/navigation/industries/bgts-telecom-digital-channels.png" alt="Telecom" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                     <Link href="/industries/retail-telecom" className={STYLES.linkGroup}>
                         <ShoppingBag className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Perakende & E-Ticaret</h4><p className={STYLES.itemDesc}>Omnichannel yapılar ve yüksek hacimli işlem yönetimi.</p></div>
-                            <Image src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=300&q=80" alt="Retail" width={96} height={64} className={STYLES.imageThumbnail} />
+                            <Image src="/images/navigation/industries/bgts-retail-ecommerce.png" alt="Retail" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                 </div>
@@ -128,7 +128,7 @@ export const ProductsMenu = () => (
                     </Link>
                     <Link href="/products" className={STYLES.linkGroup}>
                         <CheckCircle2 className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                        <div className="flex justify-between items-start gap-3"><div className="flex-1"><h4 className={STYLES.itemTitle}>PRAXILA</h4><p className={STYLES.itemDescItalic}>“Yeni nesil otomasyon ve operasyon yönetimi platformumuz Praxila'yı son aşamaya getiriyoruz.”</p></div><Image src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&q=80" alt="Praxila" width={96} height={64} className={STYLES.imageThumbnail} /></div>
+                        <div className="flex justify-between items-start gap-3"><div className="flex-1"><h4 className={STYLES.itemTitle}>PRAXILA</h4><p className={STYLES.itemDescItalic}>“Yeni nesil otomasyon ve operasyon yönetimi platformumuz Praxila&apos;yı son aşamaya getiriyoruz.”</p></div><Image src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&q=80" alt="Praxila" width={96} height={64} className={STYLES.imageThumbnail} /></div>
                     </Link>
                 </div>
             </div>

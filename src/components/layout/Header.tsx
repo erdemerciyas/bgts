@@ -16,6 +16,7 @@ import {
     ServicesMenu, IndustriesMenu, ProductsMenu,
     TalentMenu, ResourcesMenu, CareersMenu
 } from "./header/MegaMenus"
+import { Container } from "@/components/ui/Container"
 
 // Lazy load mobile nav for better performance
 const MobileNav = dynamic(() => import('./MobileNav'), {
@@ -41,8 +42,8 @@ export default function Header() {
     }, [])
 
     const textColorClass = isTransparent
-        ? "text-white/80 hover:text-white"
-        : "text-slate-700 hover:text-blue-600";
+        ? "text-white/90 hover:text-white"
+        : "text-corporate-dark hover:text-action-blue";
 
     const logoFilterClass = isTransparent ? "brightness-0 invert opacity-90 hover:opacity-100" : "";
     const headerBgClass = isTransparent ? "bg-transparent border-transparent" : "bg-white/95 border-gray-200 shadow-sm backdrop-blur-md";
@@ -50,8 +51,8 @@ export default function Header() {
     return (
         <>
             <header className={cn("fixed top-0 w-full z-50 transition-all duration-300 border-b", headerBgClass)}>
-                <div
-                    className="container mx-auto px-6 h-[80px] flex items-center justify-between relative"
+                <Container
+                    className="h-[80px] flex items-center justify-between relative"
                     onMouseLeave={() => setHoveredNav(null)}
                 >
                     <Link href="/" className="flex items-center gap-2 mr-10 shrink-0">
@@ -70,9 +71,9 @@ export default function Header() {
                                 <Link
                                     href={item.href}
                                     className={cn(
-                                        "flex items-center gap-1.5 text-[13px] font-bold tracking-wide transition-colors py-8 border-b-2 border-transparent uppercase whitespace-nowrap",
+                                        "flex items-center gap-1.5 text-[15px] font-bold tracking-wide transition-colors py-8 border-b-2 border-transparent uppercase whitespace-nowrap", // Increased font size slightly to 15px per design
                                         textColorClass,
-                                        hoveredNav === (item.id || item.name) ? (isTransparent ? "text-cyan-400 border-cyan-400 opacity-100" : "text-blue-600 border-blue-600") : ""
+                                        hoveredNav === (item.id || item.name) ? (isTransparent ? "text-cyan-400 border-cyan-400 opacity-100" : "text-action-blue border-action-blue") : ""
                                     )}
                                     aria-haspopup={["services", "industries", "products", "talent", "resources", "careers"].includes(item.id || "") ? "true" : undefined}
                                     aria-expanded={hoveredNav === (item.id || item.name)}
@@ -88,42 +89,42 @@ export default function Header() {
 
                     <div className="hidden lg:flex items-center gap-4 ml-auto">
                         <button
-                            className={cn("p-2 transition-colors", isTransparent ? "text-white/80 hover:text-white" : "text-slate-600 hover:text-blue-600")}
+                            className={cn("w-10 h-10 flex items-center justify-center rounded-full transition-all", isTransparent ? "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm" : "bg-slate-100 text-slate-600 hover:bg-slate-200")}
                             aria-label="Ara"
                         >
-                            <Search className="w-5 h-5" aria-hidden="true" />
+                            <Search className="w-4 h-4" aria-hidden="true" />
                         </button>
                         <button
-                            className={cn("p-2 transition-colors", isTransparent ? "text-white/80 hover:text-white" : "text-slate-600 hover:text-blue-600")}
+                            className={cn("w-10 h-10 flex items-center justify-center rounded-full transition-all", isTransparent ? "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm" : "bg-slate-100 text-slate-600 hover:bg-slate-200")}
                             aria-label="Dil seç"
                         >
-                            <Globe className="w-5 h-5" aria-hidden="true" />
+                            <Globe className="w-4 h-4" aria-hidden="true" />
                         </button>
                         <div className="flex items-center gap-3 pl-4 border-l border-gray-300/30" role="group" aria-label="Sosyal medya">
                             <Link
                                 href="#"
-                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-blue-600")}
+                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-action-blue")}
                                 aria-label="LinkedIn"
                             >
                                 <Linkedin className="w-5 h-5" aria-hidden="true" />
                             </Link>
                             <Link
                                 href="#"
-                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-blue-600")}
+                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-action-blue")}
                                 aria-label="Instagram"
                             >
                                 <Instagram className="w-5 h-5" aria-hidden="true" />
                             </Link>
                             <Link
                                 href="#"
-                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-blue-600")}
+                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-action-blue")}
                                 aria-label="Twitter"
                             >
                                 <Twitter className="w-5 h-5" aria-hidden="true" />
                             </Link>
                             <Link
                                 href="/contact"
-                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-blue-600")}
+                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-slate-500 hover:text-action-blue")}
                                 aria-label="İletişim"
                             >
                                 <Mail className="w-5 h-5" aria-hidden="true" />
@@ -132,7 +133,7 @@ export default function Header() {
                     </div>
 
                     <button
-                        className={cn("lg:hidden p-2 ml-auto", isTransparent ? "text-white" : "text-slate-900")}
+                        className={cn("lg:hidden p-2 ml-auto rounded-md", isTransparent ? "text-white" : "text-corporate-dark")}
                         onClick={() => setMobileMenuOpen(true)}
                         aria-label="Menüyü aç"
                         aria-expanded={mobileMenuOpen}
@@ -158,7 +159,7 @@ export default function Header() {
                         )}
                     </AnimatePresence>
 
-                </div>
+                </Container>
             </header>
             {!isHome && <div className="h-[80px]" />}
             <MobileNav isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} navItems={NAV_ITEMS} />

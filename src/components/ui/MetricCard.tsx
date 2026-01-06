@@ -4,6 +4,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import { LucideIcon, TrendingUp, TrendingDown } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Text as UIText } from "@/components/ui/Typography"
 
 interface MetricCardProps {
   title: string
@@ -157,7 +158,7 @@ export default function MetricCard({
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: delay + 0.3 }}
       >
-        <h3 className="text-sm text-slate-600 font-medium mb-2">{title}</h3>
+        <UIText variant="small" className="text-slate-600 font-medium mb-2">{title}</UIText>
         <div className="flex items-baseline gap-2">
           <span className={cn("text-4xl font-bold", colors.value)}>
             {value}
@@ -167,9 +168,9 @@ export default function MetricCard({
           )}
         </div>
         {description && (
-          <p className="text-sm text-slate-600 mt-2 leading-relaxed">
+          <UIText variant="small" className="text-slate-600 mt-2 leading-relaxed">
             {description}
-          </p>
+          </UIText>
         )}
       </motion.div>
 

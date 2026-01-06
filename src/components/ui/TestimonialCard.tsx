@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { Quote, Star } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Heading, Text as UIText, textStyles } from "@/components/ui/Typography"
 
 interface TestimonialCardProps {
   quote: string
@@ -106,9 +107,9 @@ export default function TestimonialCard({
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: delay + 0.3 }}
-        className="text-slate-700 text-lg leading-relaxed mb-6 italic"
+        className={cn(textStyles.large, "text-slate-700 mb-6 italic")}
       >
-        "{quote}"
+        &quot;{quote}&quot;
       </motion.p>
 
       {/* Rating */}
@@ -155,8 +156,8 @@ export default function TestimonialCard({
           </div>
         )}
         <div>
-          <h4 className="font-bold text-slate-900">{author}</h4>
-          <p className="text-sm text-slate-600">{role}</p>
+          <Heading variant="h5" className="text-slate-900 mb-0">{author}</Heading>
+          <UIText variant="small" className="text-slate-600">{role}</UIText>
         </div>
       </motion.div>
 

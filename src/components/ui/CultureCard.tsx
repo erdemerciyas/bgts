@@ -4,6 +4,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Heading, Text as UIText } from "@/components/ui/Typography"
 
 interface CultureCardProps {
   title: string
@@ -119,12 +120,12 @@ export default function CultureCard({
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: delay + 0.3 }}
       >
-        <h3 className={cn("text-2xl font-bold mb-4", colors.title)}>
+        <Heading variant="h3" className={cn("mb-4", colors.title)}>
           {title}
-        </h3>
-        <p className="text-slate-700 leading-relaxed">
+        </Heading>
+        <UIText className="text-slate-700">
           {description}
-        </p>
+        </UIText>
       </motion.div>
 
       {/* Decorative Elements */}

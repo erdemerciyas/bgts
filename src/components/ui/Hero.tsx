@@ -5,6 +5,9 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { Container } from "@/components/ui/Container"
+import { Section } from "@/components/ui/Section"
+import { Heading, Text } from "@/components/ui/Typography"
 
 interface HeroProps {
     title: string
@@ -38,7 +41,7 @@ export default function Hero({
 
     if (layout === "split") {
         return (
-            <section className={cn("relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden", className)}>
+            <Section className={cn("pt-32 pb-20 lg:pt-48 lg:pb-32", className)}>
                 {/* Background Patterns */}
                 <div className="absolute inset-0 pointer-events-none z-0">
                     {pattern === "grid" && (
@@ -49,7 +52,7 @@ export default function Hero({
                     )}
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10">
+                <Container className="relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
 
                         {/* Text Content */}
@@ -61,29 +64,29 @@ export default function Hero({
                         >
                             {badge && (
                                 <div className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-800 mb-6">
-                                    <span className="flex h-2 w-2 rounded-full bg-blue-600 mr-2"></span>
+                                    <span className="flex h-2 w-2 rounded-full bg-action-blue mr-2"></span>
                                     {badge}
                                 </div>
                             )}
-                            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.15] font-heading">
+                            <Heading variant="h1" className="text-slate-900 mb-6">
                                 {title}
-                            </h1>
-                            <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
+                            </Heading>
+                            <Text variant="large" className="text-slate-600 mb-8 max-w-lg">
                                 {subtitle}
-                            </p>
+                            </Text>
 
                             {ctaLink && (
                                 <div className="flex flex-wrap gap-4">
                                     <Link
                                         href={ctaLink}
-                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-blue-600 rounded-lg hover:bg-blue-700 hover:scale-105 shadow-lg shadow-blue-600/20"
+                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-action-blue rounded-full hover:bg-blue-700 hover:scale-105 shadow-xl shadow-action-blue/20"
                                     >
                                         {ctaText || "Keşfedin"}
                                         <ArrowRight className="w-5 h-5 ml-2" />
                                     </Link>
                                     <Link
                                         href="/contact"
-                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 transition-all bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:border-slate-300"
+                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-corporate-dark transition-all bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 shadow-sm"
                                     >
                                         İletişime Geçin
                                     </Link>
@@ -103,14 +106,14 @@ export default function Hero({
                             )}
                         </motion.div>
                     </div>
-                </div>
-            </section>
+                </Container>
+            </Section>
         )
     }
 
     // Simple Layout (Centered) - Enhanced for Video Background
     return (
-        <section className={cn("relative py-32 lg:py-48 overflow-hidden min-h-[80vh] flex items-center", className)}>
+        <Section className={cn("py-32 lg:py-48 min-h-[80vh] flex items-center", className)}>
             <div className="absolute inset-0 z-0">
                 {videoSrc ? (
                     <>
@@ -167,7 +170,7 @@ export default function Hero({
                 )}
             </div>
 
-            <div className="container relative z-10 px-6 mx-auto text-center">
+            <Container className="relative z-10 text-center">
                 {badge && (
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -179,29 +182,35 @@ export default function Hero({
                     </motion.div>
                 )}
 
-                <motion.h1
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className={cn(
-                        "max-w-4xl mx-auto mb-6 text-5xl font-extrabold tracking-tight md:text-7xl font-heading leading-tight",
-                        (videoSrc || backgroundImage) ? "text-white" : "text-slate-900"
-                    )}
                 >
-                    {title}
-                </motion.h1>
+                    <Heading
+                        variant="h1"
+                        className={cn(
+                            "max-w-4xl mx-auto mb-6 text-5xl md:text-7xl leading-tight",
+                            (videoSrc || backgroundImage) && "text-white drop-shadow-md"
+                        )}>
+                        {title}
+                    </Heading>
+                </motion.div>
 
-                <motion.p
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className={cn(
-                        "max-w-2xl mx-auto mb-10 text-xl leading-relaxed",
-                        (videoSrc || backgroundImage) ? "text-slate-200" : "text-slate-600"
-                    )}
                 >
-                    {subtitle}
-                </motion.p>
+                    <Text
+                        variant="large"
+                        className={cn(
+                            "max-w-2xl mx-auto mb-10",
+                            (videoSrc || backgroundImage) ? "text-slate-100/90" : "text-slate-600"
+                        )}>
+                        {subtitle}
+                    </Text>
+                </motion.div>
 
                 {ctaLink && (
                     <motion.div
@@ -211,14 +220,14 @@ export default function Hero({
                     >
                         <Link
                             href={ctaLink}
-                            className="inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-blue-600 rounded-lg hover:bg-blue-700 hover:scale-105 shadow-xl shadow-blue-600/20"
+                            className="inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-action-blue rounded-full hover:bg-blue-700 hover:scale-105 shadow-xl shadow-action-blue/20"
                         >
                             {ctaText || "Daha Fazlası"}
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                     </motion.div>
                 )}
-            </div>
-        </section>
+            </Container>
+        </Section>
     )
 }

@@ -6,6 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { LucideIcon, ArrowRight, TrendingUp, Award, Users } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { headingStyles, textStyles } from "@/components/ui/Typography"
 
 interface CaseStudyCardProps {
   title: string
@@ -119,7 +120,7 @@ export default function CaseStudyCard({
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: delay + 0.2 }}
-          className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+          className={cn(headingStyles.h3, "text-slate-900 mb-3 group-hover:text-blue-600 transition-colors")}
         >
           {title}
         </motion.h3>
@@ -129,7 +130,7 @@ export default function CaseStudyCard({
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: delay + 0.3 }}
-          className="text-slate-600 leading-relaxed mb-6 line-clamp-3"
+          className={cn(textStyles.default, "mb-6 line-clamp-3")}
         >
           {description}
         </motion.p>

@@ -6,7 +6,7 @@ import { Facebook, Twitter, Linkedin, Instagram, MapPin, Mail, Phone } from "luc
 
 export default function Footer() {
     return (
-        <footer className="bg-slate-900 text-white pt-20 pb-10">
+        <footer className="bg-deep-navy text-white pt-20 pb-10">
             <div className="container mx-auto px-6">
 
                 {/* Top Section: Logo & Newsletter/CTA */}
@@ -21,7 +21,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-4">
                         <h3 className="font-bold text-lg">Bizimle İletişime Geçin</h3>
-                        <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-8 font-medium text-white transition-colors hover:bg-blue-700">
+                        <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-full bg-action-blue px-8 font-medium text-white transition-all hover:bg-blue-700 shadow-lg shadow-blue-900/20">
                             Proje Başlat
                         </Link>
                     </div>

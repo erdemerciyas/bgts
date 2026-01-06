@@ -4,7 +4,11 @@ import Hero from "@/components/ui/Hero"
 import ContentSection from "@/components/ui/ContentSection"
 import Breadcrumb from "@/components/ui/Breadcrumb"
 import CaseStudyCard from "@/components/ui/CaseStudyCard"
-import { Building2, CreditCard, PieChart, TrendingUp, Award, ShieldCheck, Zap } from "lucide-react"
+import { Building2, ShieldCheck, TrendingUp, Users, Wallet, Lock, PieChart, Activity, Globe, ArrowRight } from "lucide-react"
+import { Section } from "@/components/ui/Section"
+import { Container } from "@/components/ui/Container"
+import { Heading, Text } from "@/components/ui/Typography"
+import Image from "next/image"
 
 export default function BankingPage() {
     return (
@@ -13,163 +17,154 @@ export default function BankingPage() {
                 <Breadcrumb
                     items={[
                         { label: "Sektörler", href: "/industries", icon: Building2 },
-                        { label: "Bankacılık & Finans", href: "/industries/banking", icon: PieChart }
+                        { label: "Bankacılık & Finans", href: "/industries/banking", icon: Wallet }
                     ]}
                 />
 
                 <Hero
-                    title="Bankacılık & Finans"
-                    subtitle="Bankalar, sigorta şirketleri ve fintechler için uçtan uca dijital dönüşüm."
-                    badge="Fintech"
-                    className="bg-blue-900"
-                    backgroundImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
+                    title="Finansın Geleceğini İnşa Ediyoruz"
+                    subtitle="Güvenli, ölçeklenebilir ve yenilikçi fintech çözümleri ile dijital bankacılık dönüşümüne liderlik edin."
+                    badge="Sektörel Çözümler"
+                    className="bg-slate-900"
+                    backgroundImage="https://images.unsplash.com/photo-1565514020179-0c2235efe9cd?auto=format&fit=crop&q=80"
                 />
 
-                <div className="container mx-auto px-6 py-20">
-                    {/* Success Metrics */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
-                        <div className="bg-gradient-to-br from-blue-700 to-blue-800 p-8 rounded-2xl text-white text-center hover:shadow-2xl transition-shadow">
-                            <Award className="w-12 h-12 mx-auto mb-4 opacity-80" />
-                            <h4 className="text-4xl font-bold mb-2">100+</h4>
-                            <p className="text-blue-100">Teslim Edilen Proje</p>
-                        </div>
-                        <div className="bg-gradient-to-br from-slate-600 to-slate-700 p-8 rounded-2xl text-white text-center hover:shadow-2xl transition-shadow">
-                            <TrendingUp className="w-12 h-12 mx-auto mb-4 opacity-80" />
-                            <h4 className="text-4xl font-bold mb-2">%99.9</h4>
-                            <p className="text-slate-100">Sistem Uptime</p>
-                        </div>
-                        <div className="bg-gradient-to-br from-indigo-700 to-indigo-800 p-8 rounded-2xl text-white text-center hover:shadow-2xl transition-shadow">
-                            <ShieldCheck className="w-12 h-12 mx-auto mb-4 opacity-80" />
-                            <h4 className="text-4xl font-bold mb-2">ISO 27001</h4>
-                            <p className="text-indigo-100">Güvenlik Sertifikası</p>
-                        </div>
-                        <div className="bg-gradient-to-br from-blue-600 to-indigo-600 p-8 rounded-2xl text-white text-center hover:shadow-2xl transition-shadow">
-                            <Zap className="w-12 h-12 mx-auto mb-4 opacity-80" />
-                            <h4 className="text-4xl font-bold mb-2">25+</h4>
-                            <p className="text-blue-100">Yıllık Deneyim</p>
-                        </div>
-                    </div>
-
-                    {/* Strategic Partnership */}
-                    <ContentSection
-                        title="Stratejik Teknoloji Ortağı"
-                        badge="Uzmanlık"
-                        content={
-                            <div className="space-y-6">
-                                <p className="text-lg">
-                                    25 yılı aşkın deneyimimizle, Türkiye'nin önde gelen bankaları ve sigorta şirketleri için dijital dönüşüm ajandalarını hayata geçiriyoruz. Derin sektör bilgimiz sayesinde, iş kritik sistemler için güvenilir, ölçeklenebilir çözümler sunuyoruz.
-                                </p>
-                                <p className="text-lg">
-                                    Biz sadece bir tedarikçi değiliz; süreci sahiplenen uzun vadeli bir teknoloji ortağıyız.
-                                </p>
-                                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                                    <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
-                                        <h4 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
-                                            <CreditCard className="w-5 h-5 text-blue-600" /> Temel Bankacılık
-                                        </h4>
-                                        <p className="text-slate-600">Modernizasyon & Migrasyon</p>
-                                    </div>
-                                    <div className="bg-slate-50 p-6 rounded-xl border-2 border-slate-200">
-                                        <h4 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
-                                            <PieChart className="w-5 h-5 text-slate-600" /> Veri & Analitik
-                                        </h4>
-                                        <p className="text-slate-600">Risk, Dolandırıcılık & Raporlama</p>
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                        image={
-                            <div className="bg-gradient-to-br from-slate-700 to-blue-800 p-10 h-full flex items-center justify-center rounded-2xl text-white">
-                                <div className="text-center">
-                                    <Building2 className="w-24 h-24 mx-auto mb-6 opacity-80" />
-                                    <h3 className="text-3xl font-bold mb-2">100+</h3>
-                                    <p className="text-blue-100 text-xl">Teslim Edilen Proje</p>
-                                </div>
-                            </div>
-                        }
-                    />
-
-                    {/* Success Stories */}
-                    <div className="mb-24">
-                        <div className="text-center mb-16">
-                            <h2 className="text-4xl font-bold mb-4 font-heading text-slate-900">
-                                Başarı Hikayeleri
-                            </h2>
-                            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-                                Türkiye'nin önde gelen finans kuruluşlarıyla gerçekleştirdiğimiz projeler
-                            </p>
-                        </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <CaseStudyCard
-                                title="Dijital Bankacılık Platformu"
-                                description="Önde gelen bir banka için uçtan uca dijital bankacılık platformu geliştirdik. Mobil ve web kanallarını entegre ederek müşteri deneyimini dönüştürdük."
-                                client="Türkiye'nin Önde Gelen Bankası"
-                                image="https://images.unsplash.com/photo-1563986768609-322da13575f2b?auto=format&fit=crop&q=80"
-                                href="/industries/banking"
-                                metrics={[
-                                    { label: "Kullanıcı", value: "5M+", icon: TrendingUp },
-                                    { label: "İşlem", value: "10M+/gün", icon: Zap },
-                                    { label: "Uptime", value: "%99.9", icon: ShieldCheck }
-                                ]}
-                                color="blue"
-                                delay={0}
-                            />
-                            <CaseStudyCard
-                                title="Açık Bankacılık API"
-                                description="Büyük ölçekli açık bankacılık API platformu. Fintech şirketleri ve üçüncü taraf geliştiriciler için güvenli ve ölçeklenebilir API erişimi sağladık."
-                                client="Fintech Lideri"
-                                image="https://images.unsplash.com/photo-1551288049-be3daa4af4b?auto=format&fit=crop&q=80"
-                                href="/industries/banking"
-                                metrics={[
-                                    { label: "API Call", value: "100M+/ay", icon: Zap },
-                                    { label: "Partner", value: "50+", icon: Building2 },
-                                    { label: "Response", value: "<50ms", icon: TrendingUp }
-                                ]}
-                                color="indigo"
-                                delay={0.1}
-                            />
-                            <CaseStudyCard
-                                title="Risk Yönetim Sistemi"
-                                description="Gerçek zamanlı risk analizi ve dolandırıcılık tespiti sistemi. Yapay zeka destekli algoritmalarla finansal riskleri proaktif olarak yönetiyoruz."
-                                client="Sigorta Şirketi"
-                                image="https://images.unsplash.com/photo-1554224155-6726b3fa944?auto=format&fit=crop&q=80"
-                                href="/industries/banking"
-                                metrics={[
-                                    { label: "Accuracy", value: "%99.5", icon: Award },
-                                    { label: "Alert", value: "Saniyeler", icon: Zap },
-                                    { label: "Reduction", value: "%80", icon: TrendingUp }
-                                ]}
-                                color="slate"
-                                delay={0.2}
-                            />
-                        </div>
-                    </div>
-
-                    {/* Specialized Domains */}
-                    <div className="bg-gradient-to-br from-blue-50 to-slate-100 rounded-3xl p-16 mb-24">
-                        <div className="text-center mb-12">
-                            <h2 className="text-4xl font-bold mb-4 font-heading text-slate-900">
-                                Özelleştirilmiş Alanlar
-                            </h2>
-                            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-                                Finans sektöründe uzmanlaştığımız hizmet alanları
-                            </p>
-                        </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Key Metrics */}
+                <Section className="pb-0 pt-20">
+                    <Container>
+                        <div className="grid md:grid-cols-4 gap-6 mb-24">
                             {[
-                                { title: "Ödeme Sistemleri", items: ["Issuing / Acquiring", "Dijital Cüzdanlar", "POS Entegrasyonu", "Çip Uygulamaları"], color: "blue" },
-                                { title: "Dijital Bankacılık", items: ["Mobil/Web Kanalları", "IVR Çözümleri", "Müşteri Kabulü (Onboarding)", "Dijital Varlıklar"], color: "indigo" },
-                                { title: "Kurumsal & Hazine", items: ["Nakit Yönetimi", "Dış Ticaret", "Krediler", "Faktoring"], color: "slate" },
-                                { title: "Veri & Risk", items: ["DWH Modelleme", "Yasal Raporlama", "Dolandırıcılık Tespiti (Fraud)", "Kredi Skorlama"], color: "blue" },
-                                { title: "Sigortacılık", items: ["Hasar Yönetimi", "Hayat/Emeklilik", "Poliçe Yönetimi", "Aktüeryal Sistemler"], color: "indigo" },
-                                { title: "Altyapı", items: ["Middleware", "Bulut Migrasyonu", "Güvenlik & IAM", "Yüksek Erişilebilirlik"], color: "slate" }
+                                { label: "İşlem Hacmi", value: "$50B+", icon: Activity, color: "text-blue-600" },
+                                { label: "Aktif Kullanıcı", value: "10M+", icon: Users, color: "text-indigo-600" },
+                                { label: "Uptime", value: "99.99%", icon: ShieldCheck, color: "text-green-600" },
+                                { label: "Maliyet Tasarrufu", value: "%40", icon: TrendingUp, color: "text-orange-600" }
+                            ].map((stat, i) => (
+                                <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-lg text-center hover:-translate-y-1 transition-transform">
+                                    <div className={`w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center mx-auto mb-4 ${stat.color}`}>
+                                        <stat.icon className="w-6 h-6" />
+                                    </div>
+                                    <div className={`text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 mb-1`}>
+                                        {stat.value}
+                                    </div>
+                                    <Text variant="small" className="text-slate-500 font-medium">{stat.label}</Text>
+                                </div>
+                            ))}
+                        </div>
+                    </Container>
+                </Section>
+
+                {/* Strategic Partnership */}
+                <ContentSection
+                    title="Stratejik Teknoloji İş Ortağınız"
+                    badge="Fintech"
+                    content={
+                        <div className="space-y-6">
+                            <Text variant="large">
+                                Bankacılık ve finans sektöründe dijital dönüşüm bir seçenek değil, zorunluluktur. <strong className="text-blue-700">Açık Bankacılık (Open Banking)</strong>, <strong className="text-blue-700">Blockchain</strong> ve <strong className="text-blue-700">Yapay Zeka</strong> tabanlı çözümlerimizle kurumunuzu geleceğe taşıyoruz.
+                            </Text>
+                            <div className="grid grid-cols-2 gap-4 mt-6">
+                                {[
+                                    { icon: Lock, text: "PCI-DSS Uyumluluğu" },
+                                    { icon: Globe, text: "Sınır Ötesi Ödemeler" },
+                                    { icon: PieChart, text: "Yapay Zeka Destekli Analiz" },
+                                    { icon: ShieldCheck, text: "Siber Güvenlik Odaklı" }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100">
+                                        <item.icon className="w-5 h-5 text-blue-600" />
+                                        <Text variant="small" className="text-slate-700 font-medium">{item.text}</Text>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    }
+                    image={
+                        <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden">
+                            <Image
+                                src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&q=80"
+                                alt="Banking Technology"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-blue-900/40 mix-blend-multiply"></div>
+                            <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/95 backdrop-blur rounded-xl shadow-xl">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                        <Wallet className="w-6 h-6 text-green-600" />
+                                    </div>
+                                    <div>
+                                        <div className="text-sm text-slate-500 font-medium">Günlük İşlem Kapasitesi</div>
+                                        <div className="text-2xl font-bold text-slate-900">2.5 Milyon+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                />
+
+                {/* Case Studies */}
+                <Section>
+                    <Container>
+                        <Heading variant="h2" className="text-center mb-12">Başarı Hikayeleri</Heading>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <CaseStudyCard
+                                title="Yeni Nesil Mobil Bankacılık Deneyimi"
+                                description="Türkiye'nin önde gelen özel bankalarından biri için geliştirdiğimiz native mobil uygulama ile müşteri etkileşimini %200 artırdık. Biyometrik doğrulama ve kişiselleştirilmiş finansal asistan özellikleri entegre edildi."
+                                client="Tier-1 Banka"
+                                image="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80"
+                                href="/case-studies/mobile-banking"
+                                color="blue"
+                                metrics={[
+                                    { label: "Kullanıcı Artışı", value: "%200", icon: Users },
+                                    { label: "İşlem Hızı", value: "2x", icon: Activity },
+                                    { label: "Store Puanı", value: "4.8", icon: ArrowRight }
+                                ]}
+                            />
+                            <CaseStudyCard
+                                title="Yapay Zeka Destekli Kredi Skorlama"
+                                description="Geleneksel skorlama modellerine alternatif, makine öğrenmesi tabanlı risk analiz motoru. Kredi tahsis süreçlerini 3 günden 3 dakikaya indirdik ve batık kredi oranlarını %15 azalttık."
+                                client="Fintech Girişimi"
+                                image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"
+                                href="/case-studies/ai-credit-scoring"
+                                color="indigo"
+                                metrics={[
+                                    { label: "Süreç Hızı", value: "-99%", icon: Activity },
+                                    { label: "Risk Düşüşü", value: "%15", icon: ShieldCheck },
+                                    { label: "Onay Oranı", value: "+%30", icon: TrendingUp }
+                                ]}
+                            />
+                        </div>
+                    </Container>
+                </Section>
+
+                {/* Specialized Domains */}
+                <Section className="bg-slate-50 dark:bg-slate-900">
+                    <Container>
+                        <Heading variant="h2" className="text-center mb-12">Uzmanlık Alanları</Heading>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    title: "Core Banking",
+                                    desc: "Modern, modüler ve API-first temel bankacılık sistemi modernizasyonu.",
+                                    items: ["Hesap Yönetimi", "Muhasebe", "Kredi Kartları"]
+                                },
+                                {
+                                    title: "Ödeme Sistemleri",
+                                    desc: "Güvenli, hızlı ve global standartlarla uyumlu ödeme altyapıları.",
+                                    items: ["Payment Gateway", "Mobil Cüzdan", "Sanal POS"]
+                                },
+                                {
+                                    title: "Yatırım Teknolojileri",
+                                    desc: "Algoritmik ticaret ve portföy yönetimi için yüksek performanslı platformlar.",
+                                    items: ["Robo-Advisor", "Trading API", "Blockchain Varlıklar"]
+                                }
                             ].map((domain, i) => (
-                                <div key={domain.title} className={`bg-${domain.color}-50 p-6 rounded-xl border-2 border-${domain.color}-200 hover:bg-${domain.color}-100 transition-colors`}>
-                                    <h3 className={`text-xl font-bold mb-4 text-${domain.color}-900`}>{domain.title}</h3>
-                                    <ul className="space-y-2">
+                                <div key={i} className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow">
+                                    <Heading variant="h3" className="text-xl font-bold mb-4 text-slate-900 dark:text-white">{domain.title}</Heading>
+                                    <Text className="text-slate-600 dark:text-slate-300 mb-6">{domain.desc}</Text>
+                                    <ul className="space-y-3">
                                         {domain.items.map((item, j) => (
-                                            <li key={j} className="flex items-center gap-2 text-sm text-slate-700">
-                                                <div className={`w-1.5 h-1.5 rounded-full bg-${domain.color}-600`}></div>
+                                            <li key={j} className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
                                                 {item}
                                             </li>
                                         ))}
@@ -177,8 +172,8 @@ export default function BankingPage() {
                                 </div>
                             ))}
                         </div>
-                    </div>
-                </div>
+                    </Container>
+                </Section>
             </div>
         </>
     )

@@ -24,7 +24,7 @@ export function TextLoader({ lines = 3 }: { lines?: number }) {
         <div
           key={i}
           className="animate-pulse bg-slate-200 rounded h-4"
-          style={{ width: `${Math.random() * 40 + 60}%` }}
+          style={{ width: `${(60 + (i * 13) % 40)}%` }}
         />
       ))}
     </div>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { LucideIcon, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Heading, Text } from "@/components/ui/Typography"
 
 interface ServiceCardProps {
   title: string
@@ -20,12 +21,12 @@ interface ServiceCardProps {
 const colorVariants = {
   blue: {
     bg: "bg-gradient-to-br from-blue-50 to-blue-100",
-    iconBg: "bg-blue-600",
+    iconBg: "bg-action-blue",
     iconColor: "text-white",
     title: "text-blue-900",
     border: "border-blue-200",
     hover: "hover:border-blue-400",
-    arrow: "text-blue-600"
+    arrow: "text-action-blue"
   },
   green: {
     bg: "bg-gradient-to-br from-green-50 to-green-100",
@@ -131,12 +132,12 @@ export default function ServiceCard({
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: delay + 0.3 }}
       >
-        <h3 className={cn("text-2xl font-bold mb-4", colors.title)}>
+        <Heading variant="h3" className={cn("mb-4", colors.title)}>
           {title}
-        </h3>
-        <p className="text-slate-700 leading-relaxed mb-6">
+        </Heading>
+        <Text className="mb-6">
           {description}
-        </p>
+        </Text>
 
         {features && features.length > 0 && (
           <ul className="space-y-2 mb-6">

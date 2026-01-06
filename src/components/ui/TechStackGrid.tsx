@@ -4,6 +4,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Heading } from "@/components/ui/Typography"
 
 export interface TechStackItem {
   name: string
@@ -106,9 +107,9 @@ export default function TechStackGrid({
           transition={{ duration: 0.5, delay: delay + groupIndex * 0.1 }}
         >
           {/* Category Header */}
-          <h3 className={cn("text-2xl font-bold mb-6", colors.category)}>
+          <Heading variant="h3" className={cn("mb-6", colors.category)}>
             {category}
-          </h3>
+          </Heading>
 
           {/* Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

@@ -13,6 +13,10 @@ interface ContentSectionProps {
     className?: string
 }
 
+import { Section } from "@/components/ui/Section"
+import { Container } from "@/components/ui/Container"
+import { Heading, Text } from "@/components/ui/Typography"
+
 export default function ContentSection({
     title,
     badge,
@@ -22,10 +26,10 @@ export default function ContentSection({
     className
 }: ContentSectionProps) {
     return (
-        <section className={cn("py-20 bg-white dark:bg-blue-950", className)}>
-            <div className="container mx-auto px-6">
+        <Section className={cn("bg-white", className)}>
+            <Container>
                 <div className={cn(
-                    "flex flex-col lg:flex-row items-center gap-12 lg:gap-20",
+                    "flex flex-col lg:flex-row gap-12 lg:gap-20",
                     reverse ? "lg:flex-row-reverse" : ""
                 )}>
                     {/* Text Content */}
@@ -37,15 +41,15 @@ export default function ContentSection({
                         className="flex-1"
                     >
                         {badge && (
-                            <span className="block text-blue-500 dark:text-blue-400 font-bold tracking-wide uppercase text-sm mb-2">
+                            <span className="block text-blue-600 font-bold tracking-wide uppercase text-sm mb-2">
                                 {badge}
                             </span>
                         )}
-                        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
+                        <Heading variant="h2" className="text-slate-900 mb-6">
                             {title}
-                        </h2>
-                        <div className="prose prose-lg dark:prose-invert text-slate-600 dark:text-blue-100">
-                            {typeof content === 'string' ? <p>{content}</p> : content}
+                        </Heading>
+                        <div className="prose prose-lg text-slate-600">
+                            {typeof content === 'string' ? <Text>{content}</Text> : content}
                         </div>
                     </motion.div>
 
@@ -65,7 +69,7 @@ export default function ContentSection({
                         </motion.div>
                     )}
                 </div>
-            </div>
-        </section>
+            </Container>
+        </Section>
     )
 }

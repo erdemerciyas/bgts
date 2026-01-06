@@ -3,267 +3,215 @@
 import Hero from "@/components/ui/Hero"
 import ContentSection from "@/components/ui/ContentSection"
 import Breadcrumb from "@/components/ui/Breadcrumb"
-import { AccordionItem, AccordionGroup } from "@/components/ui/Accordion"
-import { Shield, Target, Cpu, Lock, CheckCircle2, Award, FileCheck, Zap } from "lucide-react"
+import { Shield, ShieldAlert, Lock, Radio, Crosshair, Server, Eye, FileCheck, CheckCircle2, ChevronDown, ShieldCheck } from "lucide-react"
+import Image from "next/image"
+import { Section } from "@/components/ui/Section"
+import { Container } from "@/components/ui/Container"
+import { Heading, Text } from "@/components/ui/Typography"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { cn } from "@/lib/utils"
 
 export default function DefensePage() {
     return (
         <>
-            <div className="bg-white min-h-screen text-slate-900">
+            <div className="bg-white min-h-screen">
                 <Breadcrumb
                     items={[
                         { label: "Sektörler", href: "/industries", icon: Shield },
-                        { label: "Savunma Sanayi", href: "/industries/defense", icon: Target }
+                        { label: "Savunma Sanayi", href: "/industries/defense", icon: ShieldAlert }
                     ]}
                 />
 
                 <Hero
-                    title="Savunma Sanayi Çözümleri"
-                    subtitle="Kritik görev operasyonları için güvenilir, yüksek performanslı ve güvenli yazılım çözümleri."
+                    title="Milli Savunma İçin Kritik Teknolojiler"
+                    subtitle="TSK ve savunma sanayi ekosistemi için yerli, güvenli ve yüksek performanslı yazılım çözümleri."
                     badge="Savunma & Havacılık"
-                    className="bg-blue-950"
-                    backgroundImage="https://images.unsplash.com/photo-1596324263156-c73ae8449c0d?auto=format&fit=crop&q=80"
-                    pattern="grid"
+                    className="bg-slate-900"
+                    backgroundImage="https://images.unsplash.com/photo-1596707325251-ab7cb402280d?auto=format&fit=crop&q=80"
                 />
 
-                <div className="container mx-auto px-6 py-20">
-                    {/* Standards Compliance */}
-                    <div className="grid md:grid-cols-4 gap-6 mb-24">
-                        <div className="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 text-center group">
-                            <FileCheck className="w-12 h-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                            <h4 className="text-xl font-bold text-slate-900 mb-2">IEEE 12207</h4>
-                            <p className="text-slate-500 text-sm">Software Life Cycle</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 text-center group">
-                            <FileCheck className="w-12 h-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                            <h4 className="text-xl font-bold text-slate-900 mb-2">IEEE 15288</h4>
-                            <p className="text-slate-500 text-sm">Systems Engineering</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 text-center group">
-                            <Award className="w-12 h-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                            <h4 className="text-xl font-bold text-slate-900 mb-2">ISO 29119</h4>
-                            <p className="text-slate-500 text-sm">Software Testing</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl border-2 border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 text-center group">
-                            <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                            <h4 className="text-xl font-bold text-slate-900 mb-2">ISO 27001</h4>
-                            <p className="text-slate-500 text-sm">Information Security</p>
-                        </div>
-                    </div>
-
-                    {/* Summary Section */}
-                    <ContentSection
-                        title="Kritik Görev Mühendisliği"
-                        badge="Genel Bakış"
-                        content={
-                            <div className="space-y-6 text-lg">
-                                <p className="text-slate-600">
-                                    Savunma projelerinde öncelikli hedefimiz, güvenilir, yüksek performanslı ve güvenli yazılım çözümleri sunmaktır. Gömülü yazılımlardan web ve bulut tabanlı sistemlere kadar tüm geliştirme yaşam döngüsünü yöneterek, kritik görev yazılımlarının sahada doğru, hızlı ve hatasız çalışmasını sağlıyoruz.
-                                </p>
-                                <p className="text-slate-600">
-                                    Çalışmalarımızı <strong className="text-blue-700">IEEE 12207, 15288 ve 42020</strong> standartlarına tam uyumlu olarak yürütüyoruz. Bu sayede gereksinim analizinden mimari tasarımına, geliştirme ve teste kadar her adımda izlenebilirlik ve doğrulama sağlıyoruz.
-                                </p>
-                                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                                    <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                                        <Target className="w-8 h-8 text-blue-600 mb-3" />
-                                        <h4 className="font-bold text-slate-900 mb-2">Görev Odaklı</h4>
-                                        <p className="text-slate-500 text-sm">Kritik görev sistemleri için özel çözümler</p>
+                {/* Compliance Badges */}
+                <Section className="bg-slate-50 border-b border-slate-200">
+                    <Container>
+                        <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                            {[
+                                { icon: Shield, label: "Milli Gizli" },
+                                { icon: Lock, label: "NATO Secret" },
+                                { icon: FileCheck, label: "DO-178C" },
+                                { icon: CheckCircle2, label: "ISO 27001" },
+                            ].map((badge, i) => (
+                                <div key={i} className="flex flex-col items-center gap-3 group cursor-pointer">
+                                    <div className="w-16 h-16 rounded-full bg-slate-200 group-hover:bg-blue-600 flex items-center justify-center transition-colors">
+                                        <badge.icon className="w-8 h-8 text-slate-500 group-hover:text-white transition-colors" />
                                     </div>
-                                    <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                                        <Lock className="w-8 h-8 text-blue-600 mb-3" />
-                                        <h4 className="font-bold text-slate-900 mb-2">Güvenlik Öncelikli</h4>
-                                        <p className="text-slate-500 text-sm">Askeri güvenlik standartlarına uyum</p>
+                                    <span className="font-bold text-slate-900">{badge.label}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </Container>
+                </Section>
+
+                {/* Mission Critical Systems */}
+                <ContentSection
+                    title="Görev Kritik Sistemler"
+                    badge="Mission Critical"
+                    content={
+                        <div className="space-y-6">
+                            <Text variant="large">
+                                Savunma sanayinin zorlu gereksinimlerine uygun, gerçek zamanlı (Real-Time) işletim sistemleri ve gömülü yazılım çözümleri geliştiriyoruz. <strong className="text-blue-700">Aviyonik sistemler</strong>, <strong className="text-blue-700">Komuta Kontrol (C4ISR)</strong> ve <strong className="text-blue-700">Simülasyon</strong> teknolojilerinde derin uzmanlığa sahibiz.
+                            </Text>
+                            <div className="bg-slate-900 text-white p-6 rounded-xl border border-slate-700 mt-6">
+                                <Heading variant="h4" className="text-lg font-bold mb-4 flex items-center gap-2">
+                                    <Radio className="w-5 h-5 text-red-500 animate-pulse" />
+                                    Operasyonel Üstünlük
+                                </Heading>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start gap-3 text-slate-300 text-sm">
+                                        <Crosshair className="w-4 h-4 mt-1 text-blue-500" />
+                                        Milisaniye hassasiyetinde tepki süreleri
+                                    </li>
+                                    <li className="flex items-start gap-3 text-slate-300 text-sm">
+                                        <Shield className="w-4 h-4 mt-1 text-blue-500" />
+                                        Siber tehditlere karşı maksimum direnç
+                                    </li>
+                                    <li className="flex items-start gap-3 text-slate-300 text-sm">
+                                        <Server className="w-4 h-4 mt-1 text-blue-500" />
+                                        %99.999 erişilebilirlik garantisi
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    }
+                    image={
+                        <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden group">
+                            <Image
+                                src="https://images.unsplash.com/photo-1542289548-52cb2fead4cd?auto=format&fit=crop&q=80"
+                                alt="Radar Interface"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-slate-900/50 mix-blend-multiply"></div>
+                            {/* HUD Effect */}
+                            <div className="absolute inset-0 pointer-events-none border-[20px] border-transparent border-t-green-500/20 border-b-green-500/20"></div>
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] border border-green-500/30 rounded-lg flex items-center justify-center">
+                                <div className="w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
+                            </div>
+                        </div>
+                    }
+                />
+
+                {/* Detailed Capabilities - Accordion Style */}
+                <Section className="bg-slate-900 text-white">
+                    <Container>
+                        <div className="grid lg:grid-cols-2 gap-16 items-start">
+                            <div>
+                                <Heading variant="h2" className="text-white mb-6">Teknolojik Yetkinlikler</Heading>
+                                <Text className="text-slate-400 mb-8 leading-relaxed">
+                                    Savunma sanayisinin tüm katmanlarında uçtan uca çözümler sunuyoruz. Veri analitiğinden otonom sistemlere kadar geniş bir yelpazede hizmet veriyoruz.
+                                </Text>
+                                <CapabilitiesAccordion />
+                            </div>
+                            <div className="relative">
+                                <div className="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-full"></div>
+                                <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+                                    <Image
+                                        src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80"
+                                        alt="Advanced Technology"
+                                        width={600}
+                                        height={800}
+                                        className="w-full object-cover"
+                                    />
+                                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent p-8">
+                                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-2">
+                                            Ar-Ge Odaklı
+                                        </div>
+                                        <Heading variant="h3" className="text-xl font-bold text-white">Geleceğin Savaş Sahası</Heading>
                                     </div>
                                 </div>
                             </div>
-                        }
-                        image={
-                            <div className="bg-slate-50 text-slate-400 p-10 h-full flex flex-col justify-center items-center rounded-2xl border border-slate-200">
-                                <Shield className="w-32 h-32 mb-6 text-slate-300" />
-                                <h4 className="text-2xl font-bold mb-2 text-slate-400">Kritik Görev</h4>
-                                <p className="text-center text-slate-400">Güvenilir & Hızlı</p>
-                            </div>
-                        }
-                    />
-
-                    {/* Detailed Capabilities */}
-                    <div className="bg-slate-50 py-20 mb-24 rounded-3xl border border-slate-100">
-                        <h2 className="text-3xl font-bold mb-10 text-center font-heading text-slate-900">Teknik Kapasiteler & Standartlar</h2>
-                        <div className="max-w-4xl mx-auto px-6">
-                            <AccordionGroup>
-                                <AccordionItem title="C4I & Simülasyon Yazılımları">
-                                    <div className="space-y-4">
-                                        <p className="text-slate-700"><strong className="text-slate-900">Komuta & Kontrol:</strong> Gerçek zamanlı veri işleme, sensör füzyonu, taktik veri linkleri ve görev planlama fonksiyonları.</p>
-                                        <p className="text-slate-700"><strong className="text-slate-900">Simülasyon:</strong> Davranış motoru geliştirme, modelleme ve eğitim senaryosu oluşturma.</p>
-                                        <div className="flex items-center gap-2 text-sm text-slate-600 mt-2">
-                                            <Target className="w-4 h-4" /> <span>Standartlaştırılmış doğrulama süreçleri.</span>
-                                        </div>
-                                    </div>
-                                </AccordionItem>
-
-                                <AccordionItem title="Gömülü Sistemler & Güvenlik">
-                                    <div className="space-y-4">
-                                        <p className="text-slate-700">Düşük seviye sürücülerin, kontrol yazılımlarının ve RTOS/FPGA tabanlı sistemlerin geliştirilmesi.</p>
-                                        <p className="text-slate-700"><strong className="text-slate-900">Güvenli Kodlama:</strong> OWASP ve askeri güvenlik politikalarına uyum. Statik/Dinamik kod analizi ve zafiyet taraması.</p>
-                                        <div className="grid md:grid-cols-2 gap-4 mt-4">
-                                            <div className="bg-white p-4 rounded-lg border border-slate-200">
-                                                <Cpu className="w-6 h-6 text-blue-600 mb-2" />
-                                                <h5 className="font-bold text-slate-900 text-sm">RTOS</h5>
-                                                <p className="text-xs text-slate-500">Real-time OS</p>
-                                            </div>
-                                            <div className="bg-white p-4 rounded-lg border border-slate-200">
-                                                <Lock className="w-6 h-6 text-blue-600 mb-2" />
-                                                <h5 className="font-bold text-slate-900 text-sm">Secure Coding</h5>
-                                                <p className="text-xs text-slate-500">Static analysis</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </AccordionItem>
-
-                                <AccordionItem title="İş Analizi & CONOPS">
-                                    <div className="space-y-4">
-                                        <p className="text-slate-700">Paydaş ihtiyaçlarından kavramsal tasarıma kadar kapsamlı analiz.</p>
-                                        <ul className="list-disc pl-5 space-y-2 text-slate-700">
-                                            <li><strong className="text-slate-900">Görev Analizi:</strong> IIBA uyumlu metodolojiler.</li>
-                                            <li><strong className="text-slate-900">Süreç Modelleme:</strong> BPMN, UML, SysML, ArchiMate.</li>
-                                            <li><strong className="text-slate-900">CONOPS:</strong> Ortak anlayış için operasyonel konsept dokümantasyonu.</li>
-                                        </ul>
-                                    </div>
-                                </AccordionItem>
-
-                                <AccordionItem title="Test & Doğrulama (V-Model)">
-                                    <div className="space-y-4">
-                                        <p className="text-slate-700">Hizmetlerimiz <strong className="text-slate-900">ISO 29119 ve IEEE 829</strong> standartlarına göre tasarlanmıştır.</p>
-                                        <p className="text-slate-700">Fonksiyonel testler, Sistem Entegrasyonu, Otomasyon ve saha dayanıklığı için Yük/Stres testleri.</p>
-                                        <div className="flex gap-4 mt-4 overflow-x-auto pb-2">
-                                            <div className="flex-1 min-w-[140px] bg-white p-4 rounded-lg border border-slate-200">
-                                                <CheckCircle2 className="w-6 h-6 text-blue-600 mb-2" />
-                                                <h5 className="font-bold text-slate-900 text-sm">Unit Tests</h5>
-                                                <p className="text-xs text-slate-500">Component level</p>
-                                            </div>
-                                            <div className="flex-1 min-w-[140px] bg-white p-4 rounded-lg border border-slate-200">
-                                                <CheckCircle2 className="w-6 h-6 text-blue-600 mb-2" />
-                                                <h5 className="font-bold text-slate-900 text-sm">Integration</h5>
-                                                <p className="text-xs text-slate-500">System level</p>
-                                            </div>
-                                            <div className="flex-1 min-w-[140px] bg-white p-4 rounded-lg border border-slate-200">
-                                                <CheckCircle2 className="w-6 h-6 text-blue-600 mb-2" />
-                                                <h5 className="font-bold text-slate-900 text-sm">System Tests</h5>
-                                                <p className="text-xs text-slate-500">End-to-end</p>
-                                            </div>
-                                            <div className="flex-1 min-w-[140px] bg-white p-4 rounded-lg border border-slate-200">
-                                                <CheckCircle2 className="w-6 h-6 text-blue-600 mb-2" />
-                                                <h5 className="font-bold text-slate-900 text-sm">Stress Tests</h5>
-                                                <p className="text-xs text-slate-500">High load</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </AccordionItem>
-
-                                <AccordionItem title="Savunma için DevOps">
-                                    <div className="space-y-4">
-                                        <p className="text-slate-700">Air-gapped veya yüksek güvenlikli ortamlarla uyumlu Güvenli CI/CD boru hatları.</p>
-                                        <p className="text-slate-700">Jenkins/GitLab entegrasyonu, ölçeklenebilir mikro servisler için Kubernetes orkestrasyonu ve otomatik test kapıları.</p>
-                                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mt-4">
-                                            <h5 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                                                <Zap className="w-5 h-5 text-blue-600" /> Güvenli DevOps Pipeline
-                                            </h5>
-                                            <div className="space-y-3 text-sm text-slate-600">
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                                                    <span>Code → Build → Test → Deploy</span>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                                                    <span>Automated security scanning</span>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-                                                    <span>Compliance checks</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </AccordionItem>
-
-                                <AccordionItem title="BT Altyapısı & Veri Merkezi">
-                                    <div className="space-y-4">
-                                        <p className="text-slate-700">Güvenli ağlar (LAN/WAN), sunucu/depolama sistemleri ve felaket kurtarma planlarının tasarımı ve yönetimi.</p>
-                                        <p className="text-slate-700"><strong className="text-slate-900">ISO 20000 ve ISO 27001</strong> uyumlu yönetilen hizmetler.</p>
-                                        <div className="grid md:grid-cols-2 gap-4 mt-4">
-                                            <div className="bg-white p-4 rounded-lg border border-slate-200">
-                                                <Cpu className="w-6 h-6 text-blue-600 mb-2" />
-                                                <h5 className="font-bold text-slate-900 text-sm">Secure Networks</h5>
-                                                <p className="text-xs text-slate-500">LAN/WAN/VLAN</p>
-                                            </div>
-                                            <div className="bg-white p-4 rounded-lg border border-slate-200">
-                                                <Shield className="w-6 h-6 text-blue-600 mb-2" />
-                                                <h5 className="font-bold text-slate-900 text-sm">Data Center</h5>
-                                                <p className="text-xs text-slate-500">Tier 3 certified</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </AccordionItem>
-                            </AccordionGroup>
                         </div>
-                    </div>
+                    </Container>
+                </Section>
 
-                    {/* Key Benefits */}
-                    <div className="grid md:grid-cols-3 gap-8 mb-24">
-                        <div className="bg-gradient-to-br from-indigo-900 to-blue-900 p-8 rounded-2xl border border-indigo-700 hover:shadow-2xl transition-all duration-300 text-white shadow-lg">
-                            <Target className="w-12 h-12 text-blue-300 mb-6" />
-                            <h3 className="text-xl font-bold mb-3">Kritik Görev Odaklı</h3>
-                            <p className="text-blue-100 leading-relaxed">
-                                Savunma standartlarına tam uyumlu, güvenilir ve hatasız sistemler.
-                            </p>
-                            <ul className="space-y-2 mt-4 text-sm text-blue-200">
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-blue-300" />
-                                    <span>IEEE 12207/15288 uyumlu</span>
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-blue-300" />
-                                    <span>ISO 29119 test standartları</span>
-                                </li>
-                            </ul>
+                {/* Security Focus */}
+                <Section>
+                    <Container>
+                        <div className="text-center max-w-3xl mx-auto mb-16">
+                            <Heading variant="h2" className="mb-4">Önce Güvenlik</Heading>
+                            Tüm süreçlerimizde &quot;Security by Design&quot; prensibini benimsiyoruz.
                         </div>
-                        <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-2xl border border-slate-700 hover:shadow-2xl transition-all duration-300 text-white shadow-lg">
-                            <Lock className="w-12 h-12 text-slate-300 mb-6" />
-                            <h3 className="text-xl font-bold mb-3">Güvenlik Öncelikli</h3>
-                            <p className="text-slate-300 leading-relaxed">
-                                Askeri güvenlik standartlarına uygun, güvenli yazılım geliştirme süreçleri.
-                            </p>
-                            <ul className="space-y-2 mt-4 text-sm text-slate-400">
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-slate-500" />
-                                    <span>ISO 27001 uyumlu</span>
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-slate-500" />
-                                    <span>OWASP güvenlik standartları</span>
-                                </li>
-                            </ul>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {[
+                                { title: "Kriptoloji", desc: "Askeri standartlarda veri şifreleme ve güvenli iletişim protokolleri." },
+                                { title: "Sızma Testleri", desc: "Düzenli red-teaming operasyonları ile sistem zafiyetlerinin tespiti." },
+                                { title: "Güvenli Yazılım Yaşam Döngüsü", desc: "SSDLC süreçleri ile kodlama aşamasından itibaren güvenlik." }
+                            ].map((item, i) => (
+                                <div key={i} className="p-8 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:bg-white hover:shadow-xl transition-all duration-300">
+                                    <div className="w-16 h-16 mx-auto bg-slate-200 rounded-full flex items-center justify-center mb-6">
+                                        <ShieldCheck className="w-8 h-8 text-slate-700" />
+                                    </div>
+                                    <Heading variant="h4" className="text-lg font-bold text-slate-900 mb-3">{item.title}</Heading>
+                                    <Text variant="small" className="text-slate-500 leading-relaxed">{item.desc}</Text>
+                                </div>
+                            ))}
                         </div>
-                        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-8 rounded-2xl border border-blue-500 hover:shadow-2xl transition-all duration-300 text-white shadow-lg">
-                            <Award className="w-12 h-12 text-indigo-200 mb-6" />
-                            <h3 className="text-xl font-bold mb-3">Kalite Sertifikalı</h3>
-                            <p className="text-indigo-100 leading-relaxed">
-                                Uluslararası standartlara tam uyumlu, kalite odaklı süreçler.
-                            </p>
-                            <ul className="space-y-2 mt-4 text-sm text-indigo-100">
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-indigo-200" />
-                                    <span>ISO 20000 ITSM</span>
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="w-4 h-4 text-indigo-200" />
-                                    <span>ISO 27001 ISMS</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                    </Container>
+                </Section>
             </div>
         </>
+    )
+}
+
+function CapabilitiesAccordion() {
+    const [openIndex, setOpenIndex] = useState<number | null>(0)
+
+    const items = [
+        {
+            title: "Komuta Kontrol Sistemleri",
+            content: "C4ISR sistemleri için durumsal farkındalık, ortak harekat resmi oluşturma ve karar destek mekanizmaları geliştiriyoruz."
+        },
+        {
+            title: "Simülasyon ve Eğitim",
+            content: "Sanal ve artırılmış gerçeklik tabanlı eğitim simülatörleri, harp oyunları ve taktik eğitim sistemleri."
+        },
+        {
+            title: "İnsansız Sistemler",
+            content: "İHA/SİHA yer kontrol istasyonları, otonom uçuş algoritmaları ve görüntü işleme çözümleri."
+        },
+        {
+            title: "Siber Güvenlik",
+            content: "Ulusal siber güvenlik stratejilerine uygun, yerli güvenlik duvarı, IDPS ve SIEM çözümleri."
+        }
+    ]
+
+    return (
+        <div className="space-y-4">
+            {items.map((item, i) => (
+                <div key={i} className="border border-slate-700 rounded-xl overflow-hidden bg-slate-800/50">
+                    <button
+                        onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                        className="w-full flex items-center justify-between p-4 text-left font-bold text-white hover:bg-slate-700/50 transition-colors"
+                    >
+                        {item.title}
+                        <ChevronDown className={cn("w-5 h-5 text-slate-400 transition-transform", openIndex === i ? "rotate-180" : "")} />
+                    </button>
+                    <AnimatePresence>
+                        {openIndex === i && (
+                            <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                className="overflow-hidden"
+                            >
+                                <div className="p-4 pt-0 text-slate-400 text-sm leading-relaxed border-t border-slate-700/50">
+                                    {item.content}
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            ))}
+        </div>
     )
 }
