@@ -63,15 +63,15 @@ export default function Hero({
                             className="text-left"
                         >
                             {badge && (
-                                <div className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-800 mb-6">
-                                    <span className="flex h-2 w-2 rounded-full bg-action-blue mr-2"></span>
+                                <div className="inline-flex items-center rounded-full border border-corporate-accent/30 bg-corporate-surface px-3 py-1 text-sm font-medium text-corporate-primary mb-6">
+                                    <span className="flex h-2 w-2 rounded-full bg-corporate-secondary mr-2"></span>
                                     {badge}
                                 </div>
                             )}
-                            <Heading variant="h1" className="text-slate-900 mb-6">
+                            <Heading variant="h1" className="text-corporate-primary mb-6">
                                 {title}
                             </Heading>
-                            <Text variant="large" className="text-slate-600 mb-8 max-w-lg">
+                            <Text variant="large" className="text-text-secondary mb-8 max-w-lg">
                                 {subtitle}
                             </Text>
 
@@ -79,14 +79,14 @@ export default function Hero({
                                 <div className="flex flex-wrap gap-4">
                                     <Link
                                         href={ctaLink}
-                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-action-blue rounded-full hover:bg-blue-700 hover:scale-105 shadow-xl shadow-action-blue/20"
+                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-corporate-secondary rounded-full hover:bg-corporate-primary hover:scale-105 shadow-xl shadow-corporate-secondary/20"
                                     >
                                         {ctaText || "Keşfedin"}
                                         <ArrowRight className="w-5 h-5 ml-2" />
                                     </Link>
                                     <Link
                                         href="/contact"
-                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-corporate-dark transition-all bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 shadow-sm"
+                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-corporate-primary transition-all bg-white border border-border rounded-full hover:bg-corporate-surface hover:border-corporate-accent shadow-sm"
                                     >
                                         İletişime Geçin
                                     </Link>
@@ -141,7 +141,7 @@ export default function Hero({
                         )}
 
                         {/* Dark Overlay for Text Readability */}
-                        <div className="absolute inset-0 bg-slate-900/60" />
+                        <div className="absolute inset-0 bg-corporate-primary/70" />
                     </>
                 ) : backgroundImage ? (
                     <>
@@ -154,7 +154,7 @@ export default function Hero({
                                 priority
                             />
                         </div>
-                        <div className="absolute inset-0 bg-slate-900/70" />
+                        <div className="absolute inset-0 bg-corporate-primary/75" />
                     </>
                 ) : (
                     <>
@@ -165,22 +165,22 @@ export default function Hero({
                         {pattern === "dots" && (
                             <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
                         )}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-100/50 blur-[100px] rounded-full mix-blend-multiply opacity-70"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-corporate-surface/80 blur-[100px] rounded-full mix-blend-multiply opacity-70"></div>
                     </>
                 )}
             </div>
 
             <Container className="relative z-10 text-center">
-                {badge && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center mb-6 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm text-sm font-medium text-slate-600"
-                    >
-                        <span className="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
-                        {badge}
-                    </motion.div>
-                )}
+                    {badge && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="inline-flex items-center mb-6 px-3 py-1 rounded-full bg-white border border-border shadow-sm text-sm font-medium text-corporate-primary"
+                        >
+                            <span className="w-2 h-2 rounded-full bg-corporate-tertiary mr-2 animate-pulse"></span>
+                            {badge}
+                        </motion.div>
+                    )}
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -220,7 +220,7 @@ export default function Hero({
                     >
                         <Link
                             href={ctaLink}
-                            className="inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-action-blue rounded-full hover:bg-blue-700 hover:scale-105 shadow-xl shadow-action-blue/20"
+                            className="inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-corporate-secondary rounded-full hover:bg-corporate-primary hover:scale-105 shadow-xl shadow-corporate-secondary/20"
                         >
                             {ctaText || "Daha Fazlası"}
                             <ArrowRight className="w-5 h-5 ml-2" />

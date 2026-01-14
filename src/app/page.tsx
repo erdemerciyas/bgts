@@ -24,9 +24,9 @@ export default function Home() {
       />
 
       {/* Logo Wall (Social Proof) */}
-      <div className="py-10 border-y border-slate-100 bg-white">
+      <div className="py-10 border-y border-border bg-white">
         <Container>
-          <Text variant="small" className="text-center font-semibold text-slate-400 uppercase tracking-widest mb-8">
+          <Text variant="small" className="text-center font-semibold text-text-secondary uppercase tracking-widest mb-8">
             Türkiye&apos;nin En Büyük Kurumlarının Güvenilir İş Ortağı
           </Text>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-10 transition-all duration-500">
@@ -58,16 +58,16 @@ export default function Home() {
         <Container className="pb-20">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-action-blue font-bold text-sm tracking-wide mb-6">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-corporate-surface text-corporate-primary font-bold text-sm tracking-wide mb-6">
                 Hizmetlerimiz
               </span>
-              <Heading variant="h2" className="text-slate-900 mb-6">
+              <Heading variant="h2" className="text-corporate-primary mb-6">
                 Kanıtlanmış Sonuçlarla<br />Güvenilir Teknoloji Ortağınız
               </Heading>
-              <Text variant="large" className="text-slate-600 mb-8">
+              <Text variant="large" className="text-text-secondary mb-8">
                 25 yılı aşkın deneyimimizle, işletmelerin sürdürülebilir büyüme elde etmelerini, operasyonları optimize etmelerini ve benzersiz ihtiyaçlarına göre uyarlanmış stratejik teknoloji danışmanlığı ile karlılığı artırmalarını sağlıyoruz.
               </Text>
-              <Link href="/services" className="inline-flex h-14 items-center justify-center rounded-xl bg-action-blue px-8 font-bold text-white transition-all hover:bg-blue-700 shadow-lg shadow-action-blue/20">
+              <Link href="/services" className="inline-flex h-14 items-center justify-center rounded-xl bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-primary shadow-lg shadow-corporate-secondary/20">
                 Tüm Hizmetlerimizi İnceleyin
               </Link>
             </div>
@@ -86,8 +86,8 @@ export default function Home() {
         <div className="w-full">
           <div className="grid md:grid-cols-3 min-h-[600px]">
 
-            {/* Managed Services (Blue) */}
-            <div className="relative bg-[#0052cc] text-white p-16 flex flex-col justify-between overflow-hidden group">
+            {/* Managed Services (Corporate Blue) */}
+            <div className="relative bg-corporate-primary text-white p-16 flex flex-col justify-between overflow-hidden group">
               {/* Background Image */}
               <Image
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80"
@@ -96,7 +96,7 @@ export default function Home() {
                 unoptimized
                 className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700 mix-blend-overlay"
               />
-              <div className="absolute inset-0 bg-blue-900/40 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-corporate-primary/60 pointer-events-none"></div>
 
               {/* Abstract Pattern */}
               <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 z-10"></div>
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
 
             {/* Software Development (Dark) */}
-            <div className="relative bg-[#1e293b] text-white p-16 flex flex-col justify-between overflow-hidden group">
+            <div className="relative bg-[#0A1628] text-white p-16 flex flex-col justify-between overflow-hidden group">
               {/* Background Image */}
               <Image
                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80"
@@ -129,7 +129,7 @@ export default function Home() {
                 unoptimized
                 className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700 mix-blend-overlay"
               />
-              <div className="absolute inset-0 bg-slate-900/50 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-[#0A1628]/60 pointer-events-none"></div>
 
               {/* Abstract Pattern */}
               <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 z-10"></div>
@@ -151,8 +151,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* DevOps (Blue) */}
-            <div className="relative bg-[#0052cc] text-white p-16 flex flex-col justify-between overflow-hidden group">
+            {/* DevOps (Corporate Blue) */}
+            <div className="relative bg-corporate-primary text-white p-16 flex flex-col justify-between overflow-hidden group">
               {/* Background Image */}
               <Image
                 src="https://images.unsplash.com/photo-1667372393119-c85c020799a3?auto=format&fit=crop&q=80"
@@ -161,7 +161,7 @@ export default function Home() {
                 unoptimized
                 className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700 mix-blend-overlay"
               />
-              <div className="absolute inset-0 bg-blue-900/40 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-corporate-primary/60 pointer-events-none"></div>
 
               {/* Abstract Pattern */}
               <div className="absolute -left-20 -bottom-20 w-80 h-80 rounded-full border border-white/10 group-hover:scale-110 transition-transform duration-700 z-10"></div>
@@ -201,53 +201,53 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Turnkey Widget */}
-            <div className="group relative p-10 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-100 hover:shadow-2xl transition-all duration-300">
-              <div className="w-14 h-14 bg-action-blue rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-action-blue/20 group-hover:scale-110 transition-transform">
+            <div className="group relative p-10 rounded-3xl bg-corporate-surface border border-border hover:border-corporate-accent hover:shadow-2xl transition-all duration-300">
+              <div className="w-14 h-14 bg-corporate-secondary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-corporate-secondary/20 group-hover:scale-110 transition-transform">
                 <Settings className="w-7 h-7 text-white" />
               </div>
-              <Heading variant="h3" className="mb-3 text-slate-900">Anahtar Teslim (TurnKey)</Heading>
+              <Heading variant="h3" className="mb-3 text-corporate-primary">Anahtar Teslim (TurnKey)</Heading>
               <Text className="mb-8">
                 Projenizi A&apos;dan Z&apos;ye biz yönetelim. Sabit kapsamlı projeleriniz için analiz, tasarım, geliştirme ve test süreçlerini üstleniyoruz.
               </Text>
 
               <div className="space-y-4 mb-8">
                 {["Sabit Bütçe & Zaman", "Tek Sorumluluk Noktası", "Uçtan Uca Teslimat"].map(item => (
-                  <div key={item} className="flex items-center gap-3 text-slate-700 font-medium">
-                    <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                      <CheckCircle className="w-4 h-4 text-action-blue" />
+                  <div key={item} className="flex items-center gap-3 text-corporate-dark font-medium">
+                    <div className="w-6 h-6 rounded-full bg-corporate-surface flex items-center justify-center shrink-0">
+                      <CheckCircle className="w-4 h-4 text-corporate-secondary" />
                     </div>
                     {item}
                   </div>
                 ))}
               </div>
 
-              <Link href="/services/software-development" className="block w-full py-4 rounded-xl border-2 border-slate-200 font-bold text-slate-700 text-center hover:border-action-blue hover:text-action-blue transition-colors">
+              <Link href="/services/software-development" className="block w-full py-4 rounded-xl border-2 border-border font-bold text-corporate-primary text-center hover:border-corporate-secondary hover:text-corporate-secondary transition-colors">
                 Detaylı Bilgi Alın
               </Link>
             </div>
 
             {/* Time & Material Widget */}
-            <div className="group relative p-10 rounded-3xl bg-indigo-950 text-white hover:shadow-2xl hover:shadow-indigo-900/20 transition-all duration-300">
+            <div className="group relative p-10 rounded-3xl bg-corporate-primary text-white hover:shadow-2xl hover:shadow-corporate-primary/40 transition-all duration-300">
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm group-hover:scale-110 transition-transform">
                 <Users className="w-7 h-7 text-white" />
               </div>
               <Heading variant="h3" className="mb-3 text-white">Efor Bazlı (Time & Material)</Heading>
-              <Text className="text-slate-400 mb-8">
+              <Text className="text-white/70 mb-8">
                 Kendi ekibinizi bizim uzmanlarımızla güçlendirin. Çevik süreçlerinize anında uyum sağlayan elit mühendisler.
               </Text>
 
               <div className="space-y-4 mb-8">
                 {["Esnek Ölçeklendirme", "Tam Kontrol & Şeffaflık", "Hızlı Adaptasyon"].map(item => (
-                  <div key={item} className="flex items-center gap-3 text-slate-300 font-medium">
+                  <div key={item} className="flex items-center gap-3 text-white/80 font-medium">
                     <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                      <CheckCircle className="w-4 h-4 text-blue-400" />
+                      <CheckCircle className="w-4 h-4 text-corporate-accent" />
                     </div>
                     {item}
                   </div>
                 ))}
               </div>
 
-              <Link href="/services/software-development" className="block w-full py-4 rounded-xl bg-action-blue font-bold text-white text-center hover:bg-blue-500 transition-colors shadow-lg shadow-action-blue/20">
+              <Link href="/services/software-development" className="block w-full py-4 rounded-xl bg-corporate-secondary font-bold text-white text-center hover:bg-corporate-accent transition-colors shadow-lg shadow-corporate-secondary/20">
                 Ekibinizi Kurun
               </Link>
             </div>
@@ -260,13 +260,13 @@ export default function Home() {
         <Container>
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-6 py-2 rounded-full bg-action-blue text-white font-bold text-sm tracking-wide mb-6">
+            <span className="inline-block px-6 py-2 rounded-full bg-corporate-primary text-white font-bold text-sm tracking-wide mb-6">
               Sektörler
             </span>
-            <Heading variant="h2" className="text-slate-900 mb-6">
+            <Heading variant="h2" className="text-corporate-primary mb-6">
               Hizmet Verdiğimiz Sektörler
             </Heading>
-            <Text variant="large" className="text-slate-500">
+            <Text variant="large" className="text-text-secondary">
               Finans, savunma, perakende ve telekom gibi kritik sektörlerde; işletmelerin büyümesini destekleyen, operasyonlarını optimize eden ve dijital dönüşüm yolculuklarını hızlandıran stratejik çözümler sunuyoruz.
             </Text>
           </div>
@@ -276,7 +276,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
 
             {/* Card 1: Banking */}
-            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-100">
+            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-border">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
@@ -284,7 +284,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-corporate-primary/90 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-4 border border-white/30">
                     <BarChart className="w-6 h-6 text-white" />
@@ -292,18 +292,18 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-1 items-start">
-                <Heading variant="h4" className="text-slate-900 mb-3 group-hover:text-action-blue transition-colors">Bankacılık & Finans</Heading>
-                <Text className="text-slate-600 mb-6 text-sm line-clamp-3">
+                <Heading variant="h4" className="text-corporate-primary mb-3 group-hover:text-corporate-secondary transition-colors">Bankacılık & Finans</Heading>
+                <Text className="text-text-secondary mb-6 text-sm line-clamp-3">
                   Modernizasyon, açık bankacılık ve fintech entegrasyonlarıyla riskleri yönetirken karlılığı artırıyoruz.
                 </Text>
-                <Link href="/industries/banking" className="mt-auto inline-flex items-center text-action-blue font-bold text-sm bg-blue-50 px-4 py-2 rounded-full group-hover:bg-action-blue group-hover:text-white transition-all">
+                <Link href="/industries/banking" className="mt-auto inline-flex items-center text-corporate-secondary font-bold text-sm bg-corporate-surface px-4 py-2 rounded-full group-hover:bg-corporate-secondary group-hover:text-white transition-all">
                   Çözümleri İncele <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>
 
             {/* Card 2: Retail */}
-            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-100">
+            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-border">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80"
@@ -311,7 +311,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-corporate-primary/90 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-4 border border-white/30">
                     <Users className="w-6 h-6 text-white" />
@@ -319,18 +319,18 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-1 items-start">
-                <Heading variant="h4" className="text-slate-900 mb-3 group-hover:text-slate-600 transition-colors">Perakende</Heading>
-                <Text className="text-slate-600 mb-6 text-sm line-clamp-3">
+                <Heading variant="h4" className="text-corporate-primary mb-3 group-hover:text-corporate-dark transition-colors">Perakende</Heading>
+                <Text className="text-text-secondary mb-6 text-sm line-clamp-3">
                   Müşteri deneyimini iyileştirmek ve tedarik zincirini optimize etmek için e-ticaret ve omnichannel stratejileri.
                 </Text>
-                <Link href="/industries/retail-telecom" className="mt-auto inline-flex items-center text-slate-600 font-bold text-sm bg-slate-100 px-4 py-2 rounded-full group-hover:bg-slate-700 group-hover:text-white transition-all">
+                <Link href="/industries/retail-telecom" className="mt-auto inline-flex items-center text-corporate-dark font-bold text-sm bg-corporate-surface px-4 py-2 rounded-full group-hover:bg-corporate-dark group-hover:text-white transition-all">
                   Çözümleri İncele <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>
 
             {/* Card 3: Telecom */}
-            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-100">
+            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-border">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80"
@@ -338,7 +338,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-corporate-primary/90 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-4 border border-white/30">
                     <Globe className="w-6 h-6 text-white" />
@@ -346,18 +346,18 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-1 items-start">
-                <Heading variant="h4" className="text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">Telekomünikasyon</Heading>
-                <Text className="text-slate-600 mb-6 text-sm line-clamp-3">
+                <Heading variant="h4" className="text-corporate-primary mb-3 group-hover:text-corporate-tertiary transition-colors">Telekomünikasyon</Heading>
+                <Text className="text-text-secondary mb-6 text-sm line-clamp-3">
                   5G ve dijital dönüşüm ile rekabetçi ölçeklenme ve teknolojik inovasyonu yakalayın.
                 </Text>
-                <Link href="/industries/retail-telecom" className="mt-auto inline-flex items-center text-indigo-600 font-bold text-sm bg-indigo-50 px-4 py-2 rounded-full group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                <Link href="/industries/retail-telecom" className="mt-auto inline-flex items-center text-corporate-tertiary font-bold text-sm bg-corporate-surface px-4 py-2 rounded-full group-hover:bg-corporate-tertiary group-hover:text-white transition-all">
                   Çözümleri İncele <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>
 
             {/* Card 4: Defense */}
-            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-100">
+            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-border">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80"
@@ -365,7 +365,7 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-corporate-primary/90 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-4 border border-white/30">
                     <ShieldCheck className="w-6 h-6 text-white" />
@@ -373,11 +373,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-1 items-start">
-                <Heading variant="h4" className="text-slate-900 mb-3 group-hover:text-slate-900 transition-colors">Savunma Sanayi</Heading>
-                <Text className="text-slate-600 mb-6 text-sm line-clamp-3">
+                <Heading variant="h4" className="text-corporate-primary mb-3 group-hover:text-corporate-primary transition-colors">Savunma Sanayi</Heading>
+                <Text className="text-text-secondary mb-6 text-sm line-clamp-3">
                   Kritik görev sistemleri ve gömülü yazılımlarla üst düzey güvenlik standartları ve regülasyon uyumu.
                 </Text>
-                <Link href="/industries/defense" className="mt-auto inline-flex items-center text-slate-700 font-bold text-sm bg-slate-100 px-4 py-2 rounded-full group-hover:bg-slate-800 group-hover:text-white transition-all">
+                <Link href="/industries/defense" className="mt-auto inline-flex items-center text-corporate-dark font-bold text-sm bg-corporate-surface px-4 py-2 rounded-full group-hover:bg-corporate-dark group-hover:text-white transition-all">
                   Çözümleri İncele <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -391,39 +391,39 @@ export default function Home() {
         <Container>
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <span className="text-indigo-600 font-bold tracking-wider text-sm uppercase mb-2 block">Kariyer & Kültür</span>
-              <Heading variant="h2" className="text-slate-900 mb-6">Geleceği Birlikte Şekillendirelim</Heading>
-              <Text variant="large" className="text-slate-600 mb-8">
+              <span className="text-corporate-tertiary font-bold tracking-wider text-sm uppercase mb-2 block">Kariyer & Kültür</span>
+              <Heading variant="h2" className="text-corporate-primary mb-6">Geleceği Birlikte Şekillendirelim</Heading>
+              <Text variant="large" className="text-text-secondary mb-8">
                 Şeffaf iletişim, takım ruhu ve sürekli öğrenme tutkusuyla büyüyen global bir aileyiz. Genç Yetenek Programlarımız ve her seviyeye uygun kariyer yollarımızla potansiyelini keşfet.
               </Text>
 
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                    <GraduationCap className="w-5 h-5 text-action-blue" />
+                  <div className="w-10 h-10 rounded-full bg-corporate-surface flex items-center justify-center shrink-0">
+                    <GraduationCap className="w-5 h-5 text-corporate-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900">Genç Yetenekler</h4>
-                    <p className="text-sm text-slate-500">Staj, Bootcamp ve Eğitim programları.</p>
+                    <h4 className="font-bold text-corporate-primary">Genç Yetenekler</h4>
+                    <p className="text-sm text-text-secondary">Staj, Bootcamp ve Eğitim programları.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center shrink-0">
-                    <GraduationCap className="w-5 h-5 text-indigo-600" />
+                  <div className="w-10 h-10 rounded-full bg-corporate-surface flex items-center justify-center shrink-0">
+                    <GraduationCap className="w-5 h-5 text-corporate-tertiary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900">Kariyer Yolları</h4>
-                    <p className="text-sm text-slate-500">Teknik ve Yönetsel şeffaf ilerleme.</p>
+                    <h4 className="font-bold text-corporate-primary">Kariyer Yolları</h4>
+                    <p className="text-sm text-text-secondary">Teknik ve Yönetsel şeffaf ilerleme.</p>
                   </div>
                 </div>
               </div>
 
-              <Link href="/hr" className="inline-flex h-12 items-center justify-center rounded-xl bg-indigo-600 px-8 text-sm font-bold text-white shadow-lg shadow-indigo-600/20 transition-all hover:bg-indigo-700 hover:scale-105">
+              <Link href="/hr" className="inline-flex h-12 items-center justify-center rounded-xl bg-corporate-tertiary px-8 text-sm font-bold text-white shadow-lg shadow-corporate-tertiary/20 transition-all hover:bg-corporate-primary hover:scale-105">
                 Kariyer Fırsatları
               </Link>
             </div>
             <div className="lg:w-1/2 relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative bg-slate-100">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative bg-corporate-surface">
                 <Image
                   src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80"
                   alt="Office Culture"
@@ -432,12 +432,12 @@ export default function Home() {
                 />
               </div>
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs border border-slate-100 hidden md:block">
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs border border-border hidden md:block">
                 <div className="flex items-center gap-3 mb-2">
-                  <Heart className="w-6 h-6 text-indigo-600 fill-current" />
-                  <span className="font-bold text-slate-900">Great Place to Work</span>
+                  <Heart className="w-6 h-6 text-corporate-tertiary fill-current" />
+                  <span className="font-bold text-corporate-primary">Great Place to Work</span>
                 </div>
-                <p className="text-sm text-slate-500">Çalışan odaklı kültürümüzle sektörde fark yaratıyoruz.</p>
+                <p className="text-sm text-text-secondary">Çalışan odaklı kültürümüzle sektörde fark yaratıyoruz.</p>
               </div>
             </div>
           </div>

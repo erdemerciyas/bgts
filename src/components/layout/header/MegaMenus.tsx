@@ -4,7 +4,8 @@ import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import {
     Server, Activity, Database, Code, Cpu, Globe, Shield, ShoppingBag,
-    CheckCircle2, ArrowRight, Terminal, FileText, PlayCircle, Linkedin, Briefcase
+    CheckCircle2, ArrowRight, Terminal, FileText, PlayCircle, Linkedin, Briefcase,
+    Zap, Bot
 } from "lucide-react"
 import { STYLES } from "./data"
 
@@ -17,35 +18,133 @@ export const ServicesMenu = () => (
         role="menu"
         aria-label="Hizmetler menüsü"
     >
-        <div className="flex">
-            <div className="w-[40%] bg-slate-50 p-10 border-r border-slate-100 flex flex-col justify-start">
+        <div className="flex min-h-[400px]">
+            {/* MSP Section - Column 1 */}
+            <div className="w-1/3 bg-blue-50/40 p-6 border-r border-blue-100 flex flex-col">
+                <h3 className={STYLES.columnHeader}>MSP & YÖNETİLEN HİZMETLER</h3>
+
+                <div className="grid gap-1 mt-4">
+                    {[
+                        { title: "Veri Merkezi", desc: "Tier-3 standartlarında altyapı.", icon: Server, href: "/services/managed-services", img: "/images/navigation/services/bgts-data-center-infrastructure.png" },
+                        { title: "Desktop Support App", desc: "Son kullanıcı destek çözümleri.", icon: Terminal, href: "/services", img: "/images/navigation/services/bgts-desktop-support.png" },
+                        { title: "ITSM as a Service", desc: "IT hizmet süreç yönetimi.", icon: FileText, href: "/services", img: "/images/navigation/services/bgts-itsm-service.png" },
+                        { title: "SCCM as a Service", desc: "Merkezi yama ve envanter.", icon: Database, href: "/services", img: "/images/navigation/services/bgts-sccm-service.png" },
+                        { title: "Monitoring as a Service", desc: "7/24 proaktif izleme.", icon: Activity, href: "/services", img: "/images/navigation/services/bgts-monitoring-service.png" },
+                        { title: "DevOps as a Service", desc: "CI/CD ve otomasyon.", icon: Code, href: "/services/devops", img: "/images/navigation/services/bgts-devops-sre-services.png" },
+                    ].map((item, i) => (
+                        <Link key={i} href={item.href} className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                            <div className="flex items-start gap-3">
+                                <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                    <item.icon className="w-5 h-5" />
+                                </div>
+                                <div className="flex-1">
+                                    <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">{item.title}</h4>
+                                    <p className="text-xs text-slate-500 mt-0.5 leading-snug">{item.desc}</p>
+                                </div>
+                            </div>
+                            <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                                <Image src={item.img} alt={item.title} fill className="object-contain p-1" />
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+
+            {/* Teknoloji Servisleri - Column 2 */}
+            <div className="w-1/3 bg-white p-6 border-r border-slate-100 flex flex-col">
                 <h3 className={STYLES.columnHeader}>TEKNOLOJİ SERVİSLERİ</h3>
-                <div className="space-y-8">
-                    <Link href="/services/managed-services" className={STYLES.linkGroup}>
-                        <Server className={STYLES.iconContainer} />
-                        <div className="flex justify-between items-start gap-4">
-                            <div className="flex-1"><h4 className={STYLES.itemTitle}>Veri Merkezi & Uygulama</h4><p className={STYLES.itemDesc}>Platform ve uygulama katmanlarında uzman yönetilen hizmetler.</p></div>
-                            <Image src="/images/navigation/services/bgts-data-center-infrastructure.png" alt="Data Center" width={96} height={64} className={STYLES.imageThumbnail} />
+                <div className="grid gap-1 mt-4">
+                    <Link href="/services" className="group flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <Server className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Veri Merkezi & Uygulama</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Platform ve uygulama katmanlarında uzman yönetilen hizmetler.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/services/bgts-data-center-infrastructure.png" alt="Veri Merkezi" fill className="object-contain p-1" />
                         </div>
                     </Link>
-                    <Link href="/services/managed-services" className={STYLES.linkGroup}>
-                        <Activity className={STYLES.iconContainer} />
-                        <div className="flex justify-between items-start gap-4">
-                            <div className="flex-1"><h4 className={STYLES.itemTitle}>Yönetilen Hizmetler</h4><p className={STYLES.itemDesc}>Yapay zeka destekli kesintisiz IT desteği ve operasyonel verimlilik.</p></div>
-                            <Image src="/images/navigation/services/bgts-managed-it-services.png" alt="Managed Services" width={96} height={64} className={STYLES.imageThumbnail} />
+                    <Link href="/services/managed-services" className="group flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <Activity className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yönetilen Hizmetler</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Yapay zeka destekli kesintisiz IT desteği ve operasyonel verimlilik.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/services/bgts-managed-it-services.png" alt="Yönetilen Hizmetler" fill className="object-contain p-1" />
                         </div>
                     </Link>
                 </div>
             </div>
-            <div className="w-[60%] bg-white p-10 flex flex-col justify-start">
+
+            {/* Yazılım Geliştirme - Column 3 */}
+            <div className="w-1/3 bg-[#f8fafc] p-6 flex flex-col">
                 <h3 className={STYLES.columnHeader}>YAZILIM GELİŞTİRME</h3>
-                <div className="grid grid-cols-2 gap-x-12 gap-y-10">
-                    {[{ title: "Veri Hizmetleri", desc: "Büyük veri ve analitik altyapılar.", img: "/images/navigation/services/bgts-big-data-analytics-services.png", icon: Database }, { title: "DevOps & SRE", desc: "CI/CD ve güvenilir teslimat.", img: "/images/navigation/services/bgts-devops-sre-services.png", icon: Code }, { title: "Power Platform", desc: "Modern mimarisel çözümler.", img: "/images/navigation/services/bgts-power-platform-solutions.png", icon: Activity }, { title: "Yapay Zeka", desc: "Otomasyon ve akıllı öngörüler.", img: "/images/navigation/services/bgts-artificial-intelligence-automation.png", icon: Cpu }].map(s => (
-                        <Link key={s.title} href="/services" className={STYLES.linkGroup}>
-                            <s.icon className={STYLES.iconContainer} />
-                            <div className="flex justify-between items-start gap-3"><div className="flex-1"><h4 className={STYLES.itemTitle}>{s.title}</h4><p className={STYLES.itemDesc}>{s.desc}</p></div><Image src={s.img} alt={s.title} width={96} height={64} className={STYLES.imageThumbnail} /></div>
-                        </Link>
-                    ))}
+                <div className="grid gap-1 mt-4">
+                    <Link href="/services/software" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <Database className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Veri Hizmetleri</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Büyük veri ve analitik altyapılar.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/services/bgts-big-data-analytics-services.png" alt="Veri Hizmetleri" fill className="object-contain p-1" />
+                        </div>
+                    </Link>
+                    <Link href="/services/software" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <Zap className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Power Platform</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Modern mimarisel çözümler.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/services/bgts-power-platform-solutions.png" alt="Power Platform" fill className="object-contain p-1" />
+                        </div>
+                    </Link>
+                    <Link href="/services/devops" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <Code className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">DevOps & SRE</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">CI/CD ve güvenilir teslimat.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/services/bgts-devops-sre-services.png" alt="DevOps" fill className="object-contain p-1" />
+                        </div>
+                    </Link>
+                    <Link href="/services/software" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <Bot className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yapay Zeka</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Otomasyon ve akıllı öngörüler.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/services/bgts-artificial-intelligence-automation.png" alt="AI" fill className="object-contain p-1" />
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

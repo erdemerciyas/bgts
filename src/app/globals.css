@@ -4,13 +4,17 @@
   --font-sans: var(--font-exo);
   --font-heading: var(--font-exo);
 
-  --color-corporate-blue: #0070BA;
-  --color-action-blue: #0070BA;
-  --color-corporate-dark: #404567;
-  --color-deep-navy: #05081A;
-  --color-navy: #0B0F25;
-  --color-glacial-blue: #E0ECF4;
-  --color-text-main: #212121;
+  --color-corporate-primary: #0A2540;
+  --color-corporate-secondary: #1E5A8A;
+  --color-corporate-accent: #3A7CB5;
+  --color-corporate-highlight: #D4A853;
+  --color-corporate-dark: #0A1628;
+  --color-corporate-surface: #F7F9FC;
+  --color-text-primary: #0A1628;
+  --color-text-secondary: #5A6B7C;
+  --color-border: #E2E8F0;
+  --color-corporate-tertiary: #00A8A8;
+  --color-corporate-warm: #E85D4C;
 
   --animate-blob: blob 7s infinite;
 }
@@ -43,13 +47,19 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #212121;
+  --foreground: #0A1628;
+  --gradient-mesh-1: radial-gradient(circle, rgba(10, 37, 64, 0.3) 0%, transparent 70%);
+  --gradient-mesh-2: radial-gradient(circle, rgba(30, 90, 138, 0.25) 0%, transparent 70%);
+  --gradient-mesh-3: radial-gradient(circle, rgba(58, 124, 181, 0.2) 0%, transparent 70%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #05081A;
-    --foreground: #f8fafc;
+    --background: #0A0F18;
+    --foreground: #E8EDF5;
+    --gradient-mesh-1: radial-gradient(circle, rgba(58, 124, 181, 0.4) 0%, transparent 70%);
+    --gradient-mesh-2: radial-gradient(circle, rgba(212, 168, 83, 0.3) 0%, transparent 70%);
+    --gradient-mesh-3: radial-gradient(circle, rgba(0, 168, 168, 0.25) 0%, transparent 70%);
   }
 }
 
