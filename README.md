@@ -24,6 +24,8 @@ Built with a focus on performance, accessibility, and modern developer experienc
   - Interactive cards with hover states
   - Dynamic Hero sections
   - Clean, accessible typography
+- **Advanced Navigation:** Mega menus with rich media content, organized into logical categories (MSP, Technology, Software).
+- **Sticky Sub-navigation:** Context-aware sticky navigation for deep content pages like Managed Services.
 - **Performance:** Optimized images using `next/image` and local assets.
 
 ## 🛠️ Getting Started
@@ -85,4 +87,4 @@ Please refer to [FRONTEND_STANDARDS.md](./FRONTEND_STANDARDS.md) for detailed in
 4.  Open a Pull Request
 
 ---
-© 2024 BGTS. All Rights Reserved.
+© 2026 BGTS. All Rights Reserved.
