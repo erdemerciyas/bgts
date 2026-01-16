@@ -23,7 +23,7 @@ export default function ContactPage() {
           subtitle="Projeleriniz için bir araya gelelim veya sorularınızı yanıtlayalım."
           badge="İletişim"
           className="bg-slate-900"
-          backgroundImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
+          backgroundImage="/images/contact/contact-hero.png"
         />
 
         <Section>

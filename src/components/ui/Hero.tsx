@@ -22,6 +22,7 @@ interface HeroProps {
     image?: React.ReactNode
     videoSrc?: string
     backgroundImage?: string
+    children?: React.ReactNode
 }
 
 export default function Hero({
@@ -36,7 +37,8 @@ export default function Hero({
     layout = "simple",
     image,
     videoSrc,
-    backgroundImage
+    backgroundImage,
+    children
 }: HeroProps) {
 
     if (layout === "split") {
@@ -113,7 +115,7 @@ export default function Hero({
 
     // Simple Layout (Centered) - Enhanced for Video Background
     return (
-        <Section className={cn("py-32 lg:py-48 min-h-[80vh] flex items-center", className)}>
+        <Section className={cn("py-32 lg:py-48 min-h-screen flex items-center", className)}>
             <div className="absolute inset-0 z-0">
                 {videoSrc ? (
                     <>
@@ -171,16 +173,16 @@ export default function Hero({
             </div>
 
             <Container className="relative z-10 text-center">
-                    {badge && (
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="inline-flex items-center mb-6 px-3 py-1 rounded-full bg-white border border-border shadow-sm text-sm font-medium text-corporate-primary"
-                        >
-                            <span className="w-2 h-2 rounded-full bg-corporate-tertiary mr-2 animate-pulse"></span>
-                            {badge}
-                        </motion.div>
-                    )}
+                {badge && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="inline-flex items-center mb-6 px-3 py-1 rounded-full bg-white border border-border shadow-sm text-sm font-medium text-corporate-primary"
+                    >
+                        <span className="w-2 h-2 rounded-full bg-corporate-tertiary mr-2 animate-pulse"></span>
+                        {badge}
+                    </motion.div>
+                )}
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -227,7 +229,19 @@ export default function Hero({
                         </Link>
                     </motion.div>
                 )}
+
             </Container>
+
+            {children && (
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="absolute bottom-0 w-full z-20"
+                >
+                    {children}
+                </motion.div>
+            )}
         </Section>
     )
 }

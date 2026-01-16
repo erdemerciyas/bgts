@@ -25,6 +25,8 @@ Built with a focus on performance, accessibility, and modern developer experienc
   - Dynamic Hero sections
   - Clean, accessible typography
 - **Advanced Navigation:** Mega menus with rich media content, organized into logical categories (MSP, Technology, Software).
+- **Site-wide Search:** Full-screen search overlay with real-time filtering, keyboard navigation, and optimized popular search results.
+- **Custom 3D Imagery:** Premium, isometric 3D hero illustrations custom-generated for each industry and service page.
 - **Sticky Sub-navigation:** Context-aware sticky navigation for deep content pages like Managed Services.
 - **Performance:** Optimized images using `next/image` and local assets.
 

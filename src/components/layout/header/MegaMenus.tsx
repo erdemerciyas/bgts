@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import {
     Server, Activity, Database, Code, Cpu, Globe, Shield, ShoppingBag,
     CheckCircle2, ArrowRight, Terminal, FileText, PlayCircle, Linkedin, Briefcase,
-    Zap, Bot
+    Zap, Bot, Landmark, TrendingUp, Radio, ShieldAlert
 } from "lucide-react"
 import { STYLES } from "./data"
 
@@ -89,56 +89,84 @@ export const ServicesMenu = () => (
             <div className="w-1/3 bg-[#f8fafc] p-6 flex flex-col">
                 <h3 className={STYLES.columnHeader}>YAZILIM GELİŞTİRME</h3>
                 <div className="grid gap-1 mt-4">
-                    <Link href="/services/software" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                    <Link href="/services/software-development#banking" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <Landmark className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Bankacılık & Finans</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Yüksek performanslı işlem altyapıları.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/industries/bgts-banking-finance.png" alt="Bankacılık" fill className="object-contain p-1" />
+                        </div>
+                    </Link>
+                    <Link href="/services/software-development#trading" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <TrendingUp className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">E-Trading & Market Data</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Düşük gecikmeli borsacılık çözümleri.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/industries/bgts-retail-ecommerce.png" alt="Trading" fill className="object-contain p-1" />
+                        </div>
+                    </Link>
+                    <Link href="/services/software-development#telecom" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <Radio className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Telekom & İletişim</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Dijital iletişim platformları.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/industries/bgts-telecom-digital-channels.png" alt="Telekom" fill className="object-contain p-1" />
+                        </div>
+                    </Link>
+                    <Link href="/services/software-development#fraud" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <div className="flex items-start gap-3">
+                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                <ShieldAlert className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Fraud & Risk</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">AI destekli güvenlik doğrulama.</p>
+                            </div>
+                        </div>
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                            <Image src="/images/navigation/industries/bgts-defense-industry.png" alt="Fraud" fill className="object-contain p-1" />
+                        </div>
+                    </Link>
+                    <Link href="/services/software-development#bigdata" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                         <div className="flex items-start gap-3">
                             <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
                                 <Database className="w-5 h-5" />
                             </div>
                             <div className="flex-1">
-                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Veri Hizmetleri</h4>
-                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Büyük veri ve analitik altyapılar.</p>
+                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Büyük Veri</h4>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Gerçek zamanlı veri işleme.</p>
                             </div>
                         </div>
                         <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
-                            <Image src="/images/navigation/services/bgts-big-data-analytics-services.png" alt="Veri Hizmetleri" fill className="object-contain p-1" />
+                            <Image src="/images/navigation/services/bgts-big-data-analytics-services.png" alt="Big Data" fill className="object-contain p-1" />
                         </div>
                     </Link>
-                    <Link href="/services/software" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                    <Link href="/services/software-development#ai" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                         <div className="flex items-start gap-3">
                             <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
-                                <Zap className="w-5 h-5" />
-                            </div>
-                            <div className="flex-1">
-                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Power Platform</h4>
-                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Modern mimarisel çözümler.</p>
-                            </div>
-                        </div>
-                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
-                            <Image src="/images/navigation/services/bgts-power-platform-solutions.png" alt="Power Platform" fill className="object-contain p-1" />
-                        </div>
-                    </Link>
-                    <Link href="/services/devops" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
-                        <div className="flex items-start gap-3">
-                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
-                                <Code className="w-5 h-5" />
-                            </div>
-                            <div className="flex-1">
-                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">DevOps & SRE</h4>
-                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">CI/CD ve güvenilir teslimat.</p>
-                            </div>
-                        </div>
-                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
-                            <Image src="/images/navigation/services/bgts-devops-sre-services.png" alt="DevOps" fill className="object-contain p-1" />
-                        </div>
-                    </Link>
-                    <Link href="/services/software" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
-                        <div className="flex items-start gap-3">
-                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
-                                <Bot className="w-5 h-5" />
+                                <Cpu className="w-5 h-5" />
                             </div>
                             <div className="flex-1">
                                 <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yapay Zeka</h4>
-                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Otomasyon ve akıllı öngörüler.</p>
+                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">AI-First mimari çözümler.</p>
                             </div>
                         </div>
                         <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
@@ -291,34 +319,90 @@ export const ResourcesMenu = () => (
         role="menu"
         aria-label="Bilgi merkezi menüsü"
     >
-        <div className="flex min-h-[400px]">
-            <div className="w-[30%] bg-sky-50 p-10 flex flex-col justify-start">
+        <div className="flex min-h-[460px]">
+            {/* COL 1 - Intro */}
+            <div className="w-[28%] bg-sky-50/60 p-10 flex flex-col justify-start border-r border-sky-100">
                 <div className="mb-auto">
-                    <h3 className="font-black text-2xl text-slate-900 mb-6 uppercase tracking-tight">BİLGİ MERKEZİ</h3>
-                    <p className="text-slate-600 text-lg italic leading-relaxed mb-8 font-serif">“Dijital dönüşüm, mühendislik ve sektör odaklı çözümler hakkında güncel bilgileri keşfedin.”</p>
-                    <Link href="/resources" className={STYLES.standardLink}>İçerikleri İncele <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></Link>
+                    <h3 className="font-black text-2xl text-slate-900 mb-4 uppercase tracking-tight">BİLGİ MERKEZİ</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                        “Dijital dönüşüm, mühendislik ve sektör odaklı çözümler hakkında güncel bilgileri keşfedin.”
+                    </p>
+                    <Link href="/resources" className={STYLES.highlightLink.replace("text-cyan-700", "text-sky-700")}>
+                        <span className="w-0 h-0 border-l-[6px] border-l-sky-600 border-y-[4px] border-y-transparent"></span>
+                        Tüm İçerikleri İncele
+                    </Link>
                 </div>
-                <div className="mt-8 rounded-2xl overflow-hidden shadow-sm h-32 w-full relative"><Image src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?w=400&q=80" alt="Servers" fill className="object-cover" /></div>
+                <div className={cn(STYLES.imageCard, "mt-6 h-40")}>
+                    <Image src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80" alt="Knowledge" fill className="object-cover" />
+                </div>
             </div>
-            <div className="w-[30%] bg-white p-10 border-r border-gray-100 flex flex-col justify-center">
-                <ul className="space-y-6">
-                    {[{ name: "İnfografik", icon: FileText }, { name: "Webinar", icon: PlayCircle }, { name: "Başarı Hikayeleri", icon: CheckCircle2 }, { name: "LinkedIn", icon: Linkedin }, { name: "İş İlanlarımız", icon: Briefcase }].map((link) => (
-                        <li key={link.name}>
-                            <Link href="/resources" className="group flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors">
-                                <span className="p-2 bg-blue-50 text-blue-600 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors"><ArrowRight className="w-4 h-4" /></span>
-                                <span className="font-bold text-lg">{link.name}</span>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div className="w-[40%] bg-[#f0fdf4] p-10 flex flex-col justify-start relative overflow-hidden">
+
+            {/* COL 2 - Success Stories */}
+            <div className="w-[24%] bg-[#fff0f5] p-10 border-r border-pink-100 flex flex-col justify-start">
                 <div className="mb-auto">
-                    <h4 className="font-black text-xl text-slate-900 mb-2">Qlik Cloud Veri Analitiği</h4>
-                    <Link href="/resources" className="inline-flex items-center text-blue-600 font-bold text-lg hover:text-blue-800 transition-colors">Hemen Kayıt Ol <ArrowRight className="w-5 h-5 ml-2" /></Link>
+                    <h4 className={STYLES.itemTitle}>Başarı Hikayeleri</h4>
+                    <p className={STYLES.itemDesc}>
+                        Global projelerde fark yaratan çalışanlarımız ve başarıya ulaşan danışanlarımızın ilham veren kariyer yolculukları.
+                    </p>
+                    <div className="mt-6 p-4 bg-white/60 rounded-xl border border-pink-200/50">
+                        <p className="text-xs text-slate-500 italic mb-2">"BGTS ile kariyerimde yeni bir sayfa açtım."</p>
+                        <div className="flex items-center gap-2">
+                            <div className="w-6 h-6 rounded-full bg-pink-200"></div>
+                            <span className="text-xs font-bold text-slate-700">Ahmet Y. - Senior Dev.</span>
+                        </div>
+                    </div>
                 </div>
-                <div className="relative w-full h-32 rounded-xl overflow-hidden shadow-md mt-6 bg-white group cursor-pointer hover:shadow-xl transition-shadow"><Image src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=500&q=80" alt="Qlik Event" fill className="object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6"><span className="text-white font-bold text-sm bg-blue-600 px-3 py-1 rounded-full mb-1">Webinar</span></div></div>
-                <div className="absolute -bottom-10 -right-10 opacity-10 pointer-events-none"><Shield className="w-64 h-64 text-green-800" /></div>
+                <Link href="/resources/success-stories" className="mt-6 flex items-center text-sm font-bold text-pink-600 hover:text-pink-700 transition-colors">
+                    Tüm Hikayeleri Oku <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+            </div>
+
+            {/* COL 3 - LinkedIn & Infographics */}
+            <div className="w-[24%] bg-[#f0f9ff] p-10 border-r border-blue-100 flex flex-col justify-start">
+                <div className="mb-auto">
+                    <div className="mb-8">
+                        <h4 className={STYLES.itemTitle}>LinkedIn</h4>
+                        <Link href="https://www.linkedin.com/company/bilgeadam/" target="_blank" className="flex items-center gap-2 mt-3 group bg-blue-600 text-white p-3 rounded-xl shadow-sm hover:shadow-md transition-all">
+                            <Linkedin className="w-5 h-5" />
+                            <span className="text-sm font-bold">Bizi Takip Edin</span>
+                            <ArrowRight className="w-4 h-4 ml-auto opacity-70 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                        <Link href="/hr/jobs" className="flex items-center gap-2 mt-2 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors ml-1">
+                            <Briefcase className="w-3 h-3" /> Açık Pozisyonlar
+                        </Link>
+                    </div>
+
+                    <div>
+                        <h4 className={STYLES.itemTitle}>İnfografikler</h4>
+                        <p className={STYLES.itemDesc}>Sektörel veriler ve teknoloji trendleri.</p>
+                        <Link href="/resources/infographics" className="mt-2 inline-flex text-xs font-bold text-blue-600 underline decoration-blue-200 underline-offset-4 hover:decoration-blue-600 transition-all">
+                            İncele
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            {/* COL 4 - Events */}
+            <div className="w-[24%] bg-[#f8fafc] p-10 flex flex-col justify-start text-center relative overflow-hidden">
+                <div className="mb-auto text-left z-10 relative">
+                    <h4 className={STYLES.itemTitle}>Etkinlikler & Webinar</h4>
+                    <p className="text-slate-500 text-xs mb-4">Kaçırmamanız gereken teknoloji buluşmaları.</p>
+
+                    <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden group cursor-pointer hover:shadow-md transition-all">
+                        <div className="relative h-24 w-full">
+                            <Image src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=400&q=80" alt="Event" fill className="object-cover" />
+                            <div className="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">WEBINAR</div>
+                        </div>
+                        <div className="p-3">
+                            <h5 className="font-bold text-slate-800 text-sm leading-tight group-hover:text-blue-600 transition-colors">Qlik Cloud Veri Analitiği</h5>
+                            <span className="text-[10px] text-slate-400 mt-1 block">15 Ekim 2025 • 14:00</span>
+                        </div>
+                    </div>
+
+                    <Link href="https://www.linkedin.com/company/bilgeadam/events/?viewAsMember=true" target="_blank" className="mt-4 inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 transition-colors">
+                        Tüm Etkinlikler <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                </div>
             </div>
         </div>
     </motion.div>
@@ -334,13 +418,13 @@ export const CareersMenu = () => (
         aria-label="Kariyer menüsü"
     >
         <div className="flex min-h-[500px]">
-            {/* COL 1 */}
+            {/* COL 1 - Toplumsal Katkı */}
             <div className="w-[28%] bg-cyan-50/50 p-10 border-r border-cyan-100 flex flex-col justify-start">
                 <div className="mb-auto">
-                    <h4 className={STYLES.itemTitle}>Genç Yetenek Programları</h4>
-                    <p className={STYLES.itemDescItalic}>“Kariyerinin başındaysan, seni hızla geliştirecek programlarımızdan haberdar ol.”</p>
+                    <h4 className={STYLES.itemTitle}>Toplumsal Katkı</h4>
+                    <p className={STYLES.itemDescItalic}>“Geleceği şekillendiren yeteneklerin gelişimine ve topluma değer katmaya odaklanıyoruz.”</p>
                     <ul className="space-y-4 mt-4">
-                        {["IT Genç Yetenek Programları", "Uzun Dönem Yaz Stajları", "Bootcamp Programları"].map(l => (
+                        {["Eğitim & Staj", "Burs Programları", "Sosyal Sorumluluk"].map(l => (
                             <li key={l} className={STYLES.highlightLink}>
                                 <span className="w-0 h-0 border-l-[6px] border-l-cyan-500 border-y-[4px] border-y-transparent"></span>
                                 {l}
@@ -375,11 +459,6 @@ export const CareersMenu = () => (
                 <div className="mb-auto">
                     <h4 className={STYLES.itemTitle}>Eğitim ve Sürekli Öğrenme</h4>
                     <p className="text-slate-500 text-xs italic mb-8">“Kendine yatırım yapmak bizim için önemlidir.”</p>
-
-                    <Link href="/careers" className={STYLES.highlightLink.replace("text-cyan-700", "text-cyan-600")}>
-                        <span className="w-0 h-0 border-l-[6px] border-l-cyan-600 border-y-[4px] border-y-transparent"></span>
-                        Eğitim Takvimini İncele
-                    </Link>
                 </div>
                 <div className={cn(STYLES.imageCard, "mt-6")}><Image src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=400&q=80" alt="Education" fill className="object-cover" /></div>
                 <div className="absolute bottom-0 right-0 w-32 h-32 opacity-10 pointer-events-none">

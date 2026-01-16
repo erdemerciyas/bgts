@@ -17,6 +17,7 @@ import {
     TalentMenu, ResourcesMenu, CareersMenu
 } from "./header/MegaMenus"
 import { Container } from "@/components/ui/Container"
+import { SearchOverlay } from "./search/SearchOverlay"
 
 // Lazy load mobile nav for better performance
 const MobileNav = dynamic(() => import('./MobileNav'), {
@@ -28,6 +29,7 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
     const [hoveredNav, setHoveredNav] = React.useState<string | null>(null)
     const [isScrolled, setIsScrolled] = React.useState(false)
+    const [isSearchOpen, setIsSearchOpen] = React.useState(false) // Added State
     const pathname = usePathname()
 
     const isHome = pathname === "/"
@@ -70,11 +72,11 @@ export default function Header() {
                             >
                                 <Link
                                     href={item.href}
-                                        className={cn(
-                                            "flex items-center gap-1.5 text-[15px] font-bold tracking-wide transition-colors py-8 border-b-2 border-transparent uppercase whitespace-nowrap", // Increased font size slightly to 15px per design
-                                            textColorClass,
-                                            hoveredNav === (item.id || item.name) ? (isTransparent ? "text-corporate-accent border-corporate-accent opacity-100" : "text-corporate-secondary border-corporate-secondary") : ""
-                                        )}
+                                    className={cn(
+                                        "flex items-center gap-1.5 text-[15px] font-bold tracking-wide transition-colors py-8 border-b-2 border-transparent uppercase whitespace-nowrap", // Increased font size slightly to 15px per design
+                                        textColorClass,
+                                        hoveredNav === (item.id || item.name) ? (isTransparent ? "text-corporate-accent border-corporate-accent opacity-100" : "text-corporate-secondary border-corporate-secondary") : ""
+                                    )}
                                     aria-haspopup={["services", "industries", "products", "talent", "resources", "careers"].includes(item.id || "") ? "true" : undefined}
                                     aria-expanded={hoveredNav === (item.id || item.name)}
                                 >
@@ -91,6 +93,7 @@ export default function Header() {
                         <button
                             className={cn("w-10 h-10 flex items-center justify-center rounded-full transition-all", isTransparent ? "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm" : "bg-corporate-surface text-corporate-primary hover:bg-corporate-accent/20")}
                             aria-label="Ara"
+                            onClick={() => setIsSearchOpen(true)}
                         >
                             <Search className="w-4 h-4" aria-hidden="true" />
                         </button>
@@ -163,6 +166,9 @@ export default function Header() {
             </header>
             {!isHome && <div className="h-[80px]" />}
             <MobileNav isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} navItems={NAV_ITEMS} />
+
+            {/* SEARCH OVERLAY */}
+            <SearchOverlay isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
         </>
     )
 }

@@ -27,7 +27,7 @@ export default function HRPage() {
                     subtitle="Tutkulu, yenilikçi ve sürekli öğrenen bir ekibin parçası olun. Kariyerinizi bizimle şekillendirin."
                     badge="Kariyer"
                     className="bg-rose-600"
-                    backgroundImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
+                    backgroundImage="/images/hr/hr-hero.png"
                 />
 
                 {/* Culture Values */}

@@ -26,7 +26,7 @@ export default function AboutPage() {
                     subtitle="1,400'den fazla mühendisimizle, 1997'den beri dijital dönüşüme liderlik eden global bir teknoloji gücüyüz."
                     badge="Biz Kimiz"
                     className="bg-blue-900"
-                    backgroundImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
+                    backgroundImage="/images/about/about-hero.png"
                 />
 
                 {/* Stats Section with Animated Cards */}

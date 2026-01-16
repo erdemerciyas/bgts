@@ -28,7 +28,7 @@ export default function DefensePage() {
                     subtitle="TSK ve savunma sanayi ekosistemi için yerli, güvenli ve yüksek performanslı yazılım çözümleri."
                     badge="Savunma & Havacılık"
                     className="bg-slate-900"
-                    backgroundImage="https://images.unsplash.com/photo-1596707325251-ab7cb402280d?auto=format&fit=crop&q=80"
+                    backgroundImage="/images/industries/defense-hero.png"
                 />
 
                 {/* Compliance Badges */}

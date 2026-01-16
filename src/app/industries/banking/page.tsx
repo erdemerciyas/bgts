@@ -26,7 +26,7 @@ export default function BankingPage() {
                     subtitle="Güvenli, ölçeklenebilir ve yenilikçi fintech çözümleri ile dijital bankacılık dönüşümüne liderlik edin."
                     badge="Sektörel Çözümler"
                     className="bg-slate-900"
-                    backgroundImage="https://images.unsplash.com/photo-1565514020179-0c2235efe9cd?auto=format&fit=crop&q=80"
+                    backgroundImage="/images/industries/banking-hero.png"
                 />
 
                 {/* Key Metrics */}
