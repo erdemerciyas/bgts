@@ -19,76 +19,10 @@ export const ServicesMenu = () => (
         aria-label="Hizmetler menüsü"
     >
         <div className="flex min-h-[400px]">
-            {/* MSP Section - Column 1 */}
-            <div className="w-1/3 bg-blue-50/40 p-6 border-r border-blue-100 flex flex-col">
-                <h3 className={STYLES.columnHeader}>MSP & YÖNETİLEN HİZMETLER</h3>
-
-                <div className="grid gap-1 mt-4">
-                    {[
-                        { title: "Veri Merkezi", desc: "Tier-3 standartlarında altyapı.", icon: Server, href: "/services/managed-services", img: "/images/navigation/services/bgts-data-center-infrastructure.png" },
-                        { title: "Desktop Support App", desc: "Son kullanıcı destek çözümleri.", icon: Terminal, href: "/services", img: "/images/navigation/services/bgts-desktop-support.png" },
-                        { title: "ITSM as a Service", desc: "IT hizmet süreç yönetimi.", icon: FileText, href: "/services", img: "/images/navigation/services/bgts-itsm-service.png" },
-                        { title: "SCCM as a Service", desc: "Merkezi yama ve envanter.", icon: Database, href: "/services", img: "/images/navigation/services/bgts-sccm-service.png" },
-                        { title: "Monitoring as a Service", desc: "7/24 proaktif izleme.", icon: Activity, href: "/services", img: "/images/navigation/services/bgts-monitoring-service.png" },
-                        { title: "DevOps as a Service", desc: "CI/CD ve otomasyon.", icon: Code, href: "/services/devops", img: "/images/navigation/services/bgts-devops-sre-services.png" },
-                    ].map((item, i) => (
-                        <Link key={i} href={item.href} className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
-                            <div className="flex items-start gap-3">
-                                <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
-                                    <item.icon className="w-5 h-5" />
-                                </div>
-                                <div className="flex-1">
-                                    <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">{item.title}</h4>
-                                    <p className="text-xs text-slate-500 mt-0.5 leading-snug">{item.desc}</p>
-                                </div>
-                            </div>
-                            <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
-                                <Image src={item.img} alt={item.title} fill className="object-contain p-1" />
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </div>
-
-            {/* Teknoloji Servisleri - Column 2 */}
-            <div className="w-1/3 bg-white p-6 border-r border-slate-100 flex flex-col">
-                <h3 className={STYLES.columnHeader}>TEKNOLOJİ SERVİSLERİ</h3>
-                <div className="grid gap-1 mt-4">
-                    <Link href="/services" className="group flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 hover:shadow-md transition-all border border-transparent hover:border-blue-100">
-                        <div className="flex items-start gap-3">
-                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
-                                <Server className="w-5 h-5" />
-                            </div>
-                            <div className="flex-1">
-                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Veri Merkezi & Uygulama</h4>
-                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Platform ve uygulama katmanlarında uzman yönetilen hizmetler.</p>
-                            </div>
-                        </div>
-                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
-                            <Image src="/images/navigation/services/bgts-data-center-infrastructure.png" alt="Veri Merkezi" fill className="object-contain p-1" />
-                        </div>
-                    </Link>
-                    <Link href="/services/managed-services" className="group flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 hover:shadow-md transition-all border border-transparent hover:border-blue-100">
-                        <div className="flex items-start gap-3">
-                            <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
-                                <Activity className="w-5 h-5" />
-                            </div>
-                            <div className="flex-1">
-                                <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yönetilen Hizmetler</h4>
-                                <p className="text-xs text-slate-500 mt-0.5 leading-snug">Yapay zeka destekli kesintisiz IT desteği ve operasyonel verimlilik.</p>
-                            </div>
-                        </div>
-                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
-                            <Image src="/images/navigation/services/bgts-managed-it-services.png" alt="Yönetilen Hizmetler" fill className="object-contain p-1" />
-                        </div>
-                    </Link>
-                </div>
-            </div>
-
-            {/* Yazılım Geliştirme - Column 3 */}
-            <div className="w-1/3 bg-[#f8fafc] p-6 flex flex-col">
-                <h3 className={STYLES.columnHeader}>YAZILIM GELİŞTİRME</h3>
-                <div className="grid gap-1 mt-4">
+            {/* Yazılım Geliştirme - Column 1 */}
+            <div className="w-1/2 bg-[#f8fafc] p-6 border-r border-slate-100 flex flex-col">
+                <h3 className={STYLES.columnHeader.replace("mb-6", "mb-3")}>YAZILIM GELİŞTİRME</h3>
+                <div className="grid gap-1 mt-1">
                     <Link href="/services/software-development#banking" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                         <div className="flex items-start gap-3">
                             <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
@@ -175,6 +109,37 @@ export const ServicesMenu = () => (
                     </Link>
                 </div>
             </div>
+
+            {/* MSP Section - Column 2 */}
+            <div className="w-1/2 bg-blue-50/40 p-6 flex flex-col">
+                <h3 className={STYLES.columnHeader.replace("mb-6", "mb-3")}>MSP & YÖNETİLEN HİZMETLER</h3>
+
+                <div className="grid gap-1 mt-1">
+                    {[
+                        { title: "Veri Merkezi", desc: "Tier-3 standartlarında altyapı.", icon: Server, href: "/services/managed-services", img: "/images/navigation/services/bgts-data-center-infrastructure.png" },
+                        { title: "Desktop Support App", desc: "Son kullanıcı destek çözümleri.", icon: Terminal, href: "/services", img: "/images/navigation/services/bgts-desktop-support.png" },
+                        { title: "ITSM as a Service", desc: "IT hizmet süreç yönetimi.", icon: FileText, href: "/services", img: "/images/navigation/services/bgts-itsm-service.png" },
+                        { title: "SCCM as a Service", desc: "Merkezi yama ve envanter.", icon: Database, href: "/services", img: "/images/navigation/services/bgts-sccm-service.png" },
+                        { title: "Monitoring as a Service", desc: "7/24 proaktif izleme.", icon: Activity, href: "/services", img: "/images/navigation/services/bgts-monitoring-service.png" },
+                        { title: "DevOps as a Service", desc: "CI/CD ve otomasyon.", icon: Code, href: "/services/devops", img: "/images/navigation/services/bgts-devops-sre-services.png" },
+                    ].map((item, i) => (
+                        <Link key={i} href={item.href} className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                            <div className="flex items-start gap-3">
+                                <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
+                                    <item.icon className="w-5 h-5" />
+                                </div>
+                                <div className="flex-1">
+                                    <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">{item.title}</h4>
+                                    <p className="text-xs text-slate-500 mt-0.5 leading-snug">{item.desc}</p>
+                                </div>
+                            </div>
+                            <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
+                                <Image src={item.img} alt={item.title} fill className="object-contain p-1" />
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
         </div>
     </motion.div>
 )
@@ -228,11 +193,7 @@ export const IndustriesMenu = () => (
                 </div>
             </div>
         </div>
-        <div className="bg-white py-3 text-center border-t border-gray-100">
-            <Link href="/industries" className={STYLES.standardLink}>
-                TÜM SEKTÖRLERİ İNCELE <ArrowRight className="w-3.5 h-3.5 ml-1" />
-            </Link>
-        </div>
+
     </motion.div>
 )
 

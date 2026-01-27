@@ -27,7 +27,7 @@ export default function HRPage() {
                     subtitle="Tutkulu, yenilikçi ve sürekli öğrenen bir ekibin parçası olun. Kariyerinizi bizimle şekillendirin."
                     badge="Kariyer"
                     className="bg-rose-600"
-                    backgroundImage="/images/hr/hr-hero.png"
+                    backgroundImage="/images/headers/bgts-genc-yetenekler.jpg"
                 />
 
                 {/* Culture Values */}
@@ -115,14 +115,12 @@ export default function HRPage() {
                         </div>
                     }
                     image={
-                        <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden">
-                            <Image
-                                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80"
-                                alt="Young Talent"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+                        <Image
+                            src="/images/headers/kariyer-gelisim-firsatlari.jpg"
+                            alt="Young Talent"
+                            fill
+                            className="object-cover"
+                        />
                     }
                 />
 

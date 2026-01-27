@@ -63,7 +63,7 @@ export default function Header() {
                         </div>
                     </Link>
 
-                    <nav className="hidden lg:flex items-center h-full gap-6 xl:gap-8 flex-1 justify-start" role="navigation" aria-label="Ana navigasyon">
+                    <nav className="hidden lg:flex items-center h-full gap-4 xl:gap-6 flex-1 justify-start" role="navigation" aria-label="Ana navigasyon">
                         {NAV_ITEMS.map((item) => (
                             <div
                                 key={item.name}

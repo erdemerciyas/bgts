@@ -27,7 +27,7 @@ export default function RetailTelecomPage() {
                     subtitle="Omnichannel perakende ve yüksek hızlı telekom çözümleri ile milyonlarca müşteriye kusursuz, kesintisiz ve kişiselleştirilmiş hizmet sunun."
                     badge="Tüketici Odaklı Teknoloji"
                     className="bg-slate-900"
-                    backgroundImage="/images/industries/retail-telecom/telecom-infrastructure.png"
+                    backgroundImage="/images/headers/perakende-ve-telekom-cozumleri.jpg"
                 />
 
                 {/* Retail Transformation */}

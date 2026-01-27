@@ -27,7 +27,7 @@ export default function DevOpsPage() {
                     subtitle="Otomatik boru hatları ve bulut tabanlı güvenilirlik ile dijital dönüşümü hızlandırın."
                     badge="Teknoloji Servisleri"
                     className="bg-indigo-900"
-                    backgroundImage="/images/services/devops-hero.png"
+                    backgroundImage="/images/headers/devops-ve-altyapi-hizmetleri.jpg"
                 />
 
                 {/* Key Metrics */}

@@ -28,7 +28,7 @@ export default function DefensePage() {
                     subtitle="TSK ve savunma sanayi ekosistemi için yerli, güvenli ve yüksek performanslı yazılım çözümleri."
                     badge="Savunma & Havacılık"
                     className="bg-slate-900"
-                    backgroundImage="/images/industries/defense-hero.png"
+                    backgroundImage="/images/headers/savunma-sanayi-teknolojileri.png"
                 />
 
                 {/* Compliance Badges */}
@@ -62,7 +62,7 @@ export default function DefensePage() {
                                 Savunma sanayinin zorlu gereksinimlerine uygun, gerçek zamanlı (Real-Time) işletim sistemleri ve gömülü yazılım çözümleri geliştiriyoruz. <strong className="text-blue-700">Aviyonik sistemler</strong>, <strong className="text-blue-700">Komuta Kontrol (C4ISR)</strong> ve <strong className="text-blue-700">Simülasyon</strong> teknolojilerinde derin uzmanlığa sahibiz.
                             </Text>
                             <div className="bg-slate-900 text-white p-6 rounded-xl border border-slate-700 mt-6">
-                                <Heading variant="h4" className="text-lg font-bold mb-4 flex items-center gap-2">
+                                <Heading variant="h4" className="text-lg font-bold mb-4 flex items-center gap-2 text-white">
                                     <Radio className="w-5 h-5 text-red-500 animate-pulse" />
                                     Operasyonel Üstünlük
                                 </Heading>
@@ -84,19 +84,13 @@ export default function DefensePage() {
                         </div>
                     }
                     image={
-                        <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden group">
+                        <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden group">
                             <Image
-                                src="https://images.unsplash.com/photo-1542289548-52cb2fead4cd?auto=format&fit=crop&q=80"
+                                src="/images/industries/defense/gorev-kritik-sistemler-aviyonik.png"
                                 alt="Radar Interface"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-slate-900/50 mix-blend-multiply"></div>
-                            {/* HUD Effect */}
-                            <div className="absolute inset-0 pointer-events-none border-[20px] border-transparent border-t-green-500/20 border-b-green-500/20"></div>
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] border border-green-500/30 rounded-lg flex items-center justify-center">
-                                <div className="w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
-                            </div>
                         </div>
                     }
                 />
@@ -116,7 +110,7 @@ export default function DefensePage() {
                                 <div className="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-full"></div>
                                 <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80"
+                                        src="/images/headers/savunma-teknolojileri-ekibi.jpg"
                                         alt="Advanced Technology"
                                         width={600}
                                         height={800}

@@ -7,6 +7,7 @@ export const HOME_CONTENT = {
         badge: "Global Teknoloji Ortağı",
         ctaText: "Hizmetleri Keşfedin",
         ctaLink: "/services",
+        image: "/images/headers/teknoloji-cozum-ortagi.jpg",
         videoSrc: "https://play.vidyard.com/TrGTy95HjNi21m7LAtH5e8?autoplay=1&embed_button=0&viral_sharing=0&loop=1&controls=0&muted=1"
     },
     socialProof: {
@@ -30,7 +31,7 @@ export const HOME_CONTENT = {
         heading: "Kanıtlanmış Sonuçlarla\nGüvenilir Teknoloji Ortağınız",
         description: "25 yılı aşkın deneyimimizle, işletmelerin sürdürülebilir büyüme elde etmelerini, operasyonları optimize etmelerini ve benzersiz ihtiyaçlarına göre uyarlanmış stratejik teknoloji danışmanlığı ile karlılığı artırmalarını sağlıyoruz.",
         ctaText: "Tüm Hizmetlerimizi İnceleyin",
-        image: "/images/home/kurumsal-teknoloji-danismanligi.jpg",
+        image: "/images/headers/teknoloji-cozum-ortagi.jpg",
         sections: [
             {
                 id: "managed-services",

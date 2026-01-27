@@ -26,7 +26,7 @@ export default function AboutPage() {
                     subtitle="1,400'den fazla mühendisimizle, 1997'den beri dijital dönüşüme liderlik eden global bir teknoloji gücüyüz."
                     badge="Biz Kimiz"
                     className="bg-blue-900"
-                    backgroundImage="/images/about/about-hero.png"
+                    backgroundImage="/images/headers/bgts-hakkimizda-ekip.jpg"
                 />
 
                 {/* Stats Section with Animated Cards */}
@@ -208,8 +208,8 @@ export default function AboutPage() {
                         image={
                             <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80"
-                                    alt="Innovation"
+                                    src="/images/headers/bgts-teknoloji-urunleri.jpg"
+                                    alt="Our Products"
                                     fill
                                     className="object-cover"
                                 />

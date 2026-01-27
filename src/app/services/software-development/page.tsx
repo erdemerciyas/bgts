@@ -19,7 +19,7 @@ export default function SoftwareDevelopmentPage() {
                 subtitle={hero.subtitle}
                 badge={hero.badge}
                 layout="simple"
-                backgroundImage="/images/services/yazilim-gelistirme-hero.png"
+                backgroundImage="/images/headers/I53A6358.jpg"
                 align="center"
             />
 

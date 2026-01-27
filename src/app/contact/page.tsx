@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin, MessageSquare, Clock, Globe } from "lucide-react"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
+import Image from "next/image"
 
 export default function ContactPage() {
   return (
@@ -23,7 +24,7 @@ export default function ContactPage() {
           subtitle="Projeleriniz için bir araya gelelim veya sorularınızı yanıtlayalım."
           badge="İletişim"
           className="bg-slate-900"
-          backgroundImage="/images/contact/contact-hero.png"
+          backgroundImage="/images/headers/teknoloji-servisleri-genel.jpg"
         />
 
         <Section>
@@ -61,31 +62,45 @@ export default function ContactPage() {
               />
             </div>
 
-            {/* Map or Form Placeholder */}
-            <div className="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 text-center">
-              <Heading variant="h3" className="mb-4 text-slate-900">Bir Mesaj Bırakın</Heading>
-              <Text className="max-w-2xl mx-auto mb-8">
-                Aşağıdaki formu doldurarak bize ulaşabilirsiniz. En kısa sürede size dönüş yapacağız.
-              </Text>
+            {/* Contact Form & Image Section */}
+            <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200">
+              <div className="grid lg:grid-cols-2">
+                {/* Form Side */}
+                <div className="p-8 md:p-12 lg:p-16">
+                  <Heading variant="h3" className="mb-4 text-slate-900">Bir Mesaj Bırakın</Heading>
+                  <Text className="mb-8 text-slate-600">
+                    Aşağıdaki formu doldurarak bize ulaşabilirsiniz. En kısa sürede size dönüş yapacağız.
+                  </Text>
 
-              {/* Simple Form Placeholder */}
-              <form className="max-w-xl mx-auto space-y-4 text-left">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Adınız Soyadınız</label>
-                  <input type="text" id="name" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Ad Soyad" />
+                  <form className="space-y-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Adınız Soyadınız</label>
+                      <input type="text" id="name" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Ad Soyad" />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">E-Posta Adresiniz</label>
+                      <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="ornek@sirket.com" />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">Mesajınız</label>
+                      <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Mesajınızı buraya yazın..."></textarea>
+                    </div>
+                    <button type="button" className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30">
+                      Gönder
+                    </button>
+                  </form>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">E-Posta Adresiniz</label>
-                  <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="ornek@sirket.com" />
+
+                {/* Image Side */}
+                <div className="relative min-h-[400px] lg:min-h-full">
+                  <Image
+                    src="/images/headers/iletisim-ve-destek.jpg"
+                    alt="Contact Us"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">Mesajınız</label>
-                  <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Mesajınızı buraya yazın..."></textarea>
-                </div>
-                <button type="button" className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30">
-                  Gönder
-                </button>
-              </form>
+              </div>
             </div>
           </Container>
         </Section>

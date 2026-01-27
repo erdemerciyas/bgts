@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { CheckCircle, Users, Settings } from "lucide-react"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
@@ -12,18 +13,33 @@ export function DeliveryModels() {
     const { badge, heading, description, models } = HOME_CONTENT.deliveryModels;
 
     return (
-        <Section background="muted" className="relative overflow-hidden">
+        <Section className="relative z-0 overflow-hidden bg-[#0f172a] py-24 lg:py-32">
+            {/* Background Pattern & Gradient */}
+            <div className="absolute inset-0 -z-10">
+                <Image
+                    src="/images/home/bgts-calisma-modelleri-arkaplan.png"
+                    alt="Background"
+                    fill
+                    className="object-cover opacity-100"
+                />
 
+                {/* Additional overlay for text readability - reduced opacity to let image show */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/80 via-[#0f172a]/40 to-[#0f172a]/80" />
+
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+                <div className="absolute left-0 top-0 -z-10 h-[600px] w-[600px] rounded-full bg-blue-600/10 blur-[120px]"></div>
+                <div className="absolute right-0 bottom-0 -z-10 h-[500px] w-[500px] rounded-full bg-indigo-600/10 blur-[120px]"></div>
+            </div>
 
             <Container className="relative z-10">
                 <div className="text-center mb-20">
-                    <Text variant="small" className="text-corporate-tertiary font-bold tracking-widest uppercase mb-4 block">
+                    <Text variant="small" className="text-blue-400 font-bold tracking-[0.2em] uppercase mb-4 block">
                         {badge}
                     </Text>
-                    <Heading variant="h2" className="mb-6 text-corporate-primary">
+                    <Heading variant="h2" className="mb-6 text-white">
                         {heading}
                     </Heading>
-                    <Text variant="large" className="text-text-secondary max-w-2xl mx-auto">
+                    <Text variant="large" className="text-slate-400 max-w-2xl mx-auto font-medium">
                         {description}
                     </Text>
                 </div>

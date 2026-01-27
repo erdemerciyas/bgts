@@ -23,7 +23,7 @@ export default function ServicesPage() {
                     subtitle="End-to-end management of critical systems for operational excellence."
                     badge="Services"
                     className="bg-blue-900"
-                    backgroundImage="/images/services/services-hero.png"
+                    backgroundImage="/images/headers/teknoloji-servisleri-genel.jpg"
                 />
 
                 {/* Services Grid */}
