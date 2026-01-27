@@ -22,7 +22,7 @@ export const SOFTWARE_DEV_CONTENT = {
             id: "banking",
             title: "Bankacılık & Finansal Sistemler",
             icon: Landmark,
-            image: "/images/services/bankacilik-finans-yazilim-cozumleri.jpg",
+            image: "/images/services/bankacilik-finans-yazilim-cozumleri.png",
             description: "Bankacılık ve finans sektörüne özel regülasyonlara uyumlu, yüksek güvenlikli ve yüksek performanslı yazılım çözümleri geliştiriyoruz.",
             features: [
                 {
@@ -39,7 +39,7 @@ export const SOFTWARE_DEV_CONTENT = {
             id: "trading",
             title: "E-Trading, Market Data & Düşük Gecikmeli Sistemler",
             icon: TrendingUp,
-            image: "/images/services/trading-market-data-sistemleri.jpg",
+            image: "/images/services/trading-market-data-sistemleri.png",
             description: "Finansal piyasalara yönelik düşük gecikmeli (low-latency), yüksek hacimli işlem altyapıları tasarlıyoruz.",
             features: [
                 {
@@ -56,7 +56,7 @@ export const SOFTWARE_DEV_CONTENT = {
             id: "telecom",
             title: "Telekom & Dijital İletişim Platformları",
             icon: Radio,
-            image: "/images/services/telekom-dijital-iletisim.jpg",
+            image: "/images/services/telekom-dijital-iletisim.png",
             description: "Failover routing, yüksek trafik dayanıklılığı ve mobil-first mimariler ile kritik iletişim süreçlerini güvence altına alıyoruz.",
             features: [
                 {
@@ -73,7 +73,7 @@ export const SOFTWARE_DEV_CONTENT = {
             id: "fraud",
             title: "Fraud, Risk & AI Destekli Doğrulama Sistemleri",
             icon: ShieldAlert,
-            image: "/images/services/fraud-risk-ve-guvenlik.jpg",
+            image: "/images/services/fraud-risk-ve-guvenlik.png",
             description: "Gerçek zamanlı doğrulama, anomali tespiti ve sahtekârlık önleme çözümleriyle finansal ve operasyonel riskleri minimize ediyoruz.",
             features: [
                 {
@@ -90,7 +90,7 @@ export const SOFTWARE_DEV_CONTENT = {
             id: "bigdata",
             title: "Büyük Veri & Gerçek Zamanlı Veri İşleme",
             icon: Database,
-            image: "/images/services/buyuk-veri-analitigi.jpg",
+            image: "/images/services/buyuk-veri-analitigi.png",
             description: "Büyük hacimli verileri gerçek zamanlı işleyen, ölçeklenebilir ve dayanıklı veri altyapıları kuruyoruz.",
             features: [
                 {
@@ -107,7 +107,7 @@ export const SOFTWARE_DEV_CONTENT = {
             id: "ai",
             title: "Yapay Zekâ & AI-First Mimari Çözümleri",
             icon: Cpu,
-            image: "/images/services/yapay-zeka-cozumleri.jpg",
+            image: "/images/services/yapay-zeka-cozumleri.png",
             description: "Kurumsal sistemlerinize entegre, güvenli ve sürdürülebilir yapay zekâ çözümleri sunuyoruz.",
             features: [
                 {
@@ -124,7 +124,7 @@ export const SOFTWARE_DEV_CONTENT = {
             id: "modernization",
             title: "Yazılım Modernizasyonu & Mikroservis Dönüşümü",
             icon: RefreshCw,
-            image: "/images/services/yazilim-modernizasyonu.jpg",
+            image: "/images/services/yazilim-modernizasyonu.png",
             description: "Legacy sistemlerinizi modern mimarilere taşıyor, performans ve maliyet optimizasyonu sağlıyoruz.",
             features: [
                 {
