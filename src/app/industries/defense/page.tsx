@@ -17,7 +17,7 @@ export default function DefensePage() {
                     subtitle="TSK ve savunma sanayi ekosistemi için 15288, 12207 ve 42020 standartlarına uygun, güvenli ve yüksek performanslı yazılım ve altyapı çözümleri."
                     badge="Savunma & Havacılık"
                     className="bg-slate-900"
-                    backgroundImage="/images/headers/savunma-sanayi-teknolojileri.png"
+                    backgroundImage="/images/headers/savunma-sanayi-teknolojileri.jpg"
                 />
 
                 {/* Genel Bakış */}

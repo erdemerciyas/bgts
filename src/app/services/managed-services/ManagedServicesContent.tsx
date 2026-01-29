@@ -134,7 +134,7 @@ export default function ManagedServicesContent() {
                 subtitle="Azure, AWS ve Google Cloud ortamlarınız için uçtan uca strateji, migrasyon ve 7/24 proaktif yönetim hizmetleri."
                 badge="Cloud Consultancy"
                 className="bg-slate-900"
-                backgroundImage="/images/headers/yonetilen-bulut-hizmetleri.png"
+                backgroundImage="/images/headers/yonetilen-bulut-hizmetleri.jpg"
             />
 
             {/* Tech Marquee */}
