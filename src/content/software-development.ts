@@ -16,7 +16,7 @@ export const SOFTWARE_DEV_CONTENT = {
         title: "Yazılım Geliştirme",
         subtitle: "Finans, Telekom ve Kritik Altyapılar için Yüksek Performanslı Çözümler",
         badge: "Özel Yazılım Çözümleri",
-        backgroundImage: "/images/headers/yazilim-gelistirme-ve-inovasyon.jpg"
+        backgroundImage: "/images/headers/yazilim-gelistirme-hero.jpg"
     },
     sectoralDomains: [
         {
