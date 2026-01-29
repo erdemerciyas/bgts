@@ -10,7 +10,66 @@ import Link from "next/link"
 import Image from "next/image"
 
 export default function SoftwareDevelopmentPage() {
-    const { hero, domains, capabilities } = SOFTWARE_DEV_CONTENT;
+    const { hero, sectoralDomains, technicalDomains, capabilities } = SOFTWARE_DEV_CONTENT;
+
+    // Helper to render domain content
+    const DomainSection = ({ domain }: { domain: any }) => {
+        const Icon = domain.icon;
+        return (
+            <div id={domain.id} className="scroll-mt-32 group">
+                {/* Section Image & Header Combined */}
+                <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
+                    {/* Image */}
+                    <div className="w-full md:w-1/3 aspect-[4/3] relative rounded-2xl overflow-hidden shadow-lg border border-border">
+                        <Image
+                            src={domain.image}
+                            alt={domain.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        {/* Icon Overlay */}
+                        <div className="absolute top-4 left-4 p-2.5 bg-white/90 backdrop-blur-sm rounded-xl text-corporate-primary shadow-sm">
+                            <Icon className="w-6 h-6" />
+                        </div>
+                    </div>
+
+                    {/* Title & Desc */}
+                    <div className="flex-1 pt-2">
+                        <div className="mb-4">
+                            {domain.subtitle && (
+                                <Text className="text-corporate-secondary font-bold text-sm tracking-wide uppercase mb-1">
+                                    {domain.subtitle}
+                                </Text>
+                            )}
+                            <Heading variant="h3" className="text-corporate-primary">
+                                {domain.title}
+                            </Heading>
+                        </div>
+                        <Text variant="large" className="text-slate-600 leading-relaxed">
+                            {domain.description}
+                        </Text>
+                    </div>
+                </div>
+
+                {/* Features List - Keeping the clean look */}
+                <div className="pl-4 border-l border-slate-100 ml-5 space-y-8">
+                    {domain.features.map((feature: any, i: number) => (
+                        <div key={i} className="pl-8 relative">
+                            {/* Dot indicator */}
+                            <div className="absolute left-[-5px] top-2.5 w-2.5 h-2.5 rounded-full bg-slate-200 group-hover:bg-corporate-secondary transition-colors duration-500" />
+
+                            <Heading variant="h4" className="text-slate-900 text-lg font-bold mb-2">
+                                {feature.title}
+                            </Heading>
+                            <Text className="text-slate-500 leading-relaxed">
+                                {feature.description}
+                            </Text>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    };
 
     return (
         <>
@@ -30,88 +89,69 @@ export default function SoftwareDevelopmentPage() {
 
                         {/* Sidebar Navigation (Hidden on Mobile) */}
                         <aside className="hidden lg:block w-72 shrink-0">
-                            <div className="sticky top-32 space-y-2">
-                                <Text variant="small" className="font-bold text-slate-400 tracking-widest uppercase mb-6 pl-4">
-                                    Sektörel Çözümler
-                                </Text>
-                                <nav className="flex flex-col border-l-2 border-slate-100">
-                                    {domains.map((domain) => (
-                                        <Link
-                                            key={domain.id}
-                                            href={`#${domain.id}`}
-                                            className="group flex items-center py-3 pl-6 border-l-2 -ml-[2px] border-transparent hover:border-corporate-primary transition-all text-slate-500 hover:text-corporate-primary"
-                                        >
-                                            <span className="font-medium text-sm transition-transform group-hover:translate-x-1 duration-300">
-                                                {domain.title}
-                                            </span>
-                                        </Link>
-                                    ))}
-                                    <div className="pt-8 pl-6">
-                                        <Link
-                                            href="#capabilities"
-                                            className="inline-flex items-center text-sm font-bold text-corporate-secondary group"
-                                        >
-                                            Teknik Yetenekler <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                        </Link>
-                                    </div>
-                                </nav>
+                            <div className="sticky top-32 space-y-8">
+                                {/* Sectoral Solutions */}
+                                <div>
+                                    <Text variant="small" className="font-bold text-slate-400 tracking-widest uppercase mb-4 pl-4">
+                                        Sektörel Çözümler
+                                    </Text>
+                                    <nav className="flex flex-col border-l-2 border-slate-100">
+                                        {sectoralDomains.map((domain) => (
+                                            <Link
+                                                key={domain.id}
+                                                href={`#${domain.id}`}
+                                                className="group flex items-center py-2.5 pl-6 border-l-2 -ml-[2px] border-transparent hover:border-corporate-primary transition-all text-slate-500 hover:text-corporate-primary"
+                                            >
+                                                <span className="font-medium text-sm transition-transform group-hover:translate-x-1 duration-300">
+                                                    {domain.title}
+                                                </span>
+                                            </Link>
+                                        ))}
+                                    </nav>
+                                </div>
+
+                                {/* Technical Solutions */}
+                                <div>
+                                    <Text variant="small" className="font-bold text-slate-400 tracking-widest uppercase mb-4 pl-4">
+                                        Teknoloji & Mühendislik
+                                    </Text>
+                                    <nav className="flex flex-col border-l-2 border-slate-100">
+                                        {technicalDomains.map((domain) => (
+                                            <Link
+                                                key={domain.id}
+                                                href={`#${domain.id}`}
+                                                className="group flex items-center py-2.5 pl-6 border-l-2 -ml-[2px] border-transparent hover:border-corporate-primary transition-all text-slate-500 hover:text-corporate-primary"
+                                            >
+                                                <span className="font-medium text-sm transition-transform group-hover:translate-x-1 duration-300">
+                                                    {domain.title}
+                                                </span>
+                                            </Link>
+                                        ))}
+                                    </nav>
+                                </div>
+
+                                <div className="pt-4 pl-6">
+                                    <Link
+                                        href="#capabilities"
+                                        className="inline-flex items-center text-sm font-bold text-corporate-secondary group"
+                                    >
+                                        Teknik Yetenekler <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                                    </Link>
+                                </div>
                             </div>
                         </aside>
 
                         {/* Content Area */}
                         <div className="flex-1 min-w-0">
                             <div className="space-y-32">
-                                {domains.map((domain) => {
-                                    const Icon = domain.icon;
-                                    return (
-                                        <div key={domain.id} id={domain.id} className="scroll-mt-32 group">
-
-                                            {/* Section Image & Header Combined */}
-                                            <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
-                                                {/* Image */}
-                                                <div className="w-full md:w-1/3 aspect-[4/3] relative rounded-2xl overflow-hidden shadow-lg border border-border">
-                                                    <Image
-                                                        src={domain.image}
-                                                        alt={domain.title}
-                                                        fill
-                                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                                    />
-                                                    {/* Icon Overlay */}
-                                                    <div className="absolute top-4 left-4 p-2.5 bg-white/90 backdrop-blur-sm rounded-xl text-corporate-primary shadow-sm">
-                                                        <Icon className="w-6 h-6" />
-                                                    </div>
-                                                </div>
-
-                                                {/* Title & Desc */}
-                                                <div className="flex-1 pt-2">
-                                                    <Heading variant="h3" className="text-corporate-primary mb-4">
-                                                        {domain.title}
-                                                    </Heading>
-                                                    <Text variant="large" className="text-slate-600 leading-relaxed">
-                                                        {domain.description}
-                                                    </Text>
-                                                </div>
-                                            </div>
-
-                                            {/* Features List - Keeping the clean look */}
-                                            <div className="pl-4 border-l border-slate-100 ml-5 space-y-8">
-                                                {domain.features.map((feature, i) => (
-                                                    <div key={i} className="pl-8 relative">
-                                                        {/* Dot indicator */}
-                                                        <div className="absolute left-[-5px] top-2.5 w-2.5 h-2.5 rounded-full bg-slate-200 group-hover:bg-corporate-secondary transition-colors duration-500" />
-
-                                                        <Heading variant="h4" className="text-slate-900 text-lg font-bold mb-2">
-                                                            {feature.title}
-                                                        </Heading>
-                                                        <Text className="text-slate-500 leading-relaxed">
-                                                            {feature.description}
-                                                        </Text>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    );
-                                })}
+                                {/* Sectoral Domains */}
+                                {sectoralDomains.map((domain) => (
+                                    <DomainSection key={domain.id} domain={domain} />
+                                ))}
+                                {/* Technical Domains */}
+                                {technicalDomains.map((domain) => (
+                                    <DomainSection key={domain.id} domain={domain} />
+                                ))}
                             </div>
                         </div>
 

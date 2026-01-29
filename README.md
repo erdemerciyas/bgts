@@ -1,6 +1,6 @@
 # BGTS - Business & Global Technology Solutions
 
-BGTS (Business & Global Technology Solutions), kurumların dijital dönüşüm süreçlerine liderlik eden, modern ve yüksek performanslı bir teknoloji şirketidir. Bu proje, BGTS'nin kurumsal web varlığını en güncel web teknolojileriyle sunan, performans ve kullanıcı deneyimi odaklı bir platformdur.
+BGTS (Business & Global Technology Solutions), kurumların dijital dönüşüm süreçlerine liderlik eden, modern ve yüksek performanslı bir teknoloji şirketidir. Bu proje, BGTS'nin kurumsal web varlığını en güncel web teknolojileriyle sunan, performans, güvenlik ve kullanıcı deneyimi odaklı bir platformdur.
 
 ![BGTS Homepage](/public/images/headers/teknoloji-servisleri-genel.jpg)
 

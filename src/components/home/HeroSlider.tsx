@@ -55,7 +55,7 @@ export function HeroSlider() {
     }
 
     return (
-        <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden bg-slate-900">
+        <div className="relative h-[85vh] min-h-[600px] w-full overflow-hidden bg-slate-900">
             {/* Background Images */}
             <AnimatePresence mode="popLayout" initial={false}>
                 <motion.div
@@ -74,12 +74,13 @@ export function HeroSlider() {
                         className="object-cover"
                         sizes="100vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-slate-900/20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
                 </motion.div>
             </AnimatePresence>
 
-            <Container className="relative z-10 h-full flex items-center">
-                <div className="max-w-3xl">
+            <Container className="relative z-10 h-full flex items-center pb-20 md:pb-0">
+                <div className="max-w-4xl pt-20 md:pt-0">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentSlide}
@@ -88,22 +89,22 @@ export function HeroSlider() {
                             exit={{ opacity: 0, x: 20 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                         >
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-sm font-bold tracking-wide uppercase mb-6 backdrop-blur-sm">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs md:text-sm font-bold tracking-wide uppercase mb-4 md:mb-6 backdrop-blur-sm">
                                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                                 BGTS Teknoloji
                             </div>
 
-                            <Heading variant="h1" className="text-white text-5xl md:text-7xl mb-6 leading-tight drop-shadow-2xl">
+                            <Heading variant="h1" className="text-white text-4xl sm:text-5xl md:text-7xl mb-4 md:mb-6 leading-[1.1] drop-shadow-2xl">
                                 {SLIDES[currentSlide].title}
                             </Heading>
 
-                            <Text variant="large" className="text-slate-200 text-xl md:text-2xl mb-10 max-w-2xl font-light leading-relaxed drop-shadow-lg">
+                            <Text variant="large" className="text-slate-200 text-lg md:text-2xl mb-8 md:mb-10 max-w-2xl font-light leading-relaxed drop-shadow-lg opacity-90">
                                 {SLIDES[currentSlide].subtitle}
                             </Text>
 
                             <Link
                                 href={SLIDES[currentSlide].ctaLink}
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-corporate-secondary hover:bg-corporate-primary text-white text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20 group"
+                                className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-corporate-secondary hover:bg-corporate-primary text-white text-base md:text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20 group"
                             >
                                 {SLIDES[currentSlide].ctaText}
                                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -113,31 +114,31 @@ export function HeroSlider() {
                 </div>
             </Container>
 
-            {/* Navigation Buttons */}
-            <div className="absolute bottom-10 right-4 md:right-20 flex gap-4 z-20">
+            {/* Navigation Buttons - Hidden on very small screens, visible on md+ */}
+            <div className="hidden md:flex absolute bottom-10 right-20 gap-4 z-20">
                 <button
                     onClick={prevSlide}
-                    className="w-12 h-12 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 active:scale-95"
+                    className="w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
                     aria-label="Önceki Slayt"
                 >
-                    <ArrowLeft className="w-5 h-5" />
+                    <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="w-12 h-12 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/20 transition-all hover:scale-110 active:scale-95"
+                    className="w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
                     aria-label="Sonraki Slayt"
                 >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </button>
             </div>
 
             {/* Indicators */}
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+            <div className="absolute bottom-8 left-6 md:left-1/2 md:-translate-x-1/2 flex gap-3 z-20">
                 {SLIDES.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setCurrentSlide(index)}
-                        className={`transition-all duration-500 rounded-full h-1.5 ${currentSlide === index ? "w-10 bg-corporate-secondary" : "w-2 bg-white/40 hover:bg-white/80"
+                        className={`transition-all duration-500 rounded-full h-1.5 ${currentSlide === index ? "w-8 md:w-12 bg-corporate-secondary" : "w-2 bg-white/20 hover:bg-white/40"
                             }`}
                         aria-label={`Slayt ${index + 1}`}
                     />

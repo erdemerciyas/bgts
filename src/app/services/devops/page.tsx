@@ -2,7 +2,6 @@
 
 import Hero from "@/components/ui/Hero"
 import ContentSection from "@/components/ui/ContentSection"
-import Breadcrumb from "@/components/ui/Breadcrumb"
 import TechStackGrid from "@/components/ui/TechStackGrid"
 import MetricCard from "@/components/ui/MetricCard"
 import { GitBranch, Box, Settings, Lock, Zap, Server, Cpu, Code2, ShieldCheck, PlayCircle } from "lucide-react"
@@ -15,12 +14,6 @@ export default function DevOpsPage() {
     return (
         <>
             <div className="bg-white min-h-screen">
-                <Breadcrumb
-                    items={[
-                        { label: "Hizmetler", href: "/services", icon: Server },
-                        { label: "DevOps & SRE", href: "/services/devops", icon: Zap }
-                    ]}
-                />
 
                 <Hero
                     title="DevOps & SRE"

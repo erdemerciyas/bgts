@@ -1,211 +1,296 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import ContentSection from "@/components/ui/ContentSection"
-import Breadcrumb from "@/components/ui/Breadcrumb"
-import { Shield, ShieldAlert, Lock, Radio, Crosshair, Server, Eye, FileCheck, CheckCircle2, ChevronDown, ShieldCheck } from "lucide-react"
-import Image from "next/image"
+import { Shield, Lock, Radio, Crosshair, Server, FileCheck, CheckCircle2, ShieldCheck, FileText, Code, Settings, Database, Cloud, Network, Activity, LifeBuoy, Users, Layers, Cpu } from "lucide-react"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 export default function DefensePage() {
     return (
         <>
             <div className="bg-white min-h-screen">
-                <Breadcrumb
-                    items={[
-                        { label: "Sektörler", href: "/industries", icon: Shield },
-                        { label: "Savunma Sanayi", href: "/industries/defense", icon: ShieldAlert }
-                    ]}
-                />
 
                 <Hero
-                    title="Milli Savunma İçin Kritik Teknolojiler"
-                    subtitle="TSK ve savunma sanayi ekosistemi için yerli, güvenli ve yüksek performanslı yazılım çözümleri."
+                    title="Milli Savunma İçin Kritik ve Güvenilir Teknolojiler"
+                    subtitle="TSK ve savunma sanayi ekosistemi için 15288, 12207 ve 42020 standartlarına uygun, güvenli ve yüksek performanslı yazılım ve altyapı çözümleri."
                     badge="Savunma & Havacılık"
                     className="bg-slate-900"
                     backgroundImage="/images/headers/savunma-sanayi-teknolojileri.png"
                 />
 
-                {/* Compliance Badges */}
-                <Section className="bg-slate-50 border-b border-slate-200">
+                {/* Genel Bakış */}
+                <Section className="pb-0 pt-20">
                     <Container>
-                        <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                            {[
-                                { icon: Shield, label: "Milli Gizli" },
-                                { icon: Lock, label: "NATO Secret" },
-                                { icon: FileCheck, label: "DO-178C" },
-                                { icon: CheckCircle2, label: "ISO 27001" },
-                            ].map((badge, i) => (
-                                <div key={i} className="flex flex-col items-center gap-3 group cursor-pointer">
-                                    <div className="w-16 h-16 rounded-full bg-slate-200 group-hover:bg-blue-600 flex items-center justify-center transition-colors">
-                                        <badge.icon className="w-8 h-8 text-slate-500 group-hover:text-white transition-colors" />
+                        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                            <div>
+                                <Heading variant="h2" className="mb-6 text-slate-900">Savunma Sanayi Odaklı Yaklaşım</Heading>
+                                <div className="space-y-4 text-slate-600 leading-relaxed">
+                                    <p>
+                                        Savunma sanayi projelerinde öncelikli hedefimiz, <strong className="text-blue-700">güvenilir, yüksek performanslı ve güvenli</strong> yazılım çözümleri sunmaktır.
+                                        Kritik görev yazılımlarının sahada doğru, hızlı ve hatasız çalışmasını sağlamak için gömülü yazılımlardan web ve bulut tabanlı sistemlere kadar tüm geliştirme süreçlerini bütüncül şekilde yönetiyoruz.
+                                    </p>
+                                    <p>
+                                        Yazılım geliştirme ve tasarım faaliyetlerinde <strong className="text-slate-900">15288, 12207 ve 42020</strong> standartlarına uygun süreçleri işletiyoruz.
+                                        Gereksinim analizinden mimari tasarım, geliştirme ve doğrulama süreçlerine kadar her adımda izlenebilirlik sağlıyoruz.
+                                    </p>
+                                    <div className="flex gap-4 mt-6">
+                                        <div className="flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-lg text-sm font-semibold text-slate-700">
+                                            <ShieldCheck className="w-4 h-4 text-blue-600" />
+                                            20000 BT Hizmet Yönetimi
+                                        </div>
+                                        <div className="flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-lg text-sm font-semibold text-slate-700">
+                                            <Lock className="w-4 h-4 text-blue-600" />
+                                            27001 Bilgi Güvenliği
+                                        </div>
                                     </div>
-                                    <span className="font-bold text-slate-900">{badge.label}</span>
                                 </div>
-                            ))}
+                            </div>
+                            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
+                                <Image
+                                    src="/images/industries/defense/gorev-kritik-sistemler-aviyonik.png"
+                                    alt="Defense Technology"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
+                            </div>
                         </div>
                     </Container>
                 </Section>
 
-                {/* Mission Critical Systems */}
-                <ContentSection
-                    title="Görev Kritik Sistemler"
-                    badge="Mission Critical"
-                    content={
-                        <div className="space-y-6">
-                            <Text variant="large">
-                                Savunma sanayinin zorlu gereksinimlerine uygun, gerçek zamanlı (Real-Time) işletim sistemleri ve gömülü yazılım çözümleri geliştiriyoruz. <strong className="text-blue-700">Aviyonik sistemler</strong>, <strong className="text-blue-700">Komuta Kontrol (C4ISR)</strong> ve <strong className="text-blue-700">Simülasyon</strong> teknolojilerinde derin uzmanlığa sahibiz.
-                            </Text>
-                            <div className="bg-slate-900 text-white p-6 rounded-xl border border-slate-700 mt-6">
-                                <Heading variant="h4" className="text-lg font-bold mb-4 flex items-center gap-2 text-white">
-                                    <Radio className="w-5 h-5 text-red-500 animate-pulse" />
-                                    Operasyonel Üstünlük
-                                </Heading>
-                                <ul className="space-y-3">
-                                    <li className="flex items-start gap-3 text-slate-300 text-sm">
-                                        <Crosshair className="w-4 h-4 mt-1 text-blue-500" />
-                                        Milisaniye hassasiyetinde tepki süreleri
-                                    </li>
-                                    <li className="flex items-start gap-3 text-slate-300 text-sm">
-                                        <Shield className="w-4 h-4 mt-1 text-blue-500" />
-                                        Siber tehditlere karşı maksimum direnç
-                                    </li>
-                                    <li className="flex items-start gap-3 text-slate-300 text-sm">
-                                        <Server className="w-4 h-4 mt-1 text-blue-500" />
-                                        %99.999 erişilebilirlik garantisi
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    }
-                    image={
-                        <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden group">
-                            <Image
-                                src="/images/industries/defense/gorev-kritik-sistemler-aviyonik.png"
-                                alt="Radar Interface"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                        </div>
-                    }
+                {/* Detailed Services Sections */}
+
+                {/* 1. İş Analizi Hizmetleri */}
+                <DetailedServiceSection
+                    title="İş Analizi Hizmetleri"
+                    description="Savunma projelerinde gereksinimlerin doğru anlaşılması, operasyonel modellemelerin gerçekleştirilmesi ve izlenebilirliğin sağlanması amacıyla kapsamlı iş analizi hizmetleri sunuyoruz."
+                    icon={FileText}
+                    items={[
+                        {
+                            title: "Misyon Bazlı İhtiyaç Analizi",
+                            desc: "IIBA uyumlu metodolojilerle paydaş gereksinimlerini topluyor, iş hedeflerini belgeliyor ve operasyonel senaryolarla doğruluyoruz."
+                        },
+                        {
+                            title: "Operasyonel Senaryo ve Süreç Modelleme",
+                            desc: "BPMN, UML, SysML ve ArchiMate kullanarak iş süreçlerini, sistem davranışlarını ve kurumsal mimariyi modelliyoruz."
+                        },
+                        {
+                            title: "İşletim Kavramı (ConOps) Üretimi",
+                            desc: "Sistemin operasyonel kullanımını ve görev senaryolarını tanımlayan, tüm paydaşlar için ortak anlayış sağlayan ConOps dokümanları hazırlıyoruz."
+                        },
+                        {
+                            title: "Kavramsal Tasarım ve Fizibilite",
+                            desc: "15288 ve 12207 standartlarıyla entegre, teknik ve maliyet odaklı fizibilite ve kavramsal tasarım çalışmaları."
+                        },
+                        {
+                            title: "Gereksinim Çıkartımı ve Dokümantasyon",
+                            desc: "Paydaş, Sistem ve Alt Sistem gereksinimlerini izlenebilir (RTM) ve test edilebilir şekilde dokümante ediyoruz."
+                        }
+                    ]}
                 />
 
-                {/* Detailed Capabilities - Accordion Style */}
-                <Section className="bg-slate-900 text-white">
-                    <Container>
-                        <div className="grid lg:grid-cols-2 gap-16 items-start">
-                            <div>
-                                <Heading variant="h2" className="text-white mb-6">Teknolojik Yetkinlikler</Heading>
-                                <Text className="text-slate-400 mb-8 leading-relaxed">
-                                    Savunma sanayisinin tüm katmanlarında uçtan uca çözümler sunuyoruz. Veri analitiğinden otonom sistemlere kadar geniş bir yelpazede hizmet veriyoruz.
-                                </Text>
-                                <CapabilitiesAccordion />
-                            </div>
-                            <div className="relative">
-                                <div className="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-full"></div>
-                                <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
-                                    <Image
-                                        src="/images/headers/savunma-teknolojileri-ekibi.jpg"
-                                        alt="Advanced Technology"
-                                        width={600}
-                                        height={800}
-                                        className="w-full object-cover"
-                                    />
-                                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent p-8">
-                                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-wider mb-2">
-                                            Ar-Ge Odaklı
-                                        </div>
-                                        <Heading variant="h3" className="text-xl font-bold text-white">Geleceğin Savaş Sahası</Heading>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Container>
-                </Section>
+                {/* 2. Yazılım Geliştirme Hizmetleri */}
+                <DetailedServiceSection
+                    title="Yazılım Geliştirme Hizmetleri"
+                    description="Modern yazılım yaşam döngüsü ve doğrulama süreçlerine uygun, 12207 standardında C++, Java, C# dilleriyle bütüncül mühendislik desteği."
+                    icon={Code}
+                    bg="bg-slate-50"
+                    items={[
+                        {
+                            title: "Yazılım Mimari Tasarımı",
+                            desc: "42010 ve 42020 uyumlu; gerçek zamanlı, modüler ve güvenli mimari tasarımlar. UML/SysML modelleme."
+                        },
+                        {
+                            title: "Bilgi Sistem Yazılımları",
+                            desc: "Operasyonel yönetim, kayıt sistemleri, büyük veri ve loglama ihtiyaçlarına yönelik kurumsal çözümler."
+                        },
+                        {
+                            title: "Komuta Kontrol Yazılımları",
+                            desc: "Gerçek zamanlı veri işleme, sensör füzyonu, taktik veri linkleri ve simülasyon/davranış motoru geliştirme."
+                        },
+                        {
+                            title: "Gömülü Sistem Yazılımları",
+                            desc: "RTOS, FPGA ve mikrodenetleyiciler için sürücü ve görev yazılımları. Askeri standartlara uygun doğrulama."
+                        },
+                        {
+                            title: "Güvenli Kodlama ve Askeri Standartlar",
+                            desc: "Secure Coding, OWASP ve askeri politikalara uygun, statik analiz ve zafiyet taramalarıyla güçlendirilmiş kodlama."
+                        },
+                        {
+                            title: "Yazılım Geliştirme Modeli",
+                            desc: "İhtiyaca göre Agile/Scrum (Esnek) veya Şelale/V-Model (Doğrulama Odaklı) proje yönetim yaklaşımları."
+                        }
+                    ]}
+                />
 
-                {/* Security Focus */}
-                <Section>
-                    <Container>
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <Heading variant="h2" className="mb-4">Önce Güvenlik</Heading>
-                            Tüm süreçlerimizde &quot;Security by Design&quot; prensibini benimsiyoruz.
-                        </div>
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {[
-                                { title: "Kriptoloji", desc: "Askeri standartlarda veri şifreleme ve güvenli iletişim protokolleri." },
-                                { title: "Sızma Testleri", desc: "Düzenli red-teaming operasyonları ile sistem zafiyetlerinin tespiti." },
-                                { title: "Güvenli Yazılım Yaşam Döngüsü", desc: "SSDLC süreçleri ile kodlama aşamasından itibaren güvenlik." }
-                            ].map((item, i) => (
-                                <div key={i} className="p-8 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:bg-white hover:shadow-xl transition-all duration-300">
-                                    <div className="w-16 h-16 mx-auto bg-slate-200 rounded-full flex items-center justify-center mb-6">
-                                        <ShieldCheck className="w-8 h-8 text-slate-700" />
-                                    </div>
-                                    <Heading variant="h4" className="text-lg font-bold text-slate-900 mb-3">{item.title}</Heading>
-                                    <Text variant="small" className="text-slate-500 leading-relaxed">{item.desc}</Text>
-                                </div>
-                            ))}
-                        </div>
-                    </Container>
-                </Section>
+                {/* 3. Test ve Doğrulama Hizmetleri */}
+                <DetailedServiceSection
+                    title="Test ve Doğrulama Hizmetleri"
+                    description="Sistem ve yazılımların gereksinimlere uygunluğunu 29119 ve 829 standartları çerçevesinde garanti altına alıyoruz."
+                    icon={CheckCircle2}
+                    items={[
+                        {
+                            title: "İşlev ve Sistem Testleri",
+                            desc: "Bileşen, entegrasyon ve sistem seviyesinde işlevsellik doğrulama testleri."
+                        },
+                        {
+                            title: "Otomasyon Testleri",
+                            desc: "Tekrarlanabilirliği ve hızı artıran, sürekli entegrasyona dahil otomatik test senaryoları."
+                        },
+                        {
+                            title: "Performans, Güvenlik ve Dayanıklılık",
+                            desc: "Yük, stres, dayanıklılık ve güvenlik testleri ile kritik görev koşullarında kararlılık garantisi."
+                        },
+                        {
+                            title: "Kabul Test Planlaması",
+                            desc: "Kullanıcı ihtiyaçlarına ve operasyonel senaryolara dayalı kapsamlı kabul test planları."
+                        },
+                        {
+                            title: "Dokümantasyon ve Raporlama",
+                            desc: "İzlenebilir, doğrulanabilir ve karar destek süreçlerini besleyen detaylı test raporlaması."
+                        }
+                    ]}
+                />
+
+                {/* 4. DevOps Hizmetleri */}
+                <DetailedServiceSection
+                    title="DevOps Hizmetleri"
+                    description="Geliştirme ve operasyon süreçlerini entegre ederek hızlı, güvenilir ve izlenebilir yazılım teslimatı sağlıyoruz."
+                    icon={Settings}
+                    bg="bg-slate-50"
+                    items={[
+                        {
+                            title: "Geliştirme Araçları",
+                            desc: "Git, Jira, Azure DevOps ile kaynak kod yönetimi, iş takibi ve ekip koordinasyonu."
+                        },
+                        {
+                            title: "Sürekli İnşa (CI) ve Dağıtım (CD)",
+                            desc: "Jenkins, Azure DevOps pipeline'ları ile otomatik derleme, test ve dağıtım süreçleri."
+                        },
+                        {
+                            title: "Otomatik Test Entegrasyonu",
+                            desc: "CI/CD hattına entegre birim ve statik analiz testleri ile erken hata tespiti."
+                        },
+                        {
+                            title: "Sürüm ve Dağıtım Yönetimi",
+                            desc: "Güvenli sürüm kontrolü, otomatik dağıtım politikaları ve rollback mekanizmaları."
+                        },
+                        {
+                            title: "Konteyner ve Kubernetes",
+                            desc: "Docker ve Kubernetes ile ölçeklenebilir, taşınabilir mikrosistem mimarileri."
+                        }
+                    ]}
+                />
+
+                {/* 5. BT Altyapı Hizmetleri */}
+                <DetailedServiceSection
+                    title="BT Altyapı Hizmetleri"
+                    description="Güvenli, ölçeklenebilir ve yönetilebilir altyapı çözümleriyle operasyonel sürekliliği sağlıyoruz."
+                    icon={Server}
+                    items={[
+                        {
+                            title: "Altyapı Tasarımı ve Yönetimi",
+                            desc: "Tüm yaşam döngüsünü kapsayan, yüksek kullanılabilirlikli sistem tasarımı ve yönetimi."
+                        },
+                        {
+                            title: "Ağ ve İletişim Altyapısı",
+                            desc: "Yüksek güvenlikli LAN/WAN tasarımları, firewall ve güvenli iletişim protokolleri."
+                        },
+                        {
+                            title: "Sunucu ve Depolama Sistemleri",
+                            desc: "Fiziksel/Sanal sunucu kümeleri ve güvenli, ölçeklenebilir depolama mimarileri."
+                        },
+                        {
+                            title: "Yedekleme ve Felaket Kurtarma",
+                            desc: "İş sürekliliği için replikasyon, otomatik yedekleme ve felaket kurtarma planları."
+                        },
+                        {
+                            title: "Veri Merkezi Tasarımı",
+                            desc: "Enerji verimliliği ve fiziksel güvenlik odaklı veri merkezi mimari danışmanlığı."
+                        }
+                    ]}
+                />
+
+                {/* 6. Yönetilen BT Hizmetleri */}
+                <DetailedServiceSection
+                    title="Yönetilen BT Hizmetleri"
+                    description="20000 ve 27001 standartlarında, 7/24 izlenen ve yönetilen güvenli operasyonel hizmetler."
+                    icon={Activity}
+                    bg="bg-slate-50"
+                    items={[
+                        {
+                            title: "Operasyonel Yük Yönetimi",
+                            desc: "Sunucu ve ağ altyapısının günlük bakım, yönetim ve optimizasyonu (Ansible, Puppet)."
+                        },
+                        {
+                            title: "İzleme (Monitoring)",
+                            desc: "7/24 Nagios, Zabbix gibi araçlarla proaktif sistem ve servis izleme."
+                        },
+                        {
+                            title: "Performans ve Kapasite",
+                            desc: "Sürekli performans analizi, raporlama ve geleceğe yönelik kapasite planlaması."
+                        },
+                        {
+                            title: "Güvenlik Yönetimi",
+                            desc: "Firewall, IDS/IPS yönetimi, log analizi ve proaktif tehdit tespiti."
+                        },
+                        {
+                            title: "Yardım Masası",
+                            desc: "Kullanıcı talepleri için SLA tabanlı 1. ve 2. seviye teknik destek."
+                        },
+                        {
+                            title: "Olay ve Değişiklik Yönetimi",
+                            desc: "ITIL uyumlu incident ve change management süreçleri."
+                        }
+                    ]}
+                />
+
             </div>
         </>
     )
 }
 
-function CapabilitiesAccordion() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0)
-
-    const items = [
-        {
-            title: "Komuta Kontrol Sistemleri",
-            content: "C4ISR sistemleri için durumsal farkındalık, ortak harekat resmi oluşturma ve karar destek mekanizmaları geliştiriyoruz."
-        },
-        {
-            title: "Simülasyon ve Eğitim",
-            content: "Sanal ve artırılmış gerçeklik tabanlı eğitim simülatörleri, harp oyunları ve taktik eğitim sistemleri."
-        },
-        {
-            title: "İnsansız Sistemler",
-            content: "İHA/SİHA yer kontrol istasyonları, otonom uçuş algoritmaları ve görüntü işleme çözümleri."
-        },
-        {
-            title: "Siber Güvenlik",
-            content: "Ulusal siber güvenlik stratejilerine uygun, yerli güvenlik duvarı, IDPS ve SIEM çözümleri."
-        }
-    ]
-
+function DetailedServiceSection({ title, description, icon: Icon, items, bg = "bg-white" }: { title: string, description: string, icon: any, items: { title: string, desc: string }[], bg?: string }) {
     return (
-        <div className="space-y-4">
-            {items.map((item, i) => (
-                <div key={i} className="border border-slate-700 rounded-xl overflow-hidden bg-slate-800/50">
-                    <button
-                        onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                        className="w-full flex items-center justify-between p-4 text-left font-bold text-white hover:bg-slate-700/50 transition-colors"
-                    >
-                        {item.title}
-                        <ChevronDown className={cn("w-5 h-5 text-slate-400 transition-transform", openIndex === i ? "rotate-180" : "")} />
-                    </button>
-                    <AnimatePresence>
-                        {openIndex === i && (
-                            <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                className="overflow-hidden"
-                            >
-                                <div className="p-4 pt-0 text-slate-400 text-sm leading-relaxed border-t border-slate-700/50">
-                                    {item.content}
-                                </div>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
+        <Section className={bg}>
+            <Container>
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-12">
+                    <div className="lg:w-1/3">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="p-3 bg-blue-600 rounded-xl text-white shadow-lg shadow-blue-200">
+                                <Icon className="w-8 h-8" />
+                            </div>
+                            <Heading variant="h2" className="text-2xl lg:text-3xl text-slate-900">{title}</Heading>
+                        </div>
+                        <Text className="text-slate-600 leading-relaxed text-lg">
+                            {description}
+                        </Text>
+                        <div className="h-1 w-20 bg-blue-600 rounded-full mt-6"></div>
+                    </div>
+                    <div className="lg:w-2/3 grid md:grid-cols-2 gap-6">
+                        {items.map((item, i) => (
+                            <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all group">
+                                <h4 className="font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">{item.title}</h4>
+                                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            ))}
+            </Container>
+        </Section>
+    )
+}
+
+function StandardCard({ code, title }: { code: string, title: string }) {
+    return (
+        <div className="flex items-center gap-3 p-3 bg-slate-800 rounded-lg border border-slate-700">
+            <FileCheck className="w-5 h-5 text-blue-400 shrink-0" />
+            <div>
+                <div className="font-bold text-white text-sm">{code}</div>
+                <div className="text-xs text-slate-400">{title}</div>
+            </div>
         </div>
     )
 }

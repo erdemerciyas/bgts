@@ -21,6 +21,57 @@
   --animate-fade-in-up: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* 3D Transform Utilities for Isometric Effects */
+@utility perspective-1000 {
+  perspective: 1000px;
+}
+
+@utility rotate-x-10 {
+  transform: rotateX(10deg);
+}
+
+@utility rotate-x-0 {
+  transform: rotateX(0deg);
+}
+
+@utility rotate-y-15 {
+  transform: rotateY(15deg);
+}
+
+@utility rotate-y-neg-15 {
+  transform: rotateY(-15deg);
+}
+
+@utility rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+/* Fallback for arbitrary values if utility doesn't catch them */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-y-\[-15deg\] {
+  transform: rotateY(-15deg);
+}
+
+.rotate-y-\[15deg\] {
+  transform: rotateY(15deg);
+}
+
+.rotate-x-\[10deg\] {
+  transform: rotateX(10deg);
+}
+
+.hover\:rotate-y-\[0deg\]:hover {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.hover\:rotate-x-\[0deg\]:hover {
+  transform: rotateY(0deg) rotateX(0deg);
+  /* Reset both for simplicity on hover */
+}
+
 @keyframes blob {
   0% {
     transform: translate(0px, 0px) scale(1);

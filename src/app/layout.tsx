@@ -3,6 +3,7 @@ import { Exo, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import GlobalBreadcrumb from "@/components/layout/GlobalBreadcrumb";
 import { OrganizationStructuredData, WebSiteStructuredData } from "@/components/seo/StructuredData";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 
@@ -68,6 +69,7 @@ export default function RootLayout({
       <body className={`${exo.variable} ${manrope.variable} font-sans antialiased text-[#212121] bg-white`}>
         <div className="flex flex-col min-h-screen">
           <Header />
+          <GlobalBreadcrumb />
           <main className="flex-1">
             {children}
           </main>

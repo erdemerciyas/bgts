@@ -1,7 +1,6 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import Breadcrumb from "@/components/ui/Breadcrumb"
 import ContactCard from "@/components/ui/ContactCard"
 import { Mail, Phone, MapPin, MessageSquare, Clock, Globe } from "lucide-react"
 import { Section } from "@/components/ui/Section"
@@ -13,11 +12,6 @@ export default function ContactPage() {
   return (
     <>
       <div className="bg-white min-h-screen">
-        <Breadcrumb
-          items={[
-            { label: "İletişim", href: "/contact", icon: MessageSquare }
-          ]}
-        />
 
         <Hero
           title="Bize Ulaşın"

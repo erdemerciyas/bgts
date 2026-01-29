@@ -9,35 +9,40 @@ import { Heading, Text } from "@/components/ui/Typography"
 import { HOME_CONTENT } from "@/content/home"
 import { cn } from "@/lib/utils"
 
+import { GradientMesh } from "@/components/ui/GradientMesh"
+
 export function ServicesSection() {
     const { badge, heading, description, ctaText, image, sections } = HOME_CONTENT.servicesSummary;
 
     return (
-        <Section background="default" className="pb-0 overflow-visible">
-            <Container className="pb-24">
-                <div className="flex flex-col lg:flex-row items-center gap-16">
-                    <div className="lg:w-1/2 relative z-10">
-                        <span className="inline-block px-4 py-1.5 rounded-full bg-corporate-surface text-corporate-primary font-bold text-sm tracking-wide mb-6 border border-corporate-border">
-                            {badge}
-                        </span>
-                        <Heading variant="h2" className="text-corporate-primary mb-6">
-                            {heading}
-                        </Heading>
-                        <Text variant="large" className="text-text-secondary mb-8">
-                            {description}
-                        </Text>
-                        <Link href="/services" className="inline-flex h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-primary hover:shadow-lg hover:-translate-y-1">
-                            {ctaText} <ArrowRight className="ml-2 w-5 h-5" />
-                        </Link>
-                    </div>
-                    <div className="lg:w-1/2 relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl group">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-corporate-primary/40 to-transparent z-10"></div>
-                        <Image
-                            src={image}
-                            alt="Team Meeting"
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+        <Section background="muted" className="pt-0 pb-0 overflow-visible relative">
+            <GradientMesh opacity={0.03} className="z-0" />
+            <Container className="relative z-10 -mt-24 md:-mt-40 mb-24">
+                <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-100/50">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                        <div className="lg:w-1/2">
+                            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 font-bold text-sm tracking-wide mb-6 border border-blue-100">
+                                {badge}
+                            </span>
+                            <Heading variant="h2" className="text-slate-900 mb-6 font-bold leading-tight">
+                                {heading}
+                            </Heading>
+                            <Text variant="large" className="text-slate-600 mb-8 leading-relaxed">
+                                {description}
+                            </Text>
+                            <Link href="/services" className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-primary hover:shadow-lg hover:-translate-y-1">
+                                {ctaText} <ArrowRight className="ml-2 w-5 h-5" />
+                            </Link>
+                        </div>
+                        <div className="lg:w-1/2 relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-lg group">
+                            <Image
+                                src={image}
+                                alt="Team Meeting"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                        </div>
                     </div>
                 </div>
             </Container>

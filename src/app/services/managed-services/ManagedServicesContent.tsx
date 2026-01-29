@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Hero from "@/components/ui/Hero"
-import Breadcrumb from "@/components/ui/Breadcrumb"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
@@ -63,12 +62,6 @@ export default function ManagedServicesContent() {
 
     return (
         <div className="bg-white min-h-screen font-sans">
-            <Breadcrumb
-                items={[
-                    { label: "Hizmetler", href: "/services", icon: Server },
-                    { label: "Yönetilen Hizmetler", href: "/services/managed-services", icon: Activity }
-                ]}
-            />
 
             {/* Sticky Sub-Navigation */}
             <div className="sticky top-[80px] z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">

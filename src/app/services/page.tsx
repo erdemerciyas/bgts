@@ -1,7 +1,6 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import Breadcrumb from "@/components/ui/Breadcrumb"
 import ServiceCard from "@/components/ui/ServiceCard"
 import { Server, Monitor, Database, Activity, Code2, Cpu, Zap, Shield } from "lucide-react"
 import { Container } from "@/components/ui/Container"
@@ -12,11 +11,6 @@ export default function ServicesPage() {
     return (
         <>
             <div className="bg-white min-h-screen">
-                <Breadcrumb
-                    items={[
-                        { label: "Hizmetler", href: "/services", icon: Server }
-                    ]}
-                />
 
                 <Hero
                     title="Technology Services"

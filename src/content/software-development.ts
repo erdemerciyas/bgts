@@ -17,10 +17,11 @@ export const SOFTWARE_DEV_CONTENT = {
         subtitle: "Finans, Telekom ve Kritik Altyapılar için Yüksek Performanslı Çözümler",
         badge: "Özel Yazılım Çözümleri"
     },
-    domains: [
+    sectoralDomains: [
         {
             id: "banking",
             title: "Bankacılık & Finansal Sistemler",
+            subtitle: "Finansal Yazılım Çözümleri",
             icon: Landmark,
             image: "/images/services/bankacilik-finans-yazilim-cozumleri.png",
             description: "Bankacılık ve finans sektörüne özel regülasyonlara uyumlu, yüksek güvenlikli ve yüksek performanslı yazılım çözümleri geliştiriyoruz.",
@@ -37,7 +38,8 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "trading",
-            title: "E-Trading, Market Data & Düşük Gecikmeli Sistemler",
+            title: "E-Trading, Market Data & Sistemler",
+            subtitle: "Low-Latency Finansal Altyapılar",
             icon: TrendingUp,
             image: "/images/services/trading-market-data-sistemleri.png",
             description: "Finansal piyasalara yönelik düşük gecikmeli (low-latency), yüksek hacimli işlem altyapıları tasarlıyoruz.",
@@ -54,7 +56,8 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "telecom",
-            title: "Telekom & Dijital İletişim Platformları",
+            title: "Telekom & Dijital İletişim",
+            subtitle: "Dijital Kanal Platformları",
             icon: Radio,
             image: "/images/services/telekom-dijital-iletisim.png",
             description: "Failover routing, yüksek trafik dayanıklılığı ve mobil-first mimariler ile kritik iletişim süreçlerini güvence altına alıyoruz.",
@@ -71,7 +74,8 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "fraud",
-            title: "Fraud, Risk & AI Destekli Doğrulama Sistemleri",
+            title: "Fraud, Risk & Doğrulama",
+            subtitle: "AI Destekli Güvenlik Sistemleri",
             icon: ShieldAlert,
             image: "/images/services/fraud-risk-ve-guvenlik.png",
             description: "Gerçek zamanlı doğrulama, anomali tespiti ve sahtekârlık önleme çözümleriyle finansal ve operasyonel riskleri minimize ediyoruz.",
@@ -85,10 +89,13 @@ export const SOFTWARE_DEV_CONTENT = {
                     description: "Gerçek zamanlı doğrulama, anomali tespiti ve sahtekârlık önleme çözümleriyle finansal ve operasyonel riskleri minimize ediyoruz."
                 }
             ]
-        },
+        }
+    ],
+    technicalDomains: [
         {
             id: "bigdata",
-            title: "Büyük Veri & Gerçek Zamanlı Veri İşleme",
+            title: "Büyük Veri & Analitik",
+            subtitle: "Gerçek Zamanlı Veri İşleme",
             icon: Database,
             image: "/images/services/buyuk-veri-analitigi.png",
             description: "Büyük hacimli verileri gerçek zamanlı işleyen, ölçeklenebilir ve dayanıklı veri altyapıları kuruyoruz.",
@@ -105,7 +112,8 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "ai",
-            title: "Yapay Zekâ & AI-First Mimari Çözümleri",
+            title: "Yapay Zekâ & Otomasyon",
+            subtitle: "AI-First Mimari Çözümleri",
             icon: Cpu,
             image: "/images/services/yapay-zeka-cozumleri.png",
             description: "Kurumsal sistemlerinize entegre, güvenli ve sürdürülebilir yapay zekâ çözümleri sunuyoruz.",
@@ -122,7 +130,8 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "modernization",
-            title: "Yazılım Modernizasyonu & Mikroservis Dönüşümü",
+            title: "Yazılım Modernizasyonu",
+            subtitle: "Mikroservis Dönüşümü",
             icon: RefreshCw,
             image: "/images/services/yazilim-modernizasyonu.png",
             description: "Legacy sistemlerinizi modern mimarilere taşıyor, performans ve maliyet optimizasyonu sağlıyoruz.",

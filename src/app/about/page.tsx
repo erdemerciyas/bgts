@@ -2,7 +2,6 @@
 
 import Hero from "@/components/ui/Hero"
 import ContentSection from "@/components/ui/ContentSection"
-import Breadcrumb from "@/components/ui/Breadcrumb"
 import StatsCard from "@/components/ui/StatsCard"
 import Timeline from "@/components/ui/Timeline"
 import { Globe, Users, Award, Briefcase, Rocket, Target, Zap, Building2, Calendar } from "lucide-react"
@@ -15,11 +14,6 @@ export default function AboutPage() {
     return (
         <>
             <div className="bg-white min-h-screen">
-                <Breadcrumb
-                    items={[
-                        { label: "Hakkımızda", href: "/about", icon: Building2 }
-                    ]}
-                />
 
                 <Hero
                     title="Hakkımızda"
