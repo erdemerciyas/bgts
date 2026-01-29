@@ -40,10 +40,10 @@ const nextConfig: NextConfig = {
             key: 'X-XSS-Protection',
             value: '1; mode=block'
           },
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: *.unsplash.com *.vidyard.com; font-src 'self' data:; connect-src 'self' *.google-analytics.com *.googletagmanager.com; frame-src 'self' *.vidyard.com;"
-          },
+          // {
+          //   key: 'Content-Security-Policy',
+          //   value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: *.unsplash.com *.vidyard.com; font-src 'self' data:; connect-src 'self' *.google-analytics.com *.googletagmanager.com; frame-src 'self' *.vidyard.com;"
+          // },
         ],
       },
     ]
