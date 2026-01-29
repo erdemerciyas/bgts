@@ -78,7 +78,7 @@ export default function SoftwareDevelopmentPage() {
                 subtitle={hero.subtitle}
                 badge={hero.badge}
                 layout="simple"
-                backgroundImage="/images/headers/I53A6358.jpg"
+                backgroundImage={hero.backgroundImage}
                 align="center"
             />
 
