@@ -39,5 +39,5 @@ export const NAV_ITEMS = [
     { name: "ÜRÜNLER", href: "/products", id: "products" },
     { name: "GENÇ MÜHENDİSLER", href: "/hr#young-engineers", id: "talent" },
     { name: "BİLGİ MERKEZİ", href: "/resources", id: "resources" },
-    { name: "YERİNİ AL", href: "/careers", id: "careers" },
+    { name: "YERİNİ AL", href: "/social-contribution", id: "careers" },
 ]

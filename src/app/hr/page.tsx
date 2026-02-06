@@ -90,15 +90,17 @@ export default function HRPage() {
                             <span className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-bold text-sm tracking-wide mb-4">
                                 GENÇ MÜHENDİS PROGRAMI
                             </span>
-                            <Heading variant="h2">Teorinin Ötesine Geçin</Heading>
+                            <Heading variant="h2">Gerçek İş Dünyasıyla Buluşun</Heading>
                             <Text variant="lead">
-                                BGTS Genç Mühendis Programı, teorinin ötesine geçerek gerçek projelerde sorumluluk alan,
-                                kurumsal yapılarda değer üretmenin ne demek olduğunu sahada öğrenen mühendisler yetiştirir.
+                                BGTS Genç Mühendis Programı, kariyerine güçlü bir başlangıç yapmak isteyen genç mühendisleri
+                                gerçek iş dünyasıyla buluşturur.
                             </Text>
                             <Text className="text-slate-600">
-                                Bugüne kadar özellikle bankacılık ve finans başta olmak üzere, teknolojiyle dönüşen birçok sektörde
-                                çok sayıda genç mühendisimizi uzun vadeli pozisyonlara yerleştirdik. Bu programın odağında yalnızca
-                                işe yerleşmek değil; mühendis gibi düşünmeyi, problem çözmeyi ve değer üretmeyi öğrenmek yer alır.
+                                Teorinin ötesine geçerek gerçek projelerde sorumluluk alan, kurumsal yapılarda üretmenin ne demek
+                                olduğunu sahada öğrenen mühendisler yetiştirir. Bugüne kadar özellikle bankacılık ve finans başta olmak üzere,
+                                teknolojiyle dönüşen birçok sektörde çok sayıda genç mühendisimizi uzun vadeli pozisyonlara yerleştirdik.
+                                Bu programın odağında yalnızca işe yerleşmek değil; mühendis gibi düşünmeyi, problem çözmeyi ve değer
+                                üretmeyi öğrenmek yer alır.
                             </Text>
                         </div>
                     </Container>
@@ -108,9 +110,9 @@ export default function HRPage() {
                 <Section className="bg-slate-50">
                     <Container>
                         <div className="text-center mb-16">
-                            <Heading variant="h2">Uzmanlık Alanları</Heading>
+                            <Heading variant="h2">Program Yapısı</Heading>
                             <Text className="text-slate-600 mt-4">
-                                Programımız üç ana yapıdan oluşur, her biri farklı yetkinliklere odaklanır.
+                                Genç Mühendis Programı, farklı uzmanlık alanlarında gelişim fırsatları sunan üç ana yapıdan oluşur.
                             </Text>
                         </div>
 
@@ -122,14 +124,14 @@ export default function HRPage() {
                                 </div>
                                 <Heading variant="h4" className="mb-4">Yazılım Profesyonelleri</Heading>
                                 <Text className="text-sm text-slate-600 mb-6 flex-1">
-                                    Gerçek projeler üzerinde çalışarak modern yazılım geliştirme pratiklerini uçtan uca deneyimleyin.
+                                    Gerçek projeler üzerinde çalışarak modern yazılım geliştirme pratiklerini uçtan uca deneyimleme fırsatı sunar.
                                 </Text>
                                 <ul className="space-y-3 mb-8">
                                     {[
-                                        "Güncel yazılım teknolojileri",
-                                        "Kodlama standartları ve mimari",
+                                        "Güncel yazılım teknolojileriyle çalışma",
+                                        "Kodlama standartları ve mimari yaklaşımlar",
                                         "Ekip içi çalışma kültürü",
-                                        "Kurumsal projelerde aktif rol"
+                                        "Kurumsal projelerde aktif üretim"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-3 text-sm text-slate-700">
                                             <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
@@ -137,6 +139,9 @@ export default function HRPage() {
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="mt-auto pt-4 border-t border-slate-100 text-xs text-slate-500 italic">
+                                    Yazılımı yalnızca yazan değil; tasarlayan ve geliştiren profesyoneller.
+                                </div>
                             </div>
 
                             {/* Track 2: Test & Analysis */}
@@ -146,11 +151,11 @@ export default function HRPage() {
                                 </div>
                                 <Heading variant="h4" className="mb-4">Test ve Analiz Uzmanları</Heading>
                                 <Text className="text-sm text-slate-600 mb-6 flex-1">
-                                    Planlama, koordinasyon ve teslim süreçlerini deneyimleyerek proje yönetimini sahada öğrenin.
+                                    Planlama, koordinasyon ve teslim süreçlerini deneyimleyerek projelerin nasıl yönetildiğini sahada öğrenme imkânı sunar.
                                 </Text>
                                 <ul className="space-y-3 mb-8">
                                     {[
-                                        "Uçtan uca test ve analiz süreçleri",
+                                        "Uçtan uca test ve analiz deneyimi",
                                         "Analitik düşünme ve problem çözme",
                                         "Kalite odaklı bakış açısı",
                                         "Kritik finansal sistem deneyimi"
@@ -161,6 +166,9 @@ export default function HRPage() {
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="mt-auto pt-4 border-t border-slate-100 text-xs text-slate-500 italic">
+                                    Yüksek standartlı ve kritik sistemlerin yönetimi.
+                                </div>
                             </div>
 
                             {/* Track 3: Technology */}
@@ -170,14 +178,14 @@ export default function HRPage() {
                                 </div>
                                 <Heading variant="h4" className="mb-4">Teknoloji Uzmanları</Heading>
                                 <Text className="text-sm text-slate-600 mb-6 flex-1">
-                                    Kurumsal sistemlerin işletimi, destek ve sürekliliğine odaklanan teknoloji süreçlerini yönetin.
+                                    Kurumsal sistemlerin işletimi, destek ve sürekliliğine odaklanan teknoloji süreçlerini sahada öğrenmeyi sağlar.
                                 </Text>
                                 <ul className="space-y-3 mb-8">
                                     {[
-                                        "Kurumsal IT altyapıları",
+                                        "Kurumsal IT altyapılarını tanıma",
                                         "Operasyon ve destek süreçleri",
-                                        "Teknoloji yönetimi temelleri",
-                                        "Sistem sürekliliği ve güvenliği"
+                                        "Büyük ölçekli sistem sürekliliği",
+                                        "Sistem yönetimi ve işletimi"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-3 text-sm text-slate-700">
                                             <CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
@@ -185,6 +193,9 @@ export default function HRPage() {
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="mt-auto pt-4 border-t border-slate-100 text-xs text-slate-500 italic">
+                                    Teknolojiyi yalnızca kullanan değil; işleten ve yöneten mühendisler.
+                                </div>
                             </div>
                         </div>
                     </Container>
@@ -192,34 +203,48 @@ export default function HRPage() {
 
                 {/* Why Join Section */}
                 <ContentSection
-                    title="Bu Program Sana Ne Katacak?"
+                    title="Neden Genç Mühendis Programı?"
                     badge="Fırsatlar"
                     content={
                         <div className="space-y-6">
                             <Text variant="large">
-                                <strong className="text-blue-600">BGTS Future Stars</strong> ile sadece teknik bilgi değil, profesyonel bir duruş ve vizyon kazanmanız için yanınızdayız.
+                                Genç Mühendis Programı, kariyerin ilk adımı değil; <strong className="text-blue-600">sağlam bir mühendislik temelidir.</strong>
                             </Text>
-                            <div className="grid gap-6">
-                                <div className="flex gap-4">
-                                    <div className="bg-green-50 p-3 rounded-lg h-fit">
-                                        <Target className="w-6 h-6 text-green-600" />
+                            <div className="grid gap-4">
+                                <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-100 shadow-sm">
+                                    <div className="bg-blue-100 p-2 rounded-lg">
+                                        <Target className="w-5 h-5 text-blue-700" />
                                     </div>
                                     <div>
-                                        <Heading variant="h5" className="mb-2">Kariyer Hızlandırma</Heading>
-                                        <Text className="text-sm text-slate-600">
-                                            Okulda öğrendiklerini gerçek hayatta uygulayarak yaşıtlarından bir adım önde başla.
-                                        </Text>
+                                        <h5 className="font-bold text-slate-900">Gerçek Sorumluluklar</h5>
+                                        <p className="text-sm text-slate-600 mt-1">Gerçek projelerde, gerçek iş hedefleriyle çalışarak deneyim kazanın.</p>
                                     </div>
                                 </div>
-                                <div className="flex gap-4">
-                                    <div className="bg-purple-50 p-3 rounded-lg h-fit">
-                                        <Users className="w-6 h-6 text-purple-600" />
+                                <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-100 shadow-sm">
+                                    <div className="bg-indigo-100 p-2 rounded-lg">
+                                        <BarChart3 className="w-5 h-5 text-indigo-700" />
                                     </div>
                                     <div>
-                                        <Heading variant="h5" className="mb-2">Güçlü Network</Heading>
-                                        <Text className="text-sm text-slate-600">
-                                            Sektörün önde gelen profesyonelleriyle çalışma ve mentorluk alma şansı.
-                                        </Text>
+                                        <h5 className="font-bold text-slate-900">Güçlü Sektör Deneyimi</h5>
+                                        <p className="text-sm text-slate-600 mt-1">Bankacılık ve finans başta olmak üzere kritik sektörlerde uzmanlaşın.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-100 shadow-sm">
+                                    <div className="bg-purple-100 p-2 rounded-lg">
+                                        <Users className="w-5 h-5 text-purple-700" />
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-slate-900">Uzun Vadeli İstihdam</h5>
+                                        <p className="text-sm text-slate-600 mt-1">Program sonunda başarılı mühendislerimizle uzun soluklu bir yolculuğa çıkıyoruz.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-100 shadow-sm">
+                                    <div className="bg-emerald-100 p-2 rounded-lg">
+                                        <Zap className="w-5 h-5 text-emerald-700" />
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-slate-900">Mühendislik Vizyonu</h5>
+                                        <p className="text-sm text-slate-600 mt-1">Sadece teknik bilgi değil, problem çözme ve değer üretme kültürü.</p>
                                     </div>
                                 </div>
                             </div>
@@ -262,43 +287,45 @@ export default function HRPage() {
             </Section>
 
             {/* Application Form Section */}
-            <Section className="bg-blue-900">
-                <Container>
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="text-white space-y-6">
-                            <Heading variant="h2" className="text-white">Geleceğe İlk Adımı Atın</Heading>
-                            <Text className="text-blue-100 text-lg">
-                                Genç Mühendis Programı'na başvurarak kariyerinizde fark yaratacak bir deneyime başlayın.
-                                Hemen formu doldurun, sizi tanıyalım.
-                            </Text>
-                            <div className="space-y-4 pt-4">
-                                <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
-                                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                                        <FileText className="w-5 h-5 text-white" />
+            <div id="application-form">
+                <Section className="bg-blue-900">
+                    <Container>
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <div className="text-white space-y-6">
+                                <Heading variant="h2" className="text-white">Geleceğe İlk Adımı Atın</Heading>
+                                <Text className="text-blue-100 text-lg">
+                                    Genç Mühendis Programı'na başvurarak kariyerinizde fark yaratacak bir deneyime başlayın.
+                                    Hemen formu doldurun, sizi tanıyalım.
+                                </Text>
+                                <div className="space-y-4 pt-4">
+                                    <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+                                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                            <FileText className="w-5 h-5 text-white" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold">Özgeçmişini Hazırla</h4>
+                                            <p className="text-sm text-blue-200">PDF veya Word formatında güncel CV'nizi yükleyin.</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4 className="font-bold">Özgeçmişini Hazırla</h4>
-                                        <p className="text-sm text-blue-200">PDF veya Word formatında güncel CV'nizi yükleyin.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
-                                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                                        <Zap className="w-5 h-5 text-white" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold">Hızlı Süreç</h4>
-                                        <p className="text-sm text-blue-200">Başvurunuzu inceliyor ve en kısa sürede dönüş yapıyoruz.</p>
+                                    <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+                                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                            <Zap className="w-5 h-5 text-white" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold">Hızlı Süreç</h4>
+                                            <p className="text-sm text-blue-200">Başvurunuzu inceliyor ve en kısa sürede dönüş yapıyoruz.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div>
-                            <ApplicationForm />
+                            <div>
+                                <ApplicationForm />
+                            </div>
                         </div>
-                    </div>
-                </Container>
-            </Section>
+                    </Container>
+                </Section>
+            </div>
         </div>
     )
 }

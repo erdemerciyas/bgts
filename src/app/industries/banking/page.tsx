@@ -35,8 +35,6 @@ export default function BankingPage() {
                                     <p>
                                         İş ortaklarımızın stratejik hedeflerini ve önceliklerini merkeze alarak, ihtiyaçlarını analiz ediyor ve
                                         bu ihtiyaçlara en uygun metodoloji ve teslim modeliyle projeleri hayata geçiriyoruz.
-                                    </p>
-                                    <p className="font-semibold text-blue-700">
                                         Dijital dönüşüm yolculuğunda yalnızca bir tedarikçi değil, süreci sahiplenen uzun vadeli bir teknoloji iş ortağı olarak konumlanıyoruz.
                                     </p>
                                 </div>
@@ -54,38 +52,59 @@ export default function BankingPage() {
                     </Container>
                 </Section>
 
-                {/* Uçtan Uca Yetkinlik & İstatistikler */}
+                {/* Bankacılık ve Sigorta Odaklı Uçtan Uca Yetkinlik */}
                 <Section className="bg-slate-50">
                     <Container>
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <Heading variant="h2" className="mb-4">Uçtan Uca Yetkinlik</Heading>
-                            <Text variant="large">
-                                1997 yılındaki kuruluşumuzdan bu yana istikrarlı bir şekilde büyüyen organizasyonumuz,
-                                bugün güçlü kadrosuyla sektörün kritik oyuncularıyla sağlam iş birlikleri yürütmektedir.
-                            </Text>
+                        <div className="text-center max-w-4xl mx-auto mb-16">
+                            <Heading variant="h2" className="mb-8">Bankacılık ve Sigorta Odaklı Uçtan Uca Yetkinlik</Heading>
+                            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
+                                <p>
+                                    1997 yılındaki kuruluşumuzdan bu yana istikrarlı bir şekilde büyüyen organizasyonumuz,
+                                    bugün güçlü kadrosuyla özel ve kamu bankaları, sigorta şirketleri ve ödeme sistemleri
+                                    alanında faaliyet gösteren kurumlarla uzun yıllara dayanan sağlam iş birlikleri yürütmektedir.
+                                </p>
+                                <p>
+                                    Gerçekleştirdiğimiz 100’ün üzerinde proje ile; temel bankacılık, dijital kanallar,
+                                    ödeme sistemleri ile veri ve analitik çözümleri başta olmak üzere finans ekosisteminin
+                                    kritik iş alanlarında aktif rol alıyoruz.
+                                </p>
+                                <p>
+                                    Sektöre özgü iş süreçlerine olan derin hâkimiyetimiz sayesinde; mevcut sistemlerin
+                                    modernizasyonundan sıfırdan proje ve ürün geliştirme süreçlerine kadar her aşamada
+                                    hızlı, doğru ve sürdürülebilir çözümler sunuyoruz.
+                                </p>
+                            </div>
                         </div>
+                    </Container>
+                </Section>
 
-                        <div className="grid md:grid-cols-3 gap-8 mb-16">
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
-                                <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600">
-                                    <Building2 className="w-8 h-8" />
-                                </div>
-                                <div className="text-4xl font-bold text-slate-900 mb-2">1997</div>
-                                <Text className="text-slate-500">Yılından Beri Sektörde</Text>
-                            </div>
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
-                                <div className="w-16 h-16 bg-indigo-50 rounded-full flex items-center justify-center mx-auto mb-6 text-indigo-600">
-                                    <Layers className="w-8 h-8" />
-                                </div>
-                                <div className="text-4xl font-bold text-slate-900 mb-2">100+</div>
-                                <Text className="text-slate-500">Gerçekleştirilen Proje</Text>
-                            </div>
-                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
-                                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600">
-                                    <Target className="w-8 h-8" />
-                                </div>
-                                <div className="text-4xl font-bold text-slate-900 mb-2">Uçtan Uca</div>
-                                <Text className="text-slate-500">Proje Geliştirme Kabiliyeti</Text>
+                {/* Finans Ekosistemine Özelleştirilmiş Çözümler (Summary List) */}
+                <Section className="pb-0">
+                    <Container>
+                        <div className="mb-12">
+                            <Heading variant="h2" className="mb-6 text-slate-900">Finans Ekosistemine Özelleştirilmiş Çözümler</Heading>
+                            <Text className="text-slate-600 text-lg mb-8">
+                                Bankacılık ve sigortaya temas eden tüm alanlarda uçtan uca proje geliştirme kabiliyetine sahibiz.
+                                Bu geniş yetkinliklerimiz ile kurumların hem bugünkü ihtiyaçlarına hem de gelecekteki dönüşüm hedeflerine değer katan çözümler sunuyoruz.
+                            </Text>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+                                {[
+                                    "Temel Bankacılık Uygulamaları",
+                                    "Ödeme Sistemleri ve Kartlı Çözümler",
+                                    "Yatırım Bankacılığı",
+                                    "Hazine",
+                                    "Dijital Bankacılık Kanalları",
+                                    "CRM, IVR Çözümleri",
+                                    "Veri & Analitik, Risk ve Müşteri Analitiği",
+                                    "Kurumsal Uygulamalar (Muhasebe, Tedarik Zinciri, İç Portaller)",
+                                    "İnsan Kaynakları (İK) Sistemleri",
+                                    "Altyapı Modernizasyonu ve Entegrasyon Projeleri"
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100">
+                                        <BadgeCheck className="w-5 h-5 text-blue-600 shrink-0" />
+                                        <span className="font-medium text-slate-800">{item}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </Container>
@@ -93,104 +112,103 @@ export default function BankingPage() {
 
                 {/* Detailed Service Sections */}
 
-                {/* 1. Temel Bankacılık Çözümleri */}
+                {/* 1. Temel Bankacılık Uygulamaları */}
                 <DetailedServiceSection
-                    title="Temel Bankacılık Çözümleri"
-                    description="Kredi yönetiminden mevduat işlemlerine, yasal takiplerden şube operasyonlarına kadar bankacılığın omurgasını oluşturan sistemlerde uçtan uca modernizasyon ve geliştirme hizmeti sunuyoruz."
+                    title="Temel Bankacılık Uygulamaları"
+                    description="Bankacılığın omurgasını oluşturan sistemlerde, teminattan krediye, nakit yönetiminden yasal takibe kadar uçtan uca çözümler."
                     icon={Wallet}
                     items={[
                         {
-                            title: "Kredi ve Tahsis Yönetimi",
-                            desc: "Bireysel, Ticari ve KOBİ kredileri için tahsis, kullandırım, ödeme planı oluşturma ve yapılandırma süreçleri."
+                            title: "Teminat Yönetimi Projesi",
+                            desc: ""
                         },
                         {
-                            title: "Teminat ve Nakit Yönetimi",
-                            desc: "Merkezi teminat yönetimi, nakit akışı planlama, hazine FX işlemleri ve türev ürün modülleri."
+                            title: "Vadeli Mevduat",
+                            desc: ""
                         },
                         {
-                            title: "Mevduat ve Hesap İşlemleri",
-                            desc: "Vadeli/Vadesiz hesaplar, Kredili Mevduat Hesabı (KMH) ve dinamik faiz/komisyon yapıları."
+                            title: "Bireysel, Kobi ve Ticari Krediler",
+                            desc: "İş birlikleri, tahsis kullandırım, ödeme planı, sorunlu kredi yönetimi, yasal takip."
                         },
                         {
-                            title: "Yasal Takip ve Sorunlu Krediler",
-                            desc: "Gecikmiş alacaklar, yasal takip süreçleri, idari takip ve tahsilat performans yönetimi."
+                            title: "Nakit Yönetimi Çözümleri Projesi",
+                            desc: ""
                         },
                         {
-                            title: "Yasal Uyumluluk ve Raporlama",
-                            desc: "E-Fatura, E-Haciz entegrasyonları, vergi modülleri ve BDDK/TCMB uyumlu raporlama altyapıları."
+                            title: "Hazine FX ve Türev Ürünler",
+                            desc: ""
                         },
                         {
-                            title: "Şube ve Kanal Yönetimi",
-                            desc: "Gişe işlemleri (Para yatırma/çekme), dijital talimat yönetimi ve başvuru sahteciliği önleme sistemleri."
+                            title: "Kredili Mevduat",
+                            desc: ""
+                        },
+                        {
+                            title: "Şube Kanal Yönetimi",
+                            desc: "Dijital Talimat Proje, Para Çekme Yatırma Projesi."
+                        },
+                        {
+                            title: "Başvuru Sahteciliği Projesi",
+                            desc: ""
+                        },
+                        {
+                            title: "Gayrinakdi Ürünler Projesi",
+                            desc: ""
+                        },
+                        {
+                            title: "Vergi ve Fatura Modülleri",
+                            desc: ""
+                        },
+                        {
+                            title: "E-Fatura, E-Haciz Entegrasyon Projeleri",
+                            desc: ""
                         }
                     ]}
                 />
 
-                {/* 2. Ödeme Sistemleri Teknolojileri */}
+                {/* 2. Ödeme Sistemleri */}
                 <DetailedServiceSection
-                    title="Ödeme Sistemleri Teknolojileri"
-                    description="Kartlı ödemelerden dijital cüzdanlara, POS yönetiminden takas sistemlerine kadar güvenli ve hızlı ödeme altyapıları tasarlıyoruz."
+                    title="Ödeme Sistemleri"
+                    description="Kartlı ödemelerden dijital cüzdanlara, POS yönetiminden takas sistemlerine kadar güvenli altyapılar."
                     icon={CreditCard}
                     bg="bg-slate-50"
                     items={[
                         {
-                            title: "Kart İhraç (Issuing)",
-                            desc: "Kredi kartı, banka kartı ve ön ödemeli kartların yaşam döngüsü yönetimi, basım ve stok takibi."
+                            title: "Kart Ürünleri",
+                            desc: ""
                         },
                         {
-                            title: "Üye İşyeri (Acquiring)",
-                            desc: "POS, Sanal POS ve ÖKC entegrasyonları, üye işyeri yönetimi ve komisyon hesaplama motorları."
+                            title: "Kart İş Geliştirme, Basım",
+                            desc: ""
                         },
                         {
-                            title: "Alternatif Ödeme ve E-Cüzdan",
-                            desc: "Dijital cüzdan altyapıları, QR kod ile ödeme ve kapalı devre ödeme sistemleri."
+                            title: "Pos Ürün Entegrasyonu",
+                            desc: ""
                         },
                         {
-                            title: "Takas ve Mutabakat",
-                            desc: "Bankalararası Kart Merkezi (BKM), Takasnet ve uluslararası şema (Visa/Mastercard) takas entegrasyonları."
+                            title: "Issuing",
+                            desc: ""
                         },
                         {
-                            title: "Dijital Müşteri Edinimi",
-                            desc: "Uzaktan müşteri edinimi (Onboarding), biyometrik doğrulama ve KYC (Müşterini Tanı) süreçleri."
+                            title: "Acquiring",
+                            desc: ""
                         },
                         {
-                            title: "Kart İş Geliştirme",
-                            desc: "Sadakat programları, kampanya yönetimi, taksitlendirme ve ödül puan sistemleri."
+                            title: "Takasnet",
+                            desc: ""
+                        },
+                        {
+                            title: "Müşteri Onboarding",
+                            desc: ""
+                        },
+                        {
+                            title: "E-Cüzdan",
+                            desc: ""
                         }
                     ]}
                 />
 
-                {/* 3. Finansal Teknoloji & Altyapı Modernizasyonu */}
-                <DetailedServiceSection
-                    title="Finansal Teknoloji & Modernizasyon"
-                    description="Geleceğin finans dünyasına uyum sağlamanız için altyapı modernizasyonu, veri analitiği ve dijital kanal çözümleri sunuyoruz."
-                    icon={Server}
-                    items={[
-                        {
-                            title: "Altyapı Modernizasyonu",
-                            desc: "Monolitik bankacılık uygulamalarının mikroservis mimarisine dönüşümü ve konteynerizasyon süreçleri."
-                        },
-                        {
-                            title: "Veri ve Analitik",
-                            desc: "Büyük veri işleme, müşteri segmentasyonu, risk analitiği ve yapay zeka destekli karar destek sistemleri."
-                        },
-                        {
-                            title: "Dijital Kanallar",
-                            desc: "İnternet ve mobil bankacılık uygulamaları için güvenli, kullanıcı dostu API ve arayüz geliştirmeleri."
-                        },
-                        {
-                            title: "Süreç Otomasyonu (RPA)",
-                            desc: "Operasyonel verimliliği artırmak için rutin bankacılık işlemlerinin robotik süreç otomasyonu ile yönetimi."
-                        },
-                        {
-                            title: "Açık Bankacılık",
-                            desc: "PSD2 uyumlu API geçitleri, üçüncü parti sağlayıcı (TPP) entegrasyonları ve servis bankacılığı (BaaS)."
-                        }
-                    ]}
-                />
-
-                {/* Çalışma Modeli & Sürdürülebilirlik */}
-                <Section className="bg-gradient-to-b from-slate-50 to-white">
+                {/* Odağımız: Güçlü Ekip, Sürdürülebilir Destek */}
+                <Section className="bg-gradient-to-b from-white to-slate-50">
                     <Container>
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="order-2 md:order-1">
@@ -204,7 +222,7 @@ export default function BankingPage() {
                                 </div>
                             </div>
                             <div className="order-1 md:order-2">
-                                <Heading variant="h2" className="mb-6">Odağımız: Güçlü Ekip, Sürdürülebilir Destek</Heading>
+                                <Heading variant="h2" className="mb-6">Odağımız; Güçlü Ekip, Sürdürülebilir Destek</Heading>
                                 <div className="space-y-6">
                                     <div className="flex gap-4">
                                         <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0 text-blue-600">
@@ -213,7 +231,7 @@ export default function BankingPage() {
                                         <div>
                                             <h4 className="text-xl font-bold text-slate-900 mb-2">Uzman Teknik Kadro</h4>
                                             <p className="text-slate-600">
-                                                Yazılım mühendisi, analist, test mühendisi ve mimar rollerinden oluşan yetkin ekiplerimizle;
+                                                Yazılım mühendisi, analist, test mühendisi ve mimar rollerinden oluşan ekiplerimizle;
                                                 anahtar teslim, time & material veya hibrit çalışma modellerini başarıyla hayata geçiriyoruz.
                                             </p>
                                         </div>
@@ -225,8 +243,8 @@ export default function BankingPage() {
                                         <div>
                                             <h4 className="text-xl font-bold text-slate-900 mb-2">Genç Mühendis Programı</h4>
                                             <p className="text-slate-600">
-                                                Sektöre özel yetiştirilmiş yeni yetenekleri ekosistemimize kazandırıyor,
-                                                projelerimizin sürdürülebilirliğini ve bilgi birikiminin devamlılığını uzun vadede güvence altına alıyoruz.
+                                                Ayrıca Genç Mühendis Programımız ile sektöre özel yetiştirilmiş yeni yetenekleri ekosistemimize kazandırıyor,
+                                                projelerimizin sürdürülebilirliğini uzun vadede güvence altına alıyoruz.
                                             </p>
                                         </div>
                                     </div>

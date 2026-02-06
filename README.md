@@ -18,12 +18,33 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 ## 🌟 Öne Çıkan Özellikler
 
 - **Modern & Kurumsal UI/UX:** Marka kimliğini yansıtan özel renk paleti (`action-blue`, `slate-900`, `indigo`), cam efektleri (glassmorphism) ve temiz tipografi.
-- **Dinamik Kahraman (Hero) Alanları:** Her sayfa için özel olarak üretilmiş, sektöre ve içeriğe uygun yüksek çözünürlüklü görseller ve slider yapıları.
+- **Dinamik Kahraman (Hero) Alanları:** Her sayfa için özel olarak üretilmiş, sektöre ve içeriğe uygun yüksek çözünürlüklü görseller (Generative AI destekli) ve slider yapıları.
 - **Gelişmiş Navigasyon:** "Mega Menu" yapısı sayesinde hizmetlere (MSP, Yazılım, DevOps) ve sektörlere hızlı erişim.
-- **SEO Odaklı Mimari:** Anlamsal HTML yapısı, meta etiketler ve SEO dostu görsel isimlendirmeleri (örn: `savunma-sanayi-teknolojileri.jpg`).
+- **SEO Odaklı Mimari:** Anlamsal HTML yapısı, meta etiketler ve SEO dostu görsel isimlendirmeleri.
 - **Responsive Tasarım:** Mobil, tablet ve masaüstü cihazlarda kusursuz çalışan esnek (fluid) yerleşimler.
 - **Performans Optimizasyonu:** `next/image` ile optimize edilmiş görseller, lazy loading ve kod bölme (code splitting).
-- **Sticky Alt Navigasyon:** Yönetilen Hizmetler gibi uzun sayfalarda içeriğe hızlı erişim sağlayan akıllı navigasyon çubuğu.
+
+### 🆕 Yeni Eklenen Modüller & Sayfalar
+
+1.  **Praxila Ürün Sayfası:**
+    *   Enterprise Service Management (ESM) platformu için özel ürün sayfası.
+    *   AI destekli ITSM, ITOM ve CSOR modüllerinin detaylı tanıtımı.
+    *   Sürükle-bırak workflow editörü ve self-service portal vurguları.
+    *   [Praxila Sayfası](/products/praxila)
+
+2.  **Genişletilmiş Sektör Sayfaları:**
+    *   **Bankacılık & Finans:** Dijital bankacılık ve fintech çözümleri için yenilenen içerik.
+    *   **Telekomünikasyon:** OSS/BSS ve dijital müşteri deneyimi odaklı yeni sayfa.
+    *   **Perakende & E-Ticaret:** Omnichannel ve B2B/B2C çözümleri.
+
+3.  **Genç Mühendisler Programı:**
+    *   Yazılım, Test/Analiz ve Teknoloji uzmanlık alanlarına ayrılmış detaylı kariyer programı sayfası.
+    *   Program kazanımları ve "Gerçek İş Dünyası" vurgusu.
+    *   [HK Sayfası](/hr)
+
+4.  **Start-Up Stüdyosu Modeli:**
+    *   Kurumsal inovasyonu destekleyen yeni iş modeli entegrasyonu.
+    *   "Fikirden Ürüne" yaşam döngüsü ve yatırım süreçleri.
 
 ## 🛠️ Kurulum ve Çalıştırma
 
@@ -68,7 +89,9 @@ bgts-web/
 │   ├── app/             # Next.js App Router sayfa yapısı
 │   │   ├── about/       # Hakkımızda sayfası
 │   │   ├── contact/     # İletişim sayfası
-│   │   ├── industries/  # Sektörel sayfalar (Finans, Savunma vb.)
+│   │   ├── industries/  # Sektörel sayfalar (Finans, Savunma, Telekom, Perakende)
+│   │   ├── products/    # Ürün sayfaları (Praxila vb.)
+│   │   ├── hr/          # İnsan Kaynakları & Genç Mühendisler
 │   │   ├── services/    # Hizmet sayfaları (Yazılım, DevOps vb.)
 │   │   └── layout.tsx   # Ana layout (Header, Footer)
 │   ├── components/      # Yeniden kullanılabilir React bileşenleri

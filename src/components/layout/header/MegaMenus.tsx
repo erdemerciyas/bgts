@@ -122,6 +122,9 @@ export const ServicesMenu = () => (
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yazılım Modernizasyonu & Mikroservis Dönüşümü</h4>
                                     </div>
                                 </div>
+                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
+                                    <Image src="/images/navigation/services/bgts-devops-sre-services.png" alt="Modernization" fill className="object-contain" />
+                                </div>
                             </Link>
                             <Link href="/services/software-development" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                                 <div className="flex items-start gap-3">
@@ -131,6 +134,9 @@ export const ServicesMenu = () => (
                                     <div className="flex-1">
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yazılım Geliştirme Hizmetleri</h4>
                                     </div>
+                                </div>
+                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
+                                    <Image src="/images/navigation/services/bgts-managed-it-services.png" alt="Development" fill className="object-contain" />
                                 </div>
                             </Link>
                         </div>
@@ -204,14 +210,14 @@ export const IndustriesMenu = () => (
             <div className="w-[50%] bg-[#f8f9fa] p-10 flex flex-col justify-start">
                 <h3 className={STYLES.columnHeader}>TİCARİ & TELEKOM</h3>
                 <div className="space-y-10">
-                    <Link href="/industries/retail-telecom" className={STYLES.linkGroup}>
+                    <Link href="/industries/telecommunications" className={STYLES.linkGroup}>
                         <Server className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Telekomünikasyon</h4><p className={STYLES.itemDesc}>OSS/BSS ve dijital kanal platformlarında 7/24 erişilebilirlik.</p></div>
                             <Image src="/images/navigation/industries/bgts-telecom-digital-channels.png" alt="Telecom" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
-                    <Link href="/industries/retail-telecom" className={STYLES.linkGroup}>
+                    <Link href="/industries/retail" className={STYLES.linkGroup}>
                         <ShoppingBag className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Perakende & E-Ticaret</h4><p className={STYLES.itemDesc}>Omnichannel yapılar ve yüksek hacimli işlem yönetimi.</p></div>
@@ -242,7 +248,7 @@ export const ProductsMenu = () => (
                 <div className="mb-8">
                     <h3 className={STYLES.columnHeader}>KURUMSAL ÇÖZÜMLER</h3>
                     <div className="space-y-4">
-                        <Link href="/products/hcm" className={STYLES.linkGroup}>
+                        <Link href="https://www.bilgeadam.com/urunler/hr-thema-hcm" className={STYLES.linkGroup}>
                             <Briefcase className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1">
@@ -444,7 +450,7 @@ export const TalentMenu = () => (
                 <div className="mb-auto">
                     <h4 className="font-black text-2xl text-slate-900 mb-2 mt-4">Sen de Katıl!</h4>
                     <p className="text-slate-500 text-sm mb-6">Geleceğin teknolojisini tasarlayan ekibin bir parçası ol.</p>
-                    <Link href="/hr#young-engineers" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all hover:scale-105 active:scale-95">BAŞVUR</Link>
+                    <Link href="/hr#application-form" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all hover:scale-105 active:scale-95">BAŞVUR</Link>
                 </div>
                 <div className={cn(STYLES.imageCard, "h-32 mt-6 shadow-md border-0 group cursor-pointer")}><Image src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80" alt="Join Us" fill className="object-cover transition-transform duration-700 group-hover:scale-110" /></div>
             </div>
