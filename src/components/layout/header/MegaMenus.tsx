@@ -1,3 +1,5 @@
+"use client"
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -37,9 +39,6 @@ export const ServicesMenu = () => (
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Bankacılık & Finansal Sistemler</h4>
                                     </div>
                                 </div>
-                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
-                                    <Image src="/images/navigation/industries/bgts-banking-finance.png" alt="Bankacılık" fill className="object-contain" />
-                                </div>
                             </Link>
                             <Link href="/services/software-development#trading" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                                 <div className="flex items-start gap-3">
@@ -49,9 +48,6 @@ export const ServicesMenu = () => (
                                     <div className="flex-1">
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">E-Trading, Market Data & Düşük Gecikmeli Sistemler</h4>
                                     </div>
-                                </div>
-                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
-                                    <Image src="/images/navigation/industries/bgts-retail-ecommerce.png" alt="Trading" fill className="object-contain" />
                                 </div>
                             </Link>
                             <Link href="/services/software-development#telecom" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
@@ -63,9 +59,6 @@ export const ServicesMenu = () => (
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Telekom & Dijital İletişim Platformları</h4>
                                     </div>
                                 </div>
-                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
-                                    <Image src="/images/navigation/industries/bgts-telecom-digital-channels.png" alt="Telekom" fill className="object-contain" />
-                                </div>
                             </Link>
                             <Link href="/services/software-development#fraud" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                                 <div className="flex items-start gap-3">
@@ -75,9 +68,6 @@ export const ServicesMenu = () => (
                                     <div className="flex-1">
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Fraud, Risk & AI Destekli Doğrulama Sistemleri</h4>
                                     </div>
-                                </div>
-                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
-                                    <Image src="/images/navigation/industries/bgts-defense-industry.png" alt="Fraud" fill className="object-contain" />
                                 </div>
                             </Link>
                         </div>
@@ -96,9 +86,6 @@ export const ServicesMenu = () => (
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Büyük Veri & Gerçek Zamanlı Veri İşleme</h4>
                                     </div>
                                 </div>
-                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
-                                    <Image src="/images/navigation/services/bgts-big-data-analytics-services.png" alt="Big Data" fill className="object-contain" />
-                                </div>
                             </Link>
                             <Link href="/services/software-development#ai" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                                 <div className="flex items-start gap-3">
@@ -108,9 +95,6 @@ export const ServicesMenu = () => (
                                     <div className="flex-1">
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yapay Zekâ & AI-First Mimari Çözümleri</h4>
                                     </div>
-                                </div>
-                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
-                                    <Image src="/images/navigation/services/bgts-artificial-intelligence-automation.png" alt="AI" fill className="object-contain" />
                                 </div>
                             </Link>
                             <Link href="/services/software-development" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
@@ -122,9 +106,6 @@ export const ServicesMenu = () => (
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yazılım Modernizasyonu & Mikroservis Dönüşümü</h4>
                                     </div>
                                 </div>
-                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
-                                    <Image src="/images/navigation/services/bgts-devops-sre-services.png" alt="Modernization" fill className="object-contain" />
-                                </div>
                             </Link>
                             <Link href="/services/software-development" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                                 <div className="flex items-start gap-3">
@@ -134,9 +115,6 @@ export const ServicesMenu = () => (
                                     <div className="flex-1">
                                         <h4 className="font-bold text-slate-800 group-hover:text-blue-700 transition-colors text-sm">Yazılım Geliştirme Hizmetleri</h4>
                                     </div>
-                                </div>
-                                <div className="relative w-8 h-8 rounded overflow-hidden shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
-                                    <Image src="/images/navigation/services/bgts-managed-it-services.png" alt="Development" fill className="object-contain" />
                                 </div>
                             </Link>
                         </div>
@@ -150,14 +128,14 @@ export const ServicesMenu = () => (
 
                 <div className="grid gap-1 mt-1">
                     {[
-                        { title: "Veri Merkezi", desc: "Tier-3 standartlarında altyapı.", icon: Server, href: "https://hrthema.com/mk/bilgeadam_verimerkeziyonetimi/", img: "/images/navigation/services/bgts-data-center-infrastructure.png" },
-                        { title: "Desktop Support App", desc: "Son kullanıcı destek çözümleri.", icon: Terminal, href: "https://hrthema.com/mk/bilgeadam_desktopservice/", img: "/images/navigation/services/bgts-desktop-support.png" },
-                        { title: "ITSM as a Service", desc: "IT hizmet süreç yönetimi.", icon: FileText, href: "https://hrthema.com/mk/bilgeadam_msp/", img: "/images/navigation/services/bgts-itsm-service.png" },
-                        { title: "SCCM as a Service", desc: "Merkezi yama ve envanter.", icon: Database, href: "https://hrthema.com/mk/bilgeadam_client_sre_service/", img: "/images/navigation/services/bgts-sccm-service.png" },
-                        { title: "Monitoring as a Service", desc: "7/24 proaktif izleme.", icon: Activity, href: "https://hrthema.com/mk/bilgeadam_zabbix_service/", img: "/images/navigation/services/bgts-monitoring-service.png" },
-                        { title: "DevOps as a Service", desc: "CI/CD ve otomasyon.", icon: Code, href: "https://hrthema.com/mk/bilgeadam_devops_service/", img: "/images/navigation/services/bgts-devops-sre-services.png" },
+                        { title: "Veri Merkezi", desc: "Tier-3 standartlarında altyapı.", icon: Server, href: "/services/msp/data-center", img: "/images/navigation/services/bgts-data-center-infrastructure.png" },
+                        { title: "Desktop Support App", desc: "Son kullanıcı destek çözümleri.", icon: Terminal, href: "/services/msp/desktop-support", img: "/images/navigation/services/bgts-desktop-support.png" },
+                        { title: "ITSM as a Service", desc: "IT hizmet süreç yönetimi.", icon: FileText, href: "/services/msp/itsm", img: "/images/navigation/services/bgts-itsm-service.png" },
+                        { title: "SCCM as a Service", desc: "Merkezi yama ve envanter.", icon: Database, href: "/services/msp/sccm", img: "/images/navigation/services/bgts-sccm-service.png" },
+                        { title: "Monitoring as a Service", desc: "7/24 proaktif izleme.", icon: Activity, href: "/services/msp/monitoring", img: "/images/navigation/services/bgts-monitoring-service.png" },
+                        { title: "DevOps as a Service", desc: "CI/CD ve otomasyon.", icon: Code, href: "/services/msp/devops", img: "/images/navigation/services/bgts-devops-sre-services.png" },
                     ].map((item, i) => (
-                        <a key={i} href={item.href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
+                        <Link key={i} href={item.href} className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                             <div className="flex items-start gap-3">
                                 <div className="mt-1 text-slate-400 group-hover:text-blue-600 transition-colors">
                                     <item.icon className="w-5 h-5" />
@@ -167,10 +145,7 @@ export const ServicesMenu = () => (
                                     <p className="text-xs text-slate-500 mt-0.5 leading-snug">{item.desc}</p>
                                 </div>
                             </div>
-                            <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-100 bg-white ml-2">
-                                <Image src={item.img} alt={item.title} fill className="object-contain p-1" />
-                            </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>
@@ -195,14 +170,12 @@ export const IndustriesMenu = () => (
                         <Globe className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Bankacılık & Finans</h4><p className={STYLES.itemDesc}>Dijital kanallar ve regülasyon uyumu için uçtan uca çözümler.</p></div>
-                            <Image src="/images/navigation/industries/bgts-banking-finance.png" alt="Banking" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                     <Link href="/industries/defense" className={STYLES.linkGroup}>
                         <Shield className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Savunma Sanayi</h4><p className={STYLES.itemDesc}>15288 & 12207 standartlarına uygun kritik görev sistemleri.</p></div>
-                            <Image src="/images/navigation/industries/bgts-defense-industry.png" alt="Defense" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                 </div>
@@ -214,14 +187,12 @@ export const IndustriesMenu = () => (
                         <Server className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Telekomünikasyon</h4><p className={STYLES.itemDesc}>OSS/BSS ve dijital kanal platformlarında 7/24 erişilebilirlik.</p></div>
-                            <Image src="/images/navigation/industries/bgts-telecom-digital-channels.png" alt="Telecom" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                     <Link href="/industries/retail" className={STYLES.linkGroup}>
                         <ShoppingBag className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
                             <div className="flex-1"><h4 className={STYLES.itemTitle}>Perakende & E-Ticaret</h4><p className={STYLES.itemDesc}>Omnichannel yapılar ve yüksek hacimli işlem yönetimi.</p></div>
-                            <Image src="/images/navigation/industries/bgts-retail-ecommerce.png" alt="Retail" width={96} height={64} className={STYLES.imageThumbnail} />
                         </div>
                     </Link>
                 </div>
@@ -244,51 +215,8 @@ export const ProductsMenu = () => (
             {/* Column 1: Kurumsal & İşe Alım */}
             <div className="w-1/2 bg-blue-50/30 p-8 border-r border-blue-100 flex flex-col justify-start">
 
-                {/* Section 1.1: Kurumsal Çözümler (Restored) */}
+                {/* Section 1.1: İşe Alım Teknolojileri (Swapped) */}
                 <div className="mb-8">
-                    <h3 className={STYLES.columnHeader}>KURUMSAL ÇÖZÜMLER</h3>
-                    <div className="space-y-4">
-                        <Link href="https://www.bilgeadam.com/urunler/hr-thema-hcm" className={STYLES.linkGroup}>
-                            <Briefcase className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                            <div className="flex justify-between items-start gap-4">
-                                <div className="flex-1">
-                                    <h4 className={STYLES.itemTitle}>HCM Platformu</h4>
-                                    <p className={STYLES.itemDescItalic}>“İK operasyonlarınızı uçtan uca dijitalleştiren HCM platformumuz.”</p>
-                                </div>
-                                <div className="relative group/image">
-                                    <Image
-                                        src="/images/icons/products/hcm-platform.png"
-                                        alt="HCM"
-                                        width={64}
-                                        height={64}
-                                        className="w-16 h-16 object-contain mix-blend-multiply transition-transform duration-500 group-hover/image:scale-110"
-                                    />
-                                </div>
-                            </div>
-                        </Link>
-                        <Link href="/products/praxila" className={STYLES.linkGroup}>
-                            <Activity className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                            <div className="flex justify-between items-start gap-4">
-                                <div className="flex-1">
-                                    <h4 className={STYLES.itemTitle}>Praxila</h4>
-                                    <p className={STYLES.itemDescItalic}>“Yeni nesil otomasyon ve operasyon yönetimi platformumuz.”</p>
-                                </div>
-                                <div className="relative group/image">
-                                    <Image
-                                        src="/images/icons/products/praxila.png"
-                                        alt="Praxila"
-                                        width={64}
-                                        height={64}
-                                        className="w-16 h-16 object-contain mix-blend-multiply transition-transform duration-500 group-hover/image:scale-110"
-                                    />
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-
-                {/* Section 1.2: İşe Alım Teknolojileri (New) */}
-                <div>
                     <h3 className={STYLES.columnHeader}>İŞE ALIM TEKNOLOJİLERİ</h3>
                     <div className="space-y-4">
                         <Link href="/products/ai-hiring-assistant" className={STYLES.linkGroup}>
@@ -297,15 +225,6 @@ export const ProductsMenu = () => (
                                 <div className="flex-1">
                                     <h4 className={STYLES.itemTitle}>AI Hiring Assistant</h4>
                                     <p className={STYLES.itemDescItalic}>“İşe alım süreçlerini yapay zeka ile hızlandırın.”</p>
-                                </div>
-                                <div className="relative group/image">
-                                    <Image
-                                        src="/images/icons/products/ai-hiring.png"
-                                        alt="AI Hiring"
-                                        width={64}
-                                        height={64}
-                                        className="w-16 h-16 object-contain mix-blend-multiply transition-transform duration-500 group-hover/image:scale-110"
-                                    />
                                 </div>
                             </div>
                         </Link>
@@ -316,14 +235,30 @@ export const ProductsMenu = () => (
                                     <h4 className={STYLES.itemTitle}>CV-Converter</h4>
                                     <p className={STYLES.itemDescItalic}>“Dağınık CV formatlarını standart hale getirin.”</p>
                                 </div>
-                                <div className="relative group/image">
-                                    <Image
-                                        src="/images/icons/products/cv-converter.png"
-                                        alt="CV Converter"
-                                        width={64}
-                                        height={64}
-                                        className="w-16 h-16 object-contain mix-blend-multiply transition-transform duration-500 group-hover/image:scale-110"
-                                    />
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Section 1.2: Kurumsal Çözümler (Swapped) */}
+                <div>
+                    <h3 className={STYLES.columnHeader}>KURUMSAL ÇÖZÜMLER</h3>
+                    <div className="space-y-4">
+                        <Link href="https://www.bilgeadam.com/urunler/hr-thema-hcm" className={STYLES.linkGroup}>
+                            <Briefcase className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>HCM Platformu</h4>
+                                    <p className={STYLES.itemDescItalic}>“İK operasyonlarınızı uçtan uca dijitalleştiren HCM platformumuz.”</p>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link href="/products/praxila" className={STYLES.linkGroup}>
+                            <Activity className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>Praxila</h4>
+                                    <p className={STYLES.itemDescItalic}>“Yeni nesil otomasyon ve operasyon yönetimi platformumuz.”</p>
                                 </div>
                             </div>
                         </Link>
@@ -334,51 +269,8 @@ export const ProductsMenu = () => (
             {/* Column 2: Sektörel & Doküman */}
             <div className="w-1/2 bg-[#f8fafc] p-8 flex flex-col justify-start">
 
-                {/* Section 2.1: Sektörel Uygulamalar (Restored) */}
+                {/* Section 2.1: Doküman & Bilgi Yönetimi (Swapped) */}
                 <div className="mb-8">
-                    <h3 className={STYLES.columnHeader}>SEKTÖREL UYGULAMALAR</h3>
-                    <div className="space-y-4">
-                        <Link href="/services/software-development" className={STYLES.linkGroup}>
-                            <Database className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                            <div className="flex justify-between items-start gap-4">
-                                <div className="flex-1">
-                                    <h4 className={STYLES.itemTitle}>Sistem Entegrasyonu</h4>
-                                    <p className={STYLES.itemDescItalic}>“Operatörlerin dijital platformlarını güvenli hale getiriyoruz.”</p>
-                                </div>
-                                <div className="relative group/image">
-                                    <Image
-                                        src="/images/icons/products/system-integration.png"
-                                        alt="System Integration"
-                                        width={64}
-                                        height={64}
-                                        className="w-16 h-16 object-contain mix-blend-multiply transition-transform duration-500 group-hover/image:scale-110"
-                                    />
-                                </div>
-                            </div>
-                        </Link>
-                        <Link href="/services/software-development#retail" className={STYLES.linkGroup}>
-                            <ShoppingBag className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                            <div className="flex justify-between items-start gap-4">
-                                <div className="flex-1">
-                                    <h4 className={STYLES.itemTitle}>Perakende Çözümleri</h4>
-                                    <p className={STYLES.itemDescItalic}>“Masaüstü destek ve kurumsal uygulamalar.”</p>
-                                </div>
-                                <div className="relative group/image">
-                                    <Image
-                                        src="/images/icons/products/retail-solutions.png"
-                                        alt="Retail"
-                                        width={64}
-                                        height={64}
-                                        className="w-16 h-16 object-contain mix-blend-multiply transition-transform duration-500 group-hover/image:scale-110"
-                                    />
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-
-                {/* Section 2.2: Doküman & Bilgi Yönetimi (New) */}
-                <div>
                     <h3 className={STYLES.columnHeader}>DOKÜMAN & BİLGİ YÖNETİMİ</h3>
                     <div className="space-y-4">
                         <Link href="/products/doc2bot" className={STYLES.linkGroup}>
@@ -387,15 +279,6 @@ export const ProductsMenu = () => (
                                 <div className="flex-1">
                                     <h4 className={STYLES.itemTitle}>Doc2Bot</h4>
                                     <p className={STYLES.itemDescItalic}>“Kurum içi bilgi bankanızı akıllı bir asistana dönüştürün.”</p>
-                                </div>
-                                <div className="relative group/image">
-                                    <Image
-                                        src="/images/icons/products/doc2bot.png"
-                                        alt="Doc2Bot"
-                                        width={64}
-                                        height={64}
-                                        className="w-16 h-16 object-contain mix-blend-multiply transition-transform duration-500 group-hover/image:scale-110"
-                                    />
                                 </div>
                             </div>
                         </Link>
@@ -406,14 +289,30 @@ export const ProductsMenu = () => (
                                     <h4 className={STYLES.itemTitle}>DocMind</h4>
                                     <p className={STYLES.itemDescItalic}>“Kod tabanınızdan otomatik teknik dokümantasyon üretin.”</p>
                                 </div>
-                                <div className="relative group/image">
-                                    <Image
-                                        src="/images/icons/products/docmind.png"
-                                        alt="DocMind"
-                                        width={64}
-                                        height={64}
-                                        className="w-16 h-16 object-contain mix-blend-multiply transition-transform duration-500 group-hover/image:scale-110"
-                                    />
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Section 2.2: Sektörel Uygulamalar (Swapped) */}
+                <div>
+                    <h3 className={STYLES.columnHeader}>SEKTÖREL UYGULAMALAR</h3>
+                    <div className="space-y-4">
+                        <Link href="/services/software-development" className={STYLES.linkGroup}>
+                            <Database className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>Sistem Entegrasyonu</h4>
+                                    <p className={STYLES.itemDescItalic}>“Operatörlerin dijital platformlarını güvenli hale getiriyoruz.”</p>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link href="/services/software-development#retail" className={STYLES.linkGroup}>
+                            <ShoppingBag className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>Perakende Çözümleri</h4>
+                                    <p className={STYLES.itemDescItalic}>“Masaüstü destek ve kurumsal uygulamalar.”</p>
                                 </div>
                             </div>
                         </Link>
@@ -424,39 +323,52 @@ export const ProductsMenu = () => (
     </motion.div>
 )
 
-export const TalentMenu = () => (
-    <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 10 }}
-        className={STYLES.megaMenuWrapper}
-        role="menu"
-        aria-label="Genç mühendisler menüsü"
-    >
-        <div className="flex min-h-[440px]">
-            <div className="w-1/4 bg-[#ecfeff] p-10 flex flex-col justify-start border-r border-[#cffafe]">
-                <div className="mb-auto"><div className="flex items-center gap-2 mb-6"><Code className="w-6 h-6 text-cyan-600" /><h4 className={STYLES.columnHeader.replace("mb-6", "mb-0")}>YAZILIM PROFESYONELLERİ</h4></div><p className={STYLES.itemDesc.replace("text-[13px]", "text-[14px]")}>Gerçek projeler üzerinde çalışarak modern yazılım geliştirme pratiklerini uçtan uca deneyimleme fırsatı sunar.</p></div>
-                <div className={cn(STYLES.imageCard, "border-cyan-100 h-32 mt-6")}><Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80" alt="Software" fill className="object-cover" /></div>
-            </div>
-            <div className="w-1/4 bg-[#fbf7f4] p-10 flex flex-col justify-start border-r border-[#eeeae6]">
-                <div className="mb-auto"><div className="flex items-center gap-2 mb-6"><Terminal className="w-6 h-6 text-amber-600" /><h4 className={STYLES.columnHeader.replace("mb-6", "mb-0")}>TEKNOLOJİ UZMANLARI</h4></div><p className={STYLES.itemDesc.replace("text-[13px]", "text-[14px]")}>Kurumsal sistemlerin işletimi, destek ve sürekliliğine odaklanan teknoloji servis süreçlerini sahada öğrenmeyi sağlar.</p></div>
-                <div className={cn(STYLES.imageCard, "border-amber-100 h-32 mt-6")}><Image src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&q=80" alt="Tech" fill className="object-cover" /></div>
-            </div>
-            <div className="w-1/4 bg-[#f1f5f9] p-10 flex flex-col justify-start border-r border-[#e2e8f0]">
-                <div className="mb-auto"><div className="flex items-center gap-2 mb-6"><CheckCircle2 className="w-6 h-6 text-blue-600" /><h4 className={STYLES.columnHeader.replace("mb-6", "mb-0")}>TEST ve ANALİZ UZMANLARI</h4></div><p className={STYLES.itemDesc.replace("text-[13px]", "text-[14px]")}>Planlama, koordinasyon ve teslim süreçlerini deneyimleyerek proje yönetiminin temel yetkinliklerini kazandırır.</p></div>
-                <div className={cn(STYLES.imageCard, "border-slate-200 h-32 mt-6")}><Image src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80" alt="Test" fill className="object-cover" /></div>
-            </div>
-            <div className="w-1/4 bg-white p-10 flex flex-col justify-start text-center relative overflow-hidden">
-                <div className="mb-auto">
-                    <h4 className="font-black text-2xl text-slate-900 mb-2 mt-4">Sen de Katıl!</h4>
-                    <p className="text-slate-500 text-sm mb-6">Geleceğin teknolojisini tasarlayan ekibin bir parçası ol.</p>
-                    <Link href="/hr#application-form" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all hover:scale-105 active:scale-95">BAŞVUR</Link>
+export const TalentMenu = () => {
+    const router = useRouter()
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className={STYLES.megaMenuWrapper}
+            role="menu"
+            aria-label="Genç mühendisler menüsü"
+        >
+            <div
+                className="flex min-h-[440px] cursor-pointer"
+                onClick={() => router.push('/hr#young-engineers')}
+            >
+                <div className="w-1/4 bg-[#ecfeff] p-10 flex flex-col justify-start border-r border-[#cffafe]">
+                    <div className="mb-auto"><div className="flex items-center gap-2 mb-6"><Code className="w-6 h-6 text-cyan-600" /><h4 className={STYLES.columnHeader.replace("mb-6", "mb-0")}>YAZILIM PROFESYONELLERİ</h4></div><p className={STYLES.itemDesc.replace("text-[13px]", "text-[14px]")}>Gerçek projeler üzerinde çalışarak modern yazılım geliştirme pratiklerini uçtan uca deneyimleme fırsatı sunar.</p></div>
+                    <div className={cn(STYLES.imageCard, "border-cyan-100 h-32 mt-6")}><Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80" alt="Software" fill className="object-cover" /></div>
                 </div>
-                <div className={cn(STYLES.imageCard, "h-32 mt-6 shadow-md border-0 group cursor-pointer")}><Image src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80" alt="Join Us" fill className="object-cover transition-transform duration-700 group-hover:scale-110" /></div>
+                <div className="w-1/4 bg-[#fbf7f4] p-10 flex flex-col justify-start border-r border-[#eeeae6]">
+                    <div className="mb-auto"><div className="flex items-center gap-2 mb-6"><Terminal className="w-6 h-6 text-amber-600" /><h4 className={STYLES.columnHeader.replace("mb-6", "mb-0")}>TEKNOLOJİ UZMANLARI</h4></div><p className={STYLES.itemDesc.replace("text-[13px]", "text-[14px]")}>Kurumsal sistemlerin işletimi, destek ve sürekliliğine odaklanan teknoloji servis süreçlerini sahada öğrenmeyi sağlar.</p></div>
+                    <div className={cn(STYLES.imageCard, "border-amber-100 h-32 mt-6")}><Image src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&q=80" alt="Tech" fill className="object-cover" /></div>
+                </div>
+                <div className="w-1/4 bg-[#f1f5f9] p-10 flex flex-col justify-start border-r border-[#e2e8f0]">
+                    <div className="mb-auto"><div className="flex items-center gap-2 mb-6"><CheckCircle2 className="w-6 h-6 text-blue-600" /><h4 className={STYLES.columnHeader.replace("mb-6", "mb-0")}>TEST ve ANALİZ UZMANLARI</h4></div><p className={STYLES.itemDesc.replace("text-[13px]", "text-[14px]")}>Planlama, koordinasyon ve teslim süreçlerini deneyimleyerek proje yönetiminin temel yetkinliklerini kazandırır.</p></div>
+                    <div className={cn(STYLES.imageCard, "border-slate-200 h-32 mt-6")}><Image src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80" alt="Test" fill className="object-cover" /></div>
+                </div>
+                <div className="w-1/4 bg-white p-10 flex flex-col justify-start text-center relative overflow-hidden">
+                    <div className="mb-auto">
+                        <h4 className="font-black text-2xl text-slate-900 mb-2 mt-4">Sen de Katıl!</h4>
+                        <p className="text-slate-500 text-sm mb-6">Geleceğin teknolojisini tasarlayan ekibin bir parçası ol.</p>
+                        <Link
+                            href="/hr#application-form"
+                            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all hover:scale-105 active:scale-95"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            BAŞVUR
+                        </Link>
+                    </div>
+                    <div className={cn(STYLES.imageCard, "h-32 mt-6 shadow-md border-0 group cursor-pointer")}><Image src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80" alt="Join Us" fill className="object-cover transition-transform duration-700 group-hover:scale-110" /></div>
+                </div>
             </div>
-        </div>
-    </motion.div>
-)
+        </motion.div>
+    )
+}
 
 export const ResourcesMenu = () => (
     <motion.div

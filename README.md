@@ -26,25 +26,27 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 
 ### 🆕 Yeni Eklenen Modüller & Sayfalar
 
-1.  **Praxila Ürün Sayfası:**
-    *   Enterprise Service Management (ESM) platformu için özel ürün sayfası.
-    *   AI destekli ITSM, ITOM ve CSOR modüllerinin detaylı tanıtımı.
-    *   Sürükle-bırak workflow editörü ve self-service portal vurguları.
-    *   [Praxila Sayfası](/products/praxila)
+1.  **Yönetilen Hizmetler (MSP) Sayfaları:**
+    *   **Data Center & Cloud:** Tier-3 standartlarında veri merkezi ve bulut çözümleri.
+    *   **Desktop Support:** Son kullanıcı ve cihaz yönetimi.
+    *   **ITSM & DevOps:** Süreç yönetimi ve otomasyon hizmetleri.
+    *   **Monitoring & SCCM:** 7/24 izleme ve merkezi yönetim çözümleri.
+    *   [MSP Hizmetleri](/services/msp)
 
-2.  **Genişletilmiş Sektör Sayfaları:**
-    *   **Bankacılık & Finans:** Dijital bankacılık ve fintech çözümleri için yenilenen içerik.
-    *   **Telekomünikasyon:** OSS/BSS ve dijital müşteri deneyimi odaklı yeni sayfa.
-    *   **Perakende & E-Ticaret:** Omnichannel ve B2B/B2C çözümleri.
+2.  **İK ve Kültür Sayfası Güncellemeleri:**
+    *   **Gerçek Ofis Fotoğrafları:** Stok görseller yerine gerçek ofis ve ekip fotoğrafları (Culture Gallery) entegre edildi.
+    *   **Genç Yetenek Programı:** "Yazılım", "Test & Analiz" ve "Teknoloji" uzmanlık alanları detaylandırıldı.
+    *   **Slider Entegrasyonu:** Anasayfa slider yapısı sadeleştirildi ve güncellendi.
 
-3.  **Genç Mühendisler Programı:**
-    *   Yazılım, Test/Analiz ve Teknoloji uzmanlık alanlarına ayrılmış detaylı kariyer programı sayfası.
-    *   Program kazanımları ve "Gerçek İş Dünyası" vurgusu.
-    *   [HK Sayfası](/hr)
+3.  **Navigasyon ve UI İyileştirmeleri:**
+    *   **Mega Menu:** "Genç Mühendisler" menüsü tamamen tıklanabilir hale getirildi.
+    *   **Görsel Düzenlemeleri:** "Hakkımızda" sayfasındaki görsel bindirme sorunları giderildi.
+    *   **Lokalizasyon:** Tüm hizmet ve ürün sayfaları Türkçe içerikle donatıldı.
 
-4.  **Start-Up Stüdyosu Modeli:**
-    *   Kurumsal inovasyonu destekleyen yeni iş modeli entegrasyonu.
-    *   "Fikirden Ürüne" yaşam döngüsü ve yatırım süreçleri.
+4.  **Ürün Sayfaları:**
+    *   **Praxila:** ESM platformu detay sayfası.
+    *   **Doc2Bot:** Kurumsal bilgi asistanı.
+    *   **AI Hiring Assistant:** İşe alım süreçleri için yapay zeka desteği.
 
 ## 🛠️ Kurulum ve Çalıştırma
 

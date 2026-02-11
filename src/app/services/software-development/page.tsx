@@ -41,11 +41,11 @@ export default function SoftwareDevelopmentPage() {
                                     {domain.subtitle}
                                 </Text>
                             )}
-                            <Heading variant="h3" className="text-corporate-primary">
+                            <Heading variant="h4" className="text-corporate-primary">
                                 {domain.title}
                             </Heading>
                         </div>
-                        <Text variant="large" className="text-slate-600 leading-relaxed">
+                        <Text className="text-base font-normal text-slate-600 leading-relaxed">
                             {domain.description}
                         </Text>
                     </div>
@@ -58,10 +58,10 @@ export default function SoftwareDevelopmentPage() {
                             {/* Dot indicator */}
                             <div className="absolute left-[-5px] top-2.5 w-2.5 h-2.5 rounded-full bg-slate-200 group-hover:bg-corporate-secondary transition-colors duration-500" />
 
-                            <Heading variant="h4" className="text-slate-900 text-lg font-bold mb-2">
+                            <Heading variant="h4" className="text-slate-900 text-base font-bold mb-2">
                                 {feature.title}
                             </Heading>
-                            <Text className="text-slate-500 leading-relaxed">
+                            <Text className="text-sm font-normal text-slate-500 leading-relaxed">
                                 {feature.description}
                             </Text>
                         </div>

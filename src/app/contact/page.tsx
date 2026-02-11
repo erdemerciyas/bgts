@@ -88,7 +88,7 @@ export default function ContactPage() {
                 {/* Image Side */}
                 <div className="relative min-h-[400px] lg:min-h-full">
                   <Image
-                    src="/images/headers/iletisim-ve-destek.jpg"
+                    src="/images/culture/culture-2.jpg"
                     alt="Contact Us"
                     fill
                     className="object-cover"

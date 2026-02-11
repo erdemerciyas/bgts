@@ -13,7 +13,7 @@ export default function SocialContributionPage() {
             <Hero
                 title="Toplumsal Katkı"
                 subtitle="Geleceği şekillendiren yeteneklerin gelişimine ve topluma değer katmaya odaklanıyoruz."
-                backgroundImage="/images/social/hero.png"
+                backgroundImage="/images/culture/culture-7.jpg"
             />
 
             {/* Intro Section */}
@@ -68,7 +68,7 @@ export default function SocialContributionPage() {
                         </div>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
                             <Image
-                                src="/images/social/education.png"
+                                src="/images/culture/culture-3.jpg"
                                 alt="Eğitim ve Staj"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -158,7 +158,7 @@ export default function SocialContributionPage() {
                         </div>
                         <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
                             <Image
-                                src="/images/social/responsibility.png"
+                                src="/images/culture/culture-5.jpg"
                                 alt="Sosyal Sorumluluk"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"

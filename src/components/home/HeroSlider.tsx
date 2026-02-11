@@ -89,10 +89,7 @@ export function HeroSlider() {
                             exit={{ opacity: 0, x: 20 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                         >
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs md:text-sm font-bold tracking-wide uppercase mb-4 md:mb-6 backdrop-blur-sm">
-                                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                                BGTS Teknoloji
-                            </div>
+
 
                             <Heading variant="h1" className="text-white text-4xl sm:text-5xl md:text-7xl mb-4 md:mb-6 leading-[1.1] drop-shadow-2xl">
                                 {SLIDES[currentSlide].title}

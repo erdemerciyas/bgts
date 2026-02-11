@@ -20,7 +20,7 @@ export default function HRPage() {
                 subtitle="Tutkulu, yenilikçi ve sürekli öğrenen bir ekibin parçası olun. Kariyerinizi bizimle şekillendirin."
                 badge="Kariyer"
                 className="bg-rose-600"
-                backgroundImage="/images/headers/bgts-genc-yetenekler.jpg"
+                backgroundImage="/images/culture/culture-1.jpg"
             />
 
             {/* Culture Values */}
@@ -53,6 +53,66 @@ export default function HRPage() {
                             color="orange"
                             delay={0.2}
                         />
+                    </div>
+                </Container>
+            </Section>
+
+            {/* Life at BGTS - Gallery Section */}
+            <Section className="bg-white">
+                <Container>
+                    <div className="text-center mb-12">
+                        <Heading variant="h2" className="mb-4">BGTS&apos;de Yaşam</Heading>
+                        <Text className="text-slate-600 max-w-2xl mx-auto">
+                            Sadece çalışmıyoruz; birlikte üretiyor, eğleniyor ve büyüyoruz. İşte ofisimizden ve ekibimizden kareler.
+                        </Text>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 h-[600px] md:h-[500px]">
+                        {/* Large item on the left */}
+                        <div className="lg:col-span-2 lg:row-span-2 relative rounded-2xl overflow-hidden group">
+                            <Image
+                                src="/images/culture/culture-2.jpg"
+                                alt="BGTS Office Life"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span className="text-white font-medium">Birlikte Üretim Kültürü</span>
+                            </div>
+                        </div>
+
+                        {/* Top right item 1 */}
+                        <div className="relative rounded-2xl overflow-hidden group min-h-[200px]">
+                            <Image
+                                src="/images/culture/culture-3.jpg"
+                                alt="BGTS Team Meeting"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                        </div>
+
+                        {/* Top right item 2 */}
+                        <div className="relative rounded-2xl overflow-hidden group min-h-[200px]">
+                            <Image
+                                src="/images/culture/culture-5.jpg"
+                                alt="Social Events"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                        </div>
+
+                        {/* Bottom right wide item */}
+                        <div className="lg:col-span-2 relative rounded-2xl overflow-hidden group min-h-[200px]">
+                            <Image
+                                src="/images/culture/culture-6.jpg"
+                                alt="Engineering Team"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span className="text-white font-medium">Global Mühendislik Ekibi</span>
+                            </div>
+                        </div>
                     </div>
                 </Container>
             </Section>

@@ -20,7 +20,7 @@ export default function AboutPage() {
                     subtitle="1,400'den fazla mühendisimizle, 1997'den beri dijital dönüşüme liderlik eden global bir teknoloji gücüyüz."
                     badge="Biz Kimiz"
                     className="bg-blue-900"
-                    backgroundImage="/images/headers/bgts-hakkimizda-ekip.jpg"
+                    backgroundImage="/images/culture/culture-8.jpg"
                 />
 
                 {/* Stats Section with Animated Cards */}
@@ -92,7 +92,7 @@ export default function AboutPage() {
                             </div>
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
+                                    src="/images/culture/culture-4.jpg"
                                     alt="Team Working"
                                     fill
                                     className="object-cover"
@@ -200,19 +200,13 @@ export default function AboutPage() {
                             </div>
                         }
                         image={
-                            <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden">
+                            <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden shadow-lg group">
                                 <Image
-                                    src="/images/headers/bgts-teknoloji-urunleri.jpg"
-                                    alt="Our Products"
+                                    src="/images/culture/culture-6.jpg"
+                                    alt="BGTS Products and Innovation"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-700/90 to-indigo-600/90 flex items-center justify-center">
-                                    <div className="text-center text-white p-8">
-                                        <span className="text-5xl font-bold mb-4 block">1997&apos;den Beri</span>
-                                        <span className="text-2xl font-light">İnovasyon</span>
-                                    </div>
-                                </div>
                             </div>
                         }
                     />
