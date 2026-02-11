@@ -41,7 +41,7 @@ export default function BankingPage() {
                             </div>
                             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80"
+                                    src="/images/industries/I53A6435.jpg"
                                     alt="Banking Overview"
                                     fill
                                     className="object-cover"
@@ -214,7 +214,7 @@ export default function BankingPage() {
                             <div className="order-2 md:order-1">
                                 <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
+                                        src="/images/industries/I53A6528.jpg"
                                         alt="Team Collaboration"
                                         fill
                                         className="object-cover"

@@ -115,7 +115,7 @@ export default function Hero({
 
     // Simple Layout (Centered) - Enhanced for Video Background
     return (
-        <Section className={cn("py-20 lg:py-32 min-h-[60vh] flex items-center", className)}>
+        <Section className={cn("pt-32 pb-20 lg:pt-48 lg:pb-32 min-h-[60vh] flex items-center", className)}>
             <div className="absolute inset-0 z-0">
                 {videoSrc ? (
                     <>

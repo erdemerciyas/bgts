@@ -16,7 +16,7 @@ export default function TelecomPage() {
                     subtitle="Yüksek trafikli ağlar ve kritik servisler için uçtan uca dijital platform yönetimi, güçlü entegrasyonlar ve 7/24 operasyonel mükemmeliyet."
                     badge="Connected Future"
                     className="bg-slate-900"
-                    backgroundImage="/images/headers/devops-ve-altyapi-hizmetleri.jpg"
+                    backgroundImage="/images/headers/I53A6349.jpg"
                 />
 
                 {/* Genel Bakış */}

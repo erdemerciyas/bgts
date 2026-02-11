@@ -31,22 +31,26 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
     *   **Desktop Support:** Son kullanıcı ve cihaz yönetimi.
     *   **ITSM & DevOps:** Süreç yönetimi ve otomasyon hizmetleri.
     *   **Monitoring & SCCM:** 7/24 izleme ve merkezi yönetim çözümleri.
-    *   [MSP Hizmetleri](/services/msp)
 
-2.  **İK ve Kültür Sayfası Güncellemeleri:**
-    *   **Gerçek Ofis Fotoğrafları:** Stok görseller yerine gerçek ofis ve ekip fotoğrafları (Culture Gallery) entegre edildi.
-    *   **Genç Yetenek Programı:** "Yazılım", "Test & Analiz" ve "Teknoloji" uzmanlık alanları detaylandırıldı.
-    *   **Slider Entegrasyonu:** Anasayfa slider yapısı sadeleştirildi ve güncellendi.
-
-3.  **Navigasyon ve UI İyileştirmeleri:**
-    *   **Mega Menu:** "Genç Mühendisler" menüsü tamamen tıklanabilir hale getirildi.
-    *   **Görsel Düzenlemeleri:** "Hakkımızda" sayfasındaki görsel bindirme sorunları giderildi.
-    *   **Lokalizasyon:** Tüm hizmet ve ürün sayfaları Türkçe içerikle donatıldı.
-
-4.  **Ürün Sayfaları:**
+2.  **Ürün Sayfaları:**
+    *   **HR Thema HCM:** İnsan Sermayesi Yönetim Sistemi — 16 entegre modül, teknoloji altyapısı ve gömülü tanıtım videosu.
     *   **Praxila:** ESM platformu detay sayfası.
     *   **Doc2Bot:** Kurumsal bilgi asistanı.
+    *   **DocMind:** Otomatik teknik dokümantasyon üretimi.
     *   **AI Hiring Assistant:** İşe alım süreçleri için yapay zeka desteği.
+    *   **CV-Converter:** CV formatlarını standartlaştırma aracı.
+
+3.  **İK, Kültür ve Kariyer Sayfaları:**
+    *   **Gerçek Ofis Fotoğrafları:** Stok görseller yerine gerçek ofis ve ekip fotoğrafları (Culture Gallery) entegre edildi.
+    *   **Genç Yetenek Programı:** "Yazılım", "Test & Analiz" ve "Teknoloji" uzmanlık alanları detaylandırıldı.
+    *   **Kariyer Yolları:** Yazılım, Test & Analiz, Teknoloji kariyer alanları için ayrı detay sayfaları.
+    *   **Çalışma Kültürü:** Şirket kültürünü tanıtan modern tasarımlı sayfa.
+    *   **Eğitim & Gelişim:** Eğitim ve öğrenme programları detay sayfası.
+
+4.  **Navigasyon ve UI İyileştirmeleri:**
+    *   **Mega Menu:** Tüm menü linkleri tıklandığında menü otomatik kapanıyor.
+    *   **Tipografi Düzeltmesi:** İngilizce terimlerde Türkçe 'İ' yerine doğru 'I' kullanımı.
+    *   **Lokalizasyon:** Tüm hizmet ve ürün sayfaları Türkçe içerikle donatıldı.
 
 ## 🛠️ Kurulum ve Çalıştırma
 

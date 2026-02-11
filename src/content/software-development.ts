@@ -39,7 +39,7 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "trading",
-            title: "E-Trading, Market Data & Sistemler",
+            title: "E-Trading & Market Data & Düşük Gecikmeli Sistemler",
             subtitle: "Low-Latency Finansal Altyapılar",
             icon: TrendingUp,
             image: "/images/services/trading-market-data-sistemleri.png",
@@ -57,7 +57,7 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "telecom",
-            title: "Telekom & Dijital İletişim",
+            title: "Telekom & Dijital İletişim Platformları",
             subtitle: "Dijital Kanal Platformları",
             icon: Radio,
             image: "/images/services/telekom-dijital-iletisim.png",
@@ -75,7 +75,7 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "fraud",
-            title: "Fraud, Risk & Doğrulama",
+            title: "Fraud & Risk & AI Destekli Doğrulama Sistemleri",
             subtitle: "AI Destekli Güvenlik Sistemleri",
             icon: ShieldAlert,
             image: "/images/services/fraud-risk-ve-guvenlik.png",
@@ -95,7 +95,7 @@ export const SOFTWARE_DEV_CONTENT = {
     technicalDomains: [
         {
             id: "bigdata",
-            title: "Büyük Veri & Analitik",
+            title: "Büyük Veri & Gerçek Zamanlı Veri İşleme",
             subtitle: "Gerçek Zamanlı Veri İşleme",
             icon: Database,
             image: "/images/services/buyuk-veri-analitigi.png",
@@ -113,7 +113,7 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "ai",
-            title: "Yapay Zekâ & Otomasyon",
+            title: "Yapay Zekâ & AI-First Mimari Çözümleri",
             subtitle: "AI-First Mimari Çözümleri",
             icon: Cpu,
             image: "/images/services/yapay-zeka-cozumleri.png",
@@ -131,7 +131,7 @@ export const SOFTWARE_DEV_CONTENT = {
         },
         {
             id: "modernization",
-            title: "Yazılım Modernizasyonu",
+            title: "Yazılım Modernizasyonu & Mikroservis Dönüşümü",
             subtitle: "Mikroservis Dönüşümü",
             icon: RefreshCw,
             image: "/images/services/yazilim-modernizasyonu.png",

@@ -152,12 +152,12 @@ export default function Header() {
                                 onMouseLeave={() => setHoveredNav(null)}
                                 className="absolute left-0 top-full w-full"
                             >
-                                {hoveredNav === "services" && <ServicesMenu />}
-                                {hoveredNav === "industries" && <IndustriesMenu />}
-                                {hoveredNav === "products" && <ProductsMenu />}
-                                {hoveredNav === "talent" && <TalentMenu />}
-                                {hoveredNav === "resources" && <ResourcesMenu />}
-                                {hoveredNav === "careers" && <CareersMenu />}
+                                {hoveredNav === "services" && <ServicesMenu closeMenu={() => setHoveredNav(null)} />}
+                                {hoveredNav === "industries" && <IndustriesMenu closeMenu={() => setHoveredNav(null)} />}
+                                {hoveredNav === "products" && <ProductsMenu closeMenu={() => setHoveredNav(null)} />}
+                                {hoveredNav === "talent" && <TalentMenu closeMenu={() => setHoveredNav(null)} />}
+                                {hoveredNav === "resources" && <ResourcesMenu closeMenu={() => setHoveredNav(null)} />}
+                                {hoveredNav === "careers" && <CareersMenu closeMenu={() => setHoveredNav(null)} />}
                             </div>
                         )}
                     </AnimatePresence>
