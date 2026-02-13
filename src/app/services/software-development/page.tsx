@@ -117,7 +117,7 @@ export default function SoftwareDevelopmentPage() {
             <div
                 id={domain.id}
                 className={cn(
-                    "scroll-mt-48 mb-6 p-10 lg:p-16 rounded-[2.5rem] transition-all duration-700 ease-in-out",
+                    "scroll-mt-48 mb-6 rounded-[2.5rem] transition-all duration-700 ease-in-out",
                     bgColor,
                     isActive || activeSection === ""
                         ? "opacity-100 blur-none scale-100"
@@ -164,14 +164,6 @@ export default function SoftwareDevelopmentPage() {
                     {/* Content Section */}
                     <div className="w-full lg:w-1/2 space-y-8">
                         <div>
-                            {domain.subtitle && (
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-blue-100 mb-6 shadow-sm">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
-                                    <span className="text-xs font-bold text-blue-700 tracking-wide uppercase">
-                                        {domain.subtitle}
-                                    </span>
-                                </div>
-                            )}
                             <Heading variant="h2" className="text-slate-900 mb-6 leading-tight">
                                 {domain.title}
                             </Heading>

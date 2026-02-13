@@ -133,12 +133,12 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
 
                 <div className="grid gap-1 mt-1">
                     {[
-                        { title: "Veri Merkezi", desc: "Tier-3 standartlarında altyapı.", icon: Server, href: "/services/msp/data-center", img: "/images/navigation/services/bgts-data-center-infrastructure.png" },
-                        { title: "Desktop Support App", desc: "Son kullanıcı destek çözümleri.", icon: Terminal, href: "/services/msp/desktop-support", img: "/images/navigation/services/bgts-desktop-support.png" },
-                        { title: "ITSM as a Service", desc: "IT hizmet süreç yönetimi.", icon: FileText, href: "/services/msp/itsm", img: "/images/navigation/services/bgts-itsm-service.png" },
-                        { title: "SCCM as a Service", desc: "Merkezi yama ve envanter.", icon: Database, href: "/services/msp/sccm", img: "/images/navigation/services/bgts-sccm-service.png" },
-                        { title: "Monitoring as a Service", desc: "7/24 proaktif izleme.", icon: Activity, href: "/services/msp/monitoring", img: "/images/navigation/services/bgts-monitoring-service.png" },
-                        { title: "DevOps as a Service", desc: "CI/CD ve otomasyon.", icon: Code, href: "/services/msp/devops", img: "/images/navigation/services/bgts-devops-sre-services.png" },
+                        { title: "Veri Merkezi", desc: "Tier-3 standartlarında altyapı.", icon: Server, href: "/services/managed-services#data-center", img: "/images/navigation/services/bgts-data-center-infrastructure.png" },
+                        { title: "Desktop Support App", desc: "Son kullanıcı destek çözümleri.", icon: Terminal, href: "/services/managed-services#desktop-support", img: "/images/navigation/services/bgts-desktop-support.png" },
+                        { title: "ITSM as a Service", desc: "IT hizmet süreç yönetimi.", icon: FileText, href: "/services/managed-services#itsm", img: "/images/navigation/services/bgts-itsm-service.png" },
+                        { title: "SCCM as a Service", desc: "Merkezi yama ve envanter.", icon: Database, href: "/services/managed-services#sccm", img: "/images/navigation/services/bgts-sccm-service.png" },
+                        { title: "Monitoring as a Service", desc: "7/24 proaktif izleme.", icon: Activity, href: "/services/managed-services#monitoring", img: "/images/navigation/services/bgts-monitoring-service.png" },
+                        { title: "DevOps as a Service", desc: "CI/CD ve otomasyon.", icon: Code, href: "/services/managed-services#devops", img: "/images/navigation/services/bgts-devops-sre-services.png" },
                     ].map((item, i) => (
                         <Link key={i} onClick={closeMenu} href={item.href} className="group flex items-center justify-between p-2 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-blue-100">
                             <div className="flex items-start gap-3">

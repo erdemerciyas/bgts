@@ -27,10 +27,10 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 ### 🆕 Yeni Eklenen Modüller & Sayfalar
 
 1.  **Yönetilen Hizmetler (MSP) Sayfaları:**
-    *   **Data Center & Cloud:** Tier-3 standartlarında veri merkezi ve bulut çözümleri.
-    *   **Desktop Support:** Son kullanıcı ve cihaz yönetimi.
-    *   **ITSM & DevOps:** Süreç yönetimi ve otomasyon hizmetleri.
-    *   **Monitoring & SCCM:** 7/24 izleme ve merkezi yönetim çözümleri.
+    *   **Konsolide Yapı:** Tüm MSP ve Yönetilen Hizmetler tek bir sayfada (`/services/managed-services`) birleştirildi.
+    *   **Sticky Sidebar:** "Yazılım & Dijital Çözümler" sayfasındaki gibi sol tarafta yapışkan menü ve scroll-spy özelliği eklendi.
+    *   **Gelişmiş İçerik:** Veri Merkezi, Monitoring, ITSM, DevOps, Bulut Yönetimi ve M365 hizmetleri detaylandırıldı.
+    *   **Modern UI:** Full-bleed görseller ve temiz tipografi ile premium bir görünüm sağlandı.
 
 2.  **Ürün Sayfaları:**
     *   **HR Thema HCM:** İnsan Sermayesi Yönetim Sistemi — 16 entegre modül, teknoloji altyapısı ve gömülü tanıtım videosu.
