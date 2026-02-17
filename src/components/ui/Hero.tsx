@@ -64,12 +64,7 @@ export default function Hero({
                             transition={{ duration: 0.6 }}
                             className="text-left"
                         >
-                            {badge && (
-                                <div className="inline-flex items-center rounded-full border border-corporate-accent/30 bg-corporate-surface px-3 py-1 text-sm font-medium text-corporate-primary mb-6">
-                                    <span className="flex h-2 w-2 rounded-full bg-corporate-secondary mr-2"></span>
-                                    {badge}
-                                </div>
-                            )}
+
                             <Heading variant="h1" className="text-corporate-primary mb-6">
                                 {title}
                             </Heading>
@@ -173,16 +168,7 @@ export default function Hero({
             </div>
 
             <Container className="relative z-10 text-center">
-                {badge && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center mb-6 px-3 py-1 rounded-full bg-white border border-border shadow-sm text-sm font-medium text-corporate-primary"
-                    >
-                        <span className="w-2 h-2 rounded-full bg-corporate-tertiary mr-2 animate-pulse"></span>
-                        {badge}
-                    </motion.div>
-                )}
+
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

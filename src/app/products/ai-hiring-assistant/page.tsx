@@ -40,15 +40,17 @@ export default function AiHiringPage() {
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-1 relative w-full aspect-video lg:aspect-square max-w-xl">
+                        <div className="flex-1 relative w-full max-w-xl">
                             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/30 to-purple-500/30 rounded-2xl blur-2xl"></div>
-                            <ZoomableImage
-                                src="/images/products/ai-hiring/image10.png"
-                                alt="AI Hiring Dashboard"
-                                fill
-                                className="object-cover"
-                                containerClassName="h-full w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-800/50 backdrop-blur-sm"
-                            />
+                            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-800/50 backdrop-blur-sm">
+                                <Image
+                                    src="/images/products/ai-hiring/image10.png"
+                                    alt="AI Hiring Dashboard"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto"
+                                />
+                            </div>
                         </div>
                     </div>
                 </Container>

@@ -2,10 +2,11 @@
 
 import Hero from "@/components/ui/Hero"
 import ContentSection from "@/components/ui/ContentSection"
+import Link from "next/link"
 import CultureCard from "@/components/ui/CultureCard"
+import { Button } from "@/components/ui/Button"
 import TestimonialCard from "@/components/ui/TestimonialCard"
-import ApplicationForm from "@/components/hr/ApplicationForm"
-import { Users, Heart, Star, Target, Zap, Smile, BookOpen, Coffee, Award, PlayCircle, Code, BarChart3, Server, CheckCircle2, FileText } from "lucide-react"
+import { Users, Heart, Star, Target, Zap, Smile, BookOpen, Coffee, Award, PlayCircle, Code, BarChart3, Server, CheckCircle2, FileText, Sparkles, Rocket, Globe, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
@@ -140,188 +141,109 @@ export default function HRPage() {
                 </Container>
             </Section>
 
-            {/* --- YOUNG ENGINEERS MERGED SECTION START --- */}
+            {/* Young Engineers Teaser */}
+            <Section className="bg-slate-900 py-24 relative overflow-hidden">
+                {/* Abstract Background */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-violet-600/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
 
-            {/* Intro Section */}
-            <div id="young-engineers">
-                <Section>
-                    <Container>
-                        <div className="max-w-4xl mx-auto text-center space-y-6">
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-bold text-sm tracking-wide mb-4">
-                                GENÇ MÜHENDİS PROGRAMI
+                <Container className="relative z-10 text-center">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 font-bold text-sm tracking-wide mb-6">
+                        <Sparkles className="w-4 h-4 text-blue-400" />
+                        GENÇ YETENEKLER
+                    </span>
+
+                    <Heading variant="h2" className="text-white text-4xl md:text-5xl mb-6">
+                        Geleceği Kodlamaya Hazır Mısın?
+                    </Heading>
+
+                    <Text className="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+                        Sıradan bir staj veya iş başlangıcı değil. Gerçek projeler, modern teknolojiler ve sınırsız gelişim dünyasının kapılarını arala.
+                    </Text>
+
+                    <div className="flex justify-center">
+                        <Link href="/young-engineers" className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.5)]">
+                            <span className="relative z-10 flex items-center gap-2">
+                                Programı İncele <Rocket className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
                             </span>
-                            <Heading variant="h2">Gerçek İş Dünyasıyla Buluşun</Heading>
-                            <Text variant="lead">
-                                BGTS Genç Mühendis Programı, kariyerine güçlü bir başlangıç yapmak isteyen genç mühendisleri
-                                gerçek iş dünyasıyla buluşturur.
-                            </Text>
-                            <Text className="text-slate-600">
-                                Teorinin ötesine geçerek gerçek projelerde sorumluluk alan, kurumsal yapılarda üretmenin ne demek
-                                olduğunu sahada öğrenen mühendisler yetiştirir. Bugüne kadar özellikle bankacılık ve finans başta olmak üzere,
-                                teknolojiyle dönüşen birçok sektörde çok sayıda genç mühendisimizi uzun vadeli pozisyonlara yerleştirdik.
-                                Bu programın odağında yalnızca işe yerleşmek değil; mühendis gibi düşünmeyi, problem çözmeyi ve değer
-                                üretmeyi öğrenmek yer alır.
-                            </Text>
-                        </div>
-                    </Container>
-                </Section>
-
-                {/* Tracks Section */}
-                <Section className="bg-slate-50">
-                    <Container>
-                        <div className="text-center mb-16">
-                            <Heading variant="h2">Program Yapısı</Heading>
-                            <Text className="text-slate-600 mt-4">
-                                Genç Mühendis Programı, farklı uzmanlık alanlarında gelişim fırsatları sunan üç ana yapıdan oluşur.
-                            </Text>
-                        </div>
-
-                        <div className="grid lg:grid-cols-3 gap-8">
-                            {/* Track 1: Software */}
-                            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col hover:shadow-md transition-shadow group">
-                                <div className="w-14 h-14 bg-cyan-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <Code className="w-7 h-7 text-cyan-600" />
-                                </div>
-                                <Heading variant="h4" className="mb-4">Yazılım Profesyonelleri</Heading>
-                                <Text className="text-sm text-slate-600 mb-6 flex-1">
-                                    Gerçek projeler üzerinde çalışarak modern yazılım geliştirme pratiklerini uçtan uca deneyimleme fırsatı sunar.
-                                </Text>
-                                <ul className="space-y-3 mb-8">
-                                    {[
-                                        "Güncel yazılım teknolojileriyle çalışma",
-                                        "Kodlama standartları ve mimari yaklaşımlar",
-                                        "Ekip içi çalışma kültürü",
-                                        "Kurumsal projelerde aktif üretim"
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-sm text-slate-700">
-                                            <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="mt-auto pt-4 border-t border-slate-100 text-xs text-slate-500 italic">
-                                    Yazılımı yalnızca yazan değil; tasarlayan ve geliştiren profesyoneller.
-                                </div>
-                            </div>
-
-                            {/* Track 2: Test & Analysis */}
-                            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col hover:shadow-md transition-shadow group">
-                                <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <BarChart3 className="w-7 h-7 text-blue-600" />
-                                </div>
-                                <Heading variant="h4" className="mb-4">Test ve Analiz Uzmanları</Heading>
-                                <Text className="text-sm text-slate-600 mb-6 flex-1">
-                                    Planlama, koordinasyon ve teslim süreçlerini deneyimleyerek projelerin nasıl yönetildiğini sahada öğrenme imkânı sunar.
-                                </Text>
-                                <ul className="space-y-3 mb-8">
-                                    {[
-                                        "Uçtan uca test ve analiz deneyimi",
-                                        "Analitik düşünme ve problem çözme",
-                                        "Kalite odaklı bakış açısı",
-                                        "Kritik finansal sistem deneyimi"
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-sm text-slate-700">
-                                            <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="mt-auto pt-4 border-t border-slate-100 text-xs text-slate-500 italic">
-                                    Yüksek standartlı ve kritik sistemlerin yönetimi.
-                                </div>
-                            </div>
-
-                            {/* Track 3: Technology */}
-                            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col hover:shadow-md transition-shadow group">
-                                <div className="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    <Server className="w-7 h-7 text-amber-600" />
-                                </div>
-                                <Heading variant="h4" className="mb-4">Teknoloji Uzmanları</Heading>
-                                <Text className="text-sm text-slate-600 mb-6 flex-1">
-                                    Kurumsal sistemlerin işletimi, destek ve sürekliliğine odaklanan teknoloji süreçlerini sahada öğrenmeyi sağlar.
-                                </Text>
-                                <ul className="space-y-3 mb-8">
-                                    {[
-                                        "Kurumsal IT altyapılarını tanıma",
-                                        "Operasyon ve destek süreçleri",
-                                        "Büyük ölçekli sistem sürekliliği",
-                                        "Sistem yönetimi ve işletimi"
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-sm text-slate-700">
-                                            <CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="mt-auto pt-4 border-t border-slate-100 text-xs text-slate-500 italic">
-                                    Teknolojiyi yalnızca kullanan değil; işleten ve yöneten mühendisler.
-                                </div>
-                            </div>
-                        </div>
-                    </Container>
-                </Section>
-
-                {/* Why Join Section */}
-                <ContentSection
-                    title="Neden Genç Mühendis Programı?"
-                    badge="Fırsatlar"
-                    content={
-                        <div className="space-y-6">
-                            <Text variant="large">
-                                Genç Mühendis Programı, kariyerin ilk adımı değil; <strong className="text-blue-600">sağlam bir mühendislik temelidir.</strong>
-                            </Text>
-                            <div className="grid gap-4">
-                                <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-100 shadow-sm">
-                                    <div className="bg-blue-100 p-2 rounded-lg">
-                                        <Target className="w-5 h-5 text-blue-700" />
-                                    </div>
-                                    <div>
-                                        <h5 className="font-bold text-slate-900">Gerçek Sorumluluklar</h5>
-                                        <p className="text-sm text-slate-600 mt-1">Gerçek projelerde, gerçek iş hedefleriyle çalışarak deneyim kazanın.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-100 shadow-sm">
-                                    <div className="bg-indigo-100 p-2 rounded-lg">
-                                        <BarChart3 className="w-5 h-5 text-indigo-700" />
-                                    </div>
-                                    <div>
-                                        <h5 className="font-bold text-slate-900">Güçlü Sektör Deneyimi</h5>
-                                        <p className="text-sm text-slate-600 mt-1">Bankacılık ve finans başta olmak üzere kritik sektörlerde uzmanlaşın.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-100 shadow-sm">
-                                    <div className="bg-purple-100 p-2 rounded-lg">
-                                        <Users className="w-5 h-5 text-purple-700" />
-                                    </div>
-                                    <div>
-                                        <h5 className="font-bold text-slate-900">Uzun Vadeli İstihdam</h5>
-                                        <p className="text-sm text-slate-600 mt-1">Program sonunda başarılı mühendislerimizle uzun soluklu bir yolculuğa çıkıyoruz.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-blue-100 shadow-sm">
-                                    <div className="bg-emerald-100 p-2 rounded-lg">
-                                        <Zap className="w-5 h-5 text-emerald-700" />
-                                    </div>
-                                    <div>
-                                        <h5 className="font-bold text-slate-900">Mühendislik Vizyonu</h5>
-                                        <p className="text-sm text-slate-600 mt-1">Sadece teknik bilgi değil, problem çözme ve değer üretme kültürü.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                    image={
-                        <Image
-                            src="/images/headers/kariyer-gelisim-firsatlari.jpg"
-                            alt="Young Engineers Working"
-                            fill
-                            className="object-cover"
-                        />
-                    }
-                />
-            </div>
+                        </Link>
+                    </div>
+                </Container>
+            </Section>
 
             {/* --- YOUNG ENGINEERS MERGED SECTION END --- */}
+
+            {/* Life at BGTS / Why Join */}
+            <Section className="bg-white py-24">
+                <Container>
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="space-y-8">
+                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 text-violet-700 font-bold text-sm tracking-wide">
+                                <Globe className="w-4 h-4" />
+                                YAŞAM TARZI
+                            </span>
+                            <Heading variant="h2" className="text-slate-900 text-4xl leading-tight">
+                                Sadece Bir İş Değil, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">Tutku.</span>
+                            </Heading>
+                            <Text variant="lead" className="text-slate-600">
+                                BGTS'de mühendislik, kod yazmaktan fazlasıdır. Birlikte öğrenir, birlikte eğlenir ve geleceği birlikte inşa ederiz.
+                            </Text>
+
+                            <div className="space-y-6 pt-4">
+                                <div className="flex gap-5 group">
+                                    <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors duration-300">
+                                        <Rocket className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-xl text-slate-900 mb-1">Hızlı Kariyer Yolu</h4>
+                                        <p className="text-slate-600 leading-relaxed">Performans odaklı net ilerleme adımları ve düzenli geri bildirimlerle yerinde sayma, sürekli yüksel.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-5 group">
+                                    <div className="w-14 h-14 bg-violet-50 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-violet-600 transition-colors duration-300">
+                                        <Globe className="w-7 h-7 text-violet-600 group-hover:text-white transition-colors" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-xl text-slate-900 mb-1">Global Vizyon</h4>
+                                        <p className="text-slate-600 leading-relaxed">Uluslararası standartlarda projeler ve dünya çapında teknolojilerle sınırlarını zorla.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-4 pt-6 border-t border-slate-100">
+                                <div className="flex -space-x-4">
+                                    {[2, 3, 5, 6].map((i) => (
+                                        <div key={i} className="w-12 h-12 rounded-full border-4 border-white relative overflow-hidden shadow-sm">
+                                            <Image src={`/images/culture/culture-${i}.jpg`} alt="Team" fill className="object-cover" />
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="text-sm">
+                                    <p className="font-bold text-slate-900">+50 Genç Yetenek</p>
+                                    <p className="text-slate-500">Seninle tanışmayı bekliyor.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Visual Right Side */}
+                        <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-900/10 rotate-1 hover:rotate-0 transition-all duration-700 group border-8 border-white bg-slate-100">
+                            <Image
+                                src="/images/headers/kariyer-gelisim-firsatlari.jpg"
+                                alt="Life at BGTS"
+                                fill
+                                className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+
+                            <div className="absolute bottom-10 left-10 right-10 text-white transform group-hover:translate-y-0 transition-transform duration-500">
+                                <div className="w-12 h-1 bg-blue-500 mb-6 rounded-full" />
+                                <p className="font-bold text-3xl mb-3">Ofisimizden Kareler</p>
+                                <p className="text-slate-300 text-lg">Maslak, İstanbul — Teknoloji Üssü</p>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </Section>
 
             {/* Testimonials */}
             <Section className="bg-slate-50">
@@ -346,46 +268,20 @@ export default function HRPage() {
                 </Container>
             </Section>
 
-            {/* Application Form Section */}
-            <div id="application-form">
-                <Section className="bg-blue-900">
-                    <Container>
-                        <div className="grid lg:grid-cols-2 gap-12 items-center">
-                            <div className="text-white space-y-6">
-                                <Heading variant="h2" className="text-white">Geleceğe İlk Adımı Atın</Heading>
-                                <Text className="text-blue-100 text-lg">
-                                    Genç Mühendis Programı'na başvurarak kariyerinizde fark yaratacak bir deneyime başlayın.
-                                    Hemen formu doldurun, sizi tanıyalım.
-                                </Text>
-                                <div className="space-y-4 pt-4">
-                                    <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
-                                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                                            <FileText className="w-5 h-5 text-white" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold">Özgeçmişini Hazırla</h4>
-                                            <p className="text-sm text-blue-200">PDF veya Word formatında güncel CV'nizi yükleyin.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
-                                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                                            <Zap className="w-5 h-5 text-white" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold">Hızlı Süreç</h4>
-                                            <p className="text-sm text-blue-200">Başvurunuzu inceliyor ve en kısa sürede dönüş yapıyoruz.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <ApplicationForm />
-                            </div>
-                        </div>
-                    </Container>
-                </Section>
-            </div>
-        </div>
+            {/* General CTA / Contact */}
+            <Section className="bg-slate-50 border-t border-slate-200">
+                <Container className="text-center">
+                    <Heading variant="h2" className="mb-6">Başka Bir Pozisyon mu Arıyorsunuz?</Heading>
+                    <Text className="max-w-2xl mx-auto mb-8 text-slate-600">
+                        Açık pozisyonlarımızı LinkedIn üzerinden takip edebilir veya genel başvuru için bize ulaşabilirsiniz.
+                    </Text>
+                    <Link href="https://linkedin.com" target="_blank">
+                        <Button size="lg" variant="outline" className="gap-2">
+                            LinkedIn'de Bizi Takip Edin <ArrowRight className="w-4 h-4" />
+                        </Button>
+                    </Link>
+                </Container>
+            </Section>
+        </div >
     )
 }

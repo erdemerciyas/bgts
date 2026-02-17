@@ -129,7 +129,7 @@ export default function RetailTelecomPage() {
                             </div>
                             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1556740758-90de2929450a?auto=format&fit=crop&q=80"
+                                    src="/images/industries/retail-telecom/retail-transformation.png"
                                     alt="Retail Commerce"
                                     fill
                                     className="object-cover"
@@ -234,7 +234,7 @@ export default function RetailTelecomPage() {
                         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
                             <div className="order-2 lg:order-1 relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80"
+                                    src="/images/industries/retail-telecom/telecom-infrastructure.png"
                                     alt="Telecom Infrastructure"
                                     fill
                                     className="object-cover"

@@ -24,6 +24,29 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Responsive Tasarım:** Mobil, tablet ve masaüstü cihazlarda kusursuz çalışan esnek (fluid) yerleşimler.
 - **Performans Optimizasyonu:** `next/image` ile optimize edilmiş görseller, lazy loading ve kod bölme (code splitting).
 
+### 🎨 v0.3.0 — Premium Kariyer & Sektör Yeniden Tasarımı (Şubat 2026)
+
+1.  **Sektör Sayfası Yeniden Tasarımları:**
+    *   **Bankacılık & Finans, Savunma, Perakende, Telekomünikasyon:** Tüm sektör sayfaları premium gradient hero, sticky sidebar, animasyonlu kart grid, ve koyu CTA bölümleri ile yeniden tasarlandı.
+    *   **Perakende-Telekom (Omnichannel):** Split overview, detaylı servis bölümleri ve gradient sidebar ile güncellendi.
+
+2.  **Yerini Al (Kariyer) Sayfaları — Premium Gençlik Temalı Tasarım:**
+    *   **Çalışma Kültürü (`/culture`):** Indigo→Purple gradient hero, fotoğraf mozaik galerisi, sosyal aktivite grid, floating emoji stickerlar.
+    *   **Kariyer Yolları (`/career-paths`):** Blue→Indigo gradient hero, teknik/yönetsel kariyer yolu kartları, OKR performans sistemi.
+    *   **Eğitim & Gelişim (`/learning`):** Emerald→Teal gradient hero, sertifika badge ribbonu, liderlik ve topluluk bölümleri.
+    *   **Toplumsal Katkı (`/social-contribution`):** Rose→Pink gradient hero, eğitim/staj/burs/sorumluluk bölümleri.
+    *   Tüm sayfalarda: Framer Motion scroll animasyonları, gradient ikon badge'leri, floating mini kartlar, koyu gradient CTA.
+
+3.  **Yerini Al Mega Menü Yeniden Tasarımı:**
+    *   Daha geniş, dinamik ve sosyal medya esinli tasarım.
+    *   Gradient mesh arka plan, emoji stickerlar, hikâye kartları ve LinkedIn CTA.
+
+4.  **Görsel & UI Düzeltmeleri:**
+    *   Tüm external Unsplash görsel URL'leri lokal görseller ile değiştirildi.
+    *   AI Hiring Assistant hero görseli kırpılma sorunu giderildi.
+    *   HCM CTA butonu kurumsal beyaz stile güncellendi.
+    *   Hero bileşeninden info badge'leri kaldırıldı.
+
 ### 🆕 Yeni Eklenen Modüller & Sayfalar
 
 1.  **Yönetilen Hizmetler (MSP) Sayfaları:**

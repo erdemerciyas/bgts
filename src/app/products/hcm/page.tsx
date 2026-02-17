@@ -275,7 +275,7 @@ export default function HcmPage() {
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-orange-500 via-green-500 to-purple-500 text-white font-bold rounded-full text-lg shadow-xl shadow-orange-500/20 hover:scale-105 transition-transform"
+                        className="inline-flex items-center justify-center px-10 py-5 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-full text-lg shadow-xl hover:scale-105 transition-all"
                     >
                         Demo ve Teklif Alın
                     </Link>
