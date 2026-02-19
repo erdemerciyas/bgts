@@ -14,10 +14,7 @@ export default function AiHiringPage() {
                 <Container className="relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                         <div className="flex-1 space-y-8 text-center lg:text-left">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-sm font-semibold tracking-wide">
-                                <Bot className="w-4 h-4" />
-                                <span>Yapay Zeka Destekli İşe Alım</span>
-                            </div>
+
                             <h1 className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
                                 İşe Alımda <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Yapay Zeka Devrimi</span>
@@ -176,23 +173,7 @@ export default function AiHiringPage() {
                 </Container>
             </section>
 
-            {/* CTA SECTION */}
-            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cyan-900/40 to-transparent"></div>
-                <Container className="relative z-10 text-center max-w-4xl">
-                    <h2 className="text-3xl lg:text-5xl font-black mb-8 tracking-tight">İşe Alım Süreçlerinizi Dönüştürmeye Hazır mısınız?</h2>
-                    <p className="text-xl text-slate-300 mb-10 leading-relaxed">
-                        AI Hiring Assistant ile tanışın, operasyonel yükü yapay zekaya devredin, siz en doğru yeteneği seçmeye odaklanın.
-                    </p>
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-full text-lg shadow-xl shadow-cyan-500/20 hover:scale-105 transition-transform"
-                    >
-                        Demo ve Teklif Alın
-                    </Link>
-                </Container>
-            </section>
+
         </div>
     )
 }

@@ -16,12 +16,6 @@ const fadeUp = {
     transition: { duration: 0.5 }
 }
 
-const stats = [
-    { value: "100+", label: "Biten Proje", icon: CheckCircle2 },
-    { value: "27+", label: "Yıllık Deneyim", icon: TrendingUp },
-    { value: "6+", label: "Banka İş Ortağı", icon: Landmark },
-    { value: "200+", label: "Uzman Kadro", icon: Users },
-]
 
 const solutionAreas = [
     "Temel Bankacılık Uygulamaları",
@@ -69,38 +63,18 @@ export default function BankingPage() {
                 <Hero
                     title="Bankacılık ve Sigorta Sektöründe Dijital Dönüşüm"
                     subtitle="İş ortaklarımızın dijital dönüşüm ajandalarını uçtan uca hayata geçiriyor, güvenilir ve ölçeklenebilir teknoloji çözümleri sunuyoruz."
-                    badge="Sektörel Çözümler"
+
                     className="bg-slate-900"
                     backgroundImage="/images/headers/proje-yapim-sekillerimiz.jpg"
                 />
 
-                {/* Stats Bar */}
-                <Section className="!py-0 relative z-20 -mt-12">
-                    <Container>
-                        <motion.div {...fadeUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                            {stats.map((stat, i) => (
-                                <div key={i} className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 flex items-center gap-4 hover:shadow-2xl transition-shadow">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-200">
-                                        <stat.icon className="w-7 h-7" />
-                                    </div>
-                                    <div>
-                                        <div className="text-3xl font-black text-slate-900 leading-none">{stat.value}</div>
-                                        <div className="text-sm font-semibold text-slate-500 mt-1">{stat.label}</div>
-                                    </div>
-                                </div>
-                            ))}
-                        </motion.div>
-                    </Container>
-                </Section>
 
                 {/* Genel Bakış - Premium Split */}
                 <Section className="pt-24">
                     <Container>
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <motion.div {...fadeUp}>
-                                <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                    <Landmark className="w-4 h-4" /> Genel Bakış
-                                </div>
+
                                 <Heading variant="h2" className="mb-6 text-slate-900 !text-4xl !font-bold">
                                     Finans Sektöründe Güvenilir Teknoloji Ortağı
                                 </Heading>
@@ -129,55 +103,91 @@ export default function BankingPage() {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent" />
                                     </div>
-                                    {/* Floating badge */}
-                                    <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl border border-slate-100 p-5 flex items-center gap-4 z-10">
-                                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                                            <ShieldCheck className="w-6 h-6 text-blue-600" />
-                                        </div>
-                                        <div>
-                                            <div className="font-black text-slate-900">1997'den Beri</div>
-                                            <div className="text-xs text-slate-500 font-medium">Sektörde Güven</div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </motion.div>
                         </div>
                     </Container>
                 </Section>
 
-                {/* Uçtan Uca Yetkinlik - Dark Premium */}
-                <Section className="bg-slate-900 relative overflow-hidden">
-                    {/* Decorative Elements */}
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500 rounded-full blur-[200px] opacity-10 pointer-events-none" />
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-violet-500 rounded-full blur-[150px] opacity-10 pointer-events-none" />
+                {/* Uçtan Uca Yetkinlik - Premium Corporate */}
+                <Section className="bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+                    {/* Subtle Decorative Elements */}
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[200px] opacity-20 pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-violet-100 rounded-full blur-[150px] opacity-20 pointer-events-none" />
 
                     <Container className="relative z-10">
-                        <motion.div {...fadeUp} className="max-w-4xl mx-auto text-center mb-16">
-                            <div className="inline-flex items-center gap-2 bg-white/10 text-blue-300 px-4 py-1.5 rounded-full text-sm font-bold mb-6 backdrop-blur-sm">
-                                <Target className="w-4 h-4" /> Uçtan Uca Yetkinlik
-                            </div>
-                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
-                                Bankacılık ve Sigorta Odaklı<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Derin Yetkinlik</span>
-                            </h2>
-                            <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
-                                <p>
-                                    1997 yılındaki kuruluşumuzdan bu yana istikrarlı bir şekilde büyüyen organizasyonumuz,
-                                    bugün güçlü kadrosuyla özel ve kamu bankaları, sigorta şirketleri ve ödeme sistemleri
-                                    alanında faaliyet gösteren kurumlarla uzun yıllara dayanan sağlam iş birlikleri yürütmektedir.
+                        <div className="grid lg:grid-cols-2 gap-16 items-start">
+                            {/* Left: Headline & Key Metrics */}
+                            <motion.div {...fadeUp} className="lg:sticky lg:top-32 lg:self-start">
+
+                                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                                    Bankacılık ve Sigorta Odaklı<br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">Derin Yetkinlik</span>
+                                </h2>
+                                <p className="text-slate-500 text-lg leading-relaxed mb-10">
+                                    1997 yılındaki kuruluşumuzdan bu yana istikrarlı bir şekilde büyüyen organizasyonumuz, bugün güçlü kadrosuyla finans ekosisteminin kritik iş alanlarında aktif rol almaktadır.
                                 </p>
-                                <p>
-                                    Gerçekleştirdiğimiz 100'ün üzerinde proje ile; temel bankacılık, dijital kanallar,
-                                    ödeme sistemleri ile veri ve analitik çözümleri başta olmak üzere finans ekosisteminin
-                                    kritik iş alanlarında aktif rol alıyoruz.
-                                </p>
-                                <p>
-                                    Sektöre özgü iş süreçlerine olan derin hâkimiyetimiz sayesinde; mevcut sistemlerin
-                                    modernizasyonundan sıfırdan proje ve ürün geliştirme süreçlerine kadar her aşamada
-                                    hızlı, doğru ve sürdürülebilir çözümler sunuyoruz.
-                                </p>
-                            </div>
-                        </motion.div>
+
+                                {/* Key Metrics */}
+                                <div className="grid grid-cols-3 gap-4">
+                                    {[
+                                        { value: "100+", label: "Proje" },
+                                        { value: "27+", label: "Yıl Deneyim" },
+                                        { value: "6+", label: "İş Ortağı" },
+                                    ].map((m, i) => (
+                                        <div key={i} className="text-center p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                                            <div className="text-2xl font-black text-slate-900">{m.value}</div>
+                                            <div className="text-xs font-semibold text-slate-400 mt-1 uppercase tracking-wider">{m.label}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                            {/* Right: Content Cards */}
+                            <motion.div {...fadeUp} transition={{ delay: 0.15 }} className="space-y-5">
+                                {[
+                                    {
+                                        icon: Landmark,
+                                        title: "Güçlü İş Birlikleri",
+                                        desc: "Özel ve kamu bankaları, sigorta şirketleri ve ödeme sistemleri alanında faaliyet gösteren kurumlarla uzun yıllara dayanan sağlam iş birlikleri yürütmekteyiz.",
+                                        color: "blue",
+                                    },
+                                    {
+                                        icon: Layers,
+                                        title: "Geniş Proje Portföyü",
+                                        desc: "Gerçekleştirdiğimiz 100'ün üzerinde proje ile; temel bankacılık, dijital kanallar, ödeme sistemleri ile veri ve analitik çözümleri başta olmak üzere finans ekosisteminin kritik iş alanlarında aktif rol alıyoruz.",
+                                        color: "violet",
+                                    },
+                                    {
+                                        icon: Target,
+                                        title: "Sektörel Hâkimiyet",
+                                        desc: "Sektöre özgü iş süreçlerine olan derin hâkimiyetimiz sayesinde; mevcut sistemlerin modernizasyonundan sıfırdan proje ve ürün geliştirme süreçlerine kadar her aşamada hızlı, doğru ve sürdürülebilir çözümler sunuyoruz.",
+                                        color: "emerald",
+                                    },
+                                ].map((card, i) => {
+                                    const colorMap: Record<string, { bg: string; icon: string; border: string }> = {
+                                        blue: { bg: "bg-blue-50", icon: "text-blue-600", border: "hover:border-blue-200" },
+                                        violet: { bg: "bg-violet-50", icon: "text-violet-600", border: "hover:border-violet-200" },
+                                        emerald: { bg: "bg-emerald-50", icon: "text-emerald-600", border: "hover:border-emerald-200" },
+                                    }
+                                    const c = colorMap[card.color]
+                                    return (
+                                        <div key={i} className={`bg-white rounded-2xl p-7 border border-slate-100 ${c.border} shadow-sm hover:shadow-lg transition-all group`}>
+                                            <div className="flex items-start gap-5">
+                                                <div className={`w-12 h-12 ${c.bg} rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform`}>
+                                                    <card.icon className={`w-6 h-6 ${c.icon}`} />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-lg font-bold text-slate-900 mb-2">{card.title}</h4>
+                                                    <p className="text-slate-500 leading-relaxed">{card.desc}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </motion.div>
+                        </div>
                     </Container>
                 </Section>
 
@@ -185,9 +195,7 @@ export default function BankingPage() {
                 <Section>
                     <Container>
                         <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-14">
-                            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                <Layers className="w-4 h-4" /> Çözüm Alanları
-                            </div>
+
                             <Heading variant="h2" className="mb-4 !text-4xl !font-bold">
                                 Finans Ekosistemine Özelleştirilmiş Çözümler
                             </Heading>
@@ -227,12 +235,7 @@ export default function BankingPage() {
                                         <p className="text-blue-100 leading-relaxed">
                                             Bankacılığın omurgasını oluşturan sistemlerde, teminattan krediye, nakit yönetiminden yasal takibe kadar uçtan uca çözümler.
                                         </p>
-                                        <div className="mt-6 pt-6 border-t border-white/20">
-                                            <div className="flex items-center gap-2 text-blue-200 text-sm font-medium">
-                                                <CheckCircle2 className="w-4 h-4" />
-                                                <span>{coreBankingItems.length} Proje Alanı</span>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </motion.div>
@@ -283,12 +286,7 @@ export default function BankingPage() {
                                         <p className="text-violet-100 leading-relaxed">
                                             Kartlı ödemelerden dijital cüzdanlara, POS yönetiminden takas sistemlerine kadar güvenli altyapılar.
                                         </p>
-                                        <div className="mt-6 pt-6 border-t border-white/20">
-                                            <div className="flex items-center gap-2 text-violet-200 text-sm font-medium">
-                                                <CheckCircle2 className="w-4 h-4" />
-                                                <span>{paymentItems.length} Proje Alanı</span>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </motion.div>
@@ -322,70 +320,6 @@ export default function BankingPage() {
                     </Container>
                 </Section>
 
-                {/* Odağımız: Güçlü Ekip, Sürdürülebilir Destek */}
-                <Section className="bg-gradient-to-b from-slate-50 to-white">
-                    <Container>
-                        <div className="grid md:grid-cols-2 gap-16 items-center">
-                            <motion.div {...fadeUp} className="order-2 md:order-1">
-                                <div className="relative">
-                                    <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-emerald-100 rounded-3xl -z-10 opacity-60" />
-                                    <div className="relative h-[520px] w-full rounded-2xl overflow-hidden shadow-2xl">
-                                        <Image
-                                            src="/images/industries/I53A6528.jpg"
-                                            alt="Team Collaboration"
-                                            fill
-                                            className="object-cover"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent" />
-                                    </div>
-                                </div>
-                            </motion.div>
-                            <motion.div {...fadeUp} className="order-1 md:order-2">
-                                <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                    <Users className="w-4 h-4" /> Ekip & Destek
-                                </div>
-                                <Heading variant="h2" className="mb-8 !text-4xl !font-bold">Odağımız; Güçlü Ekip, Sürdürülebilir Destek</Heading>
-                                <div className="space-y-8">
-                                    <div className="flex gap-5 group">
-                                        <div className="w-14 h-14 bg-blue-50 group-hover:bg-blue-100 rounded-2xl flex items-center justify-center shrink-0 text-blue-600 transition-colors shadow-sm">
-                                            <Users className="w-7 h-7" />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-xl font-bold text-slate-900 mb-2">Uzman Teknik Kadro</h4>
-                                            <p className="text-slate-600 leading-relaxed">
-                                                Yazılım mühendisi, analist, test mühendisi ve mimar rollerinden oluşan ekiplerimizle;
-                                                anahtar teslim, time & material veya hibrit çalışma modellerini başarıyla hayata geçiriyoruz.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-5 group">
-                                        <div className="w-14 h-14 bg-emerald-50 group-hover:bg-emerald-100 rounded-2xl flex items-center justify-center shrink-0 text-emerald-600 transition-colors shadow-sm">
-                                            <Globe className="w-7 h-7" />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-xl font-bold text-slate-900 mb-2">Genç Mühendis Programı</h4>
-                                            <p className="text-slate-600 leading-relaxed">
-                                                Ayrıca Genç Mühendis Programımız ile sektöre özel yetiştirilmiş yeni yetenekleri ekosistemimize kazandırıyor,
-                                                projelerimizin sürdürülebilirliğini uzun vadede güvence altına alıyoruz.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* CTA */}
-                                <div className="mt-10 pt-8 border-t border-slate-200">
-                                    <Link
-                                        href="/contact"
-                                        className="inline-flex items-center gap-3 bg-slate-900 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl hover:shadow-blue-200"
-                                    >
-                                        Projelerinizi Konuşalım
-                                        <ArrowRight className="w-4 h-4" />
-                                    </Link>
-                                </div>
-                            </motion.div>
-                        </div>
-                    </Container>
-                </Section>
 
             </div>
         </>

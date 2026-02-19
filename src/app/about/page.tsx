@@ -18,7 +18,7 @@ export default function AboutPage() {
                 <Hero
                     title="Hakkımızda"
                     subtitle="1,400'den fazla mühendisimizle, 1997'den beri dijital dönüşüme liderlik eden global bir teknoloji gücüyüz."
-                    badge="Biz Kimiz"
+
                     className="bg-blue-900"
                     backgroundImage="/images/culture/culture-8.jpg"
                 />
@@ -181,7 +181,7 @@ export default function AboutPage() {
 
                     <ContentSection
                         title="Ürünler & İnovasyon"
-                        badge="Ürünlerimiz"
+
                         reverse
                         content={
                             <div className="space-y-6">

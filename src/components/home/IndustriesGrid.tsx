@@ -21,7 +21,7 @@ export function IndustriesGrid() {
                     <span className="inline-block px-6 py-2 rounded-full bg-corporate-tertiary/10 text-corporate-tertiary font-bold text-sm tracking-wide mb-6">
                         {badge}
                     </span>
-                    <Heading variant="h2" className="text-corporate-primary mb-6">
+                    <Heading variant="h2" className="text-corporate-dark mb-6">
                         {heading}
                     </Heading>
                     <Text variant="large" className="text-text-secondary">
@@ -58,14 +58,14 @@ export function IndustriesGrid() {
                                     {/* Hover Accent Line */}
                                     <div className="absolute top-0 left-0 w-0 h-1 bg-corporate-tertiary transition-all duration-500 group-hover:w-full" />
 
-                                    <Heading variant="h4" className="text-corporate-primary mb-4 text-2xl group-hover:text-corporate-tertiary transition-colors">
+                                    <Heading variant="h4" className="text-corporate-dark mb-4 text-2xl group-hover:text-corporate-tertiary transition-colors">
                                         {item.title}
                                     </Heading>
                                     <Text className="text-text-secondary mb-8 leading-relaxed line-clamp-3">
                                         {item.description}
                                     </Text>
 
-                                    <div className="mt-auto flex items-center font-bold text-corporate-primary text-sm tracking-wide group-hover:text-corporate-tertiary transition-colors">
+                                    <div className="mt-auto flex items-center font-bold text-corporate-dark text-sm tracking-wide group-hover:text-corporate-tertiary transition-colors">
                                         İNCELE <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </div>

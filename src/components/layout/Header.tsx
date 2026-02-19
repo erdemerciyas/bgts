@@ -45,7 +45,7 @@ export default function Header() {
 
     const textColorClass = isTransparent
         ? "text-white/90 hover:text-white"
-        : "text-corporate-primary hover:text-corporate-secondary";
+        : "text-corporate-dark hover:text-corporate-secondary";
 
     const logoFilterClass = isTransparent ? "brightness-0 invert opacity-90 hover:opacity-100" : "";
     const headerBgClass = isTransparent ? "bg-transparent border-transparent" : "bg-white/95 border-border shadow-sm backdrop-blur-md";
@@ -91,14 +91,14 @@ export default function Header() {
 
                     <div className="hidden lg:flex items-center gap-4 ml-auto">
                         <button
-                            className={cn("w-10 h-10 flex items-center justify-center rounded-full transition-all", isTransparent ? "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm" : "bg-corporate-surface text-corporate-primary hover:bg-corporate-accent/20")}
+                            className={cn("w-10 h-10 flex items-center justify-center rounded-full transition-all", isTransparent ? "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm" : "bg-corporate-surface text-corporate-dark hover:bg-corporate-accent/20")}
                             aria-label="Ara"
                             onClick={() => setIsSearchOpen(true)}
                         >
                             <Search className="w-4 h-4" aria-hidden="true" />
                         </button>
                         <button
-                            className={cn("w-10 h-10 flex items-center justify-center rounded-full transition-all", isTransparent ? "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm" : "bg-corporate-surface text-corporate-primary hover:bg-corporate-accent/20")}
+                            className={cn("w-10 h-10 flex items-center justify-center rounded-full transition-all", isTransparent ? "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm" : "bg-corporate-surface text-corporate-dark hover:bg-corporate-accent/20")}
                             aria-label="Dil seç"
                         >
                             <Globe className="w-4 h-4" aria-hidden="true" />
@@ -136,7 +136,7 @@ export default function Header() {
                     </div>
 
                     <button
-                        className={cn("lg:hidden p-2 ml-auto rounded-md", isTransparent ? "text-white" : "text-corporate-primary")}
+                        className={cn("lg:hidden p-2 ml-auto rounded-md", isTransparent ? "text-white" : "text-corporate-dark")}
                         onClick={() => setMobileMenuOpen(true)}
                         aria-label="Menüyü aç"
                         aria-expanded={mobileMenuOpen}

@@ -18,7 +18,7 @@ export default function MonitoringPage() {
             <Hero
                 title="Yönetilen Zabbix & 7/24 NOC İzleme"
                 subtitle="Sadece izlemiyoruz; iyileştiriyor ve yönetiyoruz. Operasyonel mükemmellik için 360° görünürlük."
-                badge="MSP Hizmetleri"
+
                 className="bg-emerald-900"
                 backgroundImage="/images/headers/msp/Monitoring.png"
             />

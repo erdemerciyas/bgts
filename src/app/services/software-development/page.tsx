@@ -13,7 +13,7 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 export default function SoftwareDevelopmentPage() {
-    const { hero, sectoralDomains, technicalDomains, capabilities } = SOFTWARE_DEV_CONTENT;
+    const { hero, sectoralDomains, technicalDomains, developmentDomains } = SOFTWARE_DEV_CONTENT;
 
     // Stronger colors for better visibility
     const sectionColors = [
@@ -65,7 +65,7 @@ export default function SoftwareDevelopmentPage() {
             const allTargets = [
                 ...sectoralDomains.map(d => d.id),
                 ...technicalDomains.map(d => d.id),
-                "development-services",
+                ...developmentDomains.map(d => d.id),
             ];
 
             // Measurement line: 30% down from the top of the viewport
@@ -94,7 +94,7 @@ export default function SoftwareDevelopmentPage() {
         handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [sectoralDomains, technicalDomains, capabilities]);
+    }, [sectoralDomains, technicalDomains, developmentDomains]);
 
     const handleLinkClick = (id: string) => {
         setActiveSection(id);
@@ -140,19 +140,6 @@ export default function SoftwareDevelopmentPage() {
                             {/* Overlay Gradient */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
 
-                            {/* Floating Icon Badge */}
-                            <div className={cn(
-                                "absolute bottom-8 p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl flex items-center gap-4 border border-white/50 transition-transform duration-500 hover:scale-105",
-                                isReversed ? "left-8" : "right-8"
-                            )}>
-                                <div className="p-2.5 bg-blue-50 rounded-xl">
-                                    <Icon className="w-8 h-8 text-blue-600" />
-                                </div>
-                                <div>
-                                    <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">ALAN</span>
-                                    <span className="block text-sm font-bold text-slate-800">{domain.title}</span>
-                                </div>
-                            </div>
                         </div>
                         {/* Decorative Pattern - REMOVED */}
                         {/* <div className={cn(
@@ -164,10 +151,13 @@ export default function SoftwareDevelopmentPage() {
                     {/* Content Section */}
                     <div className="w-full lg:w-1/2 space-y-8">
                         <div>
-                            <Heading variant="h2" className="text-slate-900 mb-6 leading-tight">
+                            <p className="text-sm font-semibold text-blue-600 tracking-wide uppercase mb-2">
                                 {domain.title}
+                            </p>
+                            <Heading variant="h2" className="text-slate-900 mb-6 leading-tight">
+                                {domain.subtitle}
                             </Heading>
-                            <Text className="text-lg text-slate-600 leading-relaxed">
+                            <Text className="text-lg text-slate-600 leading-relaxed font-normal">
                                 {domain.description}
                             </Text>
                         </div>
@@ -227,7 +217,7 @@ export default function SoftwareDevelopmentPage() {
             <Hero
                 title={hero.title}
                 subtitle={hero.subtitle}
-                badge={hero.badge}
+
                 layout="simple"
                 backgroundImage={hero.backgroundImage}
                 align="center"
@@ -285,13 +275,19 @@ export default function SoftwareDevelopmentPage() {
                                                 />
                                             );
                                         })}
-                                        {/* Software Development Services Link */}
-                                        <SidebarLink
-                                            id="development-services"
-                                            title="Yazılım Geliştirme Hizmetleri"
-                                            colorClass="text-blue-600"
-                                            activeBgClass="bg-blue-50"
-                                        />
+                                        {/* Development Domains Links */}
+                                        {developmentDomains.map((domain, index) => {
+                                            const devIdx = sectoralDomains.length + technicalDomains.length + index;
+                                            return (
+                                                <SidebarLink
+                                                    key={domain.id}
+                                                    id={domain.id}
+                                                    title={domain.title}
+                                                    colorClass={sectionTextColors[devIdx % sectionTextColors.length]}
+                                                    activeBgClass={sectionActiveBgColors[devIdx % sectionActiveBgColors.length]}
+                                                />
+                                            );
+                                        })}
                                     </nav>
                                 </div>
 
@@ -320,62 +316,19 @@ export default function SoftwareDevelopmentPage() {
                                 ))}
                             </div>
 
+                            <div className="my-24" />
 
+                            {/* Development Domains */}
+                            <div className="space-y-12">
+                                {developmentDomains.map((domain, index) => (
+                                    <DomainSection
+                                        key={domain.id}
+                                        domain={domain}
+                                        index={index + sectoralDomains.length + technicalDomains.length}
+                                    />
+                                ))}
+                            </div>
 
-
-                        </div>
-                    </div>
-                </Container>
-            </Section>
-
-            {/* Capabilities Section - Independent */}
-            <Section id="development-services" className="py-24 border-t border-slate-200 bg-slate-50">
-                <Container>
-                    <div className="space-y-24">
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-xs font-bold text-blue-600 mb-6 uppercase tracking-wider">
-                                YETKİNLİKLERİMİZ
-                            </span>
-                            <Heading variant="h2" className="text-slate-900 mb-6">
-                                {capabilities.title}
-                            </Heading>
-                            <Text className="text-slate-600 text-lg">
-                                {capabilities.subtitle}
-                            </Text>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {capabilities.items.map((cap: any, index: number) => {
-                                const Icon = cap.icon;
-                                return (
-                                    <div
-                                        key={index}
-                                        className="group bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-blue-100 transition-all duration-300 flex flex-col h-full"
-                                    >
-                                        <div className="mb-8">
-                                            <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                                                <Icon className="w-8 h-8" />
-                                            </div>
-                                            <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                                                {cap.title}
-                                            </h3>
-                                        </div>
-
-                                        <div className="space-y-6 flex-1">
-                                            {cap.features.map((feat: any, i: number) => (
-                                                <div key={i} className="relative pl-4 border-l-2 border-slate-100 group-hover:border-blue-200 transition-colors">
-                                                    <h4 className="font-bold text-slate-900 text-sm mb-1">
-                                                        {feat.title}
-                                                    </h4>
-                                                    <p className="text-slate-500 text-sm leading-relaxed">
-                                                        {feat.text}
-                                                    </p>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )
-                            })}
                         </div>
                     </div>
                 </Container>

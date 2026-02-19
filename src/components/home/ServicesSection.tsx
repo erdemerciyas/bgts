@@ -30,7 +30,7 @@ export function ServicesSection() {
                             <Text variant="large" className="text-slate-600 mb-8 leading-relaxed">
                                 {description}
                             </Text>
-                            <Link href="/services" className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-primary hover:shadow-lg hover:-translate-y-1">
+                            <Link href="/services" className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-dark hover:shadow-lg hover:-translate-y-1">
                                 {ctaText} <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
                         </div>
@@ -55,7 +55,7 @@ export function ServicesSection() {
                             key={service.id}
                             className={cn(
                                 "relative p-12 lg:p-16 flex flex-col justify-between overflow-hidden group border-r border-white/10 last:border-0",
-                                service.theme === "dark" ? "bg-[#0A1628] text-white" : "bg-corporate-primary text-white"
+                                service.theme === "dark" ? "bg-[#0A1628] text-white" : "bg-corporate-dark text-white"
                             )}
                         >
                             {/* Background Image */}
@@ -66,7 +66,7 @@ export function ServicesSection() {
                                 unoptimized
                                 className="object-cover opacity-10 group-hover:opacity-25 transition-opacity duration-700 mix-blend-overlay"
                             />
-                            <div className={cn("absolute inset-0 pointer-events-none", service.theme === "dark" ? "bg-[#0A1628]/80" : "bg-corporate-primary/80")}></div>
+                            <div className={cn("absolute inset-0 pointer-events-none", service.theme === "dark" ? "bg-[#0A1628]/80" : "bg-corporate-dark/80")}></div>
 
                             {/* Decorative Blur */}
                             <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/5 blur-3xl rounded-full group-hover:bg-white/10 transition-colors duration-700"></div>

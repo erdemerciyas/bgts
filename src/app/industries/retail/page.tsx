@@ -124,19 +124,7 @@ export default function RetailPage() {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
                                     </div>
-                                    {/* Floating Stats */}
-                                    <div className="absolute -bottom-6 left-6 right-6 grid grid-cols-3 gap-2">
-                                        {[
-                                            { icon: Package, label: "B2B Portal" },
-                                            { icon: Truck, label: "Lojistik" },
-                                            { icon: Star, label: "HR/AI" },
-                                        ].map((s, i) => (
-                                            <div key={i} className="bg-white rounded-xl p-3 shadow-lg border border-slate-100 flex flex-col items-center text-center">
-                                                <s.icon className="w-5 h-5 text-orange-600 mb-1" />
-                                                <span className="text-xs font-bold text-slate-700">{s.label}</span>
-                                            </div>
-                                        ))}
-                                    </div>
+
                                 </div>
                             </motion.div>
                         </div>
@@ -161,12 +149,7 @@ export default function RetailPage() {
                                                 </div>
                                                 <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
                                                 <p className="text-white/80 leading-relaxed text-sm">{section.description}</p>
-                                                <div className="mt-6 pt-6 border-t border-white/20">
-                                                    <div className="flex items-center gap-2 text-white/70 text-sm font-medium">
-                                                        <CheckCircle2 className="w-4 h-4" />
-                                                        <span>{section.items.length} Çözüm Alanı</span>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </motion.div>
@@ -202,28 +185,7 @@ export default function RetailPage() {
                     )
                 })}
 
-                {/* CTA Section */}
-                <Section className="bg-slate-900 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-500 rounded-full blur-[200px] opacity-10 pointer-events-none" />
-                    <Container className="relative z-10">
-                        <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto">
-                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                                E-Ticaret Operasyonlarınız İçin<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Dijital Dönüşüm Ortağınız</span>
-                            </h2>
-                            <p className="text-slate-300 text-lg mb-10 leading-relaxed">
-                                B2B portallardan HR/AI çözümlerine, DevOps altyapılarından 7/24 NOC hizmetlerine kadar perakende ekosisteminizi güçlendiriyoruz.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl"
-                            >
-                                Projelerinizi Konuşalım
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
-                        </motion.div>
-                    </Container>
-                </Section>
+
 
             </div>
         </>

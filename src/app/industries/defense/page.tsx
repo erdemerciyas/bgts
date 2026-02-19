@@ -132,33 +132,14 @@ export default function DefensePage() {
                     backgroundImage="/images/headers/savunma-sanayi-teknolojileri.jpg"
                 />
 
-                {/* Standartlar Ribbon */}
-                <Section className="!py-8 relative z-20 bg-slate-50 border-y border-slate-100">
-                    <Container>
-                        <motion.div {...fadeUp} className="bg-slate-900 rounded-2xl p-6 shadow-2xl border border-slate-700">
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                                {standards.map((s, i) => (
-                                    <div key={i} className="flex items-center gap-3 bg-slate-800 hover:bg-slate-700 rounded-xl p-3 transition-colors border border-slate-700">
-                                        <FileCheck className="w-4 h-4 text-blue-400 shrink-0" />
-                                        <div>
-                                            <div className="font-bold text-white text-xs">{s.code}</div>
-                                            <div className="text-[10px] text-slate-400">{s.title}</div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </Container>
-                </Section>
+
 
                 {/* Genel Bakış - Premium Split */}
                 <Section className="pt-24">
                     <Container>
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <motion.div {...fadeUp}>
-                                <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                    <Shield className="w-4 h-4" /> Savunma Sanayi
-                                </div>
+
                                 <Heading variant="h2" className="mb-6 text-slate-900 !text-4xl !font-bold">
                                     Savunma Sanayi Odaklı Yaklaşım
                                 </Heading>
@@ -220,12 +201,7 @@ export default function DefensePage() {
                                                 </div>
                                                 <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
                                                 <p className="text-white/80 leading-relaxed text-sm">{section.description}</p>
-                                                <div className="mt-6 pt-6 border-t border-white/20">
-                                                    <div className="flex items-center gap-2 text-white/70 text-sm font-medium">
-                                                        <CheckCircle2 className="w-4 h-4" />
-                                                        <span>{section.items.length} Hizmet Alanı</span>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </motion.div>
@@ -261,28 +237,7 @@ export default function DefensePage() {
                     )
                 })}
 
-                {/* CTA Section */}
-                <Section className="bg-slate-900 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500 rounded-full blur-[200px] opacity-10 pointer-events-none" />
-                    <Container className="relative z-10">
-                        <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto">
-                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                                Savunma Projeleriniz İçin<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Güvenilir Teknoloji Ortağınız</span>
-                            </h2>
-                            <p className="text-slate-300 text-lg mb-10 leading-relaxed">
-                                Kritik görev sistemlerinden altyapı çözümlerine kadar, savunma sanayi ekosisteminde uçtan uca mühendislik desteği sunuyoruz.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl"
-                            >
-                                Projelerinizi Konuşalım
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
-                        </motion.div>
-                    </Container>
-                </Section>
+
 
             </div>
         </>

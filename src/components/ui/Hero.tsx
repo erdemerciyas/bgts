@@ -65,7 +65,7 @@ export default function Hero({
                             className="text-left"
                         >
 
-                            <Heading variant="h1" className="text-corporate-primary mb-6">
+                            <Heading variant="h1" className="text-corporate-dark mb-6">
                                 {title}
                             </Heading>
                             <Text variant="large" className="text-text-secondary mb-8 max-w-lg">
@@ -76,14 +76,14 @@ export default function Hero({
                                 <div className="flex flex-wrap gap-4">
                                     <Link
                                         href={ctaLink}
-                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-corporate-secondary rounded-full hover:bg-corporate-primary hover:scale-105 shadow-xl shadow-corporate-secondary/20"
+                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-corporate-secondary rounded-full hover:bg-corporate-dark hover:scale-105 shadow-xl shadow-corporate-secondary/20"
                                     >
                                         {ctaText || "Keşfedin"}
                                         <ArrowRight className="w-5 h-5 ml-2" />
                                     </Link>
                                     <Link
                                         href="/contact"
-                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-corporate-primary transition-all bg-white border border-border rounded-full hover:bg-corporate-surface hover:border-corporate-accent shadow-sm"
+                                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-corporate-dark transition-all bg-white border border-border rounded-full hover:bg-corporate-surface hover:border-corporate-accent shadow-sm"
                                     >
                                         İletişime Geçin
                                     </Link>
@@ -138,7 +138,7 @@ export default function Hero({
                         )}
 
                         {/* Dark Overlay for Text Readability */}
-                        <div className="absolute inset-0 bg-corporate-primary/70" />
+                        <div className="absolute inset-0 bg-corporate-dark/70" />
                     </>
                 ) : backgroundImage ? (
                     <>
@@ -151,7 +151,7 @@ export default function Hero({
                                 priority
                             />
                         </div>
-                        <div className="absolute inset-0 bg-corporate-primary/75" />
+                        <div className="absolute inset-0 bg-corporate-dark/75" />
                     </>
                 ) : (
                     <>
@@ -208,7 +208,7 @@ export default function Hero({
                     >
                         <Link
                             href={ctaLink}
-                            className="inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-corporate-secondary rounded-full hover:bg-corporate-primary hover:scale-105 shadow-xl shadow-corporate-secondary/20"
+                            className="inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-corporate-secondary rounded-full hover:bg-corporate-dark hover:scale-105 shadow-xl shadow-corporate-secondary/20"
                         >
                             {ctaText || "Daha Fazlası"}
                             <ArrowRight className="w-5 h-5 ml-2" />

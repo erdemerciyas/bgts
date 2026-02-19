@@ -17,7 +17,7 @@ export function Section({
     const bgStyles = {
         default: "bg-white",
         muted: "bg-corporate-surface",
-        primary: "bg-corporate-primary text-white",
+        primary: "bg-corporate-dark text-white",
         dark: "bg-corporate-dark text-white",
     }
 

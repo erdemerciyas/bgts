@@ -20,7 +20,7 @@ export function CareersSection() {
                             <span className="w-8 h-[2px] bg-corporate-warm rounded-full"></span>
                             {badge}
                         </span>
-                        <Heading variant="h2" className="text-corporate-primary mb-8 leading-tight">
+                        <Heading variant="h2" className="text-corporate-dark mb-8 leading-tight">
                             {heading}
                         </Heading>
                         <Text variant="large" className="text-text-secondary mb-10 leading-relaxed">
@@ -34,14 +34,14 @@ export function CareersSection() {
                                         <GraduationCap className={`w-6 h-6 ${prog.type === 'secondary' ? 'text-corporate-secondary' : 'text-corporate-tertiary'}`} />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-corporate-primary text-lg mb-1">{prog.title}</h4>
+                                        <h4 className="font-bold text-corporate-dark text-lg mb-1">{prog.title}</h4>
                                         <p className="text-text-secondary text-sm">{prog.desc}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <Link href={ctaLink} className="inline-flex h-14 items-center justify-center rounded- full px-10 text-sm font-bold text-white shadow-xl shadow-corporate-warm/20 transition-all bg-corporate-warm hover:bg-corporate-primary hover:-translate-y-1 rounded-full">
+                        <Link href={ctaLink} className="inline-flex h-14 items-center justify-center rounded- full px-10 text-sm font-bold text-white shadow-xl shadow-corporate-warm/20 transition-all bg-corporate-warm hover:bg-corporate-dark hover:-translate-y-1 rounded-full">
                             {ctaText}
                         </Link>
                     </div>
@@ -55,14 +55,8 @@ export function CareersSection() {
                                 className="object-cover"
                             />
                         </div>
-                        {/* Floating Badge */}
-                        <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-xl max-w-xs border border-border hidden md:block animate-float">
-                            <div className="flex items-center gap-3 mb-3">
-                                <Heart className="w-7 h-7 text-corporate-warm fill-current" />
-                                <span className="font-bold text-corporate-primary text-lg">{badgeText}</span>
-                            </div>
-                            <p className="text-sm text-text-secondary leading-snug">{badgeDesc}</p>
-                        </div>
+
+
                     </div>
                 </div>
             </Container>

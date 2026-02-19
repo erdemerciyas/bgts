@@ -13,10 +13,7 @@ export default function CvConverterPage() {
                 <Container className="relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                         <div className="flex-1 space-y-8 text-center lg:text-left">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-semibold tracking-wide">
-                                <LayoutTemplate className="w-4 h-4" />
-                                <span>CV Standardizasyonu</span>
-                            </div>
+
                             <h1 className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
                                 Tüm CV'ler <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Tek Bir Formatta</span>
@@ -43,10 +40,10 @@ export default function CvConverterPage() {
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/30 to-indigo-500/30 rounded-2xl blur-2xl"></div>
                             <div className="relative h-full w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-800/50 backdrop-blur-sm group">
                                 <Image
-                                    src="/images/products/cv-converter/image4.png"
+                                    src="/images/products/cv-converter/cv-converter-hero.png"
                                     alt="CV Converter Dashboard"
                                     fill
-                                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+                                    className="object-cover rounded-lg group-hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>

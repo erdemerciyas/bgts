@@ -19,7 +19,7 @@ export default function HRPage() {
             <Hero
                 title="Yeteneklerinize Değer Veriyoruz"
                 subtitle="Tutkulu, yenilikçi ve sürekli öğrenen bir ekibin parçası olun. Kariyerinizi bizimle şekillendirin."
-                badge="Kariyer"
+
                 className="bg-rose-600"
                 backgroundImage="/images/culture/culture-1.jpg"
             />
@@ -148,10 +148,7 @@ export default function HRPage() {
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-violet-600/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
 
                 <Container className="relative z-10 text-center">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 font-bold text-sm tracking-wide mb-6">
-                        <Sparkles className="w-4 h-4 text-blue-400" />
-                        GENÇ YETENEKLER
-                    </span>
+
 
                     <Heading variant="h2" className="text-white text-4xl md:text-5xl mb-6">
                         Geleceği Kodlamaya Hazır Mısın?
@@ -178,10 +175,7 @@ export default function HRPage() {
                 <Container>
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 text-violet-700 font-bold text-sm tracking-wide">
-                                <Globe className="w-4 h-4" />
-                                YAŞAM TARZI
-                            </span>
+
                             <Heading variant="h2" className="text-slate-900 text-4xl leading-tight">
                                 Sadece Bir İş Değil, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">Tutku.</span>
                             </Heading>

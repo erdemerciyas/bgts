@@ -25,7 +25,7 @@ export default function RetailTelecomPage() {
                 <Hero
                     title="Müşteri Deneyimini Yeniden Tanımlayın"
                     subtitle="Omnichannel perakende ve yüksek hızlı telekom çözümleri ile milyonlarca müşteriye kusursuz, kesintisiz ve kişiselleştirilmiş hizmet sunun."
-                    badge="Tüketici Odaklı Teknoloji"
+
                     className="bg-slate-900"
                     backgroundImage="/images/headers/perakende-ve-telekom-cozumleri.jpg"
                 />
@@ -33,7 +33,7 @@ export default function RetailTelecomPage() {
                 {/* --- ORIGINAL RETAIL CONTENT --- */}
                 <ContentSection
                     title="Akıllı Perakende Dönüşümü"
-                    badge="Retail 4.0"
+
                     content={
                         <div className="space-y-8">
                             <Text variant="large" className="text-slate-600">
@@ -169,7 +169,7 @@ export default function RetailTelecomPage() {
                 <ContentSection
                     reverse
                     title="Geleceğin Telekom Altyapısı"
-                    badge="5G & IoT Ready"
+
                     content={
                         <div className="space-y-8">
                             <Text variant="large" className="text-slate-600">

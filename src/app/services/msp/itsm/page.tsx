@@ -12,7 +12,7 @@ export default function ItsmPage() {
             <Hero
                 title="ITSM as a Service"
                 subtitle="BT operasyonlarınızı dünya standartlarında (ITIL) yönetin, izleyin ve sürekli iyileştirin."
-                badge="MSP Hizmetleri"
+
                 className="bg-teal-900"
                 backgroundImage="/images/headers/msp/ITSM.png"
             />

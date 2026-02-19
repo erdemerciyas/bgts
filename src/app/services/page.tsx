@@ -15,7 +15,7 @@ export default function ServicesPage() {
                 <Hero
                     title="Technology Services"
                     subtitle="End-to-end management of critical systems for operational excellence."
-                    badge="Services"
+
                     className="bg-blue-900"
                     backgroundImage="/images/headers/teknoloji-servisleri-genel.jpg"
                 />

@@ -7,33 +7,21 @@ import { Facebook, Twitter, Linkedin, Instagram, MapPin, Mail, Phone } from "luc
 export default function Footer() {
     return (
         <footer className="flex flex-col">
-            {/* Top Section: Logo & Newsletter/CTA */}
-            <div className="bg-corporate-primary text-white pt-20 pb-16">
+            {/* Footer Section */}
+            <div className="bg-corporate-dark text-white pt-16 pb-10">
                 <div className="container mx-auto px-6">
-                    <div className="flex flex-col md:flex-row justify-between items-start">
-                        <div className="mb-8 md:mb-0">
+                    {/* Links Grid with Logo */}
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-20">
+
+                        {/* Logo & Description */}
+                        <div className="col-span-2 md:col-span-1 space-y-4">
                             <div className="relative w-48 h-16 mb-4 filter brightness-0 invert opacity-90">
                                 <Image src="/BGTS_logo.png" alt="BGTS Logo" fill className="object-contain" />
                             </div>
-                            <p className="text-white/70 max-w-sm">
+                            <p className="text-white/50 text-sm leading-relaxed">
                                 Finans, Savunma, Perakende ve Telekom sektörleri için stratejik teknoloji ortağı. 25 yıldır dijital dönüşümü güvenle yönetiyoruz.
                             </p>
                         </div>
-                        <div className="flex flex-col gap-4">
-                            <h3 className="font-bold text-lg">Bizimle İletişime Geçin</h3>
-                            <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-full bg-corporate-secondary px-8 font-medium text-white transition-all hover:bg-corporate-accent shadow-lg shadow-corporate-secondary/20">
-                                Proje Başlat
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Bottom Section: Links & Copyright */}
-            <div className="bg-corporate-dark text-white pt-16 pb-10">
-                <div className="container mx-auto px-6">
-                    {/* Links Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
 
                         {/* Column 1 */}
                         <div className="space-y-4">
@@ -92,21 +80,21 @@ export default function Footer() {
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="pt-8 border-t border-corporate-primary/20 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-white/30 text-sm">
                             © 2024 BGTS. Tüm hakları saklıdır.
                         </p>
                         <div className="flex gap-6">
-                            <Link href="#" className="p-2 bg-corporate-primary/50 rounded-full hover:bg-corporate-secondary transition-colors text-white">
+                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-corporate-secondary transition-colors text-white">
                                 <Linkedin className="w-4 h-4" />
                             </Link>
-                            <Link href="#" className="p-2 bg-corporate-primary/50 rounded-full hover:bg-corporate-secondary transition-colors text-white">
+                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-corporate-secondary transition-colors text-white">
                                 <Twitter className="w-4 h-4" />
                             </Link>
-                            <Link href="#" className="p-2 bg-corporate-primary/50 rounded-full hover:bg-corporate-secondary transition-colors text-white">
+                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-corporate-secondary transition-colors text-white">
                                 <Instagram className="w-4 h-4" />
                             </Link>
-                            <Link href="#" className="p-2 bg-corporate-primary/50 rounded-full hover:bg-corporate-secondary transition-colors text-white">
+                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-corporate-secondary transition-colors text-white">
                                 <Facebook className="w-4 h-4" />
                             </Link>
                         </div>

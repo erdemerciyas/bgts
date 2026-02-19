@@ -101,7 +101,7 @@ export function HeroSlider() {
 
                             <Link
                                 href={SLIDES[currentSlide].ctaLink}
-                                className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-corporate-secondary hover:bg-corporate-primary text-white text-base md:text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20 group"
+                                className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-corporate-secondary hover:bg-corporate-dark text-white text-base md:text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20 group"
                             >
                                 {SLIDES[currentSlide].ctaText}
                                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

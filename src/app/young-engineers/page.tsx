@@ -119,25 +119,6 @@ export default function YoungEngineersPage() {
                                 </div>
                             </motion.div>
 
-                            {/* Floating Sticker 1 */}
-                            <motion.div
-                                initial={{ scale: 0, rotate: 30 }}
-                                animate={{ scale: 1, rotate: 12 }}
-                                transition={{ delay: 0.6, type: "spring" }}
-                                className="absolute top-0 left-16 bg-blue-500 text-white px-4 py-2 font-black text-sm border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-30"
-                            >
-                                FULL-STACK 💻
-                            </motion.div>
-
-                            {/* Floating Sticker 2 */}
-                            <motion.div
-                                initial={{ scale: 0, rotate: -10 }}
-                                animate={{ scale: 1, rotate: -8 }}
-                                transition={{ delay: 0.8, type: "spring" }}
-                                className="absolute bottom-4 right-12 bg-emerald-400 text-black px-4 py-2 font-black text-sm border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-30"
-                            >
-                                DevOps 🚀
-                            </motion.div>
 
                             {/* Stats Glassmorphism Card */}
                             <motion.div

@@ -16,12 +16,6 @@ const fadeUp = {
     transition: { duration: 0.5 }
 }
 
-const highlights = [
-    { label: "Lider Operatörler", value: "Türkiye'nin", icon: Globe },
-    { label: "Kesintisiz Destek", value: "7/24", icon: Activity },
-    { label: "Platform Yönetimi", value: "Uçtan Uca", icon: Layers },
-    { label: "Operasyonel Süre", value: "10+ Yıl", icon: CheckCircle2 },
-]
 
 const serviceSections = [
     {
@@ -89,24 +83,7 @@ export default function TelecomPage() {
                     backgroundImage="/images/headers/I53A6349.jpg"
                 />
 
-                {/* Highlights Bar */}
-                <Section className="!py-8 relative z-20 bg-slate-50 border-y border-slate-100">
-                    <Container>
-                        <motion.div {...fadeUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                            {highlights.map((h, i) => (
-                                <div key={i} className="bg-white rounded-2xl shadow-lg border border-slate-100 p-5 flex items-center gap-4 hover:shadow-xl transition-shadow">
-                                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-indigo-200">
-                                        <h.icon className="w-6 h-6" />
-                                    </div>
-                                    <div>
-                                        <div className="text-2xl font-black text-slate-900 leading-none">{h.value}</div>
-                                        <div className="text-sm font-semibold text-slate-500 mt-1">{h.label}</div>
-                                    </div>
-                                </div>
-                            ))}
-                        </motion.div>
-                    </Container>
-                </Section>
+
 
                 {/* Genel Bakış - Premium Split */}
                 <Section className="pt-20">
@@ -170,12 +147,7 @@ export default function TelecomPage() {
                                                 </div>
                                                 <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
                                                 <p className="text-white/80 leading-relaxed text-sm">{section.description}</p>
-                                                <div className="mt-6 pt-6 border-t border-white/20">
-                                                    <div className="flex items-center gap-2 text-white/70 text-sm font-medium">
-                                                        <CheckCircle2 className="w-4 h-4" />
-                                                        <span>{section.items.length} Hizmet Alanı</span>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </motion.div>
@@ -211,28 +183,7 @@ export default function TelecomPage() {
                     )
                 })}
 
-                {/* CTA Section */}
-                <Section className="bg-slate-900 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-500 rounded-full blur-[200px] opacity-10 pointer-events-none" />
-                    <Container className="relative z-10">
-                        <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto">
-                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                                Telekom Altyapınız İçin<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Güvenilir Teknoloji Ortağınız</span>
-                            </h2>
-                            <p className="text-slate-300 text-lg mb-10 leading-relaxed">
-                                Dijital platform yönetiminden 7/24 operasyonel desteğe kadar, telekom ekosisteminde uçtan uca mühendislik hizmeti sunuyoruz.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl"
-                            >
-                                Projelerinizi Konuşalım
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
-                        </motion.div>
-                    </Container>
-                </Section>
+
 
             </div>
         </>

@@ -41,7 +41,7 @@ export const HOME_CONTENT = {
                 ctaLink: "/services/managed-services",
                 ctaText: "Çözümleri Keşfedin",
                 image: "/images/home/yonetilen-hizmetler.jpg",
-                theme: "corporate" // corporate-primary
+                theme: "corporate" // corporate-dark
             },
             {
                 id: "software-development",
@@ -61,7 +61,7 @@ export const HOME_CONTENT = {
                 ctaLink: "/services/devops",
                 ctaText: "Çözümleri Keşfedin",
                 image: "/images/home/devops-cozumleri.jpg",
-                theme: "corporate" // corporate-primary
+                theme: "corporate" // corporate-dark
             }
         ]
     },

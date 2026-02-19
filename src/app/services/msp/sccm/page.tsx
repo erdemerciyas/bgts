@@ -18,7 +18,7 @@ export default function SccmPage() {
             <Hero
                 title="SCCM & SRE Hizmetleri"
                 subtitle="Sıfır Dokunuşlu İstemci Yönetimi. IT operasyonlarınızı yangın söndürmekten, yangın önlemeye taşıyoruz."
-                badge="MSP Hizmetleri"
+
                 className="bg-cyan-900"
                 backgroundImage="/images/headers/msp/SCCM-SRE.png"
             />

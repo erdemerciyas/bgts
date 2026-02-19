@@ -28,18 +28,18 @@ export const SOFTWARE_DEV_CONTENT = {
             description: "Bankacılık ve finans sektörüne özel regülasyonlara uyumlu, yüksek güvenlikli ve yüksek performanslı yazılım çözümleri geliştiriyoruz.",
             features: [
                 {
-                    title: "Kredi, Risk ve Tahsilat Süreçleri",
+                    title: "Kredi & Risk ve Tahsilat Süreçleri",
                     description: "Kredi risk izleme, sorunlu kredi yönetimi, tahsilat ve tasfiye süreçleri, müşteri sınıflama (1–5), yasal takip ve varlık yönetim şirketine devir süreçleri gibi uçtan uca finansal iş akışlarını kapsıyoruz."
                 },
                 {
-                    title: "Mevduat, Teminat ve Dış Ticaret",
+                    title: "Mevduat & Teminat ve Dış Ticaret",
                     description: "Mevduat, teminat yönetimi, kampanya yönetimi ve dış ticaret ihracat işlemleri için ölçeklenebilir ve entegre sistemler sunuyoruz."
                 }
             ]
         },
         {
             id: "trading",
-            title: "E-Trading & Market Data & Düşük Gecikmeli Sistemler",
+            title: "E-Trading, Market Data & Düşük Gecikmeli Sistemler",
             subtitle: "Low-Latency Finansal Altyapılar",
             icon: TrendingUp,
             image: "/images/services/trading-market-data-sistemleri.png",
@@ -50,7 +50,7 @@ export const SOFTWARE_DEV_CONTENT = {
                     description: "FIX protokolü, pricing ve hedging altyapıları, gerçek zamanlı market-data işleme ve performans kritik sistemlerde uzmanlığa sahibiz."
                 },
                 {
-                    title: "Yüksek Trafik ve Ölçeklenebilirlik",
+                    title: "Yüksek Trafik & Ölçeklenebilirlik",
                     description: "Yüksek trafik altında kararlılığını koruyan, ölçeklenebilir mimariler geliştiriyoruz."
                 }
             ]
@@ -148,44 +148,28 @@ export const SOFTWARE_DEV_CONTENT = {
             ]
         }
     ],
-    capabilities: {
-        title: "Yazılım Geliştirme Hizmetleri",
-        subtitle: "Modern Yazılım Mimarileri, DevOps ve Güvenlik Odaklı Yaklaşımımız",
-        items: [
-            {
-                icon: Layers,
-                title: "Modern Yazılım Mimarileri",
-                features: [
-                    {
-                        title: "Mimari Yaklaşım",
-                        text: "DDD, API-first, mikroservis ve event-driven mimarilerle ölçeklenebilir ve sürdürülebilir sistemler tasarlıyoruz."
-                    },
-                    {
-                        title: "Kalite & Sürdürülebilirlik",
-                        text: "Clean Architecture ve SOLID prensipleriyle uzun ömürlü yazılım çözümleri üretiyoruz."
-                    }
-                ]
-            },
-            {
-                icon: GitBranch,
-                title: "DevOps Uyumlu Yazılım Geliştirme",
-                features: [
-                    {
-                        title: "CI/CD & Deployment",
-                        text: "CI/CD pipeline’ları, test otomasyonu, containerized deployment (Docker, Kubernetes) ve observability çözümleri ile yazılım yaşam döngüsünü uçtan uca yönetiyoruz."
-                    }
-                ]
-            },
-            {
-                icon: Lock,
-                title: "Güvenlik & Regülasyon Uyumlu Geliştirme",
-                features: [
-                    {
-                        title: "Uçtan Uca Güvenlik",
-                        text: "OWASP, API security, IAM, rate-limit, HSM entegrasyonu, zaman damgası ve e-imza çözümleri ile güvenliği yazılımın merkezine alıyoruz."
-                    }
-                ]
-            }
-        ]
-    }
+    developmentDomains: [
+        {
+            id: "development-services",
+            title: "Yazılım Geliştirme Hizmetleri",
+            subtitle: "Modern Mimari, DevOps & Güvenlik",
+            icon: Layers,
+            image: "/images/services/yazilim-modernizasyonu.png",
+            description: "Modern yazılım mimarileri, DevOps uyumlu geliştirme süreçleri ve güvenlik odaklı yaklaşımımızla kurumsal yazılım projelerinizi uçtan uca destekliyoruz.",
+            features: [
+                {
+                    title: "Modern Yazılım Mimarileri",
+                    description: "DDD, API-first, mikroservis ve event-driven mimarilerle ölçeklenebilir sistemler tasarlıyoruz. Clean Architecture ve SOLID prensipleriyle uzun ömürlü yazılım çözümleri üretiyoruz."
+                },
+                {
+                    title: "DevOps Uyumlu Yazılım Geliştirme",
+                    description: "CI/CD pipeline'ları, test otomasyonu, containerized deployment (Docker, Kubernetes) ve observability çözümleri ile yazılım yaşam döngüsünü uçtan uca yönetiyoruz."
+                },
+                {
+                    title: "Güvenlik & Regülasyon Uyumlu Geliştirme",
+                    description: "OWASP, API security, IAM, rate-limit, HSM entegrasyonu, zaman damgası ve e-imza çözümleri ile güvenliği yazılımın merkezine alıyoruz."
+                }
+            ]
+        }
+    ]
 };

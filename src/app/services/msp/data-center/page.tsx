@@ -12,7 +12,7 @@ export default function DataCenterPage() {
             <Hero
                 title="Veri Merkezi Yönetimi ve İzleme Hizmetleri"
                 subtitle="30 yıllık mühendislik deneyimi ile operasyonel mükemmelliği hedefleyen uçtan uca veri merkezi yönetimi."
-                badge="MSP Hizmetleri"
+
                 className="bg-blue-900"
                 backgroundImage="/images/headers/msp/Veri-Merkezi.png"
             />

@@ -16,7 +16,7 @@ export default function ContactPage() {
         <Hero
           title="Bize Ulaşın"
           subtitle="Projeleriniz için bir araya gelelim veya sorularınızı yanıtlayalım."
-          badge="İletişim"
+
           className="bg-slate-900"
           backgroundImage="/images/headers/teknoloji-servisleri-genel.jpg"
         />

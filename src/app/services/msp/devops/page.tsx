@@ -18,7 +18,7 @@ export default function DevopsPage() {
             <Hero
                 title="Kurumsal DevOps Platformu"
                 subtitle="Analizden canlı ortama, stratejik planlamadan 7/24 yönetime uzanan uçtan uca mimari dönüşüm."
-                badge="MSP Hizmetleri"
+
                 className="bg-violet-900"
                 backgroundImage="/images/headers/msp/DevOps-Altyapi.png"
             />

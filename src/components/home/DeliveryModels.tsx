@@ -51,8 +51,8 @@ export function DeliveryModels() {
                             className={cn(
                                 "group relative p-12 rounded-[2.5rem] transition-all duration-500",
                                 model.variant === "light"
-                                    ? "bg-white border text-corporate-primary shadow-xl hover:shadow-2xl hover:border-corporate-secondary/20"
-                                    : "bg-corporate-primary text-white shadow-2xl hover:shadow-corporate-primary/40 hover:-translate-y-2"
+                                    ? "bg-white border text-corporate-dark shadow-xl hover:shadow-2xl hover:border-corporate-secondary/20"
+                                    : "bg-corporate-dark text-white shadow-2xl hover:shadow-corporate-dark/40 hover:-translate-y-2"
                             )}
                         >
                             <div className={cn(
@@ -62,7 +62,7 @@ export function DeliveryModels() {
                                 {model.id === "turnkey" ? <Settings className="w-8 h-8" /> : <Users className="w-8 h-8" />}
                             </div>
 
-                            <Heading variant="h3" className={cn("mb-4", model.variant === "light" ? "text-corporate-primary" : "text-white")}>
+                            <Heading variant="h3" className={cn("mb-4", model.variant === "light" ? "text-corporate-dark" : "text-white")}>
                                 {model.title}
                             </Heading>
 
@@ -86,8 +86,8 @@ export function DeliveryModels() {
                                 className={cn(
                                     "block w-full py-5 rounded-2xl font-bold text-center transition-all duration-300",
                                     model.variant === "light"
-                                        ? "border-2 border-corporate-border text-corporate-primary hover:border-corporate-secondary hover:text-white hover:bg-corporate-secondary"
-                                        : "bg-corporate-tertiary text-white hover:bg-white hover:text-corporate-primary hover:shadow-lg"
+                                        ? "border-2 border-corporate-border text-corporate-dark hover:border-corporate-secondary hover:text-white hover:bg-corporate-secondary"
+                                        : "bg-corporate-tertiary text-white hover:bg-white hover:text-corporate-dark hover:shadow-lg"
                                 )}
                             >
                                 {model.ctaText}

@@ -84,7 +84,7 @@ export default function Doc2BotPage() {
                                     alt="Doc2Bot UI"
                                     width={200}
                                     height={200}
-                                    className="absolute -bottom-10 -right-10 w-48 h-auto drop-shadow-2xl animate-bounce duration-[3000ms]"
+                                    className="absolute -bottom-10 -right-10 w-48 h-auto drop-shadow-2xl"
                                 />
                             </div>
                         </div>
@@ -134,17 +134,7 @@ export default function Doc2BotPage() {
                 </Container>
             </section>
 
-            {/* BOTTOM CTA */}
-            <section className="py-20 bg-slate-50">
-                <Container className="text-center">
-                    <h2 className="text-3xl font-black text-slate-900 mb-8">Kurumsal Hafızanızı Aktive Edin</h2>
-                    <div className="flex justify-center gap-4">
-                        <Link href="/contact" className="px-8 py-4 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-colors">
-                            Bize Ulaşın
-                        </Link>
-                    </div>
-                </Container>
-            </section>
+
         </div>
     )
 }

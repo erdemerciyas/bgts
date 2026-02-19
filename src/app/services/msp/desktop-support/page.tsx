@@ -12,7 +12,7 @@ export default function DesktopSupportPage() {
             <Hero
                 title="Uçtan Uca Kullanıcı ve Cihaz Yönetimi"
                 subtitle="L1 Desteği sadece buz dağının görünen kısmıdır. Süreç danışmanlığı, merkezi yönetim ve yapay zeka operasyonları ile fark yaratın."
-                badge="MSP Hizmetleri"
+
                 className="bg-indigo-900"
                 backgroundImage="/images/headers/msp/Desktop-Support.png"
             />

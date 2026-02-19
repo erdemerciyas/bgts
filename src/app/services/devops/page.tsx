@@ -18,7 +18,7 @@ export default function DevOpsPage() {
                 <Hero
                     title="DevOps & SRE"
                     subtitle="Otomatik boru hatları ve bulut tabanlı güvenilirlik ile dijital dönüşümü hızlandırın."
-                    badge="Teknoloji Servisleri"
+
                     className="bg-indigo-900"
                     backgroundImage="/images/headers/devops-ve-altyapi-hizmetleri.jpg"
                 />
@@ -78,7 +78,7 @@ export default function DevOpsPage() {
                 {/* CI/CD & Automation Section */}
                 <ContentSection
                     title="CI/CD & Otomasyon"
-                    badge="Hız"
+
                     content={
                         <div className="space-y-6">
                             <strong className="text-indigo-700">Jenkins, GitLab, Azure DevOps ve ArgoCD</strong> üzerinde uçtan uca pipeline&apos;lar tasarlıyor ve yönetiyoruz. Otomatik test ve sürüm yönetimi, manuel hata risklerini en aza indirirken teslimat döngülerini hızlandırır.
@@ -126,7 +126,7 @@ export default function DevOpsPage() {
                 <ContentSection
                     reverse
                     title="Kubernetes & Cloud-Native"
-                    badge="Ölçek"
+
                     content={
                         <div className="space-y-6">
                             <Text variant="large">

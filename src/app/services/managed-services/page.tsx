@@ -139,42 +139,29 @@ export default function ManagedServicesPage() {
                         {/* Overlay Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80" />
 
-                        {/* Floating Icon Badge */}
-                        <div className={cn(
-                            "absolute bottom-8 p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl flex items-center gap-4 border border-white/50 z-10",
-                            isReversed ? "left-8" : "right-8"
-                        )}>
-                            <div className="p-2.5 bg-blue-50 rounded-xl">
-                                <Icon className="w-8 h-8 text-blue-600" />
-                            </div>
-                            <div>
-                                <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">ALAN</span>
-                                <span className="block text-sm font-bold text-slate-800">{domain.title}</span>
-                            </div>
-                        </div>
                     </div>
 
                     {/* Content Section */}
                     <div className="w-full lg:w-[55%] p-8 lg:p-14 flex flex-col justify-center">
                         <div className="mb-8">
-                            <Heading variant="h2" className="text-slate-900 mb-6 leading-tight">
+                            <Heading variant="h2" className="text-slate-900 mb-4 leading-tight">
                                 {domain.title}
                             </Heading>
-                            <Text className="text-lg text-slate-600 leading-relaxed">
+                            <Text className="text-base text-slate-500 leading-relaxed font-normal">
                                 {domain.description}
                             </Text>
                         </div>
 
-                        <div className="grid gap-3">
+                        <div className="space-y-4">
                             {domain.features.map((feature: any, i: number) => (
-                                <div key={i} className="flex gap-4 p-4 rounded-xl bg-white/60 border border-slate-100 hover:bg-white hover:shadow-sm transition-all duration-200">
+                                <div key={i} className="flex gap-4 p-4 rounded-2xl bg-white/80 border border-slate-100 hover:bg-white hover:shadow-md transition-all duration-300">
                                     <div className="shrink-0 mt-1">
-                                        <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
-                                            <ChevronRight className="w-3.5 h-3.5 text-blue-600" />
+                                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <ChevronRight className="w-4 h-4 text-blue-600" />
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-slate-900 text-sm mb-1">{feature.title}</h4>
+                                        <h4 className="font-bold text-slate-900 mb-1">{feature.title}</h4>
                                         <p className="text-sm text-slate-500 leading-relaxed">
                                             {feature.description}
                                         </p>
@@ -220,7 +207,7 @@ export default function ManagedServicesPage() {
             <Hero
                 title={hero.title}
                 subtitle={hero.subtitle}
-                badge={hero.badge}
+
                 layout="simple"
                 backgroundImage={hero.backgroundImage}
                 align="center"
@@ -312,9 +299,7 @@ export default function ManagedServicesPage() {
                 <Container>
                     <div className="space-y-24">
                         <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-xs font-bold text-blue-600 mb-6 uppercase tracking-wider">
-                                YETKİNLİKLERİMİZ
-                            </span>
+
                             <Heading variant="h2" className="text-slate-900 mb-6">
                                 {capabilities.title}
                             </Heading>
