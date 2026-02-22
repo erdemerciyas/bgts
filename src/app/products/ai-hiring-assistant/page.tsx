@@ -41,7 +41,7 @@ export default function AiHiringPage() {
                             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/30 to-purple-500/30 rounded-2xl blur-2xl"></div>
                             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-800/50 backdrop-blur-sm">
                                 <Image
-                                    src="/images/products/ai-hiring/image10.png"
+                                    src="/images/products/ai-hiring/hero-image.png"
                                     alt="AI Hiring Dashboard"
                                     width={800}
                                     height={600}

@@ -11,6 +11,7 @@ const exo = Exo({ subsets: ["latin"], variable: "--font-exo" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bgts.com.tr"),
   title: "BGTS - Business & Global Technology Solutions",
   description: "Finans, Savunma, Perakende ve Telekom sektörleri için lider teknoloji ortağı. 25 yılı aşkın deneyimle, 1,400+ mühendis ile dijital dönüşüm çözümleri sunuyoruz.",
   keywords: ["yazılım geliştirme", "devops", "yönetilen hizmetler", "teknoloji danışmanlığı", "dijital dönüşüm", "finans", "savunma", "perakende", "telekom"],

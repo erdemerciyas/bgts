@@ -34,80 +34,117 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
         aria-label="Hizmetler menüsü"
     >
         <div className="flex">
-            {/* Column 1 (60%) */}
-            <div className="w-[60%] bg-blue-50/40 p-10 border-r border-blue-100/60 flex flex-col">
+            {/* Column 1 (55%) */}
+            <div className="w-[55%] bg-blue-50/40 p-10 border-r border-slate-200/80 flex flex-col relative">
+                {/* Teknoloji & Mühendislik */}
+                <h3 className={STYLES.columnHeader}>YAZILIM HİZMETLERİ</h3>
+                <div className="space-y-6">
+                    <Link onClick={closeMenu} href="/services/software-development#bigdata" className="group flex items-center gap-3">
+                        <Database className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-indigo-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-indigo-600 transition-colors">Büyük Veri & Gerçek Zamanlı Veri İşleme</h4>
+                    </Link>
+                    <Link onClick={closeMenu} href="/services/software-development#ai" className="group flex items-center gap-3">
+                        <Cpu className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-amber-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-amber-600 transition-colors">Yapay Zekâ & AI-First Mimari Çözümleri</h4>
+                    </Link>
+                    <Link onClick={closeMenu} href="/services/software-development#modernization" className="group flex items-center gap-3">
+                        <RefreshCw className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-cyan-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-cyan-600 transition-colors">Yazılım Modernizasyonu & Mikroservis Dönüşümü</h4>
+                    </Link>
+                    <Link onClick={closeMenu} href="/services/software-development#development-services" className="group flex items-center gap-3">
+                        <Layers className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-blue-600 transition-colors">Yazılım Geliştirme Hizmetleri</h4>
+                    </Link>
+                </div>
+
                 {/* Sektörel Çözümler */}
-                <h3 className={STYLES.columnHeader}>SEKTÖREL ÇÖZÜMLER</h3>
-                <div className="space-y-4 mb-10">
+                <h3 className={cn(STYLES.columnHeader, "mt-8")}>SEKTÖREL YAZILIM ÇÖZÜMLERİ</h3>
+                <div className="space-y-6 mb-10">
                     <Link onClick={closeMenu} href="/services/software-development#banking" className="group flex items-center gap-3">
-                        <Landmark className="w-5 h-5 shrink-0 text-emerald-400 group-hover:text-emerald-600 transition-colors" />
+                        <Landmark className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-emerald-600 transition-colors" />
                         <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-emerald-600 transition-colors">Bankacılık & Finansal Sistemler</h4>
                     </Link>
                     <Link onClick={closeMenu} href="/services/software-development#trading" className="group flex items-center gap-3">
-                        <TrendingUp className="w-5 h-5 shrink-0 text-sky-400 group-hover:text-sky-600 transition-colors" />
+                        <TrendingUp className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-sky-600 transition-colors" />
                         <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-sky-600 transition-colors">E-Trading & Market Data & Düşük Gecikmeli Sistemler</h4>
                     </Link>
                     <Link onClick={closeMenu} href="/services/software-development#telecom" className="group flex items-center gap-3">
-                        <Radio className="w-5 h-5 shrink-0 text-violet-400 group-hover:text-violet-600 transition-colors" />
+                        <Radio className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-violet-600 transition-colors" />
                         <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-violet-600 transition-colors">Telekom & Dijital İletişim Platformları</h4>
                     </Link>
                     <Link onClick={closeMenu} href="/services/software-development#fraud" className="group flex items-center gap-3">
-                        <ShieldAlert className="w-5 h-5 shrink-0 text-rose-400 group-hover:text-rose-600 transition-colors" />
+                        <ShieldAlert className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-rose-600 transition-colors" />
                         <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-rose-600 transition-colors">Fraud & Risk & AI Destekli Doğrulama Sistemleri</h4>
                     </Link>
                 </div>
 
-                {/* Teknoloji & Mühendislik */}
-                <h3 className={STYLES.columnHeader}>TEKNOLOJİ & MÜHENDİSLİK</h3>
-                <div className="space-y-4">
-                    <Link onClick={closeMenu} href="/services/software-development#bigdata" className="group flex items-center gap-3">
-                        <Database className="w-5 h-5 shrink-0 text-indigo-400 group-hover:text-indigo-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-indigo-600 transition-colors">Büyük Veri & Gerçek Zamanlı Veri İşleme</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/software-development#ai" className="group flex items-center gap-3">
-                        <Cpu className="w-5 h-5 shrink-0 text-amber-400 group-hover:text-amber-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-amber-600 transition-colors">Yapay Zekâ & AI-First Mimari Çözümleri</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/software-development#modernization" className="group flex items-center gap-3">
-                        <RefreshCw className="w-5 h-5 shrink-0 text-cyan-400 group-hover:text-cyan-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-cyan-600 transition-colors">Yazılım Modernizasyonu & Mikroservis Dönüşümü</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/software-development#development-services" className="group flex items-center gap-3">
-                        <Layers className="w-5 h-5 shrink-0 text-blue-400 group-hover:text-blue-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-blue-600 transition-colors">Yazılım Geliştirme Hizmetleri</h4>
-                    </Link>
-                </div>
             </div>
 
-            {/* Column 2: Yönetilen Hizmetler (40%) */}
-            <div className="w-[40%] bg-[#f8f9fa] p-10 flex flex-col">
-                <h3 className={STYLES.columnHeader}>YÖNETİLEN HİZMETLER (MSP)</h3>
-                <div className="space-y-4">
-                    <Link onClick={closeMenu} href="/services/managed-services#data-center" className="group flex items-center gap-3">
-                        <Server className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-slate-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-slate-600 transition-colors">Veri Merkezi Yönetimi</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#monitoring" className="group flex items-center gap-3">
-                        <Activity className="w-5 h-5 shrink-0 text-sky-400 group-hover:text-sky-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-sky-600 transition-colors">7/24 İzleme & NOC</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#desktop-support" className="group flex items-center gap-3">
-                        <Terminal className="w-5 h-5 shrink-0 text-teal-400 group-hover:text-teal-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-teal-600 transition-colors">Son Kullanıcı ve Cihaz Yönetimi</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#itsm" className="group flex items-center gap-3">
-                        <FileText className="w-5 h-5 shrink-0 text-blue-400 group-hover:text-blue-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-blue-600 transition-colors">ITSM as a Service</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#sccm" className="group flex items-center gap-3">
-                        <RefreshCw className="w-5 h-5 shrink-0 text-green-400 group-hover:text-green-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-green-600 transition-colors">SCCM & SRE Hizmetleri</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#devops" className="group flex items-center gap-3">
-                        <Code className="w-5 h-5 shrink-0 text-red-400 group-hover:text-red-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-red-600 transition-colors">DevOps as a Service</h4>
-                    </Link>
+            {/* Column 2: Yönetilen Hizmetler (45%) */}
+            <div className="w-[45%] bg-[#f8f9fa] p-10 flex flex-col justify-between">
+                <div>
+                    <h3 className={STYLES.columnHeader}>YÖNETİLEN HİZMETLER (MSP)</h3>
+                    <div className="space-y-6">
+                        <Link onClick={closeMenu} href="/services/managed-services#data-center" className="group flex items-center gap-3">
+                            <Server className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-slate-600 transition-colors" />
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-slate-600 transition-colors">Veri Merkezi Yönetimi</h4>
+                        </Link>
+                        <Link onClick={closeMenu} href="/services/managed-services#monitoring" className="group flex items-center gap-3">
+                            <Activity className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-sky-600 transition-colors" />
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-sky-600 transition-colors">7/24 İzleme & NOC</h4>
+                        </Link>
+                        <Link onClick={closeMenu} href="/services/managed-services#desktop-support" className="group flex items-center gap-3">
+                            <Terminal className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-teal-600 transition-colors" />
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-teal-600 transition-colors">Son Kullanıcı ve Cihaz Yönetimi</h4>
+                        </Link>
+                        <Link onClick={closeMenu} href="/services/managed-services#itsm" className="group flex items-center gap-3">
+                            <FileText className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-blue-600 transition-colors">ITSM as a Service</h4>
+                        </Link>
+                        <Link onClick={closeMenu} href="/services/managed-services#sccm" className="group flex items-center gap-3">
+                            <RefreshCw className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-green-600 transition-colors" />
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-green-600 transition-colors">SCCM & SRE Hizmetleri</h4>
+                        </Link>
+                        <Link onClick={closeMenu} href="/services/managed-services#devops" className="group flex items-center gap-3">
+                            <Code className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-red-600 transition-colors" />
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-red-600 transition-colors">DevOps as a Service</h4>
+                        </Link>
+                    </div>
                 </div>
+
+                {/* Premium Feature Card */}
+                <Link
+                    href="/services/managed-services"
+                    onClick={closeMenu}
+                    className="mt-8 relative h-[140px] rounded-2xl overflow-hidden group flex-shrink-0 p-5 bg-[#0B0F25] border border-slate-800 shadow-xl hover:shadow-cyan-900/20 transition-all duration-500 hover:-translate-y-1"
+                >
+                    {/* Background Noise & Grid */}
+                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-soft-light" />
+                    <div className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity" style={{ backgroundImage: 'radial-gradient(ellipse at center, white 1px, transparent 1px)', backgroundSize: '16px 16px' }} />
+
+                    {/* Glowing Accents */}
+                    <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#0070BA]/20 rounded-full blur-3xl group-hover:bg-[#0070BA]/40 transition-colors duration-700" />
+                    <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-cyan-400/10 rounded-full blur-2xl group-hover:bg-cyan-400/20 transition-colors duration-700" />
+
+                    <div className="relative z-10 flex items-start justify-between w-full h-full">
+                        <div className="flex flex-col justify-between h-full">
+                            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/10 border border-blue-400/20 backdrop-blur-md flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:border-cyan-400/40 transition-all duration-500">
+                                <Shield className="w-4 h-4" />
+                            </div>
+                            <div className="mt-auto">
+                                <h4 className="text-white font-extrabold text-[14px] leading-tight mb-1 uppercase tracking-wide group-hover:text-cyan-300 transition-colors">
+                                    YÖNETİLEN HİZMETLER
+                                </h4>
+                                <p className="text-slate-400 text-[11px] font-medium leading-relaxed max-w-[200px] group-hover:text-slate-300 transition-colors">
+
+                                </p>
+                            </div>
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 shrink-0 self-end group-hover:bg-cyan-500 group-hover:text-white group-hover:border-cyan-400 transition-all duration-500">
+                            <ArrowUpRight className="w-4 h-4" />
+                        </div>
+                    </div>
+                </Link>
             </div>
         </div>
 

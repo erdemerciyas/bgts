@@ -236,31 +236,12 @@ export default function SoftwareDevelopmentPage() {
                         {/* Sidebar Navigation */}
                         <aside className="hidden lg:block w-72 shrink-0 relative">
                             <div className="sticky top-40 space-y-10 max-h-[calc(100vh-160px)] overflow-y-auto pb-10 pr-4 custom-scrollbar">
-                                {/* Sectoral Solutions */}
-                                <div className="relative group/section">
-                                    <div className="absolute left-[7px] top-8 bottom-0 w-[2px] bg-slate-100" />
-                                    <Text variant="small" className="font-extrabold text-slate-900 tracking-widest uppercase mb-4 pl-0 text-xs">
-                                        Sektörel Çözümler
-                                    </Text>
-                                    <nav className="flex flex-col space-y-1 border-l-2 border-slate-100 ml-[7px] pl-2">
-                                        {sectoralDomains.map((domain, index) => (
-                                            <SidebarLink
-                                                key={domain.id}
-                                                id={domain.id}
-                                                title={domain.title}
-                                                colorClass={sectionTextColors[index % sectionTextColors.length]}
-                                                activeBgClass={sectionActiveBgColors[index % sectionActiveBgColors.length]}
-                                            />
-                                        ))}
-                                    </nav>
-                                </div>
-
                                 {/* Technical Solutions */}
                                 <div className="relative group/section">
                                     {/* Removed the absolute line duplicate if I move track inside */}
                                     {/* Actually keeping the original structure but using SidebarLink */}
                                     <Text variant="small" className="font-extrabold text-slate-900 tracking-widest uppercase mb-4 pl-0 text-xs">
-                                        Teknoloji & Mühendislik
+                                        Yazılım Hizmetleri
                                     </Text>
                                     <nav className="flex flex-col space-y-1 border-l-2 border-slate-100 ml-[7px] pl-2">
                                         {technicalDomains.map((domain, index) => {
@@ -290,8 +271,24 @@ export default function SoftwareDevelopmentPage() {
                                         })}
                                     </nav>
                                 </div>
-
-
+                                {/* Sectoral Solutions */}
+                                <div className="relative group/section">
+                                    <div className="absolute left-[7px] top-8 bottom-0 w-[2px] bg-slate-100" />
+                                    <Text variant="small" className="font-extrabold text-slate-900 tracking-widest uppercase mb-4 pl-0 text-xs">
+                                        Sektörel Yazılım Çözümleri
+                                    </Text>
+                                    <nav className="flex flex-col space-y-1 border-l-2 border-slate-100 ml-[7px] pl-2">
+                                        {sectoralDomains.map((domain, index) => (
+                                            <SidebarLink
+                                                key={domain.id}
+                                                id={domain.id}
+                                                title={domain.title}
+                                                colorClass={sectionTextColors[index % sectionTextColors.length]}
+                                                activeBgClass={sectionActiveBgColors[index % sectionActiveBgColors.length]}
+                                            />
+                                        ))}
+                                    </nav>
+                                </div>
                             </div>
                         </aside>
 

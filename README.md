@@ -25,8 +25,9 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Responsive Tasarım:** Mobil, tablet ve masaüstü cihazlarda kusursuz çalışan esnek (fluid) yerleşimler.
 
 ### Yeni Eklenen Modüller (v0.3.0)
+- **Bankacılık ve Finans (Kapsamlı Redesign):** PDF verileri ve standartlar doğrultusunda baştan aşağı yenilenmiş, interaktif uzmanlık alanları ve detaylı başarı hikayelerini barındıran premium endüstri sayfası (`/industries/banking`).
+- **AI Hiring Assistant:** Yapay zeka destekli işe alım ürününün özelliklerini anlatan dinamik ürün sayfası (`/products/ai-hiring-assistant`).
 - **İnfografikler Sayfası:** Veri görselleştirmesi ile zenginleştirilmiş istatistik sayfası (`/resources/infographics`).
-- **Premium Sektör Sayfaları:** Bankacılık, Savunma, Telekomünikasyon gibi dikeyler için özel tasarlanmış detay sayfaları.
 - **Kariyer & Kültür:** Gerçek ofis fotoğrafları ve çalışan hikayeleriyle zenginleştirilmiş İK sayfaları.
 - **Yönetilen Hizmetler (MSP):** Tüm IT hizmetlerinin tek çatı altında toplandığı detaylı hizmet kataloğu.
 
