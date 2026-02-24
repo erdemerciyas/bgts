@@ -81,7 +81,7 @@ export default function Breadcrumb({ items, className, showHome = true }: Breadc
                         {item.icon && <item.icon className="w-4 h-4 inline mr-1.5" />}
                         {item.label}
                       </span>
-                    ) : (
+                    ) : item.href === "/" ? (
                       <Link
                         href={item.href}
                         className={cn(
@@ -97,6 +97,19 @@ export default function Breadcrumb({ items, className, showHome = true }: Breadc
                           {item.label}
                         </span>
                       </Link>
+                    ) : (
+                      <span
+                        className={cn(
+                          "flex items-center px-3 py-1.5 rounded-lg text-slate-600"
+                        )}
+                      >
+                        {item.icon && (
+                          <item.icon className="w-4 h-4 mr-1.5" />
+                        )}
+                        <span>
+                          {item.label}
+                        </span>
+                      </span>
                     )}
                   </motion.li>
 

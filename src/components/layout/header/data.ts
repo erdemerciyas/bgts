@@ -14,10 +14,10 @@ export const STYLES = {
     itemTitle: "font-bold text-slate-900 text-[15px] mb-1 group-hover:text-blue-600 transition-colors uppercase leading-tight",
 
     // Item Descriptions (Subtext) - MEDIUM + COLOR
-    itemDesc: "text-slate-500 text-[13px] leading-relaxed font-medium",
+    itemDesc: "text-slate-500 text-[13px] leading-relaxed font-medium min-h-[44px]",
 
     // Italic Descriptions (Quotes/Products)
-    itemDescItalic: "text-slate-500 text-[13px] leading-relaxed font-medium italic",
+    itemDescItalic: "text-slate-500 text-[13px] leading-relaxed font-medium italic min-h-[44px]",
 
     // Link / Interaction Styles
     linkGroup: "group block relative pl-8",
@@ -34,10 +34,10 @@ export const STYLES = {
 }
 
 export const NAV_ITEMS = [
-    { name: "HİZMETLER", href: "/services", id: "services" },
-    { name: "SEKTÖRLER", href: "/industries", id: "industries" },
-    { name: "ÜRÜNLER", href: "/products", id: "products" },
+    { name: "HİZMETLER", href: "#", id: "services" },
+    { name: "SEKTÖRLER", href: "#", id: "industries" },
+    { name: "ÜRÜNLER", href: "#", id: "products" },
     { name: "GENÇ MÜHENDİSLER", href: "/young-engineers", id: "talent" },
-    { name: "BİLGİ MERKEZİ", href: "/resources", id: "resources" },
+    { name: "BİLGİ MERKEZİ", href: "#", id: "resources" },
     { name: "YERİNİ AL", href: "/social-contribution", id: "careers" },
 ]

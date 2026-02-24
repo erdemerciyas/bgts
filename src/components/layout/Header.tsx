@@ -72,6 +72,11 @@ export default function Header() {
                             >
                                 <Link
                                     href={item.href}
+                                    onClick={(e) => {
+                                        if (item.href === "#" || item.href === "") {
+                                            e.preventDefault();
+                                        }
+                                    }}
                                     className={cn(
                                         "flex items-center gap-1.5 text-[15px] font-bold tracking-wide transition-colors py-8 border-b-2 border-transparent uppercase whitespace-nowrap", // Increased font size slightly to 15px per design
                                         textColorClass,

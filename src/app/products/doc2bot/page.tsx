@@ -15,10 +15,6 @@ export default function Doc2BotPage() {
                 <Container className="relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
                         <div className="flex-1 space-y-8 text-center lg:text-left">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 text-blue-200 text-sm font-semibold backdrop-blur-sm">
-                                <Bot className="w-4 h-4" />
-                                <span>Kurumsal Bilgi Asistanı</span>
-                            </div>
                             <h1 className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
                                 Bilgi Bankanız <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Konuşuyor</span>
@@ -135,6 +131,6 @@ export default function Doc2BotPage() {
             </section>
 
 
-        </div>
+        </div >
     )
 }

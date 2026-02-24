@@ -51,10 +51,6 @@ export default function InfographicsPage() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-blue-300 text-sm font-bold mb-8">
-                                <Globe className="w-4 h-4" />
-                                Bilgi Merkezi
-                            </div>
                             <Heading variant="h1" className="text-white text-5xl lg:text-7xl font-black mb-6 leading-tight">
                                 Verinin <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Gücünü Keşfet</span>
@@ -62,12 +58,6 @@ export default function InfographicsPage() {
                             <Text variant="large" className="text-slate-300 mb-10 max-w-lg text-lg leading-relaxed">
                                 Sektörel içgörüler, büyüme rakamları ve insan kaynakları istatistikleriyle BGTS dünyasının derinliklerine inin.
                             </Text>
-
-                            <div className="flex flex-wrap gap-4">
-                                <Button size="lg" className="rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 h-12 shadow-lg shadow-blue-900/20">
-                                    İncelemeye Başla
-                                </Button>
-                            </div>
                         </motion.div>
 
                         {/* Right Visual - Abstract Charts Composition */}
@@ -98,20 +88,6 @@ export default function InfographicsPage() {
                                     </div>
                                 </div>
 
-                                {/* Floating Stat Card 1 */}
-                                <motion.div
-                                    animate={{ y: [-10, 10, -10] }}
-                                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                    className="absolute top-[10%] right-[10%] bg-white p-4 rounded-2xl shadow-xl shadow-blue-900/20 border border-slate-100 max-w-[160px]"
-                                >
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="p-2 bg-orange-100 rounded-lg text-orange-600">
-                                            <Users className="w-5 h-5" />
-                                        </div>
-                                        <div className="text-2xl font-black text-slate-900">1.8K</div>
-                                    </div>
-                                    <div className="text-xs font-bold text-slate-500">Toplam Çalışan</div>
-                                </motion.div>
 
                                 {/* Floating Stat Card 2 */}
                                 <motion.div
@@ -221,7 +197,7 @@ export default function InfographicsPage() {
                                 href="https://www.linkedin.com/feed/update/urn:li:activity:7408814201223249920"
                                 target="_blank"
                             >
-                                Kaynağı Görüntüle (LinkedIn) <Globe className="ml-2 w-5 h-5" />
+                                (LinkedIn) <Globe className="ml-2 w-5 h-5" />
                             </Link>
                         </Button>
                     </div>
@@ -360,7 +336,7 @@ export default function InfographicsPage() {
                                 href="https://www.linkedin.com/feed/update/urn:li:activity:7408814201223249920"
                                 target="_blank"
                             >
-                                Kaynağı Görüntüle (LinkedIn) <Globe className="ml-2 w-5 h-5" />
+                                (LinkedIn) <Globe className="ml-2 w-5 h-5" />
                             </Link>
                         </Button>
                     </div>

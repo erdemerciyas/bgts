@@ -13,10 +13,6 @@ export default function DocMindPage() {
                 <Container className="relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                         <div className="flex-1 space-y-8 text-center lg:text-left">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-300 text-sm font-mono font-semibold">
-                                <Terminal className="w-4 h-4" />
-                                <span>Automated Documentation</span>
-                            </div>
                             <h1 className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
                                 Kod Yazmak Size, <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">Dokümantasyon Bize</span> Kalsın

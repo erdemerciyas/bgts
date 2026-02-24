@@ -6,10 +6,9 @@ import {
     Database,
     Cpu,
     RefreshCw,
-    Layers,
-    GitBranch,
-    Lock
+    Layers
 } from "lucide-react";
+
 
 export const SOFTWARE_DEV_CONTENT = {
     hero: {

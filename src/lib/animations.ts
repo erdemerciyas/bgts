@@ -1,4 +1,3 @@
-import { Variants, Transition } from "framer-motion"
 
 export interface AnimationConfig {
   duration?: number

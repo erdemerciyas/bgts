@@ -30,7 +30,7 @@ export function ServicesSection() {
                             <Text variant="large" className="text-slate-600 mb-8 leading-relaxed">
                                 {description}
                             </Text>
-                            <Link href="/services" className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-dark hover:shadow-lg hover:-translate-y-1">
+                            <Link href="#" className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-dark hover:shadow-lg hover:-translate-y-1">
                                 {ctaText} <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
                         </div>

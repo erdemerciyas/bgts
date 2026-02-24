@@ -6,7 +6,7 @@ export const HOME_CONTENT = {
         subtitle: "Kritik yazılım projeleri, yönetilen hizmetler ve dijital dönüşüm çözümleriyle kurumunuzun stratejik teknoloji ortağıyız.",
         badge: "Global Teknoloji Ortağı",
         ctaText: "Hizmetleri Keşfedin",
-        ctaLink: "/services",
+        ctaLink: "#",
         image: "/images/headers/teknoloji-cozum-ortagi.jpg",
         videoSrc: "https://play.vidyard.com/TrGTy95HjNi21m7LAtH5e8?autoplay=1&embed_button=0&viral_sharing=0&loop=1&controls=0&muted=1"
     },
@@ -29,7 +29,7 @@ export const HOME_CONTENT = {
     servicesSummary: {
         badge: "Hizmetlerimiz",
         heading: "Kanıtlanmış Sonuçlarla\nGüvenilir Teknoloji Ortağınız",
-        description: "25 yılı aşkın deneyimimizle, işletmelerin sürdürülebilir büyüme elde etmelerini, operasyonları optimize etmelerini ve benzersiz ihtiyaçlarına göre uyarlanmış stratejik teknoloji danışmanlığı ile karlılığı artırmalarını sağlıyoruz.",
+        description: "30 yılı aşkın deneyimimizle, işletmelerin sürdürülebilir büyüme elde etmelerini, operasyonları optimize etmelerini ve benzersiz ihtiyaçlarına göre uyarlanmış stratejik teknoloji danışmanlığı ile karlılığı artırmalarını sağlıyoruz.",
         ctaText: "Tüm Hizmetlerimizi İnceleyin",
         image: "/images/headers/teknoloji-cozum-ortagi.jpg",
         sections: [

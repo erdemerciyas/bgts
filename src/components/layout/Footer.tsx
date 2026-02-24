@@ -30,7 +30,7 @@ export default function Footer() {
                                 <li><Link href="/services/managed-services" className="hover:text-corporate-accent transition-colors">Yönetilen Hizmetler</Link></li>
                                 <li><Link href="/services/devops" className="hover:text-corporate-accent transition-colors">DevOps & SRE</Link></li>
                                 <li><Link href="/services/software-development" className="hover:text-corporate-accent transition-colors">Yazılım Geliştirme</Link></li>
-                                <li><Link href="/services" className="hover:text-corporate-accent transition-colors">Tüm Hizmetler</Link></li>
+                                <li><Link href="#" className="hover:text-corporate-accent transition-colors">Tüm Hizmetler</Link></li>
                             </ul>
                         </div>
 

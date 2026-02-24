@@ -31,6 +31,10 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Kariyer & Kültür:** Gerçek ofis fotoğrafları ve çalışan hikayeleriyle zenginleştirilmiş İK sayfaları.
 - **Yönetilen Hizmetler (MSP):** Tüm IT hizmetlerinin tek çatı altında toplandığı detaylı hizmet kataloğu.
 
+### Optimizasyonlar ve Temizlik (v0.4.0)
+- **Codebase & Medya Temizliği:** Kullanılmayan sayfa bileşenleri (eski servis sayfaları) ve referans verilmeyen görseller projeden tamamen temizlendi.
+- **Header & Mega Menu Revizyonu:** Sektörler, Hizmetler ve Ürünler menülerindeki ana linklerin yönlendirmeleri devreden çıkarıldı. Arayüz boşluk dengeleri (Mega Menu) iyileştirildi.
+
 ## 🛠️ Teknik İyileştirmeler ve Optimizasyonlar
 
 Proje genelinde uygulanan teknik standartlar:

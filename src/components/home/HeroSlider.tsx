@@ -23,7 +23,7 @@ const SLIDES = [
         title: "Proje Yapım Şekillerimiz",
         subtitle: "İhtiyacınıza uygun esnek çalışma modelleri ve çevik süreçler.",
         ctaText: "Nasıl Çalışıyoruz?",
-        ctaLink: "/services",
+        ctaLink: "#",
     },
     {
         id: 3,
