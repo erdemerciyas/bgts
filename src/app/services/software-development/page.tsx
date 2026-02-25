@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import { useState, useEffect, useRef } from "react"
@@ -107,7 +108,7 @@ export default function SoftwareDevelopmentPage() {
     };
 
     // Helper to render domain content with alternating layout
-    const DomainSection = ({ domain, index }: { domain: any, index: number }) => {
+    const renderDomainSection = (domain: Record<string, any>, index: number) => {
         const Icon = domain.icon;
         const isReversed = index % 2 !== 0;
         const bgColor = sectionColors[index % sectionColors.length];
@@ -160,7 +161,7 @@ export default function SoftwareDevelopmentPage() {
                         </div>
 
                         <div className="space-y-4">
-                            {domain.features.map((feature: any, i: number) => (
+                            {domain.features.map((feature: Record<string, any>, i: number) => (
                                 <div key={i} className="flex gap-4 p-4 rounded-2xl bg-white/80 border border-slate-100 hover:bg-white hover:shadow-md transition-all duration-300">
                                     <div className="shrink-0 mt-1">
                                         <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
@@ -183,7 +184,7 @@ export default function SoftwareDevelopmentPage() {
     };
 
     // Helper for sidebar items
-    const SidebarLink = ({ id, title, colorClass, activeBgClass }: { id: string, title: string, colorClass: string, activeBgClass: string }) => {
+    const renderSidebarLink = (id: string, title: string, colorClass: string, activeBgClass: string) => {
         const isActive = activeSection === id;
         return (
             <Link
@@ -244,26 +245,28 @@ export default function SoftwareDevelopmentPage() {
                                         {technicalDomains.map((domain, index) => {
                                             const totalPrevIndex = sectoralDomains.length;
                                             return (
-                                                <SidebarLink
-                                                    key={domain.id}
-                                                    id={domain.id}
-                                                    title={domain.title}
-                                                    colorClass={sectionTextColors[(totalPrevIndex + index) % sectionTextColors.length]}
-                                                    activeBgClass={sectionActiveBgColors[(totalPrevIndex + index) % sectionActiveBgColors.length]}
-                                                />
+                                                <div key={domain.id}>
+                                                    {renderSidebarLink(
+                                                        domain.id,
+                                                        domain.title,
+                                                        sectionTextColors[(totalPrevIndex + index) % sectionTextColors.length],
+                                                        sectionActiveBgColors[(totalPrevIndex + index) % sectionActiveBgColors.length]
+                                                    )}
+                                                </div>
                                             );
                                         })}
                                         {/* Development Domains Links */}
                                         {developmentDomains.map((domain, index) => {
                                             const devIdx = sectoralDomains.length + technicalDomains.length + index;
                                             return (
-                                                <SidebarLink
-                                                    key={domain.id}
-                                                    id={domain.id}
-                                                    title={domain.title}
-                                                    colorClass={sectionTextColors[devIdx % sectionTextColors.length]}
-                                                    activeBgClass={sectionActiveBgColors[devIdx % sectionActiveBgColors.length]}
-                                                />
+                                                <div key={domain.id}>
+                                                    {renderSidebarLink(
+                                                        domain.id,
+                                                        domain.title,
+                                                        sectionTextColors[devIdx % sectionTextColors.length],
+                                                        sectionActiveBgColors[devIdx % sectionActiveBgColors.length]
+                                                    )}
+                                                </div>
                                             );
                                         })}
                                     </nav>
@@ -276,13 +279,14 @@ export default function SoftwareDevelopmentPage() {
                                     </Text>
                                     <nav className="flex flex-col space-y-1 border-l-2 border-slate-100 ml-[7px] pl-2">
                                         {sectoralDomains.map((domain, index) => (
-                                            <SidebarLink
-                                                key={domain.id}
-                                                id={domain.id}
-                                                title={domain.title}
-                                                colorClass={sectionTextColors[index % sectionTextColors.length]}
-                                                activeBgClass={sectionActiveBgColors[index % sectionActiveBgColors.length]}
-                                            />
+                                            <div key={domain.id}>
+                                                {renderSidebarLink(
+                                                    domain.id,
+                                                    domain.title,
+                                                    sectionTextColors[index % sectionTextColors.length],
+                                                    sectionActiveBgColors[index % sectionActiveBgColors.length]
+                                                )}
+                                            </div>
                                         ))}
                                     </nav>
                                 </div>
@@ -293,7 +297,9 @@ export default function SoftwareDevelopmentPage() {
                         <div className="flex-1 min-w-0">
                             <div className="space-y-12">
                                 {sectoralDomains.map((domain, index) => (
-                                    <DomainSection key={domain.id} domain={domain} index={index} />
+                                    <div key={domain.id}>
+                                        {renderDomainSection(domain, index)}
+                                    </div>
                                 ))}
                             </div>
 
@@ -302,11 +308,9 @@ export default function SoftwareDevelopmentPage() {
                             {/* Technical Domains - RESTORED */}
                             <div className="space-y-12">
                                 {technicalDomains.map((domain, index) => (
-                                    <DomainSection
-                                        key={domain.id}
-                                        domain={domain}
-                                        index={index + sectoralDomains.length}
-                                    />
+                                    <div key={domain.id}>
+                                        {renderDomainSection(domain, index + sectoralDomains.length)}
+                                    </div>
                                 ))}
                             </div>
 
@@ -315,11 +319,9 @@ export default function SoftwareDevelopmentPage() {
                             {/* Development Domains */}
                             <div className="space-y-12">
                                 {developmentDomains.map((domain, index) => (
-                                    <DomainSection
-                                        key={domain.id}
-                                        domain={domain}
-                                        index={index + sectoralDomains.length + technicalDomains.length}
-                                    />
+                                    <div key={domain.id}>
+                                        {renderDomainSection(domain, index + sectoralDomains.length + technicalDomains.length)}
+                                    </div>
                                 ))}
                             </div>
 

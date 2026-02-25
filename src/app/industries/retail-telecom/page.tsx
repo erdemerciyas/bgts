@@ -357,7 +357,7 @@ export default function RetailTelecomPage() {
 }
 
 // Reusing the DetailedServiceSection component for consistency
-function DetailedServiceSection({ title, description, icon: Icon, items, bg = "bg-white" }: { title: string, description: string, icon: any, items: { title: string, desc: string }[], bg?: string }) {
+function DetailedServiceSection({ title, description, icon: Icon, items, bg = "bg-white" }: { title: string, description: string, icon: React.ElementType, items: { title: string, desc: string }[], bg?: string }) {
     return (
         <Section className={bg}>
             <Container>

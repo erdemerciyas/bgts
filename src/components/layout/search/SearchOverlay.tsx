@@ -17,7 +17,11 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
 
     // Reset query when closed
     useEffect(() => {
-        if (!isOpen) setQuery("")
+        let timeoutId: ReturnType<typeof setTimeout>
+        if (!isOpen) {
+            timeoutId = setTimeout(() => setQuery(""), 150)
+        }
+        return () => clearTimeout(timeoutId)
     }, [isOpen])
 
     // Lock body scroll when open

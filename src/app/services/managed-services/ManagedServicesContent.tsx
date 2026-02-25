@@ -625,7 +625,7 @@ export default function ManagedServicesContent() {
     )
 }
 
-function TruckIcon(props: any) {
+function TruckIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
