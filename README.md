@@ -35,6 +35,9 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Codebase & Medya Temizliği:** Kullanılmayan sayfa bileşenleri (eski servis sayfaları) ve referans verilmeyen görseller projeden tamamen temizlendi.
 - **Header & Mega Menu Revizyonu:** Sektörler, Hizmetler ve Ürünler menülerindeki ana linklerin yönlendirmeleri devreden çıkarıldı. Arayüz boşluk dengeleri (Mega Menu) iyileştirildi.
 
+### Yapay Zeka Entegrasyonları (v0.5.0)
+- **BGTS Dijital Asistan (Chatbot):** Vercel AI SDK ve Groq (Llama 3 70B) kullanılarak geliştirilmiş, şirket verileriyle eğitilmiş ve saniyeler içinde cevap veren yüksek performanslı otonom chatbot entegrasyonu tamamlandı. Sayfa yönlendirmeleri dinamik olarak gerçekleştirildi.
+
 ## 🛠️ Teknik İyileştirmeler ve Optimizasyonlar
 
 Proje genelinde uygulanan teknik standartlar:
