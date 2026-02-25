@@ -38,6 +38,10 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 ### Yapay Zeka Entegrasyonları (v0.5.0)
 - **BGTS Dijital Asistan (Chatbot):** Vercel AI SDK ve Groq (Llama 3 70B) kullanılarak geliştirilmiş, şirket verileriyle eğitilmiş ve saniyeler içinde cevap veren yüksek performanslı otonom chatbot entegrasyonu tamamlandı. Sayfa yönlendirmeleri dinamik olarak gerçekleştirildi.
 
+### Form ve E-posta Entegrasyonları (v0.6.0)
+- **Nodemailer SMTP Altyapısı Eklendi:** Projeye Nodemailer entegre edilerek İletişim sayfasındaki form ve İnsan Kaynakları (Genç Mühendis) başvuru formu ile direkt e-posta gönderim özelliği kazandırıldı.
+- **Dinamik CV Algılama ve Ekler:** İK Başvuru Formu üzerinden kullanıcıların `.pdf`, `.docx` gibi CV'lerini yükleyerek başvuru mailinin ekinde (attachment) iletilmesi sağlandı. Form geri bildirim mekanizmaları güçlendirildi.
+
 ## 🛠️ Teknik İyileştirmeler ve Optimizasyonlar
 
 Proje genelinde uygulanan teknik standartlar:

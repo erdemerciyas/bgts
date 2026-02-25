@@ -20,17 +20,43 @@ type FormData = {
 export default function ApplicationForm() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>()
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<FormData>()
+    const cvFile = watch("cv")
 
     const onSubmit = async (data: FormData) => {
         setIsSubmitting(true)
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000))
-        setIsSubmitting(false)
-        setIsSuccess(true)
-        reset()
-        // Reset success message after 5 seconds
-        setTimeout(() => setIsSuccess(false), 5000)
+
+        try {
+            const formData = new window.FormData();
+            formData.append("fullName", data.fullName);
+            formData.append("email", data.email);
+            formData.append("phone", data.phone);
+            formData.append("university", data.university);
+            formData.append("department", data.department);
+            formData.append("grade", data.grade);
+            formData.append("message", data.message || "");
+
+            if (data.cv && data.cv.length > 0) {
+                formData.append("cv", data.cv[0]);
+            }
+
+            const response = await fetch('/api/application', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!response.ok) throw new Error("Hata oluştu");
+
+            setIsSuccess(true)
+            reset()
+            // Reset success message after 5 seconds
+            setTimeout(() => setIsSuccess(false), 5000)
+        } catch (error) {
+            console.error(error);
+            alert("Başvuru sırasında bir hata oluştu, lütfen tekrar deneyin.");
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
@@ -72,7 +98,7 @@ export default function ApplicationForm() {
                         <input
                             {...register("fullName", { required: true })}
                             className={cn(
-                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none",
+                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.fullName && "border-red-300 ring-red-100"
                             )}
                             placeholder="Adınız Soyadınız"
@@ -88,7 +114,7 @@ export default function ApplicationForm() {
                             {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
                             type="email"
                             className={cn(
-                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none",
+                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.email && "border-red-300 ring-red-100"
                             )}
                             placeholder="ornek@email.com"
@@ -104,7 +130,7 @@ export default function ApplicationForm() {
                             {...register("phone", { required: true })}
                             type="tel"
                             className={cn(
-                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none",
+                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.phone && "border-red-300 ring-red-100"
                             )}
                             placeholder="0555 555 55 55"
@@ -119,7 +145,7 @@ export default function ApplicationForm() {
                         <input
                             {...register("university", { required: true })}
                             className={cn(
-                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none",
+                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.university && "border-red-300 ring-red-100"
                             )}
                             placeholder="Üniversite Adı"
@@ -134,7 +160,7 @@ export default function ApplicationForm() {
                         <input
                             {...register("department", { required: true })}
                             className={cn(
-                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none",
+                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.department && "border-red-300 ring-red-100"
                             )}
                             placeholder="Bölümünüz"
@@ -149,7 +175,7 @@ export default function ApplicationForm() {
                         <select
                             {...register("grade", { required: true })}
                             className={cn(
-                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none appearance-none",
+                                "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none appearance-none text-slate-900",
                                 errors.grade && "border-red-300 ring-red-100"
                             )}
                         >
@@ -178,7 +204,9 @@ export default function ApplicationForm() {
                             <div className="p-3 bg-blue-50 text-blue-600 rounded-full">
                                 <Upload className="w-6 h-6" />
                             </div>
-                            <p className="text-sm font-medium text-slate-700">Dosya seçmek için tıklayın veya sürükleyin</p>
+                            <p className="text-sm font-medium text-slate-700">
+                                {cvFile && cvFile.length > 0 ? cvFile[0].name : "Dosya seçmek için tıklayın veya sürükleyin"}
+                            </p>
                             <p className="text-xs text-slate-500">PDF, DOC, DOCX (Max 5MB)</p>
                         </div>
                     </div>
@@ -192,7 +220,7 @@ export default function ApplicationForm() {
                     </label>
                     <textarea
                         {...register("message")}
-                        className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none min-h-[100px]"
+                        className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none min-h-[100px] text-slate-900"
                         placeholder="Eklemek istedikleriniz..."
                     />
                 </div>

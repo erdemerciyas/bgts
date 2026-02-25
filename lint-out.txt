@@ -1,0 +1,267 @@
+
+> bgts-web@0.5.0 lint
+> eslint
+
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\debug_pdf.js
+  1:13  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\parse_pdf.js
+  1:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:19  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  7:37  warning  'pdfData' is defined but never used      @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\scripts\find-unused-images.js
+   1:12  error    A `require()` style import is forbidden               @typescript-eslint/no-require-imports
+   2:14  error    A `require()` style import is forbidden               @typescript-eslint/no-require-imports
+  31:9   warning  'relativeImgPath' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\about\page.tsx
+  7:63  warning  'Building2' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\career-paths\page.tsx
+  8:5   warning  'Compass' is defined but never used       @typescript-eslint/no-unused-vars
+  8:25  warning  'RefreshCw' is defined but never used     @typescript-eslint/no-unused-vars
+  9:17  warning  'ArrowUpRight' is defined but never used  @typescript-eslint/no-unused-vars
+  9:31  warning  'Sparkles' is defined but never used      @typescript-eslint/no-unused-vars
+  9:53  warning  'GitBranch' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\contact\page.tsx
+  5:31  warning  'MessageSquare' is defined but never used  @typescript-eslint/no-unused-vars
+  5:46  warning  'Clock' is defined but never used          @typescript-eslint/no-unused-vars
+  5:53  warning  'Globe' is defined but never used          @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\culture\page.tsx
+  8:39  warning  'Users' is defined but never used     @typescript-eslint/no-unused-vars
+  9:17  warning  'Sparkles' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\hr\page.tsx
+  4:8    warning  'ContentSection' is defined but never used  @typescript-eslint/no-unused-vars
+  9:24   warning  'Star' is defined but never used            @typescript-eslint/no-unused-vars
+  9:68   warning  'Award' is defined but never used           @typescript-eslint/no-unused-vars
+  9:75   warning  'PlayCircle' is defined but never used      @typescript-eslint/no-unused-vars
+  9:87   warning  'Code' is defined but never used            @typescript-eslint/no-unused-vars
+  9:93   warning  'BarChart3' is defined but never used       @typescript-eslint/no-unused-vars
+  9:104  warning  'Server' is defined but never used          @typescript-eslint/no-unused-vars
+  9:112  warning  'CheckCircle2' is defined but never used    @typescript-eslint/no-unused-vars
+  9:126  warning  'FileText' is defined but never used        @typescript-eslint/no-unused-vars
+  9:136  warning  'Sparkles' is defined but never used        @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\industries\banking\page.tsx
+  4:34   warning  'TrendingUp' is defined but never used    @typescript-eslint/no-unused-vars
+  4:83   warning  'Activity' is defined but never used      @typescript-eslint/no-unused-vars
+  4:93   warning  'Globe' is defined but never used         @typescript-eslint/no-unused-vars
+  4:100  warning  'ArrowRight' is defined but never used    @typescript-eslint/no-unused-vars
+  4:120  warning  'Database' is defined but never used      @typescript-eslint/no-unused-vars
+  4:152  warning  'Briefcase' is defined but never used     @typescript-eslint/no-unused-vars
+  4:182  warning  'BadgeCheck' is defined but never used    @typescript-eslint/no-unused-vars
+  4:199  warning  'Lock' is defined but never used          @typescript-eslint/no-unused-vars
+  4:219  warning  'Target' is defined but never used        @typescript-eslint/no-unused-vars
+  4:227  warning  'BarChart3' is defined but never used     @typescript-eslint/no-unused-vars
+  4:244  warning  'Landmark' is defined but never used      @typescript-eslint/no-unused-vars
+  4:262  warning  'Cpu' is defined but never used           @typescript-eslint/no-unused-vars
+  4:277  warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+  4:299  warning  'Award' is defined but never used         @typescript-eslint/no-unused-vars
+  4:306  warning  'Settings' is defined but never used      @typescript-eslint/no-unused-vars
+  4:329  warning  'CheckSquare' is defined but never used   @typescript-eslint/no-unused-vars
+  9:8    warning  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\industries\defense\page.tsx
+   4:31   warning  'Crosshair' is defined but never used           @typescript-eslint/no-unused-vars
+   4:160  warning  'Users' is defined but never used               @typescript-eslint/no-unused-vars
+   4:180  warning  'ArrowRight' is defined but never used          @typescript-eslint/no-unused-vars
+   7:19   warning  'Text' is defined but never used                @typescript-eslint/no-unused-vars
+   9:8    warning  'Link' is defined but never used                @typescript-eslint/no-unused-vars
+  19:7    warning  'standards' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\industries\retail-telecom\page.tsx
+  9:85   warning  'ArrowRight' is defined but never used    @typescript-eslint/no-unused-vars
+  9:140  warning  'MonitorCheck' is defined but never used  @typescript-eslint/no-unused-vars
+  9:154  warning  'Server' is defined but never used        @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\industries\retail\page.tsx
+  4:24   warning  'Star' is defined but never used          @typescript-eslint/no-unused-vars
+  4:37   warning  'Briefcase' is defined but never used     @typescript-eslint/no-unused-vars
+  4:99   warning  'Database' is defined but never used      @typescript-eslint/no-unused-vars
+  4:119  warning  'ArrowRight' is defined but never used    @typescript-eslint/no-unused-vars
+  4:131  warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+  4:145  warning  'Package' is defined but never used       @typescript-eslint/no-unused-vars
+  4:154  warning  'Truck' is defined but never used         @typescript-eslint/no-unused-vars
+  4:196  warning  'Award' is defined but never used         @typescript-eslint/no-unused-vars
+  7:19   warning  'Text' is defined but never used          @typescript-eslint/no-unused-vars
+  9:8    warning  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\industries\telecommunications\page.tsx
+  4:10   warning  'Smartphone' is defined but never used    @typescript-eslint/no-unused-vars
+  4:22   warning  'Wifi' is defined but never used          @typescript-eslint/no-unused-vars
+  4:78   warning  'Lock' is defined but never used          @typescript-eslint/no-unused-vars
+  4:84   warning  'Cpu' is defined but never used           @typescript-eslint/no-unused-vars
+  4:101  warning  'ArrowRight' is defined but never used    @typescript-eslint/no-unused-vars
+  4:113  warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+  7:19   warning  'Text' is defined but never used          @typescript-eslint/no-unused-vars
+  9:8    warning  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\learning\page.tsx
+  8:12  warning  'BookOpen' is defined but never used      @typescript-eslint/no-unused-vars
+  8:29  warning  'BrainCircuit' is defined but never used  @typescript-eslint/no-unused-vars
+  8:43  warning  'Mic2' is defined but never used          @typescript-eslint/no-unused-vars
+  9:17  warning  'Sparkles' is defined but never used      @typescript-eslint/no-unused-vars
+  9:27  warning  'Trophy' is defined but never used        @typescript-eslint/no-unused-vars
+  9:35  warning  'Code' is defined but never used          @typescript-eslint/no-unused-vars
+  9:41  warning  'Cloud' is defined but never used         @typescript-eslint/no-unused-vars
+  9:48  warning  'ShieldCheck' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\page.tsx
+  13:11  warning  'hero' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\products\ai-hiring-assistant\page.tsx
+  6:10  warning  'ZoomableImage' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\products\doc2bot\page.tsx
+  5:15  warning  'Database' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\products\docmind\page.tsx
+  5:65  warning  'Terminal' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\products\hcm\page.tsx
+  16:25  warning  'Play' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\resources\infographics\page.tsx
+  3:8  warning  'Hero' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\services\managed-services\ManagedServicesContent.tsx
+  10:22  warning  'Globe' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\services\managed-services\page.tsx
+   11:10  warning  'ArrowRight' is defined but never used     @typescript-eslint/no-unused-vars
+   11:22  warning  'CheckCircle2' is defined but never used   @typescript-eslint/no-unused-vars
+  112:15  warning  'Icon' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\services\software-development\page.tsx
+   11:10  warning  'ArrowRight' is defined but never used     @typescript-eslint/no-unused-vars
+   11:22  warning  'CheckCircle2' is defined but never used   @typescript-eslint/no-unused-vars
+  112:15  warning  'Icon' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\social-contribution\page.tsx
+  8:5   warning  'GraduationCap' is defined but never used  @typescript-eslint/no-unused-vars
+  8:20  warning  'BookOpen' is defined but never used       @typescript-eslint/no-unused-vars
+  8:30  warning  'Heart' is defined but never used          @typescript-eslint/no-unused-vars
+  9:17  warning  'Sparkles' is defined but never used       @typescript-eslint/no-unused-vars
+  9:38  warning  'Globe2' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\app\young-engineers\page.tsx
+   4:10  warning  'Section' is defined but never used        @typescript-eslint/no-unused-vars
+   7:5   warning  'Code' is defined but never used           @typescript-eslint/no-unused-vars
+   7:11  warning  'BarChart3' is defined but never used      @typescript-eslint/no-unused-vars
+   7:22  warning  'Server' is defined but never used         @typescript-eslint/no-unused-vars
+   7:30  warning  'Globe' is defined but never used          @typescript-eslint/no-unused-vars
+   7:37  warning  'Rocket' is defined but never used         @typescript-eslint/no-unused-vars
+   8:15  warning  'MessageCircle' is defined but never used  @typescript-eslint/no-unused-vars
+   8:37  warning  'Share2' is defined but never used         @typescript-eslint/no-unused-vars
+   9:5   warning  'ArrowRight' is defined but never used     @typescript-eslint/no-unused-vars
+   9:31  warning  'Play' is defined but never used           @typescript-eslint/no-unused-vars
+   9:44  warning  'Award' is defined but never used          @typescript-eslint/no-unused-vars
+  10:5   warning  'Sticker' is defined but never used        @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\chat\ChatbotWidget.tsx
+  108:63  warning  'node' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\forms\ContactForm.tsx
+  27:26  warning  'isDirty' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  34:27  warning  'data' is defined but never used              @typescript-eslint/no-unused-vars
+  51:14  warning  'error' is defined but never used             @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\home\CareersSection.tsx
+   5:25  warning  'Heart' is defined but never used               @typescript-eslint/no-unused-vars
+   5:32  warning  'Check' is defined but never used               @typescript-eslint/no-unused-vars
+  12:77  warning  'badgeText' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  12:88  warning  'badgeDesc' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\home\IndustriesGrid.tsx
+  10:10  warning  'cn' is defined but never used     @typescript-eslint/no-unused-vars
+  33:39  warning  'index' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\home\LogoWall.tsx
+  3:8   warning  'Image' is defined but never used           @typescript-eslint/no-unused-vars
+  4:10  warning  'Container' is defined but never used       @typescript-eslint/no-unused-vars
+  5:10  warning  'Text' is defined but never used            @typescript-eslint/no-unused-vars
+  9:13  warning  'title' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\hr\ApplicationForm.tsx
+  25:29  warning  'data' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\layout\Footer.tsx
+  5:64  warning  'Phone' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\layout\GlobalBreadcrumb.tsx
+  6:10  warning  'Home' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\layout\header\MegaMenus.tsx
+  8:51  warning  'PlayCircle' is defined but never used  @typescript-eslint/no-unused-vars
+  9:5   warning  'Zap' is defined but never used         @typescript-eslint/no-unused-vars
+  9:68  warning  'Code2' is defined but never used       @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\layout\header\data.ts
+  2:5   warning  'Database' is defined but never used      @typescript-eslint/no-unused-vars
+  2:15  warning  'Code' is defined but never used          @typescript-eslint/no-unused-vars
+  2:21  warning  'Activity' is defined but never used      @typescript-eslint/no-unused-vars
+  2:31  warning  'Cpu' is defined but never used           @typescript-eslint/no-unused-vars
+  2:36  warning  'Globe' is defined but never used         @typescript-eslint/no-unused-vars
+  2:43  warning  'Shield' is defined but never used        @typescript-eslint/no-unused-vars
+  2:51  warning  'Server' is defined but never used        @typescript-eslint/no-unused-vars
+  2:59  warning  'ShoppingBag' is defined but never used   @typescript-eslint/no-unused-vars
+  3:5   warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+  3:19  warning  'FileText' is defined but never used      @typescript-eslint/no-unused-vars
+  3:29  warning  'PlayCircle' is defined but never used    @typescript-eslint/no-unused-vars
+  3:41  warning  'Linkedin' is defined but never used      @typescript-eslint/no-unused-vars
+  3:51  warning  'Briefcase' is defined but never used     @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\layout\search\SearchOverlay.tsx
+  6:18  warning  'X' is defined but never used           @typescript-eslint/no-unused-vars
+  8:24  warning  'SearchItem' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\resources\CaseStudyCard.tsx
+   3:19  warning  'Text' is defined but never used          @typescript-eslint/no-unused-vars
+  77:11  warning  'num' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\ui\CaseStudyCard.tsx
+  7:34  warning  'TrendingUp' is defined but never used  @typescript-eslint/no-unused-vars
+  7:46  warning  'Award' is defined but never used       @typescript-eslint/no-unused-vars
+  7:53  warning  'Users' is defined but never used       @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\components\ui\Hero.tsx
+  31:5  warning  'badge' is defined but never used           @typescript-eslint/no-unused-vars
+  35:5  warning  'align' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\erdem\Desktop\BGTS\bgts-web\src\content\managed-services.ts
+  2:23  warning  'ShieldCheck' is defined but never used      @typescript-eslint/no-unused-vars
+  2:36  warning  'Clock' is defined but never used            @typescript-eslint/no-unused-vars
+  2:43  warning  'CheckCircle2' is defined but never used     @typescript-eslint/no-unused-vars
+  3:12  warning  'Database' is defined but never used         @typescript-eslint/no-unused-vars
+  3:22  warning  'Globe' is defined but never used            @typescript-eslint/no-unused-vars
+  3:29  warning  'Rocket' is defined but never used           @typescript-eslint/no-unused-vars
+  3:37  warning  'Terminal' is defined but never used         @typescript-eslint/no-unused-vars
+  4:5   warning  'BarChart3' is defined but never used        @typescript-eslint/no-unused-vars
+  4:28  warning  'Search' is defined but never used           @typescript-eslint/no-unused-vars
+  4:36  warning  'Layout' is defined but never used           @typescript-eslint/no-unused-vars
+  4:44  warning  'Lock' is defined but never used             @typescript-eslint/no-unused-vars
+  5:5   warning  'Bot' is defined but never used              @typescript-eslint/no-unused-vars
+  5:10  warning  'Smartphone' is defined but never used       @typescript-eslint/no-unused-vars
+  5:22  warning  'Video' is defined but never used            @typescript-eslint/no-unused-vars
+  5:29  warning  'FileText' is defined but never used         @typescript-eslint/no-unused-vars
+  5:39  warning  'UserCheck' is defined but never used        @typescript-eslint/no-unused-vars
+  6:5   warning  'GraduationCap' is defined but never used    @typescript-eslint/no-unused-vars
+  6:20  warning  'LayoutDashboard' is defined but never used  @typescript-eslint/no-unused-vars
+  6:37  warning  'Layers' is defined but never used           @typescript-eslint/no-unused-vars
+  7:5   warning  'Anchor' is defined but never used           @typescript-eslint/no-unused-vars
+  7:13  warning  'Map' is defined but never used              @typescript-eslint/no-unused-vars
+  7:18  warning  'Star' is defined but never used             @typescript-eslint/no-unused-vars
+  7:33  warning  'HeartHandshake' is defined but never used   @typescript-eslint/no-unused-vars
+  7:49  warning  'LineChart' is defined but never used        @typescript-eslint/no-unused-vars
+  8:21  warning  'LayoutGrid' is defined but never used       @typescript-eslint/no-unused-vars
+  8:33  warning  'ShieldAlert' is defined but never used      @typescript-eslint/no-unused-vars
+  8:57  warning  'Infinity' is defined but never used         @typescript-eslint/no-unused-vars
+  8:67  warning  'Code2' is defined but never used            @typescript-eslint/no-unused-vars
+
+Ô£û 180 problems (5 errors, 175 warnings)
+

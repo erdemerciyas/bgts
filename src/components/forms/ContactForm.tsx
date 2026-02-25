@@ -36,15 +36,15 @@ export function ContactForm() {
     setSubmitStatus('idle')
 
     try {
-      // API call would go here
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // })
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
+      if (!response.ok) {
+        throw new Error('Bir hata oluştu');
+      }
 
       setSubmitStatus('success')
       reset()
@@ -97,9 +97,8 @@ export function ContactForm() {
                   id="name"
                   type="text"
                   {...register('name')}
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                    errors.name ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
-                  }`}
+                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-slate-900 ${errors.name ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
+                    }`}
                   placeholder="Adınız Soyadınız"
                   disabled={isSubmitting}
                   aria-invalid={!!errors.name}
@@ -124,9 +123,8 @@ export function ContactForm() {
                   id="email"
                   type="email"
                   {...register('email')}
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                    errors.email ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
-                  }`}
+                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-slate-900 ${errors.email ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
+                    }`}
                   placeholder="ornek@sirket.com"
                   disabled={isSubmitting}
                   aria-invalid={!!errors.email}
@@ -151,7 +149,7 @@ export function ContactForm() {
                 id="company"
                 type="text"
                 {...register('company')}
-                className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-slate-900"
                 placeholder="Şirket adı"
                 disabled={isSubmitting}
               />
@@ -165,7 +163,7 @@ export function ContactForm() {
                 id="phone"
                 type="tel"
                 {...register('phone')}
-                className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-slate-900"
                 placeholder="+90 212 XXX XX XX"
                 disabled={isSubmitting}
               />
@@ -182,9 +180,8 @@ export function ContactForm() {
                 id="message"
                 {...register('message')}
                 rows={5}
-                className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none ${
-                  errors.message ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
-                }`}
+                className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none text-slate-900 ${errors.message ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
+                  }`}
                 placeholder="Projeniz hakkında detaylı bilgi verin..."
                 disabled={isSubmitting}
                 aria-invalid={!!errors.message}
