@@ -4,7 +4,7 @@ interface SectionProps extends React.HTMLAttributes<HTMLElement> {
     children: React.ReactNode
     className?: string
     id?: string
-    background?: "default" | "muted" | "primary" | "dark"
+    background?: "default" | "muted" | "primary" | "dark" | "glazed" | "navy"
 }
 
 export function Section({
@@ -17,8 +17,10 @@ export function Section({
     const bgStyles = {
         default: "bg-white",
         muted: "bg-corporate-surface",
+        glazed: "bg-[#E0ECF4]",
         primary: "bg-corporate-dark text-white",
         dark: "bg-corporate-dark text-white",
+        navy: "bg-[#05081A] text-white",
     }
 
     return (

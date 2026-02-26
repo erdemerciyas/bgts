@@ -42,6 +42,13 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Nodemailer SMTP Altyapısı Eklendi:** Projeye Nodemailer entegre edilerek İletişim sayfasındaki form ve İnsan Kaynakları (Genç Mühendis) başvuru formu ile direkt e-posta gönderim özelliği kazandırıldı.
 - **Dinamik CV Algılama ve Ekler:** İK Başvuru Formu üzerinden kullanıcıların `.pdf`, `.docx` gibi CV'lerini yükleyerek başvuru mailinin ekinde (attachment) iletilmesi sağlandı. Form geri bildirim mekanizmaları güçlendirildi.
 
+### Kurumsal Kimlik, İletişim & Arayüz İyileştirmeleri (v0.7.0)
+- **Hakkımızda Sayfası (Kapsamlı Redesign):** Sayfa bütünüyle BGTS Frontend Standartlarına uygun hale getirildi. Genel Bakış ve Değerler bölümleri premium glassmorphism detaylarıyla yenilendi.
+- **İnteraktif Konumlar Haritası:** CSS/SVG tabanlı harita yerine dünya arka planı üzerine yerleştirilmiş, dinamik pin noktaları ve senkronize çalışan ofis slider kartlarıyla kurumsal global varlık (LocationsMap) sergilendi. Ofisler ve Hizmet Noktaları UI seviyesinde ayrıştırıldı.
+- **İş Ortakları ve Sertifikasyonlar:** İç içe geçmiş logolar yerine kurumsal siteden alınan net ikonlarla 2 ayrı tam genişlik (full-width) section oluşturuldu. Dark Navy ve Warm Mesh arka planlarla UI zenginleştirildi.
+- **Ana Sayfa İyileştirmeleri:** Kahraman (Hero) slider'ına uçuşan ve premium hissi veren "Teknoloji Baloncukları" eklendi.
+- **İletişim Formları İyileştirildi:** Görünmeyen "Gönderiliyor..." metinleri ve disable statüleri UX standartlarına çekildi. Dosya yükleme (File Upload) butonuna seçilen dosya adının yazdırılması sağlandı.
+
 ## 🛠️ Teknik İyileştirmeler ve Optimizasyonlar
 
 Proje genelinde uygulanan teknik standartlar:

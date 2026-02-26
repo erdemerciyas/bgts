@@ -121,7 +121,7 @@
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -136,11 +136,25 @@
 }
 
 @utility animate-marquee {
-  animation: marquee 80s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 @utility animate-marquee2 {
-  animation: marquee2 80s linear infinite;
+  animation: marquee2 40s linear infinite;
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@utility animate-marquee-reverse {
+  animation: marquee-reverse 40s linear infinite;
 }
 
 @utility animation-delay-2000 {
@@ -182,4 +196,27 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading), system-ui, sans-serif;
+}
+
+/* Elegant scrollbar for map cards */
+.map-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 116, 139, 0.4) transparent;
+}
+
+.map-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.map-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.map-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 10px;
+}
+
+.map-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
 }
