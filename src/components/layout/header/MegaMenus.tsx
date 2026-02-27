@@ -36,7 +36,7 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
         <div className="grid grid-cols-3">
             {/* Column 1: Yazılım Hizmetleri */}
             <div className="bg-blue-50/40 p-10 border-r border-slate-200/80 flex flex-col relative">
-                <h3 className={STYLES.columnHeader}>YAZILIM HİZMETLERİ</h3>
+                <h3 className={STYLES.columnHeader}>Yazılım ve Teknoloji Servisleri</h3>
                 <div className="space-y-6">
                     <Link onClick={closeMenu} href="/services/software-development#bigdata" className="group flex items-center gap-3">
                         <Database className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-indigo-600 transition-colors" />
@@ -208,6 +208,15 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                 <div className="mb-auto">
                     <h3 className={STYLES.columnHeader}>KURUMSAL ÇÖZÜMLER</h3>
                     <div className="space-y-3">
+                        <Link onClick={closeMenu} href="/products/cortex" className={STYLES.linkGroup}>
+                            <Cpu className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>BGTS CORTEX</h4>
+                                    <p className={STYLES.itemDescItalic}>“Yazılım yaşam döngüsünü AI agent'larla otomatikleştirin.”</p>
+                                </div>
+                            </div>
+                        </Link>
                         <Link onClick={closeMenu} href="/products/hcm" className={STYLES.linkGroup}>
                             <Briefcase className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
                             <div className="flex justify-between items-start gap-4">

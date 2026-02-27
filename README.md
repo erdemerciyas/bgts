@@ -42,6 +42,9 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Nodemailer SMTP Altyapısı Eklendi:** Projeye Nodemailer entegre edilerek İletişim sayfasındaki form ve İnsan Kaynakları (Genç Mühendis) başvuru formu ile direkt e-posta gönderim özelliği kazandırıldı.
 - **Dinamik CV Algılama ve Ekler:** İK Başvuru Formu üzerinden kullanıcıların `.pdf`, `.docx` gibi CV'lerini yükleyerek başvuru mailinin ekinde (attachment) iletilmesi sağlandı. Form geri bildirim mekanizmaları güçlendirildi.
 
+### Hata Giderimleri & Build Optimizasyonları (v0.7.1)
+- **Next.js Turbopack Çakışması:** `package.json` içerisindeki `"type": "commonjs"` tanımlaması nedeniyle ES Modules yapısıyla çalışan Next.js App Router yapısında ortaya çıkan CommonJS vs ESM çakışması (build hataları) giderildi. Dev server artık tamamen stabil çalışıyor.
+
 ### Kurumsal Kimlik, İletişim & Arayüz İyileştirmeleri (v0.7.0)
 - **Hakkımızda Sayfası (Kapsamlı Redesign):** Sayfa bütünüyle BGTS Frontend Standartlarına uygun hale getirildi. Genel Bakış ve Değerler bölümleri premium glassmorphism detaylarıyla yenilendi.
 - **İnteraktif Konumlar Haritası:** CSS/SVG tabanlı harita yerine dünya arka planı üzerine yerleştirilmiş, dinamik pin noktaları ve senkronize çalışan ofis slider kartlarıyla kurumsal global varlık (LocationsMap) sergilendi. Ofisler ve Hizmet Noktaları UI seviyesinde ayrıştırıldı.

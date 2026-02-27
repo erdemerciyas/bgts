@@ -33,22 +33,22 @@ export const CASE_STUDIES: CaseStudy[] = [
     {
         id: "case-study-3",
         title: "Hayat Sigortası ve Karşılık Rezerv Uygulamaları",
-        requirement: "Günlük hesaplama ve karşılaştırma kontrol süreçlerinin otonom hale getirilmesi ve süreçlerin iyileştirilmesi ihtiyacı ile uygulama ARK ortamında yazılması gerekliydi.",
+        requirement: "Günlük hesaplama ve karşılaştırma kontrol süreçlerinin otonom hale getirilmesi ve süreçlerin iyileştirilmesi ihtiyacı ile uygulama ortamında yazılması gerekliydi.",
         solution: "Sigorta rezerv hesaplama uygulamasının mevcut haliyle karşılayamadığı ihtiyaçların giderilmesi ile uygulama yenilendi. Hesaplama sonuçlarının günlük olarak veritabanında tutulması ve bu verilerin ay sonunda sabitlenmesi sağlandı. Poliçe bazında rezervlerin online hesaplanması ve listelenmesini sağlayan bir uygulama geliştirildi.",
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "Oracle DB", "Spring Boot", "Microservices"]
+        technologies: ["Java", "gRPC", "Platform", "Oracle DB", "Spring Boot", "Microservices"]
     },
     {
         id: "case-study-4",
         title: "Bireysel Emeklilik Planları Projesi",
-        requirement: "Son kullanıcıya hizmet edecek olan Bireysel Emeklilik Sistemi plan ekranlarının tasarım ve fonksiyonel olarak yenilenmesi isteniyordu. Ayrıca ARK dönüşümünün yapılması ihtiyacı vardı.",
+        requirement: "Son kullanıcıya hizmet edecek olan Bireysel Emeklilik Sistemi plan ekranlarının tasarım ve fonksiyonel olarak yenilenmesi isteniyordu. Ayrıca dönüşümünün yapılması ihtiyacı vardı.",
         solution: "Tüm ekranların iyileştirme analizi için gerekli eforlar ve tasarım ekranları, müşterinin IT birimi tarafından verildi. 4 Yazılım geliştirici ve 2 analist ile daha önce hayat sigortası projesinden deneyimli kaynakların da olduğu bir ekip kuruldu.",
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "Spring Framework", "Oracle DB"]
+        technologies: ["Java", "gRPC", "Platform", "Spring Framework", "Oracle DB"]
     },
     {
         id: "case-study-5",
@@ -82,13 +82,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     {
         id: "case-study-8",
-        title: "Kariyer Portalı ARK Dönüşüm",
+        title: "Kariyer Portalı Dönüşüm",
         requirement: "Banka çalışanlarının kendi kariyer süreçlerini takip edebilecekleri ve yönetecekleri mevcut portalın daha kullanışlı ve fonksiyonel geliştirmeler ile yenilenmesine ihtiyaç duyuluyordu.",
-        solution: "Yazılım Ürün grubundan 4 kaynağımız ile danışmanlık hizmeti sağlandı. Kariyer portalı ARK platformuna taşınarak modernize edildi.",
+        solution: "Yazılım Ürün grubundan 4 kaynağımız ile danışmanlık hizmeti sağlandı. Kariyer portalı Dijital dönüşüm platformuna taşınarak modernize edildi.",
         projectType: "Time & Material",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "ARK Platform", "Spring Boot", "Angular", "Oracle DB", "RESTful API"]
+        technologies: ["Java", "Platform", "Spring Boot", "Angular", "Oracle DB", "RESTful API"]
     },
     {
         id: "case-study-9",
@@ -102,23 +102,23 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     {
         id: "case-study-10",
-        title: "Portföy Yönetimi ARK Dönüşüm",
+        title: "Portföy Yönetimi Dönüşüm",
         requirement: "Hazine biriminin kullandığı bu kritik uygulama; gün içinde Trader yöneticilerinin işlemlerinin takip edildiği ve gün sonunda değerlendirmelerin yapıldığı fonlama modülü ekranlarından oluşuyor. Proje kapsamında hem teknoloji dönüşümü hem de iş süreçlerinde iyileştirmeler bekleniyor.",
         solution: "4 takımın birlikte çalıştığı projedeki 13 kişilik 2 takımımız; Domain deneyimine sahip, kıdemli analist ve Java yazılım geliştiricilerden kuruldu. Mevcut yapıda mobil kaynaklardan beslenen bir mimari oluşturulurken, borsa entegrasyonunun yanı sıra fon hareketleri izleme, fon ve nakit akışı gibi ekranların daha kullanışlı tasarlanması, süreçlerin iyileştirilmesi için çalışılıyor.",
         projectType: "Time & Material",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "Spring Boot", "Oracle DB", "Borsa Entegrasyonu", "Microservices"]
+        technologies: ["Java", "gRPC", "Platform", "Spring Boot", "Oracle DB", "Borsa Entegrasyonu", "Microservices"]
     },
     {
         id: "case-study-11",
-        title: "Takasnet ARK Dönüşüm",
-        requirement: "Takas ve Mutabakat Sistemi, Türkiye'de faaliyet gösteren katılımcı bankalara ait kartlarla, katılımcı bankalara ait üye işyerlerinde gerçekleştirilen işlemlerin provizyon ve takas akışlarının yürütüldüğü sistemdir. Bankanın bu sistemle entegre çalışan mevcut uygulamasını ARK dönüşüm kapsamında yenilemesi gerekiyordu.",
-        solution: "Modernizasyon projesine 6 kişilik hibrit ekibimizle destek veriyoruz. Takas akışları ve provizyon süreçleri ARK mimarisine taşınarak sistem güvenilirliği ve ölçeklenebilirliği artırıldı.",
+        title: "Takasnet Dijital Dönüşüm",
+        requirement: "Takas ve Mutabakat Sistemi, Türkiye'de faaliyet gösteren katılımcı bankalara ait kartlarla, katılımcı bankalara ait üye işyerlerinde gerçekleştirilen işlemlerin provizyon ve takas akışlarının yürütüldüğü sistemdir. Bankanın bu sistemle entegre çalışan mevcut uygulamasını Dijital dönüşüm kapsamında yenilemesi gerekiyordu.",
+        solution: "Modernizasyon projesine 6 kişilik hibrit ekibimizle destek veriyoruz. Takas akışları ve provizyon süreçleri dijital dönüşüm odaklı yapıya taşınarak sistem güvenilirliği ve ölçeklenebilirliği artırıldı.",
         projectType: "Time & Material",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "Spring Boot", "Oracle DB", "Takasnet API"]
+        technologies: ["Java", "gRPC", "Platform", "Spring Boot", "Oracle DB", "Takasnet API"]
     },
     {
         id: "case-study-12",
@@ -142,33 +142,33 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     {
         id: "case-study-14",
-        title: "Reasürans ARK Transformasyonu Projesi",
-        requirement: "Reasürans modüllerin analizinin yapılması, tabloların açık sisteme alınması, ekran ve batchlerde otomasyonların hazırlanması ve ARK platformunda yeniden yazılması. 19 Ekranın dönüşümü gerçekleşiyor. Bu kapsamda 19 ekrana ek olarak 8 batch ve 13 tablonun açık sisteme alınıyor.",
-        solution: "Ekranlar ve batchler ARK platformuna taşındı, Mainframe'den açık sisteme dönüşüm projesi yapıldı. Kritik noktalar için monitoring alarmlar oluşturuldu. Raporlar ODI ile oluşturuldu. 10 kişilik takım: 1 Data Developer, 1 Architect, 2 İş Analisti, 3 Fullstack (Java) Developer, 1 Test Uzmanı, 1 PM, 1 Dev Team Lead.",
+        title: "Reasürans Dijital Transformasyon Projesi",
+        requirement: "Reasürans modüllerin analizinin yapılması, tabloların açık sisteme alınması, ekran ve batchlerde otomasyonların hazırlanması ve dijital dönüşük odaklı platformda yeniden yazılması. 19 Ekranın dönüşümü gerçekleşiyor. Bu kapsamda 19 ekrana ek olarak 8 batch ve 13 tablonun açık sisteme alınıyor.",
+        solution: "Ekranlar ve batchler yeni platforma taşındı, Mainframe'den açık sisteme dönüşüm projesi yapıldı. Kritik noktalar için monitoring alarmlar oluşturuldu. Raporlar ODI ile oluşturuldu. 10 kişilik takım: 1 Data Developer, 1 Architect, 2 İş Analisti, 3 Fullstack (Java) Developer, 1 Test Uzmanı, 1 PM, 1 Dev Team Lead.",
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "ARK Platform", "Mainframe Dönüşüm", "Oracle Data Integrator (ODI)", "Spring Batch", "Oracle DB", "Monitoring"]
+        technologies: ["Java", "Platform", "Mainframe Dönüşüm", "Oracle Data Integrator (ODI)", "Spring Batch", "Oracle DB", "Monitoring"]
     },
     {
         id: "case-study-15",
-        title: "Sigortacılık Hayat Dışı Ürünler ARK Dönüşümü",
+        title: "Sigortacılık Hayat Dışı Ürünler & Dijital Dönüşümü",
         requirement: "Hayat sigortası dışı Elementer sigorta ürünlerinde Eureko sigorta ve banka ile çalışan dijital kanaldan satış ekranları ve sigorta acentelerinin kullandığı acente ekranlarının yeni teknolojiler ile dönüştürülmesi gerekiyordu.",
         solution: "Müşteri bilgilerinin ayrı tutulabilmesi için iki farklı yapı geliştirildi. Eureko sigorta ile asenkron çalışan bir yapı oluşturuldu. Mobil, web ve kredi ürünleri ile entegrasyonları da dahil olmak üzere yoğun entegrasyon noktası bulunan bir proje gerçekleştirildi. 2 Fullstack (Java) Developer ve 2 İş Analisti.",
         projectType: "Time & Material",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "ARK Platform", "Spring Boot", "Angular", "RESTful API", "Asenkron Mesajlaşma", "Oracle DB"]
+        technologies: ["Java", "Platform", "Spring Boot", "Angular", "RESTful API", "Asenkron Mesajlaşma", "Oracle DB"]
     },
     {
         id: "case-study-16",
-        title: "Kredi Ödeme Planı Servis Dönüşümü ARK",
+        title: "Kredi Ödeme Planı Servis Dönüşümü",
         requirement: "Bankacılık uygulamalarında kullanılan ve mainframe ortamında çalışan Ödeme Planı Genel Servisi'nin, açık sistem mimarisine taşınması ihtiyacı bulunuyordu. BILCODEP ödeme planı servisinin mevcut bağımlılıklarının analiz edilmesi, performans ve sürdürülebilirlik açısından açık sistemlerle uyumlu hale getirilmesi hedefleniyordu.",
-        solution: "BILCODEP ödeme planı servisinin kullandığı tüm bağımlılıklar detaylı olarak analiz edildi. gRPC ve MFDC servis entegrasyonları ile DB2 veritabanı çağrıları, açık sistem mimarisine uygun olacak şekilde Channel ve business katmanlarında yeniden geliştirildi. Servis, mainframe bağımlılıklarından arındırılarak modern ve ölçeklenebilir bir mimariye taşındı.",
+        solution: "BILCODEP ödeme planı servisinin kullandığı tüm bağımlılıklar detaylı olarak analiz edildi. gRPC ve MFDC servis entegrasyonları ile DB2 veritabanı çağrıları, açık sistem mimarisine uygun olacak şekildeChannel ve business katmanlarında yeniden geliştirildi. Servis, mainframe bağımlılıklarından arındırılarak modern ve ölçeklenebilir bir mimariye taşındı.",
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "DB2", "MFDC Servisleri", "Mainframe Dönüşüm", "Microservices"]
+        technologies: ["Java", "gRPC", "Platform", "DB2", "MFDC Servisleri", "Mainframe Dönüşüm", "Microservices"]
     },
     {
         id: "case-study-17",
@@ -178,17 +178,17 @@ export const CASE_STUDIES: CaseStudy[] = [
         projectType: "Time & Material",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "Spring Boot", "Mainframe Dönüşüm", "RESTful API", "Oracle DB"]
+        technologies: ["Java", "gRPC", "Platform", "Spring Boot", "Mainframe Dönüşüm", "RESTful API", "Oracle DB"]
     },
     {
         id: "case-study-18",
         title: "E-Fatura Entegrasyon Projesi",
-        requirement: "Bankaya kesilen e-faturaların aracı firma üzerinden alınarak iç sistemlere entegre edilmesi, onay süreçlerinin yönetilmesi, ilgili modüllere aktarılması ve uçtan uca izlenebilmesi ihtiyacı bulunuyordu. Bu süreçlerin EFA ekranları ve ARK mimarisi ile uyumlu şekilde çalışması hedefleniyordu.",
-        solution: "Aracı firma üzerinden iletilen e-faturaların iç sistemlere alınmasını sağlayan entegrasyon geliştirildi. E-faturaların onay süreçleri, diğer modüllere aktarımı ve izlenebilirliği EFA ekranları ve ARK yapısına uygun olacak şekilde tasarlanarak hayata geçirildi. Böylece e-fatura süreçleri merkezi, izlenebilir ve yönetilebilir bir yapıya kavuşturuldu.",
+        requirement: "Bankaya kesilen e-faturaların aracı firma üzerinden alınarak iç sistemlere entegre edilmesi, onay süreçlerinin yönetilmesi, ilgili modüllere aktarılması ve uçtan uca izlenebilmesi ihtiyacı bulunuyordu. Bu süreçlerin EFA ekranları ve mimarisi ile uyumlu şekilde çalışması hedefleniyordu.",
+        solution: "Aracı firma üzerinden iletilen e-faturaların iç sistemlere alınmasını sağlayan entegrasyon geliştirildi. E-faturaların onay süreçleri, diğer modüllere aktarımı ve izlenebilirliği EFA ekranları ve yapısına uygun olacak şekilde tasarlanarak hayata geçirildi. Böylece e-fatura süreçleri merkezi, izlenebilir ve yönetilebilir bir yapıya kavuşturuldu.",
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "EFA Ekranları", "E-Fatura API", "Spring Boot", "Oracle DB"]
+        technologies: ["Java", "gRPC", "Platform", "EFA Ekranları", "E-Fatura API", "Spring Boot", "Oracle DB"]
     },
     {
         id: "case-study-19",
@@ -198,7 +198,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "Spring Boot", "Oracle DB", "Microservices", "High-Availability"]
+        technologies: ["Java", "gRPC", "Platform", "Spring Boot", "Oracle DB", "Microservices", "High-Availability"]
     },
     {
         id: "case-study-20",
@@ -208,7 +208,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         projectType: "Time & Material",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "Spring Boot", "Elasticsearch", "Role-Based Access Control", "Angular"]
+        technologies: ["Java", "gRPC", "Platform", "Spring Boot", "Elasticsearch", "Role-Based Access Control", "Angular"]
     },
     {
         id: "case-study-21",
@@ -228,7 +228,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "IVR Platform", "VoIP", "Spring Boot", "Microservices"]
+        technologies: ["Java", "gRPC", "Platform", "IVR Platform", "VoIP", "Spring Boot", "Microservices"]
     },
     {
         id: "case-study-23",
@@ -238,17 +238,17 @@ export const CASE_STUDIES: CaseStudy[] = [
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "KGF API Entegrasyonu", "Spring Boot", "Test Otomasyonu", "Oracle DB"]
+        technologies: ["Java", "gRPC", "Platform", "KGF API Entegrasyonu", "Spring Boot", "Test Otomasyonu", "Oracle DB"]
     },
     {
         id: "case-study-24",
         title: "Muhasebe Modülü Projesi",
-        requirement: "Banka iştiraklerinin Muhasebe ihtiyaçlarını giderecek kapsamlı bir uygulama projesi ihtiyacı bulunuyordu. Posting, muhasebe yaratma talebi ve kurulması, test işlemlerinin yönetimi gibi kritik süreçleri kapsıyor. Mevcut muhasebe sistemlerinin hesap hareketleri ekranlarının ARK platformuna dönüşümü gerçekleştiriliyor.",
-        solution: "Proje, Artica tarafı için Finans Uygulamaları ekibi liderliğinde başlatıldı ve microservice mimarisi kullanılarak geliştirildi. Hesap hareketleri ekranları ve Posting süreçleri ARK platformuna taşındı.",
+        requirement: "Banka iştiraklerinin Muhasebe ihtiyaçlarını giderecek kapsamlı bir uygulama projesi ihtiyacı bulunuyordu. Posting, muhasebe yaratma talebi ve kurulması, test işlemlerinin yönetimi gibi kritik süreçleri kapsıyor. Mevcut muhasebe sistemlerinin hesap hareketleri ekranlarının platformuna dönüşümü gerçekleştiriliyor.",
+        solution: "Proje, Artica tarafı için Finans Uygulamaları ekibi liderliğinde başlatıldı ve microservice mimarisi kullanılarak geliştirildi. Hesap hareketleri ekranları ve Posting süreçleri platformuna taşındı.",
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
-        technologies: ["Java", "gRPC", "ARK Platform", "Microservices", "Spring Boot", "Oracle DB"]
+        technologies: ["Java", "gRPC", "Platform", "Microservices", "Spring Boot", "Oracle DB"]
     },
     {
         id: "case-study-25",

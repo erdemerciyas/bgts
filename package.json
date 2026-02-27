@@ -1,6 +1,6 @@
 {
   "name": "bgts-web",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -24,6 +24,7 @@
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "nodemailer": "^8.0.1",
+    "officeparser": "^6.0.4",
     "pdf-parse": "^2.4.5",
     "pdf2json": "^4.0.2",
     "react": "19.2.3",
@@ -50,5 +51,18 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.0.16"
-  }
+  },
+  "description": "![BGTS Cover](/public/images/headers/teknoloji-servisleri-genel.jpg)",
+  "main": "debug_pdf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdemerciyas/bgts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erdemerciyas/bgts/issues"
+  },
+  "homepage": "https://github.com/erdemerciyas/bgts#readme"
 }

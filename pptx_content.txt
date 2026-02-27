@@ -1,0 +1,191 @@
+{
+  "type": "pptx",
+  "metadata": {
+    "lastModifiedBy": "Sennur DUMANLI (BilgeAdam)",
+    "created": "2006-08-16T00:00:00.000Z",
+    "modified": "2026-02-26T08:10:54.000Z"
+  },
+  "content": [
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image1.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 1
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image2.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 2
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image3.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 3
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image4.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 4
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image5.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 5
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image6.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 6
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image7.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 7
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image8.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 8
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image9.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 9
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image10.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 10
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image11.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 11
+      }
+    },
+    {
+      "type": "slide",
+      "children": [
+        {
+          "type": "image",
+          "text": "",
+          "metadata": {
+            "attachmentName": "image12.png"
+          }
+        }
+      ],
+      "metadata": {
+        "slideNumber": 12
+      }
+    }
+  ],
+  "attachments": []
+}

@@ -4,24 +4,45 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowLeft, ArrowRight, ChevronRight, Code, Server, Database, Cloud, Cpu, Smartphone } from "lucide-react"
+import { ArrowLeft, ArrowRight, ChevronRight, Code, Server, Database, Cloud, Cpu, Smartphone, Briefcase, ShieldCheck, Activity, Layers, Globe, Headset, GraduationCap, Rocket, Laptop, Users, Target, Lightbulb } from "lucide-react"
 import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
 
-const techBubbles = [
-    { icon: Code, label: "React & Next.js", color: "text-cyan-400", bg: "bg-cyan-500/20", top: "10%", right: "15%", delay: 0 },
-    { icon: Server, label: ".NET & Java", color: "text-purple-400", bg: "bg-purple-500/20", top: "25%", right: "70%", delay: 1.2 },
-    { icon: Database, label: "Veri Tabanı Sistemleri", color: "text-blue-400", bg: "bg-blue-500/20", top: "60%", right: "80%", delay: 2.4 },
-    { icon: Cloud, label: "Bulut Bilişim", color: "text-amber-400", bg: "bg-amber-500/20", top: "45%", right: "5%", delay: 1.8 },
-    { icon: Cpu, label: "Yapay Zeka & Veri Bilimi", color: "text-emerald-400", bg: "bg-emerald-500/20", top: "75%", right: "35%", delay: 0.7 },
-    { icon: Smartphone, label: "Mobil Destek", color: "text-pink-400", bg: "bg-pink-500/20", top: "0%", right: "45%", delay: 2.0 },
+const slideBubbles = [
+    // Slide 0: Yazılım
+    [
+        { icon: Code, label: "React & Next.js", color: "text-cyan-400", bg: "bg-cyan-500/20", top: "10%", right: "15%", delay: 0 },
+        { icon: Server, label: ".NET & Java", color: "text-purple-400", bg: "bg-purple-500/20", top: "25%", right: "70%", delay: 1.2 },
+        { icon: Database, label: "Veri Tabanı Sistemleri", color: "text-blue-400", bg: "bg-blue-500/20", top: "60%", right: "80%", delay: 2.4 },
+        { icon: Cloud, label: "Bulut Bilişim", color: "text-amber-400", bg: "bg-amber-500/20", top: "45%", right: "5%", delay: 1.8 },
+        { icon: Cpu, label: "Yapay Zeka & Veri Bilimi", color: "text-emerald-400", bg: "bg-emerald-500/20", top: "75%", right: "35%", delay: 0.7 },
+        { icon: Smartphone, label: "Mobil Destek", color: "text-pink-400", bg: "bg-pink-500/20", top: "0%", right: "45%", delay: 2.0 },
+    ],
+    // Slide 1: Teknoloji Servisleri
+    [
+        { icon: Briefcase, label: "IT Danışmanlık", color: "text-indigo-400", bg: "bg-indigo-500/20", top: "15%", right: "20%", delay: 0.2 },
+        { icon: ShieldCheck, label: "Siber Güvenlik", color: "text-red-400", bg: "bg-red-500/20", top: "35%", right: "65%", delay: 1.5 },
+        { icon: Activity, label: "Agile & Scrum", color: "text-green-400", bg: "bg-green-500/20", top: "55%", right: "10%", delay: 2.1 },
+        { icon: Layers, label: "Sistem Entegrasyonu", color: "text-orange-400", bg: "bg-orange-500/20", top: "70%", right: "50%", delay: 0.8 },
+        { icon: Globe, label: "Global Kaynak Sağlama", color: "text-teal-400", bg: "bg-teal-500/20", top: "5%", right: "55%", delay: 2.5 },
+        { icon: Headset, label: "7/24 Teknik Destek", color: "text-yellow-400", bg: "bg-yellow-500/20", top: "85%", right: "25%", delay: 1.1 },
+    ],
+    // Slide 2: Genç Mühendisler
+    [
+        { icon: GraduationCap, label: "Sürekli Öğrenme", color: "text-fuchsia-400", bg: "bg-fuchsia-500/20", top: "10%", right: "30%", delay: 0.4 },
+        { icon: Rocket, label: "Kariyer Gelişimi", color: "text-rose-400", bg: "bg-rose-500/20", top: "40%", right: "15%", delay: 1.8 },
+        { icon: Laptop, label: "Modern Teknolojiler", color: "text-sky-400", bg: "bg-sky-500/20", top: "25%", right: "75%", delay: 0.9 },
+        { icon: Users, label: "Takım Ruhu", color: "text-lime-400", bg: "bg-lime-500/20", top: "65%", right: "60%", delay: 2.2 },
+        { icon: Target, label: "Global Vizyon", color: "text-violet-400", bg: "bg-violet-500/20", top: "80%", right: "20%", delay: 1.4 },
+        { icon: Lightbulb, label: "İnovasyon Odaklı", color: "text-amber-400", bg: "bg-amber-500/20", top: "5%", right: "10%", delay: 2.7 },
+    ]
 ]
 
 const SLIDES = [
     {
         id: 1,
         image: "/images/headers/yazilim-gelistirme-ve-inovasyon.jpg",
-        title: "Teknoloji Servisleri & Yazılım",
+        title: "Yazılım",
         subtitle: "Modern yazılım çözümleri ve teknoloji servisleri ile işletmenizi geleceğe taşıyın.",
         ctaText: "Hizmetlerimiz",
         ctaLink: "/services/software-development",
@@ -29,7 +50,7 @@ const SLIDES = [
     {
         id: 2,
         image: "/images/headers/proje-yapim-sekillerimiz.jpg",
-        title: "Proje Yapım Şekillerimiz",
+        title: "Teknoloji Servisleri",
         subtitle: "İhtiyacınıza uygun esnek çalışma modelleri ve çevik süreçler.",
         ctaText: "Nasıl Çalışıyoruz?",
         ctaLink: "#",
@@ -37,7 +58,7 @@ const SLIDES = [
     {
         id: 3,
         image: "/images/headers/bgts-kariyer-firsatlari.jpg",
-        title: "Geleceği Birlikte Şekillendirelim",
+        title: "Genç Mühendisler",
         subtitle: "Şeffaf iletişim, takım ruhu ve sürekli öğrenme tutkusuyla büyüyen global bir aileyiz.",
         ctaText: "Kariyer Fırsatları",
         ctaLink: "/hr",
@@ -118,32 +139,30 @@ export function HeroSlider() {
                                 </Link>
                             </div>
 
-                            {/* Floating Tech Bubbles - Only visible on the first slide and on larger screens */}
-                            {currentSlide === 0 && (
-                                <div className="hidden xl:block relative w-full h-[400px] flex-1 max-w-xl">
-                                    {techBubbles.map((bubble, idx) => (
+                            {/* Floating Tech Bubbles */}
+                            <div className="hidden xl:block relative w-full h-[400px] flex-1 max-w-xl">
+                                {slideBubbles[currentSlide].map((bubble, idx) => (
+                                    <motion.div
+                                        key={idx}
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: 0.5 + idx * 0.15, duration: 0.5, ease: "easeOut" }}
+                                        className="absolute"
+                                        style={{ top: bubble.top, right: bubble.right }}
+                                    >
                                         <motion.div
-                                            key={idx}
-                                            initial={{ opacity: 0, scale: 0.8 }}
-                                            animate={{ opacity: 1, scale: 1 }}
-                                            transition={{ delay: 0.5 + idx * 0.15, duration: 0.5, ease: "easeOut" }}
-                                            className="absolute"
-                                            style={{ top: bubble.top, right: bubble.right }}
+                                            animate={{ y: [0, -15, 0] }}
+                                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: bubble.delay }}
+                                            className="flex items-center gap-3 px-5 py-3 rounded-full bg-slate-900/40 backdrop-blur-md border border-white/10 shadow-2xl hover:bg-slate-800/60 hover:border-white/20 transition-colors cursor-default"
                                         >
-                                            <motion.div
-                                                animate={{ y: [0, -15, 0] }}
-                                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: bubble.delay }}
-                                                className="flex items-center gap-3 px-5 py-3 rounded-full bg-slate-900/40 backdrop-blur-md border border-white/10 shadow-2xl hover:bg-slate-800/60 hover:border-white/20 transition-colors cursor-default"
-                                            >
-                                                <div className={`p-2 rounded-full ${bubble.bg}`}>
-                                                    <bubble.icon className={`w-5 h-5 ${bubble.color}`} />
-                                                </div>
-                                                <span className="text-white font-medium text-[15px] tracking-wide whitespace-nowrap">{bubble.label}</span>
-                                            </motion.div>
+                                            <div className={`p-2 rounded-full ${bubble.bg}`}>
+                                                <bubble.icon className={`w-5 h-5 ${bubble.color}`} />
+                                            </div>
+                                            <span className="text-white font-medium text-[15px] tracking-wide whitespace-nowrap">{bubble.label}</span>
                                         </motion.div>
-                                    ))}
-                                </div>
-                            )}
+                                    </motion.div>
+                                ))}
+                            </div>
 
                         </motion.div>
                     </AnimatePresence>
