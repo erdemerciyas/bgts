@@ -4,7 +4,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import {
-    Server, Activity, Database, Code, Cpu, Globe, Shield, ShoppingBag,
+    Server, Activity, Database, Code, Cpu, Globe, Shield, ShoppingBag, Mic,
     CheckCircle2, ArrowRight, Terminal, FileText, PlayCircle, Linkedin, Briefcase,
     Zap, Bot, Landmark, TrendingUp, Radio, ShieldAlert, RefreshCw, Code2, Layers,
     Calendar, ArrowUpRight, BarChart3, Quote,
@@ -232,6 +232,15 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                                 <div className="flex-1">
                                     <h4 className={STYLES.itemTitle}>PRAXILA</h4>
                                     <p className={STYLES.itemDescItalic}>“Yeni nesil otomasyon ve operasyon yönetimi platformumuz.”</p>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link onClick={closeMenu} href="/products/meetsense" className={STYLES.linkGroup}>
+                            <Mic className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>MEETSENSE</h4>
+                                    <p className={STYLES.itemDescItalic}>“Toplantıları AI ile kaydedin, analiz edin ve kurumsal hafızaya dönüştürün.”</p>
                                 </div>
                             </div>
                         </Link>

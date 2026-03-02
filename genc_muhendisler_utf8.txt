@@ -1,0 +1,64 @@
+﻿
+
+Yazılımcı Yetiştirme Programı
+Yeni Mezun Yazılımcı Yetiştirme Programı, genç mühendisleri yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, ekip uyumu ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş problemleri üzerinde çalıştırarak ve sprint bazlı projelere entegre ederek, modern yazılım geliştirme süreçlerine hazır hale getirir.
+Program İçeriği
+Algoritma ve veri yapıları, Nesne Yönelimli Programlama ve Clean Code
+Backend ve frontend geliştirme
+Veritabanı yönetimi ve API tasarımı
+Test süreçleri ve temel CI/CD uygulamaları
+Agile &amp; Scrum metodolojisi ve code review kültürü
+Yaklaşım
+Teoriyi pratiğe dönüştüren uygulamalı öğrenim
+Gerçek projeler üzerinden deneyim kazandırma
+Sürekli geri bildirim ve mentorluk desteği
+Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma
+Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme
+Program Hedefi
+Program, üretken, sorumluluk sahibi ve modern yazılım süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+
+
+
+
+
+
+Test ve Analist Yetiştirme Programı
+Yeni Mezun Test ve Analist Yetiştirme Programı, genç mühendisleri ve yeni mezunları yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, iş analizi becerisi ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş senaryoları üzerinde çalıştırarak ve proje süreçlerine entegre ederek, modern test ve analiz süreçlerine hazır hale getirir.
+Program İçeriği
+Temel yazılım ve iş süreçleri bilgisi
+Test metodolojileri ve kalite standartları
+Test planı ve test senaryosu hazırlama
+Fonksiyonel, entegrasyon ve kullanıcı kabul testleri
+Test otomasyonu ve temel araç kullanımı
+İş analizi, gereksinim toplama ve dokümantasyon
+Agile &amp; Scrum metodolojisi ve sprint süreçlerine katkı
+Yaklaşım
+Teoriyi pratiğe dönüştüren uygulamalı öğrenim
+Gerçek iş senaryoları ve projeler üzerinden deneyim kazandırma
+Sürekli geri bildirim ve mentorluk desteği
+Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma
+Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme
+Program Hedefi
+Program, üretken, sorumluluk sahibi ve modern test &amp; analiz süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+
+
+
+
+Altyapı Teknolojileri Yetiştirme Programı
+Yeni Mezun DevOps &amp; Cloud Native Yetiştirme Programı, genç mühendisleri ve yeni mezunları yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, altyapı yönetimi becerisi ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş senaryoları ve altyapı projeleri üzerinde çalıştırarak, modern DevOps ve Cloud Native süreçlerine hazır hale getirir.
+Program İçeriği
+Linux ve temel sistem yönetimi
+CI/CD pipeline tasarımı ve otomasyonu
+Container teknolojileri (Docker, Kubernetes)
+Cloud platformları (AWS, Azure, GCP) ve servisleri
+Monitoring, logging ve alert sistemleri
+Infrastructure as Code (Terraform, Ansible vb.)
+Yaklaşım
+Teoriyi pratiğe dönüştüren uygulamalı öğrenim
+Gerçek altyapı projeleri üzerinden deneyim kazandırma
+Sürekli geri bildirim ve mentorluk desteği
+Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma
+Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme
+Program Hedefi
+Program, üretken, sorumluluk sahibi ve modern DevOps &amp; Cloud Native süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+

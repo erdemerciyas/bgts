@@ -42,6 +42,10 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Nodemailer SMTP Altyapısı Eklendi:** Projeye Nodemailer entegre edilerek İletişim sayfasındaki form ve İnsan Kaynakları (Genç Mühendis) başvuru formu ile direkt e-posta gönderim özelliği kazandırıldı.
 - **Dinamik CV Algılama ve Ekler:** İK Başvuru Formu üzerinden kullanıcıların `.pdf`, `.docx` gibi CV'lerini yükleyerek başvuru mailinin ekinde (attachment) iletilmesi sağlandı. Form geri bildirim mekanizmaları güçlendirildi.
 
+### Yeni Kurumsal Çözümler ve İçerik Zenginleştirme (v0.8.0)
+- **MeetSense AI Platformu:** Toplantıları AI ile kaydeden, analiz eden ve kurumsal hafızaya dönüştüren platformumuz için modern, kurumsal standartlarda premium bir ürün sayfası oluşturuldu (`/products/meetsense`). Mega Menü'ye entegrasyonu sağlandı.
+- **Genç Mühendisler Akademisi (Kapsamlı Redesign):** Eğitim alanlarının (Yazılım, Test/Analiz, DevOps) yaklaşım ve hedefleri detaylandırılarak, "Stacked Layout" yapısında daha şık ve okunabilir bir görünüme (`/young-engineers`) kavuşturuldu.
+
 ### Hata Giderimleri & Build Optimizasyonları (v0.7.1)
 - **Next.js Turbopack Çakışması:** `package.json` içerisindeki `"type": "commonjs"` tanımlaması nedeniyle ES Modules yapısıyla çalışan Next.js App Router yapısında ortaya çıkan CommonJS vs ESM çakışması (build hataları) giderildi. Dev server artık tamamen stabil çalışıyor.
 

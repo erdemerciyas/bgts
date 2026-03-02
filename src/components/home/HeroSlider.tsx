@@ -42,7 +42,7 @@ const SLIDES = [
     {
         id: 1,
         image: "/images/headers/yazilim-gelistirme-ve-inovasyon.jpg",
-        title: "Yazılım",
+        title: "Yazılım Teknolojileri",
         subtitle: "Modern yazılım çözümleri ve teknoloji servisleri ile işletmenizi geleceğe taşıyın.",
         ctaText: "Hizmetlerimiz",
         ctaLink: "/services/software-development",
@@ -150,16 +150,14 @@ export function HeroSlider() {
                                         className="absolute"
                                         style={{ top: bubble.top, right: bubble.right }}
                                     >
-                                        <motion.div
-                                            animate={{ y: [0, -15, 0] }}
-                                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: bubble.delay }}
+                                        <div
                                             className="flex items-center gap-3 px-5 py-3 rounded-full bg-slate-900/40 backdrop-blur-md border border-white/10 shadow-2xl hover:bg-slate-800/60 hover:border-white/20 transition-colors cursor-default"
                                         >
                                             <div className={`p-2 rounded-full ${bubble.bg}`}>
                                                 <bubble.icon className={`w-5 h-5 ${bubble.color}`} />
                                             </div>
                                             <span className="text-white font-medium text-[15px] tracking-wide whitespace-nowrap">{bubble.label}</span>
-                                        </motion.div>
+                                        </div>
                                     </motion.div>
                                 ))}
                             </div>

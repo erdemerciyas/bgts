@@ -216,17 +216,17 @@ export default function YoungEngineersPage() {
                 </Container>
             </section>
 
-            {/* 3. TRACKS: Asymmetric Grid */}
+            {/* 3. TRACKS: Stacked Detailed Cards */}
             <section id="tracks" className="py-24 bg-slate-50 relative border-y-2 border-black">
                 <Container>
                     <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-10">
-                        <div className="max-w-xl">
+                        <div className="max-w-2xl">
                             <h2 className="text-6xl font-black text-slate-900 mb-6 relative">
-                                <span className="relative z-10">Senin Yolun.</span>
+                                <span className="relative z-10">Yetiştirme Programlarımız.</span>
                                 <span className="absolute bottom-2 left-0 w-full h-6 bg-yellow-300 -z-0 transform -skew-x-12" />
                             </h2>
                             <p className="text-xl text-slate-700 font-bold">
-                                Seçimini yap, geleceğini şekillendir. Hangi alanda uzmanlaşmak istiyorsun?
+                                Seçimini yap, geleceğini şekillendir. Tüm programlarımız modern süreçlere tam entegrasyonu hedefler.
                             </p>
                         </div>
                         <div className="hidden md:block">
@@ -234,54 +234,166 @@ export default function YoungEngineersPage() {
                         </div>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-8">
-                        {/* CARD 1 */}
-                        <div className="group bg-blue-50 border-4 border-black p-8 rounded-none shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all relative">
-                            <div className="w-16 h-16 bg-blue-600 text-white border-2 border-black flex items-center justify-center mb-6 text-2xl font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                &lt;/&gt;
+                    <div className="grid grid-cols-1 gap-16">
+                        {/* PROGRAM 1: YAZILIM */}
+                        <div className="group bg-blue-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all">
+                            <div className="flex items-center gap-6 mb-8">
+                                <div className="w-20 h-20 shrink-0 bg-blue-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                                    <Code className="w-10 h-10" />
+                                </div>
+                                <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Yazılımcı Yetiştirme Programı</h3>
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 mb-4 uppercase">Yazılım</h3>
-                            <p className="text-slate-700 font-medium mb-8 leading-relaxed">
-                                Full-stack gelişim. React, Node.js, .NET Core. Kodunla dünyayı değiştir.
+
+                            <p className="text-lg md:text-xl text-slate-700 font-bold mb-10 leading-relaxed border-l-4 border-blue-600 pl-6">
+                                Yeni Mezun Yazılımcı Yetiştirme Programı, genç mühendisleri yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, ekip uyumu ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş problemleri üzerinde çalıştırarak ve sprint bazlı projelere entegre ederek, modern yazılım geliştirme süreçlerine hazır hale getirir.
                             </p>
-                            <ul className="space-y-3 font-bold text-slate-800">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> Modern Stack</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> Architecture</li>
-                            </ul>
+
+                            <div className="grid md:grid-cols-2 gap-10 mb-10">
+                                <div>
+                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">1</span>
+                                        Program İçeriği
+                                    </h4>
+                                    <ul className="space-y-4 font-bold text-slate-700">
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Algoritma ve veri yapıları, Nesne Yönelimli Programlama ve Clean Code</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Backend ve frontend geliştirme</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Veritabanı yönetimi ve API tasarımı</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Test süreçleri ve temel CI/CD uygulamaları</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Agile & Scrum metodolojisi ve code review kültürü</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">2</span>
+                                        Yaklaşım
+                                    </h4>
+                                    <ul className="space-y-4 font-bold text-slate-700">
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teoriyi pratiğe dönüştüren uygulamalı öğrenim</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Gerçek projeler üzerinden deneyim kazandırma</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Sürekli geri bildirim ve mentorluk desteği</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="bg-white border-2 border-black p-6 relative overflow-hidden">
+                                <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
+                                <h4 className="text-xl font-black text-blue-800 mb-2">Program Hedefi</h4>
+                                <p className="text-slate-800 font-semibold relative z-10">
+                                    Program, üretken, sorumluluk sahibi ve modern yazılım süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                </p>
+                            </div>
                         </div>
 
-                        {/* CARD 2 */}
-                        <div className="group bg-violet-50 border-4 border-black p-8 rounded-none shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all relative lg:-mt-12">
-                            <div className="absolute -top-6 right-6 rotate-12 bg-yellow-400 text-black px-4 py-1 font-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10">
-                                POPÜLER
+                        {/* PROGRAM 2: TEST & ANALIST */}
+                        <div className="group bg-violet-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all">
+                            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-yellow-400 text-black px-6 py-2 font-black text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-3">
+                                POPÜLER 🔥
                             </div>
-                            <div className="w-16 h-16 bg-violet-600 text-white border-2 border-black flex items-center justify-center mb-6 text-2xl font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                QA
+                            <div className="flex items-center gap-6 mb-8 mt-4">
+                                <div className="w-20 h-20 shrink-0 bg-violet-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                                    <BarChart3 className="w-10 h-10" />
+                                </div>
+                                <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Test ve Analist Yetiştirme Programı</h3>
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 mb-4 uppercase">Test & Analiz</h3>
-                            <p className="text-slate-700 font-medium mb-8 leading-relaxed">
-                                Kalite senin işin. Otomasyon, analiz ve kusursuz deneyimler yarat.
+
+                            <p className="text-lg md:text-xl text-slate-700 font-bold mb-10 leading-relaxed border-l-4 border-violet-600 pl-6">
+                                Yeni Mezun Test ve Analist Yetiştirme Programı, genç mühendisleri ve yeni mezunları yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, iş analizi becerisi ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş senaryoları üzerinde çalıştırarak ve proje süreçlerine entegre ederek, modern test ve analiz süreçlerine hazır hale getirir.
                             </p>
-                            <ul className="space-y-3 font-bold text-slate-800">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> Automation</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> Analytics</li>
-                            </ul>
+
+                            <div className="grid md:grid-cols-2 gap-10 mb-10">
+                                <div>
+                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">1</span>
+                                        Program İçeriği
+                                    </h4>
+                                    <ul className="space-y-4 font-bold text-slate-700">
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Temel yazılım ve iş süreçleri bilgisi</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test metodolojileri ve kalite standartları</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test planı ve test senaryosu hazırlama</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Fonksiyonel, entegrasyon ve kullanıcı kabul testleri</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test otomasyonu ve temel araç kullanımı</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> İş analizi, gereksinim toplama ve dokümantasyon</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Agile & Scrum metodolojisi ve sprint süreçlerine katkı</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">2</span>
+                                        Yaklaşım
+                                    </h4>
+                                    <ul className="space-y-4 font-bold text-slate-700">
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teoriyi pratiğe dönüştüren uygulamalı öğrenim</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Gerçek iş senaryoları ve projeler üzerinden deneyim kazandırma</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Sürekli geri bildirim ve mentorluk desteği</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="bg-white border-2 border-black p-6 relative overflow-hidden">
+                                <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-violet-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
+                                <h4 className="text-xl font-black text-violet-800 mb-2">Program Hedefi</h4>
+                                <p className="text-slate-800 font-semibold relative z-10">
+                                    Program, üretken, sorumluluk sahibi ve modern test & analiz süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                </p>
+                            </div>
                         </div>
 
-                        {/* CARD 3 */}
-                        <div className="group bg-emerald-50 border-4 border-black p-8 rounded-none shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all relative">
-                            <div className="w-16 h-16 bg-emerald-600 text-white border-2 border-black flex items-center justify-center mb-6 text-2xl font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                OPS
+                        {/* PROGRAM 3: ALTYAPI / DEVOPS */}
+                        <div className="group bg-emerald-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all">
+                            <div className="flex items-center gap-6 mb-8">
+                                <div className="w-20 h-20 shrink-0 bg-emerald-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                                    <Server className="w-10 h-10" />
+                                </div>
+                                <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Altyapı Teknolojileri Yetiştirme</h3>
                             </div>
-                            <h3 className="text-3xl font-black text-slate-900 mb-4 uppercase">Teknoloji</h3>
-                            <p className="text-slate-700 font-medium mb-8 leading-relaxed">
-                                Altyapının kahramanı ol. Cloud, DevOps ve büyük sistemler.
+
+                            <p className="text-lg md:text-xl text-slate-700 font-bold mb-10 leading-relaxed border-l-4 border-emerald-600 pl-6">
+                                Yeni Mezun DevOps & Cloud Native Yetiştirme Programı, genç mühendisleri ve yeni mezunları yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, altyapı yönetimi becerisi ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş senaryoları ve altyapı projeleri üzerinde çalıştırarak, modern DevOps ve Cloud Native süreçlerine hazır hale getirir.
                             </p>
-                            <ul className="space-y-3 font-bold text-slate-800">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> DevOps</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> Cloud Native</li>
-                            </ul>
+
+                            <div className="grid md:grid-cols-2 gap-10 mb-10">
+                                <div>
+                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">1</span>
+                                        Program İçeriği
+                                    </h4>
+                                    <ul className="space-y-4 font-bold text-slate-700">
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Linux ve temel sistem yönetimi</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> CI/CD pipeline tasarımı ve otomasyonu</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Container teknolojileri (Docker, Kubernetes)</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Cloud platformları (AWS, Azure, GCP) ve servisleri</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Monitoring, logging ve alert sistemleri</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Infrastructure as Code (Terraform, Ansible vb.)</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">2</span>
+                                        Yaklaşım
+                                    </h4>
+                                    <ul className="space-y-4 font-bold text-slate-700">
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teoriyi pratiğe dönüştüren uygulamalı öğrenim</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Gerçek altyapı projeleri üzerinden deneyim kazandırma</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Sürekli geri bildirim ve mentorluk desteği</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma</li>
+                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="bg-white border-2 border-black p-6 relative overflow-hidden">
+                                <div className="absolute right-0 bottom-0 w-32 h-32 bg-emerald-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
+                                <h4 className="text-xl font-black text-emerald-800 mb-2">Program Hedefi</h4>
+                                <p className="text-slate-800 font-semibold relative z-10">
+                                    Program, üretken, sorumluluk sahibi ve modern DevOps & Cloud Native süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                </p>
+                            </div>
                         </div>
+
                     </div>
                 </Container>
             </section>
