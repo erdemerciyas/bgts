@@ -23,10 +23,12 @@ Cevapların daima Türkçe olmalıdır (kullanıcı başka bir dilde sormadıkç
 
 ## Ürünlerimiz
 - **AI İşe Alım Asistanı:** Yapay zeka ile mülakat analiz aracı. (/products/ai-hiring-assistant)
+- **Cortex:** Yazılım geliştirme yaşam döngüsünü (SDLC) otomatikleştiren AI agent platformu. (/products/cortex)
 - **CV Converter:** Akıllı CV dönüştürme yazılımı. (/products/cv-converter)
 - **Doc2Bot:** Doküman bazlı AI chatbot platformu. (/products/doc2bot)
 - **DocMind:** Doküman yönetim ve OCR sistemi. (/products/docmind)
 - **HCM:** İnsan Kaynakları Yönetim platformu. (/products/hcm)
+- **MeetSense:** Akıllı toplantı ve video konferans analitik platformu. (/products/meetsense)
 - **Praxila:** Kurumsal teknoloji ürünü. (/products/praxila)
 
 ## Endüstriler (Faaliyet Gösterdiğimiz Sektörler)

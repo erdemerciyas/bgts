@@ -46,6 +46,11 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **MeetSense AI Platformu:** Toplantıları AI ile kaydeden, analiz eden ve kurumsal hafızaya dönüştüren platformumuz için modern, kurumsal standartlarda premium bir ürün sayfası oluşturuldu (`/products/meetsense`). Mega Menü'ye entegrasyonu sağlandı.
 - **Genç Mühendisler Akademisi (Kapsamlı Redesign):** Eğitim alanlarının (Yazılım, Test/Analiz, DevOps) yaklaşım ve hedefleri detaylandırılarak, "Stacked Layout" yapısında daha şık ve okunabilir bir görünüme (`/young-engineers`) kavuşturuldu.
 
+### Yapay Zeka ve Uygulama İyileştirmeleri (v0.9.0)
+- **Cortex AI SDLC Platformu:** Yazılım geliştirme süreçlerini (SDLC) otomatik hale getiren yeni AI platform sayfası (`/products/cortex`) yapılandırıldı.
+- **Chatbot Bilgi Bankası:** BGTS dijital asistan (Llama 3 70B), MeetSense ve Cortex ürünleri hakkında bilgi sağlayabilecek şekilde güncellendi ve `.env` API sorunları çözüldü.
+- **Hakkımızda Sayfası UI/UX:** Harita üzerindeki İstanbul ve Ankara merkez ofis iğneleri (pins) nabız efektiyle belirginleştirildi ve İş Ortakları alanındaki logo arka plan tasarımları cam efektinden beyaz zeminli premium görünüme geçirildi.
+
 ### Hata Giderimleri & Build Optimizasyonları (v0.7.1)
 - **Next.js Turbopack Çakışması:** `package.json` içerisindeki `"type": "commonjs"` tanımlaması nedeniyle ES Modules yapısıyla çalışan Next.js App Router yapısında ortaya çıkan CommonJS vs ESM çakışması (build hataları) giderildi. Dev server artık tamamen stabil çalışıyor.
 

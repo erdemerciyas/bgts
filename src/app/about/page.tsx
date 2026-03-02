@@ -15,12 +15,12 @@ import {
 } from "lucide-react"
 
 const offices = [
-    { id: "istanbul", city: "İstanbul", country: "Türkiye", address: "İTU Teknokent Arı 3 B3 Katar Caddesi İstanbul 34467", email: "info-tr@bgts.com", phone: "+90 444 3330", x: 55.92, y: 27.01, type: "office" as const },
-    { id: "ankara", city: "Ankara", country: "Türkiye", address: "Üniversiteler Mah. Şehit Mustafa Tayyarcan Cad. No: 91 Çankaya/Ankara", email: "info-tr@bgts.com", phone: "+90 444 3330", x: 57.41, y: 28.53, type: "office" as const },
-    { id: "london", city: "Londra", country: "Birleşik Krallık", address: "180 Strand London WC2R 1EA", email: "info-uk@bgts.com", phone: "+44 (845) 5947971", x: 45.02, y: 19.89, type: "office" as const },
-    { id: "sheffield", city: "Sheffield", country: "Birleşik Krallık", address: "Pennine 5, 1 Tenter Street, Block 2, S1 4BY", email: "info-uk@bgts.com", phone: "+44 (845) 5947971", x: 44.22, y: 17.78, type: "office" as const },
-    { id: "dusseldorf", city: "Düsseldorf", country: "Almanya", address: "Neubrückstr. 1 40213 Düsseldorf", email: "info-de@bgts.com", phone: "+49 (211) 90760230", x: 47.01, y: 22.01, type: "office" as const },
-    { id: "amsterdam", city: "Amsterdam", country: "Hollanda", address: "Gustav Mahlerplein 2, 1082 MA, Amsterdam (Zuidas)", email: "info-nl@bgts.com", phone: "+31 20 3691184", x: 46.32, y: 20.22, type: "office" as const },
+    { id: "istanbul", city: "İstanbul", country: "Türkiye", address: "İTU Teknokent Arı 3 B3 Katar Caddesi İstanbul 34467", email: "info-tr@bgts.com", phone: "+90 444 3330", x: 55.92, y: 27.01, type: "office" as const, isCentral: true },
+    { id: "ankara", city: "Ankara", country: "Türkiye", address: "Üniversiteler Mah. Şehit Mustafa Tayyarcan Cad. No: 91 Çankaya/Ankara", email: "info-tr@bgts.com", phone: "+90 444 3330", x: 57.41, y: 28.53, type: "office" as const, isCentral: true },
+    { id: "london", city: "Londra", country: "Birleşik Krallık", address: "180 Strand London WC2R 1EA", email: "info-uk@bgts.com", phone: "+44 (845) 5947971", x: 45.02, y: 19.89, type: "office" as const, isCentral: false },
+    { id: "sheffield", city: "Sheffield", country: "Birleşik Krallık", address: "Pennine 5, 1 Tenter Street, Block 2, S1 4BY", email: "info-uk@bgts.com", phone: "+44 (845) 5947971", x: 44.22, y: 17.78, type: "office" as const, isCentral: false },
+    { id: "dusseldorf", city: "Düsseldorf", country: "Almanya", address: "Neubrückstr. 1 40213 Düsseldorf", email: "info-de@bgts.com", phone: "+49 (211) 90760230", x: 47.01, y: 22.01, type: "office" as const, isCentral: false },
+    { id: "amsterdam", city: "Amsterdam", country: "Hollanda", address: "Gustav Mahlerplein 2, 1082 MA, Amsterdam (Zuidas)", email: "info-nl@bgts.com", phone: "+31 20 3691184", x: 46.32, y: 20.22, type: "office" as const, isCentral: false },
 ]
 
 const deliveryCenters = [
@@ -99,23 +99,27 @@ function LocationsMap() {
                         <button
                             key={office.id}
                             onClick={() => scrollToCard(office.id)}
-                            className="absolute group cursor-pointer"
+                            className={`absolute group cursor-pointer ${activeId === office.id ? 'z-40' : 'z-10 hover:z-50'}`}
                             style={{ left: `${office.x}%`, top: `${office.y}%`, transform: "translate(-50%, -50%)" }}
                             aria-label={office.city}
                         >
                             {/* Pulse ring for active pin */}
-                            {activeId === office.id && (
+                            {activeId === office.id ? (
                                 <span className="absolute inset-0 w-8 h-8 -ml-2 -mt-2 rounded-full bg-green-400/30 animate-ping" />
+                            ) : office.isCentral && (
+                                <span className="absolute inset-0 w-10 h-10 -ml-3 -mt-3 rounded-full bg-amber-400/40 animate-pulse pointer-events-none" />
                             )}
-                            <span className={`block w-4 h-4 rounded-full border-2 border-white shadow-lg transition-all duration-300 ${activeId === office.id
-                                ? "bg-green-400 scale-150 shadow-green-400/50"
-                                : "bg-yellow-400 group-hover:bg-green-400 group-hover:scale-125"
+                            <span className={`block transition-all duration-300 rounded-full border-2 border-white shadow-lg ${activeId === office.id
+                                ? "w-5 h-5 -ml-0.5 -mt-0.5 bg-green-400 scale-125 shadow-green-400/50 relative z-20"
+                                : office.isCentral
+                                    ? "w-6 h-6 -ml-1 -mt-1 bg-amber-500 group-hover:bg-amber-400 shadow-amber-500/50 relative z-10"
+                                    : "w-4 h-4 bg-yellow-400 group-hover:bg-green-400 group-hover:scale-125"
                                 }`} />
                             {/* Tooltip */}
-                            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-2 bg-slate-900/95 border border-slate-600 backdrop-blur-md rounded-lg text-xs text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">
+                            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-2 bg-slate-900/95 border border-slate-600 backdrop-blur-md rounded-lg text-xs text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl z-50">
                                 <span className="font-bold">{office.city}</span>
                                 <br />
-                                <span className="text-slate-400">{office.country} • Ofis</span>
+                                <span className="text-slate-400">{office.country} • {office.isCentral ? "Merkez Ofis" : "Ofis"}</span>
                             </span>
                         </button>
                     ))}
@@ -125,7 +129,7 @@ function LocationsMap() {
                         <button
                             key={dc.id}
                             onClick={() => setActiveId(dc.id)}
-                            className="absolute group cursor-pointer"
+                            className={`absolute group cursor-pointer ${activeId === dc.id ? 'z-40' : 'z-10 hover:z-50'}`}
                             style={{ left: `${dc.x}%`, top: `${dc.y}%`, transform: "translate(-50%, -50%)" }}
                             aria-label={dc.city}
                         >
@@ -401,7 +405,7 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.04 }}
-                                className="flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg shadow-black/10 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 p-4 h-40"
+                                className="flex items-center justify-center bg-white rounded-2xl border border-slate-200 shadow-lg shadow-black/10 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 p-4 h-40"
                             >
                                 <div className="relative w-full h-full">
                                     <Image src={p.src} alt={p.alt} fill className="object-contain" />
@@ -517,7 +521,7 @@ export default function AboutPage() {
                                 <div className="absolute bottom-5 left-5 right-5">
                                     <div className="grid grid-cols-2 gap-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
                                         <div className="text-center">
-                                            <div className="text-lg font-black text-white">0850</div>
+                                            <div className="text-lg font-black text-white">+90 444 3330</div>
                                             <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest mt-1">Destek Hattı</div>
                                         </div>
                                         <div className="text-center border-l border-white/20">
