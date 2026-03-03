@@ -647,7 +647,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                         <GraduationCap className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-slate-800 text-sm">BGTS Akademi</h4>
+                        <h4 className="font-bold text-slate-800 text-sm">Eğitim ve Sürekli Gelişim</h4>
                         <p className="text-slate-500 text-xs mt-0.5 leading-snug">Sürekli öğrenme ve gelişim fırsatları.</p>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-emerald-300 group-hover:text-emerald-600 transition-colors shrink-0" />

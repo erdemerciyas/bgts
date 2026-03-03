@@ -172,7 +172,7 @@ export default function CulturePage() {
                                 <div className="absolute -inset-3 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src="/images/culture/culture-8.jpg"
+                                        src="/images/culture/agile-esnek.png"
                                         alt="Agile Çalışma"
                                         fill
                                         className="object-cover"
@@ -215,10 +215,10 @@ export default function CulturePage() {
                             {/* Social Activities Grid */}
                             <div className="grid grid-cols-4 gap-3 mb-8">
                                 {[
-                                    { icon: Coffee, label: "Kahve Sohbeti", color: "from-amber-500 to-orange-500" },
-                                    { icon: Gamepad2, label: "Game Nights", color: "from-violet-500 to-purple-500" },
-                                    { icon: Music, label: "Müzik Kulübü", color: "from-pink-500 to-rose-500" },
-                                    { icon: PartyPopper, label: "Kutlamalar", color: "from-blue-500 to-indigo-500" },
+                                    { icon: Coffee, label: "Kahve Köşesi", color: "from-amber-500 to-orange-500" },
+                                    { icon: Gamepad2, label: "Oyun Arası", color: "from-violet-500 to-purple-500" },
+                                    { icon: Music, label: "Ofiste Yaşam", color: "from-pink-500 to-rose-500" },
+                                    { icon: PartyPopper, label: "Ekip Etkinlikleri", color: "from-blue-500 to-indigo-500" },
                                 ].map((activity, i) => (
                                     <div key={i} className="text-center group cursor-default">
                                         <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${activity.color} text-white flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform shadow-lg`}>

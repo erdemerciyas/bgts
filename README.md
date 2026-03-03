@@ -51,6 +51,10 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Chatbot Bilgi Bankası:** BGTS dijital asistan (Llama 3 70B), MeetSense ve Cortex ürünleri hakkında bilgi sağlayabilecek şekilde güncellendi ve `.env` API sorunları çözüldü.
 - **Hakkımızda Sayfası UI/UX:** Harita üzerindeki İstanbul ve Ankara merkez ofis iğneleri (pins) nabız efektiyle belirginleştirildi ve İş Ortakları alanındaki logo arka plan tasarımları cam efektinden beyaz zeminli premium görünüme geçirildi.
 
+### UI & UX İyileştirmeleri (v0.10.0)
+- **MeetSense Ürün Sayfası:** Hero alanı ve arka plan renkleri açık temaya (light theme) uygun olarak güncellendi. Kullanıcının dikkati dağılmaması adına hero kısmındaki etiket ve butonlar kaldırıldı.
+- **Kültür Sayfası:** Agile ve Esnek Çalışma bölümündeki cover görseli projeye yeni eklenen `agile-esnek.png` ile yenilendi.
+
 ### Hata Giderimleri & Build Optimizasyonları (v0.7.1)
 - **Next.js Turbopack Çakışması:** `package.json` içerisindeki `"type": "commonjs"` tanımlaması nedeniyle ES Modules yapısıyla çalışan Next.js App Router yapısında ortaya çıkan CommonJS vs ESM çakışması (build hataları) giderildi. Dev server artık tamamen stabil çalışıyor.
 
