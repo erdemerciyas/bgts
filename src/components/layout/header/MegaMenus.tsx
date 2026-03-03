@@ -212,7 +212,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                             <Cpu className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1">
-                                    <h4 className={STYLES.itemTitle}>BGTS CORTEX</h4>
+                                    <h4 className={STYLES.itemTitle}>CORTEX</h4>
                                     <p className={STYLES.itemDescItalic}>“Yazılım yaşam döngüsünü AI agent'larla otomatikleştirin.”</p>
                                 </div>
                             </div>
