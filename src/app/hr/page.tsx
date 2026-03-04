@@ -159,7 +159,7 @@ export default function HRPage() {
                     </Text>
 
                     <div className="flex justify-center">
-                        <Link href="/young-engineers" className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.5)]">
+                        <Link href="/genc-muhendis-programi" className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.5)]">
                             <span className="relative z-10 flex items-center gap-2">
                                 Programı İncele <Rocket className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
                             </span>

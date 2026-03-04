@@ -31,9 +31,9 @@ export default function SocialContributionPage() {
                     <div className="max-w-4xl mx-auto text-center space-y-8">
 
                         <motion.h1 {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }} className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
-                            Geleceği Birlikte <br />
+                            Sürdürülebilir Değer <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-400 to-red-400">
-                                Şekillendiriyoruz
+                                Programı
                             </span>
                         </motion.h1>
 

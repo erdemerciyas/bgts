@@ -135,7 +135,7 @@ export default function DocMindPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-slate-900 text-lg">Özelleştirilebilir Başlıklar</h4>
-                                        <p className="text-slate-600 mt-1">"Kurulum", "Veritabanı Şeması", "Sınıf Hiyerarşisi" gibi dilediğiniz başlıkları seçerek doküman yapısını siz belirleyin.</p>
+                                        <p className="text-slate-600 mt-1">"🎯 Hakkında / Genel Bakış", "🧩 Özellikler", "🏗️ Mimari & Sistem Tasarımı", "🚀 Başlangıç", "💻 Kullanım", "📁 Proje Yapısı", "🪄 API Referansı" gibi dilediğiniz başlıkları seçerek doküman yapısını siz belirleyin.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4">

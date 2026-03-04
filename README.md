@@ -55,6 +55,12 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **MeetSense Ürün Sayfası:** Hero alanı ve arka plan renkleri açık temaya (light theme) uygun olarak güncellendi. Kullanıcının dikkati dağılmaması adına hero kısmındaki etiket ve butonlar kaldırıldı.
 - **Kültür Sayfası:** Agile ve Esnek Çalışma bölümündeki cover görseli projeye yeni eklenen `agile-esnek.png` ile yenilendi.
 
+### Yeni Kurumsal Eklemeler & İyileştirmeler (v0.11.0)
+- **İş Ortakları Sayfası:** `/partnerships` sayfasında yenilikçi, modern bir Hero alanı ve teknoloji partnerleri (Microsoft, AWS, ServiceNow vb.) için 3 boyutlu kurumsal kartlar eklendi.
+- **Yönetilen Hizmetler (MSP) Görsel Revizyonu:** Önceden kullanılan karanlık temalı görseller, daha ferah, aydınlık ve 3 boyutlu izometrik teknoloji çizimleriyle değiştirilip yerel dizine (`/public/images/iso/`) taşındı.
+- **Sürdürülebilir Değer Programı:** "Toplumsal Katkı" menü ve yönlendirmeleri "Sürdürülebilir Değer Programı" olarak güncellendi.
+- **Genç Mühendisler Programı:** `/young-engineers` URL'i `/genc-muhendis-programi` olarak değiştirildi. Tasarım içindeki rozetler ('KOD YAZ, ETKİ YARAT' vb.) eğlenceli ve interaktif hover efektleriyle canlandırıldı.
+
 ### Hata Giderimleri & Build Optimizasyonları (v0.7.1)
 - **Next.js Turbopack Çakışması:** `package.json` içerisindeki `"type": "commonjs"` tanımlaması nedeniyle ES Modules yapısıyla çalışan Next.js App Router yapısında ortaya çıkan CommonJS vs ESM çakışması (build hataları) giderildi. Dev server artık tamamen stabil çalışıyor.
 

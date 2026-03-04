@@ -22,7 +22,7 @@ export const MANAGED_SERVICES_CONTENT = {
             title: "Veri Merkezi Yönetimi",
             subtitle: "Altyapı & Operasyon",
             description: "30 yıllık mühendislik deneyimiyle, kritik veri merkezi altyapılarınızın (Sunucu, Depolama, Sanallaştırma, Yedekleme) uçtan uca yönetimini sağlıyoruz. Tier-3 standartlarında işletim prosedürleri, proaktif kapasite planlama ve donanım yaşam döngüsü yönetimiyle, sistemlerinizin %99.99 erişilebilirlikte çalışmasını garanti ediyoruz. Sadece ışıkları açık tutmuyor; performans darboğazlarını oluşmadan tespit ediyor ve modernize ediyoruz.",
-            image: "/images/headers/msp/Veri-Merkezi.png",
+            image: "/images/iso/datacenter.png",
             icon: Server,
             features: [
                 {
@@ -44,7 +44,7 @@ export const MANAGED_SERVICES_CONTENT = {
             title: "7/24 İzleme & NOC",
             subtitle: "Gözlem & Analiz",
             description: "BGTS NOC (Network Operations Center), altyapınızı sadece 'up/down' olarak değil, iş servisleri ve kullanıcı deneyimi perspektifinden izler. Zabbix, Prometheus, Grafana ve ELK Stack gibi modern araçlarla oluşturduğumuz 'Single Pane of Glass' (Tek Ekran) yapısı sayesinde, binlerce metrik anlık olarak analiz edilir. Yapay zeka destekli olay korelasyonu ile gürültüyü (alert fatigue) azaltır, gerçek sorunlara odaklanırız.",
-            image: "/images/headers/msp/Monitoring.png",
+            image: "/images/iso/monitoring.png",
             icon: Activity,
             features: [
                 {
@@ -66,7 +66,7 @@ export const MANAGED_SERVICES_CONTENT = {
             title: "Son Kullanıcı ve Cihaz Yönetimi",
             subtitle: "Workplace Services",
             description: "Çalışanlarınızın üretkenliğini maksimize eden, sorunsuz bir dijital çalışma ortamı sunuyoruz. Geleneksel 'Helpdesk' anlayışının ötesinde; VIP destek, varlık yönetimi, imaj standardizasyonu ve uzaktan güvenli çalışma çözümleri sağlıyoruz. Kullanıcılarınız ofiste, evde veya sahada olsun; cihazlarının güvenliği, güncelliği ve performansı bizim sorumluluğumuzda.",
-            image: "/images/headers/msp/Desktop-Support.png",
+            image: "/images/iso/desktop.png",
             icon: Monitor,
             features: [
                 {
@@ -88,7 +88,7 @@ export const MANAGED_SERVICES_CONTENT = {
             title: "ITSM as a Service",
             subtitle: "Süreç Yönetimi",
             description: "BT operasyonlarınızı kaostan kurtarıp, ölçülebilir ve denetlenebilir bir hizmet yapısına dönüştürüyoruz. ITIL v4 standartlarında sunduğumuz Hizmet Yönetimi (ITSM) çözümleriyle; talep, olay, problem ve değişim süreçlerinizi dijitalleştiriyoruz. Service Desk ekiplerimiz, sadece çağrı karşılamakla kalmaz, kullanıcı memnuniyetini ve çözüm kalitesini artıran birer çözüm ortağı gibi çalışır.",
-            image: "/images/headers/msp/ITSM.png",
+            image: "/images/iso/desktop.png",
             icon: ClipboardList,
             features: [
                 {
@@ -107,10 +107,10 @@ export const MANAGED_SERVICES_CONTENT = {
         },
         {
             id: "sccm",
-            title: "SCCM & SRE Hizmetleri",
+            title: "SCCM as a Service",
             subtitle: "Otomasyon & Güvenlik",
-            description: "Binlerce istemci ve sunucudan oluşan yapınızı manuel yönetmek imkansızdır. Microsoft Endpoint Configuration Manager (MECM/SCCM) ve modern SRE (Site Reliability Engineering) disiplinleriyle; yama yönetimi, yazılım dağıtımı ve uyumluluk denetimlerini tam otomasyona bağlıyoruz. Güvenlik açıklarını (Vulnerability) siber saldırganlardan önce kapatıyor, sistemlerinizi 'Sıfır Güven' (Zero Trust) mimarisine hazırlıyoruz.",
-            image: "/images/headers/msp/SCCM-SRE.png",
+            description: "Binlerce istemci ve sunucudan oluşan yapınızı manuel yönetmek imkansızdır. Microsoft Endpoint Configuration Manager (MECM/SCCM) disiplinleriyle; yama yönetimi, yazılım dağıtımı ve uyumluluk denetimlerini tam otomasyona bağlıyoruz. Güvenlik açıklarını (Vulnerability) siber saldırganlardan önce kapatıyor, sistemlerinizi 'Sıfır Güven' (Zero Trust) mimarisine hazırlıyoruz.",
+            image: "/images/iso/datacenter.png",
             icon: RefreshCw,
             features: [
                 {
@@ -128,11 +128,37 @@ export const MANAGED_SERVICES_CONTENT = {
             ]
         },
         {
+            id: "sre",
+            title: "SRE as a Service",
+            subtitle: "SRE Dönüşüm Yolculuğu",
+            description: "Sıradan bir \"izleme\" yapısından, kendi kendini yöneten (Self-Driving) sistemlere geçiş planı.",
+            image: "/images/iso/monitoring.png",
+            icon: Activity,
+            features: [
+                {
+                    title: "1. Discovery & SLO Design",
+                    description: "Mevcut altyapıyı analiz ediyor, iş hedeflerinizi teknik metriklere (SLI) dönüştürüyoruz. Hangi servisin ne kadar kesintiye (Error Budget) tahammülü olduğunu belirliyoruz."
+                },
+                {
+                    title: "2. Observability & Instrumentation",
+                    description: "Sadece \"Uptime\" değil; Latency, Traffic, Errors ve Saturation (Golden Signals) verilerini topluyoruz. Servis bazlı dashboard'ları canlıya alıyoruz."
+                },
+                {
+                    title: "3. Automation & Reliability",
+                    description: "Tekrarlayan işleri (Toil) tespit edip otomasyona devrediyoruz. Self-healing senaryoları ile alarm gürültüsünü (Noise) %60+ azaltıyoruz."
+                },
+                {
+                    title: "4. Culture & Growth",
+                    description: "Post-Mortem analizleri, Kaizen (Sürekli İyileştirme) ve Chaos Engineering pratikleriyle ekibinizin kültürünü dönüştürüyoruz."
+                }
+            ]
+        },
+        {
             id: "devops",
             title: "DevOps as a Service",
             subtitle: "Yazılım Yaşam Döngüsü",
             description: "Yazılım geliştirme hızınızı artırırken, operasyonel kararlılıktan ödün vermeyin. CI/CD pipeline kurulumu, konteyner orkestrasyonu (Kubernetes/OpenShift) ve 'Infrastructure as Code' (IaC) yaklaşımlarıyla; kodun commit anından production ortamına kadar olan yolculuğunu otomatize ediyoruz. DevSecOps pratikleriyle, güvenlik taramalarını geliştirme sürecinin doğal bir parçası haline getiriyoruz.",
-            image: "/images/headers/msp/DevOps-Altyapi.png",
+            image: "/images/iso/datacenter.png",
             icon: GitBranch,
             features: [
                 {
@@ -157,7 +183,7 @@ export const MANAGED_SERVICES_CONTENT = {
             title: "Çoklu Bulut Yönetimi",
             subtitle: "Cloud Services",
             description: "Bulutun esnekliğini, kurumsal disiplinle birleştiriyoruz. AWS, Azure ve Google Cloud platformlarında; mimari tasarım, migrasyon ve 7/24 yönetim hizmetleri sunuyoruz. Cloud Adoption Framework (CAF) prensipleriyle; maliyetlerinizi optimize ediyor (FinOps), güvenlik duruşunuzu güçlendiriyor (SecOps) ve operasyonel yükü ekibinizin üzerinden alıyoruz.",
-            image: "/images/headers/yonetilen-bulut-hizmetleri.jpg",
+            image: "/images/iso/cloud.png",
             icon: Cloud,
             features: [
                 {
@@ -179,7 +205,7 @@ export const MANAGED_SERVICES_CONTENT = {
             title: "Microsoft 365 & Modern Work",
             subtitle: "Produktivite",
             description: "Çalışanlarınıza zaman ve mekan bağımsız, güvenli ve verimli bir çalışma deneyimi sunun. Microsoft 365 ekosistemini (Teams, SharePoint, Exchange) en verimli şekilde yönetiyoruz. Copilot entegrasyonlarıyla yapay zekayı iş süreçlerinize katıyor, Intune ve Entra ID (Azure AD) ile kimlik ve cihaz güvenliğinizi 'Sıfır Güven' prensibiyle sağlıyoruz.",
-            image: "/images/headers/msp/Desktop-Support.png",
+            image: "/images/iso/desktop.png",
             icon: AppWindow,
             features: [
                 {

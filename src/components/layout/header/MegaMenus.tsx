@@ -102,7 +102,11 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                     </Link>
                     <Link onClick={closeMenu} href="/services/managed-services#sccm" className="group flex items-center gap-3">
                         <RefreshCw className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-green-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-green-600 transition-colors">SCCM & SRE Hizmetleri</h4>
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-green-600 transition-colors">SCCM as a Service</h4>
+                    </Link>
+                    <Link onClick={closeMenu} href="/services/managed-services#sre" className="group flex items-center gap-3">
+                        <Activity className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-teal-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-teal-600 transition-colors">SRE as a Service</h4>
                     </Link>
                     <Link onClick={closeMenu} href="/services/managed-services#devops" className="group flex items-center gap-3">
                         <Code className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-red-600 transition-colors" />
@@ -292,7 +296,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
 
             {/* HERO CARD: Genç Mühendis Programı (2 cols) */}
             <Link
-                href="/young-engineers"
+                href="/genc-muhendis-programi"
                 onClick={closeMenu}
                 className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg"
             >
@@ -331,7 +335,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
 
                 {/* Yazılım */}
                 <Link
-                    href="/young-engineers#tracks"
+                    href="/genc-muhendis-programi#track-software"
                     onClick={closeMenu}
                     className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5"
                 >
@@ -339,7 +343,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                         <Code className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-slate-800 text-sm">Yazılım — Full-Stack Geliştirici</h4>
+                        <h4 className="font-bold text-slate-800 text-sm">Yazılımcı Yetiştirme Programı</h4>
                         <p className="text-slate-500 text-xs mt-0.5 leading-snug">React, .NET, Node.js ile gerçek dünya projeleri.</p>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-blue-300 group-hover:text-blue-600 transition-colors shrink-0" />
@@ -347,7 +351,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
 
                 {/* Teknoloji */}
                 <Link
-                    href="/young-engineers#tracks"
+                    href="/genc-muhendis-programi#track-infrastructure"
                     onClick={closeMenu}
                     className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5"
                 >
@@ -355,7 +359,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                         <Server className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-slate-800 text-sm">Teknoloji — Sistem & DevOps</h4>
+                        <h4 className="font-bold text-slate-800 text-sm">Altyapı Teknolojileri Yetiştirme Programı</h4>
                         <p className="text-slate-500 text-xs mt-0.5 leading-snug">Cloud, altyapı ve kurumsal sistemler.</p>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-emerald-300 group-hover:text-emerald-600 transition-colors shrink-0" />
@@ -363,7 +367,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
 
                 {/* Test & Analiz */}
                 <Link
-                    href="/young-engineers#tracks"
+                    href="/genc-muhendis-programi#track-test"
                     onClick={closeMenu}
                     className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-violet-50 to-purple-50 border border-violet-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5"
                 >
@@ -371,7 +375,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                         <BarChart3 className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-slate-800 text-sm">Test & Analiz — QA Mühendisi</h4>
+                        <h4 className="font-bold text-slate-800 text-sm">Test ve Analist Yetiştirme Programı</h4>
                         <p className="text-slate-500 text-xs mt-0.5 leading-snug">Otomasyon, kalite ve veri odaklı analiz.</p>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-violet-300 group-hover:text-violet-600 transition-colors shrink-0" />
@@ -380,7 +384,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
 
             {/* CTA CARD: Ekibe Katıl (1 col) */}
             <Link
-                href="/young-engineers#application-form"
+                href="/genc-muhendis-programi#application-form"
                 onClick={closeMenu}
                 className="col-span-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1"
             >
@@ -437,23 +441,23 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                 {/* Content */}
                 <div className="relative h-full flex flex-col justify-between p-8 z-10">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                            <Bot className="w-4 h-4 text-white" />
+                        <div className="w-8 h-8 rounded-full bg-rose-500/20 backdrop-blur-md flex items-center justify-center border border-rose-500/30">
+                            <Calendar className="w-4 h-4 text-rose-300" />
                         </div>
-                        <span className="text-xs font-bold text-white/80 tracking-widest uppercase">Bilgi Kütüphanesi</span>
+                        <span className="text-xs font-bold text-rose-200 tracking-widest uppercase">Gelecek Etkinlik</span>
                     </div>
 
                     <div>
-                        <h3 className="text-3xl font-black text-white mb-4 leading-tight">
-                            Geleceği Şekillendiren <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Bilgi Hazinesi</span>
+                        <h3 className="text-3xl font-black text-white mb-2 leading-tight">
+                            EBINTEC BANKING INNOVATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-400">CONFERENCE</span>
                         </h3>
-                        <p className="text-slate-300 text-sm leading-relaxed max-w-md mb-8">
-                            Dijital dönüşüm, mühendislik pratikleri ve sektör odaklı derinlemesine analizlere ulaşın.
-                            Teknoloji dünyasındaki rehberiniz.
+                        <p className="text-slate-200 text-sm font-bold flex items-center gap-2 mb-8">
+                            <span className="bg-white/20 px-2 py-1 rounded text-white">14 Nisan</span>
+                            <span>İstanbul</span>
                         </p>
 
-                        <div className="inline-flex items-center gap-2 bg-white text-slate-900 pl-5 pr-4 py-3 rounded-full font-bold text-sm hover:bg-cyan-50 transition-all group-hover:gap-4">
-                            Tüm İçerikleri Keşfet <ArrowRight className="w-4 h-4" />
+                        <div className="inline-flex items-center gap-2 bg-rose-600 text-white pl-5 pr-4 py-3 rounded-full font-bold text-sm hover:bg-rose-500 transition-all group-hover:gap-4 shadow-[0_0_20px_rgba(225,29,72,0.4)]">
+                            Detaylı İncele <ArrowRight className="w-4 h-4" />
                         </div>
                     </div>
                 </div>
@@ -512,32 +516,23 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
             </Link>
 
 
-            {/* CARD 4: Events (Webinar) */}
+            {/* CARD 4: İş Ortakları */}
             <Link
-                href="https://www.linkedin.com/company/bilgeadam/events/?viewAsMember=true"
-                target="_blank"
+                href="/partnerships"
                 onClick={closeMenu}
-                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-white border border-slate-200 p-0 shadow-sm hover:shadow-lg transition-all hover:border-blue-200 flex flex-col"
+                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all hover:border-slate-300 flex flex-col items-center justify-center p-6 text-center"
             >
-                <div className="h-1/2 bg-slate-100 relative overflow-hidden">
-                    <div className="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm z-10">
-                        WEBINAR
-                    </div>
-                    <Image src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=400&q=80" alt="Event" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-800 mb-4 group-hover:bg-slate-800 group-hover:text-white transition-colors duration-300 shadow-sm">
+                    <Layers className="w-6 h-6" />
                 </div>
-                <div className="h-1/2 p-4 flex flex-col justify-between bg-white">
-                    <div>
-                        <div className="flex items-center gap-1.5 text-slate-400 mb-1">
-                            <Calendar className="w-3 h-3" />
-                            <span className="text-[10px] font-bold uppercase tracking-wide">15 Ekim • 14:00</span>
-                        </div>
-                        <h4 className="font-bold text-slate-800 text-sm leading-tight line-clamp-2 group-hover:text-blue-600 transition-colors">
-                            Qlik Cloud Veri Analitiği Lansmanı
-                        </h4>
-                    </div>
-                    <div className="flex items-center text-xs font-bold text-blue-600 mt-2">
-                        Kaydol <ArrowRight className="w-3 h-3 ml-1" />
-                    </div>
+                <h4 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-slate-900 transition-colors">
+                    İş Ortakları
+                </h4>
+                <p className="text-slate-500 text-xs mb-4">
+                    Güçlü teknoloji ekosistemimiz.
+                </p>
+                <div className="flex items-center text-xs font-bold text-slate-800 group-hover:text-slate-900 mt-auto">
+                    İncele <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
             </Link>
 
@@ -663,7 +658,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                         <Heart className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-slate-800 text-sm">Toplumsal Katkı</h4>
+                        <h4 className="font-bold text-slate-800 text-sm">Sürdürülebilir Değer Programı</h4>
                         <p className="text-slate-500 text-xs mt-0.5 leading-snug">Eğitim, sürdürülebilirlik ve sosyal sorumluluk projelerimiz.</p>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-rose-300 group-hover:text-rose-600 transition-colors shrink-0" />

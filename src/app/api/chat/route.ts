@@ -44,8 +44,9 @@ Cevapların daima Türkçe olmalıdır (kullanıcı başka bir dilde sormadıkç
 - İnsan Kaynakları (/hr)
 - Kültürümüz (/culture)
 - Kariyer Yolları (/career-paths)
-- Genç Mühendis Programı (/young-engineers)
-- Sosyal Katkı (/social-contribution)
+- Genç Mühendis Programı (/genc-muhendis-programi)
+- Sürdürülebilir Değer Programı (/social-contribution)
+- İş Ortakları (/partnerships)
 - Başarı Hikayeleri (/resources/success-stories)
 - Bilgi Merkezi (İnfografikler) (/resources/infographics)
 

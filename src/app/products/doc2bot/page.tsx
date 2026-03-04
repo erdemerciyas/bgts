@@ -75,13 +75,6 @@ export default function Doc2BotPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <Image
-                                    src="/images/products/doc2bot/image4.png"
-                                    alt="Doc2Bot UI"
-                                    width={200}
-                                    height={200}
-                                    className="absolute -bottom-10 -right-10 w-48 h-auto drop-shadow-2xl"
-                                />
                             </div>
                         </div>
                     </div>

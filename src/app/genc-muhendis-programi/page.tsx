@@ -64,20 +64,18 @@ export default function YoungEngineersPage() {
                             </h1>
 
                             <p className="text-xl md:text-2xl text-slate-600 max-w-xl mb-12 font-bold leading-relaxed tracking-tight">
-                                Sıradan bir staj değil. <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-lg">Gerçek projeler</span>,
-                                <span className="bg-violet-100 text-violet-700 px-2 py-0.5 rounded-lg mx-1">modern teknoloji</span> ve
-                                <span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-lg mx-1">sınırsız eğlence</span>.
+                                Genç Mühendis Programı, <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-lg">gerçek uygulamalara</span> dokunarak <span className="bg-violet-100 text-violet-700 px-2 py-0.5 rounded-lg mx-1">modern teknolojilerle</span> üretme ve gelişme fırsatı sunar. Öğrenirken <span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-lg mx-1">değer yaratırsın</span>.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto items-start">
                                 <Link href="#application-form">
                                     <Button size="xl" className="bg-black text-white hover:bg-slate-800 rounded-none border-2 border-black px-12 h-16 text-lg font-black shadow-[8px_8px_0px_0px_rgba(37,99,235,1)] hover:shadow-[4px_4px_0px_0px_rgba(37,99,235,1)] hover:translate-x-1 hover:translate-y-1 transition-all">
-                                        BAŞVURUNU YAP
+                                        BAŞVURU
                                     </Button>
                                 </Link>
                                 <Link href="#tracks">
                                     <Button size="xl" variant="outline" className="bg-white text-black border-2 border-black rounded-none px-12 h-16 text-lg font-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all">
-                                        PROGRAMI GÖR
+                                        PROGRAM
                                     </Button>
                                 </Link>
                             </div>
@@ -132,7 +130,7 @@ export default function YoungEngineersPage() {
                                         <Users className="w-5 h-5 text-black" />
                                     </div>
                                     <div>
-                                        <div className="font-black text-lg leading-none">200+</div>
+                                        <div className="font-black text-lg leading-none">600+</div>
                                         <div className="text-[10px] font-bold text-slate-500 uppercase">Genç Mühendis</div>
                                     </div>
                                 </div>
@@ -155,22 +153,16 @@ export default function YoungEngineersPage() {
                     <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 relative z-10">
                         <div>
                             <span className="bg-violet-100 text-violet-700 font-bold px-4 py-2 text-sm uppercase mb-4 inline-block border-2 border-violet-200">
-                                #LifeAtBGTS
+                                #LIFE@BGT
                             </span>
-                            <h2 className="text-5xl md:text-6xl font-black text-slate-900 leading-none">
+                            <h2 className="text-5xl md:text-6xl font-black text-slate-900 leading-none mb-6">
                                 Koddan Fazlası. <br />
                                 <span className="text-violet-600 italic">Kültür.</span>
                             </h2>
-                        </div>
-                        <div className="flex gap-4">
-                            <div className="flex -space-x-4">
-                                {[1, 2, 3].map((i) => (
-                                    <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-slate-200" />
-                                ))}
-                            </div>
-                            <div className="flex flex-col justify-center">
-                                <span className="font-bold text-sm">Join the Community</span>
-                                <span className="text-xs text-slate-500">1.2k+ Members</span>
+                            <div className="bg-white border-2 border-black p-4 inline-block transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(139,92,246,1)] hover:rotate-0 transition-all cursor-default">
+                                <p className="text-lg text-slate-800 font-bold max-w-lg leading-snug">
+                                    <span className="bg-blue-100 text-blue-700 px-1">Uygulamalı öğrenimle</span> gerçek projelere dokunur, <span className="bg-yellow-100 text-yellow-700 px-1">sürekli gelişim</span> ve güçlü takım ruhuyla <span className="underline decoration-wavy decoration-violet-500 underline-offset-4">birlikte üretiriz.</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -178,11 +170,10 @@ export default function YoungEngineersPage() {
                     {/* Horizontal Scroll Snap Container - Styled as Stories */}
                     <div className="flex gap-8 overflow-x-auto pb-16 pt-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
                         {[
-                            { img: "/images/culture/culture-1.jpg", tag: "@Hackathon", title: "Kodlama Maratonu", color: "bg-blue-600" },
-                            { img: "/images/culture/culture-2.jpg", tag: "@Mentorship", title: "Usta-Çırak", color: "bg-violet-600" },
-                            { img: "/images/culture/culture-3.jpg", tag: "@HappyHour", title: "Cuma Neşesi", color: "bg-pink-600" },
-                            { img: "/images/culture/culture-5.jpg", tag: "@TechTalks", title: "Sahne Senin", color: "bg-emerald-600" },
-                            { img: "/images/culture/culture-6.jpg", tag: "@Global", title: "Dünya Çapında", color: "bg-cyan-600" },
+                            { img: "/images/culture/culture-1.jpg", tag: "@Hackathon", title: "Gerçek projeler", color: "bg-blue-600" },
+                            { img: "/images/culture/culture-2.jpg", tag: "@MENTORSHIP", title: "Sürekli gelişim", color: "bg-violet-600" },
+                            { img: "/images/culture/culture-5.jpg", tag: "@TechTalks", title: "Uygulamalı öğrenim", color: "bg-emerald-600" },
+                            { img: "/images/culture/culture-3.jpg", tag: "@HappyHour", title: "Takım ruhu", color: "bg-pink-600" },
                         ].map((story, i) => (
                             <motion.div
                                 key={i}
@@ -236,9 +227,12 @@ export default function YoungEngineersPage() {
 
                     <div className="grid grid-cols-1 gap-16">
                         {/* PROGRAM 1: YAZILIM */}
-                        <div className="group bg-blue-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all">
-                            <div className="flex items-center gap-6 mb-8">
-                                <div className="w-20 h-20 shrink-0 bg-blue-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                        <div id="track-software" className="group bg-blue-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:-rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
+                            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-blue-400 text-black px-6 py-2 font-black text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 -rotate-3 group-hover:rotate-0 transition-all">
+                                KOD YAZ, ETKİ YARAT 💻
+                            </div>
+                            <div className="flex items-center gap-6 mb-8 mt-4">
+                                <div className="w-20 h-20 shrink-0 bg-blue-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <Code className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Yazılımcı Yetiştirme Programı</h3>
@@ -287,12 +281,12 @@ export default function YoungEngineersPage() {
                         </div>
 
                         {/* PROGRAM 2: TEST & ANALIST */}
-                        <div className="group bg-violet-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all">
-                            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-yellow-400 text-black px-6 py-2 font-black text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-3">
+                        <div id="track-test" className="group bg-violet-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
+                            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-yellow-400 text-black px-6 py-2 font-black text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-3 animate-pulse group-hover:animate-none group-hover:rotate-6 transition-all">
                                 POPÜLER 🔥
                             </div>
                             <div className="flex items-center gap-6 mb-8 mt-4">
-                                <div className="w-20 h-20 shrink-0 bg-violet-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                                <div className="w-20 h-20 shrink-0 bg-violet-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <BarChart3 className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Test ve Analist Yetiştirme Programı</h3>
@@ -343,9 +337,12 @@ export default function YoungEngineersPage() {
                         </div>
 
                         {/* PROGRAM 3: ALTYAPI / DEVOPS */}
-                        <div className="group bg-emerald-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all">
-                            <div className="flex items-center gap-6 mb-8">
-                                <div className="w-20 h-20 shrink-0 bg-emerald-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                        <div id="track-infrastructure" className="group bg-emerald-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:-rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
+                            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-emerald-400 text-black px-6 py-2 font-black text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 -rotate-2 group-hover:rotate-0 transition-all">
+                                SİSTEM SENSİN ⚙️
+                            </div>
+                            <div className="flex items-center gap-6 mb-8 mt-4">
+                                <div className="w-20 h-20 shrink-0 bg-emerald-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <Server className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Altyapı Teknolojileri Yetiştirme</h3>
@@ -417,10 +414,6 @@ export default function YoungEngineersPage() {
                             <h2 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter">
                                 ŞİMDİ <br /> <span className="text-blue-500">BAŞLA.</span>
                             </h2>
-
-                            <p className="text-xl text-slate-400 font-medium max-w-md">
-                                Formu doldur, yeteneğini göster. Seni tanımak için sabırsızlanıyoruz.
-                            </p>
 
                             <div className="p-8 border-2 border-slate-800 rounded-2xl bg-slate-900/50 backdrop-blur-sm">
                                 <h4 className="font-bold text-xl mb-4 flex items-center gap-2">
