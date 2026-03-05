@@ -21,9 +21,13 @@ const solutionAreas = [
     "Ana Bankacılık", "Dijital Bankacılık", "Ödeme Sistemleri", "Kartlı Sistemler",
     "Yapay Zeka (AI)", "Veri Analitik", "SRE & DevOps", "Sistem Altyapı",
     "Kurumsal Güvenlik", "Test Otomasyon", "Leasing & Faktoring & Filo", "Sigorta",
-    "Bireysel & Ticari Krediler", "Portföy & Yatırım", "Kredi Risk", "Müşteri ve CRM",
+    "Bireysel & Ticari Krediler", "Portföy & Yatırım", "Kredi Risk İzleme", "Müşteri ve CRM",
     "Çağrı Merkezi Uygulamaları", "İnsan Kaynakları", "Kurumsal Çözümler", "Dijital Varlıklar",
-    "Proje Yönetimi", "UI/UX Tasarım"
+    "Proje Yönetimi", "UI/UX Tasarım", "Kredi Takip (Sorunlu Krediler)", "Krediler Tahsilat",
+    "Krediler Tasfiye", "Otomatik Tahsilat Süreçleri", "Müşteri Sınıflama (1-2-3-4-5)",
+    "Yasal Takip Süreçleri", "Varlık Yönetim Şirketine Devir Süreci", "Dış Ticaret İhracat İşlemleri",
+    "FIX, Pricing, Hedging Altyapıları", "Teminat Yönetimi", "Mevduat", "Kampanya Yönetimi",
+    "Kurum Entegrasyonları", "E-Fatura & E-Defter & E-Arşiv"
 ]
 
 const coreBankingItems = [

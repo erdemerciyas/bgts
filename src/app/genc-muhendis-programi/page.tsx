@@ -47,14 +47,6 @@ export default function YoungEngineersPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left: Text Content */}
                         <div className="flex flex-col items-start text-left">
-                            {/* Sticker Badge */}
-                            <motion.div
-                                initial={{ scale: 0, rotate: -20 }}
-                                animate={{ scale: 1, rotate: -6 }}
-                                className="bg-yellow-400 text-black px-6 py-2 font-black text-xl uppercase tracking-tighter border-4 border-black mb-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform hover:rotate-3 transition-transform cursor-default select-none"
-                            >
-                                Yeni Dönem Başladı! 🚀
-                            </motion.div>
 
                             <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 mb-6 leading-[0.85] flex flex-col gap-2">
                                 <span className="relative inline-block z-10">GELECEĞİ</span>
@@ -196,10 +188,6 @@ export default function YoungEngineersPage() {
 
                                 <div className="absolute bottom-8 left-6 right-6 text-white p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
                                     <h3 className="text-2xl font-black mb-1">{story.title}</h3>
-                                    <div className="flex items-center gap-2 text-sm font-medium opacity-90">
-                                        <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-                                        <span>Beğenildi</span>
-                                    </div>
                                 </div>
                             </motion.div>
                         ))}
