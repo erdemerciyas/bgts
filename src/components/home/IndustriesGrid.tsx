@@ -13,11 +13,11 @@ export function IndustriesGrid() {
     const { badge, heading, description, items } = HOME_CONTENT.industries;
 
     return (
-        <Section background="default" className="relative pb-32">
+        <Section background="default" className="relative pb-20">
 
 
             <Container className="relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-20">
+                <div className="text-center max-w-3xl mx-auto mb-14">
                     <span className="inline-block px-6 py-2 rounded-full bg-corporate-tertiary/10 text-corporate-tertiary font-bold text-sm tracking-wide mb-6">
                         {badge}
                     </span>
@@ -54,7 +54,7 @@ export function IndustriesGrid() {
                                     </div>
                                 </div>
 
-                                <div className="p-10 flex flex-col flex-1 bg-white relative">
+                                <div className="p-8 flex flex-col flex-1 bg-white relative">
                                     {/* Hover Accent Line */}
                                     <div className="absolute top-0 left-0 w-0 h-1 bg-corporate-tertiary transition-all duration-500 group-hover:w-full" />
 

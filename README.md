@@ -61,6 +61,10 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Sürdürülebilir Değer Programı:** "Toplumsal Katkı" menü ve yönlendirmeleri "Sürdürülebilir Değer Programı" olarak güncellendi.
 - **Genç Mühendisler Programı:** `/young-engineers` URL'i `/genc-muhendis-programi` olarak değiştirildi. Tasarım içindeki rozetler ('KOD YAZ, ETKİ YARAT' vb.) eğlenceli ve interaktif hover efektleriyle canlandırıldı.
 
+### Responsive Optimizasyon & Savunma Revizyonları (v0.12.0)
+- **Responsive Optimizasyon:** Tüm sitede %100 zoom'da aşırı büyük görünen elemanlar ve yatay kaymalar düzeltildi. Tipografi küçültüldü (h1: 56→48px, h2: 42→36px, body text: 18→16px), Hero alanları küçültüldü (85vh→75vh), section/kart padding'leri %20-30 azaltıldı ve `overflow-x: hidden` koruması eklendi.
+- **Savunma Sanayi Sayfası Revizyonu:** Döküman bazlı kapsamlı içerik güncellemesi yapıldı — Hero başlıkları güncellendi (MIL-STD ve IEEE standartlarına referans), İş Analizi bölümü yeniden yapılandırıldı (Kavramsal Tasarım kaldırıldı, ConOps ve Senaryo açıklamaları güncellendi), Yazılım bölümüne NAF/DODAF/TOGAF mimari çerçeveleri eklendi, Test ve DevOps açıklamaları revize edildi, BT Altyapı ve Yönetilen BT Hizmetleri bölümleri tamamen kaldırıldı.
+
 ### Hata Giderimleri & Build Optimizasyonları (v0.7.1)
 - **Next.js Turbopack Çakışması:** `package.json` içerisindeki `"type": "commonjs"` tanımlaması nedeniyle ES Modules yapısıyla çalışan Next.js App Router yapısında ortaya çıkan CommonJS vs ESM çakışması (build hataları) giderildi. Dev server artık tamamen stabil çalışıyor.
 

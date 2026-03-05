@@ -18,20 +18,20 @@ interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 }
 
 export const headingStyles = {
-    h1: "text-4xl md:text-[56px] font-normal tracking-tight font-heading leading-[1.15] text-corporate-dark",
-    h2: "text-3xl md:text-[42px] font-normal tracking-tight font-heading leading-tight text-corporate-dark",
-    h3: "text-2xl md:text-3xl font-normal font-heading text-corporate-dark",
-    h4: "text-xl md:text-2xl font-normal font-heading text-corporate-dark",
-    h5: "text-lg md:text-xl font-bold font-heading text-corporate-dark",
-    h6: "text-base font-bold font-heading text-corporate-dark",
+    h1: "text-3xl md:text-5xl font-normal tracking-tight font-heading leading-[1.15] text-corporate-dark",
+    h2: "text-2xl md:text-4xl font-normal tracking-tight font-heading leading-tight text-corporate-dark",
+    h3: "text-xl md:text-2xl font-normal font-heading text-corporate-dark",
+    h4: "text-lg md:text-xl font-normal font-heading text-corporate-dark",
+    h5: "text-base md:text-lg font-bold font-heading text-corporate-dark",
+    h6: "text-sm font-bold font-heading text-corporate-dark",
 }
 
 export const textStyles = {
-    default: "text-[18px] leading-relaxed text-text-main font-bold", // High readability verified from site
+    default: "text-base leading-relaxed text-text-main font-semibold",
     muted: "text-sm text-slate-500 font-medium",
-    large: "text-xl font-medium leading-relaxed text-corporate-dark",
+    large: "text-lg font-medium leading-relaxed text-corporate-dark",
     small: "text-sm font-medium leading-none text-slate-500",
-    lead: "text-xl text-corporate-dark leading-relaxed font-medium",
+    lead: "text-lg text-corporate-dark leading-relaxed font-medium",
 }
 
 export function Heading({

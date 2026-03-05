@@ -23,12 +23,7 @@ export default function AiHiringPage() {
                                 AI Hiring Assistant ile işe alım süreçlerinizi hızlandırın, aday-ilan uyumunu maksimize edin ve video mülakat analizleriyle en doğru yeteneği saniyeler içinde keşfedin.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-white font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:scale-105"
-                                >
-                                    Hemen Demo İsteyin <ArrowRight className="w-5 h-5 ml-2" />
-                                </Link>
+
                                 <Link
                                     href="#features"
                                     className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl backdrop-blur-sm transition-all border border-white/10"

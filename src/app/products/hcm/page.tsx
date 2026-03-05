@@ -303,14 +303,7 @@ export default function HcmPage() {
                                     </div>
                                 ))}
                             </div>
-                            <div className="mt-8">
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-300 text-white font-bold rounded-xl transition-all shadow-lg shadow-orange-500/25 hover:scale-105"
-                                >
-                                    Demo Talep Edin <ArrowRight className="w-5 h-5 ml-2" />
-                                </Link>
-                            </div>
+
                         </motion.div>
 
                         {/* Right: Video Embed */}

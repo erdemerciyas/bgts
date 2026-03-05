@@ -153,7 +153,7 @@ export default function YoungEngineersPage() {
                             </h2>
                             <div className="bg-white border-2 border-black p-4 inline-block transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(139,92,246,1)] hover:rotate-0 transition-all cursor-default">
                                 <p className="text-lg text-slate-800 font-bold max-w-lg leading-snug">
-                                    <span className="bg-blue-100 text-blue-700 px-1">Uygulamalı öğrenimle</span> gerçek projelere dokunur, <span className="bg-yellow-100 text-yellow-700 px-1">sürekli gelişim</span> ve güçlü takım ruhuyla <span className="underline decoration-wavy decoration-violet-500 underline-offset-4">birlikte üretiriz.</span>
+                                    <span className="bg-blue-100 text-blue-700 px-1">Uygulamalı öğrenimle</span> gerçek projelere dokunur, <span className="bg-yellow-100 text-yellow-700 px-1">sürekli gelişim</span> ve güçlü takım çalışmasıyla <span className="underline decoration-wavy decoration-violet-500 underline-offset-4">birlikte üretiriz.</span>
                                 </p>
                             </div>
                         </div>
@@ -165,7 +165,7 @@ export default function YoungEngineersPage() {
                             { img: "/images/culture/culture-1.jpg", tag: "@Hackathon", title: "Gerçek projeler", color: "bg-blue-600" },
                             { img: "/images/culture/culture-2.jpg", tag: "@MENTORSHIP", title: "Sürekli gelişim", color: "bg-violet-600" },
                             { img: "/images/culture/culture-5.jpg", tag: "@TechTalks", title: "Uygulamalı öğrenim", color: "bg-emerald-600" },
-                            { img: "/images/culture/culture-3.jpg", tag: "@HappyHour", title: "Takım ruhu", color: "bg-pink-600" },
+                            { img: "/images/culture/culture-3.jpg", tag: "@HappyHour", title: "Takım çalışması", color: "bg-pink-600" },
                         ].map((story, i) => (
                             <motion.div
                                 key={i}
@@ -223,17 +223,15 @@ export default function YoungEngineersPage() {
                                 <div className="w-20 h-20 shrink-0 bg-blue-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <Code className="w-10 h-10" />
                                 </div>
-                                <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Yazılımcı Yetiştirme Programı</h3>
+                                <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-blue-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                                    Yazılımcı Yetiştirme Programı
+                                </h3>
                             </div>
 
-                            <p className="text-lg md:text-xl text-slate-700 font-bold mb-10 leading-relaxed border-l-4 border-blue-600 pl-6">
-                                Yeni Mezun Yazılımcı Yetiştirme Programı, genç mühendisleri yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, ekip uyumu ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş problemleri üzerinde çalıştırarak ve sprint bazlı projelere entegre ederek, modern yazılım geliştirme süreçlerine hazır hale getirir.
-                            </p>
-
-                            <div className="grid md:grid-cols-2 gap-10 mb-10">
+                            <div className="grid md:grid-cols-2 gap-10 mb-6">
                                 <div>
                                     <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">1</span>
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">1</span>
                                         Program İçeriği
                                     </h4>
                                     <ul className="space-y-4 font-bold text-slate-700">
@@ -246,25 +244,16 @@ export default function YoungEngineersPage() {
                                 </div>
                                 <div>
                                     <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">2</span>
-                                        Yaklaşım
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">2</span>
+                                        Program Hedefi
                                     </h4>
-                                    <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teoriyi pratiğe dönüştüren uygulamalı öğrenim</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Gerçek projeler üzerinden deneyim kazandırma</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Sürekli geri bildirim ve mentorluk desteği</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme</li>
-                                    </ul>
+                                    <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(37,99,235,1)]">
+                                        <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
+                                        <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
+                                            Program, üretken, sorumluluk sahibi ve modern yazılım süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div className="bg-white border-2 border-black p-6 relative overflow-hidden">
-                                <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
-                                <h4 className="text-xl font-black text-blue-800 mb-2">Program Hedefi</h4>
-                                <p className="text-slate-800 font-semibold relative z-10">
-                                    Program, üretken, sorumluluk sahibi ve modern yazılım süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
-                                </p>
                             </div>
                         </div>
 
@@ -277,17 +266,15 @@ export default function YoungEngineersPage() {
                                 <div className="w-20 h-20 shrink-0 bg-violet-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <BarChart3 className="w-10 h-10" />
                                 </div>
-                                <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Test ve Analist Yetiştirme Programı</h3>
+                                <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-violet-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                                    Test ve Analist Yetiştirme Programı
+                                </h3>
                             </div>
 
-                            <p className="text-lg md:text-xl text-slate-700 font-bold mb-10 leading-relaxed border-l-4 border-violet-600 pl-6">
-                                Yeni Mezun Test ve Analist Yetiştirme Programı, genç mühendisleri ve yeni mezunları yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, iş analizi becerisi ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş senaryoları üzerinde çalıştırarak ve proje süreçlerine entegre ederek, modern test ve analiz süreçlerine hazır hale getirir.
-                            </p>
-
-                            <div className="grid md:grid-cols-2 gap-10 mb-10">
+                            <div className="grid md:grid-cols-2 gap-10 mb-6">
                                 <div>
                                     <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">1</span>
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">1</span>
                                         Program İçeriği
                                     </h4>
                                     <ul className="space-y-4 font-bold text-slate-700">
@@ -302,25 +289,16 @@ export default function YoungEngineersPage() {
                                 </div>
                                 <div>
                                     <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">2</span>
-                                        Yaklaşım
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">2</span>
+                                        Program Hedefi
                                     </h4>
-                                    <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teoriyi pratiğe dönüştüren uygulamalı öğrenim</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Gerçek iş senaryoları ve projeler üzerinden deneyim kazandırma</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Sürekli geri bildirim ve mentorluk desteği</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme</li>
-                                    </ul>
+                                    <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(124,58,237,1)]">
+                                        <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-violet-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
+                                        <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
+                                            Program, üretken, sorumluluk sahibi ve modern test & analiz süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div className="bg-white border-2 border-black p-6 relative overflow-hidden">
-                                <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-violet-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
-                                <h4 className="text-xl font-black text-violet-800 mb-2">Program Hedefi</h4>
-                                <p className="text-slate-800 font-semibold relative z-10">
-                                    Program, üretken, sorumluluk sahibi ve modern test & analiz süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
-                                </p>
                             </div>
                         </div>
 
@@ -333,17 +311,15 @@ export default function YoungEngineersPage() {
                                 <div className="w-20 h-20 shrink-0 bg-emerald-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <Server className="w-10 h-10" />
                                 </div>
-                                <h3 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">Altyapı Teknolojileri Yetiştirme</h3>
+                                <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-emerald-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                                    Altyapı Teknolojileri Yetiştirme
+                                </h3>
                             </div>
 
-                            <p className="text-lg md:text-xl text-slate-700 font-bold mb-10 leading-relaxed border-l-4 border-emerald-600 pl-6">
-                                Yeni Mezun DevOps & Cloud Native Yetiştirme Programı, genç mühendisleri ve yeni mezunları yalnızca teknik bilgi ile donatmakla kalmayıp, problem çözme yetkinliği, altyapı yönetimi becerisi ve profesyonel çalışma disiplinini geliştirmeyi hedefler. Program, katılımcıları gerçek iş senaryoları ve altyapı projeleri üzerinde çalıştırarak, modern DevOps ve Cloud Native süreçlerine hazır hale getirir.
-                            </p>
-
-                            <div className="grid md:grid-cols-2 gap-10 mb-10">
+                            <div className="grid md:grid-cols-2 gap-10 mb-6">
                                 <div>
                                     <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">1</span>
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">1</span>
                                         Program İçeriği
                                     </h4>
                                     <ul className="space-y-4 font-bold text-slate-700">
@@ -357,25 +333,16 @@ export default function YoungEngineersPage() {
                                 </div>
                                 <div>
                                     <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold">2</span>
-                                        Yaklaşım
+                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">2</span>
+                                        Program Hedefi
                                     </h4>
-                                    <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teoriyi pratiğe dönüştüren uygulamalı öğrenim</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Gerçek altyapı projeleri üzerinden deneyim kazandırma</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Sürekli geri bildirim ve mentorluk desteği</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Teknik yetkinlik ile birlikte sorumluluk ve sahiplenme bilinci kazandırma</li>
-                                        <li className="flex items-start gap-3"><Zap className="w-6 h-6 text-yellow-500 fill-yellow-500 shrink-0 mt-0.5" /> Katılımcının potansiyelini erken aşamada keşfetme ve geliştirme</li>
-                                    </ul>
+                                    <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(16,185,129,1)]">
+                                        <div className="absolute right-0 bottom-0 w-32 h-32 bg-emerald-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
+                                        <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
+                                            Program, üretken, sorumluluk sahibi ve modern DevOps & Cloud Native süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div className="bg-white border-2 border-black p-6 relative overflow-hidden">
-                                <div className="absolute right-0 bottom-0 w-32 h-32 bg-emerald-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
-                                <h4 className="text-xl font-black text-emerald-800 mb-2">Program Hedefi</h4>
-                                <p className="text-slate-800 font-semibold relative z-10">
-                                    Program, üretken, sorumluluk sahibi ve modern DevOps & Cloud Native süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
-                                </p>
                             </div>
                         </div>
 
@@ -391,13 +358,6 @@ export default function YoungEngineersPage() {
                 <Container className="relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div className="space-y-8 sticky top-24">
-                            <motion.div
-                                initial={{ opacity: 0, x: -50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                className="inline-block bg-pink-500 text-white font-black px-4 py-1 text-lg rotate-[-2deg]"
-                            >
-                                SON AŞAMA 🏁
-                            </motion.div>
 
                             <h2 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter">
                                 ŞİMDİ <br /> <span className="text-blue-500">BAŞLA.</span>

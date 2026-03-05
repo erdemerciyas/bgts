@@ -38,7 +38,7 @@ export default function CulturePage() {
                         </motion.h1>
 
                         <motion.p {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.2 }} className="text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                            Açık iletişim, takım ruhu ve üretme heyecanı — kültürümüzün DNA'sı.
+                            Açık iletişim, takım çalışması ve üretme heyecanı — kültürümüzün DNA'sı.
                             Hibrit ve esnek çalışma modelleri ile herkesin en verimli olduğu ortamda çalışmasını destekliyoruz.
                         </motion.p>
 
@@ -50,12 +50,7 @@ export default function CulturePage() {
                             >
                                 Aramıza Katıl <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
-                            <Link
-                                href="#culture-details"
-                                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full backdrop-blur-sm transition-all border border-white/10"
-                            >
-                                Kültürümüzü Keşfet
-                            </Link>
+
                         </motion.div>
                     </div>
 

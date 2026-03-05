@@ -160,9 +160,7 @@ export default function DocMindPage() {
                     <p className="text-slate-400 mb-10 max-w-xl mx-auto">
                         DocMind ile kodunuz geliştikçe dokümanınız da gelişsin.
                     </p>
-                    <Link href="/contact" className="px-10 py-4 bg-teal-500 hover:bg-teal-400 text-white font-bold rounded-full transition-colors inline-flex items-center">
-                        Demo Talep Et <ArrowRight className="w-5 h-5 ml-2" />
-                    </Link>
+
                 </Container>
             </section>
         </div>

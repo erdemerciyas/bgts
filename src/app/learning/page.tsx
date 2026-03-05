@@ -50,12 +50,7 @@ export default function LearningPage() {
                             >
                                 Bize Katıl <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
-                            <Link
-                                href="#learning-details"
-                                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full backdrop-blur-sm transition-all border border-white/10"
-                            >
-                                Eğitimleri Keşfet
-                            </Link>
+
                         </motion.div>
                     </div>
 

@@ -321,7 +321,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                             Geleceğini <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Kodla</span>
                         </h3>
                         <p className="text-white/60 text-xs leading-relaxed mb-5 max-w-[280px]">
-                            Gerçek projelerde deneyim kazan, mentorlarla çalış ve kariyerine güçlü bir başlangıç yap.
+                            Sektör projelerinde deneyim kazan, mentorlarla çalış ve kariyerine güçlü bir başlangıç yap.
                         </p>
                         <div className="inline-flex items-center gap-2 bg-white text-slate-900 pl-4 pr-3 py-2 rounded-full font-bold text-xs hover:bg-cyan-50 transition-all group-hover:gap-3">
                             Programı Keşfet <ArrowRight className="w-3.5 h-3.5" />
@@ -422,46 +422,40 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
         <div className="grid grid-cols-4 grid-rows-2 gap-4 h-[480px]">
 
             {/* FEATURED: Main Knowledge Hub (Spans 2 cols, 2 rows) */}
-            <Link
-                href="/resources"
-                onClick={closeMenu}
-                className="col-span-2 row-span-2 relative group overflow-hidden rounded-3xl bg-slate-900 shadow-lg ring-1 ring-slate-900/5"
+            <div
+                className="col-span-2 row-span-2 relative group overflow-hidden rounded-3xl bg-slate-900 shadow-lg ring-1 ring-slate-900/5 cursor-default"
             >
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
+                        src="/images/events/ebintec-bg.jpg"
                         alt="BİLGİ MERKEZİ"
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 mix-blend-overlay"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-90" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent opacity-80" />
                 </div>
 
                 {/* Content */}
                 <div className="relative h-full flex flex-col justify-between p-8 z-10">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-rose-500/20 backdrop-blur-md flex items-center justify-center border border-rose-500/30">
-                            <Calendar className="w-4 h-4 text-rose-300" />
+                        <div className="w-8 h-8 rounded-full bg-rose-500/80 shadow-lg flex items-center justify-center border border-rose-400">
+                            <Calendar className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-xs font-bold text-rose-200 tracking-widest uppercase">Gelecek Etkinlik</span>
+                        <span className="text-xs font-bold text-white drop-shadow-md tracking-widest uppercase">Gelecek Etkinlik</span>
                     </div>
 
-                    <div>
-                        <h3 className="text-3xl font-black text-white mb-2 leading-tight">
+                    <div className="mt-auto bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-2xl">
+                        <h3 className="text-2xl font-black text-white mb-3 leading-tight">
                             EBINTEC BANKING INNOVATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-400">CONFERENCE</span>
                         </h3>
-                        <p className="text-slate-200 text-sm font-bold flex items-center gap-2 mb-8">
-                            <span className="bg-white/20 px-2 py-1 rounded text-white">14 Nisan</span>
+                        <p className="text-slate-200 text-sm font-bold flex items-center gap-2 group-hover:-translate-y-1 transition-transform">
+                            <span className="bg-white/20 px-2 py-1 rounded text-white backdrop-blur-sm">14 Nisan</span>
                             <span>İstanbul</span>
                         </p>
-
-                        <div className="inline-flex items-center gap-2 bg-rose-600 text-white pl-5 pr-4 py-3 rounded-full font-bold text-sm hover:bg-rose-500 transition-all group-hover:gap-4 shadow-[0_0_20px_rgba(225,29,72,0.4)]">
-                            Detaylı İncele <ArrowRight className="w-4 h-4" />
-                        </div>
                     </div>
                 </div>
-            </Link>
+            </div>
 
 
             {/* CARD 2: Success Stories (Pink/Purple Gradient) */}
@@ -520,19 +514,24 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
             <Link
                 href="/partnerships"
                 onClick={closeMenu}
-                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-lg transition-all hover:border-slate-300 flex flex-col items-center justify-center p-6 text-center"
+                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-slate-900 border border-slate-700 shadow-lg hover:shadow-slate-800/50 transition-all hover:border-slate-600 flex flex-col items-center justify-center p-6 text-center"
             >
-                <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-800 mb-4 group-hover:bg-slate-800 group-hover:text-white transition-colors duration-300 shadow-sm">
-                    <Layers className="w-6 h-6" />
-                </div>
-                <h4 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-slate-900 transition-colors">
-                    İş Ortakları
-                </h4>
-                <p className="text-slate-500 text-xs mb-4">
-                    Güçlü teknoloji ekosistemimiz.
-                </p>
-                <div className="flex items-center text-xs font-bold text-slate-800 group-hover:text-slate-900 mt-auto">
-                    İncele <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-soft-light"></div>
+                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-slate-700/30 rounded-full blur-2xl group-hover:bg-slate-600/40 transition-colors"></div>
+
+                <div className="relative z-10 flex flex-col items-center">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-slate-300 mb-4 group-hover:bg-white group-hover:text-slate-900 transition-colors duration-300 shadow-sm border border-slate-700 group-hover:border-white">
+                        <Layers className="w-6 h-6" />
+                    </div>
+                    <h4 className="font-bold text-white text-lg mb-2">
+                        İş Ortakları
+                    </h4>
+                    <p className="text-slate-400 text-xs mb-4">
+                        Güçlü teknoloji ekosistemimiz.
+                    </p>
+                    <div className="flex items-center text-xs font-bold text-slate-300 group-hover:text-white mt-auto">
+                        İncele <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </div>
                 </div>
             </Link>
 
@@ -541,22 +540,22 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
             <Link
                 href="/resources/infographics"
                 onClick={closeMenu}
-                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-slate-50 border border-slate-100 p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all hover:bg-white hover:border-slate-200"
+                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500 to-violet-600 border border-indigo-400/50 p-6 flex flex-col justify-between shadow-lg hover:shadow-indigo-500/25 transition-all"
             >
                 <BackgroundPattern />
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <BarChart3 className="w-24 h-24 text-slate-900" />
+                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <BarChart3 className="w-24 h-24 text-white" />
                 </div>
 
-                <div>
-                    <div className="w-10 h-10 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform bg-transparent">
+                <div className="relative z-10">
+                    <div className="w-10 h-10 rounded-2xl bg-white/20 text-white flex items-center justify-center mb-3 group-hover:scale-110 transition-transform backdrop-blur-sm shadow-inner shadow-white/20 border border-white/10">
                         <BarChart3 className="w-6 h-6" />
                     </div>
-                    <h4 className="font-bold text-slate-800">İnfografikler</h4>
-                    <p className="text-slate-500 text-xs mt-1">Sektörel veriler ve trend analizleri.</p>
+                    <h4 className="font-bold text-white">İnfografikler</h4>
+                    <p className="text-indigo-100 text-xs mt-1">Sektörel veriler ve trend analizleri.</p>
                 </div>
 
-                <div className="mt-4 flex items-center text-xs font-bold text-indigo-600">
+                <div className="mt-4 flex items-center text-xs font-bold text-white relative z-10">
                     İncele <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
             </Link>

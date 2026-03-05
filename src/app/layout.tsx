@@ -69,7 +69,7 @@ export default function RootLayout({
         <GoogleAnalytics />
       </head>
       <body className={`${exo.variable} ${manrope.variable} font-sans antialiased text-[#212121] bg-white`}>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen overflow-x-hidden">
           <Header />
           <GlobalBreadcrumb />
           <main className="flex-1">

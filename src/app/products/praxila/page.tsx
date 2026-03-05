@@ -126,8 +126,6 @@ export default function PraxilaPage() {
                 subtitle="ITSM, PPM ve ITOM süreçlerinizi tek bir platformda birleştiren, yapay zeka destekli yeni nesil operasyon yönetim çözümü."
                 className="bg-indigo-900"
                 backgroundImage="/images/headers/bgts-teknoloji-urunleri.jpg"
-                ctaText="Demo Talep Edin"
-                ctaLink="/contact"
             />
 
             {/* ═══════════ OVERVIEW — Foundation ═══════════ */}
@@ -243,13 +241,13 @@ export default function PraxilaPage() {
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.08 }}
                                 className={`rounded-xl p-6 border transition-all group ${item.isAI
-                                        ? "bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-200 hover:border-indigo-300 hover:shadow-lg"
-                                        : "bg-white border-slate-200 hover:border-slate-300 hover:shadow-md"
+                                    ? "bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-200 hover:border-indigo-300 hover:shadow-lg"
+                                    : "bg-white border-slate-200 hover:border-slate-300 hover:shadow-md"
                                     }`}
                             >
                                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${item.isAI
-                                        ? "bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-200"
-                                        : "bg-indigo-50 group-hover:bg-indigo-100"
+                                    ? "bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-200"
+                                    : "bg-indigo-50 group-hover:bg-indigo-100"
                                     }`}>
                                     <item.icon className={`w-6 h-6 ${item.isAI ? "text-white" : "text-indigo-600"}`} />
                                 </div>
@@ -321,30 +319,6 @@ export default function PraxilaPage() {
             </div>
 
             {/* ═══════════ CTA ═══════════ */}
-            <Section className="py-24 bg-slate-50">
-                <Container>
-                    <motion.div {...fadeUp} className="bg-gradient-to-r from-indigo-600 to-blue-600 rounded-3xl p-12 lg:p-16 text-center text-white shadow-2xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white/10 rounded-full blur-3xl pointer-events-none" />
-                        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/10 rounded-full blur-3xl pointer-events-none" />
-                        <div className="relative z-10">
-                            <Heading variant="h2" className="mb-6 text-white !text-3xl lg:!text-4xl">
-                                IT Operasyonlarınızı Dönüştürmeye Hazır mısınız?
-                            </Heading>
-                            <Text variant="large" className="text-indigo-100 mb-10 max-w-2xl mx-auto">
-                                Praxila ile ITSM, PPM ve ITOM süreçlerinizi tek bir platformda birleştirin.
-                                Yapay zeka destekli proaktif operasyon yönetimine geçin.
-                            </Text>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center px-10 py-4 bg-white text-indigo-700 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all text-lg"
-                            >
-                                Demo Talep Edin <ArrowRight className="w-5 h-5 ml-2" />
-                            </Link>
-                        </div>
-                    </motion.div>
-                </Container>
-            </Section>
-
         </div>
     )
 }

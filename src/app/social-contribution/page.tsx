@@ -42,14 +42,7 @@ export default function SocialContributionPage() {
                             Eşit fırsatlar yaratmayı ve sürdürülebilir etki sağlamayı önceliklendiriyoruz.
                         </motion.p>
 
-                        <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-                            <Link
-                                href="#social-details"
-                                className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-full transition-all hover:scale-105 shadow-lg"
-                            >
-                                Projelerimizi Keşfet <ArrowRight className="w-5 h-5 ml-2" />
-                            </Link>
-                        </motion.div>
+
                     </div>
 
 

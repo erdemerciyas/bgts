@@ -13,7 +13,7 @@ export function DeliveryModels() {
     const { badge, heading, description, models } = HOME_CONTENT.deliveryModels;
 
     return (
-        <Section className="relative z-0 overflow-hidden bg-[#0f172a] py-24 lg:py-32">
+        <Section className="relative z-0 overflow-hidden bg-[#0f172a] py-16 lg:py-24">
             {/* Background Pattern & Gradient */}
             <div className="absolute inset-0 -z-10">
                 <Image
@@ -49,7 +49,7 @@ export function DeliveryModels() {
                         <div
                             key={model.id}
                             className={cn(
-                                "group relative p-12 rounded-[2.5rem] transition-all duration-500",
+                                "group relative p-8 lg:p-10 rounded-[2.5rem] transition-all duration-500",
                                 model.variant === "light"
                                     ? "bg-white border text-corporate-dark shadow-xl hover:shadow-2xl hover:border-corporate-secondary/20"
                                     : "bg-corporate-dark text-white shadow-2xl hover:shadow-corporate-dark/40 hover:-translate-y-2"

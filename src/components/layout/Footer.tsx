@@ -8,10 +8,10 @@ export default function Footer() {
     return (
         <footer className="flex flex-col">
             {/* Footer Section */}
-            <div className="bg-corporate-dark text-white pt-16 pb-10">
+            <div className="bg-corporate-dark text-white pt-12 pb-8">
                 <div className="container mx-auto px-6">
                     {/* Links Grid with Logo */}
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-20">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-14">
 
                         {/* Logo & Description */}
                         <div className="col-span-2 md:col-span-1 space-y-4">

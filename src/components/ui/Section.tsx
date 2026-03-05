@@ -27,7 +27,7 @@ export function Section({
         <section
             id={id}
             className={cn(
-                "relative py-16 md:py-24",
+                "relative py-12 md:py-20",
                 bgStyles[background],
                 className
             )}

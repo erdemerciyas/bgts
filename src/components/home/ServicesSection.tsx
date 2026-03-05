@@ -18,7 +18,7 @@ export function ServicesSection() {
         <Section background="muted" className="pt-0 pb-0 overflow-visible relative">
             <GradientMesh opacity={0.03} className="z-0" />
             <Container className="relative z-10 -mt-24 md:-mt-40 mb-24">
-                <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-100/50">
+                <div className="bg-white rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-100/50">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                         <div className="lg:w-1/2">
                             <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 font-bold text-sm tracking-wide mb-6 border border-blue-100">
@@ -49,12 +49,12 @@ export function ServicesSection() {
 
             {/* Services Grid Full Width */}
             <div className="w-full">
-                <div className="grid md:grid-cols-3 min-h-[600px]">
+                <div className="grid md:grid-cols-3 min-h-[480px]">
                     {sections.map((service) => (
                         <div
                             key={service.id}
                             className={cn(
-                                "relative p-12 lg:p-16 flex flex-col justify-between overflow-hidden group border-r border-white/10 last:border-0",
+                                "relative p-8 lg:p-12 flex flex-col justify-between overflow-hidden group border-r border-white/10 last:border-0",
                                 service.theme === "dark" ? "bg-[#0A1628] text-white" : "bg-corporate-dark text-white"
                             )}
                         >
