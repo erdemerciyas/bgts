@@ -65,6 +65,12 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Responsive Optimizasyon:** Tüm sitede %100 zoom'da aşırı büyük görünen elemanlar ve yatay kaymalar düzeltildi. Tipografi küçültüldü (h1: 56→48px, h2: 42→36px, body text: 18→16px), Hero alanları küçültüldü (85vh→75vh), section/kart padding'leri %20-30 azaltıldı ve `overflow-x: hidden` koruması eklendi.
 - **Savunma Sanayi Sayfası Revizyonu:** Döküman bazlı kapsamlı içerik güncellemesi yapıldı — Hero başlıkları güncellendi (MIL-STD ve IEEE standartlarına referans), İş Analizi bölümü yeniden yapılandırıldı (Kavramsal Tasarım kaldırıldı, ConOps ve Senaryo açıklamaları güncellendi), Yazılım bölümüne NAF/DODAF/TOGAF mimari çerçeveleri eklendi, Test ve DevOps açıklamaları revize edildi, BT Altyapı ve Yönetilen BT Hizmetleri bölümleri tamamen kaldırıldı.
 
+### Mobil Uyumluluk, Chatbot & Arama Güncellemeleri (v0.13.0)
+- **Mobil Navigasyon (Tam Yeniden Yazım):** Sadece düz linklerden oluşan 51 satırlık eski MobileNav, accordion bazlı alt menüler, ~35 alt link, body scroll lock, backdrop overlay ve slide-in animasyonlu 280 satırlık kapsamlı bir bileşene dönüştürüldü.
+- **Slider Navigasyonu:** Yön okları slider'ın sol/sağ kenarlarına taşındı, pagination noktaları alt ortaya konumlandı. AI ürün pinleri örtüşme sorunu giderildi ve daha kompakt küme yapısına geçildi.
+- **Chatbot Bilgi Bankası:** Şirket adı düzeltildi, tüm ürün/sektör/kariyer linkleri güncellendi, eski rotalar temizlendi, markdown tıklanabilir link formatına geçildi.
+- **Site İçi Arama:** 12 öğeden 27 öğeye genişletildi — 8 ürün, 4 sektör, 5 kariyer ve 5 kurumsal sayfa eklendi, arama etiketleri zenginleştirildi.
+
 ### Hata Giderimleri & Build Optimizasyonları (v0.7.1)
 - **Next.js Turbopack Çakışması:** `package.json` içerisindeki `"type": "commonjs"` tanımlaması nedeniyle ES Modules yapısıyla çalışan Next.js App Router yapısında ortaya çıkan CommonJS vs ESM çakışması (build hataları) giderildi. Dev server artık tamamen stabil çalışıyor.
 

@@ -9,86 +9,186 @@ export interface SearchItem {
 export const SEARCH_ITEMS: SearchItem[] = [
     // Hizmetler
     {
-        title: "Veri Merkezi & Altyapı",
-        description: "Tier-3 standartlarında veri merkezi ve altyapı hizmetleri.",
-        href: "/services/managed-services",
+        title: "Yazılım Geliştirme",
+        description: "Büyük Veri, AI, Modernizasyon, Bankacılık ve Telekom çözümleri.",
+        href: "/services/software-development",
         category: "Hizmet",
-        tags: ["hosting", "cloud", "sunucu", "datacenter"]
+        tags: ["kodlama", "app", "web", "mobile", "uygulama", "yazılım"]
     },
     {
         title: "Yönetilen Hizmetler (MSP)",
-        description: "7/24 proaktif izleme ve IT operasyon yönetimi.",
+        description: "Veri merkezi yönetimi, 7/24 izleme, ITSM, SRE ve DevOps as a Service.",
         href: "/services/managed-services",
         category: "Hizmet",
-        tags: ["support", "destek", "bakım", "monitoring"]
-    },
-    {
-        title: "Yazılım Geliştirme",
-        description: "Kurumsal ve özel yazılım geliştirme çözümleri.",
-        href: "/services/software-development",
-        category: "Hizmet",
-        tags: ["kodlama", "app", "web", "mobile", "uygulama"]
+        tags: ["support", "destek", "bakım", "monitoring", "hosting", "cloud", "sunucu"]
     },
     {
         title: "DevOps & SRE",
-        description: "CI/CD süreçleri ve otomasyon hizmetleri.",
+        description: "CI/CD süreçleri, otomasyon ve bulut mühendisliği hizmetleri.",
         href: "/services/devops",
         category: "Hizmet",
-        tags: ["otomasyon", "pipeline", "docker", "kubernetes"]
+        tags: ["otomasyon", "pipeline", "docker", "kubernetes", "jenkins"]
     },
 
     // Sektörler
     {
         title: "Bankacılık ve Finans",
-        description: "Finans sektörü için güvenli ve hızlı teknoloji çözümleri.",
-        href: "/services/software-development#banking",
+        description: "Dijital kanallar ve regülasyon uyumu için uçtan uca çözümler.",
+        href: "/industries/banking",
         category: "Sektör",
-        tags: ["banka", "fintech", "ödeme"]
+        tags: ["banka", "fintech", "ödeme", "finans"]
     },
     {
         title: "Savunma Sanayi",
-        description: "Kritik görev sistemleri ve savunma teknolojileri.",
+        description: "MIL-STD ve IEEE standartlarına uygun görev kritik sistemler.",
         href: "/industries/defense",
         category: "Sektör",
-        tags: ["askeri", "güvenlik", "defence"]
+        tags: ["askeri", "güvenlik", "defence", "savunma"]
     },
     {
         title: "Telekomünikasyon",
-        description: "Yüksek ölçekli telekom ve iletişim altyapıları.",
-        href: "/services/software-development#telecom",
+        description: "OSS/BSS ve dijital iletişim altyapıları.",
+        href: "/industries/telecommunications",
         category: "Sektör",
-        tags: ["gsm", "internet", "iletişim"]
+        tags: ["gsm", "internet", "iletişim", "telekom"]
+    },
+    {
+        title: "Perakende & E-Ticaret",
+        description: "Omnichannel yapılar ve yüksek hacimli işlem yönetimi.",
+        href: "/industries/retail",
+        category: "Sektör",
+        tags: ["mağaza", "e-ticaret", "perakende", "retail"]
+    },
+
+    // Ürünler
+    {
+        title: "AI Hiring Assistant",
+        description: "Yapay zeka ile işe alım süreçlerini hızlandıran platform.",
+        href: "/products/ai-hiring-assistant",
+        category: "Ürün",
+        tags: ["yapay zeka", "işe alım", "mülakat", "hr"]
+    },
+    {
+        title: "CV Converter",
+        description: "Dağınık CV formatlarını standart hale getiren akıllı araç.",
+        href: "/products/cv-converter",
+        category: "Ürün",
+        tags: ["cv", "özgeçmiş", "dönüştürme"]
+    },
+    {
+        title: "Cortex",
+        description: "Yazılım yaşam döngüsünü AI agent'larla otomatikleştiren platform.",
+        href: "/products/cortex",
+        category: "Ürün",
+        tags: ["sdlc", "otomasyon", "ai", "yapay zeka"]
+    },
+    {
+        title: "HCM Platformu",
+        description: "İnsan Kaynakları yönetimini uçtan uca dijitalleştiren platform.",
+        href: "/products/hcm",
+        category: "Ürün",
+        tags: ["insan kaynakları", "hr", "bordro", "izin"]
+    },
+    {
+        title: "Praxila",
+        description: "Yeni nesil otomasyon ve operasyon yönetimi platformu.",
+        href: "/products/praxila",
+        category: "Ürün",
+        tags: ["otomasyon", "operasyon", "yönetim"]
+    },
+    {
+        title: "MeetSense",
+        description: "Toplantıları AI ile kaydeden, analiz eden ve kurumsal hafızaya dönüştüren platform.",
+        href: "/products/meetsense",
+        category: "Ürün",
+        tags: ["toplantı", "meeting", "ai", "kayıt", "analiz"]
+    },
+    {
+        title: "Doc2Bot",
+        description: "Kurum içi bilgi bankanızı akıllı bir AI asistana dönüştüren platform.",
+        href: "/products/doc2bot",
+        category: "Ürün",
+        tags: ["chatbot", "doküman", "bilgi bankası", "ai"]
+    },
+    {
+        title: "DocMind",
+        description: "Kod tabanından otomatik teknik dokümantasyon üreten araç.",
+        href: "/products/docmind",
+        category: "Ürün",
+        tags: ["dokümantasyon", "kod", "teknik", "otomatik"]
     },
 
     // Kariyer
     {
-        title: "Açık Pozisyonlar",
-        description: "BGTS ekibine katılmak için güncel iş ilanları.",
-        href: "/hr/jobs",
+        title: "Genç Mühendis Programı",
+        description: "Yeni mezunlar için yazılım, test ve altyapı eğitim programları.",
+        href: "/genc-muhendis-programi",
         category: "Kariyer",
-        tags: ["iş", "ilan", "başvuru", "kariyer"]
+        tags: ["staj", "bootcamp", "yeni mezun", "genç mühendis", "program"]
     },
     {
-        title: "Genç Yetenek Programı",
-        description: "Yeni mezunlar ve öğrenciler için gelişim programları.",
-        href: "/hr#talent",
+        title: "Kariyer Yolları",
+        description: "Potansiyelinizi ortaya çıkaran net ve şeffaf kariyer haritaları.",
+        href: "/career-paths",
         category: "Kariyer",
-        tags: ["staj", "bootcamp", "yeni mezun"]
+        tags: ["kariyer", "terfi", "gelişim", "yol haritası"]
+    },
+    {
+        title: "Eğitim ve Gelişim",
+        description: "Sürekli öğrenme ve profesyonel gelişim fırsatları.",
+        href: "/learning",
+        category: "Kariyer",
+        tags: ["eğitim", "öğrenme", "akademi", "gelişim"]
+    },
+    {
+        title: "Kültür",
+        description: "Çalışma ortamımız, değerlerimiz ve ekip ruhu.",
+        href: "/culture",
+        category: "Kariyer",
+        tags: ["kültür", "çalışma", "ortam", "değerler"]
+    },
+    {
+        title: "Sürdürülebilir Değer Programı",
+        description: "Eğitim, sürdürülebilirlik ve sosyal sorumluluk projelerimiz.",
+        href: "/social-contribution",
+        category: "Kariyer",
+        tags: ["sosyal", "sorumluluk", "sürdürülebilir", "toplumsal"]
     },
 
     // Kurumsal
     {
         title: "Hakkımızda",
-        description: "BGTS'nin vizyonu, misyonu ve tarihçesi.",
+        description: "BGTS'nin vizyonu, misyonu ve global varlığı.",
         href: "/about",
         category: "Kurumsal",
-        tags: ["sirket", "biz kimiz"]
+        tags: ["şirket", "biz kimiz", "hakkında", "vizyon"]
     },
     {
         title: "İletişim",
-        description: "Bize ulaşın, ofislerimiz ve iletişim bilgileri.",
+        description: "Ofis adresleri, telefon ve e-posta bilgileri.",
         href: "/contact",
         category: "Kurumsal",
-        tags: ["adres", "telefon", "mail"]
-    }
+        tags: ["adres", "telefon", "mail", "ulaşım"]
+    },
+    {
+        title: "İş Ortakları",
+        description: "Microsoft, AWS, ServiceNow gibi teknoloji ortaklıklarımız.",
+        href: "/partnerships",
+        category: "Kurumsal",
+        tags: ["partner", "ortaklık", "microsoft", "aws"]
+    },
+    {
+        title: "Başarı Hikayeleri",
+        description: "Gerçek projeler, gerçek sonuçlar ve ilham veren kariyerler.",
+        href: "/resources/success-stories",
+        category: "Kurumsal",
+        tags: ["başarı", "hikaye", "proje", "referans"]
+    },
+    {
+        title: "İnfografikler",
+        description: "Sektörel veriler ve trend analizleri.",
+        href: "/resources/infographics",
+        category: "Kurumsal",
+        tags: ["veri", "istatistik", "grafik", "infografik"]
+    },
 ];

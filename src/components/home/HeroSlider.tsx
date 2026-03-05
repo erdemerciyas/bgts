@@ -9,12 +9,12 @@ import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
 
 const AI_PRODUCTS = [
-    { name: "MeetSense", delay: 0, className: "top-[10%] right-[5%] rotate-[6deg]", color: "from-blue-500 to-cyan-400" },
-    { name: "AI Hiring Assistant", delay: 0.1, className: "bottom-[20%] right-[2%] rotate-[-4deg]", color: "from-violet-500 to-purple-500" },
-    { name: "Doc2Bot", delay: 0.2, className: "top-[30%] right-[25%] rotate-[8deg]", color: "from-emerald-400 to-teal-500" },
-    { name: "DocMind", delay: 0.3, className: "bottom-[40%] right-[30%] rotate-[-3deg]", color: "from-amber-400 to-orange-500" },
-    { name: "CV Converter", delay: 0.4, className: "top-[60%] right-[15%] rotate-[-6deg]", color: "from-pink-500 to-rose-400" },
-    { name: "Cortex", delay: 0.5, className: "bottom-[10%] right-[40%] rotate-[5deg]", color: "from-indigo-500 to-blue-600" },
+    { name: "MeetSense", delay: 0, className: "top-[10%] right-[6%] rotate-[6deg]", color: "from-blue-500 to-cyan-400" },
+    { name: "Doc2Bot", delay: 0.15, className: "top-[22%] right-[25%] rotate-[8deg]", color: "from-emerald-400 to-teal-500" },
+    { name: "DocMind", delay: 0.25, className: "top-[38%] right-[12%] rotate-[-3deg]", color: "from-amber-400 to-orange-500" },
+    { name: "CV Converter", delay: 0.35, className: "top-[52%] right-[28%] rotate-[-6deg]", color: "from-pink-500 to-rose-400" },
+    { name: "AI Hiring Assistant", delay: 0.45, className: "top-[52%] right-[3%] rotate-[-4deg]", color: "from-violet-500 to-purple-500" },
+    { name: "Cortex", delay: 0.55, className: "top-[68%] right-[15%] rotate-[5deg]", color: "from-indigo-500 to-blue-600" },
 ]
 
 const PARTNERS = [
@@ -266,31 +266,29 @@ export function HeroSlider() {
                 </div>
             </Container>
 
-            {/* Navigation Buttons - Hidden on very small screens, visible on md+ */}
-            <div className="hidden md:flex absolute bottom-10 right-20 gap-4 z-20">
-                <button
-                    onClick={prevSlide}
-                    className="w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
-                    aria-label="Önceki Slayt"
-                >
-                    <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
-                </button>
-                <button
-                    onClick={nextSlide}
-                    className="w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
-                    aria-label="Sonraki Slayt"
-                >
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                </button>
-            </div>
+            {/* Navigation Arrows - Left & Right sides */}
+            <button
+                onClick={prevSlide}
+                className="hidden md:flex absolute left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
+                aria-label="Önceki Slayt"
+            >
+                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+            </button>
+            <button
+                onClick={nextSlide}
+                className="hidden md:flex absolute right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
+                aria-label="Sonraki Slayt"
+            >
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
 
-            {/* Indicators */}
-            <div className="absolute bottom-8 left-6 md:left-1/2 md:-translate-x-1/2 flex gap-3 z-20">
+            {/* Slide Indicators - Bottom center, slightly above edge */}
+            <div className="absolute bottom-28 left-1/2 -translate-x-1/2 flex gap-2.5 z-20">
                 {SLIDES.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setCurrentSlide(index)}
-                        className={`transition-all duration-500 rounded-full h-1.5 ${currentSlide === index ? "w-8 md:w-12 bg-corporate-secondary" : "w-2 bg-white/20 hover:bg-white/40"
+                        className={`transition-all duration-500 rounded-full h-2 ${currentSlide === index ? "w-8 md:w-10 bg-corporate-secondary" : "w-2 bg-white/25 hover:bg-white/50"
                             }`}
                         aria-label={`Slayt ${index + 1}`}
                     />
