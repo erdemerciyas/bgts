@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation"
 import dynamic from "next/dynamic"
 import { cn } from "@/lib/utils"
 import {
-    ChevronDown, Menu, Search, Globe,
-    Linkedin, Instagram, Twitter, Mail
+    ChevronDown, Menu, Search,
+    Linkedin, Mail
 } from "lucide-react"
 import { AnimatePresence } from "framer-motion"
 import { NAV_ITEMS } from "./header/data"
@@ -102,33 +102,14 @@ export default function Header() {
                         >
                             <Search className="w-4 h-4" aria-hidden="true" />
                         </button>
-                        <button
-                            className={cn("w-10 h-10 flex items-center justify-center rounded-full transition-all", isTransparent ? "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm" : "bg-corporate-surface text-corporate-dark hover:bg-corporate-accent/20")}
-                            aria-label="Dil seç"
-                        >
-                            <Globe className="w-4 h-4" aria-hidden="true" />
-                        </button>
                         <div className="flex items-center gap-3 pl-4 border-l border-border/50" role="group" aria-label="Sosyal medya">
                             <Link
-                                href="#"
+                                href="https://www.linkedin.com/company/bilgeadam/"
+                                target="_blank"
                                 className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-corporate-dark hover:text-corporate-secondary")}
                                 aria-label="LinkedIn"
                             >
                                 <Linkedin className="w-5 h-5" aria-hidden="true" />
-                            </Link>
-                            <Link
-                                href="#"
-                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-corporate-dark hover:text-corporate-secondary")}
-                                aria-label="Instagram"
-                            >
-                                <Instagram className="w-5 h-5" aria-hidden="true" />
-                            </Link>
-                            <Link
-                                href="#"
-                                className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-corporate-dark hover:text-corporate-secondary")}
-                                aria-label="Twitter"
-                            >
-                                <Twitter className="w-5 h-5" aria-hidden="true" />
                             </Link>
                             <Link
                                 href="/contact"
