@@ -165,6 +165,13 @@
   animation-delay: 4s;
 }
 
+/* Mega menüyü küçük masaüstü ekranlarda %85'e ölçekle */
+@media (max-width: 1400px) {
+  .mega-menu-scale {
+    zoom: 0.85;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #0A1628;
