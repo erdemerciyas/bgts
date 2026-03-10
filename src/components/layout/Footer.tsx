@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Linkedin, Instagram, MapPin, Mail, Phone } from "lucide-react"
+import { MapPin, Mail } from "lucide-react"
 
 export default function Footer() {
     return (
@@ -82,22 +82,8 @@ export default function Footer() {
                     {/* Bottom Bar */}
                     <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-white/30 text-sm">
-                            © 2024 BGTS. Tüm hakları saklıdır.
+                            © 2026 BGTS. Tüm hakları saklıdır.
                         </p>
-                        <div className="flex gap-6">
-                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-corporate-secondary transition-colors text-white">
-                                <Linkedin className="w-4 h-4" />
-                            </Link>
-                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-corporate-secondary transition-colors text-white">
-                                <Twitter className="w-4 h-4" />
-                            </Link>
-                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-corporate-secondary transition-colors text-white">
-                                <Instagram className="w-4 h-4" />
-                            </Link>
-                            <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-corporate-secondary transition-colors text-white">
-                                <Facebook className="w-4 h-4" />
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </div>
