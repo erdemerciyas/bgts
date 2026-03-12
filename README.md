@@ -65,6 +65,11 @@ Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknoloj
 - **Responsive Optimizasyon:** Tüm sitede %100 zoom'da aşırı büyük görünen elemanlar ve yatay kaymalar düzeltildi. Tipografi küçültüldü (h1: 56→48px, h2: 42→36px, body text: 18→16px), Hero alanları küçültüldü (85vh→75vh), section/kart padding'leri %20-30 azaltıldı ve `overflow-x: hidden` koruması eklendi.
 - **Savunma Sanayi Sayfası Revizyonu:** Döküman bazlı kapsamlı içerik güncellemesi yapıldı — Hero başlıkları güncellendi (MIL-STD ve IEEE standartlarına referans), İş Analizi bölümü yeniden yapılandırıldı (Kavramsal Tasarım kaldırıldı, ConOps ve Senaryo açıklamaları güncellendi), Yazılım bölümüne NAF/DODAF/TOGAF mimari çerçeveleri eklendi, Test ve DevOps açıklamaları revize edildi, BT Altyapı ve Yönetilen BT Hizmetleri bölümleri tamamen kaldırıldı.
 
+### Kahraman (Hero) & Arayüz Düzeltmeleri (v0.14.0)
+- **Hero Alanları Optimizasyonu:** Ortak kullanılan Hero bileşeni, Çalışma Kültürü, Genç Mühendisler ve Başarı Hikayeleri sayfalarındaki hero yükseklikleri ve boşlukları (padding) orantılı olarak küçültülerek kullanıcı deneyimi iyileştirildi.
+- **Ana Sayfa Slider:** Ana sayfa hero slider orijinal boyutlarında korundu, 3. slayt ("Genç Mühendisler") haricindeki görsellerin blur efekti kaldırılarak daha net ve canlı görünmeleri sağlandı.
+- **İş Ortakları ve İçerik Güncellemeleri:** İş Ortakları sayfasındaki Qlik ve Xurrent kartlarının açıklamaları geliştirildi. Ana sayfadaki veri içerikleri ("Esnek İş Modelleri", "Hizmet Verdiğimiz Sektörler") daha sade ve anlaşılır başlıklara kavuşturuldu.
+
 ### Mobil Uyumluluk, Chatbot & Arama Güncellemeleri (v0.13.0)
 - **Mobil Navigasyon (Tam Yeniden Yazım):** Sadece düz linklerden oluşan 51 satırlık eski MobileNav, accordion bazlı alt menüler, ~35 alt link, body scroll lock, backdrop overlay ve slide-in animasyonlu 280 satırlık kapsamlı bir bileşene dönüştürüldü.
 - **Slider Navigasyonu:** Yön okları slider'ın sol/sağ kenarlarına taşındı, pagination noktaları alt ortaya konumlandı. AI ürün pinleri örtüşme sorunu giderildi ve daha kompakt küme yapısına geçildi.

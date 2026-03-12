@@ -10,7 +10,7 @@ import { HOME_CONTENT } from "@/content/home"
 import { cn } from "@/lib/utils"
 
 export function IndustriesGrid() {
-    const { badge, heading, description, items } = HOME_CONTENT.industries;
+    const { heading, description, items } = HOME_CONTENT.industries;
 
     return (
         <Section background="default" className="relative pb-20">
@@ -18,9 +18,6 @@ export function IndustriesGrid() {
 
             <Container className="relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-14">
-                    <span className="inline-block px-6 py-2 rounded-full bg-corporate-tertiary/10 text-corporate-tertiary font-bold text-sm tracking-wide mb-6">
-                        {badge}
-                    </span>
                     <Heading variant="h2" className="text-corporate-dark mb-6">
                         {heading}
                     </Heading>

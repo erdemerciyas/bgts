@@ -35,7 +35,7 @@ export default function YoungEngineersPage() {
         <div className="bg-white min-h-screen text-slate-900 selection:bg-yellow-300 overflow-x-hidden">
 
             {/* 1. HERO: POP & BOLD */}
-            <section className="relative min-h-[90vh] flex items-center pt-24 pb-20 overflow-hidden">
+            <section className="relative min-h-[70vh] flex items-center pt-24 pb-20 overflow-hidden">
                 {/* Mesh Gradients */}
                 <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-blue-500 rounded-full blur-[150px] opacity-20 animate-pulse mix-blend-multiply pointer-events-none" />
                 <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-violet-500 rounded-full blur-[150px] opacity-20 animate-pulse delay-1000 mix-blend-multiply pointer-events-none" />
@@ -51,7 +51,7 @@ export default function YoungEngineersPage() {
                             <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 mb-6 leading-[0.85] flex flex-col gap-2">
                                 <span className="relative inline-block z-10">GELECEĞİ</span>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-600 to-cyan-500 animate-gradient-x italic transform -skew-x-12">
-                                    KODLA.
+                                    KODLA
                                 </span>
                             </h1>
 
@@ -144,11 +144,8 @@ export default function YoungEngineersPage() {
                 <Container>
                     <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 relative z-10">
                         <div>
-                            <span className="bg-violet-100 text-violet-700 font-bold px-4 py-2 text-sm uppercase mb-4 inline-block border-2 border-violet-200">
-                                #LIFE@BGT
-                            </span>
                             <h2 className="text-5xl md:text-6xl font-black text-slate-900 leading-none mb-6">
-                                Koddan Fazlası. <br />
+                                Koddan Fazlası <br />
                                 <span className="text-violet-600 italic">Kültür.</span>
                             </h2>
                             <div className="bg-white border-2 border-black p-4 inline-block transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(139,92,246,1)] hover:rotate-0 transition-all cursor-default">
@@ -201,7 +198,7 @@ export default function YoungEngineersPage() {
                     <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-10">
                         <div className="max-w-2xl">
                             <h2 className="text-6xl font-black text-slate-900 mb-6 relative">
-                                <span className="relative z-10">Yetiştirme Programlarımız.</span>
+                                <span className="relative z-10">Genç Mühendis Programları</span>
                                 <span className="absolute bottom-2 left-0 w-full h-6 bg-yellow-300 -z-0 transform -skew-x-12" />
                             </h2>
                             <p className="text-xl text-slate-700 font-bold">
@@ -224,7 +221,7 @@ export default function YoungEngineersPage() {
                                     <Code className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-blue-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Yazılımcı Yetiştirme Programı
+                                    Yazılımcı Genç Mühendis Programı
                                 </h3>
                             </div>
 
@@ -267,7 +264,7 @@ export default function YoungEngineersPage() {
                                     <BarChart3 className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-violet-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Test ve Analist Yetiştirme Programı
+                                    Test ve Analist Genç Mühendis Programı
                                 </h3>
                             </div>
 
@@ -311,8 +308,8 @@ export default function YoungEngineersPage() {
                                 <div className="w-20 h-20 shrink-0 bg-emerald-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <Server className="w-10 h-10" />
                                 </div>
-                                <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-emerald-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Altyapı Teknolojileri Yetiştirme
+                                <h3 className="text-3xl md:text-4xl font-black uppercase inline-block bg-emerald-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                                    Altyapı Teknolojileri Genç Mühendis Programı
                                 </h3>
                             </div>
 
@@ -360,7 +357,7 @@ export default function YoungEngineersPage() {
                         <div className="space-y-8 sticky top-24">
 
                             <h2 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter">
-                                ŞİMDİ <br /> <span className="text-blue-500">BAŞLA.</span>
+                                ŞİMDİ <br /> <span className="text-blue-500">BAŞLA</span>
                             </h2>
 
                             <div className="p-8 border-2 border-slate-800 rounded-2xl bg-slate-900/50 backdrop-blur-sm">

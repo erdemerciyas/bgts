@@ -21,7 +21,7 @@ export default function CulturePage() {
         <div className="bg-white min-h-screen">
 
             {/* ═══════════ HERO ═══════════ */}
-            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white">
+            <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <div className="absolute top-10 left-20 w-[350px] h-[350px] bg-pink-500/20 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute bottom-10 right-20 w-[400px] h-[400px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
@@ -31,15 +31,11 @@ export default function CulturePage() {
                     <div className="max-w-4xl mx-auto text-center space-y-8">
 
                         <motion.h1 {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }} className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
-                            Sadece Çalışmıyor, <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-violet-400 to-blue-400">
-                                Birlikte Büyüyoruz
-                            </span>
+                            Çalışma Kültürümüz <br />
                         </motion.h1>
 
                         <motion.p {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.2 }} className="text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                            Açık iletişim, takım çalışması ve üretme heyecanı — kültürümüzün DNA'sı.
-                            Hibrit ve esnek çalışma modelleri ile herkesin en verimli olduğu ortamda çalışmasını destekliyoruz.
+                            Açık iletişim, takım çalışması ve üretme heyecanı kültürümüzün DNA'sı. Hibrit ve esnek çalışma modelleri ile herkesin en verimli olduğu ortamda çalışmasını destekliyoruz.
                         </motion.p>
 
                         <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
@@ -61,6 +57,11 @@ export default function CulturePage() {
             {/* ═══════════ PHOTO MOSAIC ═══════════ */}
             <section className="py-16 bg-slate-50">
                 <Container>
+                    <div className="text-center mb-12">
+                        <motion.h2 {...fadeUp} className="text-3xl lg:text-4xl font-black text-slate-900">
+                            Birlikte Üretiyor, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">Birlikte İlerliyoruz</span>
+                        </motion.h2>
+                    </div>
                     <motion.div {...fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {[
                             { src: "/images/culture/culture-1.jpg", span: "col-span-1 row-span-1" },

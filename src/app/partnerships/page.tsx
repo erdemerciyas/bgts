@@ -13,6 +13,17 @@ const fadeUp = {
 
 const PARTNERS = [
     {
+        name: "Qlik",
+        description: "BGTS, Qlik Yetkili İş Ortağı olarak; kurumsal ölçekte yönetilen analitiği ve güvenilir veri entegrasyonunu destekleyen Qlik platformlarını tasarlar, devreye alır, yönetir ve ölçeklendirir.",
+        icon: (
+            <svg viewBox="0 0 474.63 480" className="w-10 h-10">
+                <path fill="currentColor" opacity="0.9" d="M376.48,419.87l-1.65.57c-10.44-10.88-20.88-21.77-31.32-32.67l.49-1.78,2.59-4.15c81.2-67.94,88.9-189.6,14.19-265.72-74.17-75.56-197.53-70.72-265.81,9.82l-4.2,2.6-2.2,1.59c-10.75-10.66-21.49-21.37-32.22-32.11l.44-1.79C136.63.15,279.79-14.94,377.62,65.24c97.15,79.63,112.89,225.35,30.79,323.12,3.73,1.69,5.39,4.85,7.97,7.45l31.14,31.36,31.51,31.86-62.89.24c-2.32-1.46-3.71-3.5-5.61-5.4l-34.04-34Z" />
+                <path fill="currentColor" d="M90.76,128.56l-1.6,4.6c-54.1,70.85-47.5,171.34,14.79,235.04,62.54,63.95,163.34,71.97,235.43,19.3l4.62-1.49,32.48,33.87c-83.26,68.84-205.79,67.59-288.69-.27C-11.48,338.36-23.9,193.33,56.78,96.24l31.55,31.5c.5.5.67,1.1,1.21,1.19.39.06.83-.2,1.21-.37Z" />
+            </svg>
+        ),
+        color: "from-[#3bb64a] to-[#4ece5e]", // Qlik green
+    },
+    {
         name: "Microsoft",
         description: "Microsoft teknolojileri ile ekiplerinizi daha verimli hale getirin, iş akışlarınızı kolaylaştırın ve BT altyapınızı modernleştirin. Microsoft’un güvenilir iş ortağı olarak, uzman danışmanlarımızla bulut hizmetlerinden siber güvenliğe kadar uçtan uca çözümler sunuyoruz.",
         icon: (
@@ -57,17 +68,6 @@ const PARTNERS = [
             </svg>
         ),
         color: "from-[#002f5d] to-[#0461b7]", // Temenos dark blue
-    },
-    {
-        name: "Qlik",
-        description: "BGTS, Qlik Yetkili İş Ortağı olarak; kurumsal ölçekte yönetilen analitiği ve güvenilir veri entegrasyonunu destekleyen Qlik platformlarını tasarlar, devreye alır, yönetir ve ölçeklendirir.",
-        icon: (
-            <svg viewBox="0 0 474.63 480" className="w-10 h-10">
-                <path fill="currentColor" opacity="0.9" d="M376.48,419.87l-1.65.57c-10.44-10.88-20.88-21.77-31.32-32.67l.49-1.78,2.59-4.15c81.2-67.94,88.9-189.6,14.19-265.72-74.17-75.56-197.53-70.72-265.81,9.82l-4.2,2.6-2.2,1.59c-10.75-10.66-21.49-21.37-32.22-32.11l.44-1.79C136.63.15,279.79-14.94,377.62,65.24c97.15,79.63,112.89,225.35,30.79,323.12,3.73,1.69,5.39,4.85,7.97,7.45l31.14,31.36,31.51,31.86-62.89.24c-2.32-1.46-3.71-3.5-5.61-5.4l-34.04-34Z" />
-                <path fill="currentColor" d="M90.76,128.56l-1.6,4.6c-54.1,70.85-47.5,171.34,14.79,235.04,62.54,63.95,163.34,71.97,235.43,19.3l4.62-1.49,32.48,33.87c-83.26,68.84-205.79,67.59-288.69-.27C-11.48,338.36-23.9,193.33,56.78,96.24l31.55,31.5c.5.5.67,1.1,1.21,1.19.39.06.83-.2,1.21-.37Z" />
-            </svg>
-        ),
-        color: "from-[#3bb64a] to-[#4ece5e]", // Qlik green
     },
     {
         name: "Xurrent",

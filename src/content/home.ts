@@ -66,8 +66,7 @@ export const HOME_CONTENT = {
         ]
     },
     deliveryModels: {
-        badge: "Esnek İş Modelleri",
-        heading: "Nasıl Çalışıyoruz?",
+        heading: "Esnek İş Modelleri",
         description: "İhtiyaçlarınıza özel esnek çalışma modelleri ile uçtan uca proje teslimatı veya çevik takım ölçeklendirmesi.",
         models: [
             {
@@ -91,7 +90,6 @@ export const HOME_CONTENT = {
         ]
     },
     industries: {
-        badge: "Sektörler",
         heading: "Hizmet Verdiğimiz Sektörler",
         description: "Finans, savunma, perakende ve telekom gibi kritik sektörlerde; işletmelerin büyümesini destekleyen, operasyonları optimize eden ve dijital dönüşüm yolculuklarını hızlandıran stratejik çözümler sunuyoruz.",
         items: [

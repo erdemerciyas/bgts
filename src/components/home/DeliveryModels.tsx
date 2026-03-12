@@ -10,7 +10,7 @@ import { HOME_CONTENT } from "@/content/home"
 import { cn } from "@/lib/utils"
 
 export function DeliveryModels() {
-    const { badge, heading, description, models } = HOME_CONTENT.deliveryModels;
+    const { heading, description, models } = HOME_CONTENT.deliveryModels;
 
     return (
         <Section className="relative z-0 overflow-hidden bg-[#0f172a] py-16 lg:py-24">
@@ -33,9 +33,6 @@ export function DeliveryModels() {
 
             <Container className="relative z-10">
                 <div className="text-center mb-20">
-                    <Text variant="small" className="text-blue-400 font-bold tracking-[0.2em] uppercase mb-4 block">
-                        {badge}
-                    </Text>
                     <Heading variant="h2" className="mb-6 text-white">
                         {heading}
                     </Heading>

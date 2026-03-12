@@ -43,7 +43,7 @@ export default function Hero({
 
     if (layout === "split") {
         return (
-            <Section className={cn("pt-24 pb-16 lg:pt-36 lg:pb-24", className)}>
+            <Section className={cn("pt-20 pb-12 lg:pt-28 lg:pb-16", className)}>
                 {/* Background Patterns */}
                 <div className="absolute inset-0 pointer-events-none z-0">
                     {pattern === "grid" && (
@@ -96,7 +96,7 @@ export default function Hero({
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="relative lg:h-[460px] flex items-center justify-center"
+                            className="relative lg:h-[380px] flex items-center justify-center"
                         >
                             {image ? image : (
                                 <div className="w-full h-full bg-slate-100 rounded-3xl animate-pulse"></div>
@@ -110,7 +110,7 @@ export default function Hero({
 
     // Simple Layout (Centered) - Enhanced for Video Background
     return (
-        <Section className={cn("pt-24 pb-16 lg:pt-36 lg:pb-24 min-h-[50vh] flex items-center", className)}>
+        <Section className={cn("pt-20 pb-12 lg:pt-28 lg:pb-16 min-h-[40vh] flex items-center", className)}>
             <div className="absolute inset-0 z-0">
                 {videoSrc ? (
                     <>

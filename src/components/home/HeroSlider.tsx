@@ -174,7 +174,7 @@ export function HeroSlider() {
                         alt={SLIDES[currentSlide].title}
                         fill
                         priority={true}
-                        className="object-cover blur-sm scale-105"
+                        className={`object-cover scale-105 ${currentSlide === 2 ? "blur-[2px]" : ""}`}
                         sizes="100vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-slate-900/20" />

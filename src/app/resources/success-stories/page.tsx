@@ -6,6 +6,7 @@ import { Heading, Text } from "@/components/ui/Typography"
 import { CASE_STUDIES } from "@/data/case-studies"
 import { CaseStudyCard } from "@/components/resources/CaseStudyCard"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function SuccessStoriesPage() {
     return (
@@ -14,7 +15,7 @@ export default function SuccessStoriesPage() {
             {/* ══════════════════════════════════════════════════════
                 HERO — Premium Soft Blue Corporate
             ══════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden pt-32 pb-24 lg:pt-48 lg:pb-32 bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-100 min-h-[70vh] flex items-center">
+            <section className="relative overflow-hidden pt-16 pb-12 lg:pt-28 lg:pb-16 bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-100 min-h-[40vh] flex items-center">
                 {/* Immersive Background Effects (Light Mode) */}
                 <div className="pointer-events-none absolute inset-0 overflow-hidden">
                     {/* Light dynamic glows */}
@@ -46,56 +47,56 @@ export default function SuccessStoriesPage() {
                             </p>
                         </motion.div>
 
-                        {/* RIGHT COLUMN: Abstract Tech/Project Visualization (Light Mode) */}
+                        {/* RIGHT COLUMN: Image Layout */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-                            className="hidden lg:block relative h-[500px] w-full perspective-1000"
+                            className="hidden lg:block relative h-[400px] w-full"
                         >
-                            {/* Central glowing core / orbit */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-slate-200 rounded-full bg-white/50 shadow-sm" />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border border-dashed border-blue-400/30 rounded-full animate-[spin_60s_linear_infinite]" />
-
-                            {/* Floating Glass Panels simulating dashboards/projects */}
-                            <motion.div
-                                className="absolute top-[10%] left-[10%] w-[60%] h-[30%] bg-white/80 backdrop-blur-md rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 flex flex-col justify-between overflow-hidden"
-                                animate={{ y: [0, -15, 0] }}
-                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                            >
-                                <div className="w-full h-1/2 bg-gradient-to-r from-blue-50 to-transparent rounded-lg mb-4" />
-                                <div className="space-y-2">
-                                    <div className="w-3/4 h-2 bg-slate-200 rounded-full" />
-                                    <div className="w-1/2 h-2 bg-slate-100 rounded-full" />
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-gradient-to-tr from-blue-100 to-indigo-50 rounded-full blur-3xl opacity-50" />
+                            
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="relative w-full h-[320px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                                    <Image
+                                        src="/images/industries/I53A6435.jpg"
+                                        alt="Başarı Hikayeleri"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
                                 </div>
-                            </motion.div>
-
-                            <motion.div
-                                className="absolute bottom-[10%] right-[0%] w-[55%] h-[40%] bg-white/90 backdrop-blur-xl rounded-2xl border border-blue-100/50 shadow-[0_20px_40px_rgba(37,99,235,0.08)] p-6 z-10"
-                                animate={{ y: [0, 15, 0] }}
-                                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            >
-                                <div className="flex justify-between items-center border-b border-slate-100 pb-4 mb-4">
-                                    <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center border border-blue-100">
-                                        <div className="w-3 h-3 bg-blue-500 rounded-sm" />
+                                
+                                {/* Floating decorative badges */}
+                                <motion.div 
+                                    className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4"
+                                    animate={{ y: [0, -10, 0] }}
+                                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                                >
+                                    <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                                     </div>
-                                    <div className="w-16 h-4 bg-emerald-50 rounded-full flex items-center px-2">
-                                        <div className="w-full h-1 bg-emerald-400 rounded-full" />
+                                    <div>
+                                        <div className="text-sm text-slate-500 font-medium">Kanıtlanmış</div>
+                                        <div className="text-slate-900 font-bold">Teknoloji</div>
                                     </div>
-                                </div>
-                                <div className="space-y-3">
-                                    {[1, 2, 3].map(i => (
-                                        <div key={i} className="flex gap-3 items-center">
-                                            <div className="w-4 h-4 rounded-full border border-slate-200" />
-                                            <div className="flex-1 h-3 bg-slate-100 rounded-full" />
-                                        </div>
-                                    ))}
-                                </div>
-                            </motion.div>
+                                </motion.div>
 
-                            {/* Floating nodes */}
-                            <div className="absolute top-[20%] right-[20%] w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
-                            <div className="absolute bottom-[30%] left-[5%] w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.4)]" />
+                                <motion.div 
+                                    className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4"
+                                    animate={{ y: [0, 10, 0] }}
+                                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                                >
+                                    <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    </div>
+                                    <div>
+                                        <div className="text-sm text-slate-500 font-medium">Başarılı</div>
+                                        <div className="text-slate-900 font-bold">Dönüşüm</div>
+                                    </div>
+                                </motion.div>
+                            </div>
                         </motion.div>
                     </div>
                 </Container>
