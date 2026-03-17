@@ -63,8 +63,8 @@ export default function ContactPage() {
                 title="E-Posta Gönderin"
                 description="Projeleriniz ve teklif talepleriniz için."
                 icon={Mail}
-                contactInfo="info@bgts.com.tr"
-                link="mailto:info@bgts.com.tr"
+                contactInfo="info@bgts.com"
+                link="mailto:info@bgts.com"
                 linkText="E-Posta Gönder"
                 color="indigo"
                 delay={0.1}

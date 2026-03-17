@@ -115,10 +115,6 @@ export default function InfographicsPage() {
 
                 <Container>
                     <div className="max-w-4xl mx-auto mb-16 text-center">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-bold mb-6">
-                            <UserPlus className="w-4 h-4" />
-                            İşe Alım ve Gelişim
-                        </div>
                         <Heading variant="h2" className="text-slate-900 mb-6">
                             Yetenek Kazanımı ve Kariyer Gelişimi
                         </Heading>

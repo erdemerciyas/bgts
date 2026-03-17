@@ -21,16 +21,13 @@ export function ServicesSection() {
                 <div className="bg-white rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-100/50">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                         <div className="lg:w-1/2">
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 font-bold text-sm tracking-wide mb-6 border border-blue-100">
-                                {badge}
-                            </span>
                             <Heading variant="h2" className="text-slate-900 mb-6 font-bold leading-tight">
                                 {heading}
                             </Heading>
                             <Text variant="large" className="text-slate-600 mb-8 leading-relaxed">
                                 {description}
                             </Text>
-                            <Link href="#" className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-dark hover:shadow-lg hover:-translate-y-1">
+                            <Link href="#is-modelleri" className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-dark hover:shadow-lg hover:-translate-y-1">
                                 {ctaText} <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
                         </div>

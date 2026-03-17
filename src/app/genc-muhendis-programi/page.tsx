@@ -146,7 +146,7 @@ export default function YoungEngineersPage() {
                         <div>
                             <h2 className="text-5xl md:text-6xl font-black text-slate-900 leading-none mb-6">
                                 Koddan Fazlası <br />
-                                <span className="text-violet-600 italic">Kültür.</span>
+                                <span className="text-violet-600 italic">Kültür</span>
                             </h2>
                             <div className="bg-white border-2 border-black p-4 inline-block transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(139,92,246,1)] hover:rotate-0 transition-all cursor-default">
                                 <p className="text-lg text-slate-800 font-bold max-w-lg leading-snug">
@@ -213,9 +213,6 @@ export default function YoungEngineersPage() {
                     <div className="grid grid-cols-1 gap-16">
                         {/* PROGRAM 1: YAZILIM */}
                         <div id="track-software" className="group bg-blue-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:-rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
-                            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-blue-400 text-black px-6 py-2 font-black text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 -rotate-3 group-hover:rotate-0 transition-all">
-                                KOD YAZ, ETKİ YARAT 💻
-                            </div>
                             <div className="flex items-center gap-6 mb-8 mt-4">
                                 <div className="w-20 h-20 shrink-0 bg-blue-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <Code className="w-10 h-10" />
@@ -256,9 +253,6 @@ export default function YoungEngineersPage() {
 
                         {/* PROGRAM 2: TEST & ANALIST */}
                         <div id="track-test" className="group bg-violet-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
-                            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-yellow-400 text-black px-6 py-2 font-black text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 rotate-3 animate-pulse group-hover:animate-none group-hover:rotate-6 transition-all">
-                                POPÜLER 🔥
-                            </div>
                             <div className="flex items-center gap-6 mb-8 mt-4">
                                 <div className="w-20 h-20 shrink-0 bg-violet-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <BarChart3 className="w-10 h-10" />
@@ -301,9 +295,6 @@ export default function YoungEngineersPage() {
 
                         {/* PROGRAM 3: ALTYAPI / DEVOPS */}
                         <div id="track-infrastructure" className="group bg-emerald-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:-rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
-                            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-emerald-400 text-black px-6 py-2 font-black text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-10 -rotate-2 group-hover:rotate-0 transition-all">
-                                SİSTEM SENSİN ⚙️
-                            </div>
                             <div className="flex items-center gap-6 mb-8 mt-4">
                                 <div className="w-20 h-20 shrink-0 bg-emerald-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
                                     <Server className="w-10 h-10" />

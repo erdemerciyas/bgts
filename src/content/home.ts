@@ -30,7 +30,7 @@ export const HOME_CONTENT = {
         badge: "Hizmetlerimiz",
         heading: "Kanıtlanmış Sonuçlarla\nGüvenilir Teknoloji Ortağınız",
         description: "30 yılı aşkın deneyimimizle, işletmelerin sürdürülebilir büyüme elde etmelerini, operasyonları optimize etmelerini ve benzersiz ihtiyaçlarına göre uyarlanmış stratejik teknoloji danışmanlığı ile karlılığı artırmalarını sağlıyoruz.",
-        ctaText: "Tüm Hizmetlerimizi İnceleyin",
+        ctaText: "İş Modellerimizi Keşfedin",
         image: "/images/headers/teknoloji-cozum-ortagi.jpg",
         sections: [
             {
@@ -75,7 +75,7 @@ export const HOME_CONTENT = {
                 description: "Projenizi A'dan Z'ye biz yönetelim. Sabit kapsamlı projeleriniz için analiz, tasarım, geliştirme ve test süreçlerini üstleniyoruz.",
                 features: ["Sabit Bütçe & Zaman", "Tek Sorumluluk Noktası", "Uçtan Uca Teslimat"],
                 ctaText: "Detaylı Bilgi Alın",
-                ctaLink: "/services/software-development",
+                ctaLink: "/contact",
                 variant: "light"
             },
             {
@@ -84,7 +84,7 @@ export const HOME_CONTENT = {
                 description: "Kendi ekibinizi bizim uzmanlarımızla güçlendirin. Çevik süreçlerinize anında uyum sağlayan elit mühendisler.",
                 features: ["Esnek Ölçeklendirme", "Tam Kontrol & Şeffaflık", "Hızlı Adaptasyon"],
                 ctaText: "Ekibinizi Kurun",
-                ctaLink: "/services/software-development",
+                ctaLink: "/contact",
                 variant: "dark"
             }
         ]

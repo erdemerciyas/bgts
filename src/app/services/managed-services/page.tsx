@@ -56,46 +56,48 @@ export default function ManagedServicesPage() {
     const [activeSection, setActiveSection] = useState<string>(sectoralDomains[0]?.id || "");
     const isScrollingRef = useRef(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
+    const sidebarScrollRef = useRef<HTMLDivElement>(null);
     // Scroll Spy Logic
     useEffect(() => {
+        const HEADER_OFFSET = 200;
+
         const handleScroll = () => {
             if (isScrollingRef.current) return;
 
-            // Collect all targets
             const allTargets = [
                 ...sectoralDomains.map(d => d.id),
                 ...technicalDomains.map(d => d.id),
                 "managed-capabilities",
             ];
 
-            // Measurement line: 30% down from the top of the viewport
-            // This is where the user is "reading" usually
-            if (typeof window === 'undefined') return;
-
-            const offset = window.innerHeight * 0.3;
-
+            // Find the last section whose top is above the header offset line.
+            // This reliably gives us whichever section the user is currently reading.
+            let current = allTargets[0];
             for (const id of allTargets) {
-                const element = document.getElementById(id);
-                if (!element) continue;
-
-                const rect = element.getBoundingClientRect();
-
-                // If the element covers the "reading line"
-                // i.e. Top is above the line, Bottom is below the line
-                if (rect.top <= offset && rect.bottom >= offset) {
-                    setActiveSection(id);
-                    break; // Found the active one, stop active
+                const el = document.getElementById(id);
+                if (!el) continue;
+                if (el.getBoundingClientRect().top <= HEADER_OFFSET) {
+                    current = id;
                 }
             }
+            setActiveSection(current);
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
-        // Run once on mount to set initial
         handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, [sectoralDomains, technicalDomains, capabilities]);
+
+
+    // Auto-scroll sidebar to keep active link visible
+    useEffect(() => {
+        if (!activeSection || !sidebarScrollRef.current) return;
+        const activeEl = sidebarScrollRef.current.querySelector(`[href="#${activeSection}"]`);
+        if (activeEl) {
+            (activeEl as HTMLElement).scrollIntoView({ block: "nearest", behavior: "smooth" });
+        }
+    }, [activeSection]);
 
     const handleLinkClick = (id: string) => {
         setActiveSection(id);
@@ -182,6 +184,7 @@ export default function ManagedServicesPage() {
         return (
             <Link
                 href={`#${id}`}
+                data-section={id}
                 onClick={() => handleLinkClick(id)}
                 className={cn(
                     "group flex items-center py-2 px-6 relative transition-all duration-300 rounded-lg",
@@ -220,8 +223,9 @@ export default function ManagedServicesPage() {
                     <div className="flex flex-col lg:flex-row gap-16 xl:gap-24 relative">
 
                         {/* Sidebar Navigation */}
-                        <aside className="hidden lg:block w-72 shrink-0 relative">
-                            <div className="sticky top-40 space-y-10 max-h-[calc(100vh-160px)] overflow-y-auto pb-10 pr-4 custom-scrollbar">
+                        <aside className="hidden lg:block w-72 shrink-0">
+                            <div className="sticky top-[80px] flex flex-col py-10">
+                            <div ref={sidebarScrollRef} className="overflow-y-auto max-h-[calc(100vh-160px)] space-y-10 pr-4 custom-scrollbar">
                                 {/* Sectoral Solutions */}
                                 <div className="relative group/section">
                                     <div className="absolute left-[7px] top-8 bottom-0 w-[2px] bg-slate-100" />
@@ -270,6 +274,7 @@ export default function ManagedServicesPage() {
                                         )}
                                     </nav>
                                 </div>
+                            </div>
                             </div>
                         </aside>
 

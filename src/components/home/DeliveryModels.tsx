@@ -13,7 +13,7 @@ export function DeliveryModels() {
     const { heading, description, models } = HOME_CONTENT.deliveryModels;
 
     return (
-        <Section className="relative z-0 overflow-hidden bg-[#0f172a] py-16 lg:py-24">
+        <Section id="is-modelleri" className="relative z-0 overflow-hidden bg-[#0f172a] py-16 lg:py-24">
             {/* Background Pattern & Gradient */}
             <div className="absolute inset-0 -z-10">
                 <Image

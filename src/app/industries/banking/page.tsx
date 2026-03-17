@@ -1,7 +1,7 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import { Building2, ShieldCheck, TrendingUp, Users, Wallet, CreditCard, PieChart, Activity, Globe, ArrowRight, Server, Database, Smartphone, FileText, Briefcase, UserCheck, Layers, BadgeCheck, Zap, Lock, CheckCircle2, Target, BarChart3, Code, Landmark, Shield, Cpu, Banknote, ChevronRight, Search, Award, Settings, MonitorPlay, CheckSquare, Fingerprint } from "lucide-react"
+import { Building2, ShieldCheck, TrendingUp, Users, Wallet, CreditCard, PieChart, Activity, Globe, ArrowRight, Server, Database, Smartphone, FileText, Briefcase, UserCheck, Layers, BadgeCheck, Zap, Lock, CheckCircle2, Target, BarChart3, Code, Landmark, Shield, Cpu, Banknote, ChevronRight, Search, Award, Settings, MonitorPlay, CheckSquare, Fingerprint, AlertTriangle, Package, UserPlus, Receipt, Repeat2 } from "lucide-react"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
@@ -18,33 +18,41 @@ const fadeUp = {
 
 
 const solutionAreas = [
-    "Ana Bankacılık", "Dijital Bankacılık", "Ödeme Sistemleri", "Kartlı Sistemler",
-    "Yapay Zeka (AI)", "Veri Analitik", "SRE & DevOps", "Sistem Altyapı",
-    "Kurumsal Güvenlik", "Test Otomasyon", "Leasing & Faktoring & Filo", "Sigorta",
-    "Bireysel & Ticari Krediler", "Portföy & Yatırım", "Kredi Risk İzleme", "Müşteri ve CRM",
-    "Çağrı Merkezi Uygulamaları", "İnsan Kaynakları", "Kurumsal Çözümler", "Dijital Varlıklar",
-    "Proje Yönetimi", "UI/UX Tasarım", "Kredi Takip (Sorunlu Krediler)", "Krediler Tahsilat",
-    "Krediler Tasfiye", "Otomatik Tahsilat Süreçleri", "Müşteri Sınıflama (1-2-3-4-5)",
-    "Yasal Takip Süreçleri", "Varlık Yönetim Şirketine Devir Süreci", "Dış Ticaret İhracat İşlemleri",
-    "FIX, Pricing, Hedging Altyapıları", "Teminat Yönetimi", "Mevduat", "Kampanya Yönetimi",
-    "Kurum Entegrasyonları", "E-Fatura & E-Defter & E-Arşiv"
+    "Temel Bankacılık Uygulamaları",
+    "Ödeme Sistemleri ve Kartlı Çözümler",
+    "Yatırım Bankacılığı",
+    "Hazine",
+    "Dijital Bankacılık Kanalları",
+    "CRM ve IVR Çözümleri",
+    "Veri & Analitik, Risk ve Müşteri Analitiği",
+    "Kurumsal Uygulamalar (Muhasebe, Tedarik Zinciri, İç Portaller)",
+    "İnsan Kaynakları (IK) Sistemleri",
+    "Altyapı Modernizasyonu ve Entegrasyon Projeleri",
 ]
 
 const coreBankingItems = [
     { title: "Teminat Yönetimi Projesi", icon: Shield, desc: "Kredilerin teminat süreçlerinin tam entegrasyonu ve izlenebilirliği." },
-    { title: "Vadeli ve Kredili Mevduat", icon: Banknote, desc: "Bireysel ve kurumsal mevduat hesaplamalarının otomasyonu." },
-    { title: "Bireysel ve Ticari Krediler", icon: Wallet, desc: "Tahsis kullandırım, ödeme planı ve sorunlu kredi yönetimi." },
-    { title: "Nakit Yönetimi & Hazine", icon: PieChart, desc: "Borsa entegrasyonları, fon hareketleri ve portföy izleme." },
-    { title: "Şube Kanal Yönetimi", icon: Building2, desc: "Şubeden para çekme/yatırma ve dijital talimat adaptasyonları." },
-    { title: "Vergi ve Fatura Dönüşümü", icon: FileText, desc: "Devlet sistemleriyle entegre e-fatura, vergi ve doğrudan tahsilat." },
+    { title: "Vadeli Mevduat", icon: Banknote, desc: "Bireysel ve kurumsal vadeli mevduat işlemlerinin otomasyonu." },
+    { title: "Bireysel, KOBİ ve Ticari Krediler", icon: Wallet, desc: "İş birlikleri, tahsis kullandırım, ödeme planı, sorunlu kredi yönetimi ve yasal takip süreçleri." },
+    { title: "Nakit Yönetimi Çözümleri", icon: PieChart, desc: "Fon hareketleri, likidite izleme ve nakit akışı yönetimi çözümleri." },
+    { title: "Hazine Fx ve Türev Ürünler", icon: TrendingUp, desc: "Döviz işlemleri, türev ürün yönetimi ve FIX/Pricing/Hedging altyapıları." },
+    { title: "Kredili Mevduat", icon: Repeat2, desc: "Bireysel ve kurumsal kredili mevduat hesabı süreçlerinin yönetimi." },
+    { title: "Şube Kanal Yönetimi", icon: Building2, desc: "Dijital talimat ve para çekme/yatırma projelerini kapsayan şube kanal adaptasyonları." },
+    { title: "Başvuru Sahteciliği Projesi", icon: AlertTriangle, desc: "Kredi ve ürün başvurularında sahteciliği tespit eden analitik ve kural tabanlı sistemler." },
+    { title: "Gayrinakdi Ürünler Projesi", icon: Package, desc: "Teminat mektubu, akreditif ve diğer gayrinakdi ürünlerin süreç yönetimi." },
+    { title: "Vergi ve Fatura Modülleri", icon: FileText, desc: "Devlet sistemleriyle entegre vergi ve fatura süreçlerinin yönetimi." },
+    { title: "E-Fatura & E-Haciz Entegrasyon Projeleri", icon: Receipt, desc: "E-fatura ve e-haciz süreçlerinin kamu sistemleriyle uçtan uca entegrasyonu." },
 ]
 
 const paymentItems = [
-    { title: "Kart Ürünleri ve Basım", icon: CreditCard, desc: "Kredi, banka ve ön ödemeli kartların yaşam döngüsü yönetimi." },
-    { title: "POS Ürün Entegrasyonu", icon: Smartphone, desc: "Sanal ve fiziksel POS terminallerine yazılım desteği." },
-    { title: "Issuing & Acquiring", icon: Zap, desc: "Ödeme sistemlerinde provizyon, takas ve mutabakat sistemleri." },
-    { title: "Takasnet Modernizasyonu", icon: Server, desc: "Bankalar arası hızlı takas ve provizyon akış altyapıları." },
-    { title: "E-Cüzdan & Onboarding", icon: Fingerprint, desc: "Hızlı Müşterilenme (KYC) ve sadakat sistemleri entegrasyonu." },
+    { title: "Kart Ürünleri", icon: CreditCard, desc: "Kredi, banka ve ön ödemeli kartların yaşam döngüsü yönetimi ve operasyonları." },
+    { title: "Kart İş Geliştirme & Basım", icon: BadgeCheck, desc: "Yeni kart ürünü tasarımı, iş geliştirme süreçleri ve kart basım operasyonları." },
+    { title: "POS Ürün Entegrasyonu", icon: Smartphone, desc: "Sanal ve fiziksel POS terminallerine yazılım desteği ve entegrasyon." },
+    { title: "Issuing", icon: Zap, desc: "Kart ihraç süreçleri, provizyon yönetimi ve kart sahibi işlemleri altyapısı." },
+    { title: "Acquiring", icon: Globe, desc: "Üye işyeri kabul süreçleri, takas ve mutabakat sistemleri." },
+    { title: "Takasnet", icon: Server, desc: "Bankalar arası hızlı takas, provizyon akışı ve Takasnet entegrasyon altyapıları." },
+    { title: "Müşteri Onboarding", icon: UserPlus, desc: "Hızlı müşteri edinimi (KYC), dijital başvuru ve kimlik doğrulama süreçleri." },
+    { title: "E-Cüzdan", icon: Fingerprint, desc: "Dijital cüzdan ürünlerinin geliştirilmesi, sadakat ve ödeme sistemi entegrasyonları." },
 ]
 
 const caseStudies = [
@@ -124,12 +132,11 @@ export default function BankingPage() {
                                 </Heading>
                                 <div className="space-y-5 text-slate-600 text-[17px] leading-relaxed">
                                     <p>
-                                        Türkiye'nin <strong className="text-blue-700 font-semibold">en büyük 10 bankasının 8'i</strong> ile güvene dayalı iş ortaklıkları yürütüyor, finans sektöründeki 10 yılı aşkın köklü tecrübemizle sektöre yön veriyoruz.
-                                        Projelerde görev yapan <strong className="text-blue-700 font-semibold">550+ kişilik</strong> uzman finans ekibimizle, iş sürekliliği kritik olan sistemler için
-                                        güvenilir, ölçeklenebilir ve sürdürülebilir teknoloji çözümleri sunuyoruz.
+                                        <strong className="text-blue-700 font-semibold">1997 yılındaki kuruluşumuzdan</strong> bu yana istikrarlı bir şekilde büyüyen organizasyonumuz, bugün güçlü kadrosuyla özel ve kamu bankaları, sigorta şirketleri ve ödeme sistemleri alanında faaliyet gösteren kurumlarla uzun yıllara dayanan sağlam iş birlikleri yürütmektedir.
+                                        Gerçekleştirdiğimiz <strong className="text-blue-700 font-semibold">100'ün üzerinde proje</strong> ile; temel bankacılık, dijital kanallar, ödeme sistemleri ile veri ve analitik çözümleri başta olmak üzere finans ekosisteminin kritik iş alanlarında aktif rol alıyoruz.
                                     </p>
                                     <p>
-                                        İş ortaklarımızın stratejik hedeflerini merkeze alarak, Bilişim 500 araştırmasına göre finans ve bankacılık yazılımlarında <strong>5 yıldır peş peşe ilk 5'te</strong> yer almanın gururunu yaşıyoruz. Dijital dönüşüm yolculuğunda yalnızca bir tedarikçi değil, süreci sahiplenen uzun vadeli bir teknoloji iş ortağı olarak konumlanıyoruz.
+                                        İş ortaklarımızın stratejik hedeflerini ve önceliklerini merkeze alarak, ihtiyaçlarını analiz ediyor ve bu ihtiyaçlara en uygun metodoloji ve teslim modeliyle projeleri hayata geçiriyoruz. Dijital dönüşüm yolculuğunda yalnızca bir tedarikçi değil, <strong>süreci sahiplenen uzun vadeli bir teknoloji iş ortağı</strong> olarak konumlanıyoruz.
                                     </p>
                                 </div>
                             </motion.div>

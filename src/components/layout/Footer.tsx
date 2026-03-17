@@ -30,7 +30,6 @@ export default function Footer() {
                                 <li><Link href="/services/managed-services" className="hover:text-corporate-accent transition-colors">Yönetilen Hizmetler</Link></li>
                                 <li><Link href="/services/devops" className="hover:text-corporate-accent transition-colors">DevOps & SRE</Link></li>
                                 <li><Link href="/services/software-development" className="hover:text-corporate-accent transition-colors">Yazılım Geliştirme</Link></li>
-                                <li><Link href="#" className="hover:text-corporate-accent transition-colors">Tüm Hizmetler</Link></li>
                             </ul>
                         </div>
 
@@ -73,7 +72,7 @@ export default function Footer() {
                                 </li>
                                 <li className="flex gap-3">
                                     <Mail className="w-5 h-5 text-corporate-accent shrink-0" />
-                                    <span>info@bgts.com.tr</span>
+                                    <span>info@bgts.com</span>
                                 </li>
                             </ul>
                         </div>

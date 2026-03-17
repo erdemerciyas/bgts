@@ -53,49 +53,51 @@ export default function SoftwareDevelopmentPage() {
     ];
 
     // State for active section
-    const [activeSection, setActiveSection] = useState<string>(sectoralDomains[0]?.id || "");
+    const [activeSection, setActiveSection] = useState<string>(technicalDomains[0]?.id || "");
     const isScrollingRef = useRef(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
+    const sidebarScrollRef = useRef<HTMLDivElement>(null);
     // Scroll Spy Logic
     useEffect(() => {
+        const HEADER_OFFSET = 200;
+
         const handleScroll = () => {
             if (isScrollingRef.current) return;
 
-            // Collect all targets
             const allTargets = [
-                ...sectoralDomains.map(d => d.id),
                 ...technicalDomains.map(d => d.id),
                 ...developmentDomains.map(d => d.id),
+                ...sectoralDomains.map(d => d.id),
             ];
 
-            // Measurement line: 30% down from the top of the viewport
-            // This is where the user is "reading" usually
-            if (typeof window === 'undefined') return;
-
-            const offset = window.innerHeight * 0.3;
-
+            // Find the last section whose top is above the header offset line.
+            // This reliably gives us whichever section the user is currently reading.
+            let current = allTargets[0];
             for (const id of allTargets) {
-                const element = document.getElementById(id);
-                if (!element) continue;
-
-                const rect = element.getBoundingClientRect();
-
-                // If the element covers the "reading line"
-                // i.e. Top is above the line, Bottom is below the line
-                if (rect.top <= offset && rect.bottom >= offset) {
-                    setActiveSection(id);
-                    break; // Found the active one, stop active
+                const el = document.getElementById(id);
+                if (!el) continue;
+                if (el.getBoundingClientRect().top <= HEADER_OFFSET) {
+                    current = id;
                 }
             }
+            setActiveSection(current);
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
-        // Run once on mount to set initial
         handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, [sectoralDomains, technicalDomains, developmentDomains]);
+
+
+    // Auto-scroll sidebar to keep active link visible
+    useEffect(() => {
+        if (!activeSection || !sidebarScrollRef.current) return;
+        const activeEl = sidebarScrollRef.current.querySelector(`[href="#${activeSection}"]`);
+        if (activeEl) {
+            (activeEl as HTMLElement).scrollIntoView({ block: "nearest", behavior: "smooth" });
+        }
+    }, [activeSection]);
 
     const handleLinkClick = (id: string) => {
         setActiveSection(id);
@@ -189,6 +191,7 @@ export default function SoftwareDevelopmentPage() {
         return (
             <Link
                 href={`#${id}`}
+                data-section={id}
                 onClick={() => handleLinkClick(id)}
                 className={cn(
                     "group flex items-center py-2 px-6 relative transition-all duration-300 rounded-lg",
@@ -232,8 +235,9 @@ export default function SoftwareDevelopmentPage() {
                     <div className="flex flex-col lg:flex-row gap-16 xl:gap-24 relative">
 
                         {/* Sidebar Navigation */}
-                        <aside className="hidden lg:block w-72 shrink-0 relative">
-                            <div className="sticky top-40 space-y-10 max-h-[calc(100vh-160px)] overflow-y-auto pb-10 pr-4 custom-scrollbar">
+                        <aside className="hidden lg:block w-72 shrink-0">
+                            <div className="sticky top-[80px] flex flex-col py-10">
+                            <div ref={sidebarScrollRef} className="overflow-y-auto max-h-[calc(100vh-160px)] space-y-10 pr-4 custom-scrollbar">
                                 {/* Technical Solutions */}
                                 <div className="relative group/section">
                                     {/* Removed the absolute line duplicate if I move track inside */}
@@ -291,21 +295,12 @@ export default function SoftwareDevelopmentPage() {
                                     </nav>
                                 </div>
                             </div>
+                            </div>
                         </aside>
 
                         {/* Content Area */}
                         <div className="flex-1 min-w-0">
-                            <div className="space-y-12">
-                                {sectoralDomains.map((domain, index) => (
-                                    <div key={domain.id}>
-                                        {renderDomainSection(domain, index)}
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="my-24" />
-
-                            {/* Technical Domains - RESTORED */}
+                            {/* Technical Domains */}
                             <div className="space-y-12">
                                 {technicalDomains.map((domain, index) => (
                                     <div key={domain.id}>
@@ -321,6 +316,17 @@ export default function SoftwareDevelopmentPage() {
                                 {developmentDomains.map((domain, index) => (
                                     <div key={domain.id}>
                                         {renderDomainSection(domain, index + sectoralDomains.length + technicalDomains.length)}
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="my-24" />
+
+                            {/* Sectoral Domains */}
+                            <div className="space-y-12">
+                                {sectoralDomains.map((domain, index) => (
+                                    <div key={domain.id}>
+                                        {renderDomainSection(domain, index)}
                                     </div>
                                 ))}
                             </div>

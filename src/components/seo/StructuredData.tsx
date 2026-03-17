@@ -16,7 +16,7 @@ export function OrganizationStructuredData() {
       '@type': 'ContactPoint',
       telephone: '+90-212-XXX-XXXX',
       contactType: 'customer service',
-      email: 'info@bgts.com.tr',
+      email: 'info@bgts.com',
     },
     sameAs: [
       'https://www.linkedin.com/company/bgts',

@@ -335,7 +335,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   <a href="https://www.linkedin.com/company/bilgeadam/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-blue-50 hover:border-blue-200 transition-colors">
                     <Linkedin className="w-3.5 h-3.5 text-slate-500" />
                   </a>
-                  <a href="mailto:info@bgts.com.tr" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                  <a href="mailto:info@bgts.com" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-blue-50 hover:border-blue-200 transition-colors">
                     <Mail className="w-3.5 h-3.5 text-slate-500" />
                   </a>
                 </div>
