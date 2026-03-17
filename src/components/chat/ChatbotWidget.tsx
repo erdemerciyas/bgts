@@ -7,6 +7,13 @@ import { MessageSquare, X, Send, Bot, User, Loader2, Sparkles } from 'lucide-rea
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
 
+const QUICK_QUESTIONS = [
+    'Hizmetleriniz neler?',
+    'Ürünleriniz hakkında bilgi ver',
+    'Kariyer fırsatları neler?',
+    'Genç Mühendis Programı nedir?',
+];
+
 export default function ChatbotWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [showTooltip, setShowTooltip] = useState(false);
@@ -17,20 +24,24 @@ export default function ChatbotWidget() {
             if (!isOpen && !tooltipDismissedRef.current) {
                 setShowTooltip(true);
             }
-        }, 2000);
+        }, 3000);
         return () => clearTimeout(timer);
     }, [isOpen]);
     const messagesEndRef = useRef<HTMLDivElement>(null);
-    const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
+    const { messages, input, handleInputChange, handleSubmit, isLoading, error, append } = useChat({
         api: '/api/chat',
         initialMessages: [
             {
                 id: '1',
                 role: 'assistant',
-                content: 'Merhaba! Ben BGTS dijital asistanıyım. Size hizmetlerimiz veya ürünlerimiz hakkında nasıl yardımcı olabilirim?',
+                content: 'Merhaba! Ben Ayla, BGTS danışmanınız. 👋\n\nHizmetlerimiz, ürünlerimiz veya kariyer fırsatları hakkında merak ettiklerinizi sorabilirsiniz. Size nasıl yardımcı olabilirim?',
             },
         ],
     });
+
+    const handleQuickQuestion = (question: string) => {
+        append({ role: 'user', content: question });
+    };
 
     // Auto-scroll to bottom of messages
     useEffect(() => {
@@ -62,7 +73,7 @@ export default function ChatbotWidget() {
                                     <h3 className="font-semibold leading-none text-white flex items-center gap-1.5">
                                         Dijital Asistan <Sparkles className="h-3.5 w-3.5 text-yellow-300" />
                                     </h3>
-                                    <p className="mt-1 text-xs text-blue-100">BGTS Yapay Zeka Destekli Asistan</p>
+                                    <p className="mt-1 text-xs text-blue-100">BGTS Kurumsal Danışman</p>
                                 </div>
                             </div>
                             <button
@@ -161,6 +172,21 @@ export default function ChatbotWidget() {
                             <div ref={messagesEndRef} />
                         </div>
 
+                        {/* Quick Questions */}
+                        {messages.length <= 1 && !isLoading && (
+                            <div className="bg-gray-50/80 px-4 py-3 border-t border-gray-100 flex flex-wrap gap-2">
+                                {QUICK_QUESTIONS.map((q) => (
+                                    <button
+                                        key={q}
+                                        onClick={() => handleQuickQuestion(q)}
+                                        className="text-xs bg-white text-blue-700 border border-blue-100 rounded-full px-3 py-1.5 hover:bg-blue-50 hover:border-blue-300 transition-colors shadow-sm"
+                                    >
+                                        {q}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+
                         {/* Input Area */}
                         <div className="bg-white p-4 border-t border-gray-100">
                             <form
@@ -199,7 +225,7 @@ export default function ChatbotWidget() {
                                 </button>
                             </form>
                             <div className="mt-2 text-center">
-                                <p className="text-[10px] text-gray-400">Yapay Zeka tarafından desteklenmektedir.</p>
+                                <p className="text-[10px] text-gray-400">BGTS Ayla — Kurumsal Dijital Danışman</p>
                             </div>
                         </div>
                     </motion.div>
@@ -253,10 +279,10 @@ export default function ChatbotWidget() {
                         </div>
                         <div className="flex-1 mt-0.5">
                             <p className="text-sm text-gray-800 font-semibold mb-1">
-                                Merhaba! 👋
+                                Ben Ayla, BGTS danışmanı 👋
                             </p>
                             <p className="text-xs text-gray-500 leading-snug">
-                                Size şirketimiz hakkında nasıl yardımcı olabilirim?
+                                Hizmetler, ürünler veya kariyer hakkında bir sorunuz mu var?
                             </p>
                         </div>
                         <button

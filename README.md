@@ -1,171 +1,447 @@
-# BGTS - Business & Global Technology Solutions
+# BGTS — Business & Global Technology Solutions
 
-![BGTS Cover](/public/images/headers/teknoloji-servisleri-genel.jpg)
+> Kurumsal dijital dönüşüme liderlik eden, yüksek performanslı bir teknoloji şirketinin modern web platformu.
 
-BGTS (Business & Global Technology Solutions), kurumların dijital dönüşüm süreçlerine liderlik eden, modern ve yüksek performanslı bir teknoloji şirketidir. Bu proje, BGTS'nin kurumsal web varlığını en güncel web teknolojileriyle sunan, performans, güvenlik ve kullanıcı deneyimi odaklı bir platformdur.
+![Next.js](https://img.shields.io/badge/Next.js-16.1-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-38bdf8?logo=tailwindcss)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12-purple?logo=framer)
 
-## 🚀 Teknoloji Yığını (Tech Stack)
+---
 
-Proje, hız, ölçeklenebilirlik ve SEO uyumluluğu gözetilerek modern teknolojilerle geliştirilmiştir:
+## İçindekiler
 
-- **Framework:** [Next.js 14+](https://nextjs.org/) (App Router, Server Components)
-- **Stil & Tasarım:** [Tailwind CSS v4](https://tailwindcss.com/)
-- **Programlama Dili:** [TypeScript](https://www.typescriptlang.org/)
-- **İkon Seti:** [Lucide React](https://lucide.dev/)
-- **Animasyonlar:** [Framer Motion](https://www.framer.com/motion/)
-- **Font:** [Exo](https://fonts.google.com/specimen/Exo) (Google Fonts)
-- **Form Yönetimi:** React Hook Form + Zod
+- [Proje Hakkında](#proje-hakkında)
+- [Teknoloji Yığını](#teknoloji-yığını)
+- [Özellikler](#özellikler)
+- [Proje Yapısı](#proje-yapısı)
+- [Kurulum](#kurulum)
+- [Ortam Değişkenleri](#ortam-değişkenleri)
+- [API Rotaları](#api-rotaları)
+- [AI Chatbot Sistemi](#ai-chatbot-sistemi)
+- [Sayfalar ve Rotalar](#sayfalar-ve-rotalar)
+- [Tasarım Sistemi](#tasarım-sistemi)
+- [Test](#test)
+- [Versiyon Geçmişi](#versiyon-geçmişi)
 
-## 🌟 Öne Çıkan Özellikler
+---
 
-### Tasarım ve Kullanıcı Deneyimi (UI/UX)
-- **Modern & Kurumsal UI:** Marka kimliğini yansıtan özel renk paleti (`action-blue`, `slate-900`, `indigo`), cam efektleri (glassmorphism) ve temiz tipografi.
-- **Dinamik Kahraman (Hero) Alanları:** Her sayfa için özel olarak üretilmiş, sektöre ve içeriğe uygun yüksek çözünürlüklü görseller ve slider yapıları.
-- **Gelişmiş Navigasyon:** "Mega Menu" yapısı sayesinde hizmetlere (MSP, Yazılım, DevOps) ve sektörlere hızlı erişim.
-- **Responsive Tasarım:** Mobil, tablet ve masaüstü cihazlarda kusursuz çalışan esnek (fluid) yerleşimler.
+## Proje Hakkında
 
-### Yeni Eklenen Modüller (v0.3.0)
-- **Bankacılık ve Finans (Kapsamlı Redesign):** PDF verileri ve standartlar doğrultusunda baştan aşağı yenilenmiş, interaktif uzmanlık alanları ve detaylı başarı hikayelerini barındıran premium endüstri sayfası (`/industries/banking`).
-- **AI Hiring Assistant:** Yapay zeka destekli işe alım ürününün özelliklerini anlatan dinamik ürün sayfası (`/products/ai-hiring-assistant`).
-- **İnfografikler Sayfası:** Veri görselleştirmesi ile zenginleştirilmiş istatistik sayfası (`/resources/infographics`).
-- **Kariyer & Kültür:** Gerçek ofis fotoğrafları ve çalışan hikayeleriyle zenginleştirilmiş İK sayfaları.
-- **Yönetilen Hizmetler (MSP):** Tüm IT hizmetlerinin tek çatı altında toplandığı detaylı hizmet kataloğu.
+Bu proje, BGTS'nin kurumsal web varlığını en güncel web teknolojileriyle sunan, performans, güvenlik ve kullanıcı deneyimi odaklı bir platformdur. Next.js App Router mimarisi üzerine inşa edilmiş; SSR/SSG yetenekleri, edge runtime API'lar ve AI entegrasyonları içermektedir.
 
-### Optimizasyonlar ve Temizlik (v0.4.0)
-- **Codebase & Medya Temizliği:** Kullanılmayan sayfa bileşenleri (eski servis sayfaları) ve referans verilmeyen görseller projeden tamamen temizlendi.
-- **Header & Mega Menu Revizyonu:** Sektörler, Hizmetler ve Ürünler menülerindeki ana linklerin yönlendirmeleri devreden çıkarıldı. Arayüz boşluk dengeleri (Mega Menu) iyileştirildi.
+**Hedefler:**
+- Kurumsal marka kimliğini güçlü biçimde yansıtmak
+- Müşteri adaylarını doğru servis ve ürün sayfalarına yönlendirmek
+- Kariyer odaklı ziyaretçilere şeffaf bir büyüme yolu sunmak
+- AI destekli chatbot ile 7/24 kurumsal danışmanlık sağlamak
 
-### Yapay Zeka Entegrasyonları (v0.5.0)
-- **BGTS Dijital Asistan (Chatbot):** Vercel AI SDK ve Groq (Llama 3 70B) kullanılarak geliştirilmiş, şirket verileriyle eğitilmiş ve saniyeler içinde cevap veren yüksek performanslı otonom chatbot entegrasyonu tamamlandı. Sayfa yönlendirmeleri dinamik olarak gerçekleştirildi.
+---
 
-### Form ve E-posta Entegrasyonları (v0.6.0)
-- **Nodemailer SMTP Altyapısı Eklendi:** Projeye Nodemailer entegre edilerek İletişim sayfasındaki form ve İnsan Kaynakları (Genç Mühendis) başvuru formu ile direkt e-posta gönderim özelliği kazandırıldı.
-- **Dinamik CV Algılama ve Ekler:** İK Başvuru Formu üzerinden kullanıcıların `.pdf`, `.docx` gibi CV'lerini yükleyerek başvuru mailinin ekinde (attachment) iletilmesi sağlandı. Form geri bildirim mekanizmaları güçlendirildi.
+## Teknoloji Yığını
 
-### Yeni Kurumsal Çözümler ve İçerik Zenginleştirme (v0.8.0)
-- **MeetSense AI Platformu:** Toplantıları AI ile kaydeden, analiz eden ve kurumsal hafızaya dönüştüren platformumuz için modern, kurumsal standartlarda premium bir ürün sayfası oluşturuldu (`/products/meetsense`). Mega Menü'ye entegrasyonu sağlandı.
-- **Genç Mühendisler Akademisi (Kapsamlı Redesign):** Eğitim alanlarının (Yazılım, Test/Analiz, DevOps) yaklaşım ve hedefleri detaylandırılarak, "Stacked Layout" yapısında daha şık ve okunabilir bir görünüme (`/young-engineers`) kavuşturuldu.
+| Katman | Teknoloji | Versiyon |
+|--------|-----------|----------|
+| Framework | Next.js (App Router) | 16.1.1 |
+| Dil | TypeScript | ^5 |
+| UI Kütüphanesi | React | 19.2.3 |
+| Stillendirme | Tailwind CSS | v4 |
+| Animasyon | Framer Motion | ^12 |
+| İkon Seti | Lucide React | ^0.562 |
+| Form Yönetimi | React Hook Form + Zod | 7.x + 4.x |
+| AI / Chatbot | Vercel AI SDK + Groq | 3.x / Llama 3.3 70B |
+| E-posta | Nodemailer | ^8 |
+| Doküman Ayrıştırma | pdf-parse, officeparser | — |
+| Test | Vitest + Testing Library | ^4 |
 
-### Yapay Zeka ve Uygulama İyileştirmeleri (v0.9.0)
-- **Cortex AI SDLC Platformu:** Yazılım geliştirme süreçlerini (SDLC) otomatik hale getiren yeni AI platform sayfası (`/products/cortex`) yapılandırıldı.
-- **Chatbot Bilgi Bankası:** BGTS dijital asistan (Llama 3 70B), MeetSense ve Cortex ürünleri hakkında bilgi sağlayabilecek şekilde güncellendi ve `.env` API sorunları çözüldü.
-- **Hakkımızda Sayfası UI/UX:** Harita üzerindeki İstanbul ve Ankara merkez ofis iğneleri (pins) nabız efektiyle belirginleştirildi ve İş Ortakları alanındaki logo arka plan tasarımları cam efektinden beyaz zeminli premium görünüme geçirildi.
+---
 
-### UI & UX İyileştirmeleri (v0.10.0)
-- **MeetSense Ürün Sayfası:** Hero alanı ve arka plan renkleri açık temaya (light theme) uygun olarak güncellendi. Kullanıcının dikkati dağılmaması adına hero kısmındaki etiket ve butonlar kaldırıldı.
-- **Kültür Sayfası:** Agile ve Esnek Çalışma bölümündeki cover görseli projeye yeni eklenen `agile-esnek.png` ile yenilendi.
+## Özellikler
 
-### Yeni Kurumsal Eklemeler & İyileştirmeler (v0.11.0)
-- **İş Ortakları Sayfası:** `/partnerships` sayfasında yenilikçi, modern bir Hero alanı ve teknoloji partnerleri (Microsoft, AWS, ServiceNow vb.) için 3 boyutlu kurumsal kartlar eklendi.
-- **Yönetilen Hizmetler (MSP) Görsel Revizyonu:** Önceden kullanılan karanlık temalı görseller, daha ferah, aydınlık ve 3 boyutlu izometrik teknoloji çizimleriyle değiştirilip yerel dizine (`/public/images/iso/`) taşındı.
-- **Sürdürülebilir Değer Programı:** "Toplumsal Katkı" menü ve yönlendirmeleri "Sürdürülebilir Değer Programı" olarak güncellendi.
-- **Genç Mühendisler Programı:** `/young-engineers` URL'i `/genc-muhendis-programi` olarak değiştirildi. Tasarım içindeki rozetler ('KOD YAZ, ETKİ YARAT' vb.) eğlenceli ve interaktif hover efektleriyle canlandırıldı.
+### Tasarım ve Kullanıcı Deneyimi
+- **Mega Menu Navigasyon:** Hizmetler, Ürünler, Sektörler, Kariyer ve Kaynaklar için tam genişlikte menüler
+- **Responsive Tasarım:** Mobil öncelikli yaklaşım; mobil navigasyon tam yeniden yazıldı (accordion, scroll lock, backdrop)
+- **Hero Slider:** Ana sayfada çok slaytlı, animasyonlu kahraman alanı
+- **Framer Motion Animasyonları:** Scroll-triggered reveal, spring animasyonları, sayfa geçişleri
+- **Glassmorphism Efektleri:** Cam efektli kart ve bölüm tasarımları
 
-### Responsive Optimizasyon & Savunma Revizyonları (v0.12.0)
-- **Responsive Optimizasyon:** Tüm sitede %100 zoom'da aşırı büyük görünen elemanlar ve yatay kaymalar düzeltildi. Tipografi küçültüldü (h1: 56→48px, h2: 42→36px, body text: 18→16px), Hero alanları küçültüldü (85vh→75vh), section/kart padding'leri %20-30 azaltıldı ve `overflow-x: hidden` koruması eklendi.
-- **Savunma Sanayi Sayfası Revizyonu:** Döküman bazlı kapsamlı içerik güncellemesi yapıldı — Hero başlıkları güncellendi (MIL-STD ve IEEE standartlarına referans), İş Analizi bölümü yeniden yapılandırıldı (Kavramsal Tasarım kaldırıldı, ConOps ve Senaryo açıklamaları güncellendi), Yazılım bölümüne NAF/DODAF/TOGAF mimari çerçeveleri eklendi, Test ve DevOps açıklamaları revize edildi, BT Altyapı ve Yönetilen BT Hizmetleri bölümleri tamamen kaldırıldı.
+### AI Destekli Chatbot (Ayla)
+- Groq API üzerinde çalışan Llama 3.3 70B modeli
+- Persona bazlı sistem prompt: "Ayla" adında BGTS kurumsal danışmanı kimliği
+- Hizmet, ürün ve kariyer konularında derin bilgi tabanı
+- Hızlı soru butonları (ilk açılışta)
+- Gerçek zamanlı streaming yanıtlar
+- Tıklanabilir Markdown linkleri ile sayfa yönlendirmeleri
 
-### Kahraman (Hero) & Arayüz Düzeltmeleri (v0.14.0)
-- **Hero Alanları Optimizasyonu:** Ortak kullanılan Hero bileşeni, Çalışma Kültürü, Genç Mühendisler ve Başarı Hikayeleri sayfalarındaki hero yükseklikleri ve boşlukları (padding) orantılı olarak küçültülerek kullanıcı deneyimi iyileştirildi.
-- **Ana Sayfa Slider:** Ana sayfa hero slider orijinal boyutlarında korundu, 3. slayt ("Genç Mühendisler") haricindeki görsellerin blur efekti kaldırılarak daha net ve canlı görünmeleri sağlandı.
-- **İş Ortakları ve İçerik Güncellemeleri:** İş Ortakları sayfasındaki Qlik ve Xurrent kartlarının açıklamaları geliştirildi. Ana sayfadaki veri içerikleri ("Esnek İş Modelleri", "Hizmet Verdiğimiz Sektörler") daha sade ve anlaşılır başlıklara kavuşturuldu.
+### Form ve E-posta Sistemi
+- **İletişim Formu:** Zod validasyonlu, Nodemailer ile e-posta gönderimi
+- **Genç Mühendis Başvurusu:** CV dosyası yükleme ve e-posta eki olarak iletme
+- GDPR onay checkbox'ı
+- Hata/başarı bildirim mekanizmaları
 
-### Mobil Uyumluluk, Chatbot & Arama Güncellemeleri (v0.13.0)
-- **Mobil Navigasyon (Tam Yeniden Yazım):** Sadece düz linklerden oluşan 51 satırlık eski MobileNav, accordion bazlı alt menüler, ~35 alt link, body scroll lock, backdrop overlay ve slide-in animasyonlu 280 satırlık kapsamlı bir bileşene dönüştürüldü.
-- **Slider Navigasyonu:** Yön okları slider'ın sol/sağ kenarlarına taşındı, pagination noktaları alt ortaya konumlandı. AI ürün pinleri örtüşme sorunu giderildi ve daha kompakt küme yapısına geçildi.
-- **Chatbot Bilgi Bankası:** Şirket adı düzeltildi, tüm ürün/sektör/kariyer linkleri güncellendi, eski rotalar temizlendi, markdown tıklanabilir link formatına geçildi.
-- **Site İçi Arama:** 12 öğeden 27 öğeye genişletildi — 8 ürün, 4 sektör, 5 kariyer ve 5 kurumsal sayfa eklendi, arama etiketleri zenginleştirildi.
+### SEO ve Performans
+- Her sayfa için özelleştirilmiş metadata (title, description, OpenGraph, Twitter Card)
+- `sitemap.xml` otomatik üretimi
+- Schema.org yapılandırılmış veri (Organization, Breadcrumb)
+- `next/image` ile otomatik görsel optimizasyonu
+- Güvenlik başlıkları (HSTS, X-Frame-Options, X-Content-Type-Options)
 
-### Hata Giderimleri & Build Optimizasyonları (v0.7.1)
-- **Next.js Turbopack Çakışması:** `package.json` içerisindeki `"type": "commonjs"` tanımlaması nedeniyle ES Modules yapısıyla çalışan Next.js App Router yapısında ortaya çıkan CommonJS vs ESM çakışması (build hataları) giderildi. Dev server artık tamamen stabil çalışıyor.
+### Site İçi Arama
+- 27 öğeli arama endeksi: 8 ürün, 4 sektör, 5 kariyer, 5 kurumsal sayfa ve hizmetler
+- Zengin arama etiketleri ile hızlı erişim
 
-### Kurumsal Kimlik, İletişim & Arayüz İyileştirmeleri (v0.7.0)
-- **Hakkımızda Sayfası (Kapsamlı Redesign):** Sayfa bütünüyle BGTS Frontend Standartlarına uygun hale getirildi. Genel Bakış ve Değerler bölümleri premium glassmorphism detaylarıyla yenilendi.
-- **İnteraktif Konumlar Haritası:** CSS/SVG tabanlı harita yerine dünya arka planı üzerine yerleştirilmiş, dinamik pin noktaları ve senkronize çalışan ofis slider kartlarıyla kurumsal global varlık (LocationsMap) sergilendi. Ofisler ve Hizmet Noktaları UI seviyesinde ayrıştırıldı.
-- **İş Ortakları ve Sertifikasyonlar:** İç içe geçmiş logolar yerine kurumsal siteden alınan net ikonlarla 2 ayrı tam genişlik (full-width) section oluşturuldu. Dark Navy ve Warm Mesh arka planlarla UI zenginleştirildi.
-- **Ana Sayfa İyileştirmeleri:** Kahraman (Hero) slider'ına uçuşan ve premium hissi veren "Teknoloji Baloncukları" eklendi.
-- **İletişim Formları İyileştirildi:** Görünmeyen "Gönderiliyor..." metinleri ve disable statüleri UX standartlarına çekildi. Dosya yükleme (File Upload) butonuna seçilen dosya adının yazdırılması sağlandı.
+---
 
-## 🛠️ Teknik İyileştirmeler ve Optimizasyonlar
+## Proje Yapısı
 
-Proje genelinde uygulanan teknik standartlar:
-
-### 1. SEO Optimizasyonu
-- ✅ **Dinamik Sitemap:** Tüm sayfalar için otomatik güncellenen `sitemap.xml`.
-- ✅ **Structured Data (Schema.org):** Arama motorları için zengin sonuçlar (Organization, Breadcrumb vb.).
-- ✅ **Optimize Edilmiş Metadata:** Her sayfa için özelleştirilmiş başlık, açıklama ve OpenGraph etiketleri.
-
-### 2. Performans ve Güvenlik
-- ✅ **Görsel Optimizasyonu:** `next/image` ile format ve boyut optimizasyonu.
-- ✅ **CSP Headers:** Content-Security-Policy ve diğer güvenlik başlıkları ile XSS koruması.
-- ✅ **Form Validasyonu:** Zod şemaları ile güvenli ve kullanıcı dostu form doğrulama.
-
-### 3. Erişilebilirlik (A11y)
-- ✅ **ARIA Standartları:** Ekran okuyucular için optimize edilmiş menü ve interaktif bileşenler.
-- ✅ **Semantik HTML:** Doğru etiket kullanımı ile daha iyi erişilebilirlik.
-
-## 📁 Proje Yapısı
-
-```bash
+```
 bgts-web/
-├── public/              # Statik dosyalar (görseller, ikonlar, fontlar)
+├── public/
+│   └── images/              # Tüm statik görseller
+│       ├── headers/         # Sayfa hero görselleri
+│       ├── iso/             # İzometrik illüstrasyonlar (MSP)
+│       └── logos/           # Marka ve partner logolar
+│
 ├── src/
-│   ├── app/             # Next.js App Router sayfa yapısı
-│   │   ├── about/       # Hakkımızda
-│   │   ├── contact/     # İletişim
-│   │   ├── industries/  # Sektörel Çözümler
-│   │   ├── products/    # Ürünler
-│   │   ├── resources/   # Kaynaklar (İnfografikler vb.)
-│   │   ├── services/    # Hizmetler
-│   │   └── layout.tsx   # Ana düzen
-│   ├── components/      # React Bileşenleri
-│   │   ├── ui/          # Temel UI elementleri (Button, Section, Container)
-│   │   ├── layout/      # Header, Footer
-│   │   └── shapes/      # Dekoratif şekiller
-│   ├── content/         # İçerik verileri (Data Layer)
-│   ├── lib/             # Yardımcı fonksiyonlar (utils)
-│   └── styles/          # Global stiller
-└── FRONTEND_STANDARDS.md # Tasarım Sistemi Dokümantasyonu
+│   ├── app/                 # Next.js App Router
+│   │   ├── api/
+│   │   │   ├── chat/        # AI chatbot endpoint (Edge Runtime)
+│   │   │   ├── contact/     # İletişim formu e-posta API
+│   │   │   └── application/ # İK başvuru + CV yükleme API
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── culture/
+│   │   ├── career-paths/
+│   │   ├── learning/
+│   │   ├── genc-muhendis-programi/
+│   │   ├── hr/
+│   │   ├── partnerships/
+│   │   ├── social-contribution/
+│   │   ├── industries/
+│   │   │   ├── banking/
+│   │   │   ├── defense/
+│   │   │   ├── telecommunications/
+│   │   │   └── retail/
+│   │   ├── products/
+│   │   │   ├── ai-hiring-assistant/
+│   │   │   ├── cortex/
+│   │   │   ├── cv-converter/
+│   │   │   ├── doc2bot/
+│   │   │   ├── docmind/
+│   │   │   ├── hcm/
+│   │   │   ├── meetsense/
+│   │   │   └── praxila/
+│   │   ├── services/
+│   │   │   ├── software-development/
+│   │   │   ├── managed-services/
+│   │   │   └── devops/
+│   │   ├── resources/
+│   │   │   ├── infographics/
+│   │   │   └── success-stories/
+│   │   ├── layout.tsx       # Root layout (Header, Footer, ChatBot)
+│   │   └── page.tsx         # Ana sayfa
+│   │
+│   ├── components/
+│   │   ├── chat/            # ChatbotWidget.tsx
+│   │   ├── forms/           # ContactForm.tsx
+│   │   ├── home/            # HeroSlider, ServicesSection, vb.
+│   │   ├── hr/              # ApplicationForm.tsx
+│   │   ├── layout/          # Header, Footer, MobileNav, MegaMenus
+│   │   ├── seo/             # StructuredData, metadata yardımcıları
+│   │   ├── analytics/       # GoogleAnalytics
+│   │   └── ui/              # Section, Container, Typography, Button, vb.
+│   │
+│   ├── content/             # İçerik veri katmanı (TypeScript objeleri)
+│   │   └── home.ts          # Ana sayfa içerik verisi
+│   │
+│   └── lib/
+│       ├── email.ts         # Nodemailer transporter
+│       ├── utils.ts         # cn() class merge yardımcısı
+│       └── animations.ts    # Framer Motion preset'leri
+│
+├── FRONTEND_STANDARDS.md    # Tasarım sistemi dokümantasyonu
+├── next.config.ts
+├── tsconfig.json
+├── postcss.config.mjs
+└── package.json
 ```
 
-## 🚀 Kurulum ve Çalıştırma
+---
 
-Projeyi yerel ortamınızda çalıştırmak için:
+## Kurulum
 
 ### Ön Gereksinimler
-- Node.js 18 veya üzeri
+
+- Node.js **18** veya üzeri
 - npm veya yarn
 
 ### Adım Adım
-1.  **Projeyi Klonlayın:**
-    ```bash
-    git clone https://github.com/Start-Up-Yazilim/bgts-web.git
-    cd bgts-web
-    ```
 
-2.  **Bağımlılıkları Yükleyin:**
-    ```bash
-    npm install
-    ```
+**1. Repoyu klonlayın:**
+```bash
+git clone https://github.com/Start-Up-Yazilim/bgts-web.git
+cd bgts-web
+```
 
-3.  **Geliştirme Sunucusunu Başlatın:**
-    ```bash
-    npm run dev
-    ```
-    Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine gidin.
+**2. Bağımlılıkları yükleyin:**
+```bash
+npm install
+```
 
-4.  **Production Build:**
-    ```bash
-    npm run build
-    npm start
-    ```
+**3. Ortam değişkenlerini ayarlayın:**
+```bash
+cp .env.example .env.local
+# .env.local dosyasını düzenleyin (aşağıya bakın)
+```
 
-## 🤝 Katkıda Bulunma
+**4. Geliştirme sunucusunu başlatın:**
+```bash
+npm run dev
+```
+Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine gidin.
 
-1.  Yeni bir özellik için branch (dal) oluşturun (`git checkout -b feature/yeni-ozellik`)
-2.  Değişikliklerinizi yapın ve commit'leyin (`git commit -m 'feat: yeni özellik eklendi'`)
-3.  Branch'inizi uzak sunucuya gönderin (`git push origin feature/yeni-ozellik`)
-4.  Bir Pull Request (PR) oluşturun.
+**5. Production build:**
+```bash
+npm run build
+npm start
+```
 
 ---
-© 2026 BGTS. Tüm Hakları Saklıdır.
+
+## Ortam Değişkenleri
+
+`.env.local` dosyası oluşturun ve aşağıdaki değerleri doldurun:
+
+```env
+# AI Chatbot - Groq API
+# Ücretsiz API key için: https://console.groq.com
+GROQ_API_KEY=your_groq_api_key_here
+
+# SMTP E-posta Yapılandırması
+# Gerçek SMTP sağlayıcı bilgilerini girin
+# Test için boş bırakırsanız Ethereal test hesabı otomatik oluşturulur
+SMTP_HOST=smtp.your-provider.com
+SMTP_PORT=587
+SMTP_USER=your_smtp_username
+SMTP_PASS=your_smtp_password
+
+# E-posta hedefleri
+CONTACT_EMAIL=contact@bgts.com.tr
+HR_EMAIL=hr@bgts.com.tr
+```
+
+> **Not:** `.env.local` dosyası `.gitignore` kapsamındadır ve asla commit edilmemelidir.
+
+---
+
+## API Rotaları
+
+### `POST /api/chat`
+AI chatbot konuşma endpoint'i. Edge Runtime üzerinde çalışır.
+
+**Request Body:**
+```json
+{
+  "messages": [
+    { "role": "user", "content": "Hizmetleriniz neler?" }
+  ]
+}
+```
+
+**Response:** Vercel AI SDK data stream formatı (streaming)
+
+**Model:** Groq — `llama-3.3-70b-versatile`
+
+---
+
+### `POST /api/contact`
+İletişim formu e-posta gönderimi.
+
+**Request Body (JSON):**
+```json
+{
+  "name": "Ad Soyad",
+  "email": "ornek@email.com",
+  "company": "Şirket Adı",
+  "phone": "0500 000 00 00",
+  "message": "Mesaj metni",
+  "consent": true
+}
+```
+
+**Zorunlu alanlar:** `name`, `email`, `message`, `consent`
+
+---
+
+### `POST /api/application`
+İK başvuru formu — CV dosyası ile birlikte.
+
+**Request Body (FormData):**
+| Alan | Tip | Zorunlu |
+|------|-----|---------|
+| fullName | string | ✅ |
+| email | string | ✅ |
+| phone | string | — |
+| university | string | — |
+| department | string | — |
+| grade | string | — |
+| message | string | — |
+| cv | File (.pdf/.docx) | ✅ |
+
+---
+
+## AI Chatbot Sistemi
+
+### Mimari
+
+```
+Kullanıcı (ChatbotWidget.tsx)
+    ↓ useChat() hook (Vercel AI SDK)
+POST /api/chat (Edge Runtime)
+    ↓ streamText() (Vercel AI SDK)
+Groq API (llama-3.3-70b-versatile)
+    ↓ data stream
+ChatbotWidget.tsx (gerçek zamanlı render)
+```
+
+### Persona: Ayla
+
+Chatbot, "Ayla" adında bir BGTS kurumsal danışmanı kimliğiyle yapılandırılmıştır. Sistem prompt'u şu bilgi alanlarını kapsar:
+
+- Tüm hizmetler (Yazılım Geliştirme, MSP, DevOps) ve teknik detayları
+- Tüm ürünler (8 AI/kurumsal ürün) ve kullanım senaryoları
+- Sektör çözümleri (Bankacılık, Savunma, Telekom, Perakende)
+- Kariyer yolları, Genç Mühendis Programı, şirket kültürü
+- İletişim yönlendirmeleri ve fiyatlandırma politikası
+
+### Özellikler
+
+| Özellik | Açıklama |
+|---------|----------|
+| Streaming | Yanıtlar karakter karakter gerçek zamanlı akıyor |
+| Markdown | Kalın yazı, liste, tıklanabilir linkler destekleniyor |
+| Hızlı Sorular | İlk açılışta 4 hazır soru butonu |
+| Dil | Türkçe varsayılan; kullanıcı dili algılama |
+| Yönlendirme | Ürün/hizmet adlarında otomatik sayfa linkleri |
+| Persona | Robotik değil, insan gibi iletişim tarzı |
+
+---
+
+## Sayfalar ve Rotalar
+
+| Rota | Sayfa |
+|------|-------|
+| `/` | Ana Sayfa |
+| `/about` | Hakkımızda |
+| `/contact` | İletişim |
+| `/culture` | Çalışma Kültürü |
+| `/career-paths` | Kariyer Yolları |
+| `/learning` | Eğitim ve Gelişim |
+| `/genc-muhendis-programi` | Genç Mühendis Programı |
+| `/hr` | İnsan Kaynakları |
+| `/partnerships` | İş Ortakları |
+| `/social-contribution` | Sürdürülebilir Değer |
+| `/services/software-development` | Yazılım Geliştirme |
+| `/services/managed-services` | Yönetilen Hizmetler |
+| `/services/devops` | DevOps |
+| `/industries/banking` | Bankacılık & Finans |
+| `/industries/defense` | Savunma Sanayi |
+| `/industries/telecommunications` | Telekomünikasyon |
+| `/industries/retail` | Perakende & E-Ticaret |
+| `/products/ai-hiring-assistant` | AI Hiring Assistant |
+| `/products/cortex` | Cortex |
+| `/products/cv-converter` | CV Converter |
+| `/products/doc2bot` | Doc2Bot |
+| `/products/docmind` | DocMind |
+| `/products/hcm` | HCM Platformu |
+| `/products/meetsense` | MeetSense |
+| `/products/praxila` | Praxila |
+| `/resources/infographics` | İnfografikler |
+| `/resources/success-stories` | Başarı Hikayeleri |
+
+---
+
+## Tasarım Sistemi
+
+Projenin tüm UI standartları `FRONTEND_STANDARDS.md` dosyasında belgelenmiştir.
+
+**Temel Prensipler:**
+- Tüm bölümler `<Section>` bileşeni ile sarılır (tutarlı dikey boşluk)
+- Yatay hizalama `<Container>` bileşeni ile sağlanır (max-width + padding)
+- Başlıklar için `<Heading>`, paragraflar için `<Text>` bileşenleri kullanılır
+- Ham `h1-h6` veya `p` etiketleri doğrudan kullanılmaz
+
+**Renk Paleti:**
+- Birincil: `blue-700` / `blue-600` (action blue)
+- İkincil: `slate-900` (koyu zemin)
+- Vurgu: `orange-500` (CTA)
+- Nötr: `gray-50` – `gray-800`
+
+**Animasyonlar:**
+- Scroll-triggered: `opacity 0→1`, `y 20→0`
+- Spring config: `damping: 25, stiffness: 300`
+- Sayfa geçişleri: `duration: 0.3s ease`
+
+---
+
+## Test
+
+```bash
+# Tüm testleri çalıştır
+npm run test
+
+# İzleme modunda çalıştır
+npm run test:watch
+
+# Coverage raporu
+npm run test:coverage
+```
+
+Test altyapısı: **Vitest** + **@testing-library/react** + **jsdom**
+
+---
+
+## Versiyon Geçmişi
+
+| Versiyon | Öne Çıkan Özellik |
+|----------|-------------------|
+| v0.14.0 | Hero alanları optimizasyonu, slider ve içerik iyileştirmeleri |
+| v0.13.0 | Mobil navigasyon tam yeniden yazım, chatbot bilgi bankası güncelleme |
+| v0.12.0 | Responsive optimizasyon, savunma sanayi sayfa revizyonu |
+| v0.11.0 | İş Ortakları sayfası, MSP görsel revizyonu, Sürdürülebilir Değer |
+| v0.10.0 | MeetSense ve Kültür sayfası UI güncellemeleri |
+| v0.9.0 | Cortex AI platformu, chatbot bilgi bankası genişletme |
+| v0.8.0 | MeetSense ürün sayfası, Genç Mühendis Akademisi redesign |
+| v0.6.0 | Nodemailer SMTP, CV yükleme ve e-posta eki |
+| v0.5.0 | BGTS Dijital Asistan chatbot (Groq + Llama 3.3) |
+| v0.4.0 | Codebase temizliği, Header mega menu revizyonu |
+| v0.3.0 | Bankacılık redesign, AI Hiring Assistant, İnfografikler |
+
+---
+
+## Katkıda Bulunma
+
+1. Yeni özellik için branch oluşturun:
+   ```bash
+   git checkout -b feature/yeni-ozellik
+   ```
+2. Değişikliklerinizi commit'leyin:
+   ```bash
+   git commit -m 'feat: yeni özellik eklendi'
+   ```
+3. Branch'i push edin:
+   ```bash
+   git push origin feature/yeni-ozellik
+   ```
+4. Pull Request açın.
+
+**Commit Mesajı Kuralları:**
+- `feat:` — yeni özellik
+- `fix:` — hata düzeltme
+- `refactor:` — yapısal iyileştirme
+- `style:` — stil değişikliği (mantık yok)
+- `docs:` — dokümantasyon
+
+---
+
+© 2026 BGTS — Business & Global Technology Solutions. Tüm hakları saklıdır.
