@@ -13,7 +13,7 @@ export const SEARCH_ITEMS: SearchItem[] = [
         description: "Büyük Veri, AI, Modernizasyon, Bankacılık ve Telekom çözümleri.",
         href: "/services/software-development",
         category: "Hizmet",
-        tags: ["kodlama", "app", "web", "mobile", "uygulama", "yazılım"]
+        tags: ["kodlama", "app", "web", "mobile", "uygulama", "yazılım", "modernizasyon", "büyük veri", "big data", "yapay zeka", "ai"]
     },
     {
         title: "Yönetilen Hizmetler (MSP)",
@@ -27,7 +27,7 @@ export const SEARCH_ITEMS: SearchItem[] = [
         description: "CI/CD süreçleri, otomasyon ve bulut mühendisliği hizmetleri.",
         href: "/services/devops",
         category: "Hizmet",
-        tags: ["otomasyon", "pipeline", "docker", "kubernetes", "jenkins"]
+        tags: ["otomasyon", "pipeline", "docker", "kubernetes", "jenkins", "ci/cd", "sre", "bulut", "cloud"]
     },
 
     // Sektörler
@@ -36,14 +36,14 @@ export const SEARCH_ITEMS: SearchItem[] = [
         description: "Dijital kanallar ve regülasyon uyumu için uçtan uca çözümler.",
         href: "/industries/banking",
         category: "Sektör",
-        tags: ["banka", "fintech", "ödeme", "finans"]
+        tags: ["banka", "fintech", "ödeme", "finans", "kredi", "mevduat", "yatırım"]
     },
     {
         title: "Savunma Sanayi",
         description: "MIL-STD ve IEEE standartlarına uygun görev kritik sistemler.",
         href: "/industries/defense",
         category: "Sektör",
-        tags: ["askeri", "güvenlik", "defence", "savunma"]
+        tags: ["askeri", "güvenlik", "defence", "savunma", "havacılık", "simülasyon"]
     },
     {
         title: "Telekomünikasyon",
@@ -87,7 +87,7 @@ export const SEARCH_ITEMS: SearchItem[] = [
         description: "İnsan Kaynakları yönetimini uçtan uca dijitalleştiren platform.",
         href: "/products/hcm",
         category: "Ürün",
-        tags: ["insan kaynakları", "hr", "bordro", "izin"]
+        tags: ["insan kaynakları", "hr", "bordro", "izin", "ik", "performans"]
     },
     {
         title: "Praxila",
@@ -124,7 +124,7 @@ export const SEARCH_ITEMS: SearchItem[] = [
         description: "Yeni mezunlar için yazılım, test ve altyapı eğitim programları.",
         href: "/genc-muhendis-programi",
         category: "Kariyer",
-        tags: ["staj", "bootcamp", "yeni mezun", "genç mühendis", "program"]
+        tags: ["staj", "bootcamp", "yeni mezun", "genç mühendis", "program", "iş başvurusu", "ik", "kariyer"]
     },
     {
         title: "Kariyer Yolları",

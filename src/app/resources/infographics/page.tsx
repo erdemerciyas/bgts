@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { Button } from "@/components/ui/Button"
-import { Users, UserPlus, Star, Award, Briefcase, Globe, TrendingUp, UserCheck, MapPin, Building2, PersonStanding } from "lucide-react"
+import { Users, UserPlus, Star, Award, Briefcase, Globe, TrendingUp, UserCheck, MapPin, Building2, PersonStanding, Play } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
@@ -183,19 +183,19 @@ export default function InfographicsPage() {
                         </motion.div>
                     </motion.div>
 
-                    <div className="mt-12 text-center">
-                        <Button
-                            asChild
-                            size="lg"
-                            className="rounded-full px-8 font-bold shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-blue-600 hover:bg-blue-700"
+                    <div className="mt-12 flex justify-center">
+                        <Link
+                            href="https://www.linkedin.com/feed/update/urn:li:activity:7408814201223249920"
+                            target="_blank"
+                            className="inline-flex items-center gap-4 group"
                         >
-                            <Link
-                                href="https://www.linkedin.com/feed/update/urn:li:activity:7408814201223249920"
-                                target="_blank"
-                            >
-                                (LinkedIn) <Globe className="ml-2 w-5 h-5" />
-                            </Link>
-                        </Button>
+                            <div className="w-12 h-12 bg-blue-600 flex items-center justify-center rounded-lg group-hover:bg-blue-700 transition-all shadow-md group-hover:shadow-lg group-hover:-translate-y-0.5 duration-300">
+                                <Play className="w-5 h-5 text-white fill-white ml-0.5" />
+                            </div>
+                            <span className="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                                İçgörüleri Keşfet
+                            </span>
+                        </Link>
                     </div>
                 </Container>
             </Section>
@@ -205,10 +205,6 @@ export default function InfographicsPage() {
                 <Container>
                     <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
                         <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold mb-6">
-                                <Building2 className="w-4 h-4" />
-                                Ekip Yapısı
-                            </div>
                             <Heading variant="h2" className="text-slate-900 mb-6">
                                 BilgeAdam Teknoloji'de Ekip Kalitesine İnanıyoruz
                             </Heading>
@@ -322,19 +318,19 @@ export default function InfographicsPage() {
                         </div>
                     </div>
 
-                    <div className="mt-12 text-center">
-                        <Button
-                            asChild
-                            size="lg"
-                            className="rounded-full px-8 font-bold shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-blue-600 hover:bg-blue-700"
+                    <div className="mt-12 flex justify-center">
+                        <Link
+                            href="https://www.linkedin.com/feed/update/urn:li:activity:7408814201223249920"
+                            target="_blank"
+                            className="inline-flex items-center gap-4 group"
                         >
-                            <Link
-                                href="https://www.linkedin.com/feed/update/urn:li:activity:7408814201223249920"
-                                target="_blank"
-                            >
-                                (LinkedIn) <Globe className="ml-2 w-5 h-5" />
-                            </Link>
-                        </Button>
+                            <div className="w-12 h-12 bg-blue-600 flex items-center justify-center rounded-lg group-hover:bg-blue-700 transition-all shadow-md group-hover:shadow-lg group-hover:-translate-y-0.5 duration-300">
+                                <Play className="w-5 h-5 text-white fill-white ml-0.5" />
+                            </div>
+                            <span className="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+                                İçgörüleri Keşfet
+                            </span>
+                        </Link>
                     </div>
                 </Container>
             </Section>

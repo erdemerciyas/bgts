@@ -8,13 +8,13 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { MANAGED_SERVICES_CONTENT } from "@/content/managed-services"
-import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react"
+import { ArrowRight, CheckCircle2, ChevronRight, Layers, CheckSquare, Settings, Activity } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 export default function ManagedServicesPage() {
-    const { hero, sectoralDomains, technicalDomains, capabilities } = MANAGED_SERVICES_CONTENT;
+    const { hero, pillars, capabilities } = MANAGED_SERVICES_CONTENT;
 
     // Stronger colors for better visibility
     const sectionColors = [
@@ -53,22 +53,19 @@ export default function ManagedServicesPage() {
     ];
 
     // State for active section
-    const [activeSection, setActiveSection] = useState<string>(sectoralDomains[0]?.id || "");
+    const [activeSection, setActiveSection] = useState<string>(pillars[0]?.services[0]?.id || "");
     const isScrollingRef = useRef(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     const sidebarScrollRef = useRef<HTMLDivElement>(null);
+    
     // Scroll Spy Logic
     useEffect(() => {
-        const HEADER_OFFSET = 200;
-
         const handleScroll = () => {
+            const HEADER_OFFSET = window.innerHeight * 0.4; // Responsive offset (40% down from top)
+
             if (isScrollingRef.current) return;
 
-            const allTargets = [
-                ...sectoralDomains.map(d => d.id),
-                ...technicalDomains.map(d => d.id),
-                "managed-capabilities",
-            ];
+            const allTargets = pillars.flatMap(p => [p.id, ...p.services.map(s => s.id)]);
 
             // Find the last section whose top is above the header offset line.
             // This reliably gives us whichever section the user is currently reading.
@@ -87,17 +84,9 @@ export default function ManagedServicesPage() {
         handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [sectoralDomains, technicalDomains, capabilities]);
+    }, [pillars, capabilities]);
 
-
-    // Auto-scroll sidebar to keep active link visible
-    useEffect(() => {
-        if (!activeSection || !sidebarScrollRef.current) return;
-        const activeEl = sidebarScrollRef.current.querySelector(`[href="#${activeSection}"]`);
-        if (activeEl) {
-            (activeEl as HTMLElement).scrollIntoView({ block: "nearest", behavior: "smooth" });
-        }
-    }, [activeSection]);
+    // Disabling auto-scroll for sidebar since it's no longer scrollable
 
     const handleLinkClick = (id: string) => {
         setActiveSection(id);
@@ -107,6 +96,160 @@ export default function ManagedServicesPage() {
         timeoutRef.current = setTimeout(() => {
             isScrollingRef.current = false;
         }, 1000); // 1s is usually enough for smooth scroll to complete
+    };
+
+    const renderPillarOverview = (pillar: any, index: number) => {
+        if (!pillar.overview) return null;
+        const ov = pillar.overview;
+
+        return (
+            <div className="mb-20 space-y-16">
+                {/* 1. Header (Title & Desc) */}
+                <div className="space-y-6 max-w-5xl">
+                    <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        {ov.title}
+                    </h2>
+                    <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl">
+                        {ov.description}
+                    </p>
+                </div>
+
+                {/* 2. Stats Grid */}
+                {ov.stats && (
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        {ov.stats.map((stat: any, i: number) => (
+                            <div key={i} className={cn(
+                                "p-6 rounded-[1.25rem] flex flex-col items-center text-center justify-center transition-transform hover:scale-[1.02] duration-300",
+                                i < 4 ? "bg-[#0f2044] text-white" : "bg-[#162d5a] text-white"
+                            )}>
+                                <div className="text-3xl md:text-4xl font-black mb-2 tracking-tight">{stat.value}</div>
+                                <div className="text-sm font-bold text-slate-200">{stat.label}</div>
+                                {stat.sub && <div className="text-[11px] text-slate-400 mt-1 opacity-80">{stat.sub}</div>}
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                {/* 3. Model Description */}
+                {ov.model && (
+                    <div className="bg-slate-50 rounded-[2rem] p-8 md:p-12 border border-slate-100">
+                        <h3 className="text-xl font-bold text-slate-900 mb-4">{ov.model.title}</h3>
+                        <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                            {ov.model.description}
+                        </p>
+                    </div>
+                )}
+
+                {/* 4. Layers (Üst Seviye Hizmet Kapsamı vs) */}
+                {ov.layers && (
+                    <div className="space-y-8">
+                        {ov.layersTitle && <h3 className="text-2xl font-bold text-slate-900">{ov.layersTitle}</h3>}
+                        <div className="grid gap-6">
+                            {ov.layers.map((layer: any, i: number) => (
+                                <div key={i} className="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-lg hover:shadow-blue-900/5 transition-all">
+                                    <div className="shrink-0">
+                                        <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600">
+                                            <Layers className="w-6 h-6" />
+                                        </div>
+                                    </div>
+                                    <div className="flex-1">
+                                        <h4 className="text-lg font-bold text-slate-900 mb-2">{layer.title}</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: layer.description.replace(/—/g, '<br/><span class="text-slate-400">—</span>').replace(/AIOps|L0|L1|L2–L3|Yapay Zeka|Teknoloji Danışmanlığı|ITSM\/ITIL|Customer Success Management|Operasyonel Zeka|Stratejik Performans/g, '<strong>$&</strong>') }} />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* 5. KOM Grid */}
+                {ov.kom && (
+                    <div className="space-y-8">
+                        {ov.komTitle && <h3 className="text-2xl font-bold text-slate-900">{ov.komTitle}</h3>}
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {ov.kom.map((cat: any, i: number) => (
+                                <div key={i} className="bg-white border text-left border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                                        <CheckSquare className="w-5 h-5" />
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 mb-4 h-10">{cat.title}</h4>
+                                    <ul className="space-y-3">
+                                        {cat.items.map((item: string, j: number) => (
+                                            <li key={j} className="flex items-start gap-2 text-sm text-slate-600">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
+                                                <span className="leading-tight">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                        {ov.komTags && (
+                            <div className="flex flex-wrap gap-2 pt-2">
+                                {ov.komTags.map((t: string, i: number) => (
+                                    <span key={i} className="px-4 py-2 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold">
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                )}
+
+                {/* 6. Management */}
+                {ov.management && (
+                    <div className="space-y-8">
+                        {ov.managementTitle && <h3 className="text-2xl font-bold text-slate-900 pt-8 border-t border-slate-200">{ov.managementTitle}</h3>}
+                        <div className="grid gap-6">
+                            {ov.management.map((item: any, i: number) => (
+                                <div key={i} className="flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-slate-200 bg-white hover:border-indigo-200 hover:shadow-lg transition-all">
+                                    <div className="shrink-0">
+                                        <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                                            <Settings className="w-6 h-6" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: item.description.replace(/kurulum, konfigürasyon ve yaşam döngüsü yönetimi|proaktif izleme, kapasite yönetimi ve servis sağlığı|performans izleme, yedekleme ve erişim yönetimi|konfigürasyon, güncelleme ve servis izleme|sanal makine yaşam döngüsü, kaynak havuzu optimizasyonu ve kapasite planlaması/g, '<strong>$&</strong>') }} />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* 7. Analytics */}
+                {ov.analytics && (
+                    <div className="space-y-8">
+                        {ov.analyticsTitle && <h3 className="text-2xl font-bold text-slate-900 pt-8 border-t border-slate-200">{ov.analyticsTitle}</h3>}
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {ov.analytics.map((cat: any, i: number) => (
+                                <div key={i} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                                     <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-4">
+                                        <Activity className="w-5 h-5" />
+                                    </div>
+                                    <h4 className="font-bold text-slate-900 mb-4 h-10">{cat.title}</h4>
+                                    <ul className="space-y-3">
+                                        {cat.items.map((item: string, j: number) => (
+                                            <li key={j} className="flex items-start gap-2 text-sm text-slate-600">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0" />
+                                                <span className="leading-tight">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+                
+                {/* Visual Separator before the actual services map */}
+                <div className="pt-12 text-sm font-black text-slate-400 tracking-widest uppercase mb-8">
+                    {pillar.title} Hizmetleri Kataloğu
+                    <div className="h-px bg-slate-200 w-full mt-4" />
+                </div>
+            </div>
+        )
     };
 
     // Helper to render domain content with alternating layout
@@ -150,7 +293,7 @@ export default function ManagedServicesPage() {
                             <Heading variant="h2" className="text-slate-900 mb-4 leading-tight">
                                 {domain.title}
                             </Heading>
-                            <Text className="text-base text-slate-500 leading-relaxed font-normal">
+                            <Text className="text-base text-slate-500 leading-relaxed font-normal whitespace-pre-line">
                                 {domain.description}
                             </Text>
                         </div>
@@ -172,6 +315,28 @@ export default function ManagedServicesPage() {
                                 </div>
                             ))}
                         </div>
+
+                        {domain.tags && domain.tags.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mt-8 pt-6 border-t border-slate-100/50">
+                                {domain.tags.map((tag: string, i: number) => (
+                                    <span key={i} className={cn(
+                                        "px-3 py-1.5 rounded-lg text-[11px] font-bold tracking-wide",
+                                        "border bg-white transition-colors duration-300",
+                                        // Colors matching reference
+                                        index % 8 === 0 ? "border-emerald-200 text-emerald-800 hover:bg-emerald-50" :
+                                        index % 8 === 1 ? "border-sky-200 text-sky-800 hover:bg-sky-50" :
+                                        index % 8 === 2 ? "border-teal-200 text-teal-800 hover:bg-teal-50" :
+                                        index % 8 === 3 ? "border-indigo-200 text-indigo-800 hover:bg-indigo-50" :
+                                        index % 8 === 4 ? "border-green-200 text-green-800 hover:bg-green-50" :
+                                        index % 8 === 5 ? "border-rose-200 text-rose-800 hover:bg-rose-50" :
+                                        index % 8 === 6 ? "border-orange-200 text-orange-800 hover:bg-orange-50" :
+                                        "border-purple-200 text-purple-800 hover:bg-purple-50"
+                                    )}>
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -187,7 +352,7 @@ export default function ManagedServicesPage() {
                 data-section={id}
                 onClick={() => handleLinkClick(id)}
                 className={cn(
-                    "group flex items-center py-2 px-6 relative transition-all duration-300 rounded-lg",
+                    "group flex items-center py-1.5 px-6 relative transition-all duration-300 rounded-lg text-sm",
                     isActive
                         ? cn("font-bold translate-x-1", colorClass, activeBgClass)
                         : "text-slate-500 font-medium hover:text-slate-900 hover:bg-slate-50"
@@ -205,6 +370,8 @@ export default function ManagedServicesPage() {
             </Link>
         );
     };
+
+    let flatServiceIndex = 0;
 
     return (
         <>
@@ -224,134 +391,81 @@ export default function ManagedServicesPage() {
 
                         {/* Sidebar Navigation */}
                         <aside className="hidden lg:block w-72 shrink-0">
-                            <div className="sticky top-[80px] flex flex-col py-10">
-                            <div ref={sidebarScrollRef} className="overflow-y-auto max-h-[calc(100vh-160px)] space-y-10 pr-4 custom-scrollbar">
-                                {/* Sectoral Solutions */}
-                                <div className="relative group/section">
-                                    <div className="absolute left-[7px] top-8 bottom-0 w-[2px] bg-slate-100" />
-                                    <Text variant="small" className="font-extrabold text-slate-900 tracking-widest uppercase mb-4 pl-0 text-xs">
-                                        MSP & YÖNETİLEN HİZMETLER
-                                    </Text>
-                                    <nav className="flex flex-col space-y-1 border-l-2 border-slate-100 ml-[7px] pl-2">
-                                        {sectoralDomains.map((domain, index) => (
-                                            <div key={domain.id}>
-                                                {renderSidebarLink(
-                                                    domain.id,
-                                                    domain.title,
-                                                    sectionTextColors[index % sectionTextColors.length],
-                                                    sectionActiveBgColors[index % sectionActiveBgColors.length]
-                                                )}
-                                            </div>
-                                        ))}
-                                    </nav>
-                                </div>
+                            <div className="sticky top-[80px] flex flex-col py-6">
+                            <div className="space-y-6 pr-4">
+                                
+                                {pillars.map((pillar, pillarIndex) => {
+                                    const isPillarActive = activeSection === pillar.id || pillar.services.some((s: any) => s.id === activeSection);
+                                    return (
+                                    <div key={pillar.id} className="relative group/section">
+                                        {/* Show vertical line for subsequent sections to connect them visually if wanted, or default existing style */}
+                                        <div className="absolute left-[7px] top-6 bottom-0 w-[2px] bg-slate-100" />
+                                        
+                                        <Link 
+                                            href={`#${pillar.id}`} 
+                                            className="block group/head relative"
+                                            onClick={(e) => {
+                                                handleLinkClick(pillar.id);
+                                            }}
+                                        >
+                                            {/* Active Pillar Indicator */}
+                                            <span className={cn(
+                                                "absolute -left-2 top-1.5 w-1 h-3.5 rounded-r transition-all duration-300",
+                                                isPillarActive ? "bg-blue-600 scale-100" : "bg-transparent scale-0"
+                                            )} />
+                                            <Text variant="small" className={cn(
+                                                "font-extrabold tracking-widest uppercase mb-2 pl-0 text-xs transition-colors",
+                                                isPillarActive ? "text-blue-700 px-1" : "text-slate-900 group-hover/head:text-blue-600"
+                                            )}>
+                                                {pillar.title}
+                                            </Text>
+                                        </Link>
+                                        <nav className="flex flex-col space-y-1 border-l-2 border-slate-100 ml-[7px] pl-2">
+                                            {pillar.services.map((service) => {
+                                                const currentIndex = flatServiceIndex++;
+                                                return (
+                                                    <div key={service.id}>
+                                                        {renderSidebarLink(
+                                                            service.id,
+                                                            service.title,
+                                                            sectionTextColors[currentIndex % sectionTextColors.length],
+                                                            sectionActiveBgColors[currentIndex % sectionActiveBgColors.length]
+                                                        )}
+                                                    </div>
+                                                );
+                                            })}
+                                        </nav>
+                                    </div>
+                                    );
+                                })}
 
-                                {/* Technical Solutions */}
-                                <div className="relative group/section">
-                                    <Text variant="small" className="font-extrabold text-slate-900 tracking-widest uppercase mb-4 pl-0 text-xs">
-                                        TEKNOLOJİ SERVİSLERİ
-                                    </Text>
-                                    <nav className="flex flex-col space-y-1 border-l-2 border-slate-100 ml-[7px] pl-2">
-                                        {technicalDomains.map((domain, index) => {
-                                            const totalPrevIndex = sectoralDomains.length;
-                                            return (
-                                                <div key={domain.id}>
-                                                    {renderSidebarLink(
-                                                        domain.id,
-                                                        domain.title,
-                                                        sectionTextColors[(totalPrevIndex + index) % sectionTextColors.length],
-                                                        sectionActiveBgColors[(totalPrevIndex + index) % sectionActiveBgColors.length]
-                                                    )}
-                                                </div>
-                                            );
-                                        })}
-                                        {/* Capabilities Link */}
-                                        {renderSidebarLink(
-                                            "managed-capabilities",
-                                            "Neden BGTS MSP?",
-                                            "text-blue-600",
-                                            "bg-blue-50"
-                                        )}
-                                    </nav>
-                                </div>
+                                
                             </div>
                             </div>
                         </aside>
 
                         {/* Content Area */}
                         <div className="flex-1 min-w-0">
-                            <div className="space-y-12">
-                                {sectoralDomains.map((domain, index) => (
-                                    <div key={domain.id}>
-                                        {renderDomainSection(domain, index)}
-                                    </div>
-                                ))}
-                            </div>
+                            <div className="space-y-32">
+                                {pillars.map((pillar, pillarIndex) => (
+                                    <div id={pillar.id} key={pillar.id} className="space-y-12 scroll-mt-32">
+                                        {/* Render Overview Content First */}
+                                        {renderPillarOverview(pillar, pillarIndex)}
 
-                            <div className="my-24" />
-
-                            <div className="space-y-12">
-                                {technicalDomains.map((domain, index) => (
-                                    <div key={domain.id}>
-                                        {renderDomainSection(domain, index + sectoralDomains.length)}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </Container>
-            </Section>
-
-            {/* Capabilities Section - Independent */}
-            <Section id="managed-capabilities" className="py-24 border-t border-slate-200 bg-slate-50">
-                <Container>
-                    <div className="space-y-24">
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-
-                            <Heading variant="h2" className="text-slate-900 mb-6">
-                                {capabilities.title}
-                            </Heading>
-                            <Text className="text-slate-600 text-lg">
-                                {capabilities.subtitle}
-                            </Text>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {capabilities.items.map((cap: Record<string, any>, index: number) => {
-                                const Icon = cap.icon;
-                                return (
-                                    <div
-                                        key={index}
-                                        className="group bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-blue-100 transition-all duration-300 flex flex-col h-full"
-                                    >
-                                        <div className="mb-8">
-                                            <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                                                <Icon className="w-8 h-8" />
+                                        {/* Render Each Sub-Service */}
+                                        {pillar.services.map((service, index) => (
+                                            <div key={service.id}>
+                                                {renderDomainSection(service, index)}
                                             </div>
-                                            <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                                                {cap.title}
-                                            </h3>
-                                        </div>
-
-                                        <div className="space-y-6 flex-1">
-                                            {cap.features.map((feat: Record<string, any>, i: number) => (
-                                                <div key={i} className="relative pl-4 border-l-2 border-slate-100 group-hover:border-blue-200 transition-colors">
-                                                    <h4 className="font-bold text-slate-900 text-sm mb-1">
-                                                        {feat.title}
-                                                    </h4>
-                                                    <p className="text-slate-500 text-sm leading-relaxed">
-                                                        {feat.text}
-                                                    </p>
-                                                </div>
-                                            ))}
-                                        </div>
+                                        ))}
                                     </div>
-                                )
-                            })}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </Container>
             </Section>
+
         </>
     )
 }

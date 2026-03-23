@@ -12,6 +12,7 @@ const QUICK_QUESTIONS = [
     'Ürünleriniz hakkında bilgi ver',
     'Kariyer fırsatları neler?',
     'Genç Mühendis Programı nedir?',
+    'Çözümleriniz neler?',
 ];
 
 export default function ChatbotWidget() {

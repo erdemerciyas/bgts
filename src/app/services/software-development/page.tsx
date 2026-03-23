@@ -120,7 +120,7 @@ export default function SoftwareDevelopmentPage() {
             <div
                 id={domain.id}
                 className={cn(
-                    "scroll-mt-48 mb-16 p-6 lg:p-10 rounded-[2.5rem] transition-all duration-700 ease-in-out",
+                    "scroll-mt-48 mb-16 rounded-[2.5rem] transition-all duration-700 ease-in-out border border-white/50 overflow-hidden shadow-sm hover:shadow-xl",
                     bgColor,
                     isActive || activeSection === ""
                         ? "opacity-100 blur-none scale-100"
@@ -128,31 +128,23 @@ export default function SoftwareDevelopmentPage() {
                 )}
             >
                 <div className={cn(
-                    "flex flex-col lg:flex-row gap-12 lg:gap-16 items-center",
+                    "flex flex-col lg:flex-row items-stretch min-h-[500px]",
                     isReversed ? "lg:flex-row-reverse" : ""
                 )}>
                     {/* Image Section */}
-                    <div className="w-full lg:w-1/2 relative">
-                        <div className="aspect-[4/3] relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-700 bg-white">
-                            <Image
-                                src={domain.image}
-                                alt={domain.title}
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            {/* Overlay Gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
-
-                        </div>
-                        {/* Decorative Pattern - REMOVED */}
-                        {/* <div className={cn(
-                            "absolute -z-10 w-full h-full border-[3px] border-black/5 rounded-[2.5rem]",
-                            isReversed ? "-right-4 -bottom-4" : "-left-4 -bottom-4"
-                        )} /> */}
+                    <div className="w-full lg:w-[45%] relative min-h-[300px] lg:min-h-auto">
+                        <Image
+                            src={domain.image}
+                            alt={domain.title}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        {/* Overlay Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80" />
                     </div>
 
                     {/* Content Section */}
-                    <div className="w-full lg:w-1/2 space-y-8 lg:p-4">
+                    <div className="w-full lg:w-[55%] p-8 lg:p-14 flex flex-col justify-center space-y-8">
                         <div>
                             <Heading variant="h2" className="text-slate-900 mb-6 leading-tight">
                                 {domain.subtitle}
@@ -162,21 +154,32 @@ export default function SoftwareDevelopmentPage() {
                             </Text>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className={cn(
+                            domain.features.some((f: any) => f.description) ? "space-y-4" : "grid grid-cols-1 md:grid-cols-2 gap-3"
+                        )}>
                             {domain.features.map((feature: Record<string, any>, i: number) => (
-                                <div key={i} className="flex gap-4 p-4 rounded-2xl bg-white/80 border border-slate-100 hover:bg-white hover:shadow-md transition-all duration-300">
-                                    <div className="shrink-0 mt-1">
-                                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                                            <ChevronRight className="w-4 h-4 text-blue-600" />
+                                feature.description ? (
+                                    <div key={i} className="flex gap-4 p-4 rounded-2xl bg-white/80 border border-slate-100 hover:bg-white hover:shadow-md transition-all duration-300">
+                                        <div className="shrink-0 mt-1">
+                                            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                                <ChevronRight className="w-4 h-4 text-blue-600" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-slate-900 mb-1">{feature.title}</h4>
+                                            <p className="text-sm text-slate-500 leading-relaxed">
+                                                {feature.description}
+                                            </p>
                                         </div>
                                     </div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900 mb-1">{feature.title}</h4>
-                                        <p className="text-sm text-slate-500 leading-relaxed">
-                                            {feature.description}
-                                        </p>
+                                ) : (
+                                    <div key={i} className="flex items-center gap-3 p-3 lg:p-4 rounded-2xl bg-white/80 border border-slate-100 hover:bg-white hover:shadow-sm transition-all duration-300">
+                                        <div className="shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-blue-50">
+                                            <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
+                                        </div>
+                                        <span className="font-bold text-slate-800 text-sm leading-tight pr-2">{feature.title}</span>
                                     </div>
-                                </div>
+                                )
                             ))}
                         </div>
                     </div>

@@ -405,6 +405,7 @@ Test altyapısı: **Vitest** + **@testing-library/react** + **jsdom**
 
 | Versiyon | Öne Çıkan Özellik |
 |----------|-------------------|
+| v0.15.0 | Arama altyapısı iyileştirmeleri, chatbot prompt/soru güncellemeleri, kullanılmayan asset temizliği ve proje optimizasyonu. |
 | v0.14.0 | Hero alanları optimizasyonu, slider ve içerik iyileştirmeleri |
 | v0.13.0 | Mobil navigasyon tam yeniden yazım, chatbot bilgi bankası güncelleme |
 | v0.12.0 | Responsive optimizasyon, savunma sanayi sayfa revizyonu |

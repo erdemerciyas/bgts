@@ -26,14 +26,21 @@ export const SOFTWARE_DEV_CONTENT = {
             image: "/images/services/bankacilik-finans-yazilim-cozumleri.png",
             description: "Bankacılık ve finans sektörüne özel regülasyonlara uyumlu, yüksek güvenlikli ve yüksek performanslı yazılım çözümleri geliştiriyoruz.",
             features: [
-                {
-                    title: "Kredi & Risk ve Tahsilat Süreçleri",
-                    description: "Kredi risk izleme, sorunlu kredi yönetimi, tahsilat ve tasfiye süreçleri, müşteri sınıflama (1–5), yasal takip ve varlık yönetim şirketine devir süreçleri gibi uçtan uca finansal iş akışlarını kapsıyoruz."
-                },
-                {
-                    title: "Mevduat & Teminat ve Dış Ticaret",
-                    description: "Mevduat, teminat yönetimi, kampanya yönetimi ve dış ticaret ihracat işlemleri için ölçeklenebilir ve entegre sistemler sunuyoruz."
-                }
+                { title: "Kredi Risk İzleme" },
+                { title: "Kredi Takip (Sorunlu Krediler)" },
+                { title: "Krediler Tahsilat" },
+                { title: "Krediler Tasfiye" },
+                { title: "Otomatik Tahsilat Süreçleri" },
+                { title: "Müşteri Sınıflama" },
+                { title: "Yasal Takip süreçleri" },
+                { title: "Varlık Yönetim Şirketine Devir Süreci" },
+                { title: "Dış Ticaret İhracat İşlemleri" },
+                { title: "FIX & Pricing & Hedging altyapıları" },
+                { title: "Teminat Yönetimi" },
+                { title: "Mevduat" },
+                { title: "Kampanya Yönetimi" },
+                { title: "Kurum Entegrasyonları" },
+                { title: "E-Fatura & E-Defter & E-Arşiv" }
             ]
         },
         {

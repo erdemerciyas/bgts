@@ -55,7 +55,7 @@ export default function Hero({
                 </div>
 
                 <Container className="relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center">
 
                         {/* Text Content */}
                         <motion.div

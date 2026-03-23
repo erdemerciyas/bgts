@@ -29,7 +29,7 @@ export default function ContentSection({
         <Section className={cn("bg-white", className)}>
             <Container>
                 <div className={cn(
-                    "flex flex-col lg:flex-row gap-12 lg:gap-20",
+                    "flex flex-col-reverse lg:flex-row gap-12 lg:gap-20",
                     reverse ? "lg:flex-row-reverse" : ""
                 )}>
                     {/* Text Content */}

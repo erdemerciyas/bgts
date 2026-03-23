@@ -36,7 +36,7 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
         <div className="grid grid-cols-3">
             {/* Column 1: Yazılım Hizmetleri */}
             <div className="bg-blue-50/40 p-10 border-r border-slate-200/80 flex flex-col relative">
-                <h3 className={STYLES.columnHeader}>Yazılım ve Teknoloji Servisleri</h3>
+                <h3 className={STYLES.columnHeader}>Yazılım Geliştirme</h3>
                 <div className="space-y-6">
                     <Link onClick={closeMenu} href="/services/software-development#bigdata" className="group flex items-center gap-3">
                         <Database className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-indigo-600 transition-colors" />
@@ -82,35 +82,23 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
 
             {/* Column 3: Yönetilen Hizmetler */}
             <div className="bg-[#f8f9fa] p-10 flex flex-col relative">
-                <h3 className={STYLES.columnHeader}>YÖNETİLEN HİZMETLER (MSP)</h3>
+                <h3 className={STYLES.columnHeader}>Teknoloji Servisleri</h3>
                 <div className="space-y-6">
-                    <Link onClick={closeMenu} href="/services/managed-services#data-center" className="group flex items-center gap-3">
-                        <Server className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-slate-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-slate-600 transition-colors">Veri Merkezi Yönetimi</h4>
+                    <Link onClick={closeMenu} href="/services/managed-services#p1" className="group flex items-center gap-3">
+                        <Server className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-emerald-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-emerald-600 transition-colors">MSP & Yönetilen Hizmetler</h4>
                     </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#monitoring" className="group flex items-center gap-3">
-                        <Activity className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-sky-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-sky-600 transition-colors">7/24 İzleme & NOC</h4>
+                    <Link onClick={closeMenu} href="/services/managed-services#p2" className="group flex items-center gap-3">
+                        <Cpu className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-sky-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-sky-600 transition-colors">Teknoloji Danışmanlığı</h4>
                     </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#desktop-support" className="group flex items-center gap-3">
-                        <Terminal className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-teal-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-teal-600 transition-colors">Son Kullanıcı ve Cihaz Yönetimi</h4>
+                    <Link onClick={closeMenu} href="/services/managed-services#p3" className="group flex items-center gap-3">
+                        <RefreshCw className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-indigo-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-indigo-600 transition-colors">Süreç Danışmanlığı</h4>
                     </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#itsm" className="group flex items-center gap-3">
-                        <FileText className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-blue-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-blue-600 transition-colors">ITSM as a Service</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#sccm" className="group flex items-center gap-3">
-                        <RefreshCw className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-green-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-green-600 transition-colors">SCCM as a Service</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#sre" className="group flex items-center gap-3">
-                        <Activity className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-teal-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-teal-600 transition-colors">SRE as a Service</h4>
-                    </Link>
-                    <Link onClick={closeMenu} href="/services/managed-services#devops" className="group flex items-center gap-3">
-                        <Code className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-red-600 transition-colors" />
-                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-red-600 transition-colors">DevOps as a Service</h4>
+                    <Link onClick={closeMenu} href="/services/managed-services#p4" className="group flex items-center gap-3">
+                        <ShieldAlert className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-purple-600 transition-colors" />
+                        <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-purple-600 transition-colors">Uyumluluk, Güvenlik & IT Olgunluk</h4>
                     </Link>
                 </div>
             </div>
