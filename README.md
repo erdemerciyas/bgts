@@ -405,6 +405,7 @@ Test altyapısı: **Vitest** + **@testing-library/react** + **jsdom**
 
 | Versiyon | Öne Çıkan Özellik |
 |----------|-------------------|
+| v0.16.0 | Genç Mühendis Programı revizyonları: program başlıkları kısaltıldı, içerikler ve hedefler güncellendi, story kart metin boyutu düzeltildi, gereksiz ikon kaldırıldı. |
 | v0.15.0 | Homepage slider ve içerik revizyonları, footer ofis güncellemesi, sektör ve iş modeli metin düzeltmeleri, hizmet sayfalarında görsel daraltma + gradient mask efekti, chatbot geçici olarak pasife alındı. |
 | v0.14.0 | Hero alanları optimizasyonu, slider ve içerik iyileştirmeleri |
 | v0.13.0 | Mobil navigasyon tam yeniden yazım, chatbot bilgi bankası güncelleme |

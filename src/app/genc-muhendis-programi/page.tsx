@@ -7,7 +7,7 @@ import {
     Code, BarChart3, Server, Globe, Rocket, Zap,
     Sparkles, MessageCircle, Heart, Share2,
     ArrowRight, CheckCircle2, Play, Users, Award,
-    Sticker, MousePointer2
+    Sticker
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -184,7 +184,7 @@ export default function YoungEngineersPage() {
                                 </div>
 
                                 <div className="absolute bottom-8 left-6 right-6 text-white p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                                    <h3 className="text-2xl font-black mb-1">{story.title}</h3>
+                                    <h3 className="text-lg font-black mb-1">{story.title}</h3>
                                 </div>
                             </motion.div>
                         ))}
@@ -205,9 +205,7 @@ export default function YoungEngineersPage() {
                                 Seçimini yap, geleceğini şekillendir. Tüm programlarımız modern süreçlere tam entegrasyonu hedefler.
                             </p>
                         </div>
-                        <div className="hidden md:block">
-                            <MousePointer2 className="w-16 h-16 text-black animate-bounce" />
-                        </div>
+
                     </div>
 
                     <div className="grid grid-cols-1 gap-16">
@@ -218,7 +216,7 @@ export default function YoungEngineersPage() {
                                     <Code className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-blue-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Yazılımcı Genç Mühendis Programı
+                                    Yazılım Geliştirme Programı
                                 </h3>
                             </div>
 
@@ -229,11 +227,10 @@ export default function YoungEngineersPage() {
                                         Program İçeriği
                                     </h4>
                                     <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Algoritma ve veri yapıları, Nesne Yönelimli Programlama ve Clean Code</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Backend ve frontend geliştirme</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Veritabanı yönetimi ve API tasarımı</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Test süreçleri ve temel CI/CD uygulamaları</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Agile & Scrum metodolojisi ve code review kültürü</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Modern backend & frontend geliştirme</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> API tasarımı ve veri yönetimi</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Test süreçleri ve kod kalitesi (Clean Code)</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Agile & Scrum ile proje geliştirme</li>
                                     </ul>
                                 </div>
                                 <div>
@@ -244,7 +241,7 @@ export default function YoungEngineersPage() {
                                     <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(37,99,235,1)]">
                                         <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
                                         <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
-                                            Program, üretken, sorumluluk sahibi ve modern yazılım süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                            Gerçek projelerde aktif rol alarak modern yazılım geliştirme süreçlerini öğrenir, uçtan uca ürün geliştirme deneyimi kazanırsın.
                                         </p>
                                     </div>
                                 </div>
@@ -258,7 +255,7 @@ export default function YoungEngineersPage() {
                                     <BarChart3 className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-violet-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Test ve Analist Genç Mühendis Programı
+                                    Test & İş Analizi Programı
                                 </h3>
                             </div>
 
@@ -269,13 +266,10 @@ export default function YoungEngineersPage() {
                                         Program İçeriği
                                     </h4>
                                     <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Temel yazılım ve iş süreçleri bilgisi</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test metodolojileri ve kalite standartları</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test planı ve test senaryosu hazırlama</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Fonksiyonel, entegrasyon ve kullanıcı kabul testleri</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test otomasyonu ve temel araç kullanımı</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> İş analizi, gereksinim toplama ve dokümantasyon</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Agile & Scrum metodolojisi ve sprint süreçlerine katkı</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test süreçleri ve kalite güvencesi (QA)</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Manuel ve otomasyon testleri</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> İş analizi ve gereksinim yönetimi</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test senaryosu ve dokümantasyon</li>
                                     </ul>
                                 </div>
                                 <div>
@@ -286,7 +280,7 @@ export default function YoungEngineersPage() {
                                     <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(124,58,237,1)]">
                                         <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-violet-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
                                         <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
-                                            Program, üretken, sorumluluk sahibi ve modern test & analiz süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                            Yazılım kalitesini artıran test ve analiz süreçlerinde deneyim kazanır, projelerin doğruluğunu ve sürdürülebilirliğini sağlayan bir rol üstlenirsin.
                                         </p>
                                     </div>
                                 </div>
@@ -300,7 +294,7 @@ export default function YoungEngineersPage() {
                                     <Server className="w-10 h-10" />
                                 </div>
                                 <h3 className="text-3xl md:text-4xl font-black uppercase inline-block bg-emerald-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Altyapı Teknolojileri Genç Mühendis Programı
+                                    Altyapı Teknolojileri Programı
                                 </h3>
                             </div>
 
@@ -311,12 +305,10 @@ export default function YoungEngineersPage() {
                                         Program İçeriği
                                     </h4>
                                     <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Linux ve temel sistem yönetimi</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> CI/CD pipeline tasarımı ve otomasyonu</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Container teknolojileri (Docker, Kubernetes)</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Cloud platformları (AWS, Azure, GCP) ve servisleri</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Monitoring, logging ve alert sistemleri</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Infrastructure as Code (Terraform, Ansible vb.)</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Linux ve sistem yönetimi</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> CI/CD, DevOps ve otomasyon süreçleri</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Cloud platformları (AWS, Azure, GCP)</li>
+                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Monitoring, logging ve sistem takibi</li>
                                     </ul>
                                 </div>
                                 <div>
@@ -327,7 +319,7 @@ export default function YoungEngineersPage() {
                                     <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(16,185,129,1)]">
                                         <div className="absolute right-0 bottom-0 w-32 h-32 bg-emerald-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
                                         <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
-                                            Program, üretken, sorumluluk sahibi ve modern DevOps & Cloud Native süreçlerine tam entegre olabilen profesyoneller yetiştirmeyi amaçlar. Katılımcılar, program sonunda hem teknik hem de davranışsal yetkinlikler kazanmış olarak kariyerlerine güçlü bir başlangıç yaparlar.
+                                            Modern DevOps ve cloud teknolojileri ile çalışan sistemlerin kurulumu ve yönetimini öğrenir, yüksek erişilebilir altyapılar geliştirme deneyimi kazanırsın.
                                         </p>
                                     </div>
                                 </div>
