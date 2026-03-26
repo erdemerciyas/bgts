@@ -46,7 +46,7 @@ export function DeliveryModels() {
                         <div
                             key={model.id}
                             className={cn(
-                                "group relative p-8 lg:p-10 rounded-[2.5rem] transition-all duration-500",
+                                "group relative flex flex-col h-full p-8 lg:p-10 rounded-[2.5rem] transition-all duration-500",
                                 model.variant === "light"
                                     ? "bg-white border text-corporate-dark shadow-xl hover:shadow-2xl hover:border-corporate-secondary/20"
                                     : "bg-corporate-dark text-white shadow-2xl hover:shadow-corporate-dark/40 hover:-translate-y-2"
@@ -81,7 +81,7 @@ export function DeliveryModels() {
                             <Link
                                 href={model.ctaLink}
                                 className={cn(
-                                    "block w-full py-5 rounded-2xl font-bold text-center transition-all duration-300",
+                                    "block w-full py-5 rounded-2xl font-bold text-center transition-all duration-300 mt-auto",
                                     model.variant === "light"
                                         ? "border-2 border-corporate-border text-corporate-dark hover:border-corporate-secondary hover:text-white hover:bg-corporate-secondary"
                                         : "bg-corporate-tertiary text-white hover:bg-white hover:text-corporate-dark hover:shadow-lg"

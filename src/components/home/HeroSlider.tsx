@@ -89,32 +89,34 @@ const SLIDES = [
     {
         id: 1,
         image: "/images/headers/yazilim-gelistirme-ve-inovasyon.jpg",
-        title: "Yazılım Teknolojileri",
-        subtitle: "Modern yazılım çözümleri ve teknoloji servisleri ile işletmenizi geleceğe taşıyın.",
-        ctaText: "Hizmetlerimiz",
+        title: "Kritik Sistemler için Güçlü Teknoloji Çözümleri",
+        subtitle: "BGTS, 1400+ mühendis gücüyle finans, telekom ve büyük ölçekli kurumlar için yazılım geliştirme, yönetilen hizmetler ve SRE çözümleri sunar.",
+        ctaText: "Hizmetlerimizi Keşfedin",
         ctaLink: "/services/software-development",
+        ctaText2: "Uzmanlarımızla Görüşün",
+        ctaLink2: "/contact",
     },
     {
         id: 2,
         image: "/images/headers/proje-yapim-sekillerimiz.jpg",
-        title: "Teknoloji Servisleri",
-        subtitle: "İhtiyacınıza uygun esnek çalışma modelleri ve çevik süreçler.",
-        ctaText: "Nasıl Çalışıyoruz?",
-        ctaLink: "/services/managed-services",
+        title: "Operasyonlarınızı Güçlendiren Teknoloji Servisleri",
+        subtitle: "Yönetilen hizmetler, DevOps ve SRE çözümleriyle operasyonel yükü azaltır, sistem sürekliliğini artırırız.",
+        ctaText: "İş Modelimizi İnceleyin",
+        ctaLink: "/services/managed-services#p1",
     },
     {
         id: 3,
         image: "/images/headers/bgts-kariyer-firsatlari.jpg",
-        title: "Genç Mühendisler",
-        subtitle: "Şeffaf iletişim, takım çalışması ve sürekli öğrenme tutkusuyla büyüyen global bir aileyiz.",
+        title: "Geleceğin Mühendislerini Yetiştiriyoruz",
+        subtitle: "Genç mühendis programlarımızla teknolojiye değer katan yeni nesil yetenekleri yetiştiriyoruz.",
         ctaText: "Kariyer Fırsatları",
         ctaLink: "/genc-muhendis-programi",
     },
     {
         id: 4,
         image: "/images/headers/bgts-teknoloji-urunleri.jpg",
-        title: "Yapay Zeka Ürünleri",
-        subtitle: "Yapay zeka devrimini kurumunuza taşıyan akıllı platformlar ve ürünler.",
+        title: "Yapay Zeka ile Güçlenen Ürünler",
+        subtitle: "BGTS’nin AI destekli ürünleriyle süreçlerinizi otomatikleştirin, verimliliği artırın ve karar alma hızınızı yükseltin.",
         ctaText: "Ürünleri İncele",
         ctaLink: "/products",
         type: "ai-products",
@@ -196,13 +198,25 @@ export function HeroSlider() {
                                     {SLIDES[currentSlide].subtitle}
                                 </Text>
 
-                                <Link
-                                    href={SLIDES[currentSlide].ctaLink}
-                                    className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-corporate-secondary hover:bg-corporate-dark text-white text-base md:text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20 group"
-                                >
-                                    {SLIDES[currentSlide].ctaText}
-                                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                                <div className="flex flex-wrap gap-4 items-center">
+                                    <Link
+                                        href={SLIDES[currentSlide].ctaLink}
+                                        className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-corporate-secondary hover:bg-corporate-dark text-white text-base md:text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20 group"
+                                    >
+                                        {SLIDES[currentSlide].ctaText}
+                                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </Link>
+                                    
+                                    {SLIDES[currentSlide].ctaText2 && SLIDES[currentSlide].ctaLink2 && (
+                                        <Link
+                                            href={(SLIDES[currentSlide] as any).ctaLink2}
+                                            className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-[#B4D330] hover:bg-[#a6c12b] text-slate-900 text-base md:text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-green-900/20 group"
+                                        >
+                                            {(SLIDES[currentSlide] as any).ctaText2}
+                                            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                        </Link>
+                                    )}
+                                </div>
 
                                 {/* "Partnerler" ekstra elementleri */}
                                 {SLIDES[currentSlide].type === "partners" && (

@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import GlobalBreadcrumb from "@/components/layout/GlobalBreadcrumb";
 import { OrganizationStructuredData, WebSiteStructuredData } from "@/components/seo/StructuredData";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
-import ChatbotWidget from "@/components/chat/ChatbotWidget";
+// import ChatbotWidget from "@/components/chat/ChatbotWidget"; // Temporarily disabled
 
 const exo = Exo({ subsets: ["latin"], variable: "--font-exo" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -76,7 +76,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <ChatbotWidget />
+          {/* <ChatbotWidget /> */} {/* Temporarily disabled */}
         </div>
       </body>
     </html>

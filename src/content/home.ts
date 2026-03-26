@@ -28,8 +28,8 @@ export const HOME_CONTENT = {
     },
     servicesSummary: {
         badge: "Hizmetlerimiz",
-        heading: "Kanıtlanmış Sonuçlarla\nGüvenilir Teknoloji Ortağınız",
-        description: "30 yılı aşkın deneyimimizle, işletmelerin sürdürülebilir büyüme elde etmelerini, operasyonları optimize etmelerini ve benzersiz ihtiyaçlarına göre uyarlanmış stratejik teknoloji danışmanlığı ile karlılığı artırmalarını sağlıyoruz.",
+        heading: "Kurumsal Ölçekte\nGüvenilir Teknoloji Ortağınız",
+        description: "30+ yıllık deneyimimiz ve 1000+ proje tecrübemizle, operasyonlarınızı güvenle büyütüyoruz.",
         ctaText: "İş Modellerimizi Keşfedin",
         image: "/images/headers/teknoloji-cozum-ortagi.jpg",
         sections: [
@@ -72,7 +72,7 @@ export const HOME_CONTENT = {
             {
                 id: "turnkey",
                 title: "Anahtar Teslim (TurnKey)",
-                description: "Projenizi A'dan Z'ye biz yönetelim. Sabit kapsamlı projeleriniz için analiz, tasarım, geliştirme ve test süreçlerini üstleniyoruz.",
+                description: "Projelerinizi baştan sona üstlenir, tüm süreci tek noktadan yönetiriz.",
                 features: ["Sabit Bütçe & Zaman", "Tek Sorumluluk Noktası", "Uçtan Uca Teslimat"],
                 ctaText: "Detaylı Bilgi Alın",
                 ctaLink: "/contact",
@@ -81,7 +81,7 @@ export const HOME_CONTENT = {
             {
                 id: "time-material",
                 title: "Efor Bazlı (Time & Material)",
-                description: "Kendi ekibinizi bizim uzmanlarımızla güçlendirin. Çevik süreçlerinize anında uyum sağlayan elit mühendisler.",
+                description: "İhtiyacınıza göre esnek ekiplerle hızlı ölçeklenir, projelerinize anında destek sağlarız.",
                 features: ["Esnek Ölçeklendirme", "Tam Kontrol & Şeffaflık", "Hızlı Adaptasyon"],
                 ctaText: "Ekibinizi Kurun",
                 ctaLink: "/contact",
@@ -90,33 +90,33 @@ export const HOME_CONTENT = {
         ]
     },
     industries: {
-        heading: "Hizmet Verdiğimiz Sektörler",
-        description: "Finans, savunma, perakende ve telekom gibi kritik sektörlerde; işletmelerin büyümesini destekleyen, operasyonları optimize eden ve dijital dönüşüm yolculuklarını hızlandıran stratejik çözümler sunuyoruz.",
+        heading: "Uzmanlaştığımız Sektörler",
+        description: "Finans, telekom, perakende ve savunma sektörlerinde yüksek ölçekli sistemler geliştiriyor ve yönetiyoruz.",
         items: [
             {
                 title: "Bankacılık & Finans",
-                description: "Modernizasyon, açık bankacılık ve fintech entegrasyonlarıyla riskleri yönetirken karlılığı artırıyoruz.",
+                description: "Fintech entegrasyonları ve yüksek hacimli işlem altyapılarıyla güvenli, hızlı ve regülasyon uyumlu sistemler geliştiriyoruz.",
                 link: "/industries/banking",
                 image: "/images/home/bankacilik-sektoru.jpg",
                 icon: BarChart
             },
             {
                 title: "Perakende",
-                description: "Müşteri deneyimini iyileştirmek ve tedarik zincirini optimize etmek için e-ticaret ve omnichannel stratejileri.",
+                description: "Müşteri deneyimini güçlendiren ve operasyonel verimliliği artıran dijital platformlar ve veri odaklı çözümler geliştiriyoruz.",
                 link: "/industries/retail-telecom",
                 image: "/images/home/perakende-sektoru.jpg",
                 icon: Users
             },
             {
                 title: "Telekomünikasyon",
-                description: "5G ve dijital dönüşüm ile rekabetçi ölçeklenme ve teknolojik inovasyonu yakalayın.",
+                description: "Yüksek trafikli sistemler ve 5G dönüşüm süreçleri için ölçeklenebilir, kesintisiz ve performans odaklı altyapılar sunuyoruz.",
                 link: "/industries/retail-telecom",
                 image: "/images/home/telekomunikasyon-sektoru.jpg",
                 icon: Globe
             },
             {
                 title: "Savunma Sanayi",
-                description: "Kritik görev sistemleri ve gömülü yazılımlarla üst düzey güvenlik standartları ve regülasyon uyumu.",
+                description: "Kritik sistemler için yüksek güvenlik standartlarına sahip, dayanıklı ve sürdürülebilir yazılım ve altyapı çözümleri sunuyoruz.",
                 link: "/industries/defense",
                 image: "/images/home/savunma-sanayi.jpg",
                 icon: ShieldCheck

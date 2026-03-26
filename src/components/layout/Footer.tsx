@@ -19,7 +19,7 @@ export default function Footer() {
                                 <Image src="/BGTS_logo.png" alt="BGTS Logo" fill className="object-contain" />
                             </div>
                             <p className="text-white/50 text-sm leading-relaxed">
-                                Finans, Savunma, Perakende ve Telekom sektörleri için stratejik teknoloji ortağı. 25 yıldır dijital dönüşümü güvenle yönetiyoruz.
+                                Finans, Savunma, Perakende ve Telekom sektörleri için stratejik teknoloji ortağı. 30+ yıldır dijital dönüşümü güvenle yönetiyoruz.
                             </p>
                         </div>
 
@@ -60,15 +60,27 @@ export default function Footer() {
                             <ul className="space-y-4 text-white/50 text-sm">
                                 <li className="flex gap-3">
                                     <MapPin className="w-5 h-5 text-corporate-accent shrink-0" />
-                                    <span>Maslak, İstanbul (Genel Merkez)</span>
+                                    <span>İstanbul / İTÜ Arı 3 Teknokent</span>
                                 </li>
                                 <li className="flex gap-3">
                                     <MapPin className="w-5 h-5 text-corporate-accent shrink-0" />
-                                    <span>Ankara Teknokent</span>
+                                    <span>Ankara / Bilkent Cyberpark</span>
                                 </li>
                                 <li className="flex gap-3">
                                     <MapPin className="w-5 h-5 text-corporate-accent shrink-0" />
-                                    <span>Amsterdam, Hollanda</span>
+                                    <span>London</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <MapPin className="w-5 h-5 text-corporate-accent shrink-0" />
+                                    <span>Sheffield</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <MapPin className="w-5 h-5 text-corporate-accent shrink-0" />
+                                    <span>Düsseldorf</span>
+                                </li>
+                                <li className="flex gap-3">
+                                    <MapPin className="w-5 h-5 text-corporate-accent shrink-0" />
+                                    <span>Amsterdam</span>
                                 </li>
                                 <li className="flex gap-3">
                                     <Mail className="w-5 h-5 text-corporate-accent shrink-0" />

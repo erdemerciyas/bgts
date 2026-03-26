@@ -34,7 +34,7 @@ Bu proje, BGTS'nin kurumsal web varlığını en güncel web teknolojileriyle su
 - Kurumsal marka kimliğini güçlü biçimde yansıtmak
 - Müşteri adaylarını doğru servis ve ürün sayfalarına yönlendirmek
 - Kariyer odaklı ziyaretçilere şeffaf bir büyüme yolu sunmak
-- AI destekli chatbot ile 7/24 kurumsal danışmanlık sağlamak
+- AI destekli chatbot ile 7/24 kurumsal danışmanlık sağlamak (şu anda pasif)
 
 ---
 
@@ -65,7 +65,7 @@ Bu proje, BGTS'nin kurumsal web varlığını en güncel web teknolojileriyle su
 - **Framer Motion Animasyonları:** Scroll-triggered reveal, spring animasyonları, sayfa geçişleri
 - **Glassmorphism Efektleri:** Cam efektli kart ve bölüm tasarımları
 
-### AI Destekli Chatbot (Ayla)
+### AI Destekli Chatbot (Ayla) — *Şu anda pasif*
 - Groq API üzerinde çalışan Llama 3.3 70B modeli
 - Persona bazlı sistem prompt: "Ayla" adında BGTS kurumsal danışmanı kimliği
 - Hizmet, ürün ve kariyer konularında derin bilgi tabanı
@@ -405,7 +405,7 @@ Test altyapısı: **Vitest** + **@testing-library/react** + **jsdom**
 
 | Versiyon | Öne Çıkan Özellik |
 |----------|-------------------|
-| v0.15.0 | Arama altyapısı iyileştirmeleri, chatbot prompt/soru güncellemeleri, kullanılmayan asset temizliği ve proje optimizasyonu. |
+| v0.15.0 | Homepage slider ve içerik revizyonları, footer ofis güncellemesi, sektör ve iş modeli metin düzeltmeleri, hizmet sayfalarında görsel daraltma + gradient mask efekti, chatbot geçici olarak pasife alındı. |
 | v0.14.0 | Hero alanları optimizasyonu, slider ve içerik iyileştirmeleri |
 | v0.13.0 | Mobil navigasyon tam yeniden yazım, chatbot bilgi bankası güncelleme |
 | v0.12.0 | Responsive optimizasyon, savunma sanayi sayfa revizyonu |

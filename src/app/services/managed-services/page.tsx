@@ -275,7 +275,17 @@ export default function ManagedServicesPage() {
                     isReversed ? "lg:flex-row-reverse" : ""
                 )}>
                     {/* Image Section - Full Bleed */}
-                    <div className="w-full lg:w-[45%] relative min-h-[300px] lg:min-h-auto">
+                    <div 
+                        className="w-full lg:w-[20%] relative min-h-[300px] lg:min-h-auto shrink-0"
+                        style={{
+                            WebkitMaskImage: isReversed 
+                                ? "linear-gradient(to left, black 40%, transparent 100%)" 
+                                : "linear-gradient(to right, black 40%, transparent 100%)",
+                            maskImage: isReversed 
+                                ? "linear-gradient(to left, black 40%, transparent 100%)" 
+                                : "linear-gradient(to right, black 40%, transparent 100%)"
+                        }}
+                    >
                         <Image
                             src={domain.image}
                             alt={domain.title}
@@ -288,7 +298,7 @@ export default function ManagedServicesPage() {
                     </div>
 
                     {/* Content Section */}
-                    <div className="w-full lg:w-[55%] p-8 lg:p-14 flex flex-col justify-center">
+                    <div className="w-full lg:w-[80%] p-8 lg:p-14 flex flex-col justify-center">
                         <div className="mb-8">
                             <Heading variant="h2" className="text-slate-900 mb-4 leading-tight">
                                 {domain.title}
