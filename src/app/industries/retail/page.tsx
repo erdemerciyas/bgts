@@ -76,8 +76,8 @@ export default function RetailPage() {
         <>
             <div className="bg-white min-h-screen">
                 <Hero
-                    title="Akıllı Perakende & E-Ticaret Dönüşümü"
-                    subtitle="E-ticaret ve perakende operasyonlarınızı B2B portallar, gelişmiş İK çözümleri ve 7/24 yönetilen hizmetler ile geleceğe taşıyoruz."
+                    title="Perakende ve E-Ticaret için Dijital Deneyimi Güçlendiren Teknolojiler"
+                    subtitle="Müşteri deneyimini iyileştiren, satış süreçlerini hızlandıran ve operasyonel verimliliği artıran dijital platformlar geliştiriyoruz."
                     className="bg-slate-900"
                     backgroundImage="/images/headers/perakende-ve-telekom-cozumleri.jpg"
                 />
@@ -87,11 +87,8 @@ export default function RetailPage() {
                     <Container>
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <motion.div {...fadeUp}>
-                                <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                    <ShoppingCart className="w-4 h-4" /> E-Ticaret & Perakende
-                                </div>
                                 <Heading variant="h2" className="mb-6 text-slate-900 !text-4xl !font-bold">
-                                    Perakende Sektöründe Sürdürülebilirlik
+                                    Perakende ve E-Ticarette Uçtan Uca Dijital Çözümler
                                 </Heading>
                                 <div className="space-y-5 text-slate-600 text-lg leading-relaxed">
                                     <p>

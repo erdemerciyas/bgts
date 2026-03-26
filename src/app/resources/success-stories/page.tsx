@@ -1,11 +1,9 @@
-"use client"
-
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { CASE_STUDIES } from "@/data/case-studies"
 import { CaseStudyCard } from "@/components/resources/CaseStudyCard"
-import { motion } from "framer-motion"
+import { AnimatedDiv, ScaleIn } from "@/components/ui/AnimatedElements"
 import Image from "next/image"
 
 export default function SuccessStoriesPage() {
@@ -29,12 +27,7 @@ export default function SuccessStoriesPage() {
                 <Container className="relative z-10 w-full">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                         {/* LEFT COLUMN: Typography */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, ease: "easeOut" }}
-                            className="max-w-2xl"
-                        >
+                        <AnimatedDiv className="max-w-2xl">
                             <h1 className="text-corporate-dark font-black tracking-tight leading-[1.1] text-5xl lg:text-[4.5rem] mb-8">
                                 Teknoloji İle<br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-corporate-secondary to-blue-500">
@@ -45,15 +38,10 @@ export default function SuccessStoriesPage() {
                             <p className="text-slate-600 text-lg lg:text-xl leading-relaxed font-normal max-w-lg mb-10">
                                 Finans, savunma ve telekomünikasyonun lider markalarıyla hayata geçirdiğimiz, <strong className="text-slate-800 font-bold">teknoloji yığınlarıyla kanıtlanmış</strong> dijital dönüşüm projeleri.
                             </p>
-                        </motion.div>
+                        </AnimatedDiv>
 
                         {/* RIGHT COLUMN: Image Layout */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-                            className="hidden lg:block relative h-[400px] w-full"
-                        >
+                        <ScaleIn className="hidden lg:block relative h-[400px] w-full">
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-gradient-to-tr from-blue-100 to-indigo-50 rounded-full blur-3xl opacity-50" />
                             
                             <div className="absolute inset-0 flex items-center justify-center">
@@ -69,11 +57,7 @@ export default function SuccessStoriesPage() {
                                 </div>
                                 
                                 {/* Floating decorative badges */}
-                                <motion.div 
-                                    className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4"
-                                    animate={{ y: [0, -10, 0] }}
-                                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                >
+                                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce [animation-duration:5s]">
                                     <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                                     </div>
@@ -81,13 +65,9 @@ export default function SuccessStoriesPage() {
                                         <div className="text-sm text-slate-500 font-medium">Kanıtlanmış</div>
                                         <div className="text-slate-900 font-bold">Teknoloji</div>
                                     </div>
-                                </motion.div>
+                                </div>
 
-                                <motion.div 
-                                    className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4"
-                                    animate={{ y: [0, 10, 0] }}
-                                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                >
+                                <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce [animation-duration:6s] [animation-delay:1s]">
                                     <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                                     </div>
@@ -95,9 +75,9 @@ export default function SuccessStoriesPage() {
                                         <div className="text-sm text-slate-500 font-medium">Başarılı</div>
                                         <div className="text-slate-900 font-bold">Dönüşüm</div>
                                     </div>
-                                </motion.div>
+                                </div>
                             </div>
-                        </motion.div>
+                        </ScaleIn>
                     </div>
                 </Container>
             </section>

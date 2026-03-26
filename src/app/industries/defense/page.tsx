@@ -93,8 +93,8 @@ export default function DefensePage() {
             <div className="bg-white min-h-screen">
 
                 <Hero
-                    title="Milli Savunma İçin Güvenilir Teknolojiler"
-                    subtitle="TSK ve savunma sanayi ekosistemi için MIL-STD ve IEEE standartlarına uygun, güvenli ve yüksek performanslı yazılım ve altyapı çözümleri."
+                    title="Savunma Sanayi için Güvenilir ve Yüksek Standartlı Teknolojiler"
+                    subtitle="TSK ve savunma ekosistemine yönelik, MIL-STD ve IEEE standartlarına uygun, yüksek güvenlikli yazılım ve altyapı çözümleri geliştiriyoruz."
                     className="bg-slate-900"
                     backgroundImage="/images/headers/savunma-sanayi-teknolojileri.jpg"
                 />
@@ -108,11 +108,11 @@ export default function DefensePage() {
                             <motion.div {...fadeUp}>
 
                                 <Heading variant="h2" className="mb-6 text-slate-900 !text-4xl !font-bold">
-                                    Savunma Sanayi Odaklı Yaklaşım
+                                    Savunma Sanayinde Güvenilir Teknoloji Ortağınız
                                 </Heading>
                                 <div className="space-y-5 text-slate-600 text-lg leading-relaxed">
                                     <p>
-                                        Savunma sanayi projelerinde öncelikli hedefimiz, <strong className="text-blue-700">güvenilir, yüksek performanslı ve güvenli</strong> yazılım çözümleri sunmaktır.
+                                        Savunma sanayi projelerinde öncelikli hedefimiz, <strong>güvenilir, yüksek performanslı ve güvenli</strong> yazılım çözümleri sunmaktır.
                                         Kritik görev yazılımlarının sahada doğru, hızlı ve hatasız çalışmasını sağlamak için gömülü yazılımlardan web ve bulut tabanlı sistemlere kadar tüm geliştirme süreçlerini bütüncül şekilde yönetiyoruz.
                                     </p>
                                     <p>

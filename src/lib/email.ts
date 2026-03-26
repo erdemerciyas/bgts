@@ -1,24 +1,19 @@
 import nodemailer from "nodemailer";
 
 export const createTransporter = async () => {
-    // Ethereal (Test) veya Gerçek SMTP ayarları
     const host = process.env.SMTP_HOST;
     const port = Number(process.env.SMTP_PORT) || 587;
-    let user = process.env.SMTP_USER;
-    let pass = process.env.SMTP_PASS;
+    const user = process.env.SMTP_USER;
+    const pass = process.env.SMTP_PASS;
 
-    // Eğer SMTP_USER veya SMTP_PASS verilmemişse otomatik bir Ethereal test hesabı oluştur
-    if (!user || !pass) {
-        const testAccount = await nodemailer.createTestAccount();
-        user = testAccount.user;
-        pass = testAccount.pass;
-        console.log("TEST E-POSTA HESABI OLUŞTURULDU:", { user, pass });
+    if (!host || !user || !pass) {
+        throw new Error("SMTP yapılandırması eksik. SMTP_HOST, SMTP_USER ve SMTP_PASS ortam değişkenlerini ayarlayın.");
     }
 
     const transporter = nodemailer.createTransport({
         host,
         port,
-        secure: port === 465, // true for 465, false for other ports
+        secure: port === 465,
         auth: {
             user,
             pass,
@@ -53,12 +48,5 @@ export const sendEmail = async ({
     };
 
     const info = await transporter.sendMail(mailOptions);
-    console.log("Message sent: %s", info.messageId);
-
-    // Ethereal üzerinden gönderildiyse önizleme adresini konsola yazdır
-    if (process.env.SMTP_HOST?.includes("ethereal")) {
-        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    }
-
     return info;
 };

@@ -15,6 +15,7 @@ import {
     CheckCircle2, Server, Database, Code, Cloud, Terminal,
     MessageSquare, Cpu, Play
 } from "lucide-react"
+import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
 /* ── Animations ─────────────────────────────────────── */
 const fadeUp = {
@@ -124,6 +125,11 @@ const technologies = [
 export default function HcmPage() {
     return (
         <div className="bg-white min-h-screen">
+            <SoftwareApplicationStructuredData
+                name="HCM Platform"
+                description="İnsan kaynakları yönetim sistemi - bordro, performans ve işe alım."
+                url="/products/hcm"
+            />
 
             {/* ═══════════ HERO ═══════════ */}
             <Hero

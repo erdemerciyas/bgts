@@ -1,13 +1,35 @@
+import type { Metadata } from "next"
 import React from "react"
 import Link from "next/link"
 import { Container } from "@/components/ui/Container"
+
+export const metadata: Metadata = {
+    title: "Cortex - Yapay Zeka Destekli SDLC Platformu | BGTS",
+    description:
+        "Yazılım geliştirme yaşam döngüsünü AI agent'larla otomatikleştiren kurumsal SDLC platformu.",
+    alternates: {
+        canonical: "https://bgts.com.tr/products/cortex",
+    },
+    openGraph: {
+        title: "Cortex - Yapay Zeka Destekli SDLC Platformu | BGTS",
+        description:
+            "Yazılım geliştirme yaşam döngüsünü AI agent'larla otomatikleştiren kurumsal SDLC platformu.",
+        url: "https://bgts.com.tr/products/cortex",
+    },
+}
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { CheckCircle2, Bot, ShieldAlert, Code2, Server, FileText, Activity, AlertTriangle, ArrowRight, Cpu } from "lucide-react"
+import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
 export default function CortexPage() {
     return (
         <div className="bg-white">
+            <SoftwareApplicationStructuredData
+                name="Cortex"
+                description="SDLC süreçlerini yapay zeka ajanlarıyla otomatikleştiren platform."
+                url="/products/cortex"
+            />
             {/* HERO SECTION */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 text-white">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>

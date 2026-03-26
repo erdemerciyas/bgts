@@ -112,8 +112,8 @@ export default function BankingPage() {
             <div className="bg-white min-h-screen">
 
                 <Hero
-                    title="Bankacılık ve Sigorta Sektöründe Dijital Dönüşüm"
-                    subtitle="İş ortaklarımızın dijital dönüşüm ajandalarını uçtan uca hayata geçiriyor, güvenilir ve ölçeklenebilir teknoloji çözümleri sunuyoruz."
+                    title="Finans Sektörü için Güvenilir ve Ölçeklenebilir Teknolojiler"
+                    subtitle="Yüksek hacimli işlem altyapılarından dijital bankacılığa kadar, regülasyon uyumlu ve performans odaklı sistemler geliştiriyoruz."
                     className="bg-slate-900"
                     backgroundImage="/images/headers/proje-yapim-sekillerimiz.jpg"
                 />
@@ -128,12 +128,12 @@ export default function BankingPage() {
                             <motion.div {...fadeUp}>
 
                                 <Heading variant="h2" className="mb-6 text-slate-900 !text-4xl !font-bold">
-                                    Finans Sektöründe Güvenilir Teknoloji Ortağı
+                                    Finans Sektöründe Güvenilir Teknoloji Ortağınız
                                 </Heading>
                                 <div className="space-y-5 text-slate-600 text-[17px] leading-relaxed">
                                     <p>
-                                        <strong className="text-blue-700 font-semibold">1997 yılındaki kuruluşumuzdan</strong> bu yana istikrarlı bir şekilde büyüyen organizasyonumuz, bugün güçlü kadrosuyla özel ve kamu bankaları, sigorta şirketleri ve ödeme sistemleri alanında faaliyet gösteren kurumlarla uzun yıllara dayanan sağlam iş birlikleri yürütmektedir.
-                                        Gerçekleştirdiğimiz <strong className="text-blue-700 font-semibold">100'ün üzerinde proje</strong> ile; temel bankacılık, dijital kanallar, ödeme sistemleri ile veri ve analitik çözümleri başta olmak üzere finans ekosisteminin kritik iş alanlarında aktif rol alıyoruz.
+                                        <strong className="font-semibold">1997 yılındaki kuruluşumuzdan</strong> bu yana istikrarlı bir şekilde büyüyen organizasyonumuz, bugün güçlü kadrosuyla özel ve kamu bankaları, sigorta şirketleri ve ödeme sistemleri alanında faaliyet gösteren kurumlarla uzun yıllara dayanan sağlam iş birlikleri yürütmektedir.
+                                        Gerçekleştirdiğimiz <strong className="font-semibold">100'ün üzerinde proje</strong> ile; temel bankacılık, dijital kanallar, ödeme sistemleri ile veri ve analitik çözümleri başta olmak üzere finans ekosisteminin kritik iş alanlarında aktif rol alıyoruz.
                                     </p>
                                     <p>
                                         İş ortaklarımızın stratejik hedeflerini ve önceliklerini merkeze alarak, ihtiyaçlarını analiz ediyor ve bu ihtiyaçlara en uygun metodoloji ve teslim modeliyle projeleri hayata geçiriyoruz. Dijital dönüşüm yolculuğunda yalnızca bir tedarikçi değil, <strong>süreci sahiplenen uzun vadeli bir teknoloji iş ortağı</strong> olarak konumlanıyoruz.
@@ -180,12 +180,11 @@ export default function BankingPage() {
                     <div className="absolute right-0 top-0 w-1/3 h-full bg-blue-50/50 rounded-l-[100px] pointer-events-none" />
                     <Container className="relative z-10">
                         <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3 block">Uçtan Uca Değer Yaratan Servisler</span>
                             <Heading variant="h2" className="mb-4 !text-4xl !font-bold text-slate-900">
                                 360 Derece Teknoloji Çözüm Modeli
                             </Heading>
                             <Text className="text-slate-600 text-lg">
-                                Kurumların eşsiz ihtiyaçlarına esnek iş modelleriyle (Turnkey, T&M, Hibrit) cevap veren kapsamlı hizmet portföyümüz.
+                                Kurumların eşsiz ihtiyaçlarına esnek iş modelleriyle (Turnkey, T&M, Hibrit) cevap veren kapsamlı hizmet portföyümüz
                             </Text>
                         </motion.div>
 

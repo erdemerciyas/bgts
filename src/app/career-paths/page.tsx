@@ -1,20 +1,11 @@
-"use client"
-
 import Link from "next/link"
 import Image from "next/image"
 import { Container } from "@/components/ui/Container"
-import { motion } from "framer-motion"
+import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 import {
     Compass, BarChart3, RefreshCw, Rocket, Target, Users,
     ArrowRight, ArrowUpRight, Sparkles, TrendingUp, GitBranch, Award
 } from "lucide-react"
-
-const fadeUp = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.5 }
-}
 
 export default function CareerPathsPage() {
     return (
@@ -30,18 +21,18 @@ export default function CareerPathsPage() {
                 <Container className="relative z-10">
                     <div className="max-w-4xl mx-auto text-center space-y-8">
 
-                        <motion.h1 {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }} className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
+                        <h1 className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
                             Kariyerini <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400">
                                 Sen Şekillendir
                             </span>
-                        </motion.h1>
+                        </h1>
 
-                        <motion.p {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.2 }} className="text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
                             Her çalışanın kariyer yolculuğu kendine özgüdür. Kendi hızında gelişebileceğin, potansiyelini ortaya koyabileceğin esnek ve sürdürülebilir kariyer yolları sunuyoruz.
-                        </motion.p>
+                        </p>
 
-                        <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                             <Link
                                 href="https://www.linkedin.com/company/bilgeadam/jobs/"
                                 target="_blank"
@@ -50,7 +41,7 @@ export default function CareerPathsPage() {
                                 Açık Pozisyonlar <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
 
-                        </motion.div>
+                        </div>
                     </div>
 
 
@@ -61,7 +52,7 @@ export default function CareerPathsPage() {
             <section id="career-details" className="py-20 bg-white scroll-mt-20">
                 <Container>
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <motion.div {...fadeUp} className="lg:w-1/2 order-2 lg:order-1">
+                        <AnimatedDiv className="lg:w-1/2 order-2 lg:order-1">
                             <div className="relative">
                                 <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -74,9 +65,9 @@ export default function CareerPathsPage() {
                                 </div>
 
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
 
-                        <motion.div {...fadeUp} className="lg:w-1/2 order-1 lg:order-2">
+                        <AnimatedDiv className="lg:w-1/2 order-1 lg:order-2">
 
                             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-6 leading-tight">
                                 Teknik ve Yönetsel <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Kariyer Yolları</span>
@@ -98,7 +89,7 @@ export default function CareerPathsPage() {
                                     </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
                 </Container>
             </section>
@@ -107,7 +98,7 @@ export default function CareerPathsPage() {
             <section className="py-20 bg-slate-50">
                 <Container>
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <motion.div {...fadeUp} className="lg:w-1/2">
+                        <AnimatedDiv className="lg:w-1/2">
 
                             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-6 leading-tight">
                                 Şeffaf <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600">Performans Sistemi</span>
@@ -131,9 +122,9 @@ export default function CareerPathsPage() {
                                     <p className="text-sm text-slate-500">Düzenli 1:1 görüşmeler ve mentorluk.</p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
 
-                        <motion.div {...fadeUp} className="lg:w-1/2">
+                        <AnimatedDiv className="lg:w-1/2">
                             <div className="relative">
                                 <div className="absolute -inset-3 bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -145,7 +136,7 @@ export default function CareerPathsPage() {
                                     />
                                 </div>
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
                 </Container>
             </section>
@@ -154,7 +145,7 @@ export default function CareerPathsPage() {
             <section className="py-20 bg-white">
                 <Container>
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <motion.div {...fadeUp} className="lg:w-1/2 order-2 lg:order-1">
+                        <AnimatedDiv className="lg:w-1/2 order-2 lg:order-1">
                             <div className="relative">
                                 <div className="absolute -inset-3 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -167,9 +158,9 @@ export default function CareerPathsPage() {
                                 </div>
 
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
 
-                        <motion.div {...fadeUp} className="lg:w-1/2 order-1 lg:order-2">
+                        <AnimatedDiv className="lg:w-1/2 order-1 lg:order-2">
 
                             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-6 leading-tight">
                                 Proje Geçişleri & <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Rotasyonlar</span>
@@ -190,7 +181,7 @@ export default function CareerPathsPage() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
                 </Container>
             </section>
@@ -199,7 +190,7 @@ export default function CareerPathsPage() {
             <section className="py-20 bg-slate-50">
                 <Container>
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <motion.div {...fadeUp} className="lg:w-1/2">
+                        <AnimatedDiv className="lg:w-1/2">
 
                             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-6 leading-tight">
                                 Terfi ve <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Gelişim Fırsatları</span>
@@ -221,9 +212,9 @@ export default function CareerPathsPage() {
                                     </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
 
-                        <motion.div {...fadeUp} className="lg:w-1/2">
+                        <AnimatedDiv className="lg:w-1/2">
                             <div className="relative">
                                 <div className="absolute -inset-3 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -235,7 +226,7 @@ export default function CareerPathsPage() {
                                     />
                                 </div>
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
                 </Container>
             </section>

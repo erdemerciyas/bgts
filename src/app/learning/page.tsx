@@ -1,20 +1,11 @@
-"use client"
-
 import Link from "next/link"
 import Image from "next/image"
 import { Container } from "@/components/ui/Container"
-import { motion } from "framer-motion"
+import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 import {
     Award, BookOpen, Users, BrainCircuit, Mic2, MonitorPlay,
     ArrowRight, Sparkles, Trophy, Code, Cloud, ShieldCheck
 } from "lucide-react"
-
-const fadeUp = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.5 }
-}
 
 export default function LearningPage() {
     return (
@@ -30,19 +21,19 @@ export default function LearningPage() {
                 <Container className="relative z-10">
                     <div className="max-w-4xl mx-auto text-center space-y-8">
 
-                        <motion.h1 {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }} className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
+                        <h1 className="text-4xl lg:text-6xl font-black leading-tight tracking-tight">
                             Öğrenmek Bir <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
                                 Yaşam Biçimi
                             </span>
-                        </motion.h1>
+                        </h1>
 
-                        <motion.p {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.2 }} className="text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
                             Kendine yatırım yapmak hem bireysel hem de kurumsal başarı için vazgeçilmezdir.
                             Sürekli öğrenmeyi kültürümüzün bir parçası haline getiriyoruz.
-                        </motion.p>
+                        </p>
 
-                        <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+                        <AnimatedDiv delay={0.3} className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                             <Link
                                 href="https://www.linkedin.com/company/bilgeadam/jobs/"
                                 target="_blank"
@@ -51,7 +42,7 @@ export default function LearningPage() {
                                 Bize Katıl <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
 
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
 
 
@@ -62,7 +53,7 @@ export default function LearningPage() {
             <section id="learning-details" className="py-20 bg-white scroll-mt-20">
                 <Container>
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <motion.div {...fadeUp} className="lg:w-1/2 order-2 lg:order-1">
+                        <AnimatedDiv className="lg:w-1/2 order-2 lg:order-1">
                             <div className="relative">
                                 <div className="absolute -inset-3 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -75,9 +66,9 @@ export default function LearningPage() {
                                 </div>
 
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
 
-                        <motion.div {...fadeUp} className="lg:w-1/2 order-1 lg:order-2">
+                        <AnimatedDiv className="lg:w-1/2 order-1 lg:order-2">
 
                             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-6 leading-tight">
                                 Sertifika Destekleri ve <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Online Eğitim</span>
@@ -101,7 +92,7 @@ export default function LearningPage() {
                                     </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
                 </Container>
             </section>
@@ -110,7 +101,7 @@ export default function LearningPage() {
             <section className="py-20 bg-slate-50">
                 <Container>
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <motion.div {...fadeUp} className="lg:w-1/2">
+                        <AnimatedDiv className="lg:w-1/2">
 
                             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-6 leading-tight">
                                 Geleceğin Liderlerini <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-pink-600">Yetiştiriyoruz</span>
@@ -134,9 +125,9 @@ export default function LearningPage() {
                                     </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
 
-                        <motion.div {...fadeUp} className="lg:w-1/2">
+                        <AnimatedDiv className="lg:w-1/2">
                             <div className="relative">
                                 <div className="absolute -inset-3 bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -148,7 +139,7 @@ export default function LearningPage() {
                                     />
                                 </div>
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
                 </Container>
             </section>
@@ -157,7 +148,7 @@ export default function LearningPage() {
             <section className="py-20 bg-white">
                 <Container>
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <motion.div {...fadeUp} className="lg:w-1/2 order-2 lg:order-1">
+                        <AnimatedDiv className="lg:w-1/2 order-2 lg:order-1">
                             <div className="relative">
                                 <div className="absolute -inset-3 bg-gradient-to-r from-indigo-500/20 to-violet-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -170,9 +161,9 @@ export default function LearningPage() {
                                 </div>
 
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
 
-                        <motion.div {...fadeUp} className="lg:w-1/2 order-1 lg:order-2">
+                        <AnimatedDiv className="lg:w-1/2 order-1 lg:order-2">
 
                             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-6 leading-tight">
                                 İç Teknik Topluluklar & <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Paylaşım</span>
@@ -193,7 +184,7 @@ export default function LearningPage() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
                 </Container>
             </section>

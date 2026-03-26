@@ -1,5 +1,3 @@
-"use client"
-
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Button } from "@/components/ui/Button"
@@ -12,7 +10,7 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import ApplicationForm from "@/components/hr/ApplicationForm"
-import { motion } from "framer-motion"
+import { AnimatedDiv, FadeInLeft } from "@/components/ui/AnimatedElements"
 
 const Marquee = ({ text }: { text: string }) => {
     return (
@@ -76,27 +74,17 @@ export default function YoungEngineersPage() {
                         {/* Right: Image Composition */}
                         <div className="hidden lg:block relative h-[600px]">
                             {/* Main Image */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 }}
-                                className="absolute top-8 right-0 w-[380px] h-[460px] rounded-3xl overflow-hidden border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] z-10"
-                            >
+                            <AnimatedDiv className="absolute top-8 right-0 w-[380px] h-[460px] rounded-3xl overflow-hidden border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] z-10">
                                 <Image
                                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
                                     alt="Genç Mühendisler Ekibi"
                                     fill
                                     className="object-cover"
                                 />
-                            </motion.div>
+                            </AnimatedDiv>
 
                             {/* Secondary Image */}
-                            <motion.div
-                                initial={{ opacity: 0, x: -30 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.4 }}
-                                className="absolute bottom-12 left-0 w-[260px] h-[300px] rounded-2xl overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_rgba(124,58,237,1)] z-20 rotate-[-3deg]"
-                            >
+                            <FadeInLeft className="absolute bottom-12 left-0 w-[260px] h-[300px] rounded-2xl overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_rgba(124,58,237,1)] z-20 rotate-[-3deg]">
                                 <Image
                                     src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80"
                                     alt="Hackathon"
@@ -107,26 +95,8 @@ export default function YoungEngineersPage() {
                                 <div className="absolute bottom-4 left-4 bg-violet-500 text-white text-xs font-black px-3 py-1.5 rounded-full z-10">
                                     #Hackathon
                                 </div>
-                            </motion.div>
+                            </FadeInLeft>
 
-
-                            {/* Stats Glassmorphism Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 1.0 }}
-                                className="absolute top-[55%] right-[55%] bg-white/80 backdrop-blur-xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-4 z-30 rounded-xl"
-                            >
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center border-2 border-black">
-                                        <Users className="w-5 h-5 text-black" />
-                                    </div>
-                                    <div>
-                                        <div className="font-black text-lg leading-none">600+</div>
-                                        <div className="text-[10px] font-bold text-slate-500 uppercase">Genç Mühendis</div>
-                                    </div>
-                                </div>
-                            </motion.div>
                         </div>
                     </div>
                 </Container>
@@ -164,10 +134,9 @@ export default function YoungEngineersPage() {
                             { img: "/images/culture/culture-5.jpg", tag: "@TechTalks", title: "Uygulamalı öğrenim", color: "bg-emerald-600" },
                             { img: "/images/culture/culture-3.jpg", tag: "@HappyHour", title: "Takım çalışması", color: "bg-pink-600" },
                         ].map((story, i) => (
-                            <motion.div
+                            <div
                                 key={i}
-                                whileHover={{ y: -10, rotate: 2 }}
-                                className="snap-center shrink-0 w-[320px] h-[480px] relative group rounded-3xl overflow-hidden border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,0.1)] cursor-pointer bg-white"
+                                className="snap-center shrink-0 w-[320px] h-[480px] relative group rounded-3xl overflow-hidden border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,0.1)] cursor-pointer bg-white transition-transform duration-300 hover:-translate-y-2.5 hover:rotate-2"
                             >
                                 <Image
                                     src={story.img}
@@ -186,7 +155,7 @@ export default function YoungEngineersPage() {
                                 <div className="absolute bottom-8 left-6 right-6 text-white p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
                                     <h3 className="text-lg font-black mb-1">{story.title}</h3>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </Container>
@@ -364,14 +333,9 @@ export default function YoungEngineersPage() {
                             </div>
                         </div>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="bg-white text-slate-900 p-2 rounded-3xl"
-                        >
+                        <AnimatedDiv className="bg-white text-slate-900 p-2 rounded-3xl">
                             <ApplicationForm />
-                        </motion.div>
+                        </AnimatedDiv>
                     </div>
                 </Container>
             </div>

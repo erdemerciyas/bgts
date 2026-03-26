@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import Image from "next/image"
 import Link from "next/link"
 import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
@@ -11,6 +12,7 @@ import {
     Mic, FileAudio, FileText, BrainCircuit, Activity, Settings, CalendarCheck, CheckCircle2,
     Calendar, Bot, ArrowRight, Play, Database, Search, Terminal, MessageSquare, ListTodo, ShieldCheck, TrendingUp
 } from "lucide-react"
+import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
 /* ── Animations ─────────────────────────────────────── */
 const fadeUp = {
@@ -112,6 +114,11 @@ const values = [
 export default function MeetSensePage() {
     return (
         <div className="bg-white min-h-screen">
+            <SoftwareApplicationStructuredData
+                name="MeetSense"
+                description="Toplantıları kayıt, transkript ve özetleyen yapay zeka platformu."
+                url="/products/meetsense"
+            />
 
             {/* ═══════════ HERO ═══════════ */}
             <div className="relative pt-32 pb-32 overflow-hidden bg-slate-50">
@@ -135,9 +142,11 @@ export default function MeetSensePage() {
 
                         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2, duration: 0.8 }} className="relative">
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-10 rounded-2xl" />
-                            <img
+                            <Image
                                 src="/images/products/meetsense/dashboard-overview.png"
                                 alt="MeetSense Dashboard"
+                                width={800}
+                                height={500}
                                 className="w-full h-auto rounded-xl border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative z-0"
                             />
                         </motion.div>
@@ -262,7 +271,7 @@ export default function MeetSensePage() {
 
                                     {/* Image Integration */}
                                     <div className="mt-8 relative rounded-xl overflow-hidden border border-slate-100 shadow-sm group-hover:shadow-md transition-shadow">
-                                        <img src={feature.image} alt={feature.title} className="w-full h-full object-cover aspect-video group-hover:scale-105 transition-transform duration-700" />
+                                        <Image src={feature.image} alt={feature.title} width={600} height={340} className="w-full h-full object-cover aspect-video group-hover:scale-105 transition-transform duration-700" />
                                     </div>
                                 </div>
                             </motion.div>

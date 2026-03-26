@@ -9,10 +9,16 @@ import Image from "next/image"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
+import { ServiceStructuredData } from "@/components/seo/StructuredData"
 
 export default function DevOpsPage() {
     return (
         <>
+            <ServiceStructuredData
+                name="DevOps & Cloud Hizmetleri"
+                description="CI/CD pipeline, konteyner orkestrasyonu, bulut mühendisliği ve altyapı kodlaması."
+                url="/services/devops"
+            />
             <div className="bg-white min-h-screen">
 
                 <Hero

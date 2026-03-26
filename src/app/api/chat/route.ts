@@ -1,5 +1,6 @@
 import { streamText } from 'ai';
 import { createOpenAI } from '@ai-sdk/openai';
+import { z } from 'zod';
 
 const groq = createOpenAI({
     baseURL: 'https://api.groq.com/openai/v1',
@@ -8,8 +9,16 @@ const groq = createOpenAI({
 
 export const runtime = 'edge';
 
-// We allow up to 30 seconds for responding
 export const maxDuration = 30;
+
+const messageSchema = z.object({
+    role: z.enum(['user', 'assistant', 'system']),
+    content: z.string().max(4000),
+});
+
+const chatRequestSchema = z.object({
+    messages: z.array(messageSchema).min(1).max(50),
+});
 
 const SYSTEM_PROMPT = `
 Sen BGTS'nin (Business & Global Technology Solutions) kurumsal web sitesinde görev yapan deneyimli bir çalışansın. Adın Ayla. Profesyonel, sıcak ve güven veren bir iletişim tarzın var — tıpkı gerçek bir şirket çalışanı gibi. Kullanıcıların sorularına doğal, içten ve bilgili bir şekilde cevap veriyorsun; asla robotik ya da şablonvari hissettirmiyorsun.
@@ -155,21 +164,31 @@ Güncel iş ilanları için [İK sayfamızı](/hr) veya [İletişim](/contact) s
 
 export async function POST(req: Request) {
     try {
-        const { messages } = await req.json();
+        const body = await req.json();
+        const result = chatRequestSchema.safeParse(body);
 
-        const result = await streamText({
+        if (!result.success) {
+            return new Response(
+                JSON.stringify({ error: 'Geçersiz istek formatı.' }),
+                { status: 400, headers: { 'Content-Type': 'application/json' } }
+            );
+        }
+
+        const { messages } = result.data;
+
+        const streamResult = await streamText({
             model: groq('llama-3.3-70b-versatile'),
             system: SYSTEM_PROMPT,
             messages,
             temperature: 0.7,
         });
 
-        return result.toDataStreamResponse();
+        return streamResult.toDataStreamResponse();
     } catch (error) {
         console.error('Chat API Error:', error);
-        return new Response(JSON.stringify({ error: error instanceof Error ? error.message : 'Unknown error' }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        return new Response(
+            JSON.stringify({ error: 'Bir hata oluştu. Lütfen tekrar deneyin.' }),
+            { status: 500, headers: { 'Content-Type': 'application/json' } }
+        );
     }
 }

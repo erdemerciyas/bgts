@@ -1,35 +1,11 @@
-"use client"
-
 import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { Button } from "@/components/ui/Button"
 import { Users, UserPlus, Star, Award, Briefcase, Globe, TrendingUp, UserCheck, MapPin, Building2, PersonStanding, Play } from "lucide-react"
-import { motion } from "framer-motion"
+import { FadeInLeft, ScaleIn, StaggerContainer, StaggerItem, FadeInRight } from "@/components/ui/AnimatedElements"
 import Link from "next/link"
-
-// Animation variants
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1
-        }
-    }
-}
-
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.5
-        }
-    }
-}
 
 export default function InfographicsPage() {
     return (
@@ -46,11 +22,7 @@ export default function InfographicsPage() {
                 <Container className="relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         {/* Left Content */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
+                        <FadeInLeft>
                             <Heading variant="h1" className="text-white text-5xl lg:text-7xl font-black mb-6 leading-tight">
                                 Verinin <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Gücünü Keşfet</span>
@@ -58,17 +30,11 @@ export default function InfographicsPage() {
                             <Text variant="large" className="text-slate-300 mb-10 max-w-lg text-lg leading-relaxed">
                                 Sektörel içgörüler, büyüme rakamları ve insan kaynakları istatistikleriyle BGTS dünyasının derinliklerine inin.
                             </Text>
-                        </motion.div>
+                        </FadeInLeft>
 
                         {/* Right Visual - Abstract Charts Composition */}
                         <div className="relative h-[400px] lg:h-[500px] w-full flex items-center justify-center perspective-1000">
-                            {/* Floating Elements Animation */}
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8, rotateY: 10 }}
-                                animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                                transition={{ duration: 1, delay: 0.2 }}
-                                className="relative w-full h-full"
-                            >
+                            <ScaleIn className="relative w-full h-full">
                                 {/* Main Chart Card */}
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[220px] bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform duration-500">
                                     <div className="flex justify-between items-center mb-6">
@@ -77,11 +43,9 @@ export default function InfographicsPage() {
                                     </div>
                                     <div className="flex items-end gap-3 h-[100px] justify-between">
                                         {[40, 70, 50, 90, 60, 80].map((h, i) => (
-                                            <motion.div
+                                            <div
                                                 key={i}
-                                                initial={{ height: 0 }}
-                                                animate={{ height: `${h}%` }}
-                                                transition={{ duration: 1, delay: 0.5 + (i * 0.1) }}
+                                                style={{ height: `${h}%` }}
                                                 className="w-8 bg-gradient-to-t from-blue-600 to-cyan-400 rounded-t-md opacity-90"
                                             />
                                         ))}
@@ -90,11 +54,7 @@ export default function InfographicsPage() {
 
 
                                 {/* Floating Stat Card 2 */}
-                                <motion.div
-                                    animate={{ y: [10, -10, 10] }}
-                                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                    className="absolute bottom-[15%] left-[5%] bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-700 max-w-[180px]"
-                                >
+                                <div className="absolute bottom-[15%] left-[5%] bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-700 max-w-[180px] animate-bounce [animation-duration:6s]">
                                     <div className="flex items-center gap-3 mb-2">
                                         <div className="p-2 bg-blue-500/20 rounded-lg text-blue-400">
                                             <Briefcase className="w-5 h-5" />
@@ -102,8 +62,8 @@ export default function InfographicsPage() {
                                         <div className="text-2xl font-black text-white">1000+</div>
                                     </div>
                                     <div className="text-xs font-bold text-slate-400">Tamamlanan Proje</div>
-                                </motion.div>
-                            </motion.div>
+                                </div>
+                            </ScaleIn>
                         </div>
                     </div>
                 </Container>
@@ -123,15 +83,9 @@ export default function InfographicsPage() {
                         </Text>
                     </div>
 
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-                    >
+                    <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {/* Stat 1 */}
-                        <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-blue-50 hover:shadow-xl transition-all relative overflow-hidden group">
+                        <StaggerItem className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-blue-50 hover:shadow-xl transition-all relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                                 <Users className="w-24 h-24 text-blue-600" />
                             </div>
@@ -141,10 +95,10 @@ export default function InfographicsPage() {
                                 <h3 className="font-bold text-slate-800 text-lg mb-2">Aylık Mülakat</h3>
                                 <p className="text-slate-500 text-sm">Her ay 1000'den fazla adayla mülakat gerçekleştiriyoruz.</p>
                             </div>
-                        </motion.div>
+                        </StaggerItem>
 
                         {/* Stat 2 */}
-                        <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-blue-50 hover:shadow-xl transition-all relative overflow-hidden group">
+                        <StaggerItem className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-blue-50 hover:shadow-xl transition-all relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                                 <UserCheck className="w-24 h-24 text-emerald-600" />
                             </div>
@@ -154,10 +108,10 @@ export default function InfographicsPage() {
                                 <h3 className="font-bold text-slate-800 text-lg mb-2">Çalışan Tavsiyesi</h3>
                                 <p className="text-slate-500 text-sm">Ekibimizin %36'sı çalışan tavsiyesiyle aramıza katılıyor.</p>
                             </div>
-                        </motion.div>
+                        </StaggerItem>
 
                         {/* Stat 3 */}
-                        <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-blue-50 hover:shadow-xl transition-all relative overflow-hidden group">
+                        <StaggerItem className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-blue-50 hover:shadow-xl transition-all relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                                 <Star className="w-24 h-24 text-amber-500" />
                             </div>
@@ -165,12 +119,12 @@ export default function InfographicsPage() {
                                 <div className="text-4xl lg:text-5xl font-black text-amber-500 mb-2">%94</div>
                                 <div className="h-1 w-12 bg-amber-200 mb-4 rounded-full" />
                                 <h3 className="font-bold text-slate-800 text-lg mb-2">Mülakat Deneyimi</h3>
-                                <p className="text-slate-500 text-sm">Adayların %94'ü mülakat deneyimini “üstün” olarak değerlendiriyor.</p>
+                                <p className="text-slate-500 text-sm">Adayların %94'ü mülakat deneyimini "üstün" olarak değerlendiriyor.</p>
                             </div>
-                        </motion.div>
+                        </StaggerItem>
 
                         {/* Stat 4 */}
-                        <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-blue-50 hover:shadow-xl transition-all relative overflow-hidden group">
+                        <StaggerItem className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-blue-50 hover:shadow-xl transition-all relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                                 <TrendingUp className="w-24 h-24 text-violet-600" />
                             </div>
@@ -180,8 +134,8 @@ export default function InfographicsPage() {
                                 <h3 className="font-bold text-slate-800 text-lg mb-2">Gelişim</h3>
                                 <p className="text-slate-500 text-sm">Son 3 ayda 200'e yakın danışmanımız 27 farklı kategoride kendini geliştirdi.</p>
                             </div>
-                        </motion.div>
-                    </motion.div>
+                        </StaggerItem>
+                    </StaggerContainer>
 
                     <div className="mt-12 flex justify-center">
                         <Link
@@ -206,7 +160,7 @@ export default function InfographicsPage() {
                     <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
                         <div>
                             <Heading variant="h2" className="text-slate-900 mb-6">
-                                BilgeAdam Teknoloji'de Ekip Kalitesine İnanıyoruz
+                                BGTS'de Ekip Kalitesine İnanıyoruz
                             </Heading>
                             <Text variant="large" className="text-slate-600 mb-8">
                                 Alanında uzman mühendislerden oluşan kadromuzla, farklı şehirlerde çalışan yetenekleri ortak bir vizyon etrafında buluşturuyoruz. Güçlü ekip yapımızın, yüksek müşteri memnuniyetinin temelini oluşturduğunu çok iyi biliyoruz.
@@ -238,12 +192,7 @@ export default function InfographicsPage() {
 
                         <div className="grid gap-6">
                             {/* Gender Distribution */}
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200"
-                            >
+                            <FadeInRight className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                                 <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-2">
                                     <Award className="w-5 h-5 text-indigo-600" /> Fırsat Eşitliği
                                 </h3>
@@ -281,16 +230,10 @@ export default function InfographicsPage() {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </FadeInRight>
 
                             {/* Geo Distribution */}
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 }}
-                                className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200"
-                            >
+                            <FadeInRight delay={0.1} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                                 <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-2">
                                     <MapPin className="w-5 h-5 text-indigo-600" /> Coğrafi Dağılım
                                 </h3>
@@ -314,7 +257,7 @@ export default function InfographicsPage() {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </FadeInRight>
                         </div>
                     </div>
 

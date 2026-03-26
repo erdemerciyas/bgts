@@ -77,8 +77,8 @@ export default function TelecomPage() {
         <>
             <div className="bg-white min-h-screen">
                 <Hero
-                    title="Telekomünikasyon & Dijital Platform Hizmetleri"
-                    subtitle="Yüksek trafikli ağlar ve kritik servisler için uçtan uca dijital platform yönetimi, güçlü entegrasyonlar ve 7/24 operasyonel mükemmeliyet."
+                    title="Telekomünikasyon için Ölçeklenebilir ve Kesintisiz Dijital Platformlar"
+                    subtitle="Yüksek trafik altında çalışan, gerçek zamanlı veri işleyen ve 7/24 kesintisiz hizmet sunan telekom altyapıları ve dijital platformlar geliştiriyoruz."
                     className="bg-slate-900"
                     backgroundImage="/images/headers/I53A6349.jpg"
                 />
@@ -90,9 +90,6 @@ export default function TelecomPage() {
                     <Container>
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <motion.div {...fadeUp}>
-                                <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                    <Radio className="w-4 h-4" /> Genel Bakış
-                                </div>
                                 <Heading variant="h2" className="mb-6 text-slate-900 !text-4xl !font-bold">
                                     Telekom Sektörüne Özel Dijital Platform ve MSP Hizmetleri
                                 </Heading>
@@ -105,7 +102,7 @@ export default function TelecomPage() {
                                         Bu alanda uzun yıllara dayanan deneyimimizle, Türkiye'nin lider operatörlerinin merkezi sistemleri,
                                         içerik platformları ve saha iletişim uygulamaları için uçtan uca teknoloji hizmetleri sunuyoruz.
                                     </p>
-                                    <p className="font-semibold text-indigo-700 bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+                                    <p className="font-semibold text-slate-700">
                                         Operatörlerin dijital platformlarını daha güvenli, hızlı, ölçeklenebilir ve operasyonel olarak sürdürülebilir hale getiriyoruz.
                                     </p>
                                 </div>

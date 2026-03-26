@@ -1,15 +1,6 @@
-"use client"
-
 import { Container } from "@/components/ui/Container"
-import { motion } from "framer-motion"
+import { AnimatedDiv, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedElements"
 import { Cloud } from "lucide-react"
-
-const fadeUp = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.5 }
-}
 
 const PARTNERS = [
     {
@@ -25,7 +16,7 @@ const PARTNERS = [
     },
     {
         name: "Microsoft",
-        description: "Microsoft teknolojileri ile ekiplerinizi daha verimli hale getirin, iş akışlarınızı kolaylaştırın ve BT altyapınızı modernleştirin. Microsoft’un güvenilir iş ortağı olarak, uzman danışmanlarımızla bulut hizmetlerinden siber güvenliğe kadar uçtan uca çözümler sunuyoruz.",
+        description: "Microsoft teknolojileri ile ekiplerinizi daha verimli hale getirin, iş akışlarınızı kolaylaştırın ve BT altyapınızı modernleştirin. Microsoft'un güvenilir iş ortağı olarak, uzman danışmanlarımızla bulut hizmetlerinden siber güvenliğe kadar uçtan uca çözümler sunuyoruz.",
         icon: (
             <svg viewBox="0 0 448 512" fill="currentColor" className="w-10 h-10">
                 <path d="M0 32h214.6v214.6H0V32zm233.4 0H448v214.6H233.4V32zM0 265.4h214.6V480H0V265.4zm233.4 0H448V480H233.4V265.4z" />
@@ -61,7 +52,7 @@ const PARTNERS = [
     },
     {
         name: "Temenos",
-        description: "BGTS olarak, dünyanın lider temel bankacılı platformu Temenos iş birliğiyle finans kuruluşlarının modernleşmesini ve ölçeklenmesini destekliyoruz. Sertifikalı uzmanlarımız kurulum ve entegrasyondan uzun vadeli desteğe kadar, Temenos’un tüm potansiyelinden yararlanmanızı sağlayan uçtan uca hizmetler sunar.",
+        description: "BGTS olarak, dünyanın lider temel bankacılı platformu Temenos iş birliğiyle finans kuruluşlarının modernleşmesini ve ölçeklenmesini destekliyoruz. Sertifikalı uzmanlarımız kurulum ve entegrasyondan uzun vadeli desteğe kadar, Temenos'un tüm potansiyelinden yararlanmanızı sağlayan uçtan uca hizmetler sunar.",
         icon: (
             <svg viewBox="0 0 300 300" fill="currentColor" className="w-10 h-10">
                 <path d="M160.56,3.59c72.16,6.47,129.75,62.48,135.04,136.43.45,6.29.42,13.09-.02,19.53-5.04,72.96-63.06,131.05-136.04,136.03-6.43.44-13.24.49-19.53.03C66.07,290.28,10.03,232.72,3.59,160.56v-21.69C10.38,65.83,65.83,10.37,138.87,3.59h21.69ZM198.14,207.16c-9.17,3.79-17.51,5.44-26.52,3.37-8.46-1.94-15.28-8.64-15.3-17.92l-.16-72.04,44.8-.04-.06-25.85-44.57-.03-.04-36.18-37.47.05-.02,36.08-23.8.15.06,25.78,23.74.1.04,75.84c0,9.64,2.53,18.73,7.9,26.55,15,21.86,49.97,21.18,71.49,11.61l-.08-27.46h0Z" />
@@ -81,7 +72,7 @@ const PARTNERS = [
     },
     {
         name: "Mendix",
-        description: "Mendix’in düşük kodlu platformu ile dijital inovasyonu hızlandırın. Yapay zeka destekli Chatbot’lardan müşteri portallarına kadar birçok özel uygulama geliştirerek, hızlı ve ölçeklenebilir çözümler sunuyoruz.",
+        description: "Mendix'in düşük kodlu platformu ile dijital inovasyonu hızlandırın. Yapay zeka destekli Chatbot'lardan müşteri portallarına kadar birçok özel uygulama geliştirerek, hızlı ve ölçeklenebilir çözümler sunuyoruz.",
         icon: (
             <svg viewBox="0 0 463.68 460" fill="currentColor" className="w-10 h-10">
                 <path d="M463.68,69.89v320.25l-2.93,14.07c-6.93,24.79-26.99,44.8-51.48,52.38l-16.07,3.4H70.47c-37.39-3.82-67.62-33.69-70.47-71.41V71.44C2.91,32.97,34.35,2.7,72.61,0l319.04.03c36.66,2.52,69.03,32.85,72.03,69.85ZM71.58,22.46c-26.36,2.8-47.3,24.39-49.32,50.83l-.03,312.85c1.87,27.84,23.9,49.68,51.62,51.63h316.6c27.48-2.34,49.15-23.99,51.01-51.63V73.88c-1.85-27.52-23.64-49.28-51.01-51.62l-318.86.21ZM95.2,308.53l1.24,9.27c8.79-12.34,26.75-15.06,38.65-5.58l6.78,7.44c7.98-15.72,35.26-17.56,46.05-4.01,2.6,3.26,6.2,11.39,6.2,15.44v46.06l20.82-31.84-22.05-36.79h25.66l11.14,22.26,10.81-22.26h26.58l-22.02,36.79,23.88,38.02h-25.66l-13.59-23.5-12.99,23.5h-44.51l-.93-.93v-46.99c0-.62-1.47-4.07-1.96-4.84-3.95-6.31-14.95-5.21-18.96.62-1.8,2.62-3.81,9.8-3.81,12.88v39.26h-22.26v-47.3c0-.43-1.57-4.81-1.95-5.47-3.68-6.36-14.97-5.11-18.97.63-1.68,2.41-3.81,8.82-3.81,11.64v40.5h-22.26v-74.81h17.93Z" />
@@ -101,29 +92,25 @@ export default function PartnershipsPage() {
                 <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-500/15 rounded-full blur-[100px] pointer-events-none transform translate-y-1/4" />
 
                 <Container className="relative z-10 text-center">
-                    <motion.div {...fadeUp} className="max-w-4xl mx-auto">
+                    <AnimatedDiv className="max-w-4xl mx-auto">
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight mb-6">
                             Teknoloji Yatırımlarınızdan <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Maksimum Faydayı Sağlayın</span>
                         </h1>
                         <p className="text-lg lg:text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-                            BGTS, kurumsal platform çözümleriyle verimliliği artırır, iş birliğini güçlendirir ve dijital dönüşümü hızlandırır. Microsoft’un güçlü altyapısından AWS’in ölçeklenebilir bulut çözümlerine, ServiceNow’ın operasyonel verimlilik kazandıran otomasyonlarından Atlassian, Xurrent ve Mendix platformlarının sunduğu esneklik ve çevikliğe kadar farklı alanlarda çözümler sağlıyoruz.
+                            BGTS, kurumsal platform çözümleriyle verimliliği artırır, iş birliğini güçlendirir ve dijital dönüşümü hızlandırır. Microsoft'un güçlü altyapısından AWS'in ölçeklenebilir bulut çözümlerine, ServiceNow'ın operasyonel verimlilik kazandıran otomasyonlarından Atlassian, Xurrent ve Mendix platformlarının sunduğu esneklik ve çevikliğe kadar farklı alanlarda çözümler sağlıyoruz.
                         </p>
-                    </motion.div>
+                    </AnimatedDiv>
                 </Container>
             </section>
 
             {/* ═══════════ PARTNERS GRID ═══════════ */}
             <section className="py-20">
                 <Container>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {PARTNERS.map((partner, index) => (
-                            <motion.div
+                            <StaggerItem
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 flex flex-col items-center text-center group"
                             >
                                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${partner.color} flex items-center justify-center text-white mb-6 shadow-lg shadow-current/20 group-hover:scale-110 transition-transform duration-300`}>
@@ -133,9 +120,9 @@ export default function PartnershipsPage() {
                                 <p className="text-slate-600 leading-relaxed text-sm flex-1">
                                     {partner.description}
                                 </p>
-                            </motion.div>
+                            </StaggerItem>
                         ))}
-                    </div>
+                    </StaggerContainer>
                 </Container>
             </section>
         </div>

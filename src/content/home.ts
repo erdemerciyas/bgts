@@ -1,31 +1,6 @@
 import { BarChart, Users, Globe, ShieldCheck } from "lucide-react";
 
 export const HOME_CONTENT = {
-    hero: {
-        title: "Business & Global Technology Solutions",
-        subtitle: "Kritik yazılım projeleri, yönetilen hizmetler ve dijital dönüşüm çözümleriyle kurumunuzun stratejik teknoloji ortağıyız.",
-        badge: "Global Teknoloji Ortağı",
-        ctaText: "Hizmetleri Keşfedin",
-        ctaLink: "#",
-        image: "/images/headers/teknoloji-cozum-ortagi.jpg",
-        videoSrc: "https://play.vidyard.com/TrGTy95HjNi21m7LAtH5e8?autoplay=1&embed_button=0&viral_sharing=0&loop=1&controls=0&muted=1"
-    },
-    socialProof: {
-        title: "Türkiye'nin En Büyük Kurumlarının Güvenilir İş Ortağı",
-        logos: [
-            { name: "Akbank", src: "" },
-            { name: "Türk Telekom", src: "" },
-            { name: "Aselsan", src: "" },
-            { name: "Trendyol", src: "" },
-            { name: "Migros", src: "" },
-            { name: "Vodafone", src: "" },
-            { name: "Ziraat Bankası", src: "" },
-            { name: "Turkcell", src: "" },
-            { name: "Garanti BBVA", src: "" },
-            { name: "TurkNet", src: "" },
-            { name: "Mercedes-Benz", src: "" }
-        ]
-    },
     servicesSummary: {
         badge: "Hizmetlerimiz",
         heading: "Kurumsal Ölçekte\nGüvenilir Teknoloji Ortağınız",
@@ -122,19 +97,5 @@ export const HOME_CONTENT = {
                 icon: ShieldCheck
             }
         ]
-    },
-    careers: {
-        badge: "Kariyer & Kültür",
-        heading: "Geleceği Birlikte Şekillendirelim",
-        description: "Şeffaf iletişim, takım ruhu ve sürekli öğrenme tutkusuyla büyüyen global bir aileyiz. Genç Yetenek Programlarımız ve her seviyeye uygun kariyer yollarımızla potansiyelini keşfet.",
-        image: "/images/home/kariyer-ve-kultur.jpg",
-        programs: [
-            { title: "Genç Yetenekler", desc: "Staj, Bootcamp ve Eğitim programları.", type: "secondary" },
-            { title: "Kariyer Yolları", desc: "Teknik ve Yönetsel şeffaf ilerleme.", type: "tertiary" }
-        ],
-        ctaText: "Kariyer Fırsatları",
-        ctaLink: "/hr",
-        badgeText: "Great Place to Work",
-        badgeDesc: "Çalışan odaklı kültürümüzle sektörde fark yaratıyoruz."
     }
 };

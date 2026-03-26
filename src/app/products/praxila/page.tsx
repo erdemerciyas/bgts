@@ -15,6 +15,7 @@ import {
     Package, Kanban, Bot, BrainCircuit, MessageSquare,
     FolderKanban, Target, Wallet, Code, CalendarClock
 } from "lucide-react"
+import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
 /* ── Animations ─────────────────────────────────────── */
 const fadeUp = {
@@ -119,6 +120,11 @@ const serviceModules = [
 export default function PraxilaPage() {
     return (
         <div className="bg-white min-h-screen">
+            <SoftwareApplicationStructuredData
+                name="Praxila"
+                description="Kurumsal operasyon süreçlerini otomatikleştiren platform."
+                url="/products/praxila"
+            />
 
             {/* ═══════════ HERO ═══════════ */}
             <Hero

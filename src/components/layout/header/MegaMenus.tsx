@@ -457,7 +457,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                         <Quote className="w-5 h-5 fill-current" />
                     </div>
                     <h4 className="text-xl font-bold text-white mb-1">Başarı Hikayeleri</h4>
-                    <p className="text-pink-100 text-xs line-clamp-2">Gerçek projeler, gerçek sonuçlar ve ilham veren kariyerler.</p>
+                    <p className="text-pink-100 text-xs line-clamp-2">Gerçek projeler, ölçülebilir sonuçlar ve başarıyla tamamlanan dönüşüm hikayeleri.</p>
                 </div>
 
                 <div className="mt-4 flex -space-x-3 items-center">
@@ -489,7 +489,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                 <div className="relative z-10 flex flex-col items-center">
                     <Linkedin className="w-12 h-12 text-white mb-3" />
                     <h4 className="font-bold text-white text-lg">Bizi Takip Edin</h4>
-                    <p className="text-blue-100 text-xs mt-1 mb-4">Teknoloji dünyasından güncel haberler.</p>
+                    <p className="text-blue-100 text-xs mt-1 mb-4">Teknoloji, etkinlikler ve güncel gelişmelerden haberdar olun.</p>
 
                     <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold group-hover:bg-white group-hover:text-[#0077b5] transition-colors">
                         @bilgeadam
@@ -515,7 +515,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                         İş Ortakları
                     </h4>
                     <p className="text-slate-400 text-xs mb-4">
-                        Güçlü teknoloji ekosistemimiz.
+                        Güçlü iş ortaklıklarıyla oluşturduğumuz teknoloji ekosistemi.
                     </p>
                     <div className="flex items-center text-xs font-bold text-slate-300 group-hover:text-white mt-auto">
                         İncele <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -540,7 +540,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                         <BarChart3 className="w-6 h-6" />
                     </div>
                     <h4 className="font-bold text-white">İnfografikler</h4>
-                    <p className="text-indigo-100 text-xs mt-1">Sektörel veriler ve trend analizleri.</p>
+                    <p className="text-indigo-100 text-xs mt-1">Sektörel veriler, içgörüler ve trend analizleri.</p>
                 </div>
 
                 <div className="mt-4 flex items-center text-xs font-bold text-white relative z-10">

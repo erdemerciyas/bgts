@@ -12,12 +12,27 @@ import {
 } from "lucide-react"
 import { AnimatePresence } from "framer-motion"
 import { NAV_ITEMS } from "./header/data"
-import {
-    ServicesMenu, IndustriesMenu, ProductsMenu,
-    TalentMenu, ResourcesMenu, CareersMenu
-} from "./header/MegaMenus"
 import { Container } from "@/components/ui/Container"
-import { SearchOverlay } from "./search/SearchOverlay"
+
+const MegaMenus = dynamic(() => import('./header/MegaMenus').then(mod => ({
+    default: ({ type, closeMenu }: { type: string; closeMenu: () => void }) => {
+        const menus: Record<string, React.ComponentType<{ closeMenu: () => void }>> = {
+            services: mod.ServicesMenu,
+            industries: mod.IndustriesMenu,
+            products: mod.ProductsMenu,
+            talent: mod.TalentMenu,
+            resources: mod.ResourcesMenu,
+            careers: mod.CareersMenu,
+        }
+        const MenuComponent = menus[type]
+        return MenuComponent ? <MenuComponent closeMenu={closeMenu} /> : null
+    }
+})), { ssr: false })
+
+const SearchOverlay = dynamic(
+    () => import('./search/SearchOverlay').then(mod => ({ default: mod.SearchOverlay })),
+    { ssr: false }
+)
 
 // Lazy load mobile nav for better performance
 const MobileNav = dynamic(() => import('./MobileNav'), {
@@ -138,12 +153,7 @@ export default function Header() {
                                 onMouseLeave={() => setHoveredNav(null)}
                                 className="absolute left-0 top-full w-full"
                             >
-                                {hoveredNav === "services" && <ServicesMenu closeMenu={() => setHoveredNav(null)} />}
-                                {hoveredNav === "industries" && <IndustriesMenu closeMenu={() => setHoveredNav(null)} />}
-                                {hoveredNav === "products" && <ProductsMenu closeMenu={() => setHoveredNav(null)} />}
-                                {hoveredNav === "talent" && <TalentMenu closeMenu={() => setHoveredNav(null)} />}
-                                {hoveredNav === "resources" && <ResourcesMenu closeMenu={() => setHoveredNav(null)} />}
-                                {hoveredNav === "careers" && <CareersMenu closeMenu={() => setHoveredNav(null)} />}
+                                <MegaMenus type={hoveredNav} closeMenu={() => setHoveredNav(null)} />
                             </div>
                         )}
                     </AnimatePresence>

@@ -24,9 +24,6 @@
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "nodemailer": "^8.0.1",
-    "officeparser": "^6.0.4",
-    "pdf-parse": "^2.4.5",
-    "pdf2json": "^4.0.2",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-hook-form": "^7.69.0",
@@ -53,8 +50,7 @@
     "typescript": "^5",
     "vitest": "^4.0.16"
   },
-  "description": "![BGTS Cover](/public/images/headers/teknoloji-servisleri-genel.jpg)",
-  "main": "debug_pdf.js",
+  "description": "BGTS - Business & Global Technology Solutions kurumsal web sitesi",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/erdemerciyas/bgts.git"

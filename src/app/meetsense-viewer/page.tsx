@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "MeetSense Viewer | BGTS",
+  description:
+    "MeetSense AI çözümünü keşfedin. Toplantılarınızı yapay zeka ile analiz eden akıllı asistan.",
+  alternates: { canonical: "https://bgts.com.tr/meetsense-viewer" },
+  openGraph: {
+    title: "MeetSense Viewer | BGTS",
+    description:
+      "MeetSense AI çözümünü keşfedin. Toplantılarınızı yapay zeka ile analiz eden akıllı asistan.",
+    url: "https://bgts.com.tr/meetsense-viewer",
+  },
+};
 
 export default function MeetSenseViewer() {
   const slides = Array.from({ length: 12 }, (_, i) => i + 1);

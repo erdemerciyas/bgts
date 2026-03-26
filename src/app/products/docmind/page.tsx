@@ -1,12 +1,34 @@
+import type { Metadata } from "next"
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+    title: "DocMind - Otomatik Teknik Dokümantasyon | BGTS",
+    description:
+        "Kaynak kodunuzdan yapay zeka ile otomatik teknik dokümantasyon üreten akıllı platform.",
+    alternates: {
+        canonical: "https://bgts.com.tr/products/docmind",
+    },
+    openGraph: {
+        title: "DocMind - Otomatik Teknik Dokümantasyon | BGTS",
+        description:
+            "Kaynak kodunuzdan yapay zeka ile otomatik teknik dokümantasyon üreten akıllı platform.",
+        url: "https://bgts.com.tr/products/docmind",
+    },
+}
 import { Container } from "@/components/ui/Container"
 import { Code, FileJson, GitBranch, Settings, ArrowRight, Book, Terminal } from "lucide-react"
+import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
 export default function DocMindPage() {
     return (
         <div className="bg-slate-50">
+            <SoftwareApplicationStructuredData
+                name="DocMind"
+                description="Kod tabanından otomatik teknik dokümantasyon üreten araç."
+                url="/products/docmind"
+            />
             {/* HERO SECTION */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 text-white">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>

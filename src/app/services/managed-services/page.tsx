@@ -12,6 +12,7 @@ import { ArrowRight, CheckCircle2, ChevronRight, Layers, CheckSquare, Settings, 
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { ServiceStructuredData } from "@/components/seo/StructuredData"
 
 export default function ManagedServicesPage() {
     const { hero, pillars, capabilities } = MANAGED_SERVICES_CONTENT;
@@ -385,6 +386,11 @@ export default function ManagedServicesPage() {
 
     return (
         <>
+            <ServiceStructuredData
+                name="Yönetilen Hizmetler (MSP)"
+                description="7/24 altyapı izleme, veri merkezi yönetimi, ITSM süreçleri ve DevOps as a Service."
+                url="/services/managed-services"
+            />
             <Hero
                 title={hero.title}
                 subtitle={hero.subtitle}

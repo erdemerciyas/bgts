@@ -1,12 +1,34 @@
+import type { Metadata } from "next"
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+    title: "Doc2Bot - Akıllı Doküman Asistanı | BGTS",
+    description:
+        "Kurum içi dokümanlarınızı yapay zeka destekli chatbot ile 7/24 erişilebilir bilgi kaynağına dönüştürün.",
+    alternates: {
+        canonical: "https://bgts.com.tr/products/doc2bot",
+    },
+    openGraph: {
+        title: "Doc2Bot - Akıllı Doküman Asistanı | BGTS",
+        description:
+            "Kurum içi dokümanlarınızı yapay zeka destekli chatbot ile 7/24 erişilebilir bilgi kaynağına dönüştürün.",
+        url: "https://bgts.com.tr/products/doc2bot",
+    },
+}
 import { Container } from "@/components/ui/Container"
 import { Bot, Database, Globe, Zap, MessageSquare, ArrowRight, BookOpen } from "lucide-react"
+import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
 export default function Doc2BotPage() {
     return (
         <div className="bg-white">
+            <SoftwareApplicationStructuredData
+                name="Doc2Bot"
+                description="Dokümanlardan akıllı chatbot oluşturan platform."
+                url="/products/doc2bot"
+            />
             {/* HERO SECTION */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900 text-white">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
@@ -124,6 +146,6 @@ export default function Doc2BotPage() {
             </section>
 
 
-        </div >
+        </div>
     )
 }

@@ -14,16 +14,17 @@ export function OrganizationStructuredData() {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+90-212-XXX-XXXX',
       contactType: 'customer service',
-      email: 'info@bgts.com',
+      email: 'info@bgts.com.tr',
+      availableLanguage: ['Turkish', 'English'],
     },
     sameAs: [
       'https://www.linkedin.com/company/bgts',
-      'https://twitter.com/bgts',
-      'https://www.instagram.com/bgts',
     ],
-    numberOfEmployees: 1400,
+    numberOfEmployees: {
+      '@type': 'QuantitativeValue',
+      value: 1400,
+    },
     foundingDate: '1997',
   }
 
@@ -42,11 +43,7 @@ export function WebSiteStructuredData() {
     name: 'BGTS - Business & Global Technology Solutions',
     url: 'https://bgts.com.tr',
     description: 'Finans, Savunma, Perakende ve Telekom sektörleri için lider teknoloji ortağı. 25 yılı aşkın deneyimle, 1,400+ mühendis ile dijital dönüşüm çözümleri sunuyoruz.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://bgts.com.tr/search?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
+    inLanguage: 'tr',
   }
 
   return (
@@ -71,6 +68,74 @@ export function BreadcrumbStructuredData({ items }: BreadcrumbProps) {
       name: item.name,
       item: `https://bgts.com.tr${item.url}`,
     })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  )
+}
+
+interface ProductSchemaProps {
+  name: string
+  description: string
+  url: string
+}
+
+export function SoftwareApplicationStructuredData({ name, description, url }: ProductSchemaProps) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name,
+    description,
+    url: `https://bgts.com.tr${url}`,
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'TRY',
+      availability: 'https://schema.org/OnlineOnly',
+    },
+    creator: {
+      '@type': 'Organization',
+      name: 'BGTS',
+      url: 'https://bgts.com.tr',
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  )
+}
+
+interface ServiceSchemaProps {
+  name: string
+  description: string
+  url: string
+}
+
+export function ServiceStructuredData({ name, description, url }: ServiceSchemaProps) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    url: `https://bgts.com.tr${url}`,
+    provider: {
+      '@type': 'Organization',
+      name: 'BGTS - Business & Global Technology Solutions',
+      url: 'https://bgts.com.tr',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Turkey',
+    },
   }
 
   return (

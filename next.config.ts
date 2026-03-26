@@ -43,13 +43,13 @@ const nextConfig: NextConfig = {
             value: 'origin-when-cross-origin'
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.unsplash.com https://i.pravatar.cc https://*.vidyard.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://api.groq.com; frame-src 'self' https://*.vidyard.com;"
           },
-          // {
-          //   key: 'Content-Security-Policy',
-          //   value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: *.unsplash.com *.vidyard.com; font-src 'self' data:; connect-src 'self' *.google-analytics.com *.googletagmanager.com; frame-src 'self' *.vidyard.com;"
-          // },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+          },
         ],
       },
     ]

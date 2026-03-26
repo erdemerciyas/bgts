@@ -156,8 +156,7 @@ bgts-web/
 │   │
 │   └── lib/
 │       ├── email.ts         # Nodemailer transporter
-│       ├── utils.ts         # cn() class merge yardımcısı
-│       └── animations.ts    # Framer Motion preset'leri
+│       └── utils.ts         # cn() class merge yardımcısı
 │
 ├── FRONTEND_STANDARDS.md    # Tasarım sistemi dokümantasyonu
 ├── next.config.ts
@@ -405,6 +404,7 @@ Test altyapısı: **Vitest** + **@testing-library/react** + **jsdom**
 
 | Versiyon | Öne Çıkan Özellik |
 |----------|-------------------|
+| v0.17.0 | Kapsamlı SEO ve içerik revizyonu: tüm sayfalar için metadata layout dosyaları, sektör sayfalarında başlık/açıklama güncellemeleri ve tag temizliği, mega menü alt metin revizyonları, infografik sayfası BGTS markasına uyumlandırma, sosyal katkı görseli güncelleme, 15+ kullanılmayan bileşen temizliği, AnimatedElements bileşeni, middleware eklenmesi, ürün sayfalarına JSON-LD yapılandırılmış veri eklenmesi. |
 | v0.16.0 | Genç Mühendis Programı revizyonları: program başlıkları kısaltıldı, içerikler ve hedefler güncellendi, story kart metin boyutu düzeltildi, gereksiz ikon kaldırıldı. |
 | v0.15.0 | Homepage slider ve içerik revizyonları, footer ofis güncellemesi, sektör ve iş modeli metin düzeltmeleri, hizmet sayfalarında görsel daraltma + gradient mask efekti, chatbot geçici olarak pasife alındı. |
 | v0.14.0 | Hero alanları optimizasyonu, slider ve içerik iyileştirmeleri |

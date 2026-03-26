@@ -1,33 +1,46 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { sendEmail } from "@/lib/email";
+import { escapeHtml } from "@/lib/utils";
+
+const contactSchema = z.object({
+    name: z.string().min(2).max(100),
+    email: z.string().email().max(254),
+    company: z.string().max(200).optional().default(""),
+    phone: z.string().max(20).optional().default(""),
+    message: z.string().min(10).max(2000),
+    consent: z.boolean(),
+});
 
 export async function POST(req: Request) {
     try {
         const data = await req.json();
-        const { name, email, company, phone, message, consent } = data;
+        const result = contactSchema.safeParse(data);
 
-        if (!name || !email || !message) {
+        if (!result.success) {
             return NextResponse.json(
-                { message: "Eksik bilgi gonderildi." },
+                { message: "Geçersiz form verisi.", errors: result.error.flatten().fieldErrors },
                 { status: 400 }
             );
         }
 
+        const { name, email, company, phone, message, consent } = result.data;
+
         const html = `
       <h2>Yeni İletişim Formu Mesajı</h2>
-      <p><strong>Ad Soyad:</strong> ${name}</p>
-      <p><strong>E-posta:</strong> ${email}</p>
-      <p><strong>Şirket:</strong> ${company || "-"}</p>
-      <p><strong>Telefon:</strong> ${phone || "-"}</p>
+      <p><strong>Ad Soyad:</strong> ${escapeHtml(name)}</p>
+      <p><strong>E-posta:</strong> ${escapeHtml(email)}</p>
+      <p><strong>Şirket:</strong> ${escapeHtml(company || "-")}</p>
+      <p><strong>Telefon:</strong> ${escapeHtml(phone || "-")}</p>
       <p><strong>KVKK Onayı:</strong> ${consent ? "Evet" : "Hayır"}</p>
       <hr />
       <h3>Mesaj:</h3>
-      <p>${message.replace(/\n/g, "<br>")}</p>
+      <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
     `;
 
         await sendEmail({
             to: process.env.CONTACT_EMAIL || "contact@bgts.com.tr",
-            subject: `İletişim Formu: ${name} (${company || 'Bireysel'})`,
+            subject: `İletişim Formu: ${escapeHtml(name)} (${escapeHtml(company || 'Bireysel')})`,
             html,
             replyTo: email,
         });

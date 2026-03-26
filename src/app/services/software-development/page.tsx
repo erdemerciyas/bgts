@@ -12,6 +12,7 @@ import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { ServiceStructuredData } from "@/components/seo/StructuredData"
 
 export default function SoftwareDevelopmentPage() {
     const { hero, sectoralDomains, technicalDomains, developmentDomains } = SOFTWARE_DEV_CONTENT;
@@ -228,6 +229,11 @@ export default function SoftwareDevelopmentPage() {
 
     return (
         <>
+            <ServiceStructuredData
+                name="Yazılım Geliştirme Hizmetleri"
+                description="Bankacılık, savunma ve telekom sektörleri için özel yazılım geliştirme, sistem modernizasyonu ve yapay zeka entegrasyonu."
+                url="/services/software-development"
+            />
             <Hero
                 title={hero.title}
                 subtitle={hero.subtitle}
