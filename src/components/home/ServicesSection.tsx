@@ -34,9 +34,9 @@ export function ServicesSection() {
                         <div className="lg:w-1/2 relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-lg group">
                             <Image
                                 src={image}
-                                alt="Team Meeting"
+                                alt="BGTS Ödüller ve Başarılar"
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
                         </div>

@@ -31,7 +31,7 @@ export const HOME_CONTENT = {
         heading: "Kurumsal Ölçekte\nGüvenilir Teknoloji Ortağınız",
         description: "30+ yıllık deneyimimiz ve 1000+ proje tecrübemizle, operasyonlarınızı güvenle büyütüyoruz.",
         ctaText: "İş Modellerimizi Keşfedin",
-        image: "/images/headers/teknoloji-cozum-ortagi.jpg",
+        image: "/images/home/bgts-oduller.jpg",
         sections: [
             {
                 id: "managed-services",
