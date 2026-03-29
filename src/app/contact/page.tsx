@@ -160,8 +160,8 @@ export default function ContactPage() {
                 {/* Image Side */}
                 <div className="relative min-h-[400px] lg:min-h-full">
                   <Image
-                    src="/images/culture/culture-2.jpg"
-                    alt="Contact Us"
+                    src="/images/contact/itu-ari3.jpg"
+                    alt="BGTS Ofis - İTÜ ARI Teknokent"
                     fill
                     className="object-cover"
                   />
