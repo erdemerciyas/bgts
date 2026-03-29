@@ -15,8 +15,8 @@ export default function Footer() {
 
                         {/* Logo & Description */}
                         <div className="col-span-2 md:col-span-1 space-y-4">
-                            <div className="relative w-48 h-16 mb-4 filter brightness-0 invert opacity-90">
-                                <Image src="/BGTS_logo.png" alt="BGTS Logo" fill className="object-contain" />
+                            <div className="mb-4">
+                                <Image src="/BGTS_logo_white.png" alt="BGTS Logo" width={150} height={66} className="object-contain" />
                             </div>
                             <p className="text-white/50 text-sm leading-relaxed">
                                 Finans, Savunma, Perakende ve Telekom sektörleri için stratejik teknoloji ortağı. 30+ yıldır dijital dönüşümü güvenle yönetiyoruz.

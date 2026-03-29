@@ -404,6 +404,7 @@ Test altyapısı: **Vitest** + **@testing-library/react** + **jsdom**
 
 | Versiyon | Öne Çıkan Özellik |
 |----------|-------------------|
+| v0.18.0 | Logo sistemi yenilendi: beyaz logo varyantı eklendi, Header ve Footer'da CSS filter yerine doğrudan beyaz logo kullanımına geçildi, mega menü kart layoutları iyileştirildi, kullanılmayan referans logolar temizlendi. |
 | v0.17.0 | Kapsamlı SEO ve içerik revizyonu: tüm sayfalar için metadata layout dosyaları, sektör sayfalarında başlık/açıklama güncellemeleri ve tag temizliği, mega menü alt metin revizyonları, infografik sayfası BGTS markasına uyumlandırma, sosyal katkı görseli güncelleme, 15+ kullanılmayan bileşen temizliği, AnimatedElements bileşeni, middleware eklenmesi, ürün sayfalarına JSON-LD yapılandırılmış veri eklenmesi. |
 | v0.16.0 | Genç Mühendis Programı revizyonları: program başlıkları kısaltıldı, içerikler ve hedefler güncellendi, story kart metin boyutu düzeltildi, gereksiz ikon kaldırıldı. |
 | v0.15.0 | Homepage slider ve içerik revizyonları, footer ofis güncellemesi, sektör ve iş modeli metin düzeltmeleri, hizmet sayfalarında görsel daraltma + gradient mask efekti, chatbot geçici olarak pasife alındı. |

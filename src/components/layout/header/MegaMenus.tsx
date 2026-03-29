@@ -482,11 +482,11 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                 href="https://www.linkedin.com/company/bilgeadam/"
                 target="_blank"
                 onClick={closeMenu}
-                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-6 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-blue-500/25 transition-all hover:-translate-y-1"
+                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-6 flex flex-col justify-between shadow-lg hover:shadow-blue-500/25 transition-all hover:-translate-y-1"
             >
                 <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light"></div>
 
-                <div className="relative z-10 flex flex-col items-center">
+                <div className="relative z-10">
                     <Linkedin className="w-12 h-12 text-white mb-3" />
                     <h4 className="font-bold text-white text-lg">Bizi Takip Edin</h4>
                     <p className="text-blue-100 text-xs mt-1 mb-4">Teknoloji, etkinlikler ve güncel gelişmelerden haberdar olun.</p>
@@ -502,24 +502,25 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
             <Link
                 href="/partnerships"
                 onClick={closeMenu}
-                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-slate-900 border border-slate-700 shadow-lg hover:shadow-slate-800/50 transition-all hover:border-slate-600 flex flex-col items-center justify-center p-6 text-center"
+                className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-slate-900 border border-slate-700 shadow-lg hover:shadow-slate-800/50 transition-all hover:border-slate-600 flex flex-col justify-between p-6"
             >
                 <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-soft-light"></div>
                 <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-slate-700/30 rounded-full blur-2xl group-hover:bg-slate-600/40 transition-colors"></div>
 
-                <div className="relative z-10 flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-slate-300 mb-4 group-hover:bg-white group-hover:text-slate-900 transition-colors duration-300 shadow-sm border border-slate-700 group-hover:border-white">
-                        <Layers className="w-6 h-6" />
+                <div className="relative z-10">
+                    <div className="w-10 h-10 rounded-2xl bg-slate-800 flex items-center justify-center text-slate-300 mb-3 group-hover:bg-white group-hover:text-slate-900 transition-colors duration-300 shadow-sm border border-slate-700 group-hover:border-white">
+                        <Layers className="w-5 h-5" />
                     </div>
-                    <h4 className="font-bold text-white text-lg mb-2">
+                    <h4 className="font-bold text-white">
                         İş Ortakları
                     </h4>
-                    <p className="text-slate-400 text-xs mb-4">
+                    <p className="text-slate-400 text-xs mt-1">
                         Güçlü iş ortaklıklarıyla oluşturduğumuz teknoloji ekosistemi.
                     </p>
-                    <div className="flex items-center text-xs font-bold text-slate-300 group-hover:text-white mt-auto">
-                        İncele <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                </div>
+
+                <div className="mt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-white relative z-10">
+                    İncele <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
             </Link>
 

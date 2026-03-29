@@ -62,7 +62,7 @@ export default function Header() {
         ? "text-white/90 hover:text-white"
         : "text-corporate-dark hover:text-corporate-secondary";
 
-    const logoFilterClass = isTransparent ? "brightness-0 invert opacity-90 hover:opacity-100" : "";
+    const logoSrc = isTransparent ? "/BGTS_logo_white.png" : "/BGTS_logo.png";
     const headerBgClass = isTransparent ? "bg-transparent border-transparent" : "bg-white/95 border-border shadow-sm backdrop-blur-md";
 
     return (
@@ -72,10 +72,8 @@ export default function Header() {
                     className="h-[80px] flex items-center justify-between relative"
                     onMouseLeave={() => setHoveredNav(null)}
                 >
-                    <Link href="/" className="flex items-center gap-2 mr-10 shrink-0">
-                        <div className={cn("relative w-32 h-10 transition-all duration-300", logoFilterClass)}>
-                            <Image src="/BGTS_logo.png" alt="BGTS Logo" fill className="object-contain" priority />
-                        </div>
+                    <Link href="/" className="flex items-center mr-10 shrink-0">
+                        <Image src={logoSrc} alt="BGTS Logo" width={150} height={66} className="object-contain" priority />
                     </Link>
 
                     <nav className="hidden lg:flex items-center h-full gap-4 xl:gap-6 flex-1 justify-start" role="navigation" aria-label="Ana navigasyon">
