@@ -194,7 +194,16 @@ export default function YoungEngineersPage() {
             </div>
 
             {/* ═══════════════════════ 2. KÜLTÜR ═══════════════════════ */}
-            <Section className="!pt-20 lg:!pt-28 !pb-12 lg:!pb-16">
+            <Section className="!pt-20 lg:!pt-28 !pb-12 lg:!pb-16 overflow-hidden">
+                {/* Geometric background */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-16 right-[6%] w-72 h-72 border-2 border-blue-200/40 rounded-3xl rotate-12" />
+                    <div className="absolute top-36 right-[14%] w-44 h-44 border-2 border-cyan-300/30 rounded-2xl rotate-[25deg]" />
+                    <div className="absolute bottom-20 left-[4%] w-56 h-56 border-2 border-violet-200/30 rounded-full" />
+                    <div className="absolute top-[38%] left-[2%] w-24 h-24 bg-blue-200/40 rounded-xl rotate-45" />
+                    <div className="absolute bottom-[12%] right-[12%] w-40 h-40 bg-gradient-to-br from-cyan-200/30 to-blue-200/30 rounded-full" />
+                    <div className="absolute top-[15%] left-[10%] w-16 h-16 bg-violet-200/25 rounded-lg rotate-[30deg]" />
+                </div>
                 <Container>
                     <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                         <AnimatedDiv className="lg:col-span-5 order-2 lg:order-1">
@@ -412,9 +421,29 @@ export default function YoungEngineersPage() {
             </section>
 
             {/* ═══════════════════════ 4. SÜREÇ / ROADMAP ═══════════════════════ */}
-            <Section className="!py-24 lg:!py-32" background="muted">
+            <Section className="!py-24 lg:!py-32 overflow-hidden" background="muted">
+                {/* Geometric decorations */}
+                <div className="absolute inset-0 pointer-events-none">
+                    {/* Dot grid pattern on the right */}
+                    <div className="absolute top-8 right-0 w-[45%] h-[85%] bg-[radial-gradient(circle,#94a3b835_1.5px,transparent_1.5px)] [background-size:24px_24px]" />
+
+                    {/* Large floating shapes - right side */}
+                    <div className="absolute top-16 right-[6%] w-80 h-80 border-2 border-blue-300/35 rounded-full" />
+                    <div className="absolute top-28 right-[14%] w-52 h-52 border-2 border-blue-400/25 rounded-full" />
+                    <div className="absolute bottom-12 right-[8%] w-64 h-64 border-2 border-cyan-300/25 rounded-3xl rotate-[20deg]" />
+                    <div className="absolute top-[28%] right-[4%] w-28 h-28 bg-blue-200/50 rounded-2xl rotate-12" />
+                    <div className="absolute bottom-[22%] right-[18%] w-20 h-20 bg-violet-200/40 rounded-xl rotate-45" />
+                    <div className="absolute top-[55%] right-[6%] w-44 h-44 bg-gradient-to-br from-cyan-200/35 to-blue-200/35 rounded-full" />
+                    <div className="absolute top-[75%] right-[25%] w-32 h-32 border-2 border-emerald-200/20 rounded-2xl rotate-[35deg]" />
+
+                    {/* Left side accents */}
+                    <div className="absolute bottom-16 left-[2%] w-40 h-40 border-2 border-slate-300/25 rounded-2xl -rotate-12" />
+                    <div className="absolute top-[18%] left-[4%] w-24 h-24 border-2 border-blue-300/25 rounded-full" />
+                    <div className="absolute top-[50%] left-[1%] w-16 h-16 bg-blue-200/30 rounded-lg rotate-[20deg]" />
+                </div>
+
                 <Container>
-                    <AnimatedDiv className="max-w-2xl mx-auto text-center mb-16">
+                    <AnimatedDiv className="max-w-2xl mx-auto text-center mb-16 relative z-10">
                         <Heading variant="h2" className="mb-5 !text-3xl md:!text-4xl !font-bold">
                             Programa Katılım Adımları
                         </Heading>
@@ -423,7 +452,7 @@ export default function YoungEngineersPage() {
                         </Text>
                     </AnimatedDiv>
 
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-4xl mx-auto relative z-10">
                         {[
                             {
                                 step: "01",
