@@ -131,7 +131,7 @@ export const IndustriesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                     <Link onClick={closeMenu} href="/industries/defense" className={STYLES.linkGroup}>
                         <Shield className={STYLES.iconContainer} />
                         <div className="flex justify-between items-start gap-4">
-                            <div className="flex-1"><h4 className={STYLES.itemTitle}>Savunma Sanayi</h4><p className={STYLES.itemDesc}>15288 & 12207 standartlarına uygun kritik görev sistemleri.</p></div>
+                            <div className="flex-1"><h4 className={STYLES.itemTitle}>Savunma Sanayi</h4><p className={STYLES.itemDesc}>Komuta kontrol yazılımları, test ve analizleri.</p></div>
                         </div>
                     </Link>
                 </div>
