@@ -1,142 +1,282 @@
+"use client"
+
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
+import { Heading, Text } from "@/components/ui/Typography"
 import { Button } from "@/components/ui/Button"
 import {
-    Code, BarChart3, Server, Globe, Rocket, Zap,
-    Sparkles, MessageCircle, Heart, Share2,
-    ArrowRight, CheckCircle2, Play, Users, Award,
-    Sticker
+    Code, BarChart3, Server, ArrowRight, CheckCircle2,
+    Users, Award, Rocket, GraduationCap, BriefcaseBusiness,
+    FileSearch, BookOpen, Layers, Terminal, Zap, Target,
+    TrendingUp, ChevronRight
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import ApplicationForm from "@/components/hr/ApplicationForm"
-import { AnimatedDiv, FadeInLeft } from "@/components/ui/AnimatedElements"
-
-const Marquee = ({ text }: { text: string }) => {
-    return (
-        <div className="relative flex overflow-x-hidden bg-slate-950 text-white py-4 -rotate-1 shadow-xl z-20 mx-[-20px]">
-            <div className="animate-marquee whitespace-nowrap flex gap-8 items-center text-xl font-black uppercase tracking-widest">
-                {Array(10).fill(text).map((t, i) => (
-                    <span key={i} className="flex items-center gap-4">
-                        {t} <Zap className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                    </span>
-                ))}
-            </div>
-        </div>
-    )
-}
+import { motion } from "framer-motion"
+import {
+    AnimatedDiv, FadeInRight,
+    ScaleIn, StaggerContainer, StaggerItem
+} from "@/components/ui/AnimatedElements"
 
 export default function YoungEngineersPage() {
-
-
     return (
-        <div className="bg-white min-h-screen text-slate-900 selection:bg-yellow-300 overflow-x-hidden">
+        <div className="bg-white min-h-screen overflow-x-hidden">
 
-            {/* 1. HERO: POP & BOLD */}
-            <section className="relative min-h-[70vh] flex items-center pt-24 pb-20 overflow-hidden">
-                {/* Mesh Gradients */}
-                <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-blue-500 rounded-full blur-[150px] opacity-20 animate-pulse mix-blend-multiply pointer-events-none" />
-                <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-violet-500 rounded-full blur-[150px] opacity-20 animate-pulse delay-1000 mix-blend-multiply pointer-events-none" />
+            {/* ═══════════════════════ 1. HERO ═══════════════════════ */}
+            <section className="relative min-h-[90vh] flex items-center bg-[#060B18] overflow-hidden">
+                {/* Cinematic image */}
+                <div className="absolute inset-0">
+                    <Image
+                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=80"
+                        alt="Genç Mühendisler Ekibi"
+                        fill
+                        className="object-cover opacity-30"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#060B18] via-[#060B18]/60 to-[#060B18]" />
+                </div>
 
-                {/* Grid Pattern */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem] -z-10 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+                {/* Animated gradient orbs */}
+                <div className="absolute top-[5%] right-[10%] w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[150px] pointer-events-none animate-blob" />
+                <div className="absolute bottom-[5%] left-[5%] w-[500px] h-[500px] bg-cyan-500/12 rounded-full blur-[130px] pointer-events-none animate-blob animation-delay-2000" />
+                <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-violet-500/10 rounded-full blur-[100px] pointer-events-none animate-blob animation-delay-4000" />
 
-                <Container className="relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Left: Text Content */}
-                        <div className="flex flex-col items-start text-left">
+                {/* Grid texture */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
 
-                            <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 mb-6 leading-[0.85] flex flex-col gap-2">
-                                <span className="relative inline-block z-10">GELECEĞİ</span>
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-600 to-cyan-500 animate-gradient-x italic transform -skew-x-12">
-                                    KODLA
+                <Container className="relative z-10 pt-28 pb-32">
+                    <div className="grid lg:grid-cols-12 gap-12 items-center">
+                        <div className="lg:col-span-7">
+                            <motion.h1
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.1 }}
+                                className="font-heading text-4xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tight text-white leading-[1.05] mb-8"
+                            >
+                                Geleceği İnşa Eden<br />
+                                <span className="relative inline-block mt-2">
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-400">
+                                        Mühendisler
+                                    </span>
+                                    <div className="absolute -bottom-2 left-0 right-0 h-px bg-gradient-to-r from-blue-400/60 via-cyan-300/40 to-transparent" />
                                 </span>
-                            </h1>
+                            </motion.h1>
 
-                            <p className="text-xl md:text-2xl text-slate-600 max-w-xl mb-12 font-bold leading-relaxed tracking-tight">
-                                Genç Mühendis Programı, <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-lg">gerçek uygulamalara</span> dokunarak <span className="bg-violet-100 text-violet-700 px-2 py-0.5 rounded-lg mx-1">modern teknolojilerle</span> üretme ve gelişme fırsatı sunar. Öğrenirken <span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-lg mx-1">değer yaratırsın</span>.
-                            </p>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                            >
+                                <p className="text-slate-400 max-w-xl mb-10 text-lg md:text-xl leading-relaxed font-medium">
+                                    Gerçek projelerde aktif rol al, modern teknolojilerle üret,
+                                    deneyimli mentorların rehberliğinde kariyerine{" "}
+                                    <span className="text-white font-semibold">güçlü bir başlangıç</span> yap.
+                                </p>
+                            </motion.div>
 
-                            <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto items-start">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.3 }}
+                                className="flex flex-col sm:flex-row gap-4"
+                            >
                                 <Link href="#application-form">
-                                    <Button size="xl" className="bg-black text-white hover:bg-slate-800 rounded-none border-2 border-black px-12 h-16 text-lg font-black shadow-[8px_8px_0px_0px_rgba(37,99,235,1)] hover:shadow-[4px_4px_0px_0px_rgba(37,99,235,1)] hover:translate-x-1 hover:translate-y-1 transition-all">
-                                        BAŞVURU
+                                    <Button size="xl" className="bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 rounded-full px-10 h-14 text-base font-bold shadow-xl shadow-blue-500/20 hover:shadow-blue-500/30 hover:scale-[1.03] transition-all group">
+                                        Hemen Başvur
+                                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-0.5 transition-transform" />
                                     </Button>
                                 </Link>
                                 <Link href="#tracks">
-                                    <Button size="xl" variant="outline" className="bg-white text-black border-2 border-black rounded-none px-12 h-16 text-lg font-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all">
-                                        PROGRAM
+                                    <Button size="xl" variant="outline" className="bg-white/[0.04] text-white border-white/10 rounded-full px-10 h-14 text-base font-bold hover:bg-white/[0.08] hover:border-white/20 transition-all backdrop-blur-sm">
+                                        Programları İncele
                                     </Button>
                                 </Link>
-                            </div>
+                            </motion.div>
                         </div>
 
-                        {/* Right: Image Composition */}
-                        <div className="hidden lg:block relative h-[600px]">
-                            {/* Main Image */}
-                            <AnimatedDiv className="absolute top-8 right-0 w-[380px] h-[460px] rounded-3xl overflow-hidden border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] z-10">
-                                <Image
-                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
-                                    alt="Genç Mühendisler Ekibi"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </AnimatedDiv>
-
-                            {/* Secondary Image */}
-                            <FadeInLeft className="absolute bottom-12 left-0 w-[260px] h-[300px] rounded-2xl overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_rgba(124,58,237,1)] z-20 rotate-[-3deg]">
-                                <Image
-                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80"
-                                    alt="Hackathon"
-                                    fill
-                                    className="object-cover"
-                                />
-                                {/* Tag on Image */}
-                                <div className="absolute bottom-4 left-4 bg-violet-500 text-white text-xs font-black px-3 py-1.5 rounded-full z-10">
-                                    #Hackathon
+                        {/* Right: Terminal-style card */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 40 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="hidden lg:block lg:col-span-5"
+                        >
+                            <div className="relative">
+                                <div className="absolute -inset-1 bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-violet-500/20 rounded-2xl blur-xl" />
+                                <div className="relative bg-[#0d1224] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl">
+                                    <div className="flex items-center gap-2 px-5 py-3.5 bg-white/[0.03] border-b border-white/[0.06]">
+                                        <div className="flex gap-1.5">
+                                            <div className="w-3 h-3 rounded-full bg-red-500/70" />
+                                            <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+                                            <div className="w-3 h-3 rounded-full bg-green-500/70" />
+                                        </div>
+                                        <span className="text-xs text-slate-500 font-mono ml-2">kariyer.bgts.com.tr</span>
+                                    </div>
+                                    <div className="p-6 font-mono text-sm space-y-4 min-h-[320px]">
+                                        <div>
+                                            <span className="text-emerald-400">$</span>{" "}
+                                            <span className="text-slate-300">bgts init</span>{" "}
+                                            <span className="text-blue-400">--program</span>{" "}
+                                            <span className="text-cyan-300">genc-muhendis</span>
+                                        </div>
+                                        <div className="text-slate-500">
+                                            <span className="text-yellow-400/80">&#9656;</span> Teknik müfredat yükleniyor...
+                                        </div>
+                                        <div className="text-slate-500">
+                                            <span className="text-yellow-400/80">&#9656;</span> Mentor eşleştirmesi yapılıyor...
+                                        </div>
+                                        <div className="text-slate-500">
+                                            <span className="text-yellow-400/80">&#9656;</span> Proje ortamı hazırlanıyor...
+                                        </div>
+                                        <div className="mt-2 p-4 rounded-lg bg-emerald-500/[0.06] border border-emerald-500/20">
+                                            <div className="flex items-center gap-2 text-emerald-400 mb-2">
+                                                <CheckCircle2 className="w-4 h-4" />
+                                                <span className="font-semibold">Hazır!</span>
+                                            </div>
+                                            <div className="text-slate-400 text-xs leading-relaxed">
+                                                3 program &middot; 12 hafta eğitim &middot; 1:1 mentorluk &middot; gerçek projeler
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-emerald-400">$</span>
+                                            <span className="text-slate-300">basvur</span>
+                                            <span className="text-blue-400">--hemen</span>
+                                            <span className="inline-block w-2.5 h-5 bg-blue-400/80 animate-pulse ml-1" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </FadeInLeft>
-
-                        </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </Container>
+
             </section>
 
-            {/* MARQUEE */}
-            <Marquee text="INNOVATION • PASSION • FUTURE • CODE • COMMUNITY • GROWTH • " />
-
-            {/* 2. SOCIAL VIBE: "Stories" & Culture */}
-            <section className="py-24 bg-white relative overflow-hidden">
-                {/* Decorative Elements */}
-                <div className="absolute top-20 left-10 w-24 h-24 bg-yellow-300 rounded-full blur-xl opacity-50" />
-                <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-300 rounded-full blur-xl opacity-50" />
-
+            {/* ═══ FLOATING METRICS STRIP ═══ */}
+            <div className="relative z-20 -mt-16">
                 <Container>
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 relative z-10">
-                        <div>
-                            <h2 className="text-5xl md:text-6xl font-black text-slate-900 leading-none mb-6">
-                                Koddan Fazlası <br />
-                                <span className="text-violet-600 italic">Kültür</span>
-                            </h2>
-                            <div className="bg-white border-2 border-black p-4 inline-block transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(139,92,246,1)] hover:rotate-0 transition-all cursor-default">
-                                <p className="text-lg text-slate-800 font-bold max-w-lg leading-snug">
-                                    <span className="bg-blue-100 text-blue-700 px-1">Uygulamalı öğrenimle</span> gerçek projelere dokunur, <span className="bg-yellow-100 text-yellow-700 px-1">sürekli gelişim</span> ve güçlü takım çalışmasıyla <span className="underline decoration-wavy decoration-violet-500 underline-offset-4">birlikte üretiriz.</span>
+                    <AnimatedDiv className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                        {[
+                            { val: "3", label: "Program", desc: "Yazılım, Test, Altyapı", icon: Layers, accent: "blue" },
+                            { val: "12", label: "Hafta", desc: "Yapılandırılmış eğitim", icon: BookOpen, accent: "violet" },
+                            { val: "1:1", label: "Mentorluk", desc: "Kıdemli rehberlik", icon: Users, accent: "cyan" },
+                            { val: "100%", label: "Gerçek Proje", desc: "Canlı sistemler", icon: Rocket, accent: "emerald" },
+                        ].map((s, i) => {
+                            const accentMap: Record<string, { border: string, bg: string, text: string, glow: string }> = {
+                                blue: { border: "border-blue-200 hover:border-blue-400", bg: "bg-blue-500", text: "text-blue-600", glow: "shadow-blue-500/10 hover:shadow-blue-500/20" },
+                                violet: { border: "border-violet-200 hover:border-violet-400", bg: "bg-violet-500", text: "text-violet-600", glow: "shadow-violet-500/10 hover:shadow-violet-500/20" },
+                                cyan: { border: "border-cyan-200 hover:border-cyan-400", bg: "bg-cyan-500", text: "text-cyan-600", glow: "shadow-cyan-500/10 hover:shadow-cyan-500/20" },
+                                emerald: { border: "border-emerald-200 hover:border-emerald-400", bg: "bg-emerald-500", text: "text-emerald-600", glow: "shadow-emerald-500/10 hover:shadow-emerald-500/20" },
+                            }
+                            const a = accentMap[s.accent]
+                            return (
+                                <div
+                                    key={i}
+                                    className={`group relative bg-white rounded-2xl border ${a.border} p-5 lg:p-6 shadow-lg ${a.glow} hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden`}
+                                >
+                                    <div className={`absolute top-0 left-0 right-0 h-1 ${a.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <div className={`w-9 h-9 rounded-lg ${a.bg} text-white flex items-center justify-center`}>
+                                            <s.icon className="w-4.5 h-4.5" />
+                                        </div>
+                                        <span className={`text-3xl lg:text-4xl font-bold ${a.text} font-heading leading-none`}>
+                                            {s.val}
+                                        </span>
+                                    </div>
+                                    <div className="text-sm font-bold text-slate-800">{s.label}</div>
+                                    <div className="text-xs text-slate-400 font-medium mt-0.5">{s.desc}</div>
+                                </div>
+                            )
+                        })}
+                    </AnimatedDiv>
+                </Container>
+            </div>
+
+            {/* ═══════════════════════ 2. KÜLTÜR ═══════════════════════ */}
+            <Section className="!pt-20 lg:!pt-28 !pb-12 lg:!pb-16">
+                <Container>
+                    <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                        <AnimatedDiv className="lg:col-span-5 order-2 lg:order-1">
+                            <div className="relative">
+                                <div className="absolute -inset-3 bg-gradient-to-br from-blue-100/80 to-cyan-100/60 rounded-[20px] -z-10" />
+                                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                                    <div className="aspect-[4/5]">
+                                        <Image
+                                            src="/images/culture/culture-1.jpg"
+                                            alt="BGTS Genç Mühendisler Kültürü"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
+
+                                    {/* Floating glass quote */}
+                                    <div className="absolute bottom-5 left-5 right-5">
+                                        <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-5">
+                                            <p className="text-white/90 font-medium text-sm leading-relaxed italic">
+                                                &ldquo;Sadece kod yazmayı değil, birlikte üretmeyi ve sürekli gelişmeyi öğreniyorsun.&rdquo;
+                                            </p>
+                                            <div className="flex items-center gap-2 mt-3">
+                                                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400" />
+                                                <span className="text-white/60 text-xs font-semibold">Genç Mühendis, 2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </AnimatedDiv>
+
+                        <FadeInRight className="lg:col-span-7 order-1 lg:order-2">
+                            <Heading variant="h2" className="mb-6 text-slate-900 !text-3xl md:!text-[2.5rem] !font-bold !leading-tight">
+                                Uygulamalı Öğrenim,<br />Güçlü Mühendislik Kültürü
+                            </Heading>
+                            <div className="space-y-4 text-slate-500 text-[16px] leading-relaxed">
+                                <p>
+                                    Genç Mühendis Programı&apos;nda{" "}
+                                    <strong className="text-slate-800">gerçek uygulamalara</strong> dokunarak modern teknolojilerle üretme ve gelişme fırsatı bulursun. Deneyimli mentorların rehberliğinde{" "}
+                                    <strong className="text-slate-800">sürekli gelişim</strong>{" "}
+                                    odaklı bir ortamda çalışırsın.
                                 </p>
                             </div>
-                        </div>
-                    </div>
 
-                    {/* Horizontal Scroll Snap Container - Styled as Stories */}
-                    <div className="flex gap-8 overflow-x-auto pb-16 pt-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+                            {/* Feature mini-grid */}
+                            <div className="grid grid-cols-2 gap-4 mt-8">
+                                {[
+                                    { icon: Target, title: "Gerçek Projeler", desc: "Canlı sistemlerde geliştirme" },
+                                    { icon: Users, title: "1:1 Mentorluk", desc: "Kıdemli mühendis rehberliği" },
+                                    { icon: Zap, title: "Tech Talks", desc: "Haftalık teknik sunumlar" },
+                                    { icon: TrendingUp, title: "Kariyer Yolu", desc: "Tam zamanlı pozisyon fırsatı" },
+                                ].map((f, i) => (
+                                    <div key={i} className="group flex items-start gap-3 p-3.5 rounded-xl hover:bg-slate-50 transition-colors">
+                                        <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors">
+                                            <f.icon className="w-4.5 h-4.5" />
+                                        </div>
+                                        <div>
+                                            <div className="text-sm font-bold text-slate-800">{f.title}</div>
+                                            <div className="text-xs text-slate-400 font-medium mt-0.5">{f.desc}</div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </FadeInRight>
+                    </div>
+                </Container>
+            </Section>
+
+            {/* Culture photo strip */}
+            <div className="pb-12 lg:pb-20">
+                <Container>
+                    <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
                         {[
-                            { img: "/images/culture/culture-1.jpg", tag: "@Hackathon", title: "Gerçek projeler", color: "bg-blue-600" },
-                            { img: "/images/culture/culture-2.jpg", tag: "@MENTORSHIP", title: "Sürekli gelişim", color: "bg-violet-600" },
-                            { img: "/images/culture/culture-5.jpg", tag: "@TechTalks", title: "Uygulamalı öğrenim", color: "bg-emerald-600" },
-                            { img: "/images/culture/culture-3.jpg", tag: "@HappyHour", title: "Takım çalışması", color: "bg-pink-600" },
+                            { img: "/images/culture/culture-1.jpg", title: "Hackathon", tag: "Yarışma" },
+                            { img: "/images/culture/culture-2.jpg", title: "Mentorluk", tag: "Gelişim" },
+                            { img: "/images/culture/culture-5.jpg", title: "Tech Talks", tag: "Öğrenme" },
+                            { img: "/images/culture/culture-3.jpg", title: "Takım", tag: "Kültür" },
                         ].map((story, i) => (
-                            <div
+                            <StaggerItem
                                 key={i}
-                                className="snap-center shrink-0 w-[320px] h-[480px] relative group rounded-3xl overflow-hidden border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,0.1)] cursor-pointer bg-white transition-transform duration-300 hover:-translate-y-2.5 hover:rotate-2"
+                                className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-default"
                             >
                                 <Image
                                     src={story.img}
@@ -144,201 +284,267 @@ export default function YoungEngineersPage() {
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80" />
-
-                                <div className="absolute top-6 left-6 rotate-[-5deg]">
-                                    <span className={`px-4 py-2 ${story.color} text-white font-black uppercase text-sm border-2 border-white shadow-md transform group-hover:rotate-0 transition-transform`}>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                                <div className="absolute bottom-0 left-0 right-0 p-4">
+                                    <span className="inline-block px-2.5 py-1 bg-white/15 backdrop-blur-sm rounded-md text-[10px] text-white/80 font-bold uppercase tracking-wider mb-2">
                                         {story.tag}
                                     </span>
+                                    <h3 className="text-white font-bold text-sm font-heading">{story.title}</h3>
                                 </div>
-
-                                <div className="absolute bottom-8 left-6 right-6 text-white p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                                    <h3 className="text-lg font-black mb-1">{story.title}</h3>
-                                </div>
-                            </div>
+                            </StaggerItem>
                         ))}
+                    </StaggerContainer>
+                </Container>
+            </div>
+
+            {/* ═══════════════════════ 3. PROGRAM KARTLARI ═══════════════════════ */}
+            <section id="tracks" className="relative py-24 lg:py-32 bg-[#060B18] overflow-hidden">
+                {/* Background effects */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:48px_48px]" />
+                <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-blue-500/[0.06] rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute bottom-[20%] left-[10%] w-[400px] h-[400px] bg-violet-500/[0.05] rounded-full blur-[100px] pointer-events-none" />
+
+                <Container className="relative z-10">
+                    <AnimatedDiv className="max-w-2xl mb-16">
+                        <h2 className="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-5">
+                            Hangi yola<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                                çıkmak istiyorsun?
+                            </span>
+                        </h2>
+                        <p className="text-slate-400 text-lg font-medium max-w-lg">
+                            Seçimini yap, geleceğini şekillendir. Tüm programlar modern süreçlere tam entegrasyonu hedefler.
+                        </p>
+                    </AnimatedDiv>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6">
+                        {[
+                            {
+                                id: "track-software",
+                                icon: Code,
+                                title: "Yazılım Geliştirme",
+                                desc: "Uçtan uca ürün geliştirme deneyimi ile modern yazılım mühendisliği yetkinlikleri kazan.",
+                                items: [
+                                    "Modern backend & frontend geliştirme",
+                                    "API tasarımı ve veri yönetimi",
+                                    "Test süreçleri ve kod kalitesi",
+                                    "Agile & Scrum ile proje geliştirme",
+                                ],
+                                accent: "blue",
+                                gradient: "from-blue-500 to-blue-600",
+                            },
+                            {
+                                id: "track-test",
+                                icon: BarChart3,
+                                title: "Test & İş Analizi",
+                                desc: "Projelerin kalitesini ve sürdürülebilirliğini sağlayan test ve analiz uzmanlığı kazan.",
+                                items: [
+                                    "Test süreçleri ve kalite güvencesi",
+                                    "Manuel ve otomasyon testleri",
+                                    "İş analizi ve gereksinim yönetimi",
+                                    "Test senaryosu ve dokümantasyon",
+                                ],
+                                accent: "violet",
+                                gradient: "from-violet-500 to-violet-600",
+                            },
+                            {
+                                id: "track-infrastructure",
+                                icon: Server,
+                                title: "Altyapı Teknolojileri",
+                                desc: "Ölçeklenebilir ve güvenilir sistem altyapıları tasarlama ve yönetme yetkinliği kazan.",
+                                items: [
+                                    "Linux ve sistem yönetimi",
+                                    "CI/CD, DevOps ve otomasyon",
+                                    "Cloud platformları (AWS, Azure, GCP)",
+                                    "Monitoring, logging ve takip",
+                                ],
+                                accent: "emerald",
+                                gradient: "from-emerald-500 to-emerald-600",
+                            },
+                        ].map((program, i) => {
+                            const colorMap: Record<string, { check: string, iconBg: string, hoverBorder: string }> = {
+                                blue: { check: "text-blue-400", iconBg: "bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20", hoverBorder: "hover:border-blue-500/30" },
+                                violet: { check: "text-violet-400", iconBg: "bg-violet-500/10 text-violet-400 group-hover:bg-violet-500/20", hoverBorder: "hover:border-violet-500/30" },
+                                emerald: { check: "text-emerald-400", iconBg: "bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20", hoverBorder: "hover:border-emerald-500/30" },
+                            }
+                            const c = colorMap[program.accent]
+                            return (
+                                <AnimatedDiv
+                                    key={program.id}
+                                    delay={i * 0.1}
+                                    id={program.id}
+                                    className={`group relative bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/[0.06] ${c.hoverBorder} p-7 lg:p-8 hover:-translate-y-1 transition-all duration-300 overflow-hidden`}
+                                >
+                                    <div className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${program.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                                    <div className={`w-12 h-12 rounded-xl ${c.iconBg} flex items-center justify-center mb-6 transition-colors`}>
+                                        <program.icon className="w-6 h-6" />
+                                    </div>
+
+                                    <h3 className="font-heading text-xl font-bold text-white mb-3">
+                                        {program.title}
+                                    </h3>
+                                    <p className="text-slate-400 text-sm font-medium mb-6 leading-relaxed">
+                                        {program.desc}
+                                    </p>
+
+                                    <ul className="space-y-3 mb-6">
+                                        {program.items.map((item, j) => (
+                                            <li key={j} className="flex items-start gap-2.5 text-sm text-slate-300 font-medium">
+                                                <CheckCircle2 className={`w-4 h-4 ${c.check} shrink-0 mt-0.5`} />
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    <Link
+                                        href="#application-form"
+                                        className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-400 hover:text-white transition-colors group/link"
+                                    >
+                                        Başvur
+                                        <ChevronRight className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" />
+                                    </Link>
+                                </AnimatedDiv>
+                            )
+                        })}
                     </div>
                 </Container>
             </section>
 
-            {/* 3. TRACKS: Stacked Detailed Cards */}
-            <section id="tracks" className="py-24 bg-slate-50 relative border-y-2 border-black">
+            {/* ═══════════════════════ 4. SÜREÇ / ROADMAP ═══════════════════════ */}
+            <Section className="!py-24 lg:!py-32" background="muted">
                 <Container>
-                    <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-10">
-                        <div className="max-w-2xl">
-                            <h2 className="text-6xl font-black text-slate-900 mb-6 relative">
-                                <span className="relative z-10">Genç Mühendis Programları</span>
-                                <span className="absolute bottom-2 left-0 w-full h-6 bg-yellow-300 -z-0 transform -skew-x-12" />
-                            </h2>
-                            <p className="text-xl text-slate-700 font-bold">
-                                Seçimini yap, geleceğini şekillendir. Tüm programlarımız modern süreçlere tam entegrasyonu hedefler.
-                            </p>
-                        </div>
+                    <AnimatedDiv className="max-w-2xl mx-auto text-center mb-16">
+                        <Heading variant="h2" className="mb-5 !text-3xl md:!text-4xl !font-bold">
+                            Programa Katılım Adımları
+                        </Heading>
+                        <Text variant="large" className="text-slate-400">
+                            Başvurudan projeye dahil olmaya kadar net ve şeffaf adımlarla ilerle.
+                        </Text>
+                    </AnimatedDiv>
 
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-16">
-                        {/* PROGRAM 1: YAZILIM */}
-                        <div id="track-software" className="group bg-blue-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:-rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
-                            <div className="flex items-center gap-6 mb-8 mt-4">
-                                <div className="w-20 h-20 shrink-0 bg-blue-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
-                                    <Code className="w-10 h-10" />
-                                </div>
-                                <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-blue-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Yazılım Geliştirme Programı
-                                </h3>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-10 mb-6">
-                                <div>
-                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">1</span>
-                                        Program İçeriği
-                                    </h4>
-                                    <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Modern backend & frontend geliştirme</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> API tasarımı ve veri yönetimi</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Test süreçleri ve kod kalitesi (Clean Code)</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" /> Agile & Scrum ile proje geliştirme</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">2</span>
-                                        Program Hedefi
-                                    </h4>
-                                    <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(37,99,235,1)]">
-                                        <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
-                                        <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
-                                            Gerçek projelerde aktif rol alarak modern yazılım geliştirme süreçlerini öğrenir, uçtan uca ürün geliştirme deneyimi kazanırsın.
-                                        </p>
+                    <div className="max-w-4xl mx-auto">
+                        {[
+                            {
+                                step: "01",
+                                title: "Başvuru",
+                                desc: "Online başvuru formunu doldur, CV'ni yükle ve ilk adımını at.",
+                                icon: FileSearch,
+                                accent: "blue",
+                            },
+                            {
+                                step: "02",
+                                title: "Değerlendirme",
+                                desc: "Teknik yetkinlik ve motivasyon değerlendirmesine katıl.",
+                                icon: Users,
+                                accent: "violet",
+                            },
+                            {
+                                step: "03",
+                                title: "Eğitim Dönemi",
+                                desc: "12 haftalık yapılandırılmış eğitim programı ve birebir mentorluk.",
+                                icon: GraduationCap,
+                                accent: "cyan",
+                            },
+                            {
+                                step: "04",
+                                title: "Projeye Dahil",
+                                desc: "Gerçek projelerde aktif mühendis olarak çalışmaya başla.",
+                                icon: BriefcaseBusiness,
+                                accent: "emerald",
+                            },
+                        ].map((item, i) => {
+                            const colorMap: Record<string, { bg: string, text: string, line: string }> = {
+                                blue: { bg: "bg-blue-500", text: "text-blue-600", line: "from-blue-500" },
+                                violet: { bg: "bg-violet-500", text: "text-violet-600", line: "from-violet-500" },
+                                cyan: { bg: "bg-cyan-500", text: "text-cyan-600", line: "from-cyan-500" },
+                                emerald: { bg: "bg-emerald-500", text: "text-emerald-600", line: "from-emerald-500" },
+                            }
+                            const c = colorMap[item.accent]
+                            return (
+                                <ScaleIn key={i} delay={i * 0.08} className="relative flex items-start gap-6 lg:gap-8 group">
+                                    {/* Vertical connector */}
+                                    <div className="flex flex-col items-center shrink-0">
+                                        <div className={`w-12 h-12 rounded-xl ${c.bg} text-white flex items-center justify-center shadow-lg relative z-10`}>
+                                            <item.icon className="w-5 h-5" />
+                                        </div>
+                                        {i < 3 && (
+                                            <div className={`w-px h-16 bg-gradient-to-b ${c.line} to-transparent opacity-30`} />
+                                        )}
                                     </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        {/* PROGRAM 2: TEST & ANALIST */}
-                        <div id="track-test" className="group bg-violet-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
-                            <div className="flex items-center gap-6 mb-8 mt-4">
-                                <div className="w-20 h-20 shrink-0 bg-violet-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
-                                    <BarChart3 className="w-10 h-10" />
-                                </div>
-                                <h3 className="text-3xl md:text-5xl font-black uppercase inline-block bg-violet-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Test & İş Analizi Programı
-                                </h3>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-10 mb-6">
-                                <div>
-                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">1</span>
-                                        Program İçeriği
-                                    </h4>
-                                    <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test süreçleri ve kalite güvencesi (QA)</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Manuel ve otomasyon testleri</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> İş analizi ve gereksinim yönetimi</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-violet-600 shrink-0 mt-0.5" /> Test senaryosu ve dokümantasyon</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">2</span>
-                                        Program Hedefi
-                                    </h4>
-                                    <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(124,58,237,1)]">
-                                        <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-violet-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
-                                        <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
-                                            Yazılım kalitesini artıran test ve analiz süreçlerinde deneyim kazanır, projelerin doğruluğunu ve sürdürülebilirliğini sağlayan bir rol üstlenirsin.
-                                        </p>
+                                    <div className={`pb-10 ${i === 3 ? "pb-0" : ""}`}>
+                                        <div className="flex items-center gap-3 mb-1.5">
+                                            <span className={`text-xs font-bold ${c.text} tracking-wide uppercase`}>
+                                                Adım {item.step}
+                                            </span>
+                                        </div>
+                                        <h4 className="font-heading text-lg font-bold text-slate-800 mb-1.5">{item.title}</h4>
+                                        <p className="text-sm text-slate-500 font-medium leading-relaxed max-w-md">{item.desc}</p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* PROGRAM 3: ALTYAPI / DEVOPS */}
-                        <div id="track-infrastructure" className="group bg-emerald-50 border-4 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative transition-all hover:-translate-y-2 hover:-rotate-1 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] duration-300 cursor-default">
-                            <div className="flex items-center gap-6 mb-8 mt-4">
-                                <div className="w-20 h-20 shrink-0 bg-emerald-600 text-white border-4 border-black flex items-center justify-center text-4xl font-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform">
-                                    <Server className="w-10 h-10" />
-                                </div>
-                                <h3 className="text-3xl md:text-4xl font-black uppercase inline-block bg-emerald-600 text-white px-6 py-2 transform -skew-x-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                                    Altyapı Teknolojileri Programı
-                                </h3>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-10 mb-6">
-                                <div>
-                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">1</span>
-                                        Program İçeriği
-                                    </h4>
-                                    <ul className="space-y-4 font-bold text-slate-700">
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Linux ve sistem yönetimi</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> CI/CD, DevOps ve otomasyon süreçleri</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Cloud platformları (AWS, Azure, GCP)</li>
-                                        <li className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" /> Monitoring, logging ve sistem takibi</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
-                                        <span className="bg-yellow-400 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-sm font-bold shrink-0">2</span>
-                                        Program Hedefi
-                                    </h4>
-                                    <div className="bg-white border-2 border-black p-6 relative overflow-hidden h-full flex items-center shadow-[4px_4px_0px_0px_rgba(16,185,129,1)]">
-                                        <div className="absolute right-0 bottom-0 w-32 h-32 bg-emerald-200 rounded-full blur-2xl opacity-50 pointer-events-none" />
-                                        <p className="text-slate-800 font-semibold relative z-10 text-lg leading-relaxed">
-                                            Modern DevOps ve cloud teknolojileri ile çalışan sistemlerin kurulumu ve yönetimini öğrenir, yüksek erişilebilir altyapılar geliştirme deneyimi kazanırsın.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                                </ScaleIn>
+                            )
+                        })}
                     </div>
                 </Container>
-            </section>
+            </Section>
 
-            {/* 4. APPLICATION FORM SECTION */}
-            <div id="application-form" className="relative bg-slate-950 py-32 text-white overflow-hidden">
-                {/* Background Noise/Pattern */}
-                <div className="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150"></div>
+            {/* ═══════════════════════ 5. BAŞVURU FORMU ═══════════════════════ */}
+            <section id="application-form" className="relative bg-[#060B18] py-24 lg:py-32 overflow-hidden">
+                {/* Orbs */}
+                <div className="absolute top-[15%] right-[5%] w-[500px] h-[500px] bg-blue-500/[0.07] rounded-full blur-[150px] pointer-events-none" />
+                <div className="absolute bottom-[10%] left-[10%] w-[400px] h-[400px] bg-cyan-500/[0.05] rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:48px_48px]" />
 
                 <Container className="relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
-                        <div className="space-y-8 sticky top-24">
+                        <AnimatedDiv className="space-y-8 lg:sticky lg:top-24">
+                            <div>
+                                <h2 className="font-heading text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+                                    Kariyerine{" "}
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                                        Güçlü Başla
+                                    </span>
+                                </h2>
+                                <p className="text-slate-400 text-base leading-relaxed max-w-lg font-medium">
+                                    Formu doldur, CV&apos;ni yükle ve Genç Mühendis Programı&apos;na ilk adımını at.
+                                </p>
+                            </div>
 
-                            <h2 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter">
-                                ŞİMDİ <br /> <span className="text-blue-500">BAŞLA</span>
-                            </h2>
-
-                            <div className="p-8 border-2 border-slate-800 rounded-2xl bg-slate-900/50 backdrop-blur-sm">
-                                <h4 className="font-bold text-xl mb-4 flex items-center gap-2">
-                                    <Sparkles className="text-yellow-400" /> İpuçları
+                            <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+                                <h4 className="font-bold text-sm text-white mb-4 flex items-center gap-2 font-heading uppercase tracking-wide">
+                                    <Terminal className="w-4 h-4 text-blue-400" /> Başvuru İpuçları
                                 </h4>
-                                <ul className="space-y-4 text-slate-300">
-                                    <li className="flex gap-3">
-                                        <div className="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-xs font-bold shrink-0">1</div>
-                                        <span>CV'nin güncel olduğundan emin ol.</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <div className="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-xs font-bold shrink-0">2</div>
-                                        <span>Projelerinden bahsetmeyi unutma.</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <div className="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-xs font-bold shrink-0">3</div>
-                                        <span>Kısa notunda seni neyin heyecanlandırdığını yaz.</span>
-                                    </li>
+                                <ul className="space-y-3">
+                                    {[
+                                        "CV'nin güncel olduğundan emin ol.",
+                                        "Projelerinden ve deneyimlerinden bahset.",
+                                        "Seni neyin heyecanlandırdığını kısaca yaz.",
+                                    ].map((tip, i) => (
+                                        <li key={i} className="flex gap-3 text-slate-400 text-sm font-medium">
+                                            <span className="w-5 h-5 rounded-md bg-blue-500/10 text-blue-400 flex items-center justify-center text-xs font-bold shrink-0">
+                                                {i + 1}
+                                            </span>
+                                            <span>{tip}</span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
-                        </div>
 
-                        <AnimatedDiv className="bg-white text-slate-900 p-2 rounded-3xl">
-                            <ApplicationForm />
+                            <div className="flex items-center gap-4 p-5 rounded-xl bg-emerald-500/[0.06] border border-emerald-500/10">
+                                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                                <p className="text-sm text-slate-400 font-medium">
+                                    Başvurular sürekli değerlendirmeye alınır. En kısa sürede geri dönüş yapılır.
+                                </p>
+                            </div>
                         </AnimatedDiv>
+
+                        <FadeInRight className="bg-white text-slate-900 p-2 rounded-2xl shadow-2xl shadow-black/20">
+                            <ApplicationForm />
+                        </FadeInRight>
                     </div>
                 </Container>
-            </div>
+            </section>
         </div>
     )
 }
