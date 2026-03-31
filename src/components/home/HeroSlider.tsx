@@ -239,22 +239,22 @@ export function HeroSlider() {
                                     {SLIDES[currentSlide].subtitle}
                                 </Text>
 
-                                <div className="flex flex-wrap gap-4 items-center">
+                                <div className="flex flex-wrap gap-3 items-center">
                                     <Link
                                         href={SLIDES[currentSlide].ctaLink}
-                                        className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-corporate-secondary hover:bg-corporate-dark text-white text-base md:text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20 group"
+                                        className="inline-flex items-center gap-1.5 px-5 py-2.5 md:px-6 md:py-3 bg-corporate-secondary hover:bg-corporate-dark text-white text-sm md:text-base font-semibold rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-900/20 group"
                                     >
                                         {SLIDES[currentSlide].ctaText}
-                                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                     
                                     {SLIDES[currentSlide].ctaText2 && SLIDES[currentSlide].ctaLink2 && (
                                         <Link
                                             href={(SLIDES[currentSlide] as any).ctaLink2}
-                                            className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-[#B4D330] hover:bg-[#a6c12b] text-slate-900 text-base md:text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl hover:shadow-green-900/20 group"
+                                            className="inline-flex items-center gap-1.5 px-5 py-2.5 md:px-6 md:py-3 bg-[#B4D330] hover:bg-[#a6c12b] text-slate-900 text-sm md:text-base font-semibold rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-green-900/20 group"
                                         >
                                             {(SLIDES[currentSlide] as any).ctaText2}
-                                            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     )}
                                 </div>
