@@ -182,7 +182,7 @@ export function ContactForm() {
                 rows={5}
                 className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none text-slate-900 ${errors.message ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
                   }`}
-                placeholder="Projeniz hakkında detaylı bilgi verin..."
+                placeholder="Mesajınızı buraya yazın..."
                 disabled={isSubmitting}
                 aria-invalid={!!errors.message}
                 aria-describedby={errors.message ? 'message-error' : undefined}
