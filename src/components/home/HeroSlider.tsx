@@ -134,12 +134,14 @@ const SLIDES = [
 
 export function HeroSlider() {
     const [currentSlide, setCurrentSlide] = useState(0)
+    const [touchStart, setTouchStart] = useState<number | null>(null)
+    const [mouseStart, setMouseStart] = useState<number | null>(null)
+    const [isDragging, setIsDragging] = useState(false)
 
-    // Auto-play logic: Reset timer whenever currentSlide changes (auto or manual)
     useEffect(() => {
         const timer = setTimeout(() => {
             setCurrentSlide((prev) => (prev + 1) % SLIDES.length)
-        }, 6000)
+        }, 9000)
         return () => clearTimeout(timer)
     }, [currentSlide])
 
@@ -151,8 +153,47 @@ export function HeroSlider() {
         setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length)
     }
 
+    const handleSwipeEnd = (startX: number, endX: number) => {
+        const diff = startX - endX
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) nextSlide()
+            else prevSlide()
+        }
+    }
+
+    const onTouchStart = (e: React.TouchEvent) => setTouchStart(e.touches[0].clientX)
+    const onTouchEnd = (e: React.TouchEvent) => {
+        if (touchStart !== null) {
+            handleSwipeEnd(touchStart, e.changedTouches[0].clientX)
+            setTouchStart(null)
+        }
+    }
+
+    const onMouseDown = (e: React.MouseEvent) => {
+        setMouseStart(e.clientX)
+        setIsDragging(true)
+    }
+    const onMouseUp = (e: React.MouseEvent) => {
+        if (mouseStart !== null && isDragging) {
+            handleSwipeEnd(mouseStart, e.clientX)
+        }
+        setMouseStart(null)
+        setIsDragging(false)
+    }
+    const onMouseLeave = () => {
+        setMouseStart(null)
+        setIsDragging(false)
+    }
+
     return (
-        <div className="relative h-[75vh] min-h-[500px] w-full overflow-hidden bg-slate-900">
+        <div
+            className="relative h-[75vh] min-h-[500px] w-full overflow-hidden bg-slate-900 select-none"
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+            onMouseDown={onMouseDown}
+            onMouseUp={onMouseUp}
+            onMouseLeave={onMouseLeave}
+        >
             {/* Background Images */}
             <AnimatePresence mode="popLayout" initial={false}>
                 <motion.div
@@ -178,7 +219,7 @@ export function HeroSlider() {
 
             <Container className="relative z-10 h-full flex items-center pb-20 md:pb-0">
 
-                <div className="w-full pt-20 md:pt-0 relative z-10 pointer-events-none">
+                <div className="w-full pt-20 md:pt-0 md:px-14 lg:px-20 relative z-10 pointer-events-none">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentSlide}
@@ -248,17 +289,17 @@ export function HeroSlider() {
             {/* Navigation Arrows - Left & Right sides */}
             <button
                 onClick={prevSlide}
-                className="hidden md:flex absolute left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
+                className="hidden md:flex absolute left-2 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-9 h-9 lg:w-12 lg:h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
                 aria-label="Önceki Slayt"
             >
-                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+                <ArrowLeft className="w-4 h-4 lg:w-5 lg:h-5 group-hover:-translate-x-1 transition-transform" />
             </button>
             <button
                 onClick={nextSlide}
-                className="hidden md:flex absolute right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
+                className="hidden md:flex absolute right-2 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-9 h-9 lg:w-12 lg:h-12 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white items-center justify-center hover:bg-white/10 transition-all hover:scale-110 active:scale-95 group"
                 aria-label="Sonraki Slayt"
             >
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 transition-transform" />
             </button>
 
             {/* Slide Indicators - Bottom center, slightly above edge */}
