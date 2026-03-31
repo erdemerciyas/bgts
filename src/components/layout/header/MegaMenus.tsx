@@ -22,6 +22,74 @@ const BackgroundPattern = () => (
     </div>
 )
 
+const ProductsBackgroundPattern = () => (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+
+        {/* SOL SÜTUN ALT BOŞ ALAN: Nested hexagons — left:2%, bottom:5% */}
+        <svg className="absolute bottom-4 left-[3%] w-[200px] h-[180px] text-blue-500/[0.09]" viewBox="0 0 200 200" fill="none" stroke="currentColor">
+            <polygon points="100,15 165,50 165,130 100,165 35,130 35,50" strokeWidth="1.8" />
+            <polygon points="100,38 148,60 148,118 100,140 52,118 52,60" strokeWidth="1.3" />
+            <polygon points="100,58 132,72 132,108 100,122 68,108 68,72" strokeWidth="1" />
+        </svg>
+
+        {/* SOL SÜTUN ALT BOŞ ALAN: Dot grid — left:18%, bottom */}
+        <svg className="absolute bottom-6 left-[16%] w-[100px] h-[80px] text-slate-400/[0.12]" viewBox="0 0 100 80" fill="currentColor">
+            {Array.from({ length: 5 }).map((_, col) =>
+                Array.from({ length: 4 }).map((_, row) => (
+                    <circle
+                        key={`dl-${col}-${row}`}
+                        cx={10 + col * 20}
+                        cy={10 + row * 20}
+                        r={2}
+                    />
+                ))
+            )}
+        </svg>
+
+        {/* SAĞ SÜTUN ALT BOŞ ALAN: Concentric circles — right:5%, bottom */}
+        <svg className="absolute bottom-3 right-[4%] w-[180px] h-[170px] text-indigo-400/[0.09]" viewBox="0 0 160 160" fill="none" stroke="currentColor">
+            <circle cx="80" cy="80" r="72" strokeWidth="1.6" />
+            <circle cx="80" cy="80" r="50" strokeWidth="1.2" />
+            <circle cx="80" cy="80" r="28" strokeWidth="1" />
+            <circle cx="80" cy="80" r="6" fill="currentColor" opacity="0.25" />
+        </svg>
+
+        {/* SAĞ SÜTUN ALT BOŞ ALAN: Small dot cluster — right:20%, bottom */}
+        <svg className="absolute bottom-8 right-[18%] w-[80px] h-[70px] text-blue-400/[0.11]" viewBox="0 0 80 70" fill="currentColor">
+            {Array.from({ length: 4 }).map((_, col) =>
+                Array.from({ length: 3 }).map((_, row) => (
+                    <circle
+                        key={`dr-${col}-${row}`}
+                        cx={10 + col * 20}
+                        cy={12 + row * 22}
+                        r={2}
+                    />
+                ))
+            )}
+        </svg>
+
+        {/* ORTA SÜTUN ALT: Rotated diamond — center bottom */}
+        <svg className="absolute bottom-2 left-[38%] w-[120px] h-[110px] text-slate-400/[0.07]" viewBox="0 0 120 120" fill="none" stroke="currentColor">
+            <rect x="20" y="20" width="80" height="80" strokeWidth="1.4" transform="rotate(45 60 60)" />
+            <rect x="35" y="35" width="50" height="50" strokeWidth="1" transform="rotate(45 60 60)" />
+        </svg>
+
+        {/* İNCE DEKO: Sütun border'ları arası — left:32%, üst yarı */}
+        <svg className="absolute top-[15%] left-[31%] w-[40px] h-[60px] text-blue-400/[0.10]" viewBox="0 0 40 60" fill="none" stroke="currentColor">
+            <line x1="20" y1="0" x2="20" y2="60" strokeWidth="1.2" />
+            <circle cx="20" cy="15" r="4" strokeWidth="1" />
+            <circle cx="20" cy="45" r="4" strokeWidth="1" />
+        </svg>
+
+        {/* İNCE DEKO: Sütun border'ları arası — left:65%, üst yarı */}
+        <svg className="absolute top-[20%] left-[64%] w-[40px] h-[50px] text-indigo-400/[0.10]" viewBox="0 0 40 50" fill="none" stroke="currentColor">
+            <rect x="8" y="8" width="24" height="24" strokeWidth="1" transform="rotate(45 20 20)" />
+            <circle cx="20" cy="40" r="3" strokeWidth="1" />
+        </svg>
+
+    </div>
+)
+
 
 
 export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
@@ -167,9 +235,11 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
         role="menu"
         aria-label="Ürünler menüsü"
     >
-        <div className="flex">
+        <div className="flex relative">
+            <ProductsBackgroundPattern />
+
             {/* Column 1: İşe Alım */}
-            <div className="w-[33.33%] bg-blue-50/30 p-8 border-r border-blue-100 flex flex-col justify-start">
+            <div className="w-[33.33%] p-8 border-r border-blue-100/40 flex flex-col justify-start relative z-10">
                 <div className="mb-auto">
                     <h3 className={STYLES.columnHeader}>İŞE ALIM TEKNOLOJİLERİ</h3>
                     <div className="space-y-3">
@@ -196,7 +266,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
             </div>
 
             {/* Column 2: Kurumsal Çözümler */}
-            <div className="w-[33.33%] bg-[#f8fafc] p-8 border-r border-slate-100 flex flex-col justify-start">
+            <div className="w-[33.33%] p-8 border-r border-slate-100/40 flex flex-col justify-start relative z-10">
                 <div className="mb-auto">
                     <h3 className={STYLES.columnHeader}>KURUMSAL ÇÖZÜMLER</h3>
                     <div className="space-y-3">
@@ -241,7 +311,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
             </div>
 
             {/* Column 3: Doküman & Bilgi Yönetimi */}
-            <div className="w-[33.33%] bg-[#f8fafc] p-8 flex flex-col justify-start">
+            <div className="w-[33.33%] p-8 flex flex-col justify-start relative z-10">
                 <div className="mb-auto">
                     <h3 className={STYLES.columnHeader}>DOKÜMAN & BİLGİ YÖNETİMİ</h3>
                     <div className="space-y-3">
@@ -267,6 +337,9 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                 </div>
             </div>
         </div>
+
+        {/* Bottom accent bar */}
+        <div className="h-[3px] bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-600" />
     </motion.div>
 )
 
