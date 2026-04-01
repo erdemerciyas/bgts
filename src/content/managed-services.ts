@@ -506,7 +506,7 @@ export const MANAGED_SERVICES_CONTENT = {
                     title: "Sunucu ve Altyapı Sıkılaştırma",
                     subtitle: "Siber Güvenlik",
                     description: "Varsayılan yapılandırmalar izinsiz girişlere açıktır. BGTS, CIS Benchmark ve DISA STIG referansıyla sistemlerin saldırı yüzeyini kalıcı olarak daraltır.",
-                    image: "/images/iso/hardening.png",
+                    image: "/images/iso/sunucu.jpg",
                     icon: Lock,
                     tags: ["CIS Benchmark", "DISA STIG", "Windows Server", "Active Directory", "PAM", "Just-in-Time", "GPO", "Zero Trust"],
                     features: [

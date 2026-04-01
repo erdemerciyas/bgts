@@ -64,6 +64,8 @@ Bu proje, BGTS'nin kurumsal web varlığını en güncel web teknolojileriyle su
 - **Hero Slider:** Ana sayfada çok slaytlı, animasyonlu kahraman alanı
 - **Framer Motion Animasyonları:** Scroll-triggered reveal, spring animasyonları, sayfa geçişleri
 - **Glassmorphism Efektleri:** Cam efektli kart ve bölüm tasarımları
+- **Fotoğraflı Hero Alanları:** Kariyer, Öğrenme ve Genç Mühendis sayfalarında gerçek fotoğraflı hero bölümleri (gradient overlay)
+- **Kolaj Tasarım:** Sürdürülebilir Değer sayfasında dağınık fotoğraf kolajı ile duygusal hikaye anlatımı
 
 ### AI Destekli Chatbot (Ayla) — *Şu anda pasif*
 - Groq API üzerinde çalışan Llama 3.3 70B modeli
@@ -98,8 +100,11 @@ Bu proje, BGTS'nin kurumsal web varlığını en güncel web teknolojileriyle su
 bgts-web/
 ├── public/
 │   └── images/              # Tüm statik görseller
+│       ├── collage/         # Sosyal katkı kolaj görselleri
+│       ├── genc-muhendis/   # Genç Mühendis Programı görselleri
 │       ├── headers/         # Sayfa hero görselleri
 │       ├── iso/             # İzometrik illüstrasyonlar (MSP)
+│       ├── services/        # Hizmet sayfası görselleri
 │       └── logos/           # Marka ve partner logolar
 │
 ├── src/
@@ -152,7 +157,9 @@ bgts-web/
 │   │   └── ui/              # Section, Container, Typography, Button, vb.
 │   │
 │   ├── content/             # İçerik veri katmanı (TypeScript objeleri)
-│   │   └── home.ts          # Ana sayfa içerik verisi
+│   │   ├── home.ts          # Ana sayfa içerik verisi
+│   │   ├── software-development.ts
+│   │   └── managed-services.ts
 │   │
 │   └── lib/
 │       ├── email.ts         # Nodemailer transporter
@@ -404,6 +411,7 @@ Test altyapısı: **Vitest** + **@testing-library/react** + **jsdom**
 
 | Versiyon | Öne Çıkan Özellik |
 |----------|-------------------|
+| v0.19.0 | Sayfa hero alanları fotoğraflı tasarıma geçirildi (Kariyer Yolları, Öğrenme, Genç Mühendis Programı); Sürdürülebilir Değer sayfasında kolaj fotoğraf hero tasarımı; Genç Mühendis Programı içerik ve görsel revizyonu (özel fotoğraflar, metin güncellemeleri); hizmet sayfalarında görsel güncellemeleri (MSP sunucu görseli, mikroservis dönüşümü); stok fotoğraflar yerine kurumsal görsellere geçiş. |
 | v0.18.0 | Logo sistemi yenilendi: beyaz logo varyantı eklendi, Header ve Footer'da CSS filter yerine doğrudan beyaz logo kullanımına geçildi, mega menü kart layoutları iyileştirildi, kullanılmayan referans logolar temizlendi. |
 | v0.17.0 | Kapsamlı SEO ve içerik revizyonu: tüm sayfalar için metadata layout dosyaları, sektör sayfalarında başlık/açıklama güncellemeleri ve tag temizliği, mega menü alt metin revizyonları, infografik sayfası BGTS markasına uyumlandırma, sosyal katkı görseli güncelleme, 15+ kullanılmayan bileşen temizliği, AnimatedElements bileşeni, middleware eklenmesi, ürün sayfalarına JSON-LD yapılandırılmış veri eklenmesi. |
 | v0.16.0 | Genç Mühendis Programı revizyonları: program başlıkları kısaltıldı, içerikler ve hedefler güncellendi, story kart metin boyutu düzeltildi, gereksiz ikon kaldırıldı. |

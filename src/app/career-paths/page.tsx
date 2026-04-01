@@ -12,11 +12,15 @@ export default function CareerPathsPage() {
         <div className="bg-white min-h-screen">
 
             {/* ═══════════ HERO ═══════════ */}
-            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 text-white">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-                <div className="absolute top-10 left-20 w-[350px] h-[350px] bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-10 right-20 w-[400px] h-[400px] bg-indigo-500/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden text-white">
+                <Image
+                    src="/images/headers/kariyerini-sen-sekillendir.jpg"
+                    alt="Kariyerini Sen Şekillendir"
+                    fill
+                    priority
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-950/70 to-indigo-950/60" />
 
                 <Container className="relative z-10">
                     <div className="max-w-4xl mx-auto text-center space-y-8">

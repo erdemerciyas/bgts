@@ -12,11 +12,31 @@ export default function SocialContributionPage() {
         <div className="bg-white min-h-screen">
 
             {/* ═══════════ HERO ═══════════ */}
-            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-900 via-rose-950 to-pink-950 text-white">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-                <div className="absolute top-10 left-20 w-[350px] h-[350px] bg-rose-500/20 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-10 right-20 w-[400px] h-[400px] bg-pink-500/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
+            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-900 via-rose-950 to-pink-950 text-white min-h-[600px] lg:min-h-[700px]">
+
+                {/* Scattered collage photos */}
+                <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+                    <div className="absolute top-4 left-2 w-[260px] h-[180px] lg:w-[340px] lg:h-[240px] rounded-2xl rotate-[-6deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
+                        <Image src="/images/collage/kolage3.jpg" alt="" fill className="object-cover object-top" />
+                    </div>
+                    <div className="absolute top-8 right-[3%] w-[220px] h-[160px] lg:w-[300px] lg:h-[210px] rounded-2xl rotate-[4deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
+                        <Image src="/images/collage/kolage1.jpg" alt="" fill className="object-cover object-top" />
+                    </div>
+                    <div className="absolute top-[38%] left-2 w-[200px] h-[140px] lg:w-[280px] lg:h-[190px] rounded-2xl rotate-[3deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
+                        <Image src="/images/collage/kolage4.jpg" alt="" fill className="object-cover object-top" />
+                    </div>
+                    <div className="absolute top-[32%] right-[1%] w-[240px] h-[170px] lg:w-[320px] lg:h-[220px] rounded-2xl rotate-[-5deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
+                        <Image src="/images/collage/kolage.jpg" alt="" fill className="object-cover object-top" />
+                    </div>
+                    <div className="absolute bottom-[3%] left-[6%] w-[220px] h-[155px] lg:w-[310px] lg:h-[210px] rounded-2xl rotate-[5deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
+                        <Image src="/images/collage/kolage2.jpg" alt="" fill className="object-cover object-top" />
+                    </div>
+                    <div className="absolute bottom-[1%] right-[4%] w-[250px] h-[175px] lg:w-[330px] lg:h-[230px] rounded-2xl rotate-[-3deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
+                        <Image src="/images/collage/kolage5.jpg" alt="" fill className="object-cover object-top" />
+                    </div>
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-rose-950/40 to-pink-950/50" />
 
                 <Container className="relative z-10">
                     <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -33,10 +53,7 @@ export default function SocialContributionPage() {
                             Eşit fırsatlar yaratmayı ve sürdürülebilir etki sağlamayı önceliklendiriyoruz.
                         </p>
 
-
                     </div>
-
-
                 </Container>
             </section>
 
@@ -182,8 +199,8 @@ export default function SocialContributionPage() {
                                 <div className="absolute -inset-3 bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
                                     <Image
-                                        src="/images/culture/culture-5.jpg"
-                                        alt="Sosyal Sorumluluk"
+                                        src="/images/collage/kolage3.jpg"
+                                        alt="Topluma Değer Katıyoruz"
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />

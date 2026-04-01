@@ -140,7 +140,7 @@ export const SOFTWARE_DEV_CONTENT = {
             title: "Yazılım Modernizasyonu & Mikroservis Dönüşümü",
             subtitle: "Mikroservis Dönüşümü",
             icon: RefreshCw,
-            image: "/images/services/yazilim-modernizasyonu.png",
+            image: "/images/services/mikroservis-donusumu.png",
             description: "Legacy sistemlerinizi modern mimarilere taşıyor, performans ve maliyet optimizasyonu sağlıyoruz.",
             features: [
                 {

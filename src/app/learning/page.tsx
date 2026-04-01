@@ -12,11 +12,15 @@ export default function LearningPage() {
         <div className="bg-white min-h-screen">
 
             {/* ═══════════ HERO ═══════════ */}
-            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-950 to-teal-950 text-white">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-                <div className="absolute top-10 left-20 w-[350px] h-[350px] bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-10 right-20 w-[400px] h-[400px] bg-teal-500/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+            <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden text-white">
+                <Image
+                    src="/images/headers/ogrenme-hero.jpg"
+                    alt="Öğrenmek Bir Yaşam Biçimi"
+                    fill
+                    priority
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-emerald-950/70 to-teal-950/60" />
 
                 <Container className="relative z-10">
                     <div className="max-w-4xl mx-auto text-center space-y-8">

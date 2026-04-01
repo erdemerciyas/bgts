@@ -28,13 +28,13 @@ export default function YoungEngineersPage() {
                 {/* Cinematic image */}
                 <div className="absolute inset-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=80"
+                        src="/images/genc-muhendis/hero.png"
                         alt="Genç Mühendisler Ekibi"
                         fill
-                        className="object-cover opacity-30"
+                        className="object-cover opacity-50"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#060B18] via-[#060B18]/60 to-[#060B18]" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#060B18]/80 via-[#060B18]/40 to-[#060B18]" />
                 </div>
 
                 {/* Animated gradient orbs */}
@@ -69,8 +69,7 @@ export default function YoungEngineersPage() {
                                 transition={{ duration: 0.6, delay: 0.2 }}
                             >
                                 <p className="text-slate-400 max-w-xl mb-10 text-lg md:text-xl leading-relaxed font-medium">
-                                    Gerçek projelerde aktif rol al, modern teknolojilerle üret,
-                                    deneyimli mentorların rehberliğinde kariyerine{" "}
+                                Genç Mühendis Programı ile proje bazlı öğrenim, gerçek proje simülasyonları ve mentor desteğiyle kariyerine{" "}
                                     <span className="text-white font-semibold">güçlü bir başlangıç</span> yap.
                                 </p>
                             </motion.div>
@@ -212,7 +211,7 @@ export default function YoungEngineersPage() {
                                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                                     <div className="aspect-[4/5]">
                                         <Image
-                                            src="/images/culture/culture-1.jpg"
+                                            src="/images/genc-muhendis/culture.png"
                                             alt="BGTS Genç Mühendisler Kültürü"
                                             fill
                                             className="object-cover"
@@ -224,12 +223,8 @@ export default function YoungEngineersPage() {
                                     <div className="absolute bottom-5 left-5 right-5">
                                         <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-5">
                                             <p className="text-white/90 font-medium text-sm leading-relaxed italic">
-                                                &ldquo;Sadece kod yazmayı değil, birlikte üretmeyi ve sürekli gelişmeyi öğreniyorsun.&rdquo;
+                                                &ldquo;Farklı sektör dinamiklerini tanıyarak güçlü bir mühendislik ortamında deneyim kazanırsın.&rdquo;
                                             </p>
-                                            <div className="flex items-center gap-2 mt-3">
-                                                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400" />
-                                                <span className="text-white/60 text-xs font-semibold">Genç Mühendis, 2024</span>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -242,10 +237,12 @@ export default function YoungEngineersPage() {
                             </Heading>
                             <div className="space-y-4 text-slate-500 text-[16px] leading-relaxed">
                                 <p>
-                                    Genç Mühendis Programı&apos;nda{" "}
-                                    <strong className="text-slate-800">gerçek uygulamalara</strong> dokunarak modern teknolojilerle üretme ve gelişme fırsatı bulursun. Deneyimli mentorların rehberliğinde{" "}
-                                    <strong className="text-slate-800">sürekli gelişim</strong>{" "}
-                                    odaklı bir ortamda çalışırsın.
+                                    Genç Mühendis Programı, gerçek projeler üzerinde çalışarak farklı sektörlerdeki{" "}
+                                    <strong className="text-slate-800">lider firmalarla deneyim kazanma</strong> fırsatı sunar. Teknik gelişimin yanında güçlü bir mühendislik kültürüyle seni geleceğe hazırlar.
+                                </p>
+                                <p>
+                                    Program süresince yalnızca teknik becerilerini değil,{" "}
+                                    <strong className="text-slate-800">problem çözme yaklaşımını</strong> ve takım içi iletişimini de geliştirirsin. Modern geliştirme süreçleri, gerçek proje senaryoları ve mentor desteğiyle profesyonel hayata güçlü bir başlangıç yaparsın.
                                 </p>
                             </div>
 
@@ -255,7 +252,7 @@ export default function YoungEngineersPage() {
                                     { icon: Target, title: "Gerçek Projeler", desc: "Canlı sistemlerde geliştirme" },
                                     { icon: Users, title: "1:1 Mentorluk", desc: "Kıdemli mühendis rehberliği" },
                                     { icon: Zap, title: "Tech Talks", desc: "Haftalık teknik sunumlar" },
-                                    { icon: TrendingUp, title: "Kariyer Yolu", desc: "Tam zamanlı pozisyon fırsatı" },
+                                    { icon: TrendingUp, title: "Kariyer Yolu", desc: "Tam zamanlı kariyer fırsatları" },
                                 ].map((f, i) => (
                                     <div key={i} className="group flex items-start gap-3 p-3.5 rounded-xl hover:bg-slate-50 transition-colors">
                                         <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors">
@@ -278,10 +275,10 @@ export default function YoungEngineersPage() {
                 <Container>
                     <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
                         {[
-                            { img: "/images/culture/culture-1.jpg", title: "Hackathon", tag: "Yarışma" },
-                            { img: "/images/culture/culture-2.jpg", title: "Mentorluk", tag: "Gelişim" },
-                            { img: "/images/culture/culture-5.jpg", title: "Tech Talks", tag: "Öğrenme" },
-                            { img: "/images/culture/culture-3.jpg", title: "Takım", tag: "Kültür" },
+                            { img: "/images/genc-muhendis/mentorluk.jpg", title: "Mentorluk", tag: "Gelişim" },
+                            { img: "/images/genc-muhendis/ogrenme.jpg", title: "Tech Talks", tag: "Öğrenme" },
+                            { img: "/images/culture/culture-3.jpg", title: "Takım Çalışması", tag: "Kültür" },
+                            { img: "/images/genc-muhendis/proje.jpg", title: "Kariyer Planlama", tag: "Proje" },
                         ].map((story, i) => (
                             <StaggerItem
                                 key={i}
@@ -322,7 +319,7 @@ export default function YoungEngineersPage() {
                             </span>
                         </h2>
                         <p className="text-slate-400 text-lg font-medium max-w-lg">
-                            Seçimini yap, geleceğini şekillendir. Tüm programlar modern süreçlere tam entegrasyonu hedefler.
+                        Genç Mühendis Programı kapsamında farklı uzmanlık alanlarından birini seçebilirsin.​
                         </p>
                     </AnimatedDiv>
 
@@ -478,7 +475,7 @@ export default function YoungEngineersPage() {
                             {
                                 step: "04",
                                 title: "Projeye Dahil",
-                                desc: "Gerçek projelerde aktif mühendis olarak çalışmaya başla.",
+                                desc: "Genç projelerde rol almaya başla​.",
                                 icon: BriefcaseBusiness,
                                 accent: "emerald",
                             },
