@@ -16,23 +16,29 @@ export default function SocialContributionPage() {
 
                 {/* Scattered collage photos */}
                 <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-                    <div className="absolute top-4 left-2 w-[260px] h-[180px] lg:w-[340px] lg:h-[240px] rounded-2xl rotate-[-6deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
-                        <Image src="/images/collage/kolage3.jpg" alt="" fill className="object-cover object-top" />
+                    {/* kolage3: 16:9 yatay */}
+                    <div className="absolute top-4 left-2 w-[290px] lg:w-[400px] rounded-2xl rotate-[-6deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 overflow-hidden">
+                        <Image src="/images/collage/kolage3.jpg" alt="" width={1024} height={576} className="w-full h-auto block" />
                     </div>
-                    <div className="absolute top-8 right-[3%] w-[220px] h-[160px] lg:w-[300px] lg:h-[210px] rounded-2xl rotate-[4deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
-                        <Image src="/images/collage/kolage1.jpg" alt="" fill className="object-cover object-top" />
+                    {/* kolage1: dikey */}
+                    <div className="absolute top-6 right-[2%] w-[140px] lg:w-[190px] rounded-2xl rotate-[4deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 overflow-hidden">
+                        <Image src="/images/collage/kolage1.jpg" alt="" width={768} height={1108} className="w-full h-auto block" />
                     </div>
-                    <div className="absolute top-[38%] left-2 w-[200px] h-[140px] lg:w-[280px] lg:h-[190px] rounded-2xl rotate-[3deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
-                        <Image src="/images/collage/kolage4.jpg" alt="" fill className="object-cover object-top" />
+                    {/* kolage4: 3:2 yatay */}
+                    <div className="absolute top-[40%] left-2 w-[270px] lg:w-[350px] rounded-2xl rotate-[3deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 overflow-hidden">
+                        <Image src="/images/collage/kolage4.jpg" alt="" width={1024} height={683} className="w-full h-auto block" />
                     </div>
-                    <div className="absolute top-[32%] right-[1%] w-[240px] h-[170px] lg:w-[320px] lg:h-[220px] rounded-2xl rotate-[-5deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
-                        <Image src="/images/collage/kolage.jpg" alt="" fill className="object-cover object-top" />
+                    {/* kolage: 3:2 yatay */}
+                    <div className="absolute top-[38%] right-[1%] w-[230px] lg:w-[300px] rounded-2xl rotate-[-5deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 overflow-hidden">
+                        <Image src="/images/collage/kolage.jpg" alt="" width={1204} height={803} className="w-full h-auto block" />
                     </div>
-                    <div className="absolute bottom-[3%] left-[6%] w-[220px] h-[155px] lg:w-[310px] lg:h-[210px] rounded-2xl rotate-[5deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
-                        <Image src="/images/collage/kolage2.jpg" alt="" fill className="object-cover object-top" />
+                    {/* kolage2: dikey */}
+                    <div className="absolute bottom-[2%] left-[5%] w-[130px] lg:w-[175px] rounded-2xl rotate-[5deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 overflow-hidden">
+                        <Image src="/images/collage/kolage2.jpg" alt="" width={768} height={1152} className="w-full h-auto block" />
                     </div>
-                    <div className="absolute bottom-[1%] right-[4%] w-[250px] h-[175px] lg:w-[330px] lg:h-[230px] rounded-2xl rotate-[-3deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 bg-slate-900 overflow-hidden">
-                        <Image src="/images/collage/kolage5.jpg" alt="" fill className="object-cover object-top" />
+                    {/* kolage5: 3:2 yatay */}
+                    <div className="absolute bottom-[2%] right-[3%] w-[240px] lg:w-[310px] rounded-2xl rotate-[-3deg] shadow-[0_8px_30px_rgba(0,0,0,0.5)] border-2 border-white/15 overflow-hidden">
+                        <Image src="/images/collage/kolage5.jpg" alt="" width={1024} height={683} className="w-full h-auto block" />
                     </div>
                 </div>
 

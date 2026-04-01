@@ -31,10 +31,10 @@ export default function YoungEngineersPage() {
                         src="/images/genc-muhendis/hero.png"
                         alt="Genç Mühendisler Ekibi"
                         fill
-                        className="object-cover opacity-50"
+                        className="object-cover object-[center_25%] opacity-80"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#060B18]/80 via-[#060B18]/40 to-[#060B18]" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#060B18]/60 via-[#060B18]/20 to-[#060B18]" />
                 </div>
 
                 {/* Animated gradient orbs */}
@@ -46,8 +46,7 @@ export default function YoungEngineersPage() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
 
                 <Container className="relative z-10 pt-28 pb-32">
-                    <div className="grid lg:grid-cols-12 gap-12 items-center">
-                        <div className="lg:col-span-7">
+                    <div className="max-w-3xl">
                             <motion.h1
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -68,7 +67,7 @@ export default function YoungEngineersPage() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.2 }}
                             >
-                                <p className="text-slate-400 max-w-xl mb-10 text-lg md:text-xl leading-relaxed font-medium">
+                                <p className="text-white/90 max-w-xl mb-10 text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg">
                                 Genç Mühendis Programı ile proje bazlı öğrenim, gerçek proje simülasyonları ve mentor desteğiyle kariyerine{" "}
                                     <span className="text-white font-semibold">güçlü bir başlangıç</span> yap.
                                 </p>
@@ -92,61 +91,6 @@ export default function YoungEngineersPage() {
                                     </Button>
                                 </Link>
                             </motion.div>
-                        </div>
-
-                        {/* Right: Terminal-style card */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 40 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.4 }}
-                            className="hidden lg:block lg:col-span-5"
-                        >
-                            <div className="relative">
-                                <div className="absolute -inset-1 bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-violet-500/20 rounded-2xl blur-xl" />
-                                <div className="relative bg-[#0d1224] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl">
-                                    <div className="flex items-center gap-2 px-5 py-3.5 bg-white/[0.03] border-b border-white/[0.06]">
-                                        <div className="flex gap-1.5">
-                                            <div className="w-3 h-3 rounded-full bg-red-500/70" />
-                                            <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
-                                            <div className="w-3 h-3 rounded-full bg-green-500/70" />
-                                        </div>
-                                        <span className="text-xs text-slate-500 font-mono ml-2">kariyer.bgts.com.tr</span>
-                                    </div>
-                                    <div className="p-6 font-mono text-sm space-y-4 min-h-[320px]">
-                                        <div>
-                                            <span className="text-emerald-400">$</span>{" "}
-                                            <span className="text-slate-300">bgts init</span>{" "}
-                                            <span className="text-blue-400">--program</span>{" "}
-                                            <span className="text-cyan-300">genc-muhendis</span>
-                                        </div>
-                                        <div className="text-slate-500">
-                                            <span className="text-yellow-400/80">&#9656;</span> Teknik müfredat yükleniyor...
-                                        </div>
-                                        <div className="text-slate-500">
-                                            <span className="text-yellow-400/80">&#9656;</span> Mentor eşleştirmesi yapılıyor...
-                                        </div>
-                                        <div className="text-slate-500">
-                                            <span className="text-yellow-400/80">&#9656;</span> Proje ortamı hazırlanıyor...
-                                        </div>
-                                        <div className="mt-2 p-4 rounded-lg bg-emerald-500/[0.06] border border-emerald-500/20">
-                                            <div className="flex items-center gap-2 text-emerald-400 mb-2">
-                                                <CheckCircle2 className="w-4 h-4" />
-                                                <span className="font-semibold">Hazır!</span>
-                                            </div>
-                                            <div className="text-slate-400 text-xs leading-relaxed">
-                                                3 program &middot; 12 hafta eğitim &middot; 1:1 mentorluk &middot; gerçek projeler
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <span className="text-emerald-400">$</span>
-                                            <span className="text-slate-300">basvur</span>
-                                            <span className="text-blue-400">--hemen</span>
-                                            <span className="inline-block w-2.5 h-5 bg-blue-400/80 animate-pulse ml-1" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
                     </div>
                 </Container>
 

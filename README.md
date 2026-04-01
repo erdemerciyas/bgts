@@ -411,6 +411,7 @@ Test altyapısı: **Vitest** + **@testing-library/react** + **jsdom**
 
 | Versiyon | Öne Çıkan Özellik |
 |----------|-------------------|
+| v0.20.0 | Sürdürülebilir Değer kolaj görselleri orijinal oranlarına uygun hale getirildi (crop sorunu giderildi); kolaj kartları gerçek görsel boyutlarına göre yeniden boyutlandırıldı (dikey/yatay ayrımı). |
 | v0.19.0 | Sayfa hero alanları fotoğraflı tasarıma geçirildi (Kariyer Yolları, Öğrenme, Genç Mühendis Programı); Sürdürülebilir Değer sayfasında kolaj fotoğraf hero tasarımı; Genç Mühendis Programı içerik ve görsel revizyonu (özel fotoğraflar, metin güncellemeleri); hizmet sayfalarında görsel güncellemeleri (MSP sunucu görseli, mikroservis dönüşümü); stok fotoğraflar yerine kurumsal görsellere geçiş. |
 | v0.18.0 | Logo sistemi yenilendi: beyaz logo varyantı eklendi, Header ve Footer'da CSS filter yerine doğrudan beyaz logo kullanımına geçildi, mega menü kart layoutları iyileştirildi, kullanılmayan referans logolar temizlendi. |
 | v0.17.0 | Kapsamlı SEO ve içerik revizyonu: tüm sayfalar için metadata layout dosyaları, sektör sayfalarında başlık/açıklama güncellemeleri ve tag temizliği, mega menü alt metin revizyonları, infografik sayfası BGTS markasına uyumlandırma, sosyal katkı görseli güncelleme, 15+ kullanılmayan bileşen temizliği, AnimatedElements bileşeni, middleware eklenmesi, ürün sayfalarına JSON-LD yapılandırılmış veri eklenmesi. |
