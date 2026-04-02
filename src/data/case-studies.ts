@@ -11,6 +11,66 @@ export interface CaseStudy {
 
 export const CASE_STUDIES: CaseStudy[] = [
     {
+        id: "case-study-16",
+        title: "Kredi Ödeme Planı Servis Dönüşümü",
+        requirement: "Bankacılık uygulamalarında kullanılan ve mainframe ortamında çalışan Ödeme Planı Genel Servisi'nin, açık sistem mimarisine taşınması ihtiyacı bulunuyordu. BILCODEP ödeme planı servisinin mevcut bağımlılıklarının analiz edilmesi, performans ve sürdürülebilirlik açısından açık sistemlerle uyumlu hale getirilmesi hedefleniyordu.",
+        solution: "BILCODEP ödeme planı servisinin kullandığı tüm bağımlılıklar detaylı olarak analiz edildi. gRPC ve MFDC servis entegrasyonları ile DB2 veritabanı çağrıları, açık sistem mimarisine uygun olacak şekildeChannel ve business katmanlarında yeniden geliştirildi. Servis, mainframe bağımlılıklarından arındırılarak modern ve ölçeklenebilir bir mimariye taşındı.",
+        projectType: "Turnkey Proje",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "gRPC", "Platform", "DB2", "MFDC Servisleri", "Mainframe Dönüşüm", "Microservices"]
+    },
+    {
+        id: "case-study-17",
+        title: "Vergi & Fatura Servisleri Projesi",
+        requirement: "Bankanın Mobil ve İnternet Şube'de yer alan fatura ve vergi ödeme ekranlarının, mevcut mainframe bağımlılıklarının azaltılarak güncel teknolojilerle yeniden ele alınması ihtiyacı bulunuyordu. Altyapının güçlendirilmesi, sürdürülebilirliğin artırılması ve teknik olarak daha kolay yönetilebilir bir yapıya dönüştürülmesi hedefleniyordu.",
+        solution: "Fatura ve vergi ödeme ekranları, mainframe bağımlılıkları azaltılacak şekilde yeniden tasarlanarak modern teknolojilerle geliştirildi. Ödeme süreçleri teknik olarak daha yönetilebilir, ölçeklenebilir ve güçlü bir yapıya kavuşturularak Garanti BBVA Mobil ve İnternet Şube kullanıcılarının hizmetine sunuldu.",
+        projectType: "Time & Material",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "gRPC", "Platform", "Spring Boot", "Mainframe Dönüşüm", "RESTful API", "Oracle DB"]
+    },
+    {
+        id: "case-study-18",
+        title: "E-Fatura Entegrasyon Projesi",
+        requirement: "Bankaya kesilen e-faturaların aracı firma üzerinden alınarak iç sistemlere entegre edilmesi, onay süreçlerinin yönetilmesi, ilgili modüllere aktarılması ve uçtan uca izlenebilmesi ihtiyacı bulunuyordu. Bu süreçlerin EFA ekranları ve mimarisi ile uyumlu şekilde çalışması hedefleniyordu.",
+        solution: "Aracı firma üzerinden iletilen e-faturaların iç sistemlere alınmasını sağlayan entegrasyon geliştirildi. E-faturaların onay süreçleri, diğer modüllere aktarımı ve izlenebilirliği EFA ekranları ve yapısına uygun olacak şekilde tasarlanarak hayata geçirildi. Böylece e-fatura süreçleri merkezi, izlenebilir ve yönetilebilir bir yapıya kavuşturuldu.",
+        projectType: "Turnkey Proje",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "gRPC", "Platform", "EFA Ekranları", "E-Fatura API", "Spring Boot", "Oracle DB"]
+    },
+    {
+        id: "case-study-13",
+        title: "SwapAgent İşlevsellik Artırma",
+        requirement: "SwapAgent platformu için ileri düzey işlevlerin geliştirilmesi gerekiyordu. Dinamik bir finansal ortamda sağlam ve ölçeklenebilir çözümler sağlanması bekleniyordu.",
+        solution: "Yeni özellikleri sorunsuz bir şekilde geliştirmek ve entegre etmek için Java uzmanlığından yararlanıldı. Özel gereksinimleri anlamak ve karşılamak için SwapAgent ekibiyle yakın işbirliği yapıldı. Platformun ölçeklenebilirliği ve performansı sağlandı.",
+        projectType: "Time & Material",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "Spring Boot", "Microservices", "RESTful API", "Docker", "Oracle DB"]
+    },
+    {
+        id: "case-study-14",
+        title: "Reasürans Dijital Dönüşüm Projesi",
+        requirement: "Reasürans modüllerin analizinin yapılması, tabloların açık sisteme alınması, ekran ve batchlerde otomasyonların hazırlanması ve dijital dönüşük odaklı platformda yeniden yazılması. 19 Ekranın dönüşümü gerçekleşiyor. Bu kapsamda 19 ekrana ek olarak 8 batch ve 13 tablonun açık sisteme alınıyor.",
+        solution: "Ekranlar ve batchler yeni platforma taşındı, Mainframe'den açık sisteme dönüşüm projesi yapıldı. Kritik noktalar için monitoring alarmlar oluşturuldu. Raporlar ODI ile oluşturuldu. 10 kişilik takım: 1 Data Developer, 1 Architect, 2 İş Analisti, 3 Fullstack (Java) Developer, 1 Test Uzmanı, 1 PM, 1 Dev Team Lead.",
+        projectType: "Turnkey Proje",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "Platform", "Mainframe Dönüşüm", "Oracle Data Integrator (ODI)", "Spring Batch", "Oracle DB", "Monitoring"]
+    },
+    {
+        id: "case-study-15",
+        title: "Sigortacılık Hayat Dışı Ürünler & Dijital Dönüşümü",
+        requirement: "Hayat sigortası dışı Elementer sigorta ürünlerinde Eureko sigorta ve banka ile çalışan dijital kanaldan satış ekranları ve sigorta acentelerinin kullandığı acente ekranlarının yeni teknolojiler ile dönüştürülmesi gerekiyordu.",
+        solution: "Müşteri bilgilerinin ayrı tutulabilmesi için iki farklı yapı geliştirildi. Eureko sigorta ile asenkron çalışan bir yapı oluşturuldu. Mobil, web ve kredi ürünleri ile entegrasyonları da dahil olmak üzere yoğun entegrasyon noktası bulunan bir proje gerçekleştirildi. 2 Fullstack (Java) Developer ve 2 İş Analisti.",
+        projectType: "Time & Material",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "Platform", "Spring Boot", "Angular", "RESTful API", "Asenkron Mesajlaşma", "Oracle DB"]
+    },
+    {
         id: "case-study-1",
         title: "Ofis Rezervasyon ve Planlama Çözümü",
         requirement: "Banka, haftada bir gün ofis lokasyonundan olmak üzere uyguladığı hibrit çalışma düzeni kapsamındaki çalışanlarının çalışma planlamalarını yapabilmelerine ihtiyaç duyuyordu.",
@@ -129,66 +189,6 @@ export const CASE_STUDIES: CaseStudy[] = [
         sector: "Finans Sektörü",
         category: "yazilim",
         technologies: [".NET", "ASP.NET MVC", "C#", "Entity Framework", "SQL Server", "Angular"]
-    },
-    {
-        id: "case-study-16",
-        title: "Kredi Ödeme Planı Servis Dönüşümü",
-        requirement: "Bankacılık uygulamalarında kullanılan ve mainframe ortamında çalışan Ödeme Planı Genel Servisi'nin, açık sistem mimarisine taşınması ihtiyacı bulunuyordu. BILCODEP ödeme planı servisinin mevcut bağımlılıklarının analiz edilmesi, performans ve sürdürülebilirlik açısından açık sistemlerle uyumlu hale getirilmesi hedefleniyordu.",
-        solution: "BILCODEP ödeme planı servisinin kullandığı tüm bağımlılıklar detaylı olarak analiz edildi. gRPC ve MFDC servis entegrasyonları ile DB2 veritabanı çağrıları, açık sistem mimarisine uygun olacak şekildeChannel ve business katmanlarında yeniden geliştirildi. Servis, mainframe bağımlılıklarından arındırılarak modern ve ölçeklenebilir bir mimariye taşındı.",
-        projectType: "Turnkey Proje",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "gRPC", "Platform", "DB2", "MFDC Servisleri", "Mainframe Dönüşüm", "Microservices"]
-    },
-    {
-        id: "case-study-17",
-        title: "Vergi & Fatura Servisleri Projesi",
-        requirement: "Bankanın Mobil ve İnternet Şube'de yer alan fatura ve vergi ödeme ekranlarının, mevcut mainframe bağımlılıklarının azaltılarak güncel teknolojilerle yeniden ele alınması ihtiyacı bulunuyordu. Altyapının güçlendirilmesi, sürdürülebilirliğin artırılması ve teknik olarak daha kolay yönetilebilir bir yapıya dönüştürülmesi hedefleniyordu.",
-        solution: "Fatura ve vergi ödeme ekranları, mainframe bağımlılıkları azaltılacak şekilde yeniden tasarlanarak modern teknolojilerle geliştirildi. Ödeme süreçleri teknik olarak daha yönetilebilir, ölçeklenebilir ve güçlü bir yapıya kavuşturularak Garanti BBVA Mobil ve İnternet Şube kullanıcılarının hizmetine sunuldu.",
-        projectType: "Time & Material",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "gRPC", "Platform", "Spring Boot", "Mainframe Dönüşüm", "RESTful API", "Oracle DB"]
-    },
-    {
-        id: "case-study-18",
-        title: "E-Fatura Entegrasyon Projesi",
-        requirement: "Bankaya kesilen e-faturaların aracı firma üzerinden alınarak iç sistemlere entegre edilmesi, onay süreçlerinin yönetilmesi, ilgili modüllere aktarılması ve uçtan uca izlenebilmesi ihtiyacı bulunuyordu. Bu süreçlerin EFA ekranları ve mimarisi ile uyumlu şekilde çalışması hedefleniyordu.",
-        solution: "Aracı firma üzerinden iletilen e-faturaların iç sistemlere alınmasını sağlayan entegrasyon geliştirildi. E-faturaların onay süreçleri, diğer modüllere aktarımı ve izlenebilirliği EFA ekranları ve yapısına uygun olacak şekilde tasarlanarak hayata geçirildi. Böylece e-fatura süreçleri merkezi, izlenebilir ve yönetilebilir bir yapıya kavuşturuldu.",
-        projectType: "Turnkey Proje",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "gRPC", "Platform", "EFA Ekranları", "E-Fatura API", "Spring Boot", "Oracle DB"]
-    },
-    {
-        id: "case-study-13",
-        title: "SwapAgent İşlevsellik Artırma",
-        requirement: "SwapAgent platformu için ileri düzey işlevlerin geliştirilmesi gerekiyordu. Dinamik bir finansal ortamda sağlam ve ölçeklenebilir çözümler sağlanması bekleniyordu.",
-        solution: "Yeni özellikleri sorunsuz bir şekilde geliştirmek ve entegre etmek için Java uzmanlığından yararlanıldı. Özel gereksinimleri anlamak ve karşılamak için SwapAgent ekibiyle yakın işbirliği yapıldı. Platformun ölçeklenebilirliği ve performansı sağlandı.",
-        projectType: "Time & Material",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "Spring Boot", "Microservices", "RESTful API", "Docker", "Oracle DB"]
-    },
-    {
-        id: "case-study-14",
-        title: "Reasürans Dijital Dönüşüm Projesi",
-        requirement: "Reasürans modüllerin analizinin yapılması, tabloların açık sisteme alınması, ekran ve batchlerde otomasyonların hazırlanması ve dijital dönüşük odaklı platformda yeniden yazılması. 19 Ekranın dönüşümü gerçekleşiyor. Bu kapsamda 19 ekrana ek olarak 8 batch ve 13 tablonun açık sisteme alınıyor.",
-        solution: "Ekranlar ve batchler yeni platforma taşındı, Mainframe'den açık sisteme dönüşüm projesi yapıldı. Kritik noktalar için monitoring alarmlar oluşturuldu. Raporlar ODI ile oluşturuldu. 10 kişilik takım: 1 Data Developer, 1 Architect, 2 İş Analisti, 3 Fullstack (Java) Developer, 1 Test Uzmanı, 1 PM, 1 Dev Team Lead.",
-        projectType: "Turnkey Proje",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "Platform", "Mainframe Dönüşüm", "Oracle Data Integrator (ODI)", "Spring Batch", "Oracle DB", "Monitoring"]
-    },
-    {
-        id: "case-study-15",
-        title: "Sigortacılık Hayat Dışı Ürünler & Dijital Dönüşümü",
-        requirement: "Hayat sigortası dışı Elementer sigorta ürünlerinde Eureko sigorta ve banka ile çalışan dijital kanaldan satış ekranları ve sigorta acentelerinin kullandığı acente ekranlarının yeni teknolojiler ile dönüştürülmesi gerekiyordu.",
-        solution: "Müşteri bilgilerinin ayrı tutulabilmesi için iki farklı yapı geliştirildi. Eureko sigorta ile asenkron çalışan bir yapı oluşturuldu. Mobil, web ve kredi ürünleri ile entegrasyonları da dahil olmak üzere yoğun entegrasyon noktası bulunan bir proje gerçekleştirildi. 2 Fullstack (Java) Developer ve 2 İş Analisti.",
-        projectType: "Time & Material",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "Platform", "Spring Boot", "Angular", "RESTful API", "Asenkron Mesajlaşma", "Oracle DB"]
     },
     {
         id: "case-study-19",
