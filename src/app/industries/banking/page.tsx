@@ -58,9 +58,9 @@ const paymentItems = [
 const caseStudies = [
     {
         title: "Kredi Ödeme Planı Servis Dönüşümü",
-        desc: "Mainframe (MFDC) bağımlılıklarından arındırılarak açık sistem mimarisine (ARK) taşınan, modern ve ölçeklenebilir ödeme planı altyapısı.",
+        desc: "Mainframe (MFDC) bağımlılıklarından arındırılarak açık sistem mimarisine taşınan, modern ve ölçeklenebilir ödeme planı altyapısı.",
         icon: Server,
-        tech: ["ARK", "GRPC", "DB2", "Microservices"]
+        tech: ["GRPC", "DB2", "Microservices"]
     },
     {
         title: "Şubeden Para Çekme & Yatırma",
@@ -69,16 +69,16 @@ const caseStudies = [
         tech: ["Java 17", "Spring Boot", "React", "OpenShift"]
     },
     {
-        title: "Reasürans ARK Transformasyonu",
+        title: "Reasürans Dijital Dönüşüm Projesi",
         desc: "19 Ekranın ve 13 tablonun Mainframe ortamından açık sistemlere dönüştürülmesi. Güçlü monitoring ve altyapı otomasyonu.",
         icon: Layers,
-        tech: ["Java Fullstack", "ARK", "ODI", "Monitoring"]
+        tech: ["Java Fullstack", "ODI", "Monitoring"]
     },
     {
         title: "E-Fatura Entegrasyon Projesi",
         desc: "E-faturaların iç sistemlere otomatik entegrasyonu ve uçtan uca izlenebilir onayı. EFA ekranları ile uyumlu yapı.",
         icon: FileText,
-        tech: ["ARK", "EFA", "GRPC"]
+        tech: ["EFA", "GRPC"]
     },
     {
         title: "CV Parsing & Kariyer Eklentisi",
@@ -99,8 +99,8 @@ const caseStudies = [
         tech: ["GRPC", "Merkezi Arama", "Dashboard"]
     },
     {
-        title: "KGF & IVR Projeleri",
-        desc: "Kredi Garanti Fonu entegrasyonu ile teminat süreçlerinin otomatikleştirilmesi ve Çağrı Merkezi IVR akışlarının modernizasyonu.",
+        title: "Kredi Fonu & IVR Projeleri",
+        desc: "Kredi Fonu entegrasyonu ile teminat süreçlerinin otomatikleştirilmesi ve Çağrı Merkezi IVR akışlarının modernizasyonu.",
         icon: ShieldCheck,
         tech: ["IVR", "Kredi Garanti Fonu", "Test Otomasyon"]
     }

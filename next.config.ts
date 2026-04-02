@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.unsplash.com https://i.pravatar.cc https://*.vidyard.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://api.groq.com; frame-src 'self' https://*.vidyard.com;"
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.unsplash.com https://i.pravatar.cc https://*.vidyard.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://api.groq.com; frame-src 'self' https://*.vidyard.com https://www.youtube.com https://youtube.com;"
           },
           {
             key: 'Permissions-Policy',

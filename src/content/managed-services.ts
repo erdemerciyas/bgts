@@ -47,7 +47,7 @@ export const MANAGED_SERVICES_CONTENT = {
                 kom: [
                     { title: "Destek Katmanları", items: ["Dispatcher", "Destek Mühendisi", "Eskalasyon Mühendisi"] },
                     { title: "Katma Değerli Hizmetler", items: ["Otomasyon Mühendisi", "Optimizasyon Mühendisi", "Teknoloji Uzmanları"] },
-                    { title: "Hizmet Yönetimi", items: ["Takım Lideri", "Service Delivery Manager", "Service Level Manager"] },
+                    { title: "Hizmet Yönetimi", items: ["Takım Lideri", "Hizmet Sunum Yöneticisi", "SLA Yöneticisi"] },
                     { title: "Servis Organizasyonu Tasarımı", items: ["ITSM Aracı Uzmanı", "ITIL Süreç Uzmanı"] }
                 ],
                 komTags: ["Çağrı Kalitesi Optimizasyonu", "Çağrı İzolasyonu", "Knowledge Base Üretimi", "Kontrat KPI Yönetimi", "Kriz Yönetimi", "Performans Yönetimi"],

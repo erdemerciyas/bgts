@@ -105,8 +105,8 @@ export default function InfographicsPage() {
                             <div className="relative z-10">
                                 <div className="text-4xl lg:text-5xl font-black text-emerald-500 mb-2">%36</div>
                                 <div className="h-1 w-12 bg-emerald-200 mb-4 rounded-full" />
-                                <h3 className="font-bold text-slate-800 text-lg mb-2">Çalışan Tavsiyesi</h3>
-                                <p className="text-slate-500 text-sm">Ekibimizin %36'sı çalışan tavsiyesiyle aramıza katılıyor.</p>
+                                <h3 className="font-bold text-slate-800 text-lg mb-2">Referanslı işe alım</h3>
+                                <p className="text-slate-500 text-sm">Ekibimizin %36'sı referanslı işe alım ile aramıza katılıyor.</p>
                             </div>
                         </StaggerItem>
 
@@ -169,12 +169,12 @@ export default function InfographicsPage() {
                             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                                 <div className="flex items-center justify-between mb-8 pb-8 border-b border-slate-100">
                                     <div>
-                                        <div className="text-5xl font-black text-slate-900">1800</div>
+                                        <div className="text-5xl font-black text-slate-900">1800+</div>
                                         <div className="text-slate-500 font-medium mt-1">Toplam Çalışan</div>
                                     </div>
                                     <div className="h-12 w-px bg-slate-200" />
                                     <div>
-                                        <div className="text-5xl font-black text-indigo-600">1400</div>
+                                        <div className="text-5xl font-black text-indigo-600">1400+</div>
                                         <div className="text-slate-500 font-medium mt-1">Mühendis</div>
                                     </div>
                                 </div>

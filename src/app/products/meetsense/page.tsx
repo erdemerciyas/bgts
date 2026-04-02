@@ -138,6 +138,9 @@ export default function MeetSensePage() {
                             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-xl">
                                 Akıllı asistan, canlı transkript, otomatik Jira entegrasyonu ve organizasyonel içgörüler ile toplantılarınızı kalıcı kurumsal hafızaya dönüştürün.
                             </p>
+                            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 hover:-translate-y-1 transition-all duration-300">
+                                Ürünü Keşfedin <ArrowRight className="w-5 h-5" />
+                            </Link>
                         </motion.div>
 
                         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2, duration: 0.8 }} className="relative">

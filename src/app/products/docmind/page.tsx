@@ -47,7 +47,7 @@ export default function DocMindPage() {
                                     href="/contact"
                                     className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-teal-500/25 hover:scale-105"
                                 >
-                                    Erken Erişim Başvurusu
+                                    Uzmanımızla Görüşün
                                 </Link>
                                 <Link
                                     href="#features"

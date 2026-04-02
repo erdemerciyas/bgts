@@ -48,7 +48,7 @@ export default function CvConverterPage() {
                                     href="/contact"
                                     className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:scale-105"
                                 >
-                                    Bilgi Alın <ArrowRight className="w-5 h-5 ml-2" />
+                                    Ürünü Keşfedin <ArrowRight className="w-5 h-5 ml-2" />
                                 </Link>
                                 <Link
                                     href="#features"

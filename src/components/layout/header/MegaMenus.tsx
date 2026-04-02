@@ -565,7 +565,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => (
                     <p className="text-blue-100 text-xs mt-1 mb-4">Teknoloji, etkinlikler ve güncel gelişmelerden haberdar olun.</p>
 
                     <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold group-hover:bg-white group-hover:text-[#0077b5] transition-colors">
-                        @bilgeadam
+                        @bgts
                     </span>
                 </div>
             </Link>

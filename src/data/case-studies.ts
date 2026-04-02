@@ -131,36 +131,6 @@ export const CASE_STUDIES: CaseStudy[] = [
         technologies: [".NET", "ASP.NET MVC", "C#", "Entity Framework", "SQL Server", "Angular"]
     },
     {
-        id: "case-study-13",
-        title: "SwapAgent İşlevsellik Artırma",
-        requirement: "SwapAgent platformu için ileri düzey işlevlerin geliştirilmesi gerekiyordu. Dinamik bir finansal ortamda sağlam ve ölçeklenebilir çözümler sağlanması bekleniyordu.",
-        solution: "Yeni özellikleri sorunsuz bir şekilde geliştirmek ve entegre etmek için Java uzmanlığından yararlanıldı. Özel gereksinimleri anlamak ve karşılamak için SwapAgent ekibiyle yakın işbirliği yapıldı. Platformun ölçeklenebilirliği ve performansı sağlandı.",
-        projectType: "Time & Material",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "Spring Boot", "Microservices", "RESTful API", "Docker", "Oracle DB"]
-    },
-    {
-        id: "case-study-14",
-        title: "Reasürans Dijital Transformasyon Projesi",
-        requirement: "Reasürans modüllerin analizinin yapılması, tabloların açık sisteme alınması, ekran ve batchlerde otomasyonların hazırlanması ve dijital dönüşük odaklı platformda yeniden yazılması. 19 Ekranın dönüşümü gerçekleşiyor. Bu kapsamda 19 ekrana ek olarak 8 batch ve 13 tablonun açık sisteme alınıyor.",
-        solution: "Ekranlar ve batchler yeni platforma taşındı, Mainframe'den açık sisteme dönüşüm projesi yapıldı. Kritik noktalar için monitoring alarmlar oluşturuldu. Raporlar ODI ile oluşturuldu. 10 kişilik takım: 1 Data Developer, 1 Architect, 2 İş Analisti, 3 Fullstack (Java) Developer, 1 Test Uzmanı, 1 PM, 1 Dev Team Lead.",
-        projectType: "Turnkey Proje",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "Platform", "Mainframe Dönüşüm", "Oracle Data Integrator (ODI)", "Spring Batch", "Oracle DB", "Monitoring"]
-    },
-    {
-        id: "case-study-15",
-        title: "Sigortacılık Hayat Dışı Ürünler & Dijital Dönüşümü",
-        requirement: "Hayat sigortası dışı Elementer sigorta ürünlerinde Eureko sigorta ve banka ile çalışan dijital kanaldan satış ekranları ve sigorta acentelerinin kullandığı acente ekranlarının yeni teknolojiler ile dönüştürülmesi gerekiyordu.",
-        solution: "Müşteri bilgilerinin ayrı tutulabilmesi için iki farklı yapı geliştirildi. Eureko sigorta ile asenkron çalışan bir yapı oluşturuldu. Mobil, web ve kredi ürünleri ile entegrasyonları da dahil olmak üzere yoğun entegrasyon noktası bulunan bir proje gerçekleştirildi. 2 Fullstack (Java) Developer ve 2 İş Analisti.",
-        projectType: "Time & Material",
-        sector: "Finans Sektörü",
-        category: "yazilim",
-        technologies: ["Java", "Platform", "Spring Boot", "Angular", "RESTful API", "Asenkron Mesajlaşma", "Oracle DB"]
-    },
-    {
         id: "case-study-16",
         title: "Kredi Ödeme Planı Servis Dönüşümü",
         requirement: "Bankacılık uygulamalarında kullanılan ve mainframe ortamında çalışan Ödeme Planı Genel Servisi'nin, açık sistem mimarisine taşınması ihtiyacı bulunuyordu. BILCODEP ödeme planı servisinin mevcut bağımlılıklarının analiz edilmesi, performans ve sürdürülebilirlik açısından açık sistemlerle uyumlu hale getirilmesi hedefleniyordu.",
@@ -191,6 +161,36 @@ export const CASE_STUDIES: CaseStudy[] = [
         technologies: ["Java", "gRPC", "Platform", "EFA Ekranları", "E-Fatura API", "Spring Boot", "Oracle DB"]
     },
     {
+        id: "case-study-13",
+        title: "SwapAgent İşlevsellik Artırma",
+        requirement: "SwapAgent platformu için ileri düzey işlevlerin geliştirilmesi gerekiyordu. Dinamik bir finansal ortamda sağlam ve ölçeklenebilir çözümler sağlanması bekleniyordu.",
+        solution: "Yeni özellikleri sorunsuz bir şekilde geliştirmek ve entegre etmek için Java uzmanlığından yararlanıldı. Özel gereksinimleri anlamak ve karşılamak için SwapAgent ekibiyle yakın işbirliği yapıldı. Platformun ölçeklenebilirliği ve performansı sağlandı.",
+        projectType: "Time & Material",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "Spring Boot", "Microservices", "RESTful API", "Docker", "Oracle DB"]
+    },
+    {
+        id: "case-study-14",
+        title: "Reasürans Dijital Dönüşüm Projesi",
+        requirement: "Reasürans modüllerin analizinin yapılması, tabloların açık sisteme alınması, ekran ve batchlerde otomasyonların hazırlanması ve dijital dönüşük odaklı platformda yeniden yazılması. 19 Ekranın dönüşümü gerçekleşiyor. Bu kapsamda 19 ekrana ek olarak 8 batch ve 13 tablonun açık sisteme alınıyor.",
+        solution: "Ekranlar ve batchler yeni platforma taşındı, Mainframe'den açık sisteme dönüşüm projesi yapıldı. Kritik noktalar için monitoring alarmlar oluşturuldu. Raporlar ODI ile oluşturuldu. 10 kişilik takım: 1 Data Developer, 1 Architect, 2 İş Analisti, 3 Fullstack (Java) Developer, 1 Test Uzmanı, 1 PM, 1 Dev Team Lead.",
+        projectType: "Turnkey Proje",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "Platform", "Mainframe Dönüşüm", "Oracle Data Integrator (ODI)", "Spring Batch", "Oracle DB", "Monitoring"]
+    },
+    {
+        id: "case-study-15",
+        title: "Sigortacılık Hayat Dışı Ürünler & Dijital Dönüşümü",
+        requirement: "Hayat sigortası dışı Elementer sigorta ürünlerinde Eureko sigorta ve banka ile çalışan dijital kanaldan satış ekranları ve sigorta acentelerinin kullandığı acente ekranlarının yeni teknolojiler ile dönüştürülmesi gerekiyordu.",
+        solution: "Müşteri bilgilerinin ayrı tutulabilmesi için iki farklı yapı geliştirildi. Eureko sigorta ile asenkron çalışan bir yapı oluşturuldu. Mobil, web ve kredi ürünleri ile entegrasyonları da dahil olmak üzere yoğun entegrasyon noktası bulunan bir proje gerçekleştirildi. 2 Fullstack (Java) Developer ve 2 İş Analisti.",
+        projectType: "Time & Material",
+        sector: "Finans Sektörü",
+        category: "yazilim",
+        technologies: ["Java", "Platform", "Spring Boot", "Angular", "RESTful API", "Asenkron Mesajlaşma", "Oracle DB"]
+    },
+    {
         id: "case-study-19",
         title: "Doğrudan Tahsilat Sistemi (DTS) Projesi",
         requirement: "Doğrudan Tahsilat Sistemi (DTS) ve Tedarikçi Finansmanı Sistemi (TFS) kapsamında yürütülen yüksek hacimli ve kritik finansal operasyonların, modern bankacılık mimarileri ile dijitalleştirilmesi ihtiyacı bulunuyordu. Mevcut yapıların daha güvenilir, ölçeklenebilir ve sürdürülebilir bir altyapıya dönüştürülmesi ihtiyacı bulunuyordu.",
@@ -214,7 +214,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         id: "case-study-21",
         title: "Şubeden Para Çekme / Yatırma & Altın Alım Projesi",
         requirement: "Şube ve ATM kanalından para çekme ve para yatırma işleminin yine Şube Kanalından Hurda altın alım ve hediye çeki işleminin tek ekran üzerinden yönetilmesini ve mikroservis mimarisiyle kullanıcı deneyimini iyileştirerek yeniden geliştirilmesi hedeflenmektedir.",
-        solution: "Projemiz için, 4 analist, 2 test otomasyon ve 8 yazılımcı ile ekip kuruldu. Mevcut akışın çıkarılması için eski sistem Cobol reverse çalışmaları başladı. ToBe tasarım belirlendi ve GT microservis mimarisi olarak ARK'da geliştirildi. Java 17, Spring Boot, Oracle, RabbitMQ, React temelli ekran ve backend servisleri geliştirildi. Bitbucket, Jenkins, OpenShift, Kibana ve Dynatrace ile serve izlendi.",
+        solution: "Projemiz için, 4 analist, 2 test otomasyon ve 8 yazılımcı ile ekip kuruldu. Mevcut akışın çıkarılması için eski sistem Cobol reverse çalışmaları başladı. ToBe tasarım belirlendi ve GT microservis mimarisi olarak geliştirildi. Java 17, Spring Boot, Oracle, RabbitMQ, React temelli ekran ve backend servisleri geliştirildi. Bitbucket, Jenkins, OpenShift, Kibana ve Dynatrace ile serve izlendi.",
         projectType: "Turnkey Proje",
         sector: "Finans Sektörü",
         category: "yazilim",
@@ -232,7 +232,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     {
         id: "case-study-23",
-        title: "KGF (Kredi Garanti Fonu) Entegrasyon Projesi",
+        title: "KGF (Kredi Fonu) Entegrasyon Projesi",
         requirement: "Kredi başvuru ve teminat süreçlerinin mevcut durumda manuel, dağınık ve operasyonel yükü yüksek şekilde yürütülmesi; süreçlerde gecikmelere, hata riskine ve sınırlı izlenebilirliğe yol açmaktaydı. KGF sistemleri ile bankacılık uygulamaları arasında entegre, otomatik ve standart bir yapı kurulması gerekiyordu.",
         solution: "KGF ile bankacılık uygulamalarının entegrasyonu ve teminat süreçleri otomatikleştirildi. Manuel yürütülen KGF bildirim süreçleri otomatik hale getirildi. Proje takımı: 5 Developer, 1 İş Analisti, 1 Team Lead. 6 ay geliştirme + 1 ay bakım ile Şubat 2026'da tamamlandı.",
         projectType: "Turnkey Proje",

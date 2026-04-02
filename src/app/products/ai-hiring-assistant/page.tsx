@@ -50,7 +50,7 @@ export default function AiHiringPage() {
                                     href="#features"
                                     className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl backdrop-blur-sm transition-all border border-white/10"
                                 >
-                                    Özellikleri Keşfet
+                                     Ürünü Keşfedin
                                 </Link>
                             </div>
                         </div>

@@ -12,11 +12,16 @@ export default function CulturePage() {
         <div className="bg-white min-h-screen">
 
             {/* ═══════════ HERO ═══════════ */}
-            <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 text-white">
+            <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden text-white">
+                <Image
+                    src="/images/headers/culture-hero.jpg"
+                    alt="BGTS Çalışma Kültürü"
+                    fill
+                    priority
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-indigo-950/70 to-purple-950/60" />
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-                <div className="absolute top-10 left-20 w-[350px] h-[350px] bg-pink-500/20 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-10 right-20 w-[400px] h-[400px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute top-1/3 right-1/3 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
                 <Container className="relative z-10">
                     <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -55,16 +60,14 @@ export default function CulturePage() {
                     </div>
                     <AnimatedDiv className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {[
-                            { src: "/images/culture/culture-1.jpg", span: "col-span-1 row-span-1" },
-                            { src: "/images/culture/culture-2.jpg", span: "col-span-1 row-span-1" },
-                            { src: "/images/culture/culture-3.jpg", span: "col-span-2 row-span-1" },
-                            { src: "/images/culture/culture-4.jpg", span: "col-span-2 row-span-1" },
-                            { src: "/images/culture/culture-5.jpg", span: "col-span-1 row-span-1" },
-                            { src: "/images/culture/culture-6.jpg", span: "col-span-1 row-span-1" },
-                        ].map((img, i) => (
-                            <div key={i} className={`${img.span} relative h-48 rounded-2xl overflow-hidden group`}>
+                            "/images/culture/culture-1.jpg",
+                            "/images/culture/culture-2.jpg",
+                            "/images/culture/culture-3.jpg",
+                            "/images/culture/culture-4.jpg",
+                        ].map((src, i) => (
+                            <div key={i} className="relative h-48 rounded-2xl overflow-hidden group">
                                 <Image
-                                    src={img.src}
+                                    src={src}
                                     alt={`BGTS Kültür ${i + 1}`}
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -159,7 +162,7 @@ export default function CulturePage() {
                                 <div className="absolute -inset-3 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-3xl blur-xl" />
                                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src="/images/culture/agile-esnek.png"
+                                        src="/images/culture/esnek-calisma.jpg"
                                         alt="Agile Çalışma"
                                         fill
                                         className="object-cover"
