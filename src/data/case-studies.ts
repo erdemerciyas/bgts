@@ -24,7 +24,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         id: "case-study-17",
         title: "Vergi & Fatura Servisleri Projesi",
         requirement: "Bankanın Mobil ve İnternet Şube'de yer alan fatura ve vergi ödeme ekranlarının, mevcut mainframe bağımlılıklarının azaltılarak güncel teknolojilerle yeniden ele alınması ihtiyacı bulunuyordu. Altyapının güçlendirilmesi, sürdürülebilirliğin artırılması ve teknik olarak daha kolay yönetilebilir bir yapıya dönüştürülmesi hedefleniyordu.",
-        solution: "Fatura ve vergi ödeme ekranları, mainframe bağımlılıkları azaltılacak şekilde yeniden tasarlanarak modern teknolojilerle geliştirildi. Ödeme süreçleri teknik olarak daha yönetilebilir, ölçeklenebilir ve güçlü bir yapıya kavuşturularak Garanti BBVA Mobil ve İnternet Şube kullanıcılarının hizmetine sunuldu.",
+        solution: "Fatura ve vergi ödeme ekranları, mainframe bağımlılıkları azaltılacak şekilde yeniden tasarlanarak modern teknolojilerle geliştirildi. Ödeme süreçleri teknik olarak daha yönetilebilir, ölçeklenebilir ve güçlü bir yapıya Dijital Şube kullanıcılarının hizmetine sunuldu.",
         projectType: "Time & Material",
         sector: "Finans Sektörü",
         category: "yazilim",

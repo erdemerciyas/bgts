@@ -135,6 +135,8 @@ bgts-web/
 │   │   ├── services/           # Hizmet sayfası görselleri
 │   │   ├── social/             # Sosyal medya görselleri
 │   │   └── logos/              # Marka ve partner logolar
+│   ├── favicon.png              # Tarayıcı sekmesi ikonu
+│   ├── icon.png                 # PWA / Apple Touch ikonu
 │   ├── grid.svg                # Arka plan grid deseni
 │   └── robots.txt              # Arama motoru yönergeleri
 │
@@ -182,6 +184,7 @@ bgts-web/
 │   │   │   ├── infographics/
 │   │   │   └── success-stories/
 │   │   │
+│   │   ├── icon.png            # Next.js App Router favicon (otomatik)
 │   │   ├── layout.tsx          # Root layout (Header, Footer, GA, ChatBot)
 │   │   ├── page.tsx            # Ana sayfa
 │   │   ├── globals.css         # Tailwind v4 import + global stiller
@@ -667,6 +670,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.21.0 | — | Favicon eklendi; HCM ürün sayfası video alanı cover görseline dönüştürüldü; İnfografik hero alanı fotoğraflı tasarıma geçirildi; Ana sayfa slider sıralama güncellendi; Vaka çalışması içerik düzeltmeleri |
 | v0.20.0 | — | Sürdürülebilir Değer kolaj görselleri orijinal oranlarına uygun hale getirildi; kolaj kartları gerçek görsel boyutlarına göre yeniden boyutlandırıldı |
 | v0.19.0 | — | Sayfa hero alanları fotoğraflı tasarıma geçirildi; kolaj fotoğraf hero tasarımı; Genç Mühendis içerik revizyonu; stok fotoğraflar yerine kurumsal görsellere geçiş |
 | v0.18.0 | — | Logo sistemi yenilendi; beyaz logo varyantı; mega menü kart layout iyileştirmeleri; kullanılmayan referans logolar temizlendi |

@@ -137,7 +137,7 @@ export default function HcmPage() {
                 subtitle="16 entegre modül ile İK süreçlerinizi uçtan uca dijitalleştirin. İşe alımdan bordro yönetimine, performanstan eğitim planlamasına kadar tek platform."
                 className="bg-slate-900"
                 backgroundImage="/images/headers/bgts-teknoloji-urunleri.jpg"
-                ctaText="Demo Talep Edin"
+                ctaText="Ürünü Keşfedin"
                 ctaLink="/contact"
             />
 
@@ -288,9 +288,9 @@ export default function HcmPage() {
                         <motion.div {...fadeUp} className="lg:col-span-4">
 
                             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
-                                HR Thema HCM{" "}
+                            Human Capital Management {" "}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-green-400 to-purple-400">
-                                    in Aksiyon
+                                (HCM)
                                 </span>
                             </h2>
                             <p className="text-slate-300 text-lg leading-relaxed mb-8">
@@ -312,21 +312,24 @@ export default function HcmPage() {
 
                         </motion.div>
 
-                        {/* Right: Video Embed */}
+                        {/* Right: Video Cover */}
                         <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="lg:col-span-8">
-                            <div className="relative">
-                                {/* Glow border effect */}
+                            <a
+                                href="https://www.youtube.com/watch?v=me_Z2xoZhEo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block relative group"
+                            >
                                 <div className="absolute -inset-1 bg-gradient-to-br from-orange-500/30 via-green-500/20 to-purple-500/30 rounded-2xl blur-sm" />
-                                <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video">
-                                    <iframe
-                                        src="https://www.youtube.com/embed/me_Z2xoZhEo"
-                                        title="HR Thema HCM Tanıtım"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
-                                        className="absolute inset-0 w-full h-full"
+                                <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-video">
+                                    <img
+                                        src="/images/products/hcm-cover.png"
+                                        alt="HR Thema HCM Tanıtım Videosu"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
+                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300" />
                                 </div>
-                            </div>
+                            </a>
                         </motion.div>
                     </div>
                 </Container>

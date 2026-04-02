@@ -9,16 +9,6 @@ export const HOME_CONTENT = {
         image: "/images/home/bgts-oduller.jpg",
         sections: [
             {
-                id: "managed-services",
-                title: "Yönetilen Hizmetler",
-                description: "İşletmenizin uzun vadeli hedeflerine ulaşmasına yardımcı olmak, sürdürülebilir büyüme ve rekabet avantajı sağlamak için özelleştirilmiş stratejik planlar oluşturuyor ve uyguluyoruz.",
-                features: ["7/24 İzleme & Destek", "AIOps & Otomasyon"],
-                ctaLink: "/services/managed-services",
-                ctaText: "Çözümleri Keşfedin",
-                image: "/images/home/yonetilen-hizmetler.jpg",
-                theme: "corporate" // corporate-dark
-            },
-            {
                 id: "software-development",
                 title: "Yazılım Geliştirme",
                 description: "Java, .NET ve modern frontend teknolojileriyle, kurumunuzun ihtiyaçlarına özel, ölçeklenebilir ve güvenli yazılım çözümleri tasarlıyoruz.",
@@ -36,6 +26,16 @@ export const HOME_CONTENT = {
                 ctaLink: "/services/devops",
                 ctaText: "Çözümleri Keşfedin",
                 image: "/images/home/devops-cozumleri.jpg",
+                theme: "corporate" // corporate-dark
+            },
+            {
+                id: "managed-services",
+                title: "Yönetilen Hizmetler",
+                description: "İşletmenizin uzun vadeli hedeflerine ulaşmasına yardımcı olmak, sürdürülebilir büyüme ve rekabet avantajı sağlamak için özelleştirilmiş stratejik planlar oluşturuyor ve uyguluyoruz.",
+                features: ["7/24 İzleme & Destek", "AIOps & Otomasyon"],
+                ctaLink: "/services/managed-services",
+                ctaText: "Çözümleri Keşfedin",
+                image: "/images/home/yonetilen-hizmetler.jpg",
                 theme: "corporate" // corporate-dark
             }
         ]

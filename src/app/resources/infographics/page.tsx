@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { Button } from "@/components/ui/Button"
 import { Users, UserPlus, Star, Award, Briefcase, Globe, TrendingUp, UserCheck, MapPin, Building2, PersonStanding, Play } from "lucide-react"
-import { FadeInLeft, ScaleIn, StaggerContainer, StaggerItem, FadeInRight } from "@/components/ui/AnimatedElements"
+import { FadeInLeft, StaggerContainer, StaggerItem, FadeInRight } from "@/components/ui/AnimatedElements"
 import Link from "next/link"
 
 export default function InfographicsPage() {
@@ -12,16 +12,24 @@ export default function InfographicsPage() {
         <div className="bg-white min-h-screen">
             {/* Custom Hero Section */}
             <Section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0B0F25]">
+                {/* Background Image */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <img
+                        src="/images/products/info-hero.png"
+                        alt=""
+                        className="absolute inset-0 w-full h-full object-contain object-right"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F25] via-[#0B0F25]/70 to-transparent" />
+                </div>
+
                 {/* Background Effects */}
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                     <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-blue-600/20 rounded-full blur-[120px]" />
                     <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[100px]" />
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light"></div>
                 </div>
 
                 <Container className="relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                        {/* Left Content */}
+                    <div className="max-w-3xl">
                         <FadeInLeft>
                             <Heading variant="h1" className="text-white text-5xl lg:text-7xl font-black mb-6 leading-tight">
                                 Verinin <br />
@@ -31,40 +39,6 @@ export default function InfographicsPage() {
                                 Sektörel içgörüler, büyüme rakamları ve insan kaynakları istatistikleriyle BGTS dünyasının derinliklerine inin.
                             </Text>
                         </FadeInLeft>
-
-                        {/* Right Visual - Abstract Charts Composition */}
-                        <div className="relative h-[400px] lg:h-[500px] w-full flex items-center justify-center perspective-1000">
-                            <ScaleIn className="relative w-full h-full">
-                                {/* Main Chart Card */}
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[220px] bg-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                                    <div className="flex justify-between items-center mb-6">
-                                        <div className="h-3 w-20 bg-white/20 rounded-full" />
-                                        <div className="h-6 w-16 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-full flex items-center justify-center">+125%</div>
-                                    </div>
-                                    <div className="flex items-end gap-3 h-[100px] justify-between">
-                                        {[40, 70, 50, 90, 60, 80].map((h, i) => (
-                                            <div
-                                                key={i}
-                                                style={{ height: `${h}%` }}
-                                                className="w-8 bg-gradient-to-t from-blue-600 to-cyan-400 rounded-t-md opacity-90"
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-
-
-                                {/* Floating Stat Card 2 */}
-                                <div className="absolute bottom-[15%] left-[5%] bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-700 max-w-[180px] animate-bounce [animation-duration:6s]">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <div className="p-2 bg-blue-500/20 rounded-lg text-blue-400">
-                                            <Briefcase className="w-5 h-5" />
-                                        </div>
-                                        <div className="text-2xl font-black text-white">1000+</div>
-                                    </div>
-                                    <div className="text-xs font-bold text-slate-400">Tamamlanan Proje</div>
-                                </div>
-                            </ScaleIn>
-                        </div>
                     </div>
                 </Container>
             </Section>

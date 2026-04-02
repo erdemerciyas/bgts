@@ -51,6 +51,13 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: "/icon.png",
+  },
   alternates: {
     canonical: "https://bgts.com.tr",
   },
@@ -64,6 +71,8 @@ export default function RootLayout({
   return (
     <html lang="tr" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
         <OrganizationStructuredData />
         <WebSiteStructuredData />
         <GoogleAnalytics />
