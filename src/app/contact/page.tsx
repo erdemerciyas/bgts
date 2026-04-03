@@ -28,10 +28,29 @@ const CONTACT_METHODS = [
     },
     {
         icon: MapPin,
-        label: "Adres",
-        value: "Teknopark İstanbul, Sarıyer",
-        href: "https://maps.google.com",
-        sublabel: "İTÜ ARI Teknokent",
+        label: "Ofisler",
+        value: "İstanbul & Ankara",
+        href: "#ofisler",
+        sublabel: "2 lokasyonda hizmet",
+    },
+]
+
+const OFFICES = [
+    {
+        city: "İstanbul",
+        title: "Merkez Ofis",
+        address: "İTÜ ARI Teknokent, Sarıyer",
+        fullAddress: "Reşitpaşa Mah. Katar Cad. No:4 Arı 3 Binası, 34467 Sarıyer/İstanbul",
+        mapUrl: "https://maps.google.com/?q=ITU+ARI+Teknokent",
+        image: "/images/contact/itu-ari3.jpg",
+    },
+    {
+        city: "Ankara",
+        title: "Ankara Ofis",
+        address: "Bilkent Cyberpark",
+        fullAddress: "Cyberpark, Cyberplaza B Blok, Bilkent, 06800 Çankaya/Ankara",
+        mapUrl: "https://maps.google.com/?q=Bilkent+Cyberpark",
+        image: "/images/contact/bilkent-cyberpark.jpg",
     },
 ]
 
@@ -305,26 +324,48 @@ export default function ContactPage() {
                             </form>
                         </motion.div>
 
-                        {/* Right Side — Image + Info */}
+                        {/* Right Side — Offices + Info */}
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="lg:col-span-2 space-y-6"
+                            id="ofisler"
                         >
-                            {/* Office Image */}
-                            <div className="relative h-[280px] md:h-[340px] rounded-2xl overflow-hidden group">
-                                <Image
-                                    src="/images/contact/itu-ari3.jpg"
-                                    alt="BGTS Ofis - İTÜ ARI Teknokent"
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-corporate-dark/70 via-transparent to-transparent" />
-                                <div className="absolute bottom-0 left-0 right-0 p-6">
-                                    <div className="text-white/70 text-xs font-medium uppercase tracking-wide mb-1">Merkez Ofis</div>
-                                    <div className="text-white font-bold text-sm">İTÜ ARI Teknokent, Sarıyer / İstanbul</div>
+                            {/* Offices */}
+                            <div className="space-y-4">
+                                <Heading variant="h4" className="text-slate-900 text-lg">Ofislerimiz</Heading>
+                                <div className="grid gap-4">
+                                    {OFFICES.map((office) => (
+                                        <a
+                                            key={office.city}
+                                            href={office.mapUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group relative h-[180px] rounded-2xl overflow-hidden block"
+                                        >
+                                            <Image
+                                                src={office.image}
+                                                alt={`BGTS ${office.title}`}
+                                                fill
+                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-corporate-dark/80 via-corporate-dark/20 to-transparent" />
+                                            <div className="absolute bottom-0 left-0 right-0 p-5">
+                                                <div className="flex items-center justify-between">
+                                                    <div>
+                                                        <div className="text-white/70 text-xs font-medium uppercase tracking-wide mb-1">{office.title}</div>
+                                                        <div className="text-white font-bold text-sm">{office.address}</div>
+                                                        <div className="text-white/60 text-xs mt-1">{office.city}</div>
+                                                    </div>
+                                                    <div className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                                                        <ArrowUpRight className="w-4 h-4 text-white" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
 
@@ -354,27 +395,6 @@ export default function ContactPage() {
                                     </Link>
                                 </div>
                             </div>
-
-                            {/* Map link */}
-                            <a
-                                href="https://maps.google.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block relative h-[160px] rounded-2xl overflow-hidden group border border-slate-200"
-                            >
-                                <Image
-                                    src="/images/bgts-map.png"
-                                    alt="BGTS Konum Haritası"
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-corporate-dark/10 group-hover:bg-corporate-dark/20 transition-colors" />
-                                <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 text-xs font-bold text-corporate-dark shadow-md group-hover:shadow-lg transition-shadow">
-                                    <MapPin className="w-3.5 h-3.5" />
-                                    Yol Tarifi Al
-                                    <ArrowUpRight className="w-3.5 h-3.5" />
-                                </div>
-                            </a>
                         </motion.div>
                     </div>
                 </Container>
