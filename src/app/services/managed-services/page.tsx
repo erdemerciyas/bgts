@@ -8,7 +8,7 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { MANAGED_SERVICES_CONTENT } from "@/content/managed-services"
-import { ArrowRight, CheckCircle2, ChevronRight, Layers, CheckSquare, Settings, Activity } from "lucide-react"
+import { ChevronRight, Layers, CheckSquare, Settings, Activity } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
@@ -57,7 +57,6 @@ export default function ManagedServicesPage() {
     const [activeSection, setActiveSection] = useState<string>(pillars[0]?.services[0]?.id || "");
     const isScrollingRef = useRef(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-    const sidebarScrollRef = useRef<HTMLDivElement>(null);
     
     // Scroll Spy Logic
     useEffect(() => {
@@ -99,7 +98,7 @@ export default function ManagedServicesPage() {
         }, 1000); // 1s is usually enough for smooth scroll to complete
     };
 
-    const renderPillarOverview = (pillar: any, index: number) => {
+    const renderPillarOverview = (pillar: any) => {
         if (!pillar.overview) return null;
         const ov = pillar.overview;
 
@@ -255,7 +254,6 @@ export default function ManagedServicesPage() {
 
     // Helper to render domain content with alternating layout
     const renderDomainSection = (domain: Record<string, any>, index: number) => {
-        const Icon = domain.icon;
         const isReversed = index % 2 !== 0;
         const bgColor = sectionColors[index % sectionColors.length];
         const isActive = activeSection === domain.id;
@@ -410,7 +408,7 @@ export default function ManagedServicesPage() {
                             <div className="sticky top-[80px] flex flex-col py-6">
                             <div className="space-y-6 pr-4">
                                 
-                                {pillars.map((pillar, pillarIndex) => {
+                                {pillars.map((pillar) => {
                                     const isPillarActive = activeSection === pillar.id || pillar.services.some((s: any) => s.id === activeSection);
                                     return (
                                     <div key={pillar.id} className="relative group/section">
@@ -420,7 +418,7 @@ export default function ManagedServicesPage() {
                                         <Link 
                                             href={`#${pillar.id}`} 
                                             className="block group/head relative"
-                                            onClick={(e) => {
+                                            onClick={() => {
                                                 handleLinkClick(pillar.id);
                                             }}
                                         >
@@ -463,10 +461,10 @@ export default function ManagedServicesPage() {
                         {/* Content Area */}
                         <div className="flex-1 min-w-0">
                             <div className="space-y-32">
-                                {pillars.map((pillar, pillarIndex) => (
+                                {pillars.map((pillar) => (
                                     <div id={pillar.id} key={pillar.id} className="space-y-12 scroll-mt-32">
                                         {/* Render Overview Content First */}
-                                        {renderPillarOverview(pillar, pillarIndex)}
+                                        {renderPillarOverview(pillar)}
 
                                         {/* Render Each Sub-Service */}
                                         {pillar.services.map((service, index) => (

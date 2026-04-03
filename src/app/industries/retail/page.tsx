@@ -1,12 +1,11 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import { ShoppingCart, Star, Users, Briefcase, BarChart3, ShieldCheck, Zap, Headphones, Settings, Database, Activity, ArrowRight, CheckCircle2, Package, Truck, Globe, Code, Eye, Brain, BookOpen, Award, Monitor, HardDrive, FileText, Network, Layers } from "lucide-react"
+import { ShoppingCart, Users, BarChart3, ShieldCheck, Zap, Headphones, Settings, Activity, Globe, Code, Eye, Brain, BookOpen, Monitor, HardDrive, FileText, Network, Layers } from "lucide-react"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
-import { Heading, Text } from "@/components/ui/Typography"
+import { Heading } from "@/components/ui/Typography"
 import Image from "next/image"
-import Link from "next/link"
 import { motion } from "framer-motion"
 
 const fadeUp = {

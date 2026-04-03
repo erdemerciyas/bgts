@@ -6,7 +6,7 @@ import { Heading, Text } from "@/components/ui/Typography"
 import { Button } from "@/components/ui/Button"
 import {
     Code, BarChart3, Server, ArrowRight, CheckCircle2,
-    Users, Award, Rocket, GraduationCap, BriefcaseBusiness,
+    Users, Rocket, GraduationCap, BriefcaseBusiness,
     FileSearch, BookOpen, Layers, Terminal, Zap, Target,
     TrendingUp, ChevronRight
 } from "lucide-react"

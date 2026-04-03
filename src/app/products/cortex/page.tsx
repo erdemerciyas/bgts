@@ -44,12 +44,11 @@ export default function CortexPage() {
                                 Yazılım geliştirme yaşam döngüsünü yapay zeka destekli agent'larla otomatikleştiren kurumsal platform. Kod inceleme, test yazma, hata düzeltme ve dokümantasyon analizi artık otopilotta.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-4">
-
                                 <Link
-                                    href="#features"
-                                    className="inline-flex items-center justify-center px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full backdrop-blur-md transition-all duration-300 border border-white/20 hover:border-white/40"
+                                    href="/contact"
+                                    className="inline-flex items-center justify-center px-8 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:scale-105"
                                 >
-                                    Agent'ları Keşfet
+                                    Uzmanımızla Görüşün <ArrowRight className="w-5 h-5 ml-2" />
                                 </Link>
                             </div>
                         </div>

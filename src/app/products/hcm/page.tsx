@@ -1,19 +1,18 @@
 "use client"
 
 import React from "react"
-import Link from "next/link"
 import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { motion } from "framer-motion"
 import {
-    ArrowRight, Users, Award, BookOpen, ClipboardCheck,
+    Users, Award, BookOpen, ClipboardCheck,
     GraduationCap, FileCheck, BarChart3, Video, Globe,
     Wallet, CalendarClock, Receipt, FileText, HelpCircle,
     Briefcase, Layers, Shield, Smartphone, Link2, Sparkles,
     CheckCircle2, Server, Database, Code, Cloud, Terminal,
-    MessageSquare, Cpu, Play
+    MessageSquare, Cpu
 } from "lucide-react"
 import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
@@ -137,7 +136,7 @@ export default function HcmPage() {
                 subtitle="16 entegre modül ile İK süreçlerinizi uçtan uca dijitalleştirin. İşe alımdan bordro yönetimine, performanstan eğitim planlamasına kadar tek platform."
                 className="bg-slate-900"
                 backgroundImage="/images/headers/bgts-teknoloji-urunleri.jpg"
-                ctaText="Ürünü Keşfedin"
+                ctaText="Uzmanımızla Görüşün"
                 ctaLink="/contact"
             />
 

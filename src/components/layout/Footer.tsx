@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { MapPin, Mail } from "lucide-react"
+import { MapPin } from "lucide-react"
 
 export default function Footer() {
     return (
@@ -81,10 +81,6 @@ export default function Footer() {
                                 <li className="flex gap-3">
                                     <MapPin className="w-5 h-5 text-corporate-accent shrink-0" />
                                     <span>Amsterdam</span>
-                                </li>
-                                <li className="flex gap-3">
-                                    <Mail className="w-5 h-5 text-corporate-accent shrink-0" />
-                                    <span>info@bgts.com</span>
                                 </li>
                             </ul>
                         </div>

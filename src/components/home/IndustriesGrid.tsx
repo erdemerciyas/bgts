@@ -7,7 +7,6 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { HOME_CONTENT } from "@/content/home"
-import { cn } from "@/lib/utils"
 
 export function IndustriesGrid() {
     const { heading, description, items } = HOME_CONTENT.industries;
@@ -27,7 +26,7 @@ export function IndustriesGrid() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                    {items.map((item, index) => {
+                    {items.map((item) => {
                         const Icon = item.icon;
                         return (
                             <Link

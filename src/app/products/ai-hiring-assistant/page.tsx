@@ -19,7 +19,6 @@ export const metadata: Metadata = {
 }
 import { Container } from "@/components/ui/Container"
 import { CheckCircle2, Bot, FileText, Video, Users, ArrowRight } from "lucide-react"
-import { ZoomableImage } from "@/components/ui/ZoomableImage"
 import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
 export default function AiHiringPage() {
@@ -45,12 +44,11 @@ export default function AiHiringPage() {
                                 AI Hiring Assistant ile işe alım süreçlerinizi hızlandırın, aday-ilan uyumunu maksimize edin ve video mülakat analizleriyle en doğru yeteneği saniyeler içinde keşfedin.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-
                                 <Link
-                                    href="#features"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl backdrop-blur-sm transition-all border border-white/10"
+                                    href="/contact"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:scale-105"
                                 >
-                                     Ürünü Keşfedin
+                                    Uzmanımızla Görüşün <ArrowRight className="w-5 h-5 ml-2" />
                                 </Link>
                             </div>
                         </div>

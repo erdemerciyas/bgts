@@ -3,24 +3,15 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { motion } from "framer-motion"
 import {
     Mic, FileAudio, FileText, BrainCircuit, Activity, Settings, CalendarCheck, CheckCircle2,
-    Calendar, Bot, ArrowRight, Play, Database, Search, Terminal, MessageSquare, ListTodo, ShieldCheck, TrendingUp
+    Calendar, Bot, ArrowRight, Search, MessageSquare, ListTodo, TrendingUp
 } from "lucide-react"
 import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
-
-/* ── Animations ─────────────────────────────────────── */
-const fadeUp = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.5 }
-}
 
 /* ── Platform Capabilities ──────────────────────────── */
 const capabilities = [
@@ -139,7 +130,7 @@ export default function MeetSensePage() {
                                 Akıllı asistan, canlı transkript, otomatik Jira entegrasyonu ve organizasyonel içgörüler ile toplantılarınızı kalıcı kurumsal hafızaya dönüştürün.
                             </p>
                             <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 hover:-translate-y-1 transition-all duration-300">
-                                Ürünü Keşfedin <ArrowRight className="w-5 h-5" />
+                                Uzmanımızla Görüşün <ArrowRight className="w-5 h-5" />
                             </Link>
                         </motion.div>
 

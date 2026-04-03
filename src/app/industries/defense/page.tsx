@@ -1,10 +1,10 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import { Shield, Lock, Radio, FileCheck, CheckCircle2, ShieldCheck, FileText, Code, Settings, Database, Cloud, Layers, Cpu, Target, Zap, BarChart3 } from "lucide-react"
+import { Lock, Radio, FileCheck, CheckCircle2, ShieldCheck, FileText, Code, Settings, Database, Cloud, Layers, Cpu, Target, Zap, BarChart3 } from "lucide-react"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
-import { Heading, Text } from "@/components/ui/Typography"
+import { Heading } from "@/components/ui/Typography"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
@@ -14,15 +14,6 @@ const fadeUp = {
     viewport: { once: true },
     transition: { duration: 0.5 }
 }
-
-const standards = [
-    { code: "ISO 15288", title: "Sistem Yaşam Döngüsü" },
-    { code: "ISO 12207", title: "Yazılım Yaşam Döngüsü" },
-    { code: "ISO 42020", title: "Mimari Değerlendirme" },
-    { code: "ISO 20000", title: "BT Hizmet Yönetimi" },
-    { code: "ISO 27001", title: "Bilgi Güvenliği" },
-    { code: "ISO 29119", title: "Test Standartları" },
-]
 
 const serviceSections = [
     {

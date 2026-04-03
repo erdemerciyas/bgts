@@ -56,26 +56,6 @@ export default function SuccessStoriesPage() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
                                 </div>
                                 
-                                {/* Floating decorative badges */}
-                                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce [animation-duration:5s]">
-                                    <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                                    </div>
-                                    <div>
-                                        <div className="text-sm text-slate-500 font-medium">Kanıtlanmış</div>
-                                        <div className="text-slate-900 font-bold">Teknoloji</div>
-                                    </div>
-                                </div>
-
-                                <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce [animation-duration:6s] [animation-delay:1s]">
-                                    <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                    </div>
-                                    <div>
-                                        <div className="text-sm text-slate-500 font-medium">Başarılı</div>
-                                        <div className="text-slate-900 font-bold">Dönüşüm</div>
-                                    </div>
-                                </div>
                             </div>
                         </ScaleIn>
                     </div>

@@ -3,8 +3,8 @@ import Image from "next/image"
 import { Container } from "@/components/ui/Container"
 import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 import {
-    MessageCircle, Globe, Zap, Heart, Users, GraduationCap,
-    ArrowRight, Sparkles, Coffee, Gamepad2, Music, PartyPopper
+    MessageCircle, Globe, Zap, Heart, GraduationCap,
+    ArrowRight, Coffee, Gamepad2, Music, PartyPopper
 } from "lucide-react"
 
 export default function CulturePage() {

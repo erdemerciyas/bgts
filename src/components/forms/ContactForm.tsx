@@ -24,7 +24,7 @@ export function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isDirty },
+    formState: { errors },
     reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -48,7 +48,7 @@ export function ContactForm() {
 
       setSubmitStatus('success')
       reset()
-    } catch (error) {
+    } catch {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)

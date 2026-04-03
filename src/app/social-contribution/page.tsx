@@ -1,10 +1,8 @@
-import Link from "next/link"
 import Image from "next/image"
 import { Container } from "@/components/ui/Container"
 import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 import {
-    GraduationCap, BookOpen, Heart, Users, Lightbulb, Target,
-    ArrowRight, Sparkles, HandHeart, Globe2, TreePine
+    Users, Lightbulb, Target, HandHeart, TreePine
 } from "lucide-react"
 
 export default function SocialContributionPage() {

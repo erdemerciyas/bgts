@@ -117,7 +117,7 @@ export default function ChatbotWidget() {
                                             ) : (
                                                 <ReactMarkdown
                                                     components={{
-                                                        a: ({ node, ...props }) => {
+                                                        a: ({ ...props }) => {
                                                             // If it's a relative link, use Next.js Link
                                                             if (props.href && props.href.startsWith('/')) {
                                                                 return (

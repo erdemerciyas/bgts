@@ -5,8 +5,8 @@ import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import {
     Server, Activity, Database, Code, Cpu, Globe, Shield, ShoppingBag, Mic,
-    CheckCircle2, ArrowRight, Terminal, FileText, PlayCircle, Linkedin, Briefcase,
-    Zap, Bot, Landmark, TrendingUp, Radio, ShieldAlert, RefreshCw, Code2, Layers,
+    CheckCircle2, ArrowRight, FileText, Linkedin, Briefcase,
+    Bot, Landmark, TrendingUp, Radio, ShieldAlert, RefreshCw, Layers,
     Calendar, ArrowUpRight, BarChart3, Quote,
     GraduationCap, Heart, Rocket, Smile
 } from "lucide-react"

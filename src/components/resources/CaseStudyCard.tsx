@@ -1,6 +1,6 @@
 "use client"
 
-import { Heading, Text } from "@/components/ui/Typography"
+import { Heading } from "@/components/ui/Typography"
 import { CaseStudy } from "@/data/case-studies"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
@@ -74,7 +74,6 @@ const TECH_COLORS: Record<string, string> = {
 
 export function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
     const cat = CATEGORY_COLOR[study.category ?? "yazilim"]
-    const num = String(index + 1).padStart(2, "0")
 
     return (
         <motion.article
@@ -88,8 +87,8 @@ export function CaseStudyCard({ study, index }: { study: CaseStudy; index: numbe
             <div className={cn("absolute left-0 top-0 bottom-0 w-[3px]", cat.bar)} />
 
             {/* ─── Header ─── */}
-            <div className="pl-8 pr-6 pt-7 pb-6">
-                <div className="flex items-center gap-2 mb-4">
+            <div className="pl-8 pr-6 pt-7 pb-4">
+                <div className="flex items-center gap-2 mb-3">
                     <span className={cn("text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider", cat.labelBg)}>
                         {cat.label}
                     </span>
@@ -100,37 +99,33 @@ export function CaseStudyCard({ study, index }: { study: CaseStudy; index: numbe
                     )}
                 </div>
 
-                <Heading variant="h3" className="text-[1.05rem] font-extrabold text-slate-900 leading-snug line-clamp-2 group-hover:text-blue-700 transition-colors duration-200">
+                <Heading variant="h3" className="text-[1.05rem] font-extrabold text-slate-900 leading-snug line-clamp-3 h-[72px] group-hover:text-blue-700 transition-colors duration-200">
                     {study.title}
                 </Heading>
             </div>
 
             {/* ─── Body: Gereksinim + Çözüm ─── */}
-            <div className="pl-8 pr-6 pb-6 flex-grow space-y-5">
+            <div className="pl-8 pr-6 pb-6 flex-grow flex flex-col gap-4">
 
                 {/* Gereksinim */}
-                {study.requirement && (
-                    <div>
-                        <span className="block text-[10px] font-black text-amber-600 tracking-[0.14em] uppercase mb-1.5">
-                            Gereksinim
-                        </span>
-                        <p className="text-slate-600 text-[13px] leading-relaxed">
-                            {study.requirement}
-                        </p>
-                    </div>
-                )}
+                <div className="h-[90px] overflow-hidden">
+                    <span className="block text-[10px] font-black text-amber-600 tracking-[0.14em] uppercase mb-1.5">
+                        Gereksinim
+                    </span>
+                    <p className="text-slate-600 text-[13px] leading-relaxed line-clamp-3">
+                        {study.requirement || "—"}
+                    </p>
+                </div>
 
                 {/* Çözüm */}
-                {study.solution && (
-                    <div>
-                        <span className="block text-[10px] font-black text-emerald-700 tracking-[0.14em] uppercase mb-1.5">
-                            Çözüm
-                        </span>
-                        <p className="text-slate-600 text-[13px] leading-relaxed">
-                            {study.solution}
-                        </p>
-                    </div>
-                )}
+                <div className="h-[90px] overflow-hidden">
+                    <span className="block text-[10px] font-black text-emerald-700 tracking-[0.14em] uppercase mb-1.5">
+                        Çözüm
+                    </span>
+                    <p className="text-slate-600 text-[13px] leading-relaxed line-clamp-3">
+                        {study.solution || "—"}
+                    </p>
+                </div>
             </div>
 
             {/* ─── Technologies (footer) ─── */}

@@ -1,8 +1,3 @@
-import {
-    Database, Code, Activity, Cpu, Globe, Shield, Server, ShoppingBag,
-    CheckCircle2, FileText, PlayCircle, Linkedin, Briefcase
-} from "lucide-react"
-
 export const STYLES = {
     // Container
     megaMenuWrapper: "absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] max-w-[96vw] bg-white shadow-2xl rounded-b-xl border-t border-gray-100 ring-1 ring-black/5 overflow-hidden z-50 mega-menu-scale",
@@ -40,4 +35,5 @@ export const NAV_ITEMS = [
     { name: "GENÇ MÜHENDİSLER", href: "/genc-muhendis-programi", id: "talent" },
     { name: "BİLGİ MERKEZİ", href: "#", id: "resources" },
     { name: "YERİNİ AL", href: "/social-contribution", id: "careers" },
+    { name: "HAKKIMIZDA", href: "/about", id: "about" },
 ]

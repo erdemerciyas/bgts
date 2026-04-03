@@ -1,11 +1,7 @@
 import {
     Server, Activity, ShieldCheck, Database, LayoutTemplate,
-    Search, Rocket, Users, Settings, Lock, Cloud, Zap, ArrowUpRight,
-    Briefcase, FileCode, HardDrive, CheckSquare, MessageSquare,
-    Bot, Smartphone, Video, FileText, UserCheck,
-    GraduationCap, LayoutDashboard, Layers, AppWindow,
-    Anchor, Map, Star, Monitor, HeartHandshake, LineChart,
-    Cpu, RefreshCw, LayoutGrid, ShieldAlert, GitBranch, Infinity, Code2, ClipboardList, Target
+    Users, Settings, Lock, Cloud, AppWindow,
+    Monitor, LineChart, Cpu, RefreshCw, LayoutGrid, ShieldAlert, GitBranch, Infinity
 } from "lucide-react";
 
 export const MANAGED_SERVICES_CONTENT = {

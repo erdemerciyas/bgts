@@ -1,9 +1,7 @@
-import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
-import { Button } from "@/components/ui/Button"
-import { Users, UserPlus, Star, Award, Briefcase, Globe, TrendingUp, UserCheck, MapPin, Building2, PersonStanding, Play } from "lucide-react"
+import { Users, Star, Award, Briefcase, TrendingUp, UserCheck, MapPin, PersonStanding, Play } from "lucide-react"
 import { FadeInLeft, StaggerContainer, StaggerItem, FadeInRight } from "@/components/ui/AnimatedElements"
 import Link from "next/link"
 

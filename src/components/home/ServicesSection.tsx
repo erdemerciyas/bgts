@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils"
 import { GradientMesh } from "@/components/ui/GradientMesh"
 
 export function ServicesSection() {
-    const { badge, heading, description, ctaText, image, sections } = HOME_CONTENT.servicesSummary;
+    const { heading, description, ctaText, image, sections } = HOME_CONTENT.servicesSummary;
 
     return (
         <Section background="muted" className="pt-0 pb-0 overflow-visible relative">

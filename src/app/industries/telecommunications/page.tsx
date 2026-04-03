@@ -1,12 +1,11 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import { Smartphone, Wifi, Server, Radio, Database, Globe, Layers, Activity, Lock, Cpu, Cloud, Zap, ArrowRight, CheckCircle2, Code, Settings, Eye, FileText, Users, Network, Shield, BarChart3, HardDrive, Wrench, MonitorSmartphone } from "lucide-react"
+import { Server, Database, Globe, Layers, Activity, Cloud, Zap, Code, Settings, Eye, FileText, Users, Network, Shield, BarChart3, HardDrive, Wrench, MonitorSmartphone } from "lucide-react"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
-import { Heading, Text } from "@/components/ui/Typography"
+import { Heading } from "@/components/ui/Typography"
 import Image from "next/image"
-import Link from "next/link"
 import { motion } from "framer-motion"
 
 const fadeUp = {

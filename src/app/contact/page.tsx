@@ -15,8 +15,8 @@ const CONTACT_METHODS = [
     {
         icon: Phone,
         label: "Telefon",
-        value: "+90 (216) 123 45 67",
-        href: "tel:+902161234567",
+        value: "+90 444 3330",
+        href: "tel:+904443330",
         sublabel: "Hafta içi 09:00 – 18:00",
     },
     {

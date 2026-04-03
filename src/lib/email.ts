@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import type Mail from "nodemailer/lib/mailer";
 
 export const createTransporter = async () => {
     const host = process.env.SMTP_HOST;
@@ -34,7 +35,7 @@ export const sendEmail = async ({
     subject: string;
     html: string;
     replyTo?: string;
-    attachments?: Array<any>;
+    attachments?: Mail.Attachment[];
 }) => {
     const transporter = await createTransporter();
 

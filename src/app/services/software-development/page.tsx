@@ -8,7 +8,7 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { SOFTWARE_DEV_CONTENT } from "@/content/software-development"
-import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react"
+import { CheckCircle2, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
@@ -112,7 +112,6 @@ export default function SoftwareDevelopmentPage() {
 
     // Helper to render domain content with alternating layout
     const renderDomainSection = (domain: Record<string, any>, index: number) => {
-        const Icon = domain.icon;
         const isReversed = index % 2 !== 0;
         const bgColor = sectionColors[index % sectionColors.length];
         const isActive = activeSection === domain.id;

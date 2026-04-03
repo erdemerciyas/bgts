@@ -1,12 +1,11 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import ContentSection from "@/components/ui/ContentSection"
 import Link from "next/link"
 import CultureCard from "@/components/ui/CultureCard"
 import { Button } from "@/components/ui/Button"
 import TestimonialCard from "@/components/ui/TestimonialCard"
-import { Users, Heart, Star, Target, Zap, Smile, BookOpen, Coffee, Award, PlayCircle, Code, BarChart3, Server, CheckCircle2, FileText, Sparkles, Rocket, Globe, ArrowRight } from "lucide-react"
+import { Users, Heart, Target, Zap, Smile, BookOpen, Coffee, Rocket, Globe, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"

@@ -28,11 +28,9 @@ interface HeroProps {
 export default function Hero({
     title,
     subtitle,
-    badge,
     ctaText,
     ctaLink,
     pattern = "dots",
-    align = "center",
     className,
     layout = "simple",
     image,

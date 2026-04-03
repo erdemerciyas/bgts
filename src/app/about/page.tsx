@@ -7,8 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { AnimatedDiv, ScaleIn } from "@/components/ui/AnimatedElements"
 import {
-    Globe, Award, ShieldCheck, Lightbulb,
-    Building2, CheckCircle2, MapPin, ArrowRight
+    Globe, Award, ShieldCheck, Lightbulb, ArrowRight
 } from "lucide-react"
 import { LocationsMap } from "./LocationsMap"
 

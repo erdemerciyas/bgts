@@ -3,9 +3,9 @@
 import React, { useState, useMemo, useEffect } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
-import { Search, X, ArrowRight, CornerDownLeft } from "lucide-react"
+import { Search, ArrowRight, CornerDownLeft } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { SEARCH_ITEMS, SearchItem } from "./data"
+import { SEARCH_ITEMS } from "./data"
 
 interface SearchOverlayProps {
     isOpen: boolean

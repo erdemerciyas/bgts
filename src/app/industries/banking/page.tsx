@@ -1,12 +1,11 @@
 "use client"
 
 import Hero from "@/components/ui/Hero"
-import { Building2, ShieldCheck, TrendingUp, Users, Wallet, CreditCard, PieChart, Activity, Globe, ArrowRight, Server, Database, Smartphone, FileText, Briefcase, UserCheck, Layers, BadgeCheck, Zap, Lock, CheckCircle2, Target, BarChart3, Code, Landmark, Shield, Cpu, Banknote, ChevronRight, Search, Award, Settings, MonitorPlay, CheckSquare, Fingerprint, AlertTriangle, Package, UserPlus, Receipt, Repeat2 } from "lucide-react"
+import { Building2, ShieldCheck, TrendingUp, Users, Wallet, CreditCard, PieChart, Globe, Server, Smartphone, FileText, UserCheck, Layers, BadgeCheck, Zap, CheckCircle2, Code, Shield, Banknote, Search, MonitorPlay, Fingerprint, AlertTriangle, Package, UserPlus, Receipt, Repeat2 } from "lucide-react"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
 import Image from "next/image"
-import Link from "next/link"
 import { motion } from "framer-motion"
 
 const fadeUp = {

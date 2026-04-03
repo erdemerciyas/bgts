@@ -8,6 +8,17 @@ import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react"
 import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
 
+interface Slide {
+    id: number
+    image: string
+    title: string
+    subtitle: string
+    ctaText: string
+    ctaLink: string
+    ctaText2?: string
+    ctaLink2?: string
+    type?: "ai-products" | "partners"
+}
 
 const PARTNERS = [
     {
@@ -85,7 +96,7 @@ const PARTNERS = [
     }
 ]
 
-const SLIDES = [
+const SLIDES: Slide[] = [
     {
         id: 1,
         image: "/images/headers/yazilim-gelistirme-ve-inovasyon.jpg",
@@ -250,10 +261,10 @@ export function HeroSlider() {
                                     
                                     {SLIDES[currentSlide].ctaText2 && SLIDES[currentSlide].ctaLink2 && (
                                         <Link
-                                            href={(SLIDES[currentSlide] as any).ctaLink2}
+                                            href={SLIDES[currentSlide].ctaLink2!}
                                             className="inline-flex items-center gap-1.5 px-5 py-2.5 md:px-6 md:py-3 bg-[#B4D330] hover:bg-[#a6c12b] text-slate-900 text-sm md:text-base font-semibold rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-green-900/20 group"
                                         >
-                                            {(SLIDES[currentSlide] as any).ctaText2}
+                                            {SLIDES[currentSlide].ctaText2}
                                             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     )}

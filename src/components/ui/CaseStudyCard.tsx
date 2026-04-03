@@ -4,7 +4,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
-import { LucideIcon, ArrowRight, TrendingUp, Award, Users } from "lucide-react"
+import { LucideIcon, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { headingStyles, textStyles } from "@/components/ui/Typography"
 

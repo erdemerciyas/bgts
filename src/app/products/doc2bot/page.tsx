@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import React from "react"
-import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     },
 }
 import { Container } from "@/components/ui/Container"
-import { Bot, Database, Globe, Zap, MessageSquare, ArrowRight, BookOpen } from "lucide-react"
+import { Bot, Globe, Zap, MessageSquare, ArrowRight, BookOpen } from "lucide-react"
 import { SoftwareApplicationStructuredData } from "@/components/seo/StructuredData"
 
 export default function Doc2BotPage() {

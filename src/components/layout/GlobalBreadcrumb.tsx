@@ -3,7 +3,7 @@
 import React from "react"
 import { usePathname } from "next/navigation"
 import Breadcrumb, { BreadcrumbItem } from "@/components/ui/Breadcrumb"
-import { Home, LayoutGrid, Briefcase, Box, Users, Info, Phone } from "lucide-react"
+import { LayoutGrid, Briefcase, Box, Users, Info, Phone } from "lucide-react"
 
 // Segment translations map
 const SEGMENT_LABELS: Record<string, string> = {

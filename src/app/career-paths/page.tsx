@@ -3,8 +3,8 @@ import Image from "next/image"
 import { Container } from "@/components/ui/Container"
 import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 import {
-    Compass, BarChart3, RefreshCw, Rocket, Target, Users,
-    ArrowRight, ArrowUpRight, Sparkles, TrendingUp, GitBranch, Award
+    BarChart3, Rocket, Target, Users,
+    ArrowRight, TrendingUp, Award
 } from "lucide-react"
 
 export default function CareerPathsPage() {

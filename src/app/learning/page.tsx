@@ -3,8 +3,7 @@ import Image from "next/image"
 import { Container } from "@/components/ui/Container"
 import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 import {
-    Award, BookOpen, Users, BrainCircuit, Mic2, MonitorPlay,
-    ArrowRight, Sparkles, Trophy, Code, Cloud, ShieldCheck
+    Award, Users, MonitorPlay, ArrowRight
 } from "lucide-react"
 
 export default function LearningPage() {

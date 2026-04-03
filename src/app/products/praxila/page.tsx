@@ -1,7 +1,6 @@
 "use client"
 
 import React from "react"
-import Link from "next/link"
 import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
@@ -10,7 +9,7 @@ import { motion } from "framer-motion"
 import {
     Activity, Layers, Server, Database, Smartphone,
     Monitor, ShieldCheck, Clock, FileText, Zap, BarChart3,
-    Users, Network, GitPullRequest, Settings, ArrowRight,
+    Users, Network, GitPullRequest, Settings,
     CheckCircle2, Cpu, Globe, Workflow, Search, AlertTriangle,
     Package, Kanban, Bot, BrainCircuit, MessageSquare,
     FolderKanban, Target, Wallet, Code, CalendarClock
@@ -132,6 +131,8 @@ export default function PraxilaPage() {
                 subtitle="ITSM, PPM ve ITOM süreçlerinizi tek bir platformda birleştiren, yapay zeka destekli yeni nesil operasyon yönetim çözümü."
                 className="bg-indigo-900"
                 backgroundImage="/images/headers/bgts-teknoloji-urunleri.jpg"
+                ctaText="Uzmanımızla Görüşün"
+                ctaLink="/contact"
             />
 
             {/* ═══════════ OVERVIEW — Foundation ═══════════ */}
