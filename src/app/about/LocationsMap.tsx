@@ -11,8 +11,8 @@ import {
 } from "lucide-react"
 
 const offices = [
-    { id: "istanbul", city: "İstanbul", country: "Türkiye", address: "İTU Teknokent Arı 3 B3 Katar Caddesi İstanbul 34467", email: "info-tr@bgts.com", phone: "+90 444 3330", x: 55.92, y: 27.01, type: "office" as const, isCentral: true },
-    { id: "ankara", city: "Ankara", country: "Türkiye", address: "Üniversiteler Mah. Şehit Mustafa Tayyarcan Cad. No: 91 Çankaya/Ankara", email: "info-tr@bgts.com", phone: "+90 444 3330", x: 57.41, y: 28.53, type: "office" as const, isCentral: true },
+    { id: "istanbul", city: "İstanbul", country: "Türkiye", address: "İTU Teknokent Arı 3 B3 Katar Caddesi İstanbul 34467", email: "info@bgts.com", phone: "+90 444 3330", x: 55.92, y: 27.01, type: "office" as const, isCentral: true },
+    { id: "ankara", city: "Ankara", country: "Türkiye", address: "Bilkent Cyberpark Ankara", email: "info@bgts.com", phone: "+90 444 3330", x: 57.41, y: 28.53, type: "office" as const, isCentral: true },
     { id: "london", city: "Londra", country: "Birleşik Krallık", address: "180 Strand London WC2R 1EA", email: "info-uk@bgts.com", phone: "+44 (845) 5947971", x: 45.02, y: 19.89, type: "office" as const, isCentral: false },
     { id: "sheffield", city: "Sheffield", country: "Birleşik Krallık", address: "Pennine 5, 1 Tenter Street, Block 2, S1 4BY", email: "info-uk@bgts.com", phone: "+44 (845) 5947971", x: 44.22, y: 17.78, type: "office" as const, isCentral: false },
     { id: "dusseldorf", city: "Düsseldorf", country: "Almanya", address: "Neubrückstr. 1 40213 Düsseldorf", email: "info-de@bgts.com", phone: "+49 (211) 90760230", x: 47.01, y: 22.01, type: "office" as const, isCentral: false },

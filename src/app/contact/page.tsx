@@ -50,7 +50,7 @@ const OFFICES = [
         address: "Bilkent Cyberpark",
         fullAddress: "Cyberpark, Cyberplaza B Blok, Bilkent, 06800 Çankaya/Ankara",
         mapUrl: "https://maps.google.com/?q=Bilkent+Cyberpark",
-        image: "/images/contact/bilkent-cyberpark.jpg",
+        image: "/images/contact/itu-ari3.jpg",
     },
 ]
 

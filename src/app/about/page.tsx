@@ -69,7 +69,6 @@ export default function AboutPage() {
                         </AnimatedDiv>
 
                         <AnimatedDiv delay={0.2} className="lg:col-span-7">
-                            <span className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4 block">Genel Bakış</span>
                             <Heading variant="h2" className="mb-6 text-slate-900 !text-4xl !font-bold">
                                 Dijital Dönüşümün<br />Güvenilir Adresi
                             </Heading>
@@ -176,7 +175,6 @@ export default function AboutPage() {
 
                 <Container className="relative z-10">
                     <AnimatedDiv className="text-center max-w-2xl mx-auto mb-14">
-                        <span className="text-cyan-400 font-bold tracking-widest uppercase text-xs block mb-3">Ekosistem</span>
                         <Heading variant="h2" className="!text-3xl md:!text-4xl !font-bold text-white mb-4">İş Ortaklıkları</Heading>
                         <p className="text-slate-400 text-[15px] leading-relaxed">Güçlü ekosistemimiz, sektörün liderleriyle olan entegre işbirliklerimize dayanır.</p>
                     </AnimatedDiv>
@@ -214,7 +212,6 @@ export default function AboutPage() {
 
                 <Container className="relative z-10">
                     <AnimatedDiv className="text-center max-w-2xl mx-auto mb-14">
-                        <span className="text-amber-600 font-bold tracking-widest uppercase text-xs block mb-3">Uyumluluk</span>
                         <Heading variant="h2" className="!text-3xl md:!text-4xl !font-bold text-slate-900 mb-4">Sertifikasyonlar</Heading>
                         <p className="text-slate-500 text-[15px] leading-relaxed">Uluslararası standartlarda sunduğumuz hizmetlerin kalitesi yetkili denetim kuruluşları tarafından onaylanmaktadır.</p>
                     </AnimatedDiv>
@@ -248,7 +245,6 @@ export default function AboutPage() {
             <div className="border-y border-slate-100 py-16 bg-slate-50/50 overflow-hidden">
                 <Container>
                     <AnimatedDiv className="text-center mb-10">
-                        <span className="text-blue-600 font-bold tracking-widest uppercase text-xs block mb-2">Güvenilir İşbirlikleri</span>
                         <Heading variant="h3" className="!text-2xl !font-bold text-slate-900">Başlıca Referanslarımız</Heading>
                     </AnimatedDiv>
                 </Container>
@@ -296,7 +292,6 @@ export default function AboutPage() {
                 <Container>
                     <div className="grid lg:grid-cols-12 gap-12 items-start">
                         <AnimatedDiv className="lg:col-span-5">
-                            <span className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3 block">İletişim</span>
                             <Heading variant="h2" className="mb-6 !text-4xl !font-bold text-slate-900">
                                 Geleceği Birlikte<br />Tasarlayalım
                             </Heading>
