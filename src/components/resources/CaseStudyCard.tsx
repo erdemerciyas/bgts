@@ -1,17 +1,27 @@
 "use client"
 
 import { Heading } from "@/components/ui/Typography"
-import { CaseStudy } from "@/data/case-studies"
 import { motion } from "framer-motion"
+
+export interface CaseStudy {
+    id: string;
+    title: string;
+    requirement: string;
+    solution: string;
+    projectType?: string;
+    sector?: string;
+    technologies?: string[];
+    category?: "yazilim" | "altyapi" | "yonetilen-hizmet" | "egitim";
+}
 import { cn } from "@/lib/utils"
 
 /* ── Category left-bar colors ── */
-const CATEGORY_COLOR: Record<string, { bar: string; num: string; label: string; labelBg: string }> = {
-    "yazilim": { bar: "bg-blue-500", num: "text-blue-500/20", label: "Yazılım", labelBg: "bg-blue-50 text-blue-600" },
-    "altyapi": { bar: "bg-slate-400", num: "text-slate-400/20", label: "Altyapı", labelBg: "bg-slate-100 text-slate-600" },
-    "yonetilen-hizmet": { bar: "bg-emerald-500", num: "text-emerald-500/20", label: "Yönetilen Hizmet", labelBg: "bg-emerald-50 text-emerald-700" },
-    "egitim": { bar: "bg-amber-500", num: "text-amber-500/20", label: "Eğitim", labelBg: "bg-amber-50 text-amber-700" },
-}
+const CATEGORY_COLOR = (lang: string): Record<string, { bar: string; num: string; label: string; labelBg: string }> => ({
+    "yazilim": { bar: "bg-blue-500", num: "text-blue-500/20", label: lang === "tr" ? "Yazılım" : "Software", labelBg: "bg-blue-50 text-blue-600" },
+    "altyapi": { bar: "bg-slate-400", num: "text-slate-400/20", label: lang === "tr" ? "Altyapı" : "Infrastructure", labelBg: "bg-slate-100 text-slate-600" },
+    "yonetilen-hizmet": { bar: "bg-emerald-500", num: "text-emerald-500/20", label: lang === "tr" ? "Yönetilen Hizmet" : "Managed Service", labelBg: "bg-emerald-50 text-emerald-700" },
+    "egitim": { bar: "bg-amber-500", num: "text-amber-500/20", label: lang === "tr" ? "Eğitim" : "Education", labelBg: "bg-amber-50 text-amber-700" },
+})
 
 const TECH_COLORS: Record<string, string> = {
     "Java": "bg-orange-100 text-orange-700",
@@ -72,8 +82,8 @@ const TECH_COLORS: Record<string, string> = {
     "Disaster Recovery": "bg-rose-50    text-rose-700",
 }
 
-export function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
-    const cat = CATEGORY_COLOR[study.category ?? "yazilim"]
+export function CaseStudyCard({ study, index, lang }: { study: CaseStudy; index: number; lang: string }) {
+    const cat = CATEGORY_COLOR(lang)[study.category ?? "yazilim"]
 
     return (
         <motion.article
@@ -110,7 +120,7 @@ export function CaseStudyCard({ study, index }: { study: CaseStudy; index: numbe
                 {/* Gereksinim */}
                 <div className="h-[90px] overflow-hidden">
                     <span className="block text-[10px] font-black text-amber-600 tracking-[0.14em] uppercase mb-1.5">
-                        Gereksinim
+                        {lang === "tr" ? "Gereksinim" : "Requirement"}
                     </span>
                     <p className="text-slate-600 text-[13px] leading-relaxed line-clamp-3">
                         {study.requirement || "—"}
@@ -120,7 +130,7 @@ export function CaseStudyCard({ study, index }: { study: CaseStudy; index: numbe
                 {/* Çözüm */}
                 <div className="h-[90px] overflow-hidden">
                     <span className="block text-[10px] font-black text-emerald-700 tracking-[0.14em] uppercase mb-1.5">
-                        Çözüm
+                        {lang === "tr" ? "Çözüm" : "Solution"}
                     </span>
                     <p className="text-slate-600 text-[13px] leading-relaxed line-clamp-3">
                         {study.solution || "—"}
@@ -132,7 +142,7 @@ export function CaseStudyCard({ study, index }: { study: CaseStudy; index: numbe
             <div className="pl-8 pr-6 py-5 border-t border-slate-50 bg-slate-50/60">
                 {(study.technologies && study.technologies.length > 0) ? (
                     <div className="flex flex-wrap gap-1.5">
-                        {study.technologies.map((tech) => (
+                        {study.technologies.map((tech: string) => (
                             <span
                                 key={tech}
                                 className={cn(

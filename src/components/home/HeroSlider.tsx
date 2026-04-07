@@ -143,7 +143,7 @@ const SLIDES: Slide[] = [
     },
 ]
 
-export function HeroSlider() {
+export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; lang?: string }) {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [touchStart, setTouchStart] = useState<number | null>(null)
     const [mouseStart, setMouseStart] = useState<number | null>(null)
@@ -196,6 +196,20 @@ export function HeroSlider() {
         setIsDragging(false)
     }
 
+    // Apply translations and language prefix to links
+    const translatedSlides = SLIDES.map((slide, index) => {
+        const dictSlide = slidesDict?.[index] || {};
+        return {
+            ...slide,
+            title: dictSlide.title || slide.title,
+            subtitle: dictSlide.subtitle || slide.subtitle,
+            ctaText: dictSlide.ctaText || slide.ctaText,
+            ctaText2: dictSlide.ctaText2 || slide.ctaText2,
+            ctaLink: slide.ctaLink.startsWith("http") || slide.ctaLink.startsWith("#") ? slide.ctaLink : `/${lang}${slide.ctaLink}`,
+            ctaLink2: slide.ctaLink2 ? (slide.ctaLink2.startsWith("http") || slide.ctaLink2.startsWith("#") ? slide.ctaLink2 : `/${lang}${slide.ctaLink2}`) : undefined,
+        };
+    });
+
     return (
         <div
             className="relative h-[75vh] min-h-[500px] w-full overflow-hidden bg-slate-900 select-none"
@@ -216,8 +230,8 @@ export function HeroSlider() {
                     className="absolute inset-0 z-0"
                 >
                     <Image
-                        src={SLIDES[currentSlide].image}
-                        alt={SLIDES[currentSlide].title}
+                        src={translatedSlides[currentSlide].image}
+                        alt={translatedSlides[currentSlide].title}
                         fill
                         priority={true}
                         className="object-cover scale-105"
@@ -243,35 +257,35 @@ export function HeroSlider() {
 
                             <div className="max-w-4xl">
                                 <Heading variant="h1" className="text-white text-3xl sm:text-4xl md:text-5xl mb-4 md:mb-6 leading-[1.1] drop-shadow-2xl">
-                                    {SLIDES[currentSlide].title}
+                                    {translatedSlides[currentSlide].title}
                                 </Heading>
 
                                 <Text variant="large" className="text-slate-200 text-base md:text-xl mb-6 md:mb-8 max-w-2xl font-light leading-relaxed drop-shadow-lg opacity-90">
-                                    {SLIDES[currentSlide].subtitle}
+                                    {translatedSlides[currentSlide].subtitle}
                                 </Text>
 
                                 <div className="flex flex-wrap gap-3 items-center">
                                     <Link
-                                        href={SLIDES[currentSlide].ctaLink}
+                                        href={translatedSlides[currentSlide].ctaLink}
                                         className="inline-flex items-center gap-1.5 px-5 py-2.5 md:px-6 md:py-3 bg-corporate-secondary hover:bg-corporate-dark text-white text-sm md:text-base font-semibold rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-900/20 group"
                                     >
-                                        {SLIDES[currentSlide].ctaText}
+                                        {translatedSlides[currentSlide].ctaText}
                                         <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                     
-                                    {SLIDES[currentSlide].ctaText2 && SLIDES[currentSlide].ctaLink2 && (
+                                    {translatedSlides[currentSlide].ctaText2 && translatedSlides[currentSlide].ctaLink2 && (
                                         <Link
-                                            href={SLIDES[currentSlide].ctaLink2!}
+                                            href={translatedSlides[currentSlide].ctaLink2!}
                                             className="inline-flex items-center gap-1.5 px-5 py-2.5 md:px-6 md:py-3 bg-[#B4D330] hover:bg-[#a6c12b] text-slate-900 text-sm md:text-base font-semibold rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-green-900/20 group"
                                         >
-                                            {SLIDES[currentSlide].ctaText2}
+                                            {translatedSlides[currentSlide].ctaText2}
                                             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     )}
                                 </div>
 
                                 {/* "Partnerler" ekstra elementleri */}
-                                {SLIDES[currentSlide].type === "partners" && (
+                                {translatedSlides[currentSlide].type === "partners" && (
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}

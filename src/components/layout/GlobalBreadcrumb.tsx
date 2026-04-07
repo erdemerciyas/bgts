@@ -1,32 +1,9 @@
 "use client"
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import Breadcrumb, { BreadcrumbItem } from "@/components/ui/Breadcrumb"
 import { LayoutGrid, Briefcase, Box, Users, Info, Phone } from "lucide-react"
-
-// Segment translations map
-const SEGMENT_LABELS: Record<string, string> = {
-    "services": "Hizmetler",
-    "industries": "Sektörler",
-    "products": "Ürünler",
-    "contact": "İletişim",
-    "about": "Hakkımızda",
-    "hr": "Kariyer",
-    "genc-muhendis-programi": "Genç Mühendisler Programı",
-    "software-development": "Yazılım Geliştirme",
-    "managed-services": "Yönetilen Hizmetler",
-    "devops": "DevOps",
-    "banking": "Bankacılık & Finans",
-    "defense": "Savunma Sanayi",
-    "retail-telecom": "Perakende & Telekom",
-    "ai-hiring-assistant": "AI Hiring Assistant",
-    "cv-converter": "CV Converter",
-    "doc2bot": "Doc2Bot",
-    "docmind": "DocMind",
-    "consultancy": "Danışmanlık",
-    "talent": "Yetenek Yönetimi"
-}
 
 // Optional: Specific icons for top-level segments
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -39,25 +16,49 @@ const SEGMENT_ICONS: Record<string, any> = {
     "contact": Phone
 }
 
+const LOCALES = ["tr", "en"];
+
+type BreadcrumbDict = Record<string, string>;
+
+const dictionaryCache: Record<string, BreadcrumbDict> = {};
+
+async function loadBreadcrumbDict(lang: string): Promise<BreadcrumbDict> {
+    if (dictionaryCache[lang]) return dictionaryCache[lang];
+    const mod = await import(`@/dictionaries/${lang}.json`);
+    const dict = mod.default?.breadcrumb ?? {};
+    dictionaryCache[lang] = dict;
+    return dict;
+}
+
 export default function GlobalBreadcrumb() {
     const pathname = usePathname()
+    const currentLang = pathname.split('/')[1] || 'tr';
+    const isHome = pathname === `/${currentLang}` || pathname === "/";
+
+    const [labels, setLabels] = useState<BreadcrumbDict>({});
+
+    useEffect(() => {
+        loadBreadcrumbDict(LOCALES.includes(currentLang) ? currentLang : 'tr').then(setLabels);
+    }, [currentLang]);
 
     // Don't show on homepage
-    if (pathname === "/") return null
+    if (isHome) return null
 
     // Remove query params and split path
     const pathWithoutQuery = pathname.split("?")[0]
-    const pathSegments = pathWithoutQuery.split("/").filter((segment) => segment !== "")
+
+    // Filter out empty segments and locale segments
+    const pathSegments = pathWithoutQuery.split("/").filter((segment) => segment !== "" && !LOCALES.includes(segment))
 
     // Build breadcrumb items
     const items: BreadcrumbItem[] = pathSegments.map((segment, index) => {
-        // Construct URL for this segment
-        const href = `/${pathSegments.slice(0, index + 1).join("/")}`
+        // Construct URL for this segment by including the language prefix
+        const href = `/${currentLang}/${pathSegments.slice(0, index + 1).join("/")}`
 
-        // Get label from map or beautify the segment
-        const label = SEGMENT_LABELS[segment] || segment.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())
+        // Get label from dictionary or beautify the segment
+        const label = labels[segment] || segment.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())
 
-        // Get icon if available (only for specific levels if needed, or all)
+        // Get icon if available
         const icon = SEGMENT_ICONS[segment]
 
         return {
@@ -67,13 +68,11 @@ export default function GlobalBreadcrumb() {
         }
     })
 
-    // Ensure "Ana Sayfa" is always prepended by the Breadcrumb component itself (showHome=true),
-    // but if we want to customize the root labeled in Breadcrumb.tsx, it's already "Ana Sayfa".
-
     return (
         <Breadcrumb
             items={items}
             showHome={true}
+            homeLabel={labels["home"]}
             className="bg-slate-50 border-b border-slate-200"
         />
     )

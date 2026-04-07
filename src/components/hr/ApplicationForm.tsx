@@ -17,7 +17,23 @@ type FormData = {
     message: string
 }
 
-export default function ApplicationForm() {
+export default function ApplicationForm({ dict }: { dict?: any }) {
+    const d = dict || {
+        title: 'Apply Now',
+        subtitle: "Take your first step into the Young Engineer Program by filling out the form.",
+        fullName: { label: 'Full Name', placeholder: 'Your Full Name' },
+        email: { label: 'Email', placeholder: 'example@email.com' },
+        phone: { label: 'Phone', placeholder: '0555 555 55 55' },
+        university: { label: 'University', placeholder: 'University Name' },
+        department: { label: 'Department', placeholder: 'Your Department' },
+        grade: { label: 'Grade', placeholder: 'Select', year3: 'Junior (3rd Year)', year4: 'Senior (4th Year)', graduate: 'New Graduate', master: "Master's Degree" },
+        cv: { label: 'Upload CV', dragDrop: 'Click or drag to select a file', restrictions: 'PDF, DOC, DOCX (Max 5MB)', errorMsg: "Please upload your current CV." },
+        message: { label: 'Brief Note', placeholder: 'Anything you want to add...' },
+        submit: 'Submit Application',
+        submitting: 'Submitting...',
+        success: { title: 'Application Received!', desc: 'Thank you for your interest. We will contact you after evaluating your application.' },
+        error: { default: 'An error occurred', alert: 'An error occurred during your application, please try again.' }
+    }
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<FormData>()
@@ -45,15 +61,14 @@ export default function ApplicationForm() {
                 body: formData,
             });
 
-            if (!response.ok) throw new Error("Hata oluştu");
+            if (!response.ok) throw new Error(d.error.default);
 
             setIsSuccess(true)
             reset()
-            // Reset success message after 5 seconds
             setTimeout(() => setIsSuccess(false), 5000)
         } catch (error) {
             console.error(error);
-            alert("Başvuru sırasında bir hata oluştu, lütfen tekrar deneyin.");
+            alert(d.error.alert);
         } finally {
             setIsSubmitting(false)
         }
@@ -73,18 +88,18 @@ export default function ApplicationForm() {
                         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                             <Check className="w-8 h-8 text-green-600" />
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 mb-2">Başvurunuz Alındı!</h3>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2">{d.success.title}</h3>
                         <p className="text-slate-600">
-                            İlgilendiğiniz için teşekkür ederiz. Başvurunuz değerlendirildikten sonra sizinle iletişime geçeceğiz.
+                            {d.success.desc}
                         </p>
                     </motion.div>
                 )}
             </AnimatePresence>
 
             <div className="mb-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Hemen Başvur</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{d.title}</h3>
                 <p className="text-slate-500">
-                    Formu doldurarak Genç Mühendis Programı'na ilk adımını at.
+                    {d.subtitle}
                 </p>
             </div>
 
@@ -93,7 +108,7 @@ export default function ApplicationForm() {
                     {/* Full Name */}
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                            <User className="w-4 h-4 text-slate-400" /> Ad Soyad
+                            <User className="w-4 h-4 text-slate-400" /> {d.fullName.label}
                         </label>
                         <input
                             {...register("fullName", { required: true })}
@@ -101,14 +116,14 @@ export default function ApplicationForm() {
                                 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.fullName && "border-red-300 ring-red-100"
                             )}
-                            placeholder="Adınız Soyadınız"
+                            placeholder={d.fullName.placeholder}
                         />
                     </div>
 
                     {/* Email */}
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                            <Mail className="w-4 h-4 text-slate-400" /> E-posta
+                            <Mail className="w-4 h-4 text-slate-400" /> {d.email.label}
                         </label>
                         <input
                             {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
@@ -117,14 +132,14 @@ export default function ApplicationForm() {
                                 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.email && "border-red-300 ring-red-100"
                             )}
-                            placeholder="ornek@email.com"
+                            placeholder={d.email.placeholder}
                         />
                     </div>
 
                     {/* Phone */}
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                            <Phone className="w-4 h-4 text-slate-400" /> Telefon
+                            <Phone className="w-4 h-4 text-slate-400" /> {d.phone.label}
                         </label>
                         <input
                             {...register("phone", { required: true })}
@@ -133,14 +148,14 @@ export default function ApplicationForm() {
                                 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.phone && "border-red-300 ring-red-100"
                             )}
-                            placeholder="0555 555 55 55"
+                            placeholder={d.phone.placeholder}
                         />
                     </div>
 
                     {/* University */}
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                            <GraduationCap className="w-4 h-4 text-slate-400" /> Üniversite
+                            <GraduationCap className="w-4 h-4 text-slate-400" /> {d.university.label}
                         </label>
                         <input
                             {...register("university", { required: true })}
@@ -148,14 +163,14 @@ export default function ApplicationForm() {
                                 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.university && "border-red-300 ring-red-100"
                             )}
-                            placeholder="Üniversite Adı"
+                            placeholder={d.university.placeholder}
                         />
                     </div>
 
                     {/* Department */}
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                            <Building2 className="w-4 h-4 text-slate-400" /> Bölüm
+                            <Building2 className="w-4 h-4 text-slate-400" /> {d.department.label}
                         </label>
                         <input
                             {...register("department", { required: true })}
@@ -163,14 +178,14 @@ export default function ApplicationForm() {
                                 "w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-slate-900",
                                 errors.department && "border-red-300 ring-red-100"
                             )}
-                            placeholder="Bölümünüz"
+                            placeholder={d.department.placeholder}
                         />
                     </div>
 
                     {/* Grade */}
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                            <Calendar className="w-4 h-4 text-slate-400" /> Sınıf
+                            <Calendar className="w-4 h-4 text-slate-400" /> {d.grade.label}
                         </label>
                         <select
                             {...register("grade", { required: true })}
@@ -179,11 +194,11 @@ export default function ApplicationForm() {
                                 errors.grade && "border-red-300 ring-red-100"
                             )}
                         >
-                            <option value="">Seçiniz</option>
-                            <option value="3">3. Sınıf</option>
-                            <option value="4">4. Sınıf</option>
-                            <option value="graduate">Yeni Mezun</option>
-                            <option value="master">Yüksek Lisans</option>
+                            <option value="">{d.grade.placeholder}</option>
+                            <option value="3">{d.grade.year3}</option>
+                            <option value="4">{d.grade.year4}</option>
+                            <option value="graduate">{d.grade.graduate}</option>
+                            <option value="master">{d.grade.master}</option>
                         </select>
                     </div>
                 </div>
@@ -191,7 +206,7 @@ export default function ApplicationForm() {
                 {/* CV Upload */}
                 <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                        <FileText className="w-4 h-4 text-slate-400" /> CV Yükle
+                        <FileText className="w-4 h-4 text-slate-400" /> {d.cv.label}
                     </label>
                     <div className="border-2 border-dashed border-slate-200 rounded-xl p-8 text-center hover:bg-slate-50 transition-colors cursor-pointer relative">
                         <input
@@ -205,23 +220,23 @@ export default function ApplicationForm() {
                                 <Upload className="w-6 h-6" />
                             </div>
                             <p className="text-sm font-medium text-slate-700">
-                                {cvFile && cvFile.length > 0 ? cvFile[0].name : "Dosya seçmek için tıklayın veya sürükleyin"}
+                                {cvFile && cvFile.length > 0 ? cvFile[0].name : d.cv.dragDrop}
                             </p>
-                            <p className="text-xs text-slate-500">PDF, DOC, DOCX (Max 5MB)</p>
+                            <p className="text-xs text-slate-500">{d.cv.restrictions}</p>
                         </div>
                     </div>
-                    {errors.cv && <span className="text-xs text-red-500">Lütfen güncel CV'nizi yükleyin.</span>}
+                    {errors.cv && <span className="text-xs text-red-500">{d.cv.errorMsg}</span>}
                 </div>
 
                 {/* Message */}
                 <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700 flex items-center gap-2">
-                        <FileText className="w-4 h-4 text-slate-400" /> Kısa Notunuz
+                        <FileText className="w-4 h-4 text-slate-400" /> {d.message.label}
                     </label>
                     <textarea
                         {...register("message")}
                         className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none min-h-[100px] text-slate-900"
-                        placeholder="Eklemek istedikleriniz..."
+                        placeholder={d.message.placeholder}
                     />
                 </div>
 
@@ -232,10 +247,10 @@ export default function ApplicationForm() {
                     {isSubmitting ? (
                         <>
                             <Loader2 className="w-5 h-5 animate-spin" />
-                            Gönderiliyor...
+                            {d.submitting}
                         </>
                     ) : (
-                        "Başvuruyu Tamamla"
+                        d.submit
                     )}
                 </button>
             </form>

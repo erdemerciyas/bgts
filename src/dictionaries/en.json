@@ -1,0 +1,3075 @@
+{
+  "header": {
+    "nav": {
+      "services": "SERVICES",
+      "industries": "INDUSTRIES",
+      "products": "PRODUCTS",
+      "talent": "TALENT",
+      "resources": "RESOURCES",
+      "careers": "CAREERS",
+      "about": "ABOUT US"
+    }
+  },
+  "home": {
+    "hero": {
+      "slides": [
+        {
+          "title": "Powerful Technology Solutions for Critical Systems",
+          "subtitle": "BGTS provides software development, managed services, and SRE solutions for finance, telecom, and large-scale enterprises with a force of 1400+ engineers.",
+          "ctaText": "Explore Our Services",
+          "ctaText2": "Talk to Our Experts"
+        },
+        {
+          "title": "Technology Services Empowering Your Operations",
+          "subtitle": "We reduce operational burden and increase system continuity with managed services, DevOps, and SRE solutions.",
+          "ctaText": "Review Our Business Model"
+        },
+        {
+          "title": "Nurturing the Engineers of the Future",
+          "subtitle": "We train the next generation of talents who add value to technology through our young engineer programs.",
+          "ctaText": "Career Opportunities"
+        },
+        {
+          "title": "Products Powered by AI",
+          "subtitle": "Automate your processes, increase efficiency, and accelerate your decision-making with BGTS's AI-supported products.",
+          "ctaText": "Explore Products"
+        },
+        {
+          "title": "Strong Solutions with Technology Partners",
+          "subtitle": "With Atlassian, Qlik, ServiceNow and leading platforms.",
+          "ctaText": "Our Partners"
+        }
+      ]
+    },
+    "servicesSummary": {
+      "heading": "Your Reliable Technology Partner\nat Corporate Scale",
+      "description": "With our 30+ years of experience and 1000+ projects, we confidently grow your operations.",
+      "ctaText": "Explore Our Business Models",
+      "sections": [
+        {
+          "title": "Software Development",
+          "description": "With Java, .NET, and modern frontend technologies, we design scalable and secure software solutions tailored to your organization.",
+          "features": [
+            "Microservices Architecture",
+            "API-First Approach"
+          ],
+          "ctaText": "Explore Solutions"
+        },
+        {
+          "title": "DevOps & Cloud",
+          "description": "We ensure operational efficiency by increasing your software delivery speed and quality with automated delivery processes and cloud modernization.",
+          "features": [
+            "Kubernetes & Containers",
+            "Cloud-Native Transformation"
+          ],
+          "ctaText": "Explore Solutions"
+        },
+        {
+          "title": "Managed Services",
+          "description": "We create and implement customized strategic plans to help your business achieve long-term goals and a competitive advantage.",
+          "features": [
+            "24/7 Monitoring & Support",
+            "AIOps & Automation"
+          ],
+          "ctaText": "Explore Solutions"
+        }
+      ]
+    },
+    "deliveryModels": {
+      "heading": "Flexible Business Models",
+      "description": "End-to-end project delivery or agile team scaling with flexible working models tailored to your needs.",
+      "models": [
+        {
+          "title": "TurnKey",
+          "description": "We take over your projects from start to finish and manage the entire process from a single point.",
+          "features": [
+            "Fixed Budget & Time",
+            "Single Point of Responsibility",
+            "End-to-End Delivery"
+          ],
+          "ctaText": "Get Detailed Information"
+        },
+        {
+          "title": "Time & Material",
+          "description": "We scale quickly with flexible teams according to your needs and provide instant support for your projects.",
+          "features": [
+            "Flexible Scaling",
+            "Full Control & Transparency",
+            "Quick Adaptation"
+          ],
+          "ctaText": "Build Your Team"
+        }
+      ]
+    },
+    "industries": {
+      "heading": "Our Trusted Industries",
+      "description": "We develop and manage high-scale systems in finance, telecom, retail, and defense sectors.",
+      "items": [
+        {
+          "title": "Banking & Finance",
+          "description": "We develop secure, fast, and regulation-compliant systems with fintech integrations and high-volume transaction infrastructures."
+        },
+        {
+          "title": "Retail",
+          "description": "We develop digital platforms and data-driven solutions that strengthen customer experience and increase operational efficiency."
+        },
+        {
+          "title": "Telecommunications",
+          "description": "We offer scalable, uninterrupted, and performance-oriented infrastructures for high-traffic systems and 5G transformation processes."
+        },
+        {
+          "title": "Defense Industry",
+          "description": "We offer highly secure, durable, and sustainable software and infrastructure solutions for critical systems."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "Strategic technology partner for Finance, Defense, Retail, and Telecom sectors. We have been securely managing digital transformation for 30+ years.",
+    "columns": {
+      "services": "Services",
+      "industries": "Industries",
+      "corporate": "Corporate",
+      "offices": "Our Offices"
+    },
+    "links": {
+      "managedServices": "Managed Services",
+      "devops": "DevOps & SRE",
+      "softwareDev": "Software Development",
+      "banking": "Banking & Finance",
+      "defense": "Defense Industry",
+      "retailTelecom": "Retail & Telecom",
+      "about": "About Us",
+      "careers": "Careers",
+      "talent": "Young Talent",
+      "contact": "Contact"
+    },
+    "copyright": "© 2026 BGTS. All rights reserved."
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Fueled by the culture that makes us who we are, we blend our eclectic structure with innovation to confidently set our course in the ocean of knowledge."
+    },
+    "stats": [
+      {
+        "val": "30",
+        "unit": "Years",
+        "label": "Experience"
+      },
+      {
+        "val": "3000+",
+        "unit": "",
+        "label": "Projects"
+      },
+      {
+        "val": "14",
+        "unit": "",
+        "label": "Active Countries"
+      },
+      {
+        "val": "850+",
+        "unit": "",
+        "label": "Experts"
+      },
+      {
+        "val": "100+",
+        "unit": "",
+        "label": "Partners"
+      }
+    ],
+    "overview": {
+      "quote": "With our corporate experience and industry expertise acquired since 1997, we continue to shape the technologies of the future.",
+      "heading": "The Reliable Address for\nDigital Transformation",
+      "p1": "With Application Development, Data Analytics, System Infrastructures, Security and Compliance, we execute our software processes on platforms based on modern business architecture, and we ",
+      "p1Highlight": "design your institution's digital transformation with a visionary",
+      "p1End": " perspective, implement it with cutting-edge technology, and support it.",
+      "p2": "We work devotedly to carry our service network further at international standards, blending the knowledge of yesterday with the genius of today in every new project; maintaining our industry leadership to direct future technologies.",
+      "tags": [
+        "Software Development",
+        "Data Analytics",
+        "System Infrastructures",
+        "Security & Compliance",
+        "DevOps",
+        "Artificial Intelligence"
+      ]
+    },
+    "expertise": {
+      "heading": "Proven Expertise",
+      "subtitle": "According to the Bilişim 500 research, we are proud to have been in the top 5 for 5 consecutive years in finance and banking software.",
+      "ctaText": "Detailed Information"
+    },
+    "values": {
+      "badge": "Core Principles",
+      "heading": "Company Values",
+      "description": "Sustainable growth, an innovative approach, and customer-centricity are the most important fundamental principles of our standards.",
+      "items": [
+        {
+          "title": "Quality",
+          "desc": "We aim to offer the highest quality standards in our services and guarantee success on international platforms with our customer-oriented approach."
+        },
+        {
+          "title": "Continuous Innovation",
+          "desc": "Blending the experience of the past with the vision of the future; we aim to be the pioneer who uses technology first and sets the industry standards."
+        },
+        {
+          "title": "Global Expertise",
+          "desc": "With our offices around the world, we grow in the global market by offering collaborations and solutions at international standards."
+        },
+        {
+          "title": "We Are Proud",
+          "desc": "Believing that our achievements are our best references, we increase our motivation with the value-add provided and the awards won."
+        }
+      ]
+    },
+    "partners": {
+      "heading": "Business Partnerships",
+      "subtitle": "Our strong ecosystem is based on our integrated collaborations with industry leaders."
+    },
+    "certifications": {
+      "heading": "Certifications",
+      "subtitle": "The quality of the services we provide at international standards is confirmed by authorized audit institutions.",
+      "labels": [
+        "Quality Management Systems",
+        "Information Security Management Systems",
+        "Service Management",
+        "Process Assessment",
+        "Privacy Information Management",
+        "Software Lifecycle"
+      ]
+    },
+    "references": {
+      "heading": "Our Key References"
+    },
+    "contact": {
+      "heading": "Let's Design the\nFuture Together",
+      "description": "Contact us for tailored strategic solution partnerships for your needs. Our expert team will be ready for your project as soon as possible.",
+      "support": "Support Line",
+      "expert": "Expert Support"
+    }
+  },
+  "services": {
+    "softwareDevelopment": {
+      "hero": {
+        "title": "Software Development",
+        "subtitle": "High-Performance Solutions for Finance, Telecom, and Critical Infrastructures",
+        "badge": "Custom Software Solutions"
+      },
+      "sidebar": {
+        "technical": "Software Services",
+        "sectoral": "Sectoral Software Solutions"
+      },
+      "sectoralDomains": [
+        {
+          "id": "banking",
+          "title": "Banking & Financial Systems",
+          "subtitle": "Financial Software Solutions",
+          "description": "We develop regulation-compliant, highly secure, and high-performance software solutions tailored for the banking and finance sector.",
+          "features": [
+            {
+              "title": "Credit Risk Monitoring"
+            },
+            {
+              "title": "Loan Tracking (NPL)"
+            },
+            {
+              "title": "Loan Collections"
+            },
+            {
+              "title": "Loan Liquidation"
+            },
+            {
+              "title": "Automated Collection Processes"
+            },
+            {
+              "title": "Customer Classification"
+            },
+            {
+              "title": "Legal Follow-up Processes"
+            },
+            {
+              "title": "AMC Transfer Process"
+            },
+            {
+              "title": "Foreign Trade Export Operations"
+            },
+            {
+              "title": "FIX, Pricing & Hedging Infrastructures"
+            },
+            {
+              "title": "Collateral Management"
+            },
+            {
+              "title": "Deposits"
+            },
+            {
+              "title": "Campaign Management"
+            },
+            {
+              "title": "Institutional Integrations"
+            },
+            {
+              "title": "E-Invoice, E-Ledger & E-Archive"
+            }
+          ]
+        },
+        {
+          "id": "trading",
+          "title": "E-Trading, Market Data & Low-Latency Systems",
+          "subtitle": "Low-Latency Financial Infrastructures",
+          "description": "We design low-latency, high-volume transaction infrastructures for financial markets.",
+          "features": [
+            {
+              "title": "Market Data & FIX Ecosystem",
+              "description": "We specialize in the FIX protocol, pricing and hedging infrastructures, real-time market data processing, and performance-critical systems."
+            },
+            {
+              "title": "High Traffic & Scalability",
+              "description": "We develop scalable architectures that maintain stability under high traffic conditions."
+            }
+          ]
+        },
+        {
+          "id": "telecom",
+          "title": "Telecom & Digital Communication Platforms",
+          "subtitle": "Digital Channel Platforms",
+          "description": "We secure critical communication processes with failover routing, high traffic resilience, and mobile-first architectures.",
+          "features": [
+            {
+              "title": "Multi-Channel Communication Solutions",
+              "description": "We offer SMS, OTP, Viber, WhatsApp, and multi-channel campaign orchestration solutions."
+            },
+            {
+              "title": "High Traffic & Telco Integrations",
+              "description": "We secure critical communication processes with failover routing, high traffic resilience, telco charging/billing integrations, and mobile-first architectures."
+            }
+          ]
+        },
+        {
+          "id": "fraud",
+          "title": "Fraud, Risk & AI-Supported Verification Systems",
+          "subtitle": "AI-Supported Security Systems",
+          "description": "We minimize financial and operational risks with real-time verification, anomaly detection, and fraud prevention solutions.",
+          "features": [
+            {
+              "title": "Fraud Detection & Risk Scoring",
+              "description": "We combine fraud detection, risk scoring, and rule-engine based decision mechanisms with AI-supported models."
+            },
+            {
+              "title": "Real-Time Verification",
+              "description": "We minimize financial and operational risks with real-time verification, anomaly detection, and fraud prevention solutions."
+            }
+          ]
+        }
+      ],
+      "technicalDomains": [
+        {
+          "id": "bigdata",
+          "title": "Big Data & Real-Time Data Processing",
+          "subtitle": "Real-Time Data Processing",
+          "description": "We build scalable and durable data infrastructures that process large volumes of data in real time.",
+          "features": [
+            {
+              "title": "Streaming & Distributed Data Architectures",
+              "description": "We build platforms that process massive data volumes in real-time using Kafka, Spark, and streaming-based architectures."
+            },
+            {
+              "title": "Event-Driven & High Availability",
+              "description": "We create scalable and durable data infrastructures through distributed, event-driven, and high-availability architectures."
+            }
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "Artificial Intelligence & AI-First Architectural Solutions",
+          "subtitle": "AI-First Architectural Solutions",
+          "description": "We provide secure and sustainable artificial intelligence solutions integrated with your corporate systems.",
+          "features": [
+            {
+              "title": "AI-First Approach",
+              "description": "We develop RAG systems, LLM integrations, embedding, and agent-based structures using an AI-first approach."
+            },
+            {
+              "title": "Corporate AI Integrations",
+              "description": "We provide secure and sustainable artificial intelligence solutions integrated into your corporate systems."
+            }
+          ]
+        },
+        {
+          "id": "modernization",
+          "title": "Software Modernization & Microservice Transformation",
+          "subtitle": "Microservice Transformation",
+          "description": "We migrate your legacy systems to modern architectures, providing performance and cost optimization.",
+          "features": [
+            {
+              "title": "Legacy Transformation",
+              "description": "We migrate your legacy systems to modern architectures and manage microservice transformation projects from end to end."
+            },
+            {
+              "title": "Performance & Scalability",
+              "description": "We provide consultancy and implementation support on performance optimization, system modernization, scalability, and cost optimization."
+            }
+          ]
+        }
+      ],
+      "developmentDomains": [
+        {
+          "id": "development-services",
+          "title": "Software Development Services",
+          "subtitle": "Modern Architecture, DevOps & Security",
+          "description": "We support your enterprise software projects end-to-end with our modern software architectures, DevOps compliant development processes, and security-oriented approach.",
+          "features": [
+            {
+              "title": "Modern Software Architectures",
+              "description": "We design scalable systems with DDD, API-first, microservice, and event-driven architectures. We produce long-lasting software solutions using Clean Architecture and SOLID principles."
+            },
+            {
+              "title": "DevOps Compliant Software Development",
+              "description": "We manage the software lifecycle end-to-end with CI/CD pipelines, test automation, containerized deployment (Docker, Kubernetes), and observability solutions."
+            },
+            {
+              "title": "Security & Regulation Compliant Development",
+              "description": "We place security at the center of the software with OWASP, API security, IAM, rate-limit, HSM integration, timestamp, and digital signature solutions."
+            }
+          ]
+        }
+      ]
+    },
+    "managedServices": {
+      "hero": {
+        "title": "Managed Services & Consulting",
+        "subtitle": "Delegate your IT Operations to us. You focus on your business. We provide end-to-end management with 400+ engineers, over 30 years of industry experience, and an operational capacity of 5,000+ servers.",
+        "tag": "BGTS Managed Services",
+        "catalog": "Services Catalog"
+      },
+      "pillars": [
+        {
+          "id": "p1",
+          "title": "MSP & Managed Services",
+          "overview": {
+            "title": "Delegate Your IT Operations to Us. You Focus on Your Business.",
+            "description": "With 400+ engineers, over 30 years of industry experience, and an operational capacity of 5,000+ servers, we manage all your IT operations from data center platforms to end-user support 24/7 across Monitoring & Intervention, Development & Value-Add, and Management & Analytics layers.",
+            "stats": [
+              {
+                "value": "400+",
+                "label": "Engineering Team",
+                "sub": "Engineering-focused staff"
+              },
+              {
+                "value": "210",
+                "label": "24/7 NOC & FLR",
+                "sub": "Uninterrupted operations team"
+              },
+              {
+                "value": "55+",
+                "label": "Vendor Competency",
+                "sub": "Escalation engineering"
+              },
+              {
+                "value": "30+",
+                "label": "Years Experience",
+                "sub": "BilgeAdam ecosystem"
+              },
+              {
+                "value": "90%+",
+                "label": "First Tier Resolution",
+                "sub": "FLR — data center events"
+              },
+              {
+                "value": "85%+",
+                "label": "Same Day Resolution",
+                "sub": "Same-day resolution"
+              },
+              {
+                "value": "<1.3%",
+                "label": "Re-bound Rate",
+                "sub": "Recurring calls"
+              },
+              {
+                "value": "50+",
+                "label": "ITIL Certified",
+                "sub": "Consultants & engineers"
+              }
+            ],
+            "model": {
+              "title": "MSP Service Model",
+              "description": "The BGTS Managed Services model goes beyond outsourcing technical operations. We get to know your infrastructure, improve your processes, and scale in parallel with the growth of your organization. Before the relationship begins, we analyze alarm quality, incident response, automation maturity, observability scope, and SRE readiness with a structured assessment; presenting the findings as a concrete report that both your team and management can use. We convert fixed and variable costs into a predictable service model while taking on the risks of recruitment, training, and retention. We seamlessly manage not only faults but also change and request processes with the same maturity, transparency, customer-specific SLA commitments, and regular reports."
+            },
+            "layersTitle": "High-Level Service Scope — 3 Tier MSP Model",
+            "layers": [
+              {
+                "title": "Monitoring & Intervention",
+                "description": "L0 Monitoring & Observability — Service-based monitoring, AIOps alarm correlation, 62% alarm optimization. L1 First Tier Resolution — 210 people, 24/7, 90%+ FLR, 85%+ same-day resolution, <1.3% re-bound. L2–L3 Escalation — 55+ vendor competencies, root cause analysis, major incident management."
+              },
+              {
+                "title": "Development & Value-Add",
+                "description": "Artificial Intelligence — Ticket analysis, auto-remediation, KB generation, call center bot. Technology Consulting — Blueprint, health checks, automation, patch & vulnerability management. ITSM/ITIL — 50+ ITIL certified consultants, ServiceNow, Jira, and BMC competency."
+              },
+              {
+                "title": "Management & Analytics",
+                "description": "Customer Success Management — Single point of contact, SLA/OLA compliance, service health score. Operational Intelligence — Dedicated analytics department, anomaly detection, load analysis, operational awareness from raw data. Strategic Performance — C-Level reporting, service continuity, and business value contribution analysis."
+              }
+            ],
+            "komTitle": "Corporate Operations Center",
+            "kom": [
+              {
+                "title": "Support Tiers",
+                "items": [
+                  "Dispatcher",
+                  "Support Engineer",
+                  "Escalation Engineer"
+                ]
+              },
+              {
+                "title": "Value-Added Services",
+                "items": [
+                  "Automation Engineer",
+                  "Optimization Engineer",
+                  "Technology Experts"
+                ]
+              },
+              {
+                "title": "Service Management",
+                "items": [
+                  "Team Leader",
+                  "Service Delivery Manager",
+                  "SLA Manager"
+                ]
+              },
+              {
+                "title": "Service Org. Design",
+                "items": [
+                  "ITSM Tool Expert",
+                  "ITIL Process Expert"
+                ]
+              }
+            ],
+            "komTags": [
+              "Call Quality Optimization",
+              "Call Isolation",
+              "Knowledge Base Generation",
+              "Contract KPI Management",
+              "Crisis Management",
+              "Performance Management"
+            ],
+            "managementTitle": "Core Management Areas",
+            "management": [
+              {
+                "title": "OS Management",
+                "description": "Installation, configuration, and lifecycle management of Windows Server and Linux systems; managed end-to-end including patch compliance, policy audit, and version transitions."
+              },
+              {
+                "title": "Messaging Management",
+                "description": "Proactive monitoring, capacity management, and service health operations of Microsoft Exchange, Skype for Business, and similar messaging platforms; ensuring continuity with mail flow and queue tracking."
+              },
+              {
+                "title": "Database Management",
+                "description": "Performance monitoring, backup, and access management of Oracle, MSSQL, and PostgreSQL databases; 24/7 operational support provided by our expert DBA team."
+              },
+              {
+                "title": "Middleware Management",
+                "description": "Configuration, update, and service monitoring operations of application servers, web services, and API gateway tiers; ensuring continuous operation of business applications."
+              },
+              {
+                "title": "Virtualization Management",
+                "description": "VM lifecycle, resource pool optimization, and capacity planning on VMware vSphere, Hyper-V, and vROps platforms; ensuring physical infrastructure operates at maximum efficiency."
+              }
+            ],
+            "analyticsTitle": "Management & Analytics",
+            "analytics": [
+              {
+                "title": "Customer Success Mgmt",
+                "items": [
+                  "Single point of contact, single summary",
+                  "SLA / OLA compliance & service quality",
+                  "Service health score & risk indicators",
+                  "Value realization & adoption level"
+                ]
+              },
+              {
+                "title": "Operational Intelligence",
+                "items": [
+                  "Dedicated analytics department",
+                  "Load analysis & standardization",
+                  "Anomaly detection & deviation analysis",
+                  "Operational awareness from raw data"
+                ]
+              },
+              {
+                "title": "Strategic Performance",
+                "items": [
+                  "C-Level service level & experience score",
+                  "Service continuity & outage impact analysis",
+                  "Continuous improvement & preventive action rate",
+                  "Contribution of service to business value"
+                ]
+              },
+              {
+                "title": "Proactive Insights",
+                "items": [
+                  "Demand & load trend analyses",
+                  "Operational efficiency reporting",
+                  "Benchmarking against industry specs",
+                  "Improvement opportunities & action plan"
+                ]
+              }
+            ]
+          },
+          "services": [
+            {
+              "id": "veri-merkezi",
+              "title": "Data Center Management",
+              "subtitle": "Support Service",
+              "icon": "Server",
+              "description": "BGTS provides end-to-end management of server, storage, virtualization, and backup systems within your critical data center infrastructure. Through proactive monitoring, capacity analysis, and our AI-supported operations approach, potential issues are detected early, calls are efficiently classified, and managed through the right escalation processes.\n\nPlanning corrective actions aimed at enhancing operational efficiency and developing automation processes are also included in the scope of service. This ensures continuous service continuity while continuously increasing system performance and operational maturity.",
+              "tags": [
+                "Call Management",
+                "Triage",
+                "Escalation",
+                "SLA Tracking",
+                "24/7 Support",
+                "Reporting",
+                "ITSM",
+                "Incident Management"
+              ],
+              "features": [
+                {
+                  "title": "Call Reception & Triage",
+                  "description": "We answer all data center-originated calls 24/7; quickly determine priority, category, and impact area, routing to the right team."
+                },
+                {
+                  "title": "Resolution Tracking & Escalation",
+                  "description": "We monitor open tickets under SLAs, involve relevant parties when needed, and maintain uninterrupted customer updates throughout the process."
+                },
+                {
+                  "title": "Reporting & Trend Analysis",
+                  "description": "We present resolution times, recurring issues, and volume trends to the customer in regular reports, revealing operational improvement opportunities."
+                }
+              ]
+            },
+            {
+              "id": "noc",
+              "title": "24/7 Monitoring & NOC",
+              "subtitle": "Managed Service",
+              "icon": "Activity",
+              "description": "The BGTS Network Operations Center (NOC) is built on a centralized platform created using modern monitoring technologies such as Zabbix, Prometheus, Grafana, and ELK Stack. While all infrastructure data is analyzed on a 'Single Pane of Glass', AI-supported alarm analysis ensures operations teams focus on real problems, minimizing unnecessary alert noise.\n\nThanks to autonomous runbooks and preventive actions, many issues are resolved automatically before an alarm sounds or upon first notification; continuously reducing the need for manual intervention.",
+              "tags": [
+                "Zabbix",
+                "OpenTelemetry",
+                "AIOps",
+                "Alert Consolidation",
+                "Service Tree",
+                "Self-Healing",
+                "Synthetic Monitoring",
+                "L0/L1/L2/L3",
+                "SLO Burn Rate",
+                "24/7 NOC"
+              ],
+              "features": [
+                {
+                  "title": "Alert Consolidation & Service Trees",
+                  "description": "We normalize all monitoring sources, including Zabbix, Datadog, Grafana, CloudWatch, Prometheus, OpenTelemetry, and SNMP, under a common schema. Thanks to the service tree model, alerts are placed directly into business context."
+                },
+                {
+                  "title": "AI-Supported Alarm Optimization",
+                  "description": "With dynamic threshold learning, alarms measure deviations from the normal behavior of the service, not a static figure left from installation. Achieving up to 63% reduction in alarm volume."
+                },
+                {
+                  "title": "Self-Healing Automation",
+                  "description": "Automated recovery triggers on recurring fault patterns. If successful, a ticket opens and closes instantly; if it fails, an engineer takes over."
+                },
+                {
+                  "title": "Synthetic Monitoring & NOC Org.",
+                  "description": "Critical user journeys are tested externally at the API chain level; CDN or regional problems are caught before user complaints occur."
+                }
+              ]
+            },
+            {
+              "id": "euc",
+              "title": "End-User & Device Management",
+              "subtitle": "Managed Service",
+              "icon": "Users",
+              "description": "Every operational issue decreases user productivity and adds an operational burden to your IT team. By moving past the traditional helpdesk approach, BGTS offers a support model that centers on user experience. Whether your employees are in the office, at home, or in the field; devices are centrally monitored, managed, and supported.",
+              "tags": [
+                "L1 / L2 / L3",
+                "VIP Support",
+                "MDM",
+                "Remote Support",
+                "ITSM",
+                "SLA"
+              ],
+              "features": [
+                {
+                  "title": "L1–L3 Support & VIP Service",
+                  "description": "85% first-call resolution rate; special isolation, logging, and change management processes for VIP users."
+                },
+                {
+                  "title": "Centralized Device & Endpoint Management",
+                  "description": "We manage the lifecycle of laptops, desktops, and mobile devices from end to end, ensuring standardization and security compliance."
+                },
+                {
+                  "title": "Remote Support & Field Services",
+                  "description": "Remote intervention capability independent of office, home or field; on-site technical support team when necessary."
+                }
+              ]
+            },
+            {
+              "id": "sccm",
+              "title": "SCCM / Endpoint Management",
+              "subtitle": "Managed Service",
+              "icon": "Monitor",
+              "description": "Devices with low update compliance, software distribution issues, and inadequate patch management put security at risk. BGTS provides the end-to-end setup, management, and continuous optimization of your Microsoft Endpoint Configuration Manager (SCCM) and Intune infrastructure through a managed service model.",
+              "tags": [
+                "SCCM / MECM",
+                "Microsoft Intune",
+                "Patch Management",
+                "Software Deployment",
+                "OS Image",
+                "Compliance",
+                "Inventory Management",
+                "Windows Server Update"
+              ],
+              "features": [
+                {
+                  "title": "Server Patch Compliance & Dashboard",
+                  "description": "Real-time monitoring of the update rate of managed servers; we provide separate metrics for critical services like Active Directory, Exchange, and SQL."
+                },
+                {
+                  "title": "Update Classification",
+                  "description": "Security and OS updates are classified and prioritized; missing patches are closed as soon as possible via automated distribution processes."
+                },
+                {
+                  "title": "Software Deployment & OS Image Management",
+                  "description": "We reduce new installation times to minutes with standardized images and task sequences."
+                }
+              ]
+            },
+            {
+              "id": "itsm",
+              "title": "ITSM as a Service",
+              "subtitle": "Managed Service",
+              "icon": "LayoutGrid",
+              "description": "When ITSM tools are poorly configured, SLAs become untrackable. With 50+ ITIL certified consultants, BGTS designs, improves, and matures your ITIL-based service organization on ServiceNow, Jira Service Manager, and BMC platforms.",
+              "tags": [
+                "ITIL v4",
+                "ServiceNow",
+                "Jira Service",
+                "BMC",
+                "50+ ITIL Certified",
+                "SLA / OLA",
+                "Service Catalog",
+                "CMDB",
+                "Process Improvement"
+              ],
+              "features": [
+                {
+                  "title": "Incident & Problem Management",
+                  "description": "SLA-tied incident management; permanently eliminating recurring problems with AI-supported root cause analysis."
+                },
+                {
+                  "title": "SLA / OLA Modeling & Service Catalog",
+                  "description": "We design service levels according to your requirements and make IT management transparent with service trees."
+                },
+                {
+                  "title": "CMDB & Process Improvement",
+                  "description": "Keeping IT assets up to date with a configuration management database (CMDB)."
+                }
+              ]
+            },
+            {
+              "id": "devops",
+              "title": "DevOps as a Service",
+              "subtitle": "Managed Service",
+              "icon": "GitBranch",
+              "description": "As software development teams deliver quickly, pressure on the operations team mounts. The BGTS DevOps service transforms the entire software delivery chain from development to production into an automation-focused structure.",
+              "tags": [
+                "Jenkins",
+                "GitLab CI",
+                "GitHub Actions",
+                "Terraform",
+                "Ansible",
+                "Docker",
+                "Kubernetes",
+                "Infrastructure as Code",
+                "DevSecOps"
+              ],
+              "features": [
+                {
+                  "title": "CI/CD Pipeline Management",
+                  "description": "Increasing the speed and consistency of software delivery with automated build, test, and deploy processes."
+                },
+                {
+                  "title": "Infrastructure as Code",
+                  "description": "Managing infrastructure as code with Terraform and Ansible; ensuring every environment is generated consistently."
+                },
+                {
+                  "title": "Container & Kubernetes",
+                  "description": "Enabling applications to run highly scalable and portably via Docker and Kubernetes cluster management."
+                }
+              ]
+            },
+            {
+              "id": "sre",
+              "title": "SRE as a Service",
+              "subtitle": "Managed Service",
+              "icon": "Infinity",
+              "description": "Reliability isn't an added feature, it's a foundational operational philosophy. From SLI/SLO/error budget definition to chaos engineering, toil elimination to on-call load optimization, we implement the SRE discipline in your organization as an active engineering practice.",
+              "tags": [
+                "SLO / SLI",
+                "Error Budget",
+                "Chaos Engineering",
+                "GameDay",
+                "Toil Reduction",
+                "Capacity Planning",
+                "Postmortem",
+                "On-Call Optimization",
+                "Observability"
+              ],
+              "features": [
+                {
+                  "title": "Defining Reliability — SLI / SLO",
+                  "description": "Alarms track SLO burn rate, not arbitrary metric thresholds. We manage the balance between reliability and innovation speed."
+                },
+                {
+                  "title": "Chaos Engineering & Testing",
+                  "description": "We test your system's resilience against failures with controlled error injection and GameDay operations."
+                },
+                {
+                  "title": "Toil Engineering",
+                  "description": "We measure repetitive tasks and reduce them through a dedicated automation backlog."
+                }
+              ]
+            },
+            {
+              "id": "dba",
+              "title": "Database DBA Services",
+              "subtitle": "Managed Service",
+              "icon": "Database",
+              "description": "Database performance issues grow silently and are noticed at the moment of a critical failure. BGTS uniquely manages your corporate databases like Oracle, MSSQL, and PostgreSQL 24/7 with an expert team.",
+              "tags": [
+                "Oracle DB",
+                "MS SQL Server",
+                "PostgreSQL",
+                "MySQL",
+                "Performance Tuning",
+                "Backup & Recovery",
+                "RTO / RPO",
+                "HA / RAC"
+              ],
+              "features": [
+                {
+                  "title": "Performance Monitoring & Optimization",
+                  "description": "Continuously optimizing database performance via query analysis, index management, and resource planning."
+                },
+                {
+                  "title": "Backup & Recovery",
+                  "description": "Reducing the risk of data loss to almost zero with automated backup plans and regular recovery tests."
+                },
+                {
+                  "title": "Security & Access Management",
+                  "description": "We ensure security with authorization matrices, audit logs, and encryption policies."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "title": "Technology Consulting",
+          "overview": {
+            "title": "Implement the Right Technology the Right Way",
+            "description": "From new system installations to technology updates, data center migrations to business continuity analysis, we manage all transformation processes of your corporate IT infrastructure with our experienced engineering team. We actualize technology successfully through our turnkey project model and on-site support capacity.",
+            "layersTitle": "Consulting Scope Areas",
+            "layers": [
+              {
+                "title": "System Installation & Turnkey Projects",
+                "description": "Providing end-to-end project management from architectural design of new technology systems to their commissioning; we deliver including tests, documentation, and training."
+              },
+              {
+                "title": "Technology Update & Integration",
+                "description": "Version transitions and platform integrations compatible with existing infrastructure; modernizing the technology stack while preserving business continuity."
+              },
+              {
+                "title": "Optimization & Health Checks",
+                "description": "We increase infrastructure capacity and reliability with system performance analysis, configuration review, and improvement recommendations."
+              },
+              {
+                "title": "Data Center Migration & Inventory Analysis",
+                "description": "Managing data center, system, and data migration projects by minimizing risk; reporting current status and gaps through inventory analysis."
+              },
+              {
+                "title": "Business Continuity & Training",
+                "description": "Permanently increasing your organization's capacity to use technology effectively via business continuity analyses, new technology training, and workshops."
+              }
+            ]
+          },
+          "services": [
+            {
+              "id": "cloud",
+              "title": "Multi-Cloud Consulting",
+              "subtitle": "Technology Consulting",
+              "icon": "Cloud",
+              "description": "We consolidate sprawling infrastructures across AWS, Azure, and Google Cloud platforms into a single operational framework. Designing your multi-cloud strategy according to business requirements; we continuously optimize the balance of cost, security, and flexibility.",
+              "tags": [
+                "AWS",
+                "Microsoft Azure",
+                "Google Cloud",
+                "Migration",
+                "Kubernetes",
+                "Terraform",
+                "Landing Zone"
+              ],
+              "features": [
+                {
+                  "title": "Cloud Architecture Design",
+                  "description": "We design your cloud architecture with a Well-Architected framework specific to your business needs."
+                },
+                {
+                  "title": "Migration & Modernization",
+                  "description": "We guide your journey from migrating legacy systems to the cloud towards containerization."
+                },
+                {
+                  "title": "Multi-Cloud Management",
+                  "description": "We provide redundancy between different platforms by minimizing the risk of vendor lock-in."
+                }
+              ]
+            },
+            {
+              "id": "finops",
+              "title": "FinOps Solutions",
+              "subtitle": "Technology Consulting",
+              "icon": "LineChart",
+              "description": "As the cloud bill grows, expenditures become vague. The BGTS FinOps service makes cloud costs transparent on a business-unit basis and detects resource waste.",
+              "tags": [
+                "AWS Cost Explorer",
+                "Azure Cost Mgmt",
+                "Right-sizing",
+                "Reserved Instance",
+                "Savings Plan"
+              ],
+              "features": [
+                {
+                  "title": "Cost Visibility & Allocation",
+                  "description": "Via resource tagging models, we make the cloud cost of each business unit transparent."
+                },
+                {
+                  "title": "Optimization & Savings",
+                  "description": "We provide an average of 30% cloud cost savings with right-sizing and plan analyses."
+                },
+                {
+                  "title": "FinOps Culture & Governance",
+                  "description": "We embed FinOps practices into the organization enabling engineering and finance teams to speak the same language."
+                }
+              ]
+            },
+            {
+              "id": "m365",
+              "title": "Microsoft 365 & Modern Work",
+              "subtitle": "Technology Consulting",
+              "icon": "AppWindow",
+              "description": "Microsoft 365 becomes a powerful digital work platform when properly managed. We manage your environment end-to-end, offering a seamless experience for your employees.",
+              "tags": [
+                "Microsoft Teams",
+                "SharePoint",
+                "Viva Suite",
+                "Purview",
+                "Defender for M365",
+                "Conditional Access",
+                "Exchange Online",
+                "Entra ID"
+              ],
+              "features": [
+                {
+                  "title": "Teams & Collaboration",
+                  "description": "We manage the corporate adoption process of Microsoft Teams, SharePoint, and the Viva Suite."
+                },
+                {
+                  "title": "Security & Compliance",
+                  "description": "We ensure identity and data security via Purview, Defender for M365, and Conditional Access policies."
+                },
+                {
+                  "title": "License Optimization",
+                  "description": "We optimize the license portfolio by disabling unused features."
+                }
+              ]
+            },
+            {
+              "id": "bcdr",
+              "title": "Cyber Recovery & Business Continuity",
+              "subtitle": "Technology Consulting",
+              "icon": "ShieldCheck",
+              "description": "From business continuity planning to isolated cyber recovery infrastructure, BGTS tests and secures your organization's resilience using real-life scenarios.",
+              "tags": [
+                "ISO 22301",
+                "BCP",
+                "DR Design",
+                "RTO / RPO",
+                "Ransomware Recovery",
+                "Veeam",
+                "Immutable Backup",
+                "DR Drill"
+              ],
+              "features": [
+                {
+                  "title": "Business Continuity Plan (BCP)",
+                  "description": "We identify critical business processes and build recovery strategies based on outage scenarios."
+                },
+                {
+                  "title": "Cyber Recovery & DR Design",
+                  "description": "We design an isolated recovery infrastructure that ensures a return to a clean environment post-ransomware."
+                },
+                {
+                  "title": "Drill & RTO/RPO Validation",
+                  "description": "We test your targets in the right environment with regular DR drills."
+                }
+              ]
+            },
+            {
+              "id": "ai",
+              "title": "AI & Automation Consulting",
+              "subtitle": "Technology Consulting",
+              "icon": "Cpu",
+              "description": "BGTS makes your IT operations intelligent with AI-supported automation and RPA solutions; providing energy and time savings from the call center to root cause analysis.",
+              "tags": [
+                "AIOps",
+                "Auto-Remediation",
+                "KB Generation",
+                "Call Center Bot",
+                "RPA",
+                "UiPath",
+                "Power Automate",
+                "Problem Mgmt",
+                "LLM / GenAI"
+              ],
+              "features": [
+                {
+                  "title": "Artificial Intelligence in Operations",
+                  "description": "We augment your operational capacity with automated solution suggestions and ticket volume analysis."
+                },
+                {
+                  "title": "Smart Support & KB Automation",
+                  "description": "We expand your corporate knowledge via automated Knowledge Base generation from tickets."
+                },
+                {
+                  "title": "RPA & Process Automation",
+                  "description": "We minimize manual errors by robotizing heavily repetitive workflows."
+                }
+              ]
+            },
+            {
+              "id": "bakim",
+              "title": "Maintenance & Support Services",
+              "subtitle": "Technology Consulting",
+              "icon": "Settings",
+              "description": "Unplanned outages are costly; preventable ones are simply unnecessary. BGTS guarantees the continuity of your systems.",
+              "tags": [
+                "Preventive Maintenance",
+                "SLA",
+                "24/7 Support",
+                "Field Services",
+                "Warranty Mgmt",
+                "Firmware",
+                "End-of-Life Planning"
+              ],
+              "features": [
+                {
+                  "title": "Periodic Maintenance",
+                  "description": "We intervene in hardware components through monthly/quarterly maintenance plans."
+                },
+                {
+                  "title": "Remote & Field Support",
+                  "description": "We provide quick remote solutions for normal conditions and on-site support by our certified field team for difficult situations."
+                },
+                {
+                  "title": "Software Update Management",
+                  "description": "We apply firmware and driver updates in a controlled manner."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "title": "Process Consulting",
+          "overview": {
+            "title": "Mature Your Processes, Increase Your Efficiency",
+            "description": "We supply efficiency, traceability, and sustainable operational excellence by aligning your IT processes with international standards."
+          },
+          "services": [
+            {
+              "id": "surec",
+              "title": "Process Consulting Services",
+              "subtitle": "Process Consulting",
+              "icon": "RefreshCw",
+              "description": "Using ITIL, COBIT, and ISO standards as references, BGTS measures your IT processes' maturity level, detects gaps, and roots out operational inefficiencies.",
+              "tags": [
+                "ITIL v4",
+                "COBIT",
+                "ISO 20000",
+                "Process Design",
+                "RACI",
+                "KPI",
+                "Gap Analysis",
+                "Maturity"
+              ],
+              "features": [
+                {
+                  "title": "Process Maturity Analysis",
+                  "description": "Evaluating your current state to set up the right improvement roadmap."
+                },
+                {
+                  "title": "Process Design & Implementation",
+                  "description": "Designing and deploying roles and tool integrations."
+                },
+                {
+                  "title": "Continuous Improvement & KPI",
+                  "description": "Providing data-driven improvements by continuously measuring process performance."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p4",
+          "title": "Compliance, Security & IT Maturity",
+          "overview": {
+            "title": "Strengthen Security, Build Resilience",
+            "description": "Through security, compliance, and maturity assessments, we analyze your current situation and construct roadmaps that reduce risk and make your organization more resilient."
+          },
+          "services": [
+            {
+              "id": "risk",
+              "title": "Risk Assessment & Mitigation",
+              "subtitle": "Cybersecurity",
+              "icon": "ShieldAlert",
+              "description": "BGTS identifies and prioritizes the security and operational risks in your IT infrastructure through asset inventory and threat modeling.",
+              "tags": [
+                "ISO 27001",
+                "KVKK",
+                "Risk Matrix",
+                "Threat Modeling",
+                "Asset Inventory",
+                "NIST",
+                "Control Design"
+              ],
+              "features": [
+                {
+                  "title": "Risk Analysis",
+                  "description": "We inspect the risks across your entire infrastructure through asset inventory and threat modeling."
+                },
+                {
+                  "title": "Control Design & Roadmap",
+                  "description": "We create, implement, and follow up heavily on security controls and plans."
+                },
+                {
+                  "title": "Compliance Requirements",
+                  "description": "We bring your organization's processes into compliance with ISO 27001 and KVKK / GDPR framework standards."
+                }
+              ]
+            },
+            {
+              "id": "maturity",
+              "title": "IT Maturity Assessment",
+              "subtitle": "Cybersecurity",
+              "icon": "LayoutTemplate",
+              "description": "Referencing CMMI and COBIT, BGTS measures the maturity of your IT organization across process, technology, and human dimensions.",
+              "tags": [
+                "CMMI",
+                "COBIT",
+                "ITIL",
+                "Gap Analysis",
+                "Benchmark",
+                "Roadmap",
+                "KPI"
+              ],
+              "features": [
+                {
+                  "title": "Maturity Level Detection",
+                  "description": "We record your current state by running a massive analysis across all operational spectrums."
+                },
+                {
+                  "title": "Improvement Roadmap",
+                  "description": "We submit a solid 12-18 month action plan for maturity growth."
+                },
+                {
+                  "title": "Industry Benchmarking",
+                  "description": "We examine the competitive framework by benchmarking against industry peers."
+                }
+              ]
+            },
+            {
+              "id": "hardening",
+              "title": "Server and Infrastructure Hardening",
+              "subtitle": "Cybersecurity",
+              "icon": "Lock",
+              "description": "Default configurations are heavily susceptible to unauthorized entries. Guided by CIS Benchmark and DISA STIG, BGTS permanently limits your attack surface.",
+              "tags": [
+                "CIS Benchmark",
+                "DISA STIG",
+                "Windows Server",
+                "Active Directory",
+                "PAM",
+                "Just-in-Time",
+                "GPO",
+                "Zero Trust"
+              ],
+              "features": [
+                {
+                  "title": "Operating System Hardening",
+                  "description": "We close unnecessary ports and implement full hardening on servers."
+                },
+                {
+                  "title": "Active Directory Security",
+                  "description": "We unearth AD gaps and errors, deploying essential security vectors."
+                },
+                {
+                  "title": "Privileged Access & PAM",
+                  "description": "We remove threat potential by tying privileged access to strict lockdown limits."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "devops": {
+      "hero": {
+        "title": "DevOps & SRE",
+        "subtitle": "Accelerate digital transformation with automated pipelines and cloud-native reliability."
+      },
+      "metrics": {
+        "deployment": {
+          "title": "Deployment Speed",
+          "unit": "faster",
+          "desc": "With automated CI/CD"
+        },
+        "uptime": {
+          "title": "Uptime",
+          "unit": "%",
+          "desc": "Continuous operation"
+        },
+        "recovery": {
+          "title": "Recovery Time",
+          "unit": "minutes",
+          "desc": "Automated recovery"
+        },
+        "pipeline": {
+          "title": "Pipeline Success",
+          "unit": "%",
+          "desc": "Automated testing"
+        }
+      },
+      "cicd": {
+        "title": "CI/CD & Automation",
+        "p1": "we design and manage end-to-end pipelines. Automated testing and version management minimize manual error risks while accelerating delivery cycles.",
+        "p2": "we manage infrastructure as code (IaC) and provide consistent, auditable environments.",
+        "advantagesTitle": "Pipeline Advantages",
+        "advantages": [
+          "Automated test and deploy",
+          "Rollback capability",
+          "Version management",
+          "Code review automation"
+        ],
+        "imageTitle": "CI/CD Pipeline",
+        "imageSubtitle": "Automated and Reliable"
+      },
+      "kubernetes": {
+        "title": "Kubernetes & Cloud-Native",
+        "p1": "ecosystem experience from cluster setup to GitOps-based deployments with ArgoCD. We apply HPA for auto-scaling, service mesh for traffic control, and comprehensive disaster recovery planning.",
+        "p2": "We support microservice transformation and cloud-native projects from planning to production.",
+        "cards": [
+          {
+            "title": "Kubernetes Orchestration",
+            "desc": "Auto-scaling, self-healing, and rolling updates"
+          },
+          {
+            "title": "GitOps",
+            "desc": "Git-based deployment and configuration management"
+          }
+        ],
+        "imageTitle": "Cloud-Native",
+        "imageSubtitle": "Scalable & Flexible"
+      },
+      "techStack": {
+        "title": "Technology Stack",
+        "categories": {
+          "cicd": "CI/CD",
+          "orchestration": "Orchestration",
+          "automation": "Automation",
+          "security": "Security"
+        }
+      },
+      "process": {
+        "title": "Our DevOps Process",
+        "subtitle": "Plan → Code → Test → Deploy → Monitor",
+        "steps": [
+          {
+            "title": "Plan",
+            "desc": "Needs analysis"
+          },
+          {
+            "title": "Code",
+            "desc": "Version control"
+          },
+          {
+            "title": "Test",
+            "desc": "Automated testing"
+          },
+          {
+            "title": "Deploy",
+            "desc": "CI/CD pipeline"
+          },
+          {
+            "title": "Monitor",
+            "desc": "Monitoring & alerts"
+          }
+        ]
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Let's bring your project",
+      "highlight": "to life together.",
+      "subtitle": "With 30+ years of experience, we are here to identify the best technology solution for your needs."
+    },
+    "methods": [
+      {
+        "label": "Phone",
+        "value": "+90 444 3330",
+        "href": "tel:+904443330",
+        "sublabel": "Weekdays 09:00 – 18:00"
+      },
+      {
+        "label": "Email",
+        "value": "info@bgts.com",
+        "href": "mailto:info@bgts.com",
+        "sublabel": "Response within 24 hours"
+      },
+      {
+        "label": "Offices",
+        "value": "Istanbul & Ankara",
+        "href": "#offices",
+        "sublabel": "Serving in 2 locations"
+      }
+    ],
+    "offices": [
+      {
+        "city": "Istanbul",
+        "title": "Headquarters",
+        "address": "ITU ARI Technopark, Sarıyer",
+        "mapUrl": "https://maps.google.com/?q=ITU+ARI+Teknokent",
+        "image": "/images/contact/itu-ari3.jpg"
+      },
+      {
+        "city": "Ankara",
+        "title": "Ankara Office",
+        "address": "Bilkent Cyberpark",
+        "mapUrl": "https://maps.google.com/?q=Bilkent+Cyberpark",
+        "image": "/images/contact/itu-ari3.jpg"
+      }
+    ],
+    "form": {
+      "heading": "How can we help you?",
+      "subheading": "Fill out the form and our expert team will get in touch with you as soon as possible.",
+      "name": "Full Name",
+      "namePlaceholder": "Your Full Name",
+      "email": "Email",
+      "emailPlaceholder": "example@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Company name",
+      "phone": "Phone",
+      "phonePlaceholder": "+90 212 XXX XX XX",
+      "message": "Your Message",
+      "messagePlaceholder": "Write your message here...",
+      "consent": "I consent to the processing of my personal data in accordance with GDPR/KVKK.",
+      "consentBold": "GDPR/KVKK",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "validation": {
+      "nameRequired": "Full name is required",
+      "emailInvalid": "Please enter a valid email",
+      "messageMin": "Message must be at least 10 characters",
+      "consentRequired": "Consent is required"
+    },
+    "success": {
+      "title": "Your message has been sent",
+      "body": "We will get back to you as soon as possible."
+    },
+    "error": {
+      "title": "An error occurred",
+      "body": "Please try again or send an email directly."
+    },
+    "sidebar": {
+      "officesHeading": "Our Offices",
+      "whyHeading": "Why BGTS?",
+      "whyItems": [
+        "Enterprise-scale solutions with 1400+ engineers",
+        "Deep expertise in finance, telecom, and defense sectors",
+        "Atlassian, Qlik, ServiceNow partnerships",
+        "24/7 managed services and SRE support"
+      ],
+      "aboutLink": "Learn more about us"
+    }
+  },
+  "socialContribution": {
+    "hero": {
+      "title": "Sustainable Value",
+      "highlight": "Program",
+      "subtitle": "We focus not only on technology and talent development, but also on creating lasting value for society. We prioritize creating equal opportunities and ensuring sustainable impact."
+    },
+    "education": {
+      "heading": "Investing in the",
+      "headingHighlight": "Future of Youth",
+      "body": "Through our training and internship programs, we support young people in taking more confident and prepared steps into the business world.",
+      "items": [
+        "We provide learning environments where students can bring their theoretical knowledge into practice.",
+        "We provide internship opportunities where they can experience real business processes.",
+        "We contribute to young talents discovering their potential and clarifying their career direction."
+      ],
+      "quote": "Our goal is to support young people in growing up as individuals prepared not just for today, but for the future.",
+      "imageAlt": "Education and Internship"
+    },
+    "scholarship": {
+      "heading": "Equal Opportunity",
+      "headingHighlight": "in Education",
+      "body": "Our scholarship programs aim to stand by students who need support while continuing their education.",
+      "items": [
+        "We aim to contribute to equal opportunity in education.",
+        "We aim to ensure that financial barriers do not stand in the way of learning.",
+        "We support the sustainable development of successful and motivated students."
+      ],
+      "quote": "We see scholarship programs not just as financial support, but as a long-term investment in the future.",
+      "imageAlt": "Scholarship Programs"
+    },
+    "social": {
+      "heading": "Adding Value",
+      "headingHighlight": "to Society",
+      "body": "Our social responsibility work centers on generating social benefit and contributing to the ecosystem we are part of.",
+      "focusTitle": "Our Focus Areas",
+      "focusDesc": "Projects focused on education, youth, and social development.",
+      "approachTitle": "Our Approach",
+      "approachDesc": "Volunteer spirit and long-term sustainable impact.",
+      "quote": "For BGTS, social responsibility is not just periodic projects; it is a natural part of our corporate culture.",
+      "imageAlt": "Adding Value to Society"
+    }
+  },
+  "youngEngineers": {
+    "hero": {
+      "title": "Engineers Building",
+      "highlight": "the Future",
+      "subtitle": "With the Young Engineer Program, get a",
+      "subtitleBold": "strong start",
+      "subtitleEnd": "in your career through project-based learning, real project simulations and mentor support.",
+      "applyBtn": "Apply Now",
+      "exploreBtn": "Explore Programs"
+    },
+    "metrics": [
+      {
+        "val": "3",
+        "label": "Programs",
+        "desc": "Software, Test, Infrastructure"
+      },
+      {
+        "val": "12",
+        "label": "Weeks",
+        "desc": "Structured training"
+      },
+      {
+        "val": "1:1",
+        "label": "Mentoring",
+        "desc": "Senior guidance"
+      },
+      {
+        "val": "100%",
+        "label": "Real Projects",
+        "desc": "Live systems"
+      }
+    ],
+    "culture": {
+      "heading": "Hands-on Learning,",
+      "headingLine2": "Strong Engineering Culture",
+      "imageAlt": "BGTS Young Engineers Culture",
+      "quote": "You gain experience in a strong engineering environment by learning different industry dynamics.",
+      "p1": "The Young Engineer Program offers the opportunity to gain experience with leading companies in various sectors by working on real projects. It prepares you for the future with a strong engineering culture alongside technical development.",
+      "p1Bold": "gain experience with leading companies",
+      "p2": "Throughout the program, you develop not only your technical skills but also your problem-solving approach and team communication. You make a strong start in professional life with modern development processes, real project scenarios and mentor support.",
+      "p2Bold": "problem-solving approach",
+      "features": [
+        {
+          "title": "Real Projects",
+          "desc": "Development on live systems"
+        },
+        {
+          "title": "1:1 Mentoring",
+          "desc": "Senior engineer guidance"
+        },
+        {
+          "title": "Tech Talks",
+          "desc": "Weekly technical presentations"
+        },
+        {
+          "title": "Career Path",
+          "desc": "Full-time career opportunities"
+        }
+      ]
+    },
+    "photoStrip": [
+      {
+        "img": "/images/genc-muhendis/mentorluk.jpg",
+        "title": "Mentoring",
+        "tag": "Growth"
+      },
+      {
+        "img": "/images/genc-muhendis/ogrenme.jpg",
+        "title": "Tech Talks",
+        "tag": "Learning"
+      },
+      {
+        "img": "/images/culture/culture-3.jpg",
+        "title": "Teamwork",
+        "tag": "Culture"
+      },
+      {
+        "img": "/images/genc-muhendis/proje.jpg",
+        "title": "Career Planning",
+        "tag": "Project"
+      }
+    ],
+    "programs": {
+      "sectionHeading": "Which path do",
+      "sectionHeadingHighlight": "you want to take?",
+      "sectionSubtitle": "You can choose one of the different areas of expertise within the Young Engineer Program.",
+      "applyLink": "Apply",
+      "items": [
+        {
+          "id": "track-software",
+          "title": "Software Development",
+          "desc": "Gain modern software engineering skills with end-to-end product development experience.",
+          "items": [
+            "Modern backend & frontend development",
+            "API design and data management",
+            "Testing processes and code quality",
+            "Project development with Agile & Scrum"
+          ]
+        },
+        {
+          "id": "track-test",
+          "title": "Test & Business Analysis",
+          "desc": "Gain testing and analysis expertise that ensures project quality and sustainability.",
+          "items": [
+            "Testing processes and quality assurance",
+            "Manual and automation testing",
+            "Business analysis and requirements management",
+            "Test scenarios and documentation"
+          ]
+        },
+        {
+          "id": "track-infrastructure",
+          "title": "Infrastructure Technologies",
+          "desc": "Gain the skills to design and manage scalable and reliable system infrastructures.",
+          "items": [
+            "Linux and system management",
+            "CI/CD, DevOps and automation",
+            "Cloud platforms (AWS, Azure, GCP)",
+            "Monitoring, logging and tracking"
+          ]
+        }
+      ]
+    },
+    "steps": {
+      "sectionHeading": "Steps to Join the Program",
+      "sectionSubtitle": "Progress with clear and transparent steps from application to joining a project.",
+      "stepLabel": "Step",
+      "items": [
+        {
+          "step": "01",
+          "title": "Application",
+          "desc": "Fill out the online application form, upload your CV and take your first step."
+        },
+        {
+          "step": "02",
+          "title": "Evaluation",
+          "desc": "Participate in a technical competency and motivation assessment."
+        },
+        {
+          "step": "03",
+          "title": "Training Period",
+          "desc": "12-week structured training program and one-on-one mentoring."
+        },
+        {
+          "step": "04",
+          "title": "Join a Project",
+          "desc": "Start taking roles in active projects."
+        }
+      ]
+    },
+    "application": {
+      "heading": "Start Your",
+      "headingHighlight": "Career Strong",
+      "subtitle": "Fill out the form, upload your CV and take your first step into the Young Engineer Program.",
+      "tipsHeading": "Application Tips",
+      "tips": [
+        "Make sure your CV is up to date.",
+        "Talk about your projects and experiences.",
+        "Briefly write about what excites you."
+      ],
+      "notice": "Applications are continuously reviewed. You will be contacted as soon as possible."
+    },
+    "form": {
+      "title": "Apply Now",
+      "subtitle": "Take your first step into the Young Engineer Program by filling out the form.",
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "Your Full Name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "example@email.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "0555 555 55 55"
+      },
+      "university": {
+        "label": "University",
+        "placeholder": "University Name"
+      },
+      "department": {
+        "label": "Department",
+        "placeholder": "Your Department"
+      },
+      "grade": {
+        "label": "Grade",
+        "placeholder": "Select",
+        "year3": "Junior (3rd Year)",
+        "year4": "Senior (4th Year)",
+        "graduate": "New Graduate",
+        "master": "Master's Degree"
+      },
+      "cv": {
+        "label": "Upload CV",
+        "dragDrop": "Click or drag to select a file",
+        "restrictions": "PDF, DOC, DOCX (Max 5MB)",
+        "errorMsg": "Please upload your current CV."
+      },
+      "message": {
+        "label": "Brief Note",
+        "placeholder": "Anything you want to add..."
+      },
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "success": {
+        "title": "Application Received!",
+        "desc": "Thank you for your interest. We will contact you after evaluating your application."
+      },
+      "error": {
+        "default": "An error occurred",
+        "alert": "An error occurred during your application, please try again."
+      }
+    }
+  },
+  "mobileNav": {
+    "services": {
+      "name": "Services",
+      "software": "Software & Technology Services",
+      "bigData": "Big Data & Real-Time Processing",
+      "ai": "AI & AI-First Architecture",
+      "modernization": "Software Modernization & Microservices",
+      "devServices": "Software Development Services",
+      "sectoral": "Sectoral Software Solutions",
+      "banking": "Banking & Financial Systems",
+      "etrading": "E-Trading & Market Data",
+      "telecom": "Telecom & Digital Communication",
+      "fraud": "Fraud & Risk & AI Verification",
+      "msp": "Managed Services (MSP)",
+      "dataCenter": "Data Center Management",
+      "monitoring": "24/7 Monitoring & NOC",
+      "endUser": "End-User & Device Management"
+    },
+    "industries": {
+      "name": "Industries",
+      "enterprise": "Enterprise & Defense",
+      "bankingFinance": "Banking & Finance",
+      "defense": "Defense Industry",
+      "commercial": "Commercial & Telecom",
+      "telecommunications": "Telecommunications",
+      "retail": "Retail & E-Commerce"
+    },
+    "products": {
+      "name": "Products",
+      "hiring": "Hiring Technologies",
+      "enterprise": "Enterprise Solutions",
+      "hcm": "HCM Platform",
+      "docKnowledge": "Document & Knowledge Management"
+    },
+    "talent": {
+      "name": "Young Engineers",
+      "programs": "Programs",
+      "software": "Software Developer Training",
+      "infrastructure": "Infrastructure Technologies",
+      "test": "Test & Analyst",
+      "apply": "Apply Now"
+    },
+    "resources": {
+      "name": "Resources",
+      "heading": "Resources",
+      "successStories": "Success Stories",
+      "infographics": "Infographics",
+      "partners": "Business Partners"
+    },
+    "careers": {
+      "name": "Careers",
+      "lifeCareer": "Life & Career",
+      "culture": "Culture",
+      "careerPaths": "Career Paths",
+      "learning": "Training & Development",
+      "social": "Sustainable Value Program"
+    },
+    "quickLinks": {
+      "about": "About Us",
+      "contact": "Contact"
+    }
+  },
+  "banking": {
+    "hero": {
+      "title": "Reliable and Scalable Technologies for the Finance Sector",
+      "subtitle": "From high-volume transaction infrastructures to digital banking, we develop regulation-compliant and performance-oriented systems."
+    },
+    "overview": {
+      "heading": "Your Reliable Technology Partner in Finance",
+      "p1": "Growing steadily since our foundation in 1997, our organization today maintains long-standing, solid partnerships with private and public banks, insurance companies, and institutions operating in payment systems. With over 100 projects completed, we take an active role in critical business areas of the financial ecosystem, particularly in core banking, digital channels, payment systems, and data & analytics solutions.",
+      "p1Bold1": "foundation in 1997",
+      "p1Bold2": "over 100 projects",
+      "p2": "Putting our business partners' strategic goals and priorities at the center, we analyze their needs and bring projects to life with the most suitable methodology and delivery model. In the digital transformation journey, we position ourselves not just as a supplier, but as a long-term technology partner who owns the process.",
+      "p2Bold": "long-term technology partner who owns the process",
+      "stats": [
+        {
+          "val": "100+",
+          "label": "Successful Projects"
+        },
+        {
+          "val": "550+",
+          "label": "Expert Employees"
+        },
+        {
+          "val": "8/10",
+          "label": "Leading Banks"
+        }
+      ]
+    },
+    "model": {
+      "heading": "360-Degree Technology Solution Model",
+      "subtitle": "Our comprehensive service portfolio meets the unique needs of organizations with flexible business models (Turnkey, T&M, Hybrid).",
+      "pillars": [
+        {
+          "title": "Software Development",
+          "desc": "Agile and reliable web/mobile applications, platform development, and business analysis processes to accelerate your digital transformation journey.",
+          "items": [
+            "Web & Mobile Applications",
+            "Platform & Product Dev",
+            "Business Analysis & UX",
+            "Software Test Automation"
+          ]
+        },
+        {
+          "title": "Technology Services",
+          "desc": "With our managed services covering critical areas, we monitor and manage your infrastructure, ensuring business continuity.",
+          "items": [
+            "OS & Databases",
+            "DevOps & Middleware",
+            "Cloud & Virtualization",
+            "Infrastructure & Device Monitoring"
+          ]
+        },
+        {
+          "title": "Young Engineers",
+          "desc": "We train the software and infrastructure talents needed by the finance sector and provide your existing employees with new skills.",
+          "items": [
+            "Campus Engagement",
+            "Training & Dev Camps",
+            "Sector-Focused Mentorship",
+            "Employment in Projects"
+          ]
+        }
+      ]
+    },
+    "solutions": {
+      "heading": "Comprehensive Banking Expertise",
+      "subtitle": "We have end-to-end project development capabilities in all areas touching banking and insurance. We safely complete projects with our strong domain experience.",
+      "items": [
+        "Core Banking Applications",
+        "Payment Systems & Card Solutions",
+        "Investment Banking",
+        "Treasury",
+        "Digital Banking Channels",
+        "CRM and IVR Solutions",
+        "Data & Analytics, Risk & Customer Analytics",
+        "Corporate Applications (Accounting, Supply Chain, Portals)",
+        "Human Resources (HR) Systems",
+        "Infrastructure Modernization and Integration Projects"
+      ]
+    },
+    "core": {
+      "title": "Core Banking",
+      "desc": "In systems forming the backbone of banking, a critical, high-transaction, and error-free solution portfolio from collaterals to loans, cash management to legal follow-up.",
+      "items": [
+        {
+          "title": "Collateral Management",
+          "desc": "Full integration and traceability of loan collateral processes."
+        },
+        {
+          "title": "Time Deposits",
+          "desc": "Automation of retail and corporate time deposit transactions."
+        },
+        {
+          "title": "Retail, SME & Corporate Loans",
+          "desc": "Collaborations, allocation utilization, payment plans, NPL management, and legal follow-up processes."
+        },
+        {
+          "title": "Cash Management Solutions",
+          "desc": "Fund movements, liquidity monitoring, and cash flow management solutions."
+        },
+        {
+          "title": "Treasury Fx & Derivatives",
+          "desc": "FX transactions, derivative product management, and FIX/Pricing/Hedging infrastructures."
+        },
+        {
+          "title": "Overdraft Accounts",
+          "desc": "Management of retail and corporate overdraft account processes."
+        },
+        {
+          "title": "Branch Channel Management",
+          "desc": "Branch channel adaptations covering digital instructions and cash deposit/withdrawal projects."
+        },
+        {
+          "title": "Application Fraud",
+          "desc": "Analytical and rule-based systems detecting fraud in loan and product applications."
+        },
+        {
+          "title": "Non-Cash Products",
+          "desc": "Process management of letters of guarantee, letters of credit, and other non-cash products."
+        },
+        {
+          "title": "Tax and Invoice Modules",
+          "desc": "Management of tax and invoice processes integrated with government systems."
+        },
+        {
+          "title": "E-Invoice Integrations",
+          "desc": "End-to-end integration of e-invoice and e-lien processes with public systems."
+        }
+      ]
+    },
+    "payments": {
+      "title": "Payment Systems",
+      "desc": "Secure and 100% regulation-compliant infrastructures from card payments to digital wallets, POS management to clearing systems.",
+      "items": [
+        {
+          "title": "Card Products",
+          "desc": "Lifecycle management and operations of credit, debit, and prepaid cards."
+        },
+        {
+          "title": "Card Dev & Printing",
+          "desc": "New card product design, business development, and card printing operations."
+        },
+        {
+          "title": "POS Product Integration",
+          "desc": "Software support and integration for virtual and physical POS terminals."
+        },
+        {
+          "title": "Issuing",
+          "desc": "Card issuance processes, authorization management, and cardholder transaction infrastructure."
+        },
+        {
+          "title": "Acquiring",
+          "desc": "Merchant acceptance processes, clearing, and settlement systems."
+        },
+        {
+          "title": "Clearing (Takasnet)",
+          "desc": "Rapid interbank clearing, authorization flows, and Takasnet integration infrastructures."
+        },
+        {
+          "title": "Customer Onboarding",
+          "desc": "Rapid customer acquisition (KYC), digital application, and identity verification processes."
+        },
+        {
+          "title": "E-Wallet",
+          "desc": "Development of digital wallet products, loyalty, and payment system integrations."
+        }
+      ]
+    },
+    "caseStudies": {
+      "tag": "Proven Experience",
+      "heading": "Success Stories Exceeding Industry Expectations in Complex Financial Projects",
+      "subtitle": "Real case studies we implemented for industry-leading institutions, from core banking systems to digital modernization.",
+      "items": [
+        {
+          "title": "Loan Payment Plan Service Transformation",
+          "desc": "A modern and scalable payment plan infrastructure moved to open system architecture, freed from Mainframe (MFDC) dependencies."
+        },
+        {
+          "title": "Branch Cash Deposit & Withdrawal",
+          "desc": "A channel management system designed with microservices architecture, consolidating cash transactions and gold purchases from Branch and ATM channels onto a single screen."
+        },
+        {
+          "title": "Reinsurance Digital Transformation",
+          "desc": "Converting 19 screens and 13 tables from Mainframe to open systems. Strong monitoring and infrastructure automation."
+        },
+        {
+          "title": "E-Invoice Integration Project",
+          "desc": "Automatic integration of e-invoices into internal systems and end-to-end traceable approval. Structure compatible with EFA screens."
+        },
+        {
+          "title": "CV Parsing & Career Plugin",
+          "desc": "A project to automatically (Autofill) transfer resumes from LinkedIn and Kariyer.net to the HR system by parsing them using NLP methods."
+        },
+        {
+          "title": "Office Reservation & Planning",
+          "desc": "A secure and user-friendly scheduling web application for hybrid bank employees to manage desk/office reservations."
+        },
+        {
+          "title": "Super Banker & Super Search",
+          "desc": "A dynamic and customizable banking assistant that combines customer (SSN, Tax ID) and application searches on a single platform."
+        },
+        {
+          "title": "Loan Fund & IVR Projects",
+          "desc": "Automation of collateral processes with Loan Guarantee Fund integration and modernization of Call Center IVR flows."
+        }
+      ]
+    }
+  },
+  "defense": {
+    "hero": {
+      "title": "Reliable and High-Standard Technologies for the Defense Industry",
+      "subtitle": "We develop highly secure software and infrastructure solutions targeting the Armed Forces and defense ecosystem, compliant with MIL-STD and IEEE standards."
+    },
+    "overview": {
+      "heading": "Your Reliable Technology Partner in the Defense Industry",
+      "p1": "Our primary goal in defense industry projects is to provide reliable, high-performance, and secure software solutions. To ensure critical mission software runs accurately, quickly, and flawlessly in the field, we manage all development processes holistically—from embedded software to web and cloud-based systems.",
+      "p2": "In our software development and design activities, we operate processes in compliance with 15288, 12207, 42010, and 42020 standards. We ensure traceability at every step, from requirements analysis to architectural design, development, and validation processes.",
+      "cert1": "20000 IT Service Management",
+      "cert2": "27001 Information Security"
+    },
+    "services": [
+      {
+        "title": "Business Analysis Services",
+        "description": "We offer comprehensive business analysis services in defense projects to ensure accurate understanding of requirements, realization of operational modeling, and traceability.",
+        "items": [
+          {
+            "title": "Mission-Based Needs Analysis",
+            "desc": "Using IIBA-compliant methodologies, we collect stakeholder requirements, document business goals, and validate them with operational scenarios."
+          },
+          {
+            "title": "Concept of Operations (ConOps) Production",
+            "desc": "We prepare ConOps documents that define the user's operational world and mission scenarios, providing a common understanding for all stakeholders."
+          },
+          {
+            "title": "Operational Scenario and Process Modeling",
+            "desc": "Using BPMN, UML, SysML, and ArchiMate, we model operational scenarios, processes, system behaviors, and enterprise architecture."
+          },
+          {
+            "title": "Requirements Elicitation and Documentation",
+            "desc": "We document System and Subsystem requirements derived from operational requirements, ConOps, and scenarios in a traceable (RTM) and testable manner."
+          }
+        ]
+      },
+      {
+        "title": "Software Development Services",
+        "description": "Holistic engineering support with targeted languages and technologies, alongside software lifecycle and validation processes compliant with the 12207 standard.",
+        "items": [
+          {
+            "title": "Software Architectural Design",
+            "desc": "Secure and sustainable architectural designs compliant with 42010 and 42020 in NAF, DODAF, and TOGAF frameworks. UML/SysML/Archimate modeling."
+          },
+          {
+            "title": "Information System Software",
+            "desc": "Enterprise solutions for operational management, records systems, big data, and logging needs."
+          },
+          {
+            "title": "Command and Control Software",
+            "desc": "Real-time data processing, sensor fusion, tactical data links, and simulation/behavior engine development."
+          },
+          {
+            "title": "Embedded System Software",
+            "desc": "Driver and mission software for RTOS, FPGA, and microcontrollers. Validation compliant with military standards."
+          },
+          {
+            "title": "Secure Coding and Military Standards",
+            "desc": "Coding fortified with static analysis and vulnerability scanning, compliant with Secure Coding, OWASP, and military policies."
+          },
+          {
+            "title": "Software Development Model",
+            "desc": "Agile/Scrum or Waterfall/V-Model project management approaches based on needs."
+          }
+        ]
+      },
+      {
+        "title": "Testing and Validation Services",
+        "description": "We guarantee the conformity of systems and software to requirements within the framework of military and industrial standards.",
+        "items": [
+          {
+            "title": "Function and System Tests",
+            "desc": "Functionality validation tests at component, integration, and system levels."
+          },
+          {
+            "title": "Automation Tests",
+            "desc": "Automated test scenarios integrated into continuous integration, improving repeatability and speed."
+          },
+          {
+            "title": "Performance, Security and Endurance Tests",
+            "desc": "Guaranteed stability under critical mission conditions with load, stress, endurance, and security tests."
+          },
+          {
+            "title": "Acceptance Tests",
+            "desc": "Comprehensive acceptance test plans and execution based on user needs and operational scenarios."
+          },
+          {
+            "title": "Documentation and Reporting",
+            "desc": "Detailed test reporting that feeds traceable, verifiable, and decision-support processes."
+          }
+        ]
+      },
+      {
+        "title": "DevOps Services",
+        "description": "By integrating development and operations processes, we ensure fast, reliable, and traceable software delivery.",
+        "items": [
+          {
+            "title": "Development Tools",
+            "desc": "Source code management, task tracking, and team coordination with Git, Azure DevOps, and Jira."
+          },
+          {
+            "title": "Continuous Integration (CI) and Deployment (CD)",
+            "desc": "Automated build, test, and deployment processes with Jenkins and Azure DevOps pipelines."
+          },
+          {
+            "title": "Automated Test Integration",
+            "desc": "Early bug detection with unit and static analysis tests integrated into the CI/CD pipeline."
+          },
+          {
+            "title": "Release and Deployment Management",
+            "desc": "Secure version control, automated deployment policies, and rollback mechanisms."
+          },
+          {
+            "title": "Container and Kubernetes",
+            "desc": "Scalable, portable microsystem architectures using Docker and Kubernetes."
+          }
+        ]
+      }
+    ]
+  },
+  "telecommunications": {
+    "hero": {
+      "title": "Scalable and Uninterrupted Digital Platforms for Telecommunications",
+      "subtitle": "We develop telecom infrastructures and digital platforms that operate under high traffic, process real-time data, and provide 24/7 uninterrupted service."
+    },
+    "overview": {
+      "heading": "Custom Digital Platform and MSP Services for the Telecom Sector",
+      "p1": "The telecom sector's expectations for high traffic, omni-channel management, and uninterrupted service require robust integrations, a stable infrastructure, and 24/7 operational excellence.",
+      "p2": "With our long years of experience in this field, we provide end-to-end technology services for the central systems, content platforms, and field communication applications of Turkey's leading operators.",
+      "p3": "We make operators' digital platforms secure, fast, scalable, and operationally sustainable."
+    },
+    "services": [
+      {
+        "title": "Digital Platform and Software Development",
+        "description": "Scalable, modern software platforms that strengthen communication between headquarters, dealers, and field teams.",
+        "items": [
+          {
+            "title": "Corporate Applications",
+            "desc": "Custom-developed applications for headquarters and field communication, call center, and portal solutions."
+          },
+          {
+            "title": "Modern Technologies",
+            "desc": "Scalable architectures capable of managing high-volume data streams based on SharePoint, .NET, React, and SQL."
+          },
+          {
+            "title": "Complex Integrations",
+            "desc": "Integration structures tailored to specific business needs where different systems communicate with each other."
+          },
+          {
+            "title": "Uninterrupted Operation",
+            "desc": "Maintenance, updating, and uninterrupted operation guarantee for developed platforms."
+          }
+        ]
+      },
+      {
+        "title": "Content and Portal Management",
+        "description": "Infrastructures that enable rapid, secure, and organized management of hundreds of contents and documents.",
+        "items": [
+          {
+            "title": "Rapid Content Management",
+            "desc": "Special components and service-based content flows for editorial teams."
+          },
+          {
+            "title": "Custom Workflow Structures",
+            "desc": "Customized workflows that automate approval and publishing processes."
+          },
+          {
+            "title": "SharePoint Infrastructure Management",
+            "desc": "Complete installation, farm management, and updates in Dev, Test, Stg, and Prod environments."
+          },
+          {
+            "title": "Operational Maintenance",
+            "desc": "Regular maintenance and performance optimization of portal infrastructures."
+          }
+        ]
+      },
+      {
+        "title": "Operations Management and Integration",
+        "description": "Secure information flow services that bring together all stakeholders in the telecom ecosystem.",
+        "items": [
+          {
+            "title": "Ecosystem Integration",
+            "desc": "Access to documents and announcements for headquarters, field, and dealer networks through a common platform."
+          },
+          {
+            "title": "Information Flow Security",
+            "desc": "Ensuring secure and uninterrupted data traffic among stakeholders."
+          },
+          {
+            "title": "Centralized Service Structures",
+            "desc": "Harmony of different applications under a single roof with services running in the background."
+          },
+          {
+            "title": "Business Process Management",
+            "desc": "Tracking and managing operational business processes in a digital environment."
+          }
+        ]
+      },
+      {
+        "title": "MSP, Server Management and 24/7 Operations",
+        "description": "Uninterrupted management and support services with expert teams for your critical data center infrastructures.",
+        "items": [
+          {
+            "title": "Data Center Consultancy",
+            "desc": "Expert consultant teams working in operator data centers."
+          },
+          {
+            "title": "System Management",
+            "desc": "L1-L2 management in Linux, Windows, virtualization, database, and backup areas."
+          },
+          {
+            "title": "24/7 Operational Support",
+            "desc": "24/7 monitoring of performance, security, and capacity of critical systems."
+          },
+          {
+            "title": "Continuity Guarantee",
+            "desc": "Proactive monitoring and intervention processes that minimize service interruptions."
+          }
+        ]
+      }
+    ]
+  },
+  "retail": {
+    "hero": {
+      "title": "Technologies Strengthening the Digital Experience for Retail and E-Commerce",
+      "subtitle": "We develop digital platforms that improve customer experience, accelerate sales processes, and increase operational efficiency."
+    },
+    "overview": {
+      "heading": "End-to-End Digital Solutions in Retail and E-Commerce",
+      "p1": "In the e-commerce sector, which is growing with the rapid development of technology, the most important issue is the sustainability of the current structure (website or mobile app) without security vulnerabilities and the need to produce quick software solutions for changing demands.",
+      "p2": "Expanding the product range as a company subsequently brings serious logistics and storage problems. Therefore, many e-commerce companies prefer to reach their customers with a B2B working logic.",
+      "p3": "With the B2B support portals we developed as BGTS, we enable companies with e-commerce environments to make serious budget savings in their training and development costs."
+    },
+    "services": [
+      {
+        "title": "E-Commerce and B2B Solutions",
+        "description": "We offer customized portals and training infrastructures for your business partners to use your platform most efficiently.",
+        "items": [
+          {
+            "title": "B2B Support Portals",
+            "desc": "Special support and training portals for the effective use of the central e-commerce platform by business partners."
+          },
+          {
+            "title": "Cost Savings",
+            "desc": "Self-service knowledge bases integrating and optimizing training and development costs."
+          },
+          {
+            "title": "Emergency Management",
+            "desc": "Support modules that provide instant intervention and solutions for operational problems."
+          },
+          {
+            "title": "Integration Competence",
+            "desc": "Seamless integration of existing e-commerce platforms with business partner systems."
+          }
+        ]
+      },
+      {
+        "title": "HR and Employee Experience (HR Tech)",
+        "description": "AI-supported HR solutions to manage high employee turnover in the sector and increase belonging.",
+        "items": [
+          {
+            "title": "Turnover Management",
+            "desc": "Employee loyalty and satisfaction analysis aimed at reducing turnover rates."
+          },
+          {
+            "title": "End-to-End HR Processes",
+            "desc": "Tracking of Performance Evaluation, Training, Recruitment, Payroll, and Personal rights."
+          },
+          {
+            "title": "HR/AI Solutions",
+            "desc": "Smart assistants that instantly respond to employee problems and requests using AI."
+          },
+          {
+            "title": "Career and Development",
+            "desc": "Training and career planning modules that support the personal development of employees."
+          }
+        ]
+      },
+      {
+        "title": "Technology and Infrastructure (DevOps & ITSM)",
+        "description": "Technology infrastructures that are scalable, secure, and managed at global standards.",
+        "items": [
+          {
+            "title": "Scalable Infrastructure",
+            "desc": "DevOps architectures that meet the increase in user numbers and run smoothly even under high loads."
+          },
+          {
+            "title": "Global ITSM Compliance",
+            "desc": "Process management, SLA tracking, and solution production in ITIL and ISO27001 standards."
+          },
+          {
+            "title": "Advanced Reporting",
+            "desc": "Executive and operational dashboards backed by PowerBI and Qlik integrations."
+          },
+          {
+            "title": "24/7 Uninterrupted Service",
+            "desc": "Instant monitoring and rapid intervention of all components, suitable for the dynamic structure of retail."
+          }
+        ]
+      },
+      {
+        "title": "Managed Services and NOC",
+        "description": "A professional operations center that monitors, updates, and protects the health of your systems 24/7.",
+        "items": [
+          {
+            "title": "Service-Based Monitoring",
+            "desc": "Detailed system monitoring based on service trees using Zabbix and NOC models."
+          },
+          {
+            "title": "Endpoint Management (SCCM)",
+            "desc": "Corporate application deployment, patch management, OS images, and agent health tracking."
+          },
+          {
+            "title": "License and Compliance",
+            "desc": "Software license management, usage measurement, and corporate compliance reporting."
+          },
+          {
+            "title": "End-User Support",
+            "desc": "Professional end-user support services on-site or remotely in ITIL standards."
+          }
+        ]
+      }
+    ]
+  },
+  "resources_infographics": {
+    "hero": {
+      "title": "Discover the Power <br/> of Data",
+      "subtitle": "Dive deep into the world of BGTS with sector insights, growth figures, and human resources statistics."
+    },
+    "stats": {
+      "heading": "Talent Acquisition and Career Development",
+      "desc": "With our growing team every month and our employee satisfaction-oriented approach, we bring the best talents in the sector to our organization.",
+      "items": [
+        {
+          "value": "1000+",
+          "title": "Monthly Interviews",
+          "desc": "We conduct interviews with more than 1000 candidates every month."
+        },
+        {
+          "value": "36%",
+          "title": "Referral Hiring",
+          "desc": "36% of our team joins us through referral hiring."
+        },
+        {
+          "value": "94%",
+          "title": "Interview Experience",
+          "desc": "94% of candidates evaluate their interview experience as \"outstanding\"."
+        },
+        {
+          "value": "200+",
+          "title": "Development",
+          "desc": "In the last 3 months, nearly 200 consultants have developed themselves in 27 different categories."
+        }
+      ]
+    },
+    "discoverCta": "Discover Insights",
+    "team": {
+      "heading": "We Believe in Team Quality at BGTS",
+      "desc": "With our staff consisting of expert engineers, we bring talents working in different cities together around a common vision. We know very well that our strong team structure forms the basis of high customer satisfaction.",
+      "totalEmployees": "Total Employees",
+      "engineers": "Engineers",
+      "dynamicTeam": "Young and Dynamic Staff",
+      "dynamicTeamDesc": "<span className=\"font-bold text-slate-900\">1081</span> employees between ages 25-34",
+      "equality": {
+        "title": "Equal Opportunity",
+        "general": "General Distribution",
+        "female": "Female",
+        "male": "Male",
+        "managers": "Manager Distribution",
+        "femaleManager": "Female Manager",
+        "maleManager": "Male Manager"
+      },
+      "geo": {
+        "title": "Geographical Distribution",
+        "outOfIstanbul": "Employees Outside Istanbul",
+        "outOfIstanbulDesc": "68 Different Provinces (Remote)",
+        "abroad": "Employees Abroad",
+        "abroadDesc": "4 Different Points in the World",
+        "projectDesc": "We have completed <span className=\"font-bold text-slate-900\">1000+ IT projects</span> with a focus on People and Technology."
+      }
+    }
+  },
+  "careers_culture": {
+    "hero": {
+      "title": "Our Work Culture",
+      "subtitle": "Open communication, teamwork, and the excitement of creating form the DNA of our culture. We support everyone to work in the environment where they are most productive with hybrid and flexible working models."
+    },
+    "cta": "Join Us",
+    "mosaic": {
+      "title": "We Produce Together, <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600\">We Move Forward Together</span>"
+    },
+    "section1": {
+      "title": "Open Communication and <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600\">Supportive Environment</span>",
+      "desc": "Our culture is built on a sincere, creative, and supportive atmosphere. We create a work environment where ideas are shared freely and contributions are valued.",
+      "points": [
+        {
+          "title": "Transparent Communication",
+          "desc": "Fast, direct, and accessible communication at all levels."
+        },
+        {
+          "title": "Sincere Atmosphere",
+          "desc": "An environment that encourages creativity, where everyone's opinions are valued."
+        }
+      ]
+    },
+    "section2": {
+      "title": "Flexible Working and <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600\">Agile Structure</span>",
+      "desc": "Our teams are organized in Agile structures. In this way, we progress quickly in projects, collaborate more, and easily adapt to changing needs.",
+      "points": [
+        {
+          "title": "Agile Methodology",
+          "desc": "Fast adaptation and continuous development cycle."
+        },
+        {
+          "title": "Remote Access",
+          "desc": "Freedom to work with a strong digital infrastructure."
+        }
+      ]
+    },
+    "section3": {
+      "title": "Communities and <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-pink-600\">Investment in People</span>",
+      "desc": "We support both personal and social development of our employees through various communities, social events, and volunteering projects, reinforcing team loyalty.",
+      "activities": [
+        "Coffee Corner",
+        "Game Break",
+        "Life in the Office",
+        "Team Events"
+      ],
+      "training": {
+        "title": "Continuous Development",
+        "desc": "The most valuable investment for us is people. We stand by our employees with development programs, mentoring, and social projects."
+      }
+    }
+  },
+  "careers_paths": {
+    "hero": {
+      "title": "Shape <br/> Your Career",
+      "subtitle": "Every employee's career journey is unique. We offer flexible and sustainable career paths where you can develop at your own pace and reveal your potential."
+    },
+    "cta": "Open Positions",
+    "section1": {
+      "title": "Technical and Managerial <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600\">Career Paths</span>",
+      "desc": "We offer our employees technical career paths to deepen their expertise, and managerial career paths to focus on team and organizational management.",
+      "points": [
+        "Expertise-oriented vertical development",
+        "Leadership and management-oriented horizontal development",
+        "Flexible planning suitable for individual goals"
+      ]
+    },
+    "section2": {
+      "title": "Transparent <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600\">Performance System</span>",
+      "desc": "We base performance management on openness and fairness. Thanks to clear goals, regular feedback, and measurable criteria, our employees can clearly see their development areas.",
+      "targetsTitle": "Clear Goals",
+      "targetsDesc": "Measurable and achievable OKR approach.",
+      "feedbackTitle": "Feedback",
+      "feedbackDesc": "Regular 1:1 meetings and mentoring."
+    },
+    "section3": {
+      "title": "Project Transitions & <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600\">Rotations</span>",
+      "desc": "We support our employees to expand their areas of experience by offering the opportunity to take part in different teams and projects.",
+      "boxTitle": "Holistic Perspective",
+      "boxDesc": "Project transitions accelerate competency development while bringing new perspectives and providing a broader vision across the organization."
+    },
+    "section4": {
+      "title": "Promotion and <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600\">Development Opportunities</span>",
+      "desc": "With our promotion approach focused on competence, performance, and potential, we offer a transparent progression system where our employees can be rewarded for their efforts.",
+      "competence": "Competence",
+      "performance": "Performance",
+      "potential": "Potential"
+    }
+  },
+  "resources_success_stories": {
+    "hero": {
+      "title": "Organizations Transformed<br /> <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-corporate-secondary to-blue-500\">By Technology</span>",
+      "subtitle": "Digital transformation projects that are <strong className=\"text-slate-800 font-bold\">proven with tech stacks</strong>, implemented with leading brands in finance, defense, and telecommunications."
+    },
+    "grid": {
+      "title": "All Projects",
+      "subtitle": "projects — each documented with requirement, solution, and tech stack",
+      "legend": {
+        "software": "Software",
+        "infrastructure": "Infrastructure",
+        "managed": "Managed Service",
+        "education": "Education"
+      }
+    }
+  },
+  "products_page": {
+    "hero": {
+      "title": "Smart Platforms that <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300\">Transform Your Organization</span>",
+      "subtitle": "8 artificial intelligence platforms that increase efficiency, reduce costs, and provide competitive advantage — from recruitment to corporate automation, from document management to information assistants."
+    },
+    "cta": "Explore",
+    "categories": {
+      "recruitment": {
+        "label": "01 — Recruitment Technologies",
+        "heading": "Transform",
+        "accent": "Recruitment Processes"
+      },
+      "enterprise": {
+        "label": "02 — Enterprise Solutions",
+        "heading": "Automate",
+        "accent": "Corporate Operations"
+      },
+      "document": {
+        "label": "03 — Document & Information Management",
+        "heading": "Turn Information into a",
+        "accent": "Smart Assistant"
+      }
+    },
+    "items": {
+      "ai-hiring-assistant": {
+        "name": "AI HIRING ASSISTANT",
+        "description": "Accelerate recruitment processes with artificial intelligence.",
+        "detail": {
+          "hero": {
+            "title": "The AI Revolution",
+            "titleAccent": "in Recruitment",
+            "subtitle": "Speed up your hiring processes, maximize candidate-job fit, and discover the right talent in seconds with video interview analysis using AI Hiring Assistant.",
+            "cta": "Talk to Our Expert"
+          },
+          "features": {
+            "heading": "Manage Your Recruitment Process End-to-End",
+            "subheading": "Powerful features that automate manual processes and enable data-driven decisions.",
+            "items": [
+              { "title": "Automatic Job Posting Creation", "desc": "Just enter the position name or upload a file. Let AI prepare the requirements and job description for you in seconds." },
+              { "title": "Smart Candidate Matching", "desc": "Automatically list the most suitable candidates for your postings and the most suitable postings for your candidates. Find the best with the scoring system." },
+              { "title": "AI Chatbot Assistant", "desc": "Ask questions about candidate profiles. Get instant answers to questions like 'What technologies is this candidate strong in?' or 'Does this candidate have leadership qualities?'" },
+              { "title": "CV Analysis & Scoring", "desc": "Analyze uploaded CVs according to criteria such as technical competence, experience, and language. Get an objective and numerical evaluation report." },
+              { "title": "Video Interview Analysis", "desc": "No more watching interview recordings. AI transcribes conversations, parses questions, and analyzes the candidate's answers." },
+              { "title": "Question Pool Generation", "desc": "Generate interview questions specific to the position and candidate. Improve your interview quality with technical and competency-based questions." }
+            ]
+          },
+          "deepDive": {
+            "heading": "Job Posting Has Never Been This Easy",
+            "body": "Forget the time wasted in traditional job posting processes. AI Hiring Assistant creates professional, detailed, and SEO-compliant job postings from short notes or files you upload.",
+            "bullets": [
+              "Automatic competency and requirements listing",
+              "Instant matching suggestions from the candidate pool",
+              "Global postings with multi-language support"
+            ]
+          }
+        }
+      },
+      "cv-converter": {
+        "name": "CV-CONVERTER",
+        "description": "Standardize disorganized CV formats.",
+        "detail": {
+          "hero": {
+            "title": "All CVs",
+            "titleAccent": "In a Single Format",
+            "subtitle": "Automatically convert CVs from different sources to your organization's standard format. Eliminate disorganization and keep your candidate database tidy.",
+            "cta": "Talk to Our Expert"
+          },
+          "problem": {
+            "heading": "Stop Wasting Time on Complex CV Formats",
+            "body": "CVs arriving in Word, PDF, Canva, or PowerPoint formats disrupt data integrity in HR processes and make comparisons difficult.",
+            "problemLabel": "Non-Standard Data",
+            "problemDesc": "Each candidate's resume is in a different layout — hard to find what you're looking for.",
+            "solutionLabel": "CV-Converter Solution",
+            "solutionDesc": "Converts all formats to a single structure, allowing you to fill in missing information.",
+            "pdfLabel": "PDF Format",
+            "wordLabel": "Word Document",
+            "outputLabel": "Standard Corporate CV"
+          },
+          "features": {
+            "heading": "Key Features",
+            "subheading": "Tools that simplify your CV conversion and management processes.",
+            "items": [
+              { "title": "Bulk Processing & Tracking", "desc": "Upload hundreds of CVs to the system at once. Track upload status, success and error rates from a single screen in real time." },
+              { "title": "Smart Conversion", "desc": "Advanced parsing algorithms successfully analyze even complex CV designs and fit them into the standard template." },
+              { "title": "Data Editing", "desc": "Make manual corrections on automatically converted CVs and easily add missing certification or project information." }
+            ]
+          },
+          "cta": {
+            "heading": "Start Organizing Your CV Pool",
+            "body": "End data chaos with CV-Converter, and add speed and order to your HR operations.",
+            "button": "Apply Now"
+          }
+        }
+      },
+      "cortex": {
+        "name": "CORTEX",
+        "description": "Automate software lifecycle with AI agents.",
+        "detail": {
+          "hero": {
+            "title": "BGTS",
+            "titleAccent": "Cortex",
+            "subtitle": "An enterprise platform that automates the software development lifecycle with AI-powered agents. Code review, test writing, bug fixing, and documentation analysis are now on autopilot.",
+            "cta": "Talk to Our Expert",
+            "visualTitle": "AI-Driven SDLC",
+            "visualDesc": "Speed up your development processes by up to 40% with the Cortex platform."
+          },
+          "features": {
+            "heading": "Overcome Bottlenecks in Traditional Processes",
+            "subheading": "Lighten the load on your software teams and reduce the margin of error to zero with Cortex.",
+            "items": [
+              { "title": "REVIEWER Agent", "badge": "Review", "desc": "Performs automatic PR reviews, analyzes code quality and security vulnerabilities.", "problem": "Manual code review bottlenecks" },
+              { "title": "DEVELOPER Agent", "badge": "Development", "desc": "Produces standard-quality bug fixes and creates automatic PRs (P2-P4 only).", "problem": "Inconsistent and time-consuming bug fixes" },
+              { "title": "GAP_ANALYZER", "badge": "Analysis", "desc": "Detects and reports inconsistencies between documentation and actual code.", "problem": "Documentation and code inconsistencies" },
+              { "title": "TESTER Agent", "badge": "Testing", "desc": "Writes automatic unit tests for given source code and improves code quality.", "problem": "Missing test coverage and manual test writing" },
+              { "title": "REQUIREMENTS", "badge": "Planning", "desc": "Automatically structures PBIs and test scenarios from Confluence.", "problem": "Time-consuming manual requirements extraction process" },
+              { "title": "Human in the Loop", "badge": "Control", "desc": "Always requires human approval for critical operations and merge decisions.", "problem": "Uncontrolled full automation carrying risk" }
+            ],
+            "problemLabel": "Problem Solved"
+          },
+          "agents": {
+            "heading": "Meet Your AI Team",
+            "whatLabel": "What It Does:",
+            "outputLabel": "Output:",
+            "ruleLabel": "Rule:",
+            "items": [
+              { "title": "REVIEWER — Code Reviewer", "desc": "Automatically triggered when a PR is opened in Bitbucket. Analyzes code quality.", "output": "Leaves a comment (report) on the PR.", "rule": "Cannot merge." },
+              { "title": "TESTER — Test Writer", "desc": "Writes automatic unit tests for given source code.", "output": "Test files + Creates PR.", "rule": "Requires human approval before commit." },
+              { "title": "DEVELOPER — Developer", "desc": "Automatically fixes bugs with P2-P4 priority in Jira.", "output": "Bug fix code + PR.", "rule": "PR approval is mandatory. Cannot write new features, cannot touch P1." },
+              { "title": "PLANNER — Planner", "desc": "Breaks complex tasks into subtasks, creates implementation plan.", "output": "Structured plan document.", "rule": "Works as the first step in the E2E pipeline." },
+              { "title": "INDEXER — Indexer", "desc": "Indexes source code, Jira tasks, and Confluence into Qdrant.", "output": "Searchable vector data.", "rule": "Forms the basis for other agents to search." },
+              { "title": "GAP_ANALYZER — Gap Analyzer", "desc": "Finds inconsistencies between documentation and actual code.", "output": "Inconsistency detail report.", "rule": "INDEXER must have run first." },
+              { "title": "MFE_DEVELOPER — Frontend Developer", "desc": "Automatically generates React components and Storybook stories.", "output": "React component + Storybook + PR.", "rule": "Human approval is mandatory." },
+              { "title": "REQUIREMENTS_ANALYST — Requirements Analyst", "desc": "Automatically extracts PBIs and test cases from Confluence pages.", "output": "Requirements list and test scenarios.", "rule": "Converts manual documents to structured format." }
+            ]
+          },
+          "security": {
+            "heading": "Strict Security Rules",
+            "subheading": "While Cortex simplifies your operations, it always keeps system security and human control at the center.",
+            "visualTitle": "Human-in-the-Loop Architecture",
+            "visualDesc": "Human approval is mandatory at all critical decision points.",
+            "items": [
+              { "title": "P1 Bugs Blocked", "desc": "Only humans can solve them; the agent can never touch critical P1 errors." },
+              { "title": "New Feature Development Blocked", "desc": "The agent can only fix bugs in existing code; it cannot write features from scratch." },
+              { "title": "Cannot Merge", "desc": "The agent only opens a Pull Request; the merge decision belongs entirely to humans." },
+              { "title": "Cost Tracking", "desc": "Token usage and cost are meticulously logged for every agent execution." }
+            ]
+          }
+        }
+      },
+      "hcm": {
+        "name": "HCM PLATFORM",
+        "description": "Our HCM platform that digitalizes your HR operations end-to-end.",
+        "detail": {
+          "hero": {
+            "subtitle": "Digitalize your HR processes end-to-end with 16 integrated modules. From recruitment to payroll management, performance to training planning — one platform.",
+            "ctaText": "Talk to Our Expert"
+          },
+          "overview": {
+            "heading": "Human Capital Management System",
+            "p1": "HRThema HCM is an end-to-end HCM solution with a single security model and a similar, integrated user experience across all its modules.",
+            "p2": "By consolidating all HR operations from recruitment to payroll, performance management to training planning in a single platform, it enables you to manage your organization's human capital as a strategic asset.",
+            "p3": "The platform brings a strategic and planned approach to managing your workforce, the most valuable asset of your organization, and is designed to understand and address your workforce from a financial and managerial perspective.",
+            "badge1": "Single Security Model",
+            "badge2": "Mobile Compatible"
+          },
+          "highlights": [
+            { "label": "End-to-End Solution", "desc": "All HR processes from hiring to exit in one platform." },
+            { "label": "Single Security Model", "desc": "Centralized authorization and data security infrastructure." },
+            { "label": "Integrated Experience", "desc": "Consistent and modern user interface across all modules." },
+            { "label": "Mobile Access", "desc": "HR portal accessible from anywhere with React Native." }
+          ],
+          "differentiators": {
+            "heading": "Why HR Thema HCM?",
+            "subtitle": "Three fundamental advantages accelerating your organization's HR transformation.",
+            "items": [
+              { "title": "16 Integrated Modules", "desc": "Consolidate all HR operations from recruitment to payroll, performance management to training planning in a single platform.", "stat": "16", "statLabel": "Modules" },
+              { "title": "360° HR Management", "desc": "Comprehensively manage every stage of the employee lifecycle. Make data-driven decisions.", "stat": "360°", "statLabel": "Coverage" },
+              { "title": "Modern Technology", "desc": "Powerful infrastructure built with ASP.NET Core, React Native, Redis, Kubernetes and more.", "stat": "16+", "statLabel": "Technologies" }
+            ]
+          },
+          "video": {
+            "heading": "Human Capital Management (HCM)",
+            "body": "Discover the comprehensive HR management experience our platform offers with our introduction video. See how 16 integrated modules work together.",
+            "bullets": [
+              "Complete process management from hiring to exit",
+              "All HR operations from a single dashboard",
+              "Employee self-service access via mobile app"
+            ]
+          },
+          "modules": [
+            {
+              "id": "temel-ik", "title": "Core HR & Organization",
+              "description": "Integrated management of organizational structure, personnel management, recruitment, and payroll processes.",
+              "modules": [
+                { "title": "Core HR and Organization", "desc": "Central management of organizational structure, employee cards, and personal records." },
+                { "title": "Recruitment and Onboarding", "desc": "Candidate tracking, interview processes, and onboarding workflows." },
+                { "title": "Payroll and Incentives", "desc": "Legally compliant payroll calculation, SSI, and incentive reporting." },
+                { "title": "Compensation & Benefits", "desc": "Salary structure, promotion/raise simulation, and compensation management." }
+              ]
+            },
+            {
+              "id": "yetenek-performans", "title": "Talent & Performance",
+              "description": "Discover employee potential, measure performance, and plan your strategic workforce.",
+              "modules": [
+                { "title": "Talent Management", "desc": "Identifying employee potential, succession plans, and career maps." },
+                { "title": "Performance", "desc": "Goal-based evaluation, 360° feedback, and OKR management." },
+                { "title": "Workforce Analytics & Planning", "desc": "Strategic workforce planning, trend analysis, and dashboard." },
+                { "title": "Assessment and Survey", "desc": "Employee satisfaction, engagement, and climate surveys." }
+              ]
+            },
+            {
+              "id": "egitim-iletisim", "title": "Training & Communication",
+              "description": "Build a culture of continuous learning, and validate competencies with exams and certificates.",
+              "modules": [
+                { "title": "Training and Development Plan", "desc": "Training catalog, classroom management, e-learning integration." },
+                { "title": "Exam", "desc": "Competence and knowledge assessment exams, automatic scoring." },
+                { "title": "Online Meeting", "desc": "WebRTC-based video meetings and integrated calendar." },
+                { "title": "HR Portal", "desc": "Self-service employee portal, leave requests, and notifications." }
+              ]
+            },
+            {
+              "id": "operasyonal", "title": "Operational Processes",
+              "description": "Automate your daily HR operations — expense, time, document, and request management.",
+              "modules": [
+                { "title": "Expense Management", "desc": "Expense entry, approval processes, and accounting integration." },
+                { "title": "Time and Attendance", "desc": "Overtime tracking, shift planning, and absence management." },
+                { "title": "Document Management", "desc": "Central document archive, version control, and digital signature." },
+                { "title": "Issue and Request Management", "desc": "Employee request/complaint system, SLA tracking, and reporting." }
+              ]
+            }
+          ],
+          "techStack": {
+            "heading": "Powerful Technology Infrastructure",
+            "subtitle": "Behind HR Thema HCM lies a scalable and secure architecture built with the latest technologies."
+          }
+        }
+      },
+      "praxila": {
+        "name": "PRAXILA",
+        "description": "Our next-generation automation and operations management platform.",
+        "detail": {
+          "hero": {
+            "title": "Praxila: Integrated IT Service & Operations Management",
+            "subtitle": "A next-generation AI-powered operations management solution that unifies your ITSM, PPM, and ITOM processes in a single platform.",
+            "ctaText": "Talk to Our Expert"
+          },
+          "overview": {
+            "heading": "Strong Foundation, Smart Operations",
+            "p1": "Praxila is designed with an Enterprise Service Management vision; built on a flexible, scalable, and AI-powered strong Foundation.",
+            "p2": "Manage your IT operations end-to-end with ITSM, PPM, and ITOM modules. Experience proactive operations management with advanced automation, discovery, and analytical capabilities.",
+            "badges": ["ITIL Compliant", "AI-Powered", "Multi-Tenant"],
+            "stats": [
+              { "stat": "3", "label": "Main Modules" },
+              { "stat": "17+", "label": "Sub-Processes" },
+              { "stat": "AI", "label": "Powered" }
+            ]
+          },
+          "foundation": {
+            "heading": "Foundation Core",
+            "subtitle": "Powerful infrastructure components on which all modules are built.",
+            "items": [
+              { "name": "CMDB", "desc": "Central management of configuration and asset relationships." },
+              { "name": "Service Catalog", "desc": "Service catalog and self-service request portal." },
+              { "name": "Service Portal", "desc": "User-friendly self-service access point." },
+              { "name": "Knowledge", "desc": "Knowledge base and solution library management." },
+              { "name": "SLM", "desc": "Service level agreements and SLA tracking." },
+              { "name": "Notification", "desc": "Multi-channel notification and escalation management." },
+              { "name": "Multi Tenancy", "desc": "Isolated environment support with multi-tenant architecture." },
+              { "name": "Resource Plan", "desc": "Resource planning and capacity management." },
+              { "name": "TimeSheet", "desc": "Time tracking and workforce reporting." },
+              { "name": "Task Management", "desc": "Task assignment, tracking, and completion management." },
+              { "name": "Workflow", "desc": "Process automation with a flexible workflow engine." }
+            ]
+          },
+          "advanced": {
+            "heading": "Advanced Capabilities",
+            "subtitle": "Advanced features supported by artificial intelligence and automation.",
+            "items": [
+              { "name": "KanBan Board", "desc": "Visual task management and sprint tracking.", "isAI": false },
+              { "name": "Business Intelligence", "desc": "Advanced reporting and data analytics.", "isAI": false },
+              { "name": "Chat Bot", "desc": "AI-powered self-service support bot.", "isAI": false },
+              { "name": "Remote Desktop", "desc": "Remote desktop access and support.", "isAI": false },
+              { "name": "Employee Monitoring", "desc": "Employee activity monitoring and reporting.", "isAI": false },
+              { "name": "Machine Learning", "desc": "Predictive analysis and anomaly detection.", "isAI": true },
+              { "name": "Conversational AI", "desc": "Natural language processing-based interaction.", "isAI": true }
+            ]
+          },
+          "modules": [
+            {
+              "id": "itsm", "title": "ITSM", "subtitle": "IT Service Management",
+              "description": "End-to-end IT Service Management under the Enterprise Service Management umbrella.",
+              "modules": [
+                { "title": "Service Desk", "desc": "Meeting and routing all requests from a single point." },
+                { "title": "Incident", "desc": "Quick resolution and management of service outages." },
+                { "title": "Request Fulfillment", "desc": "Meeting user requests through workflows." },
+                { "title": "Problem", "desc": "Preventing recurring issues through root cause analysis." },
+                { "title": "Change", "desc": "Managing changes with risk analysis and approval processes." },
+                { "title": "Release", "desc": "Planning release and deployment processes." },
+                { "title": "Asset & Capacity", "desc": "Asset management and capacity planning processes." }
+              ]
+            },
+            {
+              "id": "ppm", "title": "PPM", "subtitle": "Project Portfolio Management",
+              "description": "Integrated management of demand, project, and portfolio processes.",
+              "modules": [
+                { "title": "Demand", "desc": "Collecting, evaluating, and prioritizing demands." },
+                { "title": "Project", "desc": "Planning and executing approved demands as projects." },
+                { "title": "Portfolio", "desc": "Portfolio-based management of projects according to strategic goals." },
+                { "title": "Finance & Budget", "desc": "Tracking project budgets and financial resources." },
+                { "title": "SDLC (Scrum)", "desc": "Software development lifecycle and agile project management." }
+              ]
+            },
+            {
+              "id": "itom", "title": "ITOM", "subtitle": "IT Operations Management",
+              "description": "Empowering IT Operations with automation and discovery capabilities.",
+              "modules": [
+                { "title": "Orchestration", "desc": "Automation of operational processes and workflow management." },
+                { "title": "Client Discovery", "desc": "Discovering end-user devices on the network." },
+                { "title": "Infrastructure Discovery", "desc": "Automatic discovery of server and network infrastructure." },
+                { "title": "Service Mapping", "desc": "Mapping business services and infrastructure relationships." },
+                { "title": "Event Management", "desc": "Monitoring, correlation, and management of events." }
+              ]
+            }
+          ]
+        }
+      },
+      "meetsense": {
+        "name": "MEETSENSE",
+        "description": "Record and analyze meetings with AI, and turn them into corporate memory.",
+        "detail": {
+          "hero": {
+            "tagline": "Transform Your Meetings with the Power of AI.",
+            "subtitle": "Turn your meetings into permanent corporate memory with smart assistant, live transcripts, automatic Jira integration, and organizational insights.",
+            "cta": "Talk to Our Expert"
+          },
+          "overview": {
+            "heading": "What is MeetSense?",
+            "subtitle": "Automatically joins corporate team meetings, takes high-quality audio recordings, creates AI transcripts, and maximizes value with analyses.",
+            "capabilities": [
+              { "name": "Calendar Integration", "desc": "Reads your calendar and automatically joins your scheduled meetings." },
+              { "name": "High-Quality Recording", "desc": "Automatically backs up everything spoken with audio recording." },
+              { "name": "AI Transcript", "desc": "Uses Speaker Diarization to clearly identify who said what and transcribes it." },
+              { "name": "In-Depth Analysis", "desc": "Detects decisions and action items with advanced AI-powered analytics." }
+            ]
+          },
+          "process": {
+            "heading": "Meeting Lifecycle",
+            "subtitle": "Every step from start to completion is automatically managed.",
+            "steps": [
+              { "num": "01", "title": "Scheduled", "desc": "Meetings are detected automatically or manually through calendar integration." },
+              { "num": "02", "title": "Bot Joining", "desc": "Our virtual assistant joins the meeting with a rule-based or manual trigger." },
+              { "num": "03", "title": "Recording", "desc": "High-quality audio and data recording becomes active." },
+              { "num": "04", "title": "Processing", "desc": "Audio data is transcribed by AI and processed for meaningful analyses." },
+              { "num": "05", "title": "Completed", "desc": "Rich reports, action items, and integration outputs are presented." }
+            ]
+          },
+          "features": {
+            "heading": "Discover the Power of the Platform",
+            "subtitle": "Smart features powered by AI that go beyond just recording.",
+            "items": [
+              { "id": "ai-transcript", "title": "AI Transcript and Analysis Details", "description": "Advanced analyses that place each conversation in its context, beyond classic text transcription.", "items": [ { "title": "Speaker-Based Distinction", "desc": "Clearly identifies owner of each statement with Speaker Diarization." }, { "title": "Segment-Based Listening", "desc": "Click on the transcript to jump to that moment's audio instantly." } ] },
+              { "id": "chat-bot", "title": "MeetSense Chatbot", "description": "Talk to your data in natural language. Query history or current meetings in real time.", "items": [ { "title": "Instant Analysis", "desc": "Get an instant summary even during an ongoing meeting." }, { "title": "History Search", "desc": "Search meeting series belonging to a specific project or team." } ] },
+              { "id": "dashboard", "title": "Organizational Insights", "description": "The big picture of all your meetings. Evaluate team productivity from a bird's eye view.", "items": [ { "title": "Weekly & Monthly Summaries", "desc": "Single glance at meeting, decision, and action statistics." }, { "title": "Trend Analysis", "desc": "Identify the most discussed topics and risks." } ] },
+              { "id": "integrations", "title": "Task Tracking & Integrations", "description": "Decisions made by AI automatically flow into work platforms like Jira and Trello.", "items": [ { "title": "Jira Integration", "desc": "Convert technical decisions into automatic Jira tasks." }, { "title": "AI Assignment Algorithm", "desc": "Extracts the task from the transcript and links it to the right person." } ] }
+            ]
+          },
+          "values": {
+            "heading": "Don't Just Talk,",
+            "headingAccent": "Take Action",
+            "subtitle": "MeetSense doesn't just give you recording tools; it takes action, identifies risks, and turns your meetings into organizational value.",
+            "cta": "I Want to Learn More",
+            "items": [
+              { "title": "Time Savings", "desc": "Note-taking and report writing time is eliminated.", "num": "01" },
+              { "title": "Secure Content", "desc": "Sensitive content only reaches authorized people.", "num": "02" },
+              { "title": "Action Tracking", "desc": "Every decision is recorded, assigned a responsible, and tracked.", "num": "03" },
+              { "title": "Deep Analysis", "desc": "Risks and open items are automatically detected.", "num": "04" },
+              { "title": "Natural Language Query", "desc": "Ask questions instead of reading, get instant answers.", "num": "05" },
+              { "title": "Trend & Pattern", "desc": "Capture trends from multi-meeting data.", "num": "06" }
+            ]
+          }
+        }
+      },
+      "doc2bot": {
+        "name": "DOC2BOT",
+        "description": "Turn your internal knowledge base into a smart assistant.",
+        "detail": {
+          "hero": {
+            "title": "Your Knowledge Base",
+            "titleAccent": "Is Talking",
+            "subtitle": "Accessing information in Confluence and your documents has never been this easy. Doc2Bot instantly answers your employees' questions 24/7.",
+            "cta": "Talk to Our Expert",
+            "chatQ1": "What was the meal card limit this month?",
+            "chatA1": "As of 2024, the daily meal allowance exemption has been set at <strong>170 TL + VAT</strong>. (Source: HR Policies v2.4)",
+            "chatQ2": "How do I set up VPN?",
+            "chatA2": "You need to download the GlobalProtect client to set up VPN."
+          },
+          "features": {
+            "whyLabel": "Why Doc2Bot?",
+            "heading": "The Knowledge Bridge Between Your Teams",
+            "body": "Stop wasting time on repetitive questions within the organization. Doc2Bot turns your documentation into a living knowledge source.",
+            "learnMore": "Learn More",
+            "items": [
+              { "title": "Confluence Integration", "desc": "Connect your existing Confluence spaces directly. Your bot is ready without any extra data entry." },
+              { "title": "Accurate and Reliable", "desc": "Doc2Bot doesn't hallucinate. It presents only the information available in your documents with references." },
+              { "title": "Multi-Language Support", "desc": "Even if your documents are in English, your employees can ask in Turkish. Doc2Bot answers with cross-language translation." },
+              { "title": "Slack & Teams", "desc": "Integrates with communication channels your employees already use (Slack, MS Teams)." }
+            ]
+          }
+        }
+      },
+      "docmind": {
+        "name": "DOCMIND",
+        "description": "Generate automatic technical documentation from your codebase.",
+        "detail": {
+          "hero": {
+            "title": "You Write the Code,",
+            "titleAccent": "Leave the Documentation",
+            "titleSuffix": "to Us",
+            "subtitle": "DocMind analyzes your source code, understands its structure, and generates technical documentation that always stays up to date. End the 'docs are out of date' problem.",
+            "cta": "Talk to Our Expert"
+          },
+          "process": {
+            "step1Title": "1. Repo Connection",
+            "step1Desc": "Connect your Bitbucket or Git repository to the system.",
+            "step2Title": "2. AI Analysis",
+            "step2Desc": "Integrated LLM models scan and understand your code structure.",
+            "step3Title": "3. Live Document",
+            "step3Desc": "Your Confluence or PDF outputs are ready and up to date."
+          },
+          "features": {
+            "heading": "The Greatest Helper for Developers' Least Favorite Task",
+            "body": "Writing code is fun but documentation is boring. With DocMind, your technical debt decreases and onboarding times shorten.",
+            "items": [
+              { "title": "Flexible Scope", "desc": "Whether a high-level architectural summary or a function-level detailed API document. Adjust according to your needs." },
+              { "title": "Customizable Headings", "desc": "Choose the headings you want such as 'About / Overview', 'Architecture & System Design', 'API Reference' and you determine the document structure." },
+              { "title": "Language Support", "desc": "Choose the language of your documents (TR/EN). Get English output for global teams, Turkish for local teams." }
+            ]
+          },
+          "cta": {
+            "heading": "Technical Documentation is No Longer a Burden",
+            "body": "With DocMind, as your code evolves, so does your documentation."
+          }
+        }
+      }
+    }
+  },
+  "partnerships_page": {
+    "hero": {
+      "title": "Maximize the Benefit from <br/> <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400\">Your Technology Investments</span>",
+      "subtitle": "BGTS increases efficiency, strengthens collaboration, and accelerates digital transformation with corporate platform solutions. We provide solutions in different areas from Microsoft's powerful infrastructure to AWS's scalable cloud solutions, from ServiceNow's operational efficiency-providing automations to the flexibility and agility offered by Atlassian, Xurrent, and Mendix platforms."
+    },
+    "items": {
+      "qlik": {
+        "name": "Qlik",
+        "description": "As a Qlik Authorized Partner, BGTS designs, deploys, manages, and scales Qlik platforms that support enterprise-managed analytics and reliable data integration."
+      },
+      "microsoft": {
+        "name": "Microsoft",
+        "description": "Make your teams more efficient, streamline your workflows, and modernize your IT infrastructure with Microsoft technologies. As a trusted Microsoft partner, we offer end-to-end solutions from cloud services to cybersecurity with our expert consultants."
+      },
+      "aws": {
+        "name": "AWS",
+        "description": "Take full advantage of the potential of cloud computing with BGTS's AWS expertise. We provide scalable, secure, and cost-effective cloud solutions tailored to your business needs."
+      },
+      "servicenow": {
+        "name": "ServiceNow",
+        "description": "Modernize enterprise workflows and increase operational efficiency with ServiceNow. BGTS offers customized ServiceNow solutions to enhance IT service management, business process automation, and security operations."
+      },
+      "atlassian": {
+        "name": "Atlassian",
+        "description": "Increase team collaboration, organize workflows, and achieve agile transformation with Atlassian tools. BGTS supports organizations in implementing, customizing, and optimizing Atlassian tools such as Jira, Confluence, Trello, and Bitbucket in the best way possible."
+      },
+      "temenos": {
+        "name": "Temenos",
+        "description": "As BGTS, we support the modernization and scaling of financial institutions in collaboration with Temenos, the world's leading core banking platform. Our certified experts provide end-to-end services from installation and integration to long-term support, ensuring you benefit from the full potential of Temenos."
+      },
+      "xurrent": {
+        "name": "Xurrent",
+        "description": "Reshape enterprise service management (ESM) with Xurrent. BGTS seamlessly integrates various Xurrent solutions for organizations, from IT operations to customer service automation and workflows."
+      },
+      "mendix": {
+        "name": "Mendix",
+        "description": "Accelerate digital innovation with Mendix's low-code platform. We offer fast and scalable solutions by developing many custom applications, from AI-powered Chatbots to customer portals."
+      }
+    }
+  },
+  "hr_page": {
+    "hero": {
+      "title": "We Value Your Talents",
+      "subtitle": "Be part of a passionate, innovative, and constantly learning team. Shape your career with us."
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The core principles that make us who we are, guiding our way of working and our decisions.",
+      "innovation": {
+        "title": "Passion for Innovation",
+        "description": "The desire for continuous improvement and exploring new technologies is in our DNA. We try without being afraid of making mistakes."
+      },
+      "success": {
+        "title": "Success Together",
+        "description": "We believe in teamwork. We support each other, share knowledge, and celebrate success together."
+      },
+      "human": {
+        "title": "Human Centricity",
+        "description": "The happiness and development of our employees are our priority. We offer a fair, inclusive, and respectful environment."
+      }
+    },
+    "life": {
+      "title": "Life at BGTS",
+      "subtitle": "We don't just work; we produce, have fun, and grow together. Here are snapshots from our office and team.",
+      "caption1": "Culture of Co-production",
+      "caption2": "Global Engineering Team",
+      "caption3": "Snapshots from Our Office",
+      "location": "Maslak, Istanbul — Technology Hub"
+    },
+    "why": {
+      "title": "Why BGTS?",
+      "items": [
+        {
+          "title": "Continuous Education",
+          "desc": "Udemy, Pluralsight memberships, and certification supports."
+        },
+        {
+          "title": "Flexible Benefits",
+          "desc": "Private health insurance, meal card, and sports support."
+        },
+        {
+          "title": "Happy Office",
+          "desc": "Ergonomic working environment, PlayStation corner, and happy hours."
+        },
+        {
+          "title": "Career Development",
+          "desc": "Clear career path and regular performance feedback."
+        }
+      ]
+    },
+    "young_teaser": {
+      "title": "Are You Ready to Code the Future?",
+      "subtitle": "It's not just an ordinary internship or job start. Open the doors to real projects, modern technologies, and a world of unlimited growth.",
+      "cta": "Explore the Program"
+    },
+    "passion": {
+      "title": "Not Just a Job, <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600\">Passion.</span>",
+      "subtitle": "At BGTS, engineering is more than writing code. We learn together, have fun together, and build the future together.",
+      "path": {
+        "title": "Fast Career Path",
+        "desc": "Move forward with performance-oriented clear steps and regular feedback; don't stay in place, rise continuously."
+      },
+      "vision": {
+        "title": "Global Vision",
+        "desc": "Push your limits with international standard projects and worldwide technologies."
+      },
+      "talent_count": "+50 Young Talents",
+      "talent_wait": "They are waiting to meet you."
+    },
+    "testimonials": {
+      "title": "What Do Our Employees Say?",
+      "items": [
+        {
+          "quote": "Working at BGTS means constantly learning and developing. Here, your ideas are valued and taking initiative is supported.",
+          "author": "Ayşe Yılmaz",
+          "role": "Senior Software Engineer - 3 Years"
+        },
+        {
+          "quote": "There is a friendly and supportive working environment. It's a great place for both my professional and personal development.",
+          "author": "Mehmet Demir",
+          "role": "DevOps Engineer - 1.5 Years"
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Looking for Another Position?",
+      "subtitle": "You can follow our open positions on LinkedIn or contact us for a general application.",
+      "cta": "Follow Us on LinkedIn"
+    }
+  },
+  "meetsense_viewer": {
+    "title": "MeetSense AI Slides Viewer",
+    "slides_label": "Slide",
+    "other_images": "Other Images",
+    "main_image": "Main Image"
+  },
+  "careers_learning": {
+    "hero": {
+      "title": "Learning as a <br/> Way of Life",
+      "subtitle": "Investing in yourself is indispensable for both individual and corporate success. We make continuous learning part of our culture."
+    },
+    "cta": "Join Us",
+    "section1": {
+      "title": "Certification Support and <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600\">Online Training</span>",
+      "desc": "We actively support certification programs in Cloud, Agile, security, and software fields so that our employees can deepen their professional expertise.",
+      "certification": "Certification",
+      "certificationDesc": "Support for competence certification in international standards.",
+      "access": "Unlimited Access",
+      "accessDesc": "Free learning with full membership to global online education platforms."
+    },
+    "section2": {
+      "title": "We Train the <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-pink-600\">Leaders of the Future</span>",
+      "desc": "We offer structured leadership development programs and one-on-one mentoring processes to strengthen the competencies of our current and potential leaders.",
+      "strategic": "Strategic Thinking",
+      "strategicDesc": "Special modules that develop decision-making and team management skills.",
+      "mentorship": "One-on-One Mentoring",
+      "mentorshipDesc": "Coaching sessions conducted with experienced leaders."
+    },
+    "section3": {
+      "title": "Internal Technical Communities & <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600\">Sharing</span>",
+      "desc": "Knowledge increases as it is shared. We turn learning into a collective experience and strengthen bonds between teams with regular sessions where our employees transfer their experiences.",
+      "boxTitle": "Technical Depth",
+      "boxDesc": "Sharing technical knowledge increases corporate memory and supports the culture of joint problem solving."
+    }
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "services": "Services",
+    "industries": "Industries",
+    "products": "Products",
+    "contact": "Contact",
+    "about": "About Us",
+    "hr": "Careers",
+    "genc-muhendis-programi": "Young Engineers Program",
+    "software-development": "Software Development",
+    "managed-services": "Managed Services",
+    "devops": "DevOps",
+    "banking": "Banking & Finance",
+    "defense": "Defense Industry",
+    "retail-telecom": "Retail & Telecom",
+    "ai-hiring-assistant": "AI Hiring Assistant",
+    "cv-converter": "CV Converter",
+    "doc2bot": "Doc2Bot",
+    "docmind": "DocMind",
+    "consultancy": "Consultancy",
+    "talent": "Talent Management",
+    "career-paths": "Career Paths",
+    "culture": "Our Culture",
+    "learning": "Learning & Development",
+    "partnerships": "Partnerships",
+    "resources": "Resources",
+    "success-stories": "Success Stories",
+    "infographics": "Infographics",
+    "hcm": "HCM",
+    "meetsense": "MeetSense",
+    "praxila": "Praxila",
+    "cortex": "Cortex",
+    "social-contribution": "Social Contribution",
+    "retail": "Retail",
+    "telecommunications": "Telecommunications"
+  }
+}

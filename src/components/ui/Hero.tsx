@@ -8,6 +8,7 @@ import Image from "next/image"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
+import { usePathname } from "next/navigation"
 
 interface HeroProps {
     title: string
@@ -38,6 +39,11 @@ export default function Hero({
     backgroundImage,
     children
 }: HeroProps) {
+    const pathname = usePathname()
+    const isEn = pathname.startsWith('/en')
+    const contactLabel = isEn ? 'Contact Us' : 'İletişime Geçin'
+    const exploreLabel = isEn ? 'Explore' : 'Keşfedin'
+    const learnMoreLabel = isEn ? 'Learn More' : 'Daha Fazlası'
 
     if (layout === "split") {
         return (
@@ -76,14 +82,14 @@ export default function Hero({
                                         href={ctaLink}
                                         className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-corporate-secondary rounded-full hover:bg-corporate-dark hover:scale-105 shadow-xl shadow-corporate-secondary/20"
                                     >
-                                        {ctaText || "Keşfedin"}
+                                        {ctaText || exploreLabel}
                                         <ArrowRight className="w-5 h-5 ml-2" />
                                     </Link>
                                     <Link
                                         href="/contact"
                                         className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-corporate-dark transition-all bg-white border border-border rounded-full hover:bg-corporate-surface hover:border-corporate-accent shadow-sm"
                                     >
-                                        İletişime Geçin
+                                        {contactLabel}
                                     </Link>
                                 </div>
                             )}
@@ -208,7 +214,7 @@ export default function Hero({
                             href={ctaLink}
                             className="inline-flex items-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-corporate-secondary rounded-full hover:bg-corporate-dark hover:scale-105 shadow-xl shadow-corporate-secondary/20"
                         >
-                            {ctaText || "Daha Fazlası"}
+                            {ctaText || learnMoreLabel}
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                     </motion.div>

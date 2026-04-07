@@ -17,10 +17,13 @@ interface BreadcrumbProps {
   items: BreadcrumbItem[]
   className?: string
   showHome?: boolean
+  homeLabel?: string
 }
 
-export default function Breadcrumb({ items, className, showHome = true }: BreadcrumbProps) {
+export default function Breadcrumb({ items, className, showHome = true, homeLabel }: BreadcrumbProps) {
   const pathname = usePathname()
+  const lang = pathname.split('/')[1] || 'tr'
+  const resolvedHomeLabel = homeLabel || (lang === 'en' ? 'Home' : 'Ana Sayfa')
 
   // Generate structured data for SEO
   const structuredData = {
@@ -35,7 +38,7 @@ export default function Breadcrumb({ items, className, showHome = true }: Breadc
   }
 
   const allItems = showHome
-    ? [{ label: "Ana Sayfa", href: "/", icon: Home }, ...items]
+    ? [{ label: resolvedHomeLabel, href: "/", icon: Home }, ...items]
     : items
 
   return (

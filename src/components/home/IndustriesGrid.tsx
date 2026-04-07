@@ -2,14 +2,21 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, BarChart, Users, Globe, ShieldCheck } from "lucide-react"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
-import { HOME_CONTENT } from "@/content/home"
+import { getHomeContent } from "@/content/home"
 
-export function IndustriesGrid() {
-    const { heading, description, items } = HOME_CONTENT.industries;
+const ICON_MAP: Record<string, any> = {
+    BarChart,
+    Users,
+    Globe,
+    ShieldCheck
+}
+
+export function IndustriesGrid({ content, lang = "tr" }: { content?: any; lang?: string }) {
+    const { heading, description, items } = content || getHomeContent().industries;
 
     return (
         <Section background="default" className="relative pb-20">
@@ -26,12 +33,12 @@ export function IndustriesGrid() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                    {items.map((item) => {
-                        const Icon = item.icon;
+                    {items.map((item: any) => {
+                        const Icon = ICON_MAP[item.icon] || BarChart;
                         return (
                             <Link
                                 key={item.title}
-                                href={item.link}
+                                href={item.link.startsWith("http") ? item.link : `/${lang}${item.link}`}
                                 className="group relative bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-border hover:border-corporate-tertiary/30 flex flex-col h-full"
                             >
                                 <div className="relative h-72 w-full overflow-hidden">
@@ -62,7 +69,7 @@ export function IndustriesGrid() {
                                     </Text>
 
                                     <div className="mt-auto flex items-center font-bold text-corporate-dark text-sm tracking-wide group-hover:text-corporate-tertiary transition-colors">
-                                        İNCELE <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                        {lang === "en" ? "EXPLORE" : "İNCELE"} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </div>
                             </Link>

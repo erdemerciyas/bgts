@@ -6,13 +6,13 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
-import { HOME_CONTENT } from "@/content/home"
+import { getHomeContent } from "@/content/home"
 import { cn } from "@/lib/utils"
 
 import { GradientMesh } from "@/components/ui/GradientMesh"
 
-export function ServicesSection() {
-    const { heading, description, ctaText, image, sections } = HOME_CONTENT.servicesSummary;
+export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?: string }) {
+    const { heading, description, ctaText, image, sections } = content || getHomeContent().servicesSummary;
 
     return (
         <Section background="muted" className="pt-0 pb-0 overflow-visible relative">
@@ -47,7 +47,7 @@ export function ServicesSection() {
             {/* Services Grid Full Width */}
             <div className="w-full">
                 <div className="grid md:grid-cols-3 min-h-[480px]">
-                    {sections.map((service) => (
+                    {sections.map((service: any) => (
                         <div
                             key={service.id}
                             className={cn(
@@ -74,7 +74,7 @@ export function ServicesSection() {
                                     {service.description}
                                 </Text>
                                 <ul className="space-y-4 mb-8">
-                                    {service.features.map(feature => (
+                                    {service.features.map((feature: string) => (
                                         <li key={feature} className="flex items-center gap-3 text-blue-50 font-medium">
                                             <CheckCircle className="w-5 h-5 text-blue-300" /> {feature}
                                         </li>
@@ -82,7 +82,7 @@ export function ServicesSection() {
                                 </ul>
                             </div>
                             <div className="relative z-20 pt-8 mt-auto border-t border-white/10">
-                                <Link href={service.ctaLink} className="inline-flex items-center font-bold text-white hover:text-blue-300 transition-colors text-lg group/link">
+                                <Link href={service.ctaLink.startsWith("http") ? service.ctaLink : `/${lang}${service.ctaLink}`} className="inline-flex items-center font-bold text-white hover:text-blue-300 transition-colors text-lg group/link">
                                     {service.ctaText}
                                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover/link:translate-x-1" />
                                 </Link>

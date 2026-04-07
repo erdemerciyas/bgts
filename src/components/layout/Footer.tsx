@@ -4,7 +4,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { MapPin } from "lucide-react"
 
-export default function Footer() {
+export default function Footer({ dict, lang = "tr" }: { dict: any; lang?: string }) {
+    if (!dict) return null;
+
     return (
         <footer className="flex flex-col">
             {/* Footer Section */}
@@ -19,44 +21,42 @@ export default function Footer() {
                                 <Image src="/BGTS_logo_white.png" alt="BGTS Logo" width={150} height={66} className="object-contain" />
                             </div>
                             <p className="text-white/50 text-sm leading-relaxed">
-                                Finans, Savunma, Perakende ve Telekom sektörleri için stratejik teknoloji ortağı. 30+ yıldır dijital dönüşümü güvenle yönetiyoruz.
+                                {dict.description}
                             </p>
                         </div>
 
                         {/* Column 1 */}
                         <div className="space-y-4">
-                            <h4 className="font-bold text-white mb-4">Hizmetler</h4>
+                            <h4 className="font-bold text-white mb-4">{dict.columns.services}</h4>
                             <ul className="space-y-2 text-white/50 text-sm">
-                                <li><Link href="/services/managed-services" className="hover:text-corporate-accent transition-colors">Yönetilen Hizmetler</Link></li>
-                                <li><Link href="/services/devops" className="hover:text-corporate-accent transition-colors">DevOps & SRE</Link></li>
-                                <li><Link href="/services/software-development" className="hover:text-corporate-accent transition-colors">Yazılım Geliştirme</Link></li>
+                                <li><Link href={`/${lang}/services/managed-services`} className="hover:text-corporate-accent transition-colors">{dict.links.managedServices}</Link></li>
+                                <li><Link href={`/${lang}/services/devops`} className="hover:text-corporate-accent transition-colors">{dict.links.devops}</Link></li>
+                                <li><Link href={`/${lang}/services/software-development`} className="hover:text-corporate-accent transition-colors">{dict.links.softwareDev}</Link></li>
                             </ul>
                         </div>
 
                         {/* Column 2 */}
                         <div className="space-y-4">
-                            <h4 className="font-bold text-white mb-4">Sektörler</h4>
+                            <h4 className="font-bold text-white mb-4">{dict.columns.industries}</h4>
                             <ul className="space-y-2 text-white/50 text-sm">
-                                <li><Link href="/industries/banking" className="hover:text-corporate-accent transition-colors">Bankacılık & Finans</Link></li>
-                                <li><Link href="/industries/defense" className="hover:text-corporate-accent transition-colors">Savunma Sanayi</Link></li>
-                                <li><Link href="/industries/retail-telecom" className="hover:text-corporate-accent transition-colors">Perakende & Telekom</Link></li>
+                                <li><Link href={`/${lang}/industries/banking`} className="hover:text-corporate-accent transition-colors">{dict.links.banking}</Link></li>
+                                <li><Link href={`/${lang}/industries/defense`} className="hover:text-corporate-accent transition-colors">{dict.links.defense}</Link></li>
+                                <li><Link href={`/${lang}/industries/retail-telecom`} className="hover:text-corporate-accent transition-colors">{dict.links.retailTelecom}</Link></li>
                             </ul>
                         </div>
 
                         {/* Column 3 */}
                         <div className="space-y-4">
-                            <h4 className="font-bold text-white mb-4">Kurumsal</h4>
+                            <h4 className="font-bold text-white mb-4">{dict.columns.corporate}</h4>
                             <ul className="space-y-2 text-white/50 text-sm">
-                                <li><Link href="/about" className="hover:text-corporate-accent transition-colors">Hakkımızda</Link></li>
-                                <li><Link href="/hr" className="hover:text-corporate-accent transition-colors">Kariyer</Link></li>
-                                <li><Link href="/hr#talent" className="hover:text-corporate-accent transition-colors">Genç Yetenek</Link></li>
-                                <li><Link href="/contact" className="hover:text-corporate-accent transition-colors">İletişim</Link></li>
+                                <li><Link href={`/${lang}/about`} className="hover:text-corporate-accent transition-colors">{dict.links.about}</Link></li>
+                                <li><Link href={`/${lang}/contact`} className="hover:text-corporate-accent transition-colors">{dict.links.contact}</Link></li>
                             </ul>
                         </div>
 
                         {/* Column 4: Contact */}
                         <div className="space-y-4">
-                            <h4 className="font-bold text-white mb-4">Ofislerimiz</h4>
+                            <h4 className="font-bold text-white mb-4">{dict.columns.offices}</h4>
                             <ul className="space-y-4 text-white/50 text-sm">
                                 <li className="flex gap-3">
                                     <MapPin className="w-5 h-5 text-corporate-accent shrink-0" />
@@ -89,7 +89,7 @@ export default function Footer() {
                     {/* Bottom Bar */}
                     <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-white/30 text-sm">
-                            © 2026 BGTS. Tüm hakları saklıdır.
+                            {dict.copyright}
                         </p>
                     </div>
                 </div>

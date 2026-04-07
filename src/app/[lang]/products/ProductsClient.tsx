@@ -1,0 +1,296 @@
+"use client"
+
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { Container } from "@/components/ui/Container"
+import { Section } from "@/components/ui/Section"
+import { Heading, Text } from "@/components/ui/Typography"
+import { cn } from "@/lib/utils"
+import {
+    CheckCircle2,
+    FileText,
+    Cpu,
+    Briefcase,
+    Activity,
+    Mic,
+    Bot,
+    Code,
+    ArrowRight,
+} from "lucide-react"
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+type CategoryId = "recruitment" | "enterprise" | "document"
+
+interface Product {
+    slug: string
+    name: string
+    description: string
+    category: CategoryId
+}
+
+interface Category {
+    id: CategoryId
+    accentColor: string
+    accentBg: string
+    accentBorder: string
+    iconColor: string
+    sectionLabel: string
+    heading: string
+    headingAccent: string
+}
+
+type ProductsDict = {
+    hero: { title: string; subtitle: string }
+    cta: string
+    categories: Record<CategoryId, { label: string; heading: string; accent: string }>
+    items: Record<string, { name: string; description: string }>
+}
+
+const CATEGORIES_CONFIG: { id: CategoryId; accentColor: string; accentBg: string; accentBorder: string; iconColor: string }[] = [
+    {
+        id: "recruitment",
+        accentColor: "text-blue-600",
+        accentBg: "bg-blue-50",
+        accentBorder: "border-blue-500",
+        iconColor: "text-blue-600",
+    },
+    {
+        id: "enterprise",
+        accentColor: "text-indigo-600",
+        accentBg: "bg-indigo-50",
+        accentBorder: "border-indigo-500",
+        iconColor: "text-indigo-600",
+    },
+    {
+        id: "document",
+        accentColor: "text-teal-600",
+        accentBg: "bg-teal-50",
+        accentBorder: "border-teal-500",
+        iconColor: "text-teal-600",
+    },
+]
+
+const ICON_MAP: Record<string, React.ElementType> = {
+    "ai-hiring-assistant": CheckCircle2,
+    "cv-converter": FileText,
+    cortex: Cpu,
+    hcm: Briefcase,
+    praxila: Activity,
+    meetsense: Mic,
+    doc2bot: Bot,
+    docmind: Code,
+}
+
+// ─── Product Card ─────────────────────────────────────────────────────────────
+
+function ProductCard({ 
+    product, 
+    index, 
+    dict, 
+    categoryConfig 
+}: { 
+    product: Product; 
+    index: number; 
+    dict: ProductsDict;
+    categoryConfig: typeof CATEGORIES_CONFIG[0]
+}) {
+    const Icon = ICON_MAP[product.slug]
+    const item = dict.items[product.slug]
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+            whileHover={{ y: -5 }}
+            className={cn(
+                "group relative flex flex-col bg-white rounded-sm overflow-hidden",
+                "border border-slate-100 border-l-4",
+                categoryConfig.accentBorder,
+                "shadow-sm hover:shadow-xl",
+                "transition-all duration-300"
+            )}
+        >
+            <div className="p-6 flex-1 flex flex-col">
+                {/* Icon */}
+                <div
+                    className={cn(
+                        "w-11 h-11 rounded-sm flex items-center justify-center mb-5",
+                        categoryConfig.accentBg,
+                        categoryConfig.iconColor
+                    )}
+                >
+                    <Icon className="w-5 h-5" />
+                </div>
+
+                {/* Name */}
+                <Heading
+                    variant="h4"
+                    className={cn(
+                        "mb-2 transition-colors duration-300",
+                        "group-hover:" + categoryConfig.accentColor
+                    )}
+                >
+                    {item.name}
+                </Heading>
+
+                {/* Description */}
+                <Text variant="muted" className="leading-relaxed flex-1">
+                    {item.description}
+                </Text>
+            </div>
+
+            <div className="px-6 py-4 border-t border-slate-100 flex justify-end">
+                <Link
+                    href={`/products/${product.slug}`}
+                    className={cn(
+                        "inline-flex items-center gap-1.5 text-sm font-bold",
+                        categoryConfig.accentColor,
+                        "hover:gap-3 transition-all duration-300"
+                    )}
+                >
+                    {dict.cta}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+            </div>
+        </motion.div>
+    )
+}
+
+// ─── Category Section ─────────────────────────────────────────────────────────
+
+function CategorySection({
+    category,
+    background,
+    dict,
+    allProducts
+}: {
+    category: typeof CATEGORIES_CONFIG[0]
+    background: "default" | "glazed"
+    dict: ProductsDict
+    allProducts: Product[]
+}) {
+    const products = allProducts.filter(p => p.category === category.id)
+    const catDict = dict.categories[category.id]
+
+    return (
+        <Section background={background}>
+            <Container>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-12"
+                >
+                    <Text
+                        variant="small"
+                        className={cn(
+                            "font-bold uppercase tracking-[0.18em] mb-3 block",
+                            category.accentColor
+                        )}
+                    >
+                        {catDict.label}
+                    </Text>
+                    <Heading variant="h2">
+                        {catDict.heading}{" "}
+                        <span className={category.accentColor}>
+                            {catDict.accent}
+                        </span>
+                    </Heading>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    {products.map((product, index) => (
+                        <ProductCard 
+                            key={product.slug} 
+                            product={product} 
+                            index={index} 
+                            dict={dict}
+                            categoryConfig={category}
+                        />
+                    ))}
+                </div>
+            </Container>
+        </Section>
+    )
+}
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
+const PRODUCT_LIST: Product[] = [
+    { slug: "ai-hiring-assistant", name: "", description: "", category: "recruitment" },
+    { slug: "cv-converter", name: "", description: "", category: "recruitment" },
+    { slug: "cortex", name: "", description: "", category: "enterprise" },
+    { slug: "hcm", name: "", description: "", category: "enterprise" },
+    { slug: "praxila", name: "", description: "", category: "enterprise" },
+    { slug: "meetsense", name: "", description: "", category: "enterprise" },
+    { slug: "doc2bot", name: "", description: "", category: "document" },
+    { slug: "docmind", name: "", description: "", category: "document" },
+]
+
+const sectionBg: Array<"default" | "glazed"> = ["default", "glazed", "default"]
+
+export default function ProductsClient({ dict: d }: { dict: ProductsDict }) {
+    return (
+        <div className="bg-white min-h-screen">
+
+            {/* ─── HERO ─────────────────────────────────────────────────────── */}
+            <section className="relative overflow-hidden min-h-[55vh] flex items-center pt-24 pb-20 lg:pt-32 lg:pb-28">
+
+                {/* Background image */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: "url('/images/headers/ai-urunler-hero.jpg')" }}
+                />
+
+                {/* Overlay */}
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background:
+                            "linear-gradient(to right, rgba(5,8,26,0.82) 0%, rgba(5,8,26,0.65) 50%, rgba(5,8,26,0.25) 100%)",
+                    }}
+                />
+
+                <Container className="relative z-10">
+                    <div className="max-w-2xl">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, ease: "easeOut" }}
+                        >
+                            <Heading
+                                variant="h1"
+                                className="text-white mb-5"
+                                style={{ lineHeight: 1.1 }}
+                            >
+                                <span dangerouslySetInnerHTML={{ __html: d.hero.title }} />
+                            </Heading>
+
+                            <Text
+                                variant="lead"
+                                className="text-slate-300 font-light leading-relaxed"
+                            >
+                                {d.hero.subtitle}
+                            </Text>
+                        </motion.div>
+                    </div>
+                </Container>
+            </section>
+
+            {/* ─── CATEGORIES ─────────────────────────────────────────────── */}
+            {CATEGORIES_CONFIG.map((category, i) => (
+                <CategorySection
+                    key={category.id}
+                    category={category}
+                    background={sectionBg[i]}
+                    dict={d}
+                    allProducts={PRODUCT_LIST}
+                />
+            ))}
+        </div>
+    )
+}

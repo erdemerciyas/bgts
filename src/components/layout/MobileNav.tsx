@@ -3,6 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   X, ChevronDown, Phone, Mail,
@@ -33,146 +34,168 @@ interface MobileNavSection {
   subGroups?: SubGroup[]
 }
 
-const MOBILE_NAV_DATA: MobileNavSection[] = [
-  {
-    name: "Hizmetler",
-    id: "services",
-    subGroups: [
-      {
-        heading: "Yazılım ve Teknoloji Servisleri",
-        links: [
-          { title: "Büyük Veri & Gerçek Zamanlı Veri İşleme", href: "/services/software-development#bigdata", icon: Database },
-          { title: "Yapay Zekâ & AI-First Mimari", href: "/services/software-development#ai", icon: Cpu },
-          { title: "Yazılım Modernizasyonu & Mikroservis", href: "/services/software-development#modernization", icon: RefreshCw },
-          { title: "Yazılım Geliştirme Hizmetleri", href: "/services/software-development#development-services", icon: Layers },
-        ]
-      },
-      {
-        heading: "Sektörel Yazılım Çözümleri",
-        links: [
-          { title: "Bankacılık & Finansal Sistemler", href: "/services/software-development#banking", icon: Landmark },
-          { title: "E-Trading & Market Data", href: "/services/software-development#trading", icon: TrendingUp },
-          { title: "Telekom & Dijital İletişim", href: "/services/software-development#telecom", icon: Radio },
-          { title: "Fraud & Risk & AI Doğrulama", href: "/services/software-development#fraud", icon: ShieldAlert },
-        ]
-      },
-      {
-        heading: "Yönetilen Hizmetler (MSP)",
-        links: [
-          { title: "Veri Merkezi Yönetimi", href: "/services/managed-services#data-center", icon: Server },
-          { title: "7/24 İzleme & NOC", href: "/services/managed-services#monitoring", icon: Activity },
-          { title: "Son Kullanıcı ve Cihaz Yönetimi", href: "/services/managed-services#desktop-support", icon: Terminal },
-          { title: "ITSM as a Service", href: "/services/managed-services#itsm", icon: FileText },
-          { title: "DevOps as a Service", href: "/services/managed-services#devops", icon: Code },
-        ]
-      }
-    ]
-  },
-  {
-    name: "Sektörler",
-    id: "industries",
-    subGroups: [
-      {
-        heading: "Kurumsal & Savunma",
-        links: [
-          { title: "Bankacılık & Finans", href: "/industries/banking", icon: Globe },
-          { title: "Savunma Sanayi", href: "/industries/defense", icon: Shield },
-        ]
-      },
-      {
-        heading: "Ticari & Telekom",
-        links: [
-          { title: "Telekomünikasyon", href: "/industries/telecommunications", icon: Server },
-          { title: "Perakende & E-Ticaret", href: "/industries/retail", icon: ShoppingBag },
-        ]
-      }
-    ]
-  },
-  {
-    name: "Ürünler",
-    id: "products",
-    subGroups: [
-      {
-        heading: "İşe Alım Teknolojileri",
-        links: [
-          { title: "AI Hiring Assistant", href: "/products/ai-hiring-assistant", icon: CheckCircle2 },
-          { title: "CV-Converter", href: "/products/cv-converter", icon: FileText },
-        ]
-      },
-      {
-        heading: "Kurumsal Çözümler",
-        links: [
-          { title: "Cortex", href: "/products/cortex", icon: Cpu },
-          { title: "HCM Platformu", href: "/products/hcm", icon: Briefcase },
-          { title: "Praxila", href: "/products/praxila", icon: Activity },
-          { title: "MeetSense", href: "/products/meetsense", icon: Mic },
-        ]
-      },
-      {
-        heading: "Doküman & Bilgi Yönetimi",
-        links: [
-          { title: "Doc2Bot", href: "/products/doc2bot", icon: Bot },
-          { title: "DocMind", href: "/products/docmind", icon: Code },
-        ]
-      }
-    ]
-  },
-  {
-    name: "Genç Mühendisler",
-    id: "talent",
-    href: "/genc-muhendis-programi",
-    subGroups: [
-      {
-        heading: "Programlar",
-        links: [
-          { title: "Yazılımcı Yetiştirme", href: "/genc-muhendis-programi#track-software", icon: Code },
-          { title: "Altyapı Teknolojileri", href: "/genc-muhendis-programi#track-infrastructure", icon: Server },
-          { title: "Test ve Analist", href: "/genc-muhendis-programi#track-test", icon: BarChart3 },
-          { title: "Başvuru Yap", href: "/genc-muhendis-programi#application-form", icon: GraduationCap },
-        ]
-      }
-    ]
-  },
-  {
-    name: "Bilgi Merkezi",
-    id: "resources",
-    subGroups: [
-      {
-        heading: "Kaynaklar",
-        links: [
-          { title: "Başarı Hikayeleri", href: "/resources/success-stories", icon: Heart },
-          { title: "İnfografikler", href: "/resources/infographics", icon: BarChart3 },
-          { title: "İş Ortakları", href: "/partnerships", icon: Layers },
-          { title: "LinkedIn", href: "https://www.linkedin.com/company/bilgeadam/", icon: Linkedin },
-        ]
-      }
-    ]
-  },
-  {
-    name: "Yerini Al",
-    id: "careers",
-    subGroups: [
-      {
-        heading: "Yaşam & Kariyer",
-        links: [
-          { title: "Kültür", href: "/culture", icon: Smile },
-          { title: "Kariyer Yolları", href: "/career-paths", icon: Rocket },
-          { title: "Eğitim ve Gelişim", href: "/learning", icon: GraduationCap },
-          { title: "Sürdürülebilir Değer Programı", href: "/social-contribution", icon: Heart },
-        ]
-      }
-    ]
-  },
-]
+function tr(lang: string, trText: string, enText: string) {
+  return lang === 'en' ? enText : trText
+}
+
+function getMobileNavData(lang: string, dict?: Record<string, Record<string, string>>): MobileNavSection[] {
+  const t = (section: string, key: string, fallbackTr: string, fallbackEn: string) => {
+    if (dict && dict[section] && dict[section][key]) {
+      return dict[section][key]
+    }
+    return tr(lang, fallbackTr, fallbackEn)
+  }
+
+  const p = (path: string) => `/${lang}${path}`
+  return [
+    {
+      name: t("services", "name", "Hizmetler", "Services"),
+      id: "services",
+      subGroups: [
+        {
+          heading: t("services", "software", "Yazılım ve Teknoloji Servisleri", "Software & Technology Services"),
+          links: [
+            { title: tr(lang, "Büyük Veri & Gerçek Zamanlı Veri İşleme", "Big Data & Real-Time Processing"), href: p("/services/software-development#bigdata"), icon: Database },
+            { title: tr(lang, "Yapay Zekâ & AI-First Mimari", "AI & AI-First Architecture"), href: p("/services/software-development#ai"), icon: Cpu },
+            { title: tr(lang, "Yazılım Modernizasyonu & Mikroservis", "Software Modernization & Microservices"), href: p("/services/software-development#modernization"), icon: RefreshCw },
+            { title: tr(lang, "Yazılım Geliştirme Hizmetleri", "Software Development Services"), href: p("/services/software-development#development-services"), icon: Layers },
+          ]
+        },
+        {
+          heading: tr(lang, "Sektörel Yazılım Çözümleri", "Sectoral Software Solutions"),
+          links: [
+            { title: tr(lang, "Bankacılık & Finansal Sistemler", "Banking & Financial Systems"), href: p("/services/software-development#banking"), icon: Landmark },
+            { title: "E-Trading & Market Data", href: p("/services/software-development#trading"), icon: TrendingUp },
+            { title: tr(lang, "Telekom & Dijital İletişim", "Telecom & Digital Communication"), href: p("/services/software-development#telecom"), icon: Radio },
+            { title: tr(lang, "Fraud & Risk & AI Doğrulama", "Fraud & Risk & AI Verification"), href: p("/services/software-development#fraud"), icon: ShieldAlert },
+          ]
+        },
+        {
+          heading: tr(lang, "Yönetilen Hizmetler (MSP)", "Managed Services (MSP)"),
+          links: [
+            { title: tr(lang, "Veri Merkezi Yönetimi", "Data Center Management"), href: p("/services/managed-services#data-center"), icon: Server },
+            { title: tr(lang, "7/24 İzleme & NOC", "24/7 Monitoring & NOC"), href: p("/services/managed-services#monitoring"), icon: Activity },
+            { title: tr(lang, "Son Kullanıcı ve Cihaz Yönetimi", "End-User & Device Management"), href: p("/services/managed-services#desktop-support"), icon: Terminal },
+            { title: "ITSM as a Service", href: p("/services/managed-services#itsm"), icon: FileText },
+            { title: "DevOps as a Service", href: p("/services/managed-services#devops"), icon: Code },
+          ]
+        }
+      ]
+    },
+    {
+      name: t("industries", "name", "Sektörler", "Industries"),
+      id: "industries",
+      subGroups: [
+        {
+          heading: t("industries", "enterprise", "Kurumsal & Savunma", "Enterprise & Defense"),
+          links: [
+            { title: t("industries", "bankingFinance", "Bankacılık & Finans", "Banking & Finance"), href: p("/industries/banking"), icon: Globe },
+            { title: t("industries", "defense", "Savunma Sanayi", "Defense Industry"), href: p("/industries/defense"), icon: Shield },
+          ]
+        },
+        {
+          heading: t("industries", "commercial", "Ticari & Telekom", "Commercial & Telecom"),
+          links: [
+            { title: t("industries", "telecommunications", "Telekomünikasyon", "Telecommunications"), href: p("/industries/telecommunications"), icon: Server },
+            { title: t("industries", "retail", "Perakende & E-Ticaret", "Retail & E-Commerce"), href: p("/industries/retail"), icon: ShoppingBag },
+          ]
+        }
+      ]
+    },
+    {
+      name: t("products", "name", "Ürünler", "Products"),
+      id: "products",
+      subGroups: [
+        {
+          heading: t("products", "hiring", "İşe Alım Teknolojileri", "Hiring Technologies"),
+          links: [
+            { title: "AI Hiring Assistant", href: p("/products/ai-hiring-assistant"), icon: CheckCircle2 },
+            { title: "CV-Converter", href: p("/products/cv-converter"), icon: FileText },
+          ]
+        },
+        {
+          heading: t("products", "enterprise", "Kurumsal Çözümler", "Enterprise Solutions"),
+          links: [
+            { title: "Cortex", href: p("/products/cortex"), icon: Cpu },
+            { title: t("products", "hcm", "HCM Platformu", "HCM Platform"), href: p("/products/hcm"), icon: Briefcase },
+            { title: "Praxila", href: p("/products/praxila"), icon: Activity },
+            { title: "MeetSense", href: p("/products/meetsense"), icon: Mic },
+          ]
+        },
+        {
+          heading: t("products", "docKnowledge", "Doküman & Bilgi Yönetimi", "Document & Knowledge Management"),
+          links: [
+            { title: "Doc2Bot", href: p("/products/doc2bot"), icon: Bot },
+            { title: "DocMind", href: p("/products/docmind"), icon: Code },
+          ]
+        }
+      ]
+    },
+    {
+      name: t("talent", "name", "Genç Mühendisler", "Young Engineers"),
+      id: "talent",
+      href: p("/genc-muhendis-programi"),
+      subGroups: [
+        {
+          heading: t("talent", "programs", "Programlar", "Programs"),
+          links: [
+            { title: t("talent", "software", "Yazılımcı Yetiştirme", "Software Developer Training"), href: p("/genc-muhendis-programi#track-software"), icon: Code },
+            { title: t("talent", "infrastructure", "Altyapı Teknolojileri", "Infrastructure Technologies"), href: p("/genc-muhendis-programi#track-infrastructure"), icon: Server },
+            { title: t("talent", "test", "Test ve Analist", "Test & Analyst"), href: p("/genc-muhendis-programi#track-test"), icon: BarChart3 },
+            { title: t("talent", "apply", "Başvuru Yap", "Apply Now"), href: p("/genc-muhendis-programi#application-form"), icon: GraduationCap },
+          ]
+        }
+      ]
+    },
+    {
+      name: t("resources", "name", "Bilgi Merkezi", "Resources"),
+      id: "resources",
+      subGroups: [
+        {
+          heading: t("resources", "heading", "Kaynaklar", "Resources"),
+          links: [
+            { title: t("resources", "successStories", "Başarı Hikayeleri", "Success Stories"), href: p("/resources/success-stories"), icon: Heart },
+            { title: t("resources", "infographics", "İnfografikler", "Infographics"), href: p("/resources/infographics"), icon: BarChart3 },
+            { title: t("resources", "partners", "İş Ortakları", "Business Partners"), href: p("/partnerships"), icon: Layers },
+            { title: "LinkedIn", href: "https://www.linkedin.com/company/bilgeadam/", icon: Linkedin },
+          ]
+        }
+      ]
+    },
+    {
+      name: t("careers", "name", "Yerini Al", "Careers"),
+      id: "careers",
+      subGroups: [
+        {
+          heading: t("careers", "lifeCareer", "Yaşam & Kariyer", "Life & Career"),
+          links: [
+            { title: t("careers", "culture", "Kültür", "Culture"), href: p("/culture"), icon: Smile },
+            { title: t("careers", "careerPaths", "Kariyer Yolları", "Career Paths"), href: p("/career-paths"), icon: Rocket },
+            { title: t("careers", "learning", "Eğitim ve Gelişim", "Training & Development"), href: p("/learning"), icon: GraduationCap },
+            { title: t("careers", "social", "Sürdürülebilir Değer Programı", "Sustainable Value Program"), href: p("/social-contribution"), icon: Heart },
+          ]
+        }
+      ]
+    },
+  ]
+}
 
 interface MobileNavProps {
   isOpen: boolean
   onClose: () => void
   navItems: Array<{ name: string; href?: string; id?: string }>
+  mobileNavDict?: Record<string, Record<string, string>>
 }
 
-export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
+export default function MobileNav({ isOpen, onClose, mobileNavDict }: MobileNavProps) {
   const [expandedSection, setExpandedSection] = React.useState<string | null>(null)
+  const pathname = usePathname()
+  const currentLang = pathname.split('/')[1] || 'tr'
+  const otherLang = currentLang === 'tr' ? 'en' : 'tr'
+  const switchHref = currentLang === 'tr'
+    ? pathname.replace(/^\/tr/, '/en') || '/en'
+    : pathname.replace(/^\/en/, '/tr') || '/tr'
+  const MOBILE_NAV_DATA = getMobileNavData(currentLang, mobileNavDict)
 
   const toggleSection = (id: string) => {
     setExpandedSection(prev => prev === id ? null : id)
@@ -215,19 +238,30 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
               <div className="relative w-28 h-9">
                 <Image src="/BGTS_logo.png" alt="BGTS Logo" fill className="object-contain" />
               </div>
-              <button
-                onClick={onClose}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 transition-colors"
-                aria-label="Menüyü kapat"
-              >
-                <X className="w-5 h-5 text-slate-600" />
-              </button>
+              <div className="flex items-center gap-2">
+                {/* Language Switcher */}
+                <Link
+                  href={switchHref}
+                  onClick={onClose}
+                  className="flex items-center justify-center w-9 h-9 rounded-full bg-slate-100 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 text-slate-700 hover:text-blue-600 text-[12px] font-extrabold tracking-widest transition-all"
+                  aria-label={currentLang === 'tr' ? 'Switch to English' : 'Türkçeye Geç'}
+                >
+                  {otherLang.toUpperCase()}
+                </Link>
+                <button
+                  onClick={onClose}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 transition-colors"
+                  aria-label="Menüyü kapat"
+                >
+                  <X className="w-5 h-5 text-slate-600" />
+                </button>
+              </div>
             </div>
 
             {/* Scrollable Content */}
             <div className="flex-1 overflow-y-auto overscroll-contain">
               <nav className="py-3">
-                {MOBILE_NAV_DATA.map((section) => {
+                {MOBILE_NAV_DATA.map((section: MobileNavSection) => {
                   const isExpanded = expandedSection === section.id
                   const hasSubGroups = section.subGroups && section.subGroups.length > 0
 
@@ -244,7 +278,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                         {hasSubGroups && (
                           <motion.div
                             animate={{ rotate: isExpanded ? 180 : 0 }}
-                            transition={{ duration: 0.2 }}
+                            transition={{ duration: 0.25 }}
                             className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center"
                           >
                             <ChevronDown className="w-4 h-4 text-slate-500" />
@@ -263,13 +297,13 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                             className="overflow-hidden"
                           >
                             <div className="px-5 pb-4 space-y-5">
-                              {section.subGroups!.map((group, gIdx) => (
-                                <div key={gIdx}>
-                                  <p className="text-[11px] font-extrabold text-slate-400 tracking-[0.15em] uppercase mb-3 px-1">
+                              {section.subGroups?.map((group: SubGroup, gIdx: number) => (
+                                <div key={gIdx} className="mb-6 last:mb-0">
+                                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-1">
                                     {group.heading}
-                                  </p>
+                                  </h4>
                                   <div className="space-y-1">
-                                    {group.links.map((link, lIdx) => {
+                                    {group.links.map((link: SubLink, lIdx: number) => {
                                       const Icon = link.icon
                                       const isExternal = link.href.startsWith("http")
                                       return (
@@ -305,20 +339,20 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
               <div className="px-5 py-4 border-t border-gray-100">
                 <div className="grid grid-cols-2 gap-3">
                   <Link
-                    href="/about"
+                    href={`/${currentLang}/about`}
                     onClick={onClose}
                     className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors"
                   >
                     <Globe className="w-4 h-4 text-slate-500" />
-                    <span className="text-sm font-bold text-slate-700">Hakkımızda</span>
+                    <span className="text-sm font-bold text-slate-700">{currentLang === 'en' ? 'About Us' : 'Hakkımızda'}</span>
                   </Link>
                   <Link
-                    href="/contact"
+                    href={`/${currentLang}/contact`}
                     onClick={onClose}
                     className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors"
                   >
                     <Mail className="w-4 h-4 text-white" />
-                    <span className="text-sm font-bold text-white">İletişim</span>
+                    <span className="text-sm font-bold text-white">{currentLang === 'en' ? 'Contact' : 'İletişim'}</span>
                   </Link>
                 </div>
               </div>
@@ -329,7 +363,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
               <div className="flex items-center justify-between">
                 <a href="tel:+902123456789" className="flex items-center gap-2 text-sm font-semibold text-slate-600">
                   <Phone className="w-4 h-4" />
-                  <span>İletişim</span>
+                  <span>{currentLang === 'en' ? 'Contact' : 'İletişim'}</span>
                 </a>
                 <div className="flex items-center gap-3">
                   <a href="https://www.linkedin.com/company/bilgeadam/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-blue-50 hover:border-blue-200 transition-colors">

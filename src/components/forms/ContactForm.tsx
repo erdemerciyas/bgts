@@ -6,20 +6,41 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { Mail, User, MessageSquare, Send, CheckCircle, AlertCircle } from "lucide-react"
 
-const contactSchema = z.object({
-  name: z.string().min(2, "İsim en az 2 karakter olmalıdır"),
-  email: z.string().email("Geçerli bir e-posta adresi giriniz"),
-  company: z.string().optional(),
-  phone: z.string().optional(),
-  message: z.string().min(10, "Mesaj en az 10 karakter olmalıdır"),
-  consent: z.boolean().refine((val) => val === true, "KVKK onayı gereklidir"),
-})
+type ContactFormDict = {
+  form: {
+    heading: string; subheading: string
+    name: string; namePlaceholder: string
+    email: string; emailPlaceholder: string
+    company: string; companyPlaceholder: string
+    phone: string; phonePlaceholder: string
+    message: string; messagePlaceholder: string
+    consent: string; consentBold: string
+    submit: string; submitting: string
+  }
+  validation: { nameRequired: string; emailInvalid: string; messageMin: string; consentRequired: string }
+  success: { title: string; body: string }
+  error: { title: string; body: string }
+}
 
-type ContactFormData = z.infer<typeof contactSchema>
+function createContactSchema(dict: ContactFormDict) {
+  return z.object({
+    name: z.string().min(2, dict.validation.nameRequired),
+    email: z.string().email(dict.validation.emailInvalid),
+    company: z.string().optional(),
+    phone: z.string().optional(),
+    message: z.string().min(10, dict.validation.messageMin),
+    consent: z.boolean().refine((val) => val === true, dict.validation.consentRequired),
+  })
+}
 
-export function ContactForm() {
+type ContactFormData = z.infer<ReturnType<typeof createContactSchema>>
+
+export function ContactForm({ dict }: { dict: ContactFormDict }) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const contactSchema = createContactSchema(dict)
+  const d = dict.form
 
   const {
     register,
@@ -43,7 +64,7 @@ export function ContactForm() {
       });
 
       if (!response.ok) {
-        throw new Error('Bir hata oluştu');
+        throw new Error('Error');
       }
 
       setSubmitStatus('success')
@@ -59,9 +80,9 @@ export function ContactForm() {
     <div className="max-w-2xl mx-auto">
       <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-2 font-heading">Bizimle İletişime Geçin</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-2 font-heading">{d.heading}</h2>
           <p className="text-slate-600">
-            Projeniz hakkında bilgi almak veya iş birliği yapmak için formu doldurun.
+            {d.subheading}
           </p>
         </div>
 
@@ -69,8 +90,8 @@ export function ContactForm() {
           <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
             <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
             <div>
-              <h3 className="font-semibold text-green-900">Mesajınız Gönderildi!</h3>
-              <p className="text-sm text-green-700">En kısa sürede size dönüş yapacağız.</p>
+              <h3 className="font-semibold text-green-900">{dict.success.title}</h3>
+              <p className="text-sm text-green-700">{dict.success.body}</p>
             </div>
           </div>
         )}
@@ -79,8 +100,8 @@ export function ContactForm() {
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
             <div>
-              <h3 className="font-semibold text-red-900">Bir Hata Oluştu</h3>
-              <p className="text-sm text-red-700">Lütfen daha sonra tekrar deneyin veya doğrudan e-posta gönderin.</p>
+              <h3 className="font-semibold text-red-900">{dict.error.title}</h3>
+              <p className="text-sm text-red-700">{dict.error.body}</p>
             </div>
           </div>
         )}
@@ -89,7 +110,7 @@ export function ContactForm() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label htmlFor="name" className="block text-sm font-semibold text-slate-700">
-                Ad Soyad <span className="text-red-500">*</span>
+                {d.name} <span className="text-red-500">*</span>
               </label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
@@ -99,7 +120,7 @@ export function ContactForm() {
                   {...register('name')}
                   className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-slate-900 ${errors.name ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
                     }`}
-                  placeholder="Adınız Soyadınız"
+                  placeholder={d.namePlaceholder}
                   disabled={isSubmitting}
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? 'name-error' : undefined}
@@ -115,7 +136,7 @@ export function ContactForm() {
 
             <div className="space-y-2">
               <label htmlFor="email" className="block text-sm font-semibold text-slate-700">
-                E-posta <span className="text-red-500">*</span>
+                {d.email} <span className="text-red-500">*</span>
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
@@ -125,7 +146,7 @@ export function ContactForm() {
                   {...register('email')}
                   className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-slate-900 ${errors.email ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
                     }`}
-                  placeholder="ornek@sirket.com"
+                  placeholder={d.emailPlaceholder}
                   disabled={isSubmitting}
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? 'email-error' : undefined}
@@ -143,28 +164,28 @@ export function ContactForm() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label htmlFor="company" className="block text-sm font-semibold text-slate-700">
-                Şirket
+                {d.company}
               </label>
               <input
                 id="company"
                 type="text"
                 {...register('company')}
                 className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-slate-900"
-                placeholder="Şirket adı"
+                placeholder={d.companyPlaceholder}
                 disabled={isSubmitting}
               />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="phone" className="block text-sm font-semibold text-slate-700">
-                Telefon
+                {d.phone}
               </label>
               <input
                 id="phone"
                 type="tel"
                 {...register('phone')}
                 className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-slate-900"
-                placeholder="+90 212 XXX XX XX"
+                placeholder={d.phonePlaceholder}
                 disabled={isSubmitting}
               />
             </div>
@@ -172,7 +193,7 @@ export function ContactForm() {
 
           <div className="space-y-2">
             <label htmlFor="message" className="block text-sm font-semibold text-slate-700">
-              Mesajınız <span className="text-red-500">*</span>
+              {d.message} <span className="text-red-500">*</span>
             </label>
             <div className="relative">
               <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
@@ -182,7 +203,7 @@ export function ContactForm() {
                 rows={5}
                 className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none text-slate-900 ${errors.message ? 'border-red-300 bg-red-50' : 'border-slate-200 focus:border-blue-500'
                   }`}
-                placeholder="Mesajınızı buraya yazın..."
+                placeholder={d.messagePlaceholder}
                 disabled={isSubmitting}
                 aria-invalid={!!errors.message}
                 aria-describedby={errors.message ? 'message-error' : undefined}
@@ -205,7 +226,12 @@ export function ContactForm() {
                 disabled={isSubmitting}
               />
               <span className="text-sm text-slate-600">
-                Kişisel verilerimin <span className="font-semibold text-slate-900">6698 sayılı KVKK</span> kapsamında işlenmesini kabul ediyorum. <span className="text-red-500">*</span>
+                {d.consent.split(d.consentBold).map((part, i, arr) =>
+                  i < arr.length - 1
+                    ? <span key={i}>{part}<span className="font-semibold text-slate-900">{d.consentBold}</span></span>
+                    : <span key={i}>{part}</span>
+                )}
+                {" "}<span className="text-red-500">*</span>
               </span>
             </label>
             {errors.consent && (
@@ -224,12 +250,12 @@ export function ContactForm() {
             {isSubmitting ? (
               <>
                 <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                Gönderiliyor...
+                {d.submitting}
               </>
             ) : (
               <>
                 <Send className="w-5 h-5" />
-                Mesajı Gönder
+                {d.submit}
               </>
             )}
           </button>

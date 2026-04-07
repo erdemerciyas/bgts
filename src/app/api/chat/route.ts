@@ -132,7 +132,7 @@ Omnichannel satış yapıları, envanter optimizasyonu, müşteri deneyimi platf
 - [Genç Mühendis Programı](/genc-muhendis-programi) — Yeni mezunlar için yapılandırılmış eğitim (Yazılım, Test/Analiz, DevOps)
 
 ### Açık Pozisyonlar
-Güncel iş ilanları için [İK sayfamızı](/hr) veya [İletişim](/contact) sayfasını ziyaret edebilirsin. Özgeçmişini direkt hr@bgts.com.tr adresine de gönderebilirsin.
+Güncel iş ilanları için İletişim sayfasını ([İletişim](/contact)) ziyaret edebilirsin. Özgeçmişini direkt hr@bgts.com.tr adresine de gönderebilirsin.
 
 ---
 

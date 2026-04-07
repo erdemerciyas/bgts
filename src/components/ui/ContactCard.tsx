@@ -83,7 +83,7 @@ export default function ContactCard({
   icon: Icon,
   contactInfo,
   link,
-  linkText = "İletişime Geç",
+  linkText = "",
   color = "blue",
   delay = 0,
   className

@@ -1,0 +1,3075 @@
+{
+  "header": {
+    "nav": {
+      "services": "HİZMETLER",
+      "industries": "SEKTÖRLER",
+      "products": "ÜRÜNLER",
+      "talent": "GENÇ MÜHENDİSLER",
+      "resources": "BİLGİ MERKEZİ",
+      "careers": "YERİNİ AL",
+      "about": "HAKKIMIZDA"
+    }
+  },
+  "home": {
+    "hero": {
+      "slides": [
+        {
+          "title": "Kritik Sistemler için Güçlü Teknoloji Çözümleri",
+          "subtitle": "BGTS, 1400+ mühendis gücüyle finans, telekom ve büyük ölçekli kurumlar için yazılım geliştirme, yönetilen hizmetler ve SRE çözümleri sunar.",
+          "ctaText": "Hizmetlerimizi Keşfedin",
+          "ctaText2": "Uzmanlarımızla Görüşün"
+        },
+        {
+          "title": "Operasyonlarınızı Güçlendiren Teknoloji Servisleri",
+          "subtitle": "Yönetilen hizmetler, DevOps ve SRE çözümleriyle operasyonel yükü azaltır, sistem sürekliliğini artırırız.",
+          "ctaText": "İş Modelimizi İnceleyin"
+        },
+        {
+          "title": "Geleceğin Mühendislerini Yetiştiriyoruz",
+          "subtitle": "Genç mühendis programlarımızla teknolojiye değer katan yeni nesil yetenekleri yetiştiriyoruz.",
+          "ctaText": "Kariyer Fırsatları"
+        },
+        {
+          "title": "Yapay Zeka ile Güçlenen Ürünler",
+          "subtitle": "BGTS’nin AI destekli ürünleriyle süreçlerinizi otomatikleştirin, verimliliği artırın ve karar alma hızınızı yükseltin.",
+          "ctaText": "Ürünleri İncele"
+        },
+        {
+          "title": "Teknoloji Partnerleriyle Güçlü Çözümler",
+          "subtitle": "Atlassian, Qlik, ServiceNow ve lider platformlarla.",
+          "ctaText": "İş Ortaklarımız"
+        }
+      ]
+    },
+    "servicesSummary": {
+      "heading": "Kurumsal Ölçekte\nGüvenilir Teknoloji Ortağınız",
+      "description": "30+ yıllık deneyimimiz ve 1000+ proje tecrübemizle, operasyonlarınızı güvenle büyütüyoruz.",
+      "ctaText": "İş Modellerimizi Keşfedin",
+      "sections": [
+        {
+          "title": "Yazılım Geliştirme",
+          "description": "Java, .NET ve modern frontend teknolojileriyle, kurumunuzun ihtiyaçlarına özel, ölçeklenebilir ve güvenli yazılım çözümleri tasarlıyoruz.",
+          "features": [
+            "Mikroservis Mimarisi",
+            "API-First Yaklaşım"
+          ],
+          "ctaText": "Çözümleri Keşfedin"
+        },
+        {
+          "title": "DevOps & Cloud",
+          "description": "Otomatik dağıtım süreçleri (CI/CD) ve bulut modernizasyonu ile yazılım teslimat hızınızı ve kalitenizi artırarak operasyonel verimlilik sağlıyoruz.",
+          "features": [
+            "Kubernetes & Konteyner",
+            "Cloud-Native Dönüşüm"
+          ],
+          "ctaText": "Çözümleri Keşfedin"
+        },
+        {
+          "title": "Yönetilen Hizmetler",
+          "description": "İşletmenizin uzun vadeli hedeflerine ulaşmasına yardımcı olmak, sürdürülebilir büyüme ve rekabet avantajı sağlamak için özelleştirilmiş stratejik planlar oluşturuyor ve uyguluyoruz.",
+          "features": [
+            "7/24 İzleme & Destek",
+            "AIOps & Otomasyon"
+          ],
+          "ctaText": "Çözümleri Keşfedin"
+        }
+      ]
+    },
+    "deliveryModels": {
+      "heading": "Esnek İş Modelleri",
+      "description": "İhtiyaçlarınıza özel esnek çalışma modelleri ile uçtan uca proje teslimatı veya çevik takım ölçeklendirmesi.",
+      "models": [
+        {
+          "title": "Anahtar Teslim (TurnKey)",
+          "description": "Projelerinizi baştan sona üstlenir, tüm süreci tek noktadan yönetiriz.",
+          "features": [
+            "Sabit Bütçe & Zaman",
+            "Tek Sorumluluk Noktası",
+            "Uçtan Uca Teslimat"
+          ],
+          "ctaText": "Detaylı Bilgi Alın"
+        },
+        {
+          "title": "Efor Bazlı (Time & Material)",
+          "description": "İhtiyacınıza göre esnek ekiplerle hızlı ölçeklenir, projelerinize anında destek sağlarız.",
+          "features": [
+            "Esnek Ölçeklendirme",
+            "Tam Kontrol & Şeffaflık",
+            "Hızlı Adaptasyon"
+          ],
+          "ctaText": "Ekibinizi Kurun"
+        }
+      ]
+    },
+    "industries": {
+      "heading": "Uzmanlaştığımız Sektörler",
+      "description": "Finans, telekom, perakende ve savunma sektörlerinde yüksek ölçekli sistemler geliştiriyor ve yönetiyoruz.",
+      "items": [
+        {
+          "title": "Bankacılık & Finans",
+          "description": "Fintech entegrasyonları ve yüksek hacimli işlem altyapılarıyla güvenli, hızlı ve regülasyon uyumlu sistemler geliştiriyoruz."
+        },
+        {
+          "title": "Perakende",
+          "description": "Müşteri deneyimini güçlendiren ve operasyonel verimliliği artıran dijital platformlar ve veri odaklı çözümler geliştiriyoruz."
+        },
+        {
+          "title": "Telekomünikasyon",
+          "description": "Yüksek trafikli sistemler ve 5G dönüşüm süreçleri için ölçeklenebilir, kesintisiz ve performans odaklı altyapılar sunuyoruz."
+        },
+        {
+          "title": "Savunma Sanayi",
+          "description": "Kritik sistemler için yüksek güvenlik standartlarına sahip, dayanıklı ve sürdürülebilir yazılım ve altyapı çözümleri sunuyoruz."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "Finans, Savunma, Perakende ve Telekom sektörleri için stratejik teknoloji ortağı. 30+ yıldır dijital dönüşümü güvenle yönetiyoruz.",
+    "columns": {
+      "services": "Hizmetler",
+      "industries": "Sektörler",
+      "corporate": "Kurumsal",
+      "offices": "Ofislerimiz"
+    },
+    "links": {
+      "managedServices": "Yönetilen Hizmetler",
+      "devops": "DevOps & SRE",
+      "softwareDev": "Yazılım Geliştirme",
+      "banking": "Bankacılık & Finans",
+      "defense": "Savunma Sanayi",
+      "retailTelecom": "Perakende & Telekom",
+      "about": "Hakkımızda",
+      "careers": "Kariyer",
+      "talent": "Genç Yetenek",
+      "contact": "İletişim"
+    },
+    "copyright": "© 2026 BGTS. Tüm hakları saklıdır."
+  },
+  "about": {
+    "hero": {
+      "title": "Hakkımızda",
+      "subtitle": "Bizi biz yapan kültürümüzden besleniyor, eklektik yapımızla inovasyonu harmanlayarak bilgi okyanusunda emin adımlarla rotamızı çiziyoruz."
+    },
+    "stats": [
+      {
+        "val": "30",
+        "unit": "Yıl",
+        "label": "Deneyim"
+      },
+      {
+        "val": "3000+",
+        "unit": "",
+        "label": "Proje"
+      },
+      {
+        "val": "14",
+        "unit": "",
+        "label": "Aktif Ülke"
+      },
+      {
+        "val": "850+",
+        "unit": "",
+        "label": "Uzman"
+      },
+      {
+        "val": "100+",
+        "unit": "",
+        "label": "Partner"
+      }
+    ],
+    "overview": {
+      "quote": "1997'den bu yana edindiğimiz kurumsal deneyim ve sektörel uzmanlığımızla geleceğin teknolojilerine yön vermeye devam ediyoruz.",
+      "heading": "Dijital Dönüşümün\nGüvenilir Adresi",
+      "p1": "Uygulama Geliştirme, Veri Analitiği, Sistem Altyapıları, Güvenlik ve Uyumluluk ile Yazılım süreçlerimizi modern iş mimarisine dayalı platformlar üzerinden yürütür, kurumunuzun ",
+      "p1Highlight": "dijital dönüşümünü vizyoner",
+      "p1End": " bir bakış açısıyla tasarlar, en ileri teknoloji ile hayata geçirir ve destekleriz.",
+      "p2": "Hizmet ağımızı uluslararası standartlarda daha ileriye taşımak için özveriyle çalışıyor, her yeni projede dünün bilgi birikimini bugünün dehasıyla harmanlıyor; geleceğin teknolojilerine yön vermek adına sektörel liderliğimizi sürdürüyoruz.",
+      "tags": [
+        "Yazılım Geliştirme",
+        "Veri Analitiği",
+        "Sistem Altyapıları",
+        "Güvenlik & Uyumluluk",
+        "DevOps",
+        "Yapay Zeka"
+      ]
+    },
+    "expertise": {
+      "heading": "Kanıtlanmış Uzmanlık",
+      "subtitle": "Bilişim 500 araştırmasına göre finans ve bankacılık yazılımlarında 5 yıldır peş peşe ilk 5'te yer almanın gururunu yaşıyoruz.",
+      "ctaText": "Detaylı Bilgi"
+    },
+    "values": {
+      "badge": "Temel Prensipler",
+      "heading": "Şirket Değerleri",
+      "description": "Sürdürülebilir büyüme, yenilikçi anlayış ve müşteri odaklılık standartlarımızın en önemli temel prensipleridir.",
+      "items": [
+        {
+          "title": "Kalite",
+          "desc": "Hizmetlerimizde en yüksek kalite standartlarını sunmayı hedefler, müşteri odaklı yaklaşımımızla uluslararası platformlarda başarıyı güvence altına alırız."
+        },
+        {
+          "title": "Sürekli İnovasyon",
+          "desc": "Geçmişin deneyimini geleceğin vizyonuyla harmanlıyor; teknolojiyi ilk kullanan ve sektörel standartları belirleyen oyuncu olmayı hedefliyoruz."
+        },
+        {
+          "title": "Küresel Uzmanlık",
+          "desc": "Dünyanın dört bir yanındaki ofislerimizle uluslararası standartlarda işbirlikleri ve çözümler sunarak küresel pazarda büyüyoruz."
+        },
+        {
+          "title": "Gurur Duyuyoruz",
+          "desc": "Başarılarımızın her zaman en iyi referans olacağına inanıyor, sağladığımız katma değer ve ödüllerle motivasyonumuzu artırıyoruz."
+        }
+      ]
+    },
+    "partners": {
+      "heading": "İş Ortaklıkları",
+      "subtitle": "Güçlü ekosistemimiz, sektörün liderleriyle olan entegre işbirliklerimize dayanır."
+    },
+    "certifications": {
+      "heading": "Sertifikasyonlar",
+      "subtitle": "Uluslararası standartlarda sunduğumuz hizmetlerin kalitesi yetkili denetim kuruluşları tarafından onaylanmaktadır.",
+      "labels": [
+        "Kalite Yönetim Sistemleri",
+        "Bilgi Güvenliği Yönetim Sistemleri",
+        "Servis Yönetimi",
+        "Süreç Değerlendirme",
+        "Gizlilik Bilgi Yönetimi",
+        "Yazılım Yaşam Döngüsü"
+      ]
+    },
+    "references": {
+      "heading": "Başlıca Referanslarımız"
+    },
+    "contact": {
+      "heading": "Geleceği Birlikte\nTasarlayalım",
+      "description": "İhtiyaçlarınıza özel stratejik çözüm ortaklığı için bizimle iletişime geçin. Uzman ekibimiz en kısa sürede projeniz için hazır olacaktır.",
+      "support": "Destek Hattı",
+      "expert": "Uzman Desteği"
+    }
+  },
+  "services": {
+    "softwareDevelopment": {
+      "hero": {
+        "title": "Yazılım Geliştirme",
+        "subtitle": "Finans, Telekom ve Kritik Altyapılar için Yüksek Performanslı Çözümler",
+        "badge": "Özel Yazılım Çözümleri"
+      },
+      "sidebar": {
+        "technical": "Yazılım Hizmetleri",
+        "sectoral": "Sektörel Yazılım Çözümleri"
+      },
+      "sectoralDomains": [
+        {
+          "id": "banking",
+          "title": "Bankacılık & Finansal Sistemler",
+          "subtitle": "Finansal Yazılım Çözümleri",
+          "description": "Bankacılık ve finans sektörüne özel regülasyonlara uyumlu, yüksek güvenlikli ve yüksek performanslı yazılım çözümleri geliştiriyoruz.",
+          "features": [
+            {
+              "title": "Kredi Risk İzleme"
+            },
+            {
+              "title": "Kredi Takip (Sorunlu Krediler)"
+            },
+            {
+              "title": "Krediler Tahsilat"
+            },
+            {
+              "title": "Krediler Tasfiye"
+            },
+            {
+              "title": "Otomatik Tahsilat Süreçleri"
+            },
+            {
+              "title": "Müşteri Sınıflama"
+            },
+            {
+              "title": "Yasal Takip süreçleri"
+            },
+            {
+              "title": "Varlık Yönetim Şirketine Devir Süreci"
+            },
+            {
+              "title": "Dış Ticaret İhracat İşlemleri"
+            },
+            {
+              "title": "FIX & Pricing & Hedging altyapıları"
+            },
+            {
+              "title": "Teminat Yönetimi"
+            },
+            {
+              "title": "Mevduat"
+            },
+            {
+              "title": "Kampanya Yönetimi"
+            },
+            {
+              "title": "Kurum Entegrasyonları"
+            },
+            {
+              "title": "E-Fatura & E-Defter & E-Arşiv"
+            }
+          ]
+        },
+        {
+          "id": "trading",
+          "title": "E-Trading, Market Data & Düşük Gecikmeli Sistemler",
+          "subtitle": "Low-Latency Finansal Altyapılar",
+          "description": "Finansal piyasalara yönelik düşük gecikmeli (low-latency), yüksek hacimli işlem altyapıları tasarlıyoruz.",
+          "features": [
+            {
+              "title": "Market Data & FIX Ekosistemi",
+              "description": "FIX protokolü, pricing ve hedging altyapıları, gerçek zamanlı market-data işleme ve performans kritik sistemlerde uzmanlığa sahibiz."
+            },
+            {
+              "title": "Yüksek Trafik & Ölçeklenebilirlik",
+              "description": "Yüksek trafik altında kararlılığını koruyan, ölçeklenebilir mimariler geliştiriyoruz."
+            }
+          ]
+        },
+        {
+          "id": "telecom",
+          "title": "Telekom & Dijital İletişim Platformları",
+          "subtitle": "Dijital Kanal Platformları",
+          "description": "Failover routing, yüksek trafik dayanıklılığı ve mobil-first mimariler ile kritik iletişim süreçlerini güvence altına alıyoruz.",
+          "features": [
+            {
+              "title": "Çok Kanallı İletişim Çözümleri",
+              "description": "SMS, OTP, Viber, WhatsApp ve çok kanallı kampanya orkestrasyonu çözümleri sunuyoruz."
+            },
+            {
+              "title": "Yüksek Trafik & Telco Entegrasyonları",
+              "description": "Failover routing, yüksek trafik dayanıklılığı, telco charging/billing entegrasyonları ve mobil-first mimariler ile kritik iletişim süreçlerini güvence altına alıyoruz."
+            }
+          ]
+        },
+        {
+          "id": "fraud",
+          "title": "Fraud & Risk & AI Destekli Doğrulama Sistemleri",
+          "subtitle": "AI Destekli Güvenlik Sistemleri",
+          "description": "Gerçek zamanlı doğrulama, anomali tespiti ve sahtekârlık önleme çözümleriyle finansal ve operasyonel riskleri minimize ediyoruz.",
+          "features": [
+            {
+              "title": "Fraud Detection & Risk Scoring",
+              "description": "Fraud detection, risk scoring ve rule-engine tabanlı karar mekanizmalarını AI destekli modellerle birleştiriyoruz."
+            },
+            {
+              "title": "Gerçek Zamanlı Doğrulama",
+              "description": "Gerçek zamanlı doğrulama, anomali tespiti ve sahtekârlık önleme çözümleriyle finansal ve operasyonel riskleri minimize ediyoruz."
+            }
+          ]
+        }
+      ],
+      "technicalDomains": [
+        {
+          "id": "bigdata",
+          "title": "Büyük Veri & Gerçek Zamanlı Veri İşleme",
+          "subtitle": "Gerçek Zamanlı Veri İşleme",
+          "description": "Büyük hacimli verileri gerçek zamanlı işleyen, ölçeklenebilir ve dayanıklı veri altyapıları kuruyoruz.",
+          "features": [
+            {
+              "title": "Streaming & Dağıtık Veri Mimarileri",
+              "description": "Kafka, Spark ve streaming tabanlı mimariler ile büyük hacimli verileri gerçek zamanlı işleyen platformlar kuruyoruz."
+            },
+            {
+              "title": "Event-Driven & High Availability",
+              "description": "Dağıtık, event-driven ve high-availability mimariler sayesinde ölçeklenebilir ve dayanıklı veri altyapıları oluşturuyoruz."
+            }
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "Yapay Zekâ & AI-First Mimari Çözümleri",
+          "subtitle": "AI-First Mimari Çözümleri",
+          "description": "Kurumsal sistemlerinize entegre, güvenli ve sürdürülebilir yapay zekâ çözümleri sunuyoruz.",
+          "features": [
+            {
+              "title": "AI-First Yaklaşım",
+              "description": "AI-first yaklaşımıyla RAG sistemleri, LLM entegrasyonları, embedding ve agent tabanlı yapılar geliştiriyoruz."
+            },
+            {
+              "title": "Kurumsal AI Entegrasyonları",
+              "description": "Kurumsal sistemlerinize entegre, güvenli ve sürdürülebilir yapay zekâ çözümleri sunuyoruz."
+            }
+          ]
+        },
+        {
+          "id": "modernization",
+          "title": "Yazılım Modernizasyonu & Mikroservis Dönüşümü",
+          "subtitle": "Mikroservis Dönüşümü",
+          "description": "Legacy sistemlerinizi modern mimarilere taşıyor, performans ve maliyet optimizasyonu sağlıyoruz.",
+          "features": [
+            {
+              "title": "Legacy Dönüşüm",
+              "description": "Legacy sistemlerinizi modern mimarilere taşıyor, mikroservis dönüşüm projelerini uçtan uca yönetiyoruz."
+            },
+            {
+              "title": "Performans & Ölçeklenebilirlik",
+              "description": "Performans optimizasyonu, sistem modernizasyonu, ölçeklenebilirlik ve maliyet optimizasyonu konularında danışmanlık ve uygulama desteği sağlıyoruz."
+            }
+          ]
+        }
+      ],
+      "developmentDomains": [
+        {
+          "id": "development-services",
+          "title": "Yazılım Geliştirme Hizmetleri",
+          "subtitle": "Modern Mimari, DevOps & Güvenlik",
+          "description": "Modern yazılım mimarileri, DevOps uyumlu geliştirme süreçleri ve güvenlik odaklı yaklaşımımızla kurumsal yazılım projelerinizi uçtan uca destekliyoruz.",
+          "features": [
+            {
+              "title": "Modern Yazılım Mimarileri",
+              "description": "DDD, API-first, mikroservis ve event-driven mimarilerle ölçeklenebilir sistemler tasarlıyoruz. Clean Architecture ve SOLID prensipleriyle uzun ömürlü yazılım çözümleri üretiyoruz."
+            },
+            {
+              "title": "DevOps Uyumlu Yazılım Geliştirme",
+              "description": "CI/CD pipeline'ları, test otomasyonu, containerized deployment (Docker, Kubernetes) ve observability çözümleri ile yazılım yaşam döngüsünü uçtan uca yönetiyoruz."
+            },
+            {
+              "title": "Güvenlik & Regülasyon Uyumlu Geliştirme",
+              "description": "OWASP, API security, IAM, rate-limit, HSM entegrasyonu, zaman damgası ve e-imza çözümleri ile güvenliği yazılımın merkezine alıyoruz."
+            }
+          ]
+        }
+      ]
+    },
+    "devops": {
+      "hero": {
+        "title": "DevOps & SRE",
+        "subtitle": "Otomatik boru hatları ve bulut tabanlı güvenilirlik ile dijital dönüşümü hızlandırın."
+      },
+      "metrics": {
+        "deployment": {
+          "title": "Deployment Hızı",
+          "unit": "daha hızlı",
+          "desc": "Otomatik CI/CD ile"
+        },
+        "uptime": {
+          "title": "Uptime",
+          "unit": "%",
+          "desc": "Kesintisiz operasyon"
+        },
+        "recovery": {
+          "title": "Recovery Time",
+          "unit": "dakika",
+          "desc": "Otomatik recovery"
+        },
+        "pipeline": {
+          "title": "Pipeline Success",
+          "unit": "%",
+          "desc": "Automated testing"
+        }
+      },
+      "cicd": {
+        "title": "CI/CD & Otomasyon",
+        "p1": "üzerinde uçtan uca pipeline'lar tasarlıyor ve yönetiyoruz. Otomatik test ve sürüm yönetimi, manuel hata risklerini en aza indirirken teslimat döngülerini hızlandırır.",
+        "p2": "kullanarak altyapıyı kod olarak (IaC) yönetiyor, tutarlı ve denetlenebilir ortamlar sağlıyoruz.",
+        "advantagesTitle": "Pipeline Avantajları",
+        "advantages": [
+          "Otomatik test ve deploy",
+          "Rollback yeteneği",
+          "Sürüm yönetimi",
+          "Code review otomasyonu"
+        ],
+        "imageTitle": "CI/CD Pipeline",
+        "imageSubtitle": "Otomatik ve Güvenilir"
+      },
+      "kubernetes": {
+        "title": "Kubernetes & Cloud-Native",
+        "p1": "ekosisteminde kapsamlı deneyim. Küme kurulumundan ArgoCD ile GitOps tabanlı dağıtımlara kadar. Otomatik ölçeklendirme için HPA, trafik kontrolü için service mesh ve kapsamlı felaket kurtarma planlaması uyguluyoruz.",
+        "p2": "Mikroservis dönüşümü ve bulut tabanlı (cloud-native) projeleri planlamadan üretime kadar destekliyoruz.",
+        "cards": [
+          {
+            "title": "Kubernetes Orkestrasyonu",
+            "desc": "Otomatik ölçeklendirme, self-healing ve rolling updates"
+          },
+          {
+            "title": "GitOps",
+            "desc": "Git tabanlı deployment ve configuration management"
+          }
+        ],
+        "imageTitle": "Cloud-Native",
+        "imageSubtitle": "Ölçeklenebilir & Esnek"
+      },
+      "techStack": {
+        "title": "Teknoloji Yığını",
+        "categories": {
+          "cicd": "CI/CD",
+          "orchestration": "Orkestrasyon",
+          "automation": "Otomasyon",
+          "security": "Güvenlik"
+        }
+      },
+      "process": {
+        "title": "DevOps Sürecimiz",
+        "subtitle": "Planla → Kodla → Test et → Dağıt → İzle",
+        "steps": [
+          {
+            "title": "Planla",
+            "desc": "İhtiyaç analizi"
+          },
+          {
+            "title": "Kodla",
+            "desc": "Version control"
+          },
+          {
+            "title": "Test et",
+            "desc": "Automated testing"
+          },
+          {
+            "title": "Dağıt",
+            "desc": "CI/CD pipeline"
+          },
+          {
+            "title": "İzle",
+            "desc": "Monitoring & alerts"
+          }
+        ]
+      }
+    },
+    "managedServices": {
+      "hero": {
+        "title": "Yönetilen Hizmetler ve Danışmanlık",
+        "subtitle": "BT Operasyonlarınızı Bize Devredin. Siz İşinize Odaklanın. 400+ mühendis, 30 yılı aşkın sektör deneyimi ve 5.000+ sunucu ölçeğindeki operasyon kapasitesiyle uçtan uca yönetiyoruz.",
+        "tag": "BGTS Yönetilen Hizmetler",
+        "catalog": "Hizmetleri Kataloğu"
+      },
+      "pillars": [
+        {
+          "id": "p1",
+          "title": "MSP & Yönetilen Hizmetler",
+          "overview": {
+            "title": "BT Operasyonlarınızı Bize Devredin. Siz İşinize Odaklanın.",
+            "description": "400+ mühendis, 30 yılı aşkın sektör deneyimi ve 5.000+ sunucu ölçeğindeki operasyon kapasitesiyle veri merkezi platformlarından son kullanıcı desteğine kadar tüm BT operasyonlarınızı İzleme & Müdahale, Geliştirme & Katma Değer ve Yönetim & Analitik katmanlarında 7/24 yönetiyoruz.",
+            "stats": [
+              {
+                "value": "400+",
+                "label": "Mühendislik Ekibi",
+                "sub": "Mühendislik odaklı kadro"
+              },
+              {
+                "value": "210",
+                "label": "7/24 NOC & FLR",
+                "sub": "Kesintisiz operasyon ekibi"
+              },
+              {
+                "value": "55+",
+                "label": "Üretici Yetkinliği",
+                "sub": "Eskalasyon mühendisliği"
+              },
+              {
+                "value": "30+",
+                "label": "Yıl Tecrübe",
+                "sub": "BilgeAdam ekosistemi"
+              },
+              {
+                "value": "%90+",
+                "label": "İlk Katmanda Çözüm",
+                "sub": "FLR — veri merkezi olayları"
+              },
+              {
+                "value": "%85+",
+                "label": "İlk Gün Çözüm",
+                "sub": "Same-day resolution"
+              },
+              {
+                "value": "<%1.3",
+                "label": "Re-bound Oranı",
+                "sub": "Tekrarlayan çağrı"
+              },
+              {
+                "value": "50+",
+                "label": "ITIL Sertifikalı",
+                "sub": "Danışman & mühendis"
+              }
+            ],
+            "model": {
+              "title": "MSP Hizmet Modeli",
+              "description": "BGTS Yönetilen Hizmetler modeli; teknik operasyonları dışarıdan yönetmekle sınırlı kalmaz. Altyapınızı tanır, süreçlerinizi geliştirir ve kurumunuzun büyümesine paralel ölçekleniriz. İlişki başlamadan önce alarm kalitesi, olay müdahalesi, otomasyon olgunluğu, gözlemlenebilirlik kapsamı ve SRE hazırlığını yapılandırılmış bir değerlendirmeyle analiz eder; bulguları ekibinizin de yönetimin de kullanabileceği somut bir rapor olarak sunarız. Sabit ve değişken maliyetleri öngörülebilir bir hizmet modeline dönüştürürken işe alım, eğitim ve elde tutma riskini de üstleniriz. Yalnızca arızayı değil; değişiklik ve talep süreçlerini de aynı olgunlukla, müşteriye özel SLA taahhütleri ve düzenli raporlarla şeffaf biçimde yönetiriz."
+            },
+            "layersTitle": "Üst Seviye Hizmet Kapsamı — 3 Katmanlı MSP Modeli",
+            "layers": [
+              {
+                "title": "İzleme & Müdahale",
+                "description": "L0 Monitoring & Observability — Servis bazlı izleme, AIOps alarm korelasyonu, %62 alarm optimizasyonu. L1 İlk Katman Çözüm — 210 kişi, 7/24, %90+ FLR, %85+ ilk gün çözüm, <%1.3 re-bound. L2–L3 Eskalasyon — 55 üretici yetkinliği, kök sebep analizi, majör olay yönetimi."
+              },
+              {
+                "title": "Geliştirme & Katma Değer",
+                "description": "Yapay Zeka — Ticket analizi, auto-remediation, KB üretimi, çağrı merkezi botu. Teknoloji Danışmanlığı — Blueprint, sağlık taramaları, otomasyon, patch & vulnerability yönetimi. ITSM/ITIL — 50+ ITIL sertifikalı danışman, ServiceNow, Jira ve BMC yetkinliği."
+              },
+              {
+                "title": "Yönetim & Analitik",
+                "description": "Customer Success Management — Tek iletişim noktası, SLA/OLA uyum, hizmet sağlık skoru. Operasyonel Zeka — Dedike analitik departmanı, anomali tespiti, yük analizi, ham veriden operasyonel farkındalık. Stratejik Performans — C-Level raporlama, hizmet sürekliliği ve iş değeri katkı analizi."
+              }
+            ],
+            "komTitle": "Kurumsal Operasyon Merkezi",
+            "kom": [
+              {
+                "title": "Destek Katmanları",
+                "items": [
+                  "Dispatcher",
+                  "Destek Mühendisi",
+                  "Eskalasyon Mühendisi"
+                ]
+              },
+              {
+                "title": "Katma Değerli Hizmetler",
+                "items": [
+                  "Otomasyon Mühendisi",
+                  "Optimizasyon Mühendisi",
+                  "Teknoloji Uzmanları"
+                ]
+              },
+              {
+                "title": "Hizmet Yönetimi",
+                "items": [
+                  "Takım Lideri",
+                  "Hizmet Sunum Yöneticisi",
+                  "SLA Yöneticisi"
+                ]
+              },
+              {
+                "title": "Servis Organizasyonu Tasarımı",
+                "items": [
+                  "ITSM Aracı Uzmanı",
+                  "ITIL Süreç Uzmanı"
+                ]
+              }
+            ],
+            "komTags": [
+              "Çağrı Kalitesi Optimizasyonu",
+              "Çağrı İzolasyonu",
+              "Knowledge Base Üretimi",
+              "Kontrat KPI Yönetimi",
+              "Kriz Yönetimi",
+              "Performans Yönetimi"
+            ],
+            "managementTitle": "Temel Yönetim Alanları",
+            "management": [
+              {
+                "title": "İşletim Sistemi Yönetimi",
+                "description": "Windows Server ve Linux sistemlerin kurulum, konfigürasyon ve yaşam döngüsü yönetimi; yama uyumluluğu, politika denetimi ve sürüm geçişleri dahil uçtan uca yönetilir."
+              },
+              {
+                "title": "Mesajlaşma Yönetimi",
+                "description": "Microsoft Exchange, Skype for Business ve benzeri messaging platformlarının proaktif izleme, kapasite yönetimi ve servis sağlığı operasyonları; mail akışı ve kuyruk takibi ile sürekliliği güvence altına alıyoruz."
+              },
+              {
+                "title": "Veritabanı Yönetimi",
+                "description": "Oracle, MSSQL ve PostgreSQL veritabanlarının performans izleme, yedekleme ve erişim yönetimi; uzman DBA ekibi ile 7/24 operasyonel destek sağlanır."
+              },
+              {
+                "title": "Orta Katman Yönetimi",
+                "description": "Uygulama sunucuları, web servisleri ve API gateway katmanlarının konfigürasyon, güncelleme ve servis izleme operasyonları; iş uygulamalarının kesintisiz çalışması sağlanır."
+              },
+              {
+                "title": "Sanallaştırma Yönetimi",
+                "description": "VMware vSphere, Hyper-V ve vROps platformlarında sanal makine yaşam döngüsü, kaynak havuzu optimizasyonu ve kapasite planlaması; fiziksel altyapının maksimum verimle işletilmesi sağlanır."
+              }
+            ],
+            "analyticsTitle": "Yönetim & Analitik",
+            "analytics": [
+              {
+                "title": "Customer Success Management",
+                "items": [
+                  "Tek iletişim noktası, tek özet",
+                  "SLA / OLA uyum ve hizmet kalitesi",
+                  "Hizmet sağlık skoru & risk göstergeleri",
+                  "Değer gerçekleşimi & benimseme düzeyi"
+                ]
+              },
+              {
+                "title": "Operasyonel Zeka",
+                "items": [
+                  "Dedike analitik departmanı",
+                  "Yük analizi & standardizasyon",
+                  "Anomali tespiti & sapma analizi",
+                  "Ham veriden operasyonel farkındalık"
+                ]
+              },
+              {
+                "title": "Stratejik Performans",
+                "items": [
+                  "C-Level hizmet seviyesi & deneyim skoru",
+                  "Hizmet sürekliliği & kesinti etki analizi",
+                  "Sürekli iyileştirme & önleyici aksiyon oranı",
+                  "Hizmetin iş değerine katkısı"
+                ]
+              },
+              {
+                "title": "Proaktif Öngörüler",
+                "items": [
+                  "Talep & yük trend analizleri",
+                  "Operasyonel verimlilik raporlaması",
+                  "Sektör standartları ile kıyaslama",
+                  "İyileştirme fırsatları & aksiyon planı"
+                ]
+              }
+            ]
+          },
+          "services": [
+            {
+              "id": "veri-merkezi",
+              "title": "Veri Merkezi Yönetimi",
+              "subtitle": "Destek Hizmeti",
+              "icon": "Server",
+              "description": "BGTS, kritik veri merkezi altyapılarınızda yer alan sunucu, depolama, sanallaştırma ve yedekleme sistemlerini uçtan uca yönetir. Proaktif izleme, kapasite analizi ve yapay zeka destekli operasyon yaklaşımı sayesinde oluşabilecek sorunlar erken aşamada tespit edilir, çağrılar etkin şekilde sınıflandırılır ve doğru eskalasyon süreçleriyle yönetilir.\n\nOperasyonel verimliliği artırmaya yönelik iyileştirici aksiyonların planlanması ve otomasyon süreçlerinin geliştirilmesi de hizmet kapsamına dahildir. Bu sayede kesintisiz hizmet sürekliliği sağlanırken sistem performansı ve operasyonel olgunluk sürekli artırılır.",
+              "tags": [
+                "Çağrı Yönetimi",
+                "Triaj",
+                "Eskalasyon",
+                "SLA Takibi",
+                "7/24 Destek",
+                "Raporlama",
+                "ITSM",
+                "Olay Yönetimi"
+              ],
+              "features": [
+                {
+                  "title": "Çağrı Karşılama & Triaj",
+                  "description": "Veri merkezi kaynaklı tüm çağrıları 7/24 karşılıyor; öncelik, kategori ve etki alanını hızla belirleyerek doğru ekibe yönlendiriyoruz."
+                },
+                {
+                  "title": "Çözüm Takibi & Eskalasyon",
+                  "description": "Açık çağrıları SLA kapsamında izliyor; gerektiğinde ilgili tarafları devreye alıyor ve süreç boyunca müşteri bilgilendirmesini kesintisiz sürdürüyoruz."
+                },
+                {
+                  "title": "Raporlama & Trend Analizi",
+                  "description": "Çözüm süreleri, tekrarlayan sorunlar ve yoğunluk trendlerini düzenli raporlarla müşteriye sunuyor; operasyonel iyileştirme fırsatlarını görünür kılıyoruz."
+                }
+              ]
+            },
+            {
+              "id": "noc",
+              "title": "7/24 İzleme & NOC",
+              "subtitle": "Yönetilen Hizmet",
+              "icon": "Activity",
+              "description": "BGTS Network Operations Center (NOC), Zabbix, Prometheus, Grafana ve ELK Stack gibi modern izleme teknolojileriyle oluşturulan merkezi bir platforma dayanır. Tüm altyapı verileri tek ekranda (Single Pane of Glass) analiz edilirken yapay zeka destekli alarm analizi, operasyon ekiplerinin gerçek sorunlara odaklanmasını ve gereksiz alarm gürültüsünü minimize etmesini sağlar.\n\nOtomatik runbook'lar ve önleyici aksiyonlar sayesinde pek çok sorun alarm oluşmadan ya da ilk bildirimde otomatik olarak çözülür; manuel müdahale ihtiyacı sürekli azaltılır.",
+              "tags": [
+                "Zabbix",
+                "OpenTelemetry",
+                "AIOps",
+                "Alarm Konsolidasyon",
+                "Servis Ağacı",
+                "Self-Healing",
+                "Sentetik İzleme",
+                "L0/L1/L2/L3",
+                "SLO Burn Rate",
+                "7/24 NOC"
+              ],
+              "features": [
+                {
+                  "title": "Alarm Konsolidasyon & Servis Ağaçları",
+                  "description": "Zabbix, Datadog, Grafana, CloudWatch, Prometheus, OpenTelemetry ve SNMP dahil tüm izleme kaynaklarını ortak bir şema altında normalize ediyoruz. Servis ağacı modeli sayesinde alarmlar doğrudan iş bağlamına oturtulur."
+                },
+                {
+                  "title": "AI Destekli Alarm Optimizasyonu",
+                  "description": "Dinamik eşik öğrenmesiyle alarmlar kurulum sırasında sabit bırakılan bir rakamı değil, servisin normal davranışından sapmaları ölçer. %63'e varan alarm hacmi düşüşü."
+                },
+                {
+                  "title": "Self-Healing Otomasyon",
+                  "description": "Tekrarlayan arıza kalıplarında otomatik kurtarma gerçekleşir. Başarılı çözümde ticket açılır ve anında kapanır; başarısız olursa mühendis devralır."
+                },
+                {
+                  "title": "Sentetik İzleme & NOC Organizasyonu",
+                  "description": "Kritik kullanıcı yolculukları API zinciri düzeyinde dışarıdan test edilir; CDN veya bölgesel sorunlar kullanıcı şikayetinden önce yakalanır."
+                }
+              ]
+            },
+            {
+              "id": "euc",
+              "title": "Son Kullanıcı & Cihaz Yönetimi",
+              "subtitle": "Yönetilen Hizmet",
+              "icon": "Users",
+              "description": "Her işletimsel sorun, kullanıcılarınızın verimliliğini düşürür ve IT ekibinize operasyonel yük bindirir. BGTS, geleneksel helpdesk yaklaşımının ötesine geçerek kullanıcı deneyimini merkeze alan bir destek modeli sunar. Çalışanlarınız ofiste, evde veya sahada olsun; cihazlar merkezi olarak izlenir, yönetilir ve desteklenir.",
+              "tags": [
+                "L1 / L2 / L3",
+                "VIP Destek",
+                "MDM",
+                "Remote Support",
+                "ITSM",
+                "SLA"
+              ],
+              "features": [
+                {
+                  "title": "L1–L3 Destek & VIP Hizmet",
+                  "description": "%85 ilk aramada çözüm oranı; VIP kullanıcılara özel izolasyon, loglama ve değişiklik yönetimi süreçleri."
+                },
+                {
+                  "title": "Merkezi Cihaz & Endpoint Yönetimi",
+                  "description": "Dizüstü, masaüstü ve mobil cihazların yaşam döngüsünü uçtan uca yönetiyor; standartlaşma ve güvenlik uyumluluğunu sağlıyoruz."
+                },
+                {
+                  "title": "Uzaktan Destek & Saha Hizmetleri",
+                  "description": "Ofis, ev veya saha bağımsız uzaktan müdahale kapasitesi; gerektiğinde yerinde teknik destek ekibi."
+                }
+              ]
+            },
+            {
+              "id": "sccm",
+              "title": "SCCM / Endpoint Yönetimi",
+              "subtitle": "Yönetilen Hizmet",
+              "icon": "Monitor",
+              "description": "Güncelleme uyumluluğu düşük cihazlar, yazılım dağıtım sorunları ve yetersiz patch yönetimi güvenliği riske atar. BGTS, Microsoft Endpoint Configuration Manager (SCCM) ve Intune altyapınızın kurulumu, yönetimi ve sürekli optimizasyonunu uçtan uca hizmet modeliyle sunar.",
+              "tags": [
+                "SCCM / MECM",
+                "Microsoft Intune",
+                "Patch Management",
+                "Software Deployment",
+                "OS Image",
+                "Compliance",
+                "Envanter Yönetimi",
+                "Windows Server Update"
+              ],
+              "features": [
+                {
+                  "title": "Sunucu Yama Uyumluluğu & Dashboard",
+                  "description": "Yönetilen sunucuların güncelleme oranını gerçek zamanlı izliyor; Active Directory, Exchange ve SQL gibi kritik servisler için ayrı metrikler sunuyoruz."
+                },
+                {
+                  "title": "Güncelleme Sınıflandırma",
+                  "description": "Security ve OS güncellemelerini sınıflandırarak önceliklendirir; eksik yamaları otomatik dağıtım süreçleriyle en kısa sürede kapatırız."
+                },
+                {
+                  "title": "Yazılım Dağıtımı & OS İmaj Yönetimi",
+                  "description": "Standart imajlar ve task sequence'larla yeni kurulum süresini dakikalara indiririz."
+                }
+              ]
+            },
+            {
+              "id": "itsm",
+              "title": "ITSM as a Service",
+              "subtitle": "Yönetilen Hizmet",
+              "icon": "LayoutGrid",
+              "description": "ITSM araçları yetersiz yapılandırıldığında SLA'lar izlenemez olur. BGTS, 50+ ITIL sertifikalı danışmanıyla ServiceNow, Jira Service Manager ve BMC platformlarında ITIL tabanlı hizmet organizasyonunuzu tasarlar, iyileştirir ve olgunlaştırır.",
+              "tags": [
+                "ITIL v4",
+                "ServiceNow",
+                "Jira Service",
+                "BMC",
+                "50+ ITIL Sertifikalı",
+                "SLA / OLA",
+                "Servis Kataloğu",
+                "CMDB",
+                "Süreç İyileştirme"
+              ],
+              "features": [
+                {
+                  "title": "Olay & Sorun Yönetimi",
+                  "description": "SLA'ya bağlı olay yönetimi; yapay zeka destekli kök neden analizi ile tekrarlayan sorunları kalıcı olarak ortadan kaldırıyoruz."
+                },
+                {
+                  "title": "SLA / OLA Modelleme & Servis Kataloğu",
+                  "description": "İhtiyaçlarınıza göre hizmet seviyelerini tasarlıyor ve servis ağaçları ile IT yönetimini şeffaflaştırıyoruz."
+                },
+                {
+                  "title": "CMDB & Süreç İyileştirme",
+                  "description": "Konfigürasyon yönetim veritabanı (CMDB) ile IT varlıklarını güncel tutuyoruz."
+                }
+              ]
+            },
+            {
+              "id": "devops",
+              "title": "DevOps as a Service",
+              "subtitle": "Yönetilen Hizmet",
+              "icon": "GitBranch",
+              "description": "Yazılım geliştirme ekipleri hızlı teslimat yaparken operasyon ekibi üzerindeki baskı artar. BGTS DevOps hizmeti, geliştirmeden production'a uzanan tüm yazılım teslimat zincirini otomasyon odaklı bir yapıya dönüştürür.",
+              "tags": [
+                "Jenkins",
+                "GitLab CI",
+                "GitHub Actions",
+                "Terraform",
+                "Ansible",
+                "Docker",
+                "Kubernetes",
+                "Infrastructure as Code",
+                "DevSecOps"
+              ],
+              "features": [
+                {
+                  "title": "CI/CD Pipeline Yönetimi",
+                  "description": "Otomatik derleme, test ve deploy süreçleriyle yazılım teslimat hızını ve tutarlılığını artırıyoruz."
+                },
+                {
+                  "title": "Infrastructure as Code",
+                  "description": "Terraform ve Ansible ile altyapıyı kod olarak yönetiyor; her ortamın tutarlı bir şekilde oluşturulmasını sağlıyoruz."
+                },
+                {
+                  "title": "Container & Kubernetes",
+                  "description": "Docker ve Kubernetes cluster yönetimiyle uygulamaların ölçeklenebilir ve taşınabilir biçimde çalışmasını sağlıyoruz."
+                }
+              ]
+            },
+            {
+              "id": "sre",
+              "title": "SRE as a Service",
+              "subtitle": "Yönetilen Hizmet",
+              "icon": "Infinity",
+              "description": "Güvenilirlik, sonradan eklenen bir özellik değil baştan yerleştirilen bir çalışma felsefesidir. SLI/SLO/hata bütçesi tanımından kaos mühendisliğine, toil eliminasyonundan on-call yük optimizasyonuna kadar SRE disiplinini kurumunuza aktif bir mühendislik pratiği olarak yerleştiriyoruz.",
+              "tags": [
+                "SLO / SLI",
+                "Hata Bütçesi",
+                "Kaos Mühendisliği",
+                "GameDay",
+                "Toil Azaltma",
+                "Kapasite Planlama",
+                "Postmortem",
+                "On-Call Optimizasyonu",
+                "Observability"
+              ],
+              "features": [
+                {
+                  "title": "Güvenilirlik Tanımı — SLI / SLO",
+                  "description": "Alarmlar keyfi metrik eşiklerini değil SLO tüketim hızını izler. Güvenilirlik ve yenilik hızı arasındaki dengeyi yönetiriz."
+                },
+                {
+                  "title": "Kaos Mühendisliği & Test",
+                  "description": "Kontrollü hata enjeksiyonu ve GameDay tatbikatlarıyla sisteminizin sorun karşısındaki gücünü test ederiz."
+                },
+                {
+                  "title": "Toil Mühendisliği",
+                  "description": "Tekrarlayan işleri ölçüyor ve adanmış bir otomasyon backlog'uyla azaltıyoruz."
+                }
+              ]
+            },
+            {
+              "id": "dba",
+              "title": "Veritabanı DBA Hizmetleri",
+              "subtitle": "Yönetilen Hizmet",
+              "icon": "Database",
+              "description": "Veritabanı performans sorunları sessizce büyür ve kritik bir arıza anında fark edilir. BGTS, Oracle, MSSQL ve PostgreSQL gibi kurumsal veritabanlarınızı uzman ekibiyle 7/24 yönetir.",
+              "tags": [
+                "Oracle DB",
+                "MS SQL Server",
+                "PostgreSQL",
+                "MySQL",
+                "Performance Tuning",
+                "Backup & Recovery",
+                "RTO / RPO",
+                "HA / RAC"
+              ],
+              "features": [
+                {
+                  "title": "Performans İzleme & Optimizasyon",
+                  "description": "Sorgu analizi, index yönetimi ve kaynak planlamasıyla veritabanı performansını sürekli optimize ediyoruz."
+                },
+                {
+                  "title": "Yedekleme & Kurtarma",
+                  "description": "Otomatik yedekleme planları ve düzenli kurtarma testleriyle veri kaybı riskini sıfıra yaklaştırıyoruz."
+                },
+                {
+                  "title": "Güvenlik & Erişim Yönetimi",
+                  "description": "Yetki matrisi, denetim logları ve şifreleme politikalarıyla güvenliği sağlıyoruz."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "title": "Teknoloji Danışmanlığı",
+          "overview": {
+            "title": "Doğru Teknolojiyi Doğru Şekilde Uygulayın",
+            "description": "Yeni sistem kurulumundan teknoloji güncellemesine, veri merkezi göçünden iş sürekliliği analizine kadar kurumsal BT altyapınızın tüm dönüşüm süreçlerini deneyimli mühendis ekibimizle yönetiyoruz. Anahtar teslim proje modelimiz ve yerinde destek kapasitemizle teknolojiyi doğru şekilde hayata geçiriyoruz.",
+            "layersTitle": "Danışmanlık Kapsam Alanları",
+            "layers": [
+              {
+                "title": "Sistem Kurulum & Anahtar Teslim Projeler",
+                "description": "Yeni teknoloji sistemlerinin mimari tasarımından devreye alımına kadar uçtan uca proje yönetimi sağlıyor; test, dokümantasyon ve eğitim dahil teslim ediyoruz."
+              },
+              {
+                "title": "Teknoloji Güncelleme & Entegrasyon",
+                "description": "Mevcut altyapıyla uyumlu versiyon geçişleri ve platform entegrasyonları; iş sürekliliğini koruyarak teknolojik birikimi modernize ediyoruz."
+              },
+              {
+                "title": "Optimizasyon & Sağlık Taramaları",
+                "description": "Sistem performans analizi, konfigürasyon gözden geçirme ve iyileştirme önerileriyle altyapının kapasitesini ve güvenilirliğini artırıyoruz."
+              },
+              {
+                "title": "Veri Merkezi Göçü & Envanter Analizi",
+                "description": "Veri merkezi, sistem ve veri taşıma projelerini risk minimize edilerek yönetiyor; envanter analizi ile mevcut durumu ve boşlukları raporluyoruz."
+              },
+              {
+                "title": "İş Sürekliliği & Eğitim",
+                "description": "İş sürekliliği analizleri ve yeni teknoloji eğitimleri ile atölye çalışmalarıyla kurumunuzun teknolojiyi etkin kullanma kapasitesini kalıcı olarak artırıyoruz."
+              }
+            ]
+          },
+          "services": [
+            {
+              "id": "cloud",
+              "title": "Çoklu Bulut Danışmanlığı",
+              "subtitle": "Teknoloji Danışmanlığı",
+              "icon": "Cloud",
+              "description": "AWS, Azure ve Google Cloud platformlarında dağılmış altyapıları tek bir operasyon çerçevesinde birleştiriyoruz. Çoklu bulut stratejinizi iş gereksinimlerinize göre tasarlıyor; maliyet, güvenlik ve esneklik dengesini sürekli optimize ediyoruz.",
+              "tags": [
+                "AWS",
+                "Microsoft Azure",
+                "Google Cloud",
+                "Migration",
+                "Kubernetes",
+                "Terraform",
+                "Landing Zone"
+              ],
+              "features": [
+                {
+                  "title": "Bulut Mimari Tasarımı",
+                  "description": "İş gereksinimlerinize özel Well-Architected çerçeveyle bulut mimarinizi tasarlıyoruz."
+                },
+                {
+                  "title": "Göç & Modernizasyon",
+                  "description": "Legacy sistemlerin buluta taşınmasından container'laştırmaya yolculuğunuzda rehberlik ediyoruz."
+                },
+                {
+                  "title": "Çoklu Bulut Yönetimi",
+                  "description": "Vendor lock-in riskini minimize ederek farklı platformlar arasında yedeklilik sağlıyoruz."
+                }
+              ]
+            },
+            {
+              "id": "finops",
+              "title": "FinOps Çözümleri",
+              "subtitle": "Teknoloji Danışmanlığı",
+              "icon": "LineChart",
+              "description": "Bulut faturası büyüdükçe harcamalar belirsizleşir. BGTS FinOps hizmeti, bulut maliyetlerini iş birimleri bazında şeffaflaştırır ve kaynak israfını tespit eder.",
+              "tags": [
+                "AWS Cost Explorer",
+                "Azure Cost Mgmt",
+                "Right-sizing",
+                "Reserved Instance",
+                "Savings Plan"
+              ],
+              "features": [
+                {
+                  "title": "Maliyet Görünürlüğü & Tahsis",
+                  "description": "Kaynak etiketleme modeliyle her iş biriminin bulut maliyetini şeffaflaştırıyoruz."
+                },
+                {
+                  "title": "Optimizasyon & Tasarruf",
+                  "description": "Right-sizing ve plan analizleriyle ortalama %30 bulut maliyet tasarrufu sağlıyoruz."
+                },
+                {
+                  "title": "FinOps Kültürü & Yönetişim",
+                  "description": "Mühendislik ve finans ekiplerini aynı dili konuşturacak FinOps pratiklerini kuruma yerleştiriyoruz."
+                }
+              ]
+            },
+            {
+              "id": "m365",
+              "title": "Microsoft 365 & Modern Work",
+              "subtitle": "Teknoloji Danışmanlığı",
+              "icon": "AppWindow",
+              "description": "Microsoft 365, doğru yönetildiğinde güçlü bir dijital çalışma platformuna dönüşür. Ortamınızı uçtan uca yönetir; çalışanlarınız için kesintisiz deneyim sunarız.",
+              "tags": [
+                "Microsoft Teams",
+                "SharePoint",
+                "Viva Suite",
+                "Purview",
+                "Defender for M365",
+                "Conditional Access",
+                "Exchange Online",
+                "Entra ID"
+              ],
+              "features": [
+                {
+                  "title": "Teams & Collaboration",
+                  "description": "Microsoft Teams, SharePoint ve Viva Suite'in kurumsal adoption sürecini yönetiyoruz."
+                },
+                {
+                  "title": "Güvenlik & Uyumluluk",
+                  "description": "Purview, Defender for M365 ve Conditional Access politikalarıyla kimlik ve veri güvenliğini sağlıyoruz."
+                },
+                {
+                  "title": "Lisans Optimizasyonu",
+                  "description": "Kullanılmayan özellikleri devreden çıkartıp lisans portföyünü optimize ediyoruz."
+                }
+              ]
+            },
+            {
+              "id": "bcdr",
+              "title": "Siber Kurtarma & İş Sürekliliği",
+              "subtitle": "Teknoloji Danışmanlığı",
+              "icon": "ShieldCheck",
+              "description": "BGTS, iş sürekliliği planlamasından izole siber kurtarma altyapısına kadar kurumunuzun dayanıklılığını gerçek senaryolarla test eder ve güvence altına alır.",
+              "tags": [
+                "ISO 22301",
+                "BCP",
+                "DR Tasarımı",
+                "RTO / RPO",
+                "Ransomware Recovery",
+                "Veeam",
+                "Immutable Backup",
+                "DR Tatbikat"
+              ],
+              "features": [
+                {
+                  "title": "İş Sürekliliği Planı (BCP)",
+                  "description": "Kritik iş süreçlerini belirliyor; kesinti senaryolarına göre kurtarma stratejileri oluşturuyoruz."
+                },
+                {
+                  "title": "Siber Kurtarma & DR Tasarımı",
+                  "description": "Ransomware sonrası temiz ortama dönüşü sağlayan izole kurtarma altyapısı tasarlıyoruz."
+                },
+                {
+                  "title": "Tatbikat & RTO/RPO Doğrulama",
+                  "description": "Düzenli DR tatbikatlarıyla hedeflerinizi doğru ortamda sınıyoruz."
+                }
+              ]
+            },
+            {
+              "id": "ai",
+              "title": "Yapay Zeka & Otomasyon Danışmanlığı",
+              "subtitle": "Teknoloji Danışmanlığı",
+              "icon": "Cpu",
+              "description": "BGTS, yapay zeka destekli otomasyon ve RPA çözümleriyle IT operasyonlarınızı akıllı hale getirir; çağrı merkezinden kök sebep analizine enerji ve zaman tasarrufu sağlar.",
+              "tags": [
+                "AIOps",
+                "Auto-Remediation",
+                "KB Üretimi",
+                "Çağrı Merkezi Botu",
+                "RPA",
+                "UiPath",
+                "Power Automate",
+                "Problem Yönetimi",
+                "LLM / GenAI"
+              ],
+              "features": [
+                {
+                  "title": "Operasyonda Yapay Zeka",
+                  "description": "Otomatik çözüm önerisi ve ticket yük analizi ile operasyon kapasitenizi artırıyoruz."
+                },
+                {
+                  "title": "Akıllı Destek & KB Otomasyonu",
+                  "description": "Ticket'lardan otomatik Knowledge Base üretimi ile kurumsal hafızanızı genişletiyoruz."
+                },
+                {
+                  "title": "RPA & Süreç Otomasyonu",
+                  "description": "Ağır tekrarlayan iş akışlarını robotize ederek manuel hatayı minimize ediyoruz."
+                }
+              ]
+            },
+            {
+              "id": "bakim",
+              "title": "Bakım & Destek Hizmetleri",
+              "subtitle": "Teknoloji Danışmanlığı",
+              "icon": "Settings",
+              "description": "Plansız arızalar maliyetlidir; önlenebilir olanları ise gereksizdir. BGTS, sistemlerin sürekliliğini güvence altına alır.",
+              "tags": [
+                "Önleyici Bakım",
+                "SLA",
+                "7/24 Destek",
+                "Saha Hizmetleri",
+                "Garanti Yönetimi",
+                "Firmware",
+                "End-of-Life Planlama"
+              ],
+              "features": [
+                {
+                  "title": "Periyodik Bakım",
+                  "description": "Donanım bileşenlerine aylık/üç aylık bakım planları ile müdahale uyguluyoruz."
+                },
+                {
+                  "title": "Uzaktan & Saha Destek",
+                  "description": "Zorlu durumlarda sertifikalı saha ekibi ile yerinde, normal durumlarda uzaktan hızlı çözümler sunarız."
+                },
+                {
+                  "title": "Yazılım Güncelleme Yönetimi",
+                  "description": "Firmware, sürücü güncellemelerini kontrollü biçimde uyguluyoruz."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "title": "Süreç Danışmanlığı",
+          "overview": {
+            "title": "Süreçlerinizi Olgunlaştırın, Verimliliğinizi Artırın",
+            "description": "BT süreçlerinizi uluslararası standartlara uygun hale getirerek verimlilik, izlenebilirlik ve sürdürülebilir operasyonel mükemmeliyet sağlıyoruz."
+          },
+          "services": [
+            {
+              "id": "surec",
+              "title": "Süreç Danışmanlığı Hizmetleri",
+              "subtitle": "Süreç Danışmanlığı",
+              "icon": "RefreshCw",
+              "description": "BGTS, ITIL, COBIT ve ISO standartlarını referans alarak IT süreçlerinizin olgunluk seviyesini ölçer, boşlukları tespit eder ve operasyonel verimliliği kökten artırır.",
+              "tags": [
+                "ITIL v4",
+                "COBIT",
+                "ISO 20000",
+                "Süreç Tasarımı",
+                "RACI",
+                "KPI",
+                "Gap Analizi",
+                "Olgunluk"
+              ],
+              "features": [
+                {
+                  "title": "Süreç Olgunluk Analizi",
+                  "description": "Mevcut durumunuzu değerlendiriyor; doğru iyileştirme yol haritasını kurguluyoruz."
+                },
+                {
+                  "title": "Süreç Tasarımı & Uygulama",
+                  "description": "Rollerin ve araç entegrasyonlarının tasarlanması ve hayata geçirilmesi."
+                },
+                {
+                  "title": "Sürekli İyileştirme & KPI",
+                  "description": "Süreçlerin performansını düzenli ölçerek verilere dayalı iyileştirme sağlarız."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p4",
+          "title": "Uyumluluk, Güvenlik & IT Olgunluk",
+          "overview": {
+            "title": "Güvenliği Güçlendirin, Dayanıklılığı İnşa Edin",
+            "description": "Güvenlik, uyumluluk ve olgunluk değerlendirmeleri ile mevcut durumunuzu analiz ediyor, riskleri azaltan ve kurumunuzu daha dayanıklı hale getiren yol haritaları oluşturuyoruz."
+          },
+          "services": [
+            {
+              "id": "risk",
+              "title": "Risk Değerlendirme & Azaltma",
+              "subtitle": "Siber Güvenlik",
+              "icon": "ShieldAlert",
+              "description": "BGTS, IT altyapınızdaki güvenlik ve operasyonel riskleri varlık envanteri ve tehdit modellemesiyle tespit eder, önceliklendirir.",
+              "tags": [
+                "ISO 27001",
+                "KVKK",
+                "Risk Matrisi",
+                "Tehdit Modelleme",
+                "Varlık Envanteri",
+                "NIST",
+                "Kontrol Tasarımı"
+              ],
+              "features": [
+                {
+                  "title": "Risk Analizi",
+                  "description": "Varlık envanteri ve tehdit modellemesi ile tüm altyapınızdaki riskleri analiz ederiz."
+                },
+                {
+                  "title": "Kontrol Tasarımı & Yol Haritası",
+                  "description": "Güvenlik kontrollerini ve planları oluşturup hayata geçirir, takibini sağlarız."
+                },
+                {
+                  "title": "Uyumluluk Gereklilikleri",
+                  "description": "ISO 27001, KVKK standartlarıyla organizasyonunuzdaki süreçleri uyumlu kılarız."
+                }
+              ]
+            },
+            {
+              "id": "maturity",
+              "title": "IT Olgunluk Değerlendirmesi",
+              "subtitle": "Siber Güvenlik",
+              "icon": "LayoutTemplate",
+              "description": "BGTS, CMMI ve COBIT referansıyla IT organizasyonunuzun süreç, teknoloji ve insan boyutlarındaki olgunluğunu ölçer.",
+              "tags": [
+                "CMMI",
+                "COBIT",
+                "ITIL",
+                "Gap Analizi",
+                "Benchmark",
+                "Yol Haritası",
+                "KPI"
+              ],
+              "features": [
+                {
+                  "title": "Olgunluk Seviyesi Tespiti",
+                  "description": "Tüm operasyonel boyutlarda kapsamlı analiz yaparak mevcut durumunuzu kayıt altına alıyoruz."
+                },
+                {
+                  "title": "İyileştirme Yol Haritası",
+                  "description": "12-18 aylık somut olgunluk büyüme eylem planı sunuyoruz."
+                },
+                {
+                  "title": "Sektör Karşılaştırması",
+                  "description": "Sektör emsalleriyle Benchmark yapılarak rekabet durumunu analiz ediyoruz."
+                }
+              ]
+            },
+            {
+              "id": "hardening",
+              "title": "Sunucu ve Altyapı Sıkılaştırma",
+              "subtitle": "Siber Güvenlik",
+              "icon": "Lock",
+              "description": "Varsayılan yapılandırmalar izinsiz girişlere açıktır. BGTS, CIS Benchmark ve DISA STIG referansıyla sistemlerin saldırı yüzeyini kalıcı olarak daraltır.",
+              "tags": [
+                "CIS Benchmark",
+                "DISA STIG",
+                "Windows Server",
+                "Active Directory",
+                "PAM",
+                "Just-in-Time",
+                "GPO",
+                "Zero Trust"
+              ],
+              "features": [
+                {
+                  "title": "İşletim Sistemi Sıkılaştırma",
+                  "description": "Gereksiz portları kapatır, sunucular üzerinde tam sertleşme sağlarız."
+                },
+                {
+                  "title": "Active Directory Güvenliği",
+                  "description": "AD eksikliklerini ve hatalarını tespit eder, güvenlik vektörlerini uygularız."
+                },
+                {
+                  "title": "Ayrıcalıklı Erişim & PAM",
+                  "description": "Yetkili erişimleri sıkı politikalara bağlayarak tehdit potansiyellerini yok ediyoruz."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Projenizi birlikte",
+      "highlight": "hayata geçirelim.",
+      "subtitle": "30+ yıllık deneyimimizle ihtiyaçlarınıza en uygun teknoloji çözümünü bulmak için burdayız."
+    },
+    "methods": [
+      {
+        "label": "Telefon",
+        "value": "+90 444 3330",
+        "href": "tel:+904443330",
+        "sublabel": "Hafta içi 09:00 – 18:00"
+      },
+      {
+        "label": "E-posta",
+        "value": "info@bgts.com",
+        "href": "mailto:info@bgts.com",
+        "sublabel": "24 saat içinde yanıt"
+      },
+      {
+        "label": "Ofisler",
+        "value": "İstanbul & Ankara",
+        "href": "#offices",
+        "sublabel": "2 konumda hizmet"
+      }
+    ],
+    "offices": [
+      {
+        "city": "İstanbul",
+        "title": "Genel Mürdürlük",
+        "address": "İTÜ ARİ Teknokent, Sarıyer",
+        "mapUrl": "https://maps.google.com/?q=ITU+ARI+Teknokent",
+        "image": "/images/contact/itu-ari3.jpg"
+      },
+      {
+        "city": "Ankara",
+        "title": "Ankara Ofisi",
+        "address": "Bilkent Cyberpark",
+        "mapUrl": "https://maps.google.com/?q=Bilkent+Cyberpark",
+        "image": "/images/contact/itu-ari3.jpg"
+      }
+    ],
+    "form": {
+      "heading": "Size nasıl yardımcı olabiliriz?",
+      "subheading": "Formu doldurun, uzman ekibimiz en kısa sürede sizinle iletişime geçsin.",
+      "name": "Ad Soyad",
+      "namePlaceholder": "Adınız Soyadınız",
+      "email": "E-posta",
+      "emailPlaceholder": "ornek@sirket.com",
+      "company": "Şirket",
+      "companyPlaceholder": "Şirket adı",
+      "phone": "Telefon",
+      "phonePlaceholder": "+90 212 XXX XX XX",
+      "message": "Mesajınız",
+      "messagePlaceholder": "Mesajınızı buraya yazın...",
+      "consent": "Kişisel verilerimin 6698 sayılı KVKK kapsamında işlenmesini kabul ediyorum.",
+      "consentBold": "6698 sayılı KVKK",
+      "submit": "Mesaj Gönder",
+      "submitting": "Gönderiliyor..."
+    },
+    "validation": {
+      "nameRequired": "Ad soyad zorunludur",
+      "emailInvalid": "Geçerli bir e-posta girin",
+      "messageMin": "Mesaj en az 10 karakter olmalıdır",
+      "consentRequired": "Onay zorunludur"
+    },
+    "success": {
+      "title": "Mesajınız iletildi",
+      "body": "En kısa sürede size geri döneceğiz."
+    },
+    "error": {
+      "title": "Bir hata oluştu",
+      "body": "Lütfen tekrar deneyin veya doğrudan e-posta gönderin."
+    },
+    "sidebar": {
+      "officesHeading": "Ofislerimiz",
+      "whyHeading": "Neden BGTS?",
+      "whyItems": [
+        "1400+ mühendisle kurumsal ölçekli çözümler",
+        "Finans, telekom ve savunma sektörlerinde derin uzmanlık",
+        "Atlassian, Qlik, ServiceNow ortaklıkları",
+        "7/24 yönetilen hizmetler ve SRE desteği"
+      ],
+      "aboutLink": "Hakkımızda daha fazla bilgi alın"
+    }
+  },
+  "socialContribution": {
+    "hero": {
+      "title": "Sürdürülebilir Değer",
+      "highlight": "Programı",
+      "subtitle": "Yalnızca teknoloji ve yetenek geliştirmeye değil, topluma kalıcı değer üretmeye odaklanıyoruz. Eşit fırsatlar yaratmayı ve sürdürülebilir etki sağlamayı önceliklendiriyoruz."
+    },
+    "education": {
+      "heading": "Gençlerin Geleceğine",
+      "headingHighlight": "Yatırım",
+      "body": "Eğitim ve staj programlarımızla, gençlerin iş hayatına daha donanımlı ve özgüvenli adımlar atmasını destekliyoruz.",
+      "items": [
+        "Öğrencilerin teorik bilgilerini pratikle buluşturabilecekleri öğrenme ortamları sunarız.",
+        "Gerçek iş süreçlerini deneyimleyebilecekleri staj imkânları sağlarız.",
+        "Genç yeteneklerin potansiyellerini keşfetmelerine ve kariyer yönlerini netletime katkı sağlarız."
+      ],
+      "quote": "Amacımız, gençlerin yalnızca bugüne değil geleceğe de hazır bireyler olarak yetişmelerine destek olmaktır.",
+      "imageAlt": "Eğitim ve Staj"
+    },
+    "scholarship": {
+      "heading": "Eğitimde",
+      "headingHighlight": "Eşit Fırsat",
+      "body": "Burs programlarımız, eğitim hayatını sürdürürken desteğe ihtiyaç duyan öğrencilerin yanında olmayı hedefler.",
+      "items": [
+        "Eğitimde fırsat eşitliğine katkı sağlamayı amaçlarız.",
+        "Maddi engellerin öğrenme yolculuğunun önüne geçmemesini hedefleriz.",
+        "Başarılı ve istekli öğrencilerin gelişimlerini sürdürülebilir şekilde destekleriz."
+      ],
+      "quote": "Burs programlarını, yalnızca finansal destek değil; geleceğe yapılan uzun vadeli bir yatırım olarak görürüz.",
+      "imageAlt": "Burs Programları"
+    },
+    "social": {
+      "heading": "Topluma",
+      "headingHighlight": "Değer Katıyoruz",
+      "body": "Toplumsal sorumluluk çalışmalarımız, sosyal fayda üretmeyi ve içinde bulunduğumuz ekosisteme katkı sağlamayı merkeze alır.",
+      "focusTitle": "Odak Alanlarımız",
+      "focusDesc": "Eğitim, gençlik ve toplumsal gelişim odaklı projeler.",
+      "approachTitle": "Yaklaşımımız",
+      "approachDesc": "Gönüllülük bilinci ve uzun vadeli sürdürülebilir etki.",
+      "quote": "BGTS için sosyal sorumluluk, dönemsel projelerden öte; kurumsal kültürün doğal bir parçasıdır.",
+      "imageAlt": "Topluma Değer Katıyoruz"
+    }
+  },
+  "youngEngineers": {
+    "hero": {
+      "title": "Geleceği İnşa Eden",
+      "highlight": "Mühendisler",
+      "subtitle": "Genç Mühendis Programı ile proje bazlı öğrenim, gerçek proje simülasyonları ve mentor desteğiyle kariyerine",
+      "subtitleBold": "güçlü bir başlangıç",
+      "subtitleEnd": "yap.",
+      "applyBtn": "Hemen Başvur",
+      "exploreBtn": "Programları İncele"
+    },
+    "metrics": [
+      {
+        "val": "3",
+        "label": "Program",
+        "desc": "Yazılım, Test, Altyapı"
+      },
+      {
+        "val": "12",
+        "label": "Hafta",
+        "desc": "Yapılandırılmış eğitim"
+      },
+      {
+        "val": "1:1",
+        "label": "Mentorluk",
+        "desc": "Kıdemli rehberlik"
+      },
+      {
+        "val": "100%",
+        "label": "Gerçek Proje",
+        "desc": "Canlı sistemler"
+      }
+    ],
+    "culture": {
+      "heading": "Uygulamalı Öğrenim,",
+      "headingLine2": "Güçlü Mühendislik Kültürü",
+      "imageAlt": "BGTS Genç Mühendisler Kültürü",
+      "quote": "Farklı sektör dinamiklerini tanıyarak güçlü bir mühendislik ortamında deneyim kazanırsın.",
+      "p1": "Genç Mühendis Programı, gerçek projeler üzerinde çalışarak farklı sektörlerdeki lider firmalarla deneyim kazanma fırsatı sunar. Teknik gelişimin yanında güçlü bir mühendislik kültürüyle seni geleceğe hazırlar.",
+      "p1Bold": "lider firmalarla deneyim kazanma",
+      "p2": "Program süresince yalnızca teknik becerilerini değil, problem çözme yaklaşımını ve takım içi iletişimini de geliştirirsin. Modern geliştirme süreçleri, gerçek proje senaryoları ve mentor desteğiyle profesyonel hayata güçlü bir başlangıç yaparsın.",
+      "p2Bold": "problem çözme yaklaşımını",
+      "features": [
+        {
+          "title": "Gerçek Projeler",
+          "desc": "Canlı sistemlerde geliştirme"
+        },
+        {
+          "title": "1:1 Mentorluk",
+          "desc": "Kıdemli mühendis rehberliği"
+        },
+        {
+          "title": "Tech Talks",
+          "desc": "Haftalık teknik sunumlar"
+        },
+        {
+          "title": "Kariyer Yolu",
+          "desc": "Tam zamanlı kariyer fırsatları"
+        }
+      ]
+    },
+    "photoStrip": [
+      {
+        "img": "/images/genc-muhendis/mentorluk.jpg",
+        "title": "Mentorluk",
+        "tag": "Gelişim"
+      },
+      {
+        "img": "/images/genc-muhendis/ogrenme.jpg",
+        "title": "Tech Talks",
+        "tag": "Öğrenme"
+      },
+      {
+        "img": "/images/culture/culture-3.jpg",
+        "title": "Takım Çalışması",
+        "tag": "Kültür"
+      },
+      {
+        "img": "/images/genc-muhendis/proje.jpg",
+        "title": "Kariyer Planlama",
+        "tag": "Proje"
+      }
+    ],
+    "programs": {
+      "sectionHeading": "Hangi yola",
+      "sectionHeadingHighlight": "çıkmak istiyorsun?",
+      "sectionSubtitle": "Genç Mühendis Programı kapsamında farklı uzmanlık alanlarından birini seçebilirsin.",
+      "applyLink": "Başvur",
+      "items": [
+        {
+          "id": "track-software",
+          "title": "Yazılım Geliştirme",
+          "desc": "Uçtan uca ürün geliştirme deneyimi ile modern yazılım mühendisliği yetkinlikleri kazan.",
+          "items": [
+            "Modern backend & frontend geliştirme",
+            "API tasarımı ve veri yönetimi",
+            "Test süreçleri ve kod kalitesi",
+            "Agile & Scrum ile proje geliştirme"
+          ]
+        },
+        {
+          "id": "track-test",
+          "title": "Test & İş Analizi",
+          "desc": "Projelerin kalitesini ve sürdürülebilirliğini sağlayan test ve analiz uzmanlığı kazan.",
+          "items": [
+            "Test süreçleri ve kalite güvencesi",
+            "Manuel ve otomasyon testleri",
+            "İş analizi ve gereksinim yönetimi",
+            "Test senaryosu ve dokümantasyon"
+          ]
+        },
+        {
+          "id": "track-infrastructure",
+          "title": "Altyapı Teknolojileri",
+          "desc": "Ölçeklenebilir ve güvenilir sistem altyapıları tasarlama ve yönetme yetkinliği kazan.",
+          "items": [
+            "Linux ve sistem yönetimi",
+            "CI/CD, DevOps ve otomasyon",
+            "Cloud platformları (AWS, Azure, GCP)",
+            "Monitoring, logging ve takip"
+          ]
+        }
+      ]
+    },
+    "steps": {
+      "sectionHeading": "Programa Katılım Adımları",
+      "sectionSubtitle": "Başvurudan projeye dahil olmaya kadar net ve şeffaf adımlarla ilerle.",
+      "stepLabel": "Adım",
+      "items": [
+        {
+          "step": "01",
+          "title": "Başvuru",
+          "desc": "Online başvuru formunu doldur, CV'ni yükle ve ilk adımını at."
+        },
+        {
+          "step": "02",
+          "title": "Değerlendirme",
+          "desc": "Teknik yetkinlik ve motivasyon değerlendirmesine katıl."
+        },
+        {
+          "step": "03",
+          "title": "Eğitim Dönemi",
+          "desc": "12 haftalık yapılandırılmış eğitim programı ve birebir mentorluk."
+        },
+        {
+          "step": "04",
+          "title": "Projeye Dahil",
+          "desc": "Genç projelerde rol almaya başla."
+        }
+      ]
+    },
+    "application": {
+      "heading": "Kariyerine",
+      "headingHighlight": "Güçlü Başla",
+      "subtitle": "Formu doldur, CV'ni yükle ve Genç Mühendis Programı'na ilk adımını at.",
+      "tipsHeading": "Başvuru İpuçları",
+      "tips": [
+        "CV'nin güncel olduğundan emin ol.",
+        "Projelerinden ve deneyimlerinden bahset.",
+        "Seni neyin heyecanlandırdığını kısaca yaz."
+      ],
+      "notice": "Başvurular sürekli değerlendirmeye alınır. En kısa sürede geri dönüş yapılır."
+    },
+    "form": {
+      "title": "Hemen Başvur",
+      "subtitle": "Formu doldurarak Genç Mühendis Programı'na ilk adımını at.",
+      "fullName": {
+        "label": "Ad Soyad",
+        "placeholder": "Adınız Soyadınız"
+      },
+      "email": {
+        "label": "E-posta",
+        "placeholder": "ornek@email.com"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "0555 555 55 55"
+      },
+      "university": {
+        "label": "Üniversite",
+        "placeholder": "Üniversite Adı"
+      },
+      "department": {
+        "label": "Bölüm",
+        "placeholder": "Bölümünüz"
+      },
+      "grade": {
+        "label": "Sınıf",
+        "placeholder": "Seçiniz",
+        "year3": "3. Sınıf",
+        "year4": "4. Sınıf",
+        "graduate": "Yeni Mezun",
+        "master": "Yüksek Lisans"
+      },
+      "cv": {
+        "label": "CV Yükle",
+        "dragDrop": "Dosya seçmek için tıklayın veya sürükleyin",
+        "restrictions": "PDF, DOC, DOCX (Max 5MB)",
+        "errorMsg": "Lütfen güncel CV'nizi yükleyin."
+      },
+      "message": {
+        "label": "Kısa Notunuz",
+        "placeholder": "Eklemek istedikleriniz..."
+      },
+      "submit": "Başvuruyu Tamamla",
+      "submitting": "Gönderiliyor...",
+      "success": {
+        "title": "Başvurunuz Alındı!",
+        "desc": "İlgilendiğiniz için teşekkür ederiz. Başvurunuz değerlendirildikten sonra sizinle iletişime geçeceğiz."
+      },
+      "error": {
+        "default": "Hata oluştu",
+        "alert": "Başvuru sırasında bir hata oluştu, lütfen tekrar deneyin."
+      }
+    }
+  },
+  "mobileNav": {
+    "services": {
+      "name": "Hizmetler",
+      "software": "Yazılım ve Teknoloji Servisleri",
+      "bigData": "Büyük Veri & Gerçek Zamanlı Veri İşleme",
+      "ai": "Yapay Zekâ & AI-First Mimari",
+      "modernization": "Yazılım Modernizasyonu & Mikroservis",
+      "devServices": "Yazılım Geliştirme Hizmetleri",
+      "sectoral": "Sektörel Yazılım Çözümleri",
+      "banking": "Bankacılık & Finansal Sistemler",
+      "etrading": "E-Trading & Market Data",
+      "telecom": "Telekom & Dijital İletişim",
+      "fraud": "Fraud & Risk & AI Doğrulama",
+      "msp": "Yönetilen Hizmetler (MSP)",
+      "dataCenter": "Veri Merkezi Yönetimi",
+      "monitoring": "7/24 İzleme & NOC",
+      "endUser": "Son Kullanıcı ve Cihaz Yönetimi"
+    },
+    "industries": {
+      "name": "Sektörler",
+      "enterprise": "Kurumsal & Savunma",
+      "bankingFinance": "Bankacılık & Finans",
+      "defense": "Savunma Sanayi",
+      "commercial": "Ticari & Telekom",
+      "telecommunications": "Telekomünikasyon",
+      "retail": "Perakende & E-Ticaret"
+    },
+    "products": {
+      "name": "Ürünler",
+      "hiring": "İşe Alım Teknolojileri",
+      "enterprise": "Kurumsal Çözümler",
+      "hcm": "HCM Platformu",
+      "docKnowledge": "Doküman & Bilgi Yönetimi"
+    },
+    "talent": {
+      "name": "Genç Mühendisler",
+      "programs": "Programlar",
+      "software": "Yazılımcı Yetiştirme",
+      "infrastructure": "Altyapı Teknolojileri",
+      "test": "Test ve Analist",
+      "apply": "Başvuru Yap"
+    },
+    "resources": {
+      "name": "Bilgi Merkezi",
+      "heading": "Kaynaklar",
+      "successStories": "Başarı Hikayeleri",
+      "infographics": "İnfografikler",
+      "partners": "İş Ortakları"
+    },
+    "careers": {
+      "name": "Yerini Al",
+      "lifeCareer": "Yaşam & Kariyer",
+      "culture": "Kültür",
+      "careerPaths": "Kariyer Yolları",
+      "learning": "Eğitim ve Gelişim",
+      "social": "Sürdürülebilir Değer Programı"
+    },
+    "quickLinks": {
+      "about": "Hakkımızda",
+      "contact": "İletişim"
+    }
+  },
+  "banking": {
+    "hero": {
+      "title": "Finans Sektörü için Güvenilir ve Ölçeklenebilir Teknolojiler",
+      "subtitle": "Yüksek hacimli işlem altyapılarından dijital bankacılığa kadar, regülasyon uyumlu ve performans odaklı sistemler geliştiriyoruz."
+    },
+    "overview": {
+      "heading": "Finans Sektöründe Güvenilir Teknoloji Ortağınız",
+      "p1": "1997 yılındaki kuruluşumuzdan bu yana istikrarlı bir şekilde büyüyen organizasyonumuz, bugün güçlü kadrosuyla özel ve kamu bankaları, sigorta şirketleri ve ödeme sistemleri alanında faaliyet gösteren kurumlarla uzun yıllara dayanan sağlam iş birlikleri yürütmektedir. Gerçekleştirdiğimiz 100'ün üzerinde proje ile; temel bankacılık, dijital kanallar, ödeme sistemleri ile veri ve analitik çözümleri başta olmak üzere finans ekosisteminin kritik iş alanlarında aktif rol alıyoruz.",
+      "p1Bold1": "1997 yılındaki kuruluşumuzdan",
+      "p1Bold2": "100'ün üzerinde proje",
+      "p2": "İş ortaklarımızın stratejik hedeflerini ve önceliklerini merkeze alarak, ihtiyaçlarını analiz ediyor ve bu ihtiyaçlara en uygun metodoloji ve teslim modeliyle projeleri hayata geçiriyoruz. Dijital dönüşüm yolculuğunda yalnızca bir tedarikçi değil, süreci sahiplenen uzun vadeli bir teknoloji iş ortağı olarak konumlanıyoruz.",
+      "p2Bold": "süreci sahiplenen uzun vadeli bir teknoloji iş ortağı",
+      "stats": [
+        {
+          "val": "100+",
+          "label": "Başarılı Proje"
+        },
+        {
+          "val": "550+",
+          "label": "Uzman Çalışan"
+        },
+        {
+          "val": "8/10",
+          "label": "Lider Banka"
+        }
+      ]
+    },
+    "model": {
+      "heading": "360 Derece Teknoloji Çözüm Modeli",
+      "subtitle": "Kurumların eşsiz ihtiyaçlarına esnek iş modelleriyle (Turnkey, T&M, Hibrit) cevap veren kapsamlı hizmet portföyümüz",
+      "pillars": [
+        {
+          "title": "Yazılım Geliştirme",
+          "desc": "Dijital dönüşüm yolculuğunuzu hızlandırmak için çevik ve güvenilir web/mobil uygulamalar, platform geliştirmeleri ve iş analizi süreçleri.",
+          "items": [
+            "Web & Mobil Uygulamalar",
+            "Platform & Ürün Geliştirme",
+            "İş Analizi & UX Tasarım",
+            "Yazılım Test Otomasyonları"
+          ]
+        },
+        {
+          "title": "Teknoloji Servisleri",
+          "desc": "Kritik alanları kapsayan yönetilen hizmetlerimiz ile altyapınızı izliyor, yönetiyor ve iş sürekliliğinizi güvence altına alıyoruz.",
+          "items": [
+            "İşletim Sistemleri & Veritabanları",
+            "DevOps & Middleware Gelişimi",
+            "Bulut ve Sanallaştırma",
+            "Altyapı İzleme ve Cihaz Yönetimi"
+          ]
+        },
+        {
+          "title": "Genç Mühendisler",
+          "desc": "Finans sektörünün ihtiyaç duyduğu yazılım ve altyapı yeteneklerini yetiştiriyor, kendi çalışanlarınıza yeni yetkinlikler kazandırıyoruz.",
+          "items": [
+            "Kampüs Etkileşimi & Seçim",
+            "Eğitim ve Gelişim Kampları",
+            "Sektör Odaklı Mentorluk",
+            "Projelerde İstihdam"
+          ]
+        }
+      ]
+    },
+    "solutions": {
+      "heading": "Kapsamlı Bankacılık Uzmanlık Alanları",
+      "subtitle": "Bankacılık ve sigortaya temas eden tüm alanlarda uçtan uca proje geliştirme kabiliyetine sahibiz. Güçlü Domain tecrübemiz ile projeleri güvenle tamamlıyoruz.",
+      "items": [
+        "Temel Bankacılık Uygulamaları",
+        "Ödeme Sistemleri ve Kartlı Çözümler",
+        "Yatırım Bankacılığı",
+        "Hazine",
+        "Dijital Bankacılık Kanalları",
+        "CRM ve IVR Çözümleri",
+        "Veri & Analitik, Risk ve Müşteri Analitiği",
+        "Kurumsal Uygulamalar (Muhasebe, Tedarik Zinciri, İç Portaller)",
+        "İnsan Kaynakları (IK) Sistemleri",
+        "Altyapı Modernizasyonu ve Entegrasyon Projeleri"
+      ]
+    },
+    "core": {
+      "title": "Temel Bankacılık",
+      "desc": "Bankacılığın omurgasını oluşturan sistemlerde, teminattan krediye, nakit yönetiminden yasal takibe kadar kritik, yüksek işlemli, ve hatasız çözüm portföyü.",
+      "items": [
+        {
+          "title": "Teminat Yönetimi Projesi",
+          "desc": "Kredilerin teminat süreçlerinin tam entegrasyonu ve izlenebilirliği."
+        },
+        {
+          "title": "Vadeli Mevduat",
+          "desc": "Bireysel ve kurumsal vadeli mevduat işlemlerinin otomasyonu."
+        },
+        {
+          "title": "Bireysel, KOBİ ve Ticari Krediler",
+          "desc": "İş birlikleri, tahsis kullandırım, ödeme planı, sorunlu kredi yönetimi ve yasal takip süreçleri."
+        },
+        {
+          "title": "Nakit Yönetimi Çözümleri",
+          "desc": "Fon hareketleri, likidite izleme ve nakit akışı yönetimi çözümleri."
+        },
+        {
+          "title": "Hazine Fx ve Türev Ürünler",
+          "desc": "Döviz işlemleri, türev ürün yönetimi ve FIX/Pricing/Hedging altyapıları."
+        },
+        {
+          "title": "Kredili Mevduat",
+          "desc": "Bireysel ve kurumsal kredili mevduat hesabı süreçlerinin yönetimi."
+        },
+        {
+          "title": "Şube Kanal Yönetimi",
+          "desc": "Dijital talimat ve para çekme/yatırma projelerini kapsayan şube kanal adaptasyonları."
+        },
+        {
+          "title": "Başvuru Sahteciliği Projesi",
+          "desc": "Kredi ve ürün başvurularında sahteciliği tespit eden analitik ve kural tabanlı sistemler."
+        },
+        {
+          "title": "Gayrinakdi Ürünler Projesi",
+          "desc": "Teminat mektubu, akreditif ve diğer gayrinakdi ürünlerin süreç yönetimi."
+        },
+        {
+          "title": "Vergi ve Fatura Modülleri",
+          "desc": "Devlet sistemleriyle entegre vergi ve fatura süreçlerinin yönetimi."
+        },
+        {
+          "title": "E-Fatura & E-Haciz Entegrasyon Projeleri",
+          "desc": "E-fatura ve e-haciz süreçlerinin kamu sistemleriyle uçtan uca entegrasyonu."
+        }
+      ]
+    },
+    "payments": {
+      "title": "Ödeme Sistemleri",
+      "desc": "Kartlı ödemelerden dijital cüzdanlara, POS yönetiminden takas sistemlerine kadar güvenli ve regülasyonlara %100 uyumlu altyapılar.",
+      "items": [
+        {
+          "title": "Kart Ürünleri",
+          "desc": "Kredi, banka ve ön ödemeli kartların yaşam döngüsü yönetimi ve operasyonları."
+        },
+        {
+          "title": "Kart İş Geliştirme & Basım",
+          "desc": "Yeni kart ürünü tasarımı, iş geliştirme süreçleri ve kart basım operasyonları."
+        },
+        {
+          "title": "POS Ürün Entegrasyonu",
+          "desc": "Sanal ve fiziksel POS terminallerine yazılım desteği ve entegrasyon."
+        },
+        {
+          "title": "Issuing",
+          "desc": "Kart ihraç süreçleri, provizyon yönetimi ve kart sahibi işlemleri altyapısı."
+        },
+        {
+          "title": "Acquiring",
+          "desc": "Üye işyeri kabul süreçleri, takas ve mutabakat sistemleri."
+        },
+        {
+          "title": "Takasnet",
+          "desc": "Bankalar arası hızlı takas, provizyon akışı ve Takasnet entegrasyon altyapıları."
+        },
+        {
+          "title": "Müşteri Onboarding",
+          "desc": "Hızlı müşteri edinimi (KYC), dijital başvuru ve kimlik doğrulama süreçleri."
+        },
+        {
+          "title": "E-Cüzdan",
+          "desc": "Dijital cüzdan ürünlerinin geliştirilmesi, sadakat ve ödeme sistemi entegrasyonları."
+        }
+      ]
+    },
+    "caseStudies": {
+      "tag": "Kanıtlanmış Deneyim",
+      "heading": "Karmaşık Finansal Projelerde Endüstri Beklentilerini Aşan Başarı Hikayeleri",
+      "subtitle": "Ana bankacılık sistemlerinden dijital modernizasyona kadar, sektör lideri kurumlar için gerçekleştirdiğimiz gerçek vaka analizleri.",
+      "items": [
+        {
+          "title": "Kredi Ödeme Planı Servis Dönüşümü",
+          "desc": "Mainframe (MFDC) bağımlılıklarından arındırılarak açık sistem mimarisine taşınan, modern ve ölçeklenebilir ödeme planı altyapısı."
+        },
+        {
+          "title": "Şubeden Para Çekme & Yatırma",
+          "desc": "Mikroservis mimarisiyle tasarlanan, Şube ve ATM kanalından para işlemlerini ve altın alımını tek ekranda toplayan kanal yönetimi."
+        },
+        {
+          "title": "Reasürans Dijital Dönüşüm Projesi",
+          "desc": "19 Ekranın ve 13 tablonun Mainframe ortamından açık sistemlere dönüştürülmesi. Güçlü monitoring ve altyapı otomasyonu."
+        },
+        {
+          "title": "E-Fatura Entegrasyon Projesi",
+          "desc": "E-faturaların iç sistemlere otomatik entegrasyonu ve uçtan uca izlenebilir onayı. EFA ekranları ile uyumlu yapı."
+        },
+        {
+          "title": "CV Parsing & Kariyer Eklentisi",
+          "desc": "LinkedIn ve Kariyer.net özgeçmişlerinin NLP yöntemleriyle parse edilerek İK sistemine otomatik (Autofill) aktarılması projesi."
+        },
+        {
+          "title": "Ofis Rezervasyon ve Planlama",
+          "desc": "Hibrit banka çalışanları için masa/ofis rezervasyonlarını yönetebilecekleri, güvenli ve kullanıcı dostu planlama web uygulaması."
+        },
+        {
+          "title": "Super Banker & Super Search",
+          "desc": "Müşteri (TCKN, VKN, MARS No) ve uygulama aramalarını tek bir platformda birleştiren, dinamik ve kişiselleştirilebilir bankacılık asistanı."
+        },
+        {
+          "title": "Kredi Fonu & IVR Projeleri",
+          "desc": "Kredi Fonu entegrasyonu ile teminat süreçlerinin otomatikleştirilmesi ve Çağrı Merkezi IVR akışlarının modernizasyonu."
+        }
+      ]
+    }
+  },
+  "defense": {
+    "hero": {
+      "title": "Savunma Sanayi için Güvenilir ve Yüksek Standartlı Teknolojiler",
+      "subtitle": "TSK ve savunma ekosistemine yönelik, MIL-STD ve IEEE standartlarına uygun, yüksek güvenlikli yazılım ve altyapı çözümleri geliştiriyoruz."
+    },
+    "overview": {
+      "heading": "Savunma Sanayinde Güvenilir Teknoloji Ortağınız",
+      "p1": "Savunma sanayi projelerinde öncelikli hedefimiz, güvenilir, yüksek performanslı ve güvenli yazılım çözümleri sunmaktır. Kritik görev yazılımlarının sahada doğru, hızlı ve hatasız çalışmasını sağlamak için gömülü yazılımlardan web ve bulut tabanlı sistemlere kadar tüm geliştirme süreçlerini bütüncül şekilde yönetiyoruz.",
+      "p2": "Yazılım geliştirme ve tasarım faaliyetlerinde 15288, 12207, 42010 ve 42020 standartlarına uygun süreçleri işletiyoruz. Gereksinim analizinden mimari tasarım, geliştirme ve doğrulama süreçlerine kadar her adımda izlenebilirlik sağlıyoruz.",
+      "cert1": "20000 BT Hizmet Yönetimi",
+      "cert2": "27001 Bilgi Güvenliği"
+    },
+    "services": [
+      {
+        "title": "İş Analizi Hizmetleri",
+        "description": "Savunma projelerinde gereksinimlerin doğru anlaşılması, operasyonel modellemelerin gerçekleştirilmesi ve izlenebilirliğin sağlanması amacıyla kapsamlı iş analizi hizmetleri sunuyoruz.",
+        "items": [
+          {
+            "title": "Misyon Bazlı İhtiyaç Analizi",
+            "desc": "IIBA uyumlu metodolojilerle paydaş gereksinimlerini topluyor, iş hedeflerini belgeliyor ve operasyonel senaryolarla doğruluyoruz."
+          },
+          {
+            "title": "İşletim Kavramı (ConOps) Üretimi",
+            "desc": "Kullanıcının operasyonel dünyasını ve görev senaryolarını tanımlayan, tüm paydaşlar için ortak anlayış sağlayan ConOps dokümanları hazırlıyoruz."
+          },
+          {
+            "title": "Operasyonel Senaryo ve Süreç Modelleme",
+            "desc": "BPMN, UML, SysML ve ArchiMate kullanarak operasyonel senaryoları, süreçleri, sistem davranışlarını ve kurumsal mimariyi modelliyoruz."
+          },
+          {
+            "title": "Gereksinim Çıkartımı ve Dokümantasyon",
+            "desc": "Operasyonel gereksinimler, ConOps ve senaryolardan üretilen Sistem ve Alt Sistem gereksinimlerini izlenebilir (RTM) ve test edilebilir şekilde dokümante ediyoruz."
+          }
+        ]
+      },
+      {
+        "title": "Yazılım Geliştirme Hizmetleri",
+        "description": "12207 standardına uygun yazılım yaşam döngüsü ve doğrulama süreçleri ile göreve uygun dil ve teknolojilerde bütüncül mühendislik desteği.",
+        "items": [
+          {
+            "title": "Yazılım Mimari Tasarımı",
+            "desc": "42010 ve 42020 uyumlu; NAF, DODAF ve TOGAF mimari çerçevelerinde güvenli ve sürdürülebilir mimari tasarımlar. UML/SysML/Archimate modelleme."
+          },
+          {
+            "title": "Bilgi Sistem Yazılımları",
+            "desc": "Operasyonel yönetim, kayıt sistemleri, büyük veri ve loglama ihtiyaçlarına yönelik kurumsal çözümler."
+          },
+          {
+            "title": "Komuta Kontrol Yazılımları",
+            "desc": "Gerçek zamanlı veri işleme, sensör füzyonu, taktik veri linkleri ve simülasyon/davranış motoru geliştirme."
+          },
+          {
+            "title": "Gömülü Sistem Yazılımları",
+            "desc": "RTOS, FPGA ve mikrodenetleyiciler için sürücü ve görev yazılımları. Askeri standartlara uygun doğrulama."
+          },
+          {
+            "title": "Güvenli Kodlama ve Askeri Standartlar",
+            "desc": "Secure Coding, OWASP ve askeri politikalara uygun, statik analiz ve zafiyet taramalarıyla güçlendirilmiş kodlama."
+          },
+          {
+            "title": "Yazılım Geliştirme Modeli",
+            "desc": "İhtiyaca göre Agile/Scrum (Esnek) veya Şelale/V-Model proje yönetim yaklaşımları."
+          }
+        ]
+      },
+      {
+        "title": "Test ve Doğrulama Hizmetleri",
+        "description": "Sistem ve yazılımların gereksinimlere uygunluğunu askeri ve endüstriyel standartlar çerçevesinde garanti altına alıyoruz.",
+        "items": [
+          {
+            "title": "İşlev ve Sistem Testleri",
+            "desc": "Bileşen, entegrasyon ve sistem seviyesinde işlevsellik doğrulama testleri."
+          },
+          {
+            "title": "Otomasyon Testleri",
+            "desc": "Tekrarlanabilirliği ve hızı artıran, sürekli entegrasyona dahil otomatik test senaryoları."
+          },
+          {
+            "title": "Performans, Güvenlik ve Dayanıklılık Testleri",
+            "desc": "Yük, stres, dayanıklılık ve güvenlik testleri ile kritik görev koşullarında kararlılık garantisi."
+          },
+          {
+            "title": "Kabul Testleri",
+            "desc": "Kullanıcı ihtiyaçlarına ve operasyonel senaryolara dayalı kapsamlı kabul test planları ve icrası."
+          },
+          {
+            "title": "Dokümantasyon ve Raporlama",
+            "desc": "İzlenebilir, doğrulanabilir ve karar destek süreçlerini besleyen detaylı test raporlaması."
+          }
+        ]
+      },
+      {
+        "title": "DevOps Hizmetleri",
+        "description": "Geliştirme ve operasyon süreçlerini entegre ederek hızlı, güvenilir ve izlenebilir yazılım teslimatı sağlıyoruz.",
+        "items": [
+          {
+            "title": "Geliştirme Araçları",
+            "desc": "Git, Azure DevOps ve Jira ile kaynak kod yönetimi, iş takibi ve ekip koordinasyonu."
+          },
+          {
+            "title": "Sürekli İnşa (CI) ve Dağıtım (CD)",
+            "desc": "Jenkins, Azure DevOps pipeline'ları ile otomatik derleme, test ve dağıtım süreçleri."
+          },
+          {
+            "title": "Otomatik Test Entegrasyonu",
+            "desc": "CI/CD hattına entegre birim ve statik analiz testleri ile erken hata tespiti."
+          },
+          {
+            "title": "Sürüm ve Dağıtım Yönetimi",
+            "desc": "Güvenli sürüm kontrolü, otomatik dağıtım politikaları ve rollback mekanizmaları."
+          },
+          {
+            "title": "Konteyner ve Kubernetes",
+            "desc": "Docker ve Kubernetes ile ölçeklenebilir, taşınabilir mikrosistem mimarileri."
+          }
+        ]
+      }
+    ]
+  },
+  "telecommunications": {
+    "hero": {
+      "title": "Telekomünikasyon için Ölçeklenebilir ve Kesintisiz Dijital Platformlar",
+      "subtitle": "Yüksek trafik altında çalışan, gerçek zamanlı veri işleyen ve 7/24 kesintisiz hizmet sunan telekom altyapıları ve dijital platformlar geliştiriyoruz."
+    },
+    "overview": {
+      "heading": "Telekom Sektörüne Özel Dijital Platform ve MSP Hizmetleri",
+      "p1": "Telekom sektörünün yüksek trafik, çoklu kanal yönetimi ve kesintisiz hizmet beklentileri; güçlü entegrasyonlar, stabil altyapı ve 7/24 operasyonel mükemmeliyet gerektirir.",
+      "p2": "Bu alanda uzun yıllara dayanan deneyimimizle, Türkiye'nin lider operatörlerinin merkezi sistemleri, içerik platformları ve saha iletişim uygulamaları için uçtan uca teknoloji hizmetleri sunuyoruz.",
+      "p3": "Operatörlerin dijital platformlarını daha güvenli, hızlı, ölçeklenebilir ve operasyonel olarak sürdürülebilir hale getiriyoruz."
+    },
+    "services": [
+      {
+        "title": "Dijital Platform ve Yazılım Geliştirme",
+        "description": "Merkez, bayi ve saha ekipleri arasındaki iletişimi güçlendiren ölçeklenebilir, modern yazılım platformları.",
+        "items": [
+          {
+            "title": "Kurumsal Uygulamalar",
+            "desc": "Merkez ve saha iletişimi, çağrı merkezi ve portal çözümleri için özel geliştirilmiş uygulamalar."
+          },
+          {
+            "title": "Modern Teknolojiler",
+            "desc": "SharePoint, .NET, React ve SQL tabanlı, yüksek hacimli veri akışlarını yönetebilen ölçeklenebilir mimariler."
+          },
+          {
+            "title": "Karmaşık Entegrasyonlar",
+            "desc": "Farklı sistemlerin birbiriyle konuştuğu, özel iş ihtiyaçlarına yönelik entegrasyon yapıları."
+          },
+          {
+            "title": "Kesintisiz İşletim",
+            "desc": "Geliştirilen platformların bakım, güncelleme ve kesintisiz çalışma garantisi."
+          }
+        ]
+      },
+      {
+        "title": "İçerik ve Portal Yönetimi",
+        "description": "Yüzlerce içeriğin ve dokümanın hızlı, güvenli ve organize bir şekilde yönetilmesini sağlayan altyapılar.",
+        "items": [
+          {
+            "title": "Hızlı İçerik Yönetimi",
+            "desc": "Editör ekipleri için özel bileşenler ve servis tabanlı içerik akışları."
+          },
+          {
+            "title": "Custom Workflow Yapıları",
+            "desc": "Onay ve yayın süreçlerini otomatize eden özelleştirilmiş iş akışları."
+          },
+          {
+            "title": "SharePoint Altyapı Yönetimi",
+            "desc": "Dev, Test, Stg, Prod ortamlarında komple kurulum, farm yönetimi ve güncellemeler."
+          },
+          {
+            "title": "Operasyonel Bakım",
+            "desc": "Portal altyapılarının düzenli bakımı ve performans optimizasyonu."
+          }
+        ]
+      },
+      {
+        "title": "Operasyon Yönetimi ve Entegrasyon",
+        "description": "Telekom ekosistemindeki tüm paydaşları bir araya getiren güvenli bilgi akışı servisleri.",
+        "items": [
+          {
+            "title": "Ekosistem Entegrasyonu",
+            "desc": "Merkez, saha ve bayi ağının ortak platform üzerinden doküman ve duyurulara erişimi."
+          },
+          {
+            "title": "Bilgi Akışı Güvenliği",
+            "desc": "Paydaşlar arasındaki veri trafiğinin güvenli ve kesintisiz sağlanması."
+          },
+          {
+            "title": "Merkezi Servis Yapıları",
+            "desc": "Arka planda çalışan servisler ile farklı uygulamaların tek çatı altında uyumu."
+          },
+          {
+            "title": "İş Süreçleri Yönetimi",
+            "desc": "Operasyonel iş süreçlerinin dijital ortamda takibi ve yönetimi."
+          }
+        ]
+      },
+      {
+        "title": "MSP, Sunucu Yönetimi ve 7/24 Operasyon",
+        "description": "Kritik veri merkezi altyapılarınız için uzman ekiplerle kesintisiz yönetim ve destek hizmetleri.",
+        "items": [
+          {
+            "title": "Veri Merkezi Danışmanlığı",
+            "desc": "Operatör veri merkezlerinde görev yapan uzman danışman ekipler."
+          },
+          {
+            "title": "Sistem Yönetimi",
+            "desc": "Linux, Windows, sanallaştırma, veritabanı ve yedekleme alanlarında L1-L2 seviyesinde yönetim."
+          },
+          {
+            "title": "7/24 Operasyonel Destek",
+            "desc": "Kritik sistemlerin performans, güvenlik ve kapasite takiplerinin 7/24 yapılması."
+          },
+          {
+            "title": "Süreklilik Garantisi",
+            "desc": "Servis kesintilerini minimize eden proaktif izleme ve müdahale süreçleri."
+          }
+        ]
+      }
+    ]
+  },
+  "retail": {
+    "hero": {
+      "title": "Perakende ve E-Ticaret için Dijital Deneyimi Güçlendiren Teknolojiler",
+      "subtitle": "Müşteri deneyimini iyileştiren, satış süreçlerini hızlandıran ve operasyonel verimliliği artıran dijital platformlar geliştiriyoruz."
+    },
+    "overview": {
+      "heading": "Perakende ve E-Ticarette Uçtan Uca Dijital Çözümler",
+      "p1": "Teknolojinin hızlı gelişmesi ile büyüyen e-ticaret sektöründe en önemli sorun, mevcut yapının (web sitesi veya mobil uygulamanın) güvenlik açığı oluşmadan sürdürülebilirliği ve değişen taleplere hızlı yazılım çözümleri çıkartma ihtiyacıdır.",
+      "p2": "Ürün yelpazesini firma olarak arttırmak akabinde ciddi lojistik ve depolama sorunlarını da getirmektedir. Bundan dolayı birçok e-ticaret firması B2B çalışma mantığı ile müşterilerine ulaşmayı tercih etmektedir.",
+      "p3": "BGTS olarak geliştirdiğimiz B2B destek portalları ile e-ticaret ortam sahibi firmaların eğitim ve gelişim maliyetlerinde ciddi bütçe tasarrufu yapmalarını sağlıyoruz."
+    },
+    "services": [
+      {
+        "title": "E-Ticaret ve B2B Çözümleri",
+        "description": "İş ortaklarınızın platformunuzu en verimli şekilde kullanması için özelleştirilmiş portallar ve eğitim altyapıları sunuyoruz.",
+        "items": [
+          {
+            "title": "B2B Destek Portalları",
+            "desc": "Merkezi e-ticaret platformunun iş ortakları tarafından etkili kullanımı için özel destek ve eğitim portalları."
+          },
+          {
+            "title": "Maliyet Tasarrufu",
+            "desc": "Eğitim ve gelişim maliyetlerini optimize eden, kendi kendine öğrenen (self-service) bilgi bankaları."
+          },
+          {
+            "title": "Acil Durum Yönetimi",
+            "desc": "Operasyonel sorunlarda anlık müdahale ve çözüm sağlayan destek modülleri."
+          },
+          {
+            "title": "Entegrasyon Yetkinliği",
+            "desc": "Mevcut e-ticaret platformlarının iş ortakları sistemleriyle sorunsuz entegrasyonu."
+          }
+        ]
+      },
+      {
+        "title": "İK ve Çalışan Deneyimi (HR Tech)",
+        "description": "Sektördeki yüksek çalışan sirkülasyonunu yönetmek ve aidiyeti artırmak için yapay zeka destekli İK çözümleri.",
+        "items": [
+          {
+            "title": "Sirkülasyon Yönetimi",
+            "desc": "Turnover oranlarını düşürmeye yönelik çalışan bağlılığı ve memnuniyet analizleri."
+          },
+          {
+            "title": "Uçtan Uca İK Süreçleri",
+            "desc": "Performans Değerlendirme, Eğitim, İşe Alım, Bordro ve Özlük hakları takibi."
+          },
+          {
+            "title": "HR/AI Çözümleri",
+            "desc": "Çalışan sorun ve taleplerine yapay zeka ile anında yanıt veren akıllı asistanlar."
+          },
+          {
+            "title": "Kariyer ve Gelişim",
+            "desc": "Çalışanların kişisel gelişimlerini destekleyen eğitim ve kariyer planlama modülleri."
+          }
+        ]
+      },
+      {
+        "title": "Teknoloji ve Altyapı (DevOps & ITSM)",
+        "description": "Ölçeklenebilir, güvenli ve global standartlarda yönetilen teknoloji altyapıları.",
+        "items": [
+          {
+            "title": "Ölçeklenebilir Altyapı",
+            "desc": "Kullanıcı sayılarındaki artışı karşılayan, yüksek yük altında bile sorunsuz çalışan DevOps mimarileri."
+          },
+          {
+            "title": "Global ITSM Uyumluluğu",
+            "desc": "ITIL ve ISO27001 standartlarında süreç yönetimi, SLA takibi ve çözüm üretimi."
+          },
+          {
+            "title": "Gelişmiş Raporlama",
+            "desc": "PowerBI ve Qlik entegrasyonları ile yönetici ve operasyonel gösterge panelleri (Dashboards)."
+          },
+          {
+            "title": "7/24 Kesintisiz Hizmet",
+            "desc": "Perakendenin dinamik yapısına uygun, tüm bileşenlerin anlık takibi ve hızlı müdahale."
+          }
+        ]
+      },
+      {
+        "title": "Yönetilen Hizmetler ve NOC",
+        "description": "Sistemlerinizin sağlığını 7/24 izleyen, güncelleyen ve koruyan profesyonel operasyon merkezi.",
+        "items": [
+          {
+            "title": "Servis Bazlı İzleme",
+            "desc": "Zabbix ve NOC modelleri ile servis ağacı tabanlı detaylı sistem izleme."
+          },
+          {
+            "title": "Uç Nokta Yönetimi (SCCM)",
+            "desc": "Kurumsal uygulama dağıtımı, yama yönetimi, işletim sistemi imajları ve ajan sağlığı takibi."
+          },
+          {
+            "title": "Lisans ve Uyumluluk",
+            "desc": "Yazılım lisans yönetimi, kullanım ölçümleme ve kurumsal uyumluluk raporlaması."
+          },
+          {
+            "title": "Son Kullanıcı Desteği",
+            "desc": "ITIL standartlarında yerinde veya uzaktan profesyonel son kullanıcı destek hizmetleri."
+          }
+        ]
+      }
+    ]
+  },
+  "resources_infographics": {
+    "hero": {
+      "title": "Verinin <br/> Gücünü Keşfet",
+      "subtitle": "Sektörel içgörüler, büyüme rakamları ve insan kaynakları istatistikleriyle BGTS dünyasının derinliklerine inin."
+    },
+    "stats": {
+      "heading": "Yetenek Kazanımı ve Kariyer Gelişimi",
+      "desc": "Her ay büyüyen ekibimiz ve çalışan memnuniyeti odaklı yaklaşımımızla sektördeki en iyi yetenekleri bünyemize katıyoruz.",
+      "items": [
+        {
+          "value": "1000+",
+          "title": "Aylık Mülakat",
+          "desc": "Her ay 1000'den fazla adayla mülakat gerçekleştiriyoruz."
+        },
+        {
+          "value": "%36",
+          "title": "Referanslı işe alım",
+          "desc": "Ekibimizin %36'sı referanslı işe alım ile aramıza katılıyor."
+        },
+        {
+          "value": "%94",
+          "title": "Mülakat Deneyimi",
+          "desc": "Adayların %94'ü mülakat deneyimini \"üstün\" olarak değerlendiriyor."
+        },
+        {
+          "value": "200+",
+          "title": "Gelişim",
+          "desc": "Son 3 ayda 200'e yakın danışmanımız 27 farklı kategoride kendini geliştirdi."
+        }
+      ]
+    },
+    "discoverCta": "İçgörüleri Keşfet",
+    "team": {
+      "heading": "BGTS'de Ekip Kalitesine İnanıyoruz",
+      "desc": "Alanında uzman mühendislerden oluşan kadromuzla, farklı şehirlerde çalışan yetenekleri ortak bir vizyon etrafında buluşturuyoruz. Güçlü ekip yapımızın, yüksek müşteri memnuniyetinin temelini oluşturduğunu çok iyi biliyoruz.",
+      "totalEmployees": "Toplam Çalışan",
+      "engineers": "Mühendis",
+      "dynamicTeam": "Genç ve Dinamik Kadro",
+      "dynamicTeamDesc": "25-34 yaş arası <span className=\"font-bold text-slate-900\">1081</span> çalışan",
+      "equality": {
+        "title": "Fırsat Eşitliği",
+        "general": "Genel Dağılım",
+        "female": "Kadın",
+        "male": "Erkek",
+        "managers": "Yönetici Dağılımı",
+        "femaleManager": "Kadın Yönetici",
+        "maleManager": "Erkek Yönetici"
+      },
+      "geo": {
+        "title": "Coğrafi Dağılım",
+        "outOfIstanbul": "İstanbul Dışı Çalışan",
+        "outOfIstanbulDesc": "68 Farklı İl (Remote)",
+        "abroad": "Yurtdışı Çalışan",
+        "abroadDesc": "Dünyanın 4 Farklı Noktası",
+        "projectDesc": "İnsan ve Teknoloji odağında <span className=\"font-bold text-slate-900\">1000+ IT projesi</span> gerçekleştirdik."
+      }
+    }
+  },
+  "careers_culture": {
+    "hero": {
+      "title": "Çalışma Kültürümüz",
+      "subtitle": "Açık iletişim, takım çalışması ve üretme heyecanı kültürümüzün DNA'sı. Hibrit ve esnek çalışma modelleri ile herkesin en verimli olduğu ortamda çalışmasını destekliyoruz."
+    },
+    "cta": "Aramıza Katıl",
+    "mosaic": {
+      "title": "Birlikte Üretiyor, <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600\">Birlikte İlerliyoruz</span>"
+    },
+    "section1": {
+      "title": "Açık İletişim ve <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600\">Destekleyici Ortam</span>",
+      "desc": "Kültürümüz; samimi, yaratıcı ve destekleyici bir atmosfer üzerine kuruludur. Fikirlerin özgürce paylaşıldığı, katkıların değer gördüğü bir iş ortamı yaratırız.",
+      "points": [
+        {
+          "title": "Şeffaf İletişim",
+          "desc": "Her seviyede hızlı, doğrudan ve erişilebilir iletişim."
+        },
+        {
+          "title": "Samimi Atmosfer",
+          "desc": "Yaratıcılığı teşvik eden, herkesin fikrinin değer gördüğü bir ortam."
+        }
+      ]
+    },
+    "section2": {
+      "title": "Esnek Çalışma ve <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600\">Agile Yapı</span>",
+      "desc": "Ekiplerimiz Agile yapılarda organize olur. Bu sayede projelerde hızlı ilerler, daha fazla iş birliği yapar ve değişen ihtiyaçlara kolayca uyum sağlarız.",
+      "points": [
+        {
+          "title": "Agile Metodoloji",
+          "desc": "Hızlı adaptasyon ve sürekli gelişim döngüsü."
+        },
+        {
+          "title": "Uzaktan Erişim",
+          "desc": "Güçlü dijital altyapı ile özgür çalışma imkanı."
+        }
+      ]
+    },
+    "section3": {
+      "title": "Topluluklar ve <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-pink-600\">İnsana Yatırım</span>",
+      "desc": "Çeşitli topluluklar, sosyal etkinlikler ve gönüllülük projeleri ile çalışanlarımızın hem kişisel hem de sosyal gelişimlerini destekler, ekip bağlılığını güçlendiririz.",
+      "activities": [
+        "Kahve Köşesi",
+        "Oyun Arası",
+        "Ofiste Yaşam",
+        "Ekip Etkinlikleri"
+      ],
+      "training": {
+        "title": "Sürekli Gelişim",
+        "desc": "Bizim için en değerli yatırım insandır. Gelişim programları, mentorluk ve sosyal projelerle çalışanlarımızın yanındayız."
+      }
+    }
+  },
+  "careers_paths": {
+    "hero": {
+      "title": "Kariyerini <br/> Sen Şekillendir",
+      "subtitle": "Her çalışanın kariyer yolculuğu kendine özgüdür. Kendi hızında gelişebileceğin, potansiyelini ortaya koyabileceğin esnek ve sürdürülebilir kariyer yolları sunuyoruz."
+    },
+    "cta": "Açık Pozisyonlar",
+    "section1": {
+      "title": "Teknik ve Yönetsel <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600\">Kariyer Yolları</span>",
+      "desc": "Çalışanlarımıza uzmanlıklarını derinleştirebilecekleri teknik kariyer yolları ile ekip ve organizasyon yönetimine odaklanabilecekleri yönetsel kariyer yolları sunuyoruz.",
+      "points": [
+        "Uzmanlık odaklı dikey gelişim",
+        "Liderlik ve yönetim odaklı yatay gelişim",
+        "Bireysel hedeflere uygun esnek planlama"
+      ]
+    },
+    "section2": {
+      "title": "Şeffaf <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600\">Performans Sistemi</span>",
+      "desc": "Performans yönetiminde açıklık ve adaleti esas alıyoruz. Net hedefler, düzenli geri bildirimler ve ölçülebilir kriterler sayesinde çalışanlarımız gelişim alanlarını net bir şekilde görebilir.",
+      "targetsTitle": "Net Hedefler",
+      "targetsDesc": "Ölçülebilir ve ulaşılabilir OKR yaklaşımı.",
+      "feedbackTitle": "Geri Bildirim",
+      "feedbackDesc": "Düzenli 1:1 görüşmeler ve mentorluk."
+    },
+    "section3": {
+      "title": "Proje Geçişleri & <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600\">Rotasyonlar</span>",
+      "desc": "Farklı ekiplerde ve projelerde görev alma imkânı sunarak çalışanlarımızın deneyim alanlarını genişletmelerini destekliyoruz.",
+      "boxTitle": "Bütüncül Perspektif",
+      "boxDesc": "Proje geçişleri, yeni bakış açıları kazandırırken yetkinlik gelişimini hızlandırır ve organizasyon genelinde daha geniş bir vizyon sağlar."
+    },
+    "section4": {
+      "title": "Terfi ve <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600\">Gelişim Fırsatları</span>",
+      "desc": "Yetkinlik, performans ve potansiyel odaklı terfi yaklaşımımızla çalışanlarımızın emeklerinin karşılığını alabilecekleri şeffaf bir ilerleme sistemi sunuyoruz.",
+      "competence": "Yetkinlik",
+      "performance": "Performans",
+      "potential": "Potansiyel"
+    }
+  },
+  "careers_learning": {
+    "hero": {
+      "title": "Öğrenmek Bir <br/> Yaşam Biçimi",
+      "subtitle": "Kendine yatırım yapmak hem bireysel hem de kurumsal başarı için vazgeçilmezdir. Sürekli öğrenmeyi kültürümüzün bir parçası haline getiriyoruz."
+    },
+    "cta": "Bize Katıl",
+    "section1": {
+      "title": "Sertifika Destekleri ve <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600\">Online Eğitim</span>",
+      "desc": "Çalışanlarımızın mesleki uzmanlıklarını derinleştirebilmeleri için Cloud, Agile, güvenlik ve yazılım alanlarında sertifika programlarını aktif olarak destekliyoruz.",
+      "certification": "Sertifikasyon",
+      "certificationDesc": "Uluslararası standartlarda yetkinlik belgelendirme desteği.",
+      "access": "Sınırsız Erişim",
+      "accessDesc": "Global online eğitim platformlarına tam üyelik ile özgür öğrenme."
+    },
+    "section2": {
+      "title": "Geleceğin Liderlerini <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-pink-600\">Yetiştiriyoruz</span>",
+      "desc": "Mevcut ve potansiyel liderlerimizin yetkinliklerini güçlendirmek amacıyla yapılandırılmış liderlik gelişim programları ve birebir mentorluk süreçleri sunuyoruz.",
+      "strategic": "Stratejik Düşünme",
+      "strategicDesc": "Karar alma ve ekip yönetimi becerilerini geliştiren özel modüller.",
+      "mentorship": "Birebir Mentorluk",
+      "mentorshipDesc": "Deneyimli liderlerle yürütülen koçluk seansları."
+    },
+    "section3": {
+      "title": "İç Teknik Topluluklar & <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600\">Paylaşım</span>",
+      "desc": "Bilgi paylaştıkça çoğalır. Çalışanlarımızın deneyimlerini aktardığı düzenli oturumlar ile öğrenmeyi kolektif bir deneyime dönüştürüyor ve ekipler arası bağları güçlendiriyoruz.",
+      "boxTitle": "Teknik Derinlik",
+      "boxDesc": "Tech-talks, workshoplar ve case-study analizleri ile organizasyon genelinde teknik know-how'ı canlı tutuyoruz."
+    }
+  },
+  "resources_success_stories": {
+    "hero": {
+      "title": "Teknoloji İle<br /> <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-corporate-secondary to-blue-500\">Dönüşen Kurumlar</span>",
+      "subtitle": "Finans, savunma ve telekomünikasyonun lider markalarıyla hayata geçirdiğimiz, <strong className=\"text-slate-800 font-bold\">teknoloji yığınlarıyla kanıtlanmış</strong> dijital dönüşüm projeleri."
+    },
+    "grid": {
+      "title": "Tüm Projeler",
+      "subtitle": "proje — her biri gereksinim, çözüm ve teknoloji yığınıyla belgelenmiş",
+      "legend": {
+        "software": "Yazılım",
+        "infrastructure": "Altyapı",
+        "managed": "Yönetilen Hizmet",
+        "education": "Eğitim"
+      }
+    }
+  },
+  "products_page": {
+    "hero": {
+      "title": "Kurumunuzu Dönüştüren <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300\">Akıllı Platformlar</span>",
+      "subtitle": "Verimliliği artıran, maliyetleri düşüren ve rekabet avantajı kazandıran 8 yapay zeka platformu — işe alımdan kurumsal otomasyona, belge yönetiminden bilgi asistanlarına."
+    },
+    "cta": "İncele",
+    "categories": {
+      "recruitment": {
+        "label": "01 — İşe Alım Teknolojileri",
+        "heading": "İşe Alım Süreçlerini",
+        "accent": "Dönüştürün"
+      },
+      "enterprise": {
+        "label": "02 — Kurumsal Çözümler",
+        "heading": "Kurumsal Operasyonları",
+        "accent": "Otomatikleştirin"
+      },
+      "document": {
+        "label": "03 — Doküman & Bilgi Yönetimi",
+        "heading": "Bilgiyi Akıllı Bir",
+        "accent": "Asistana Dönüştür"
+      }
+    },
+    "items": {
+      "ai-hiring-assistant": {
+        "name": "AI HIRING ASSISTANT",
+        "description": "İşe alım süreçlerini yapay zeka ile hızlandırın.",
+        "detail": {
+          "hero": {
+            "title": "İşe Alımda",
+            "titleAccent": "Yapay Zeka Devrimi",
+            "subtitle": "AI Hiring Assistant ile işe alım süreçlerinizi hızlandırın, aday-ilan uyumunu maksimize edin ve video mülakat analizleriyle en doğru yeteneği saniyeler içinde keşfedin.",
+            "cta": "Uzmanımızla Görüşün"
+          },
+          "features": {
+            "heading": "İşe Alım Sürecinizi Uçtan Uca Yönetin",
+            "subheading": "Manuel süreçleri otomatize eden, veriye dayalı kararlar almanızı sağlayan güçlü özellikler.",
+            "items": [
+              { "title": "Otomatik İlan Oluşturma", "desc": "Sadece pozisyon adını girin veya bir dosya yükleyin. Yapay zeka, gereksinimleri ve iş tanımını saniyeler içinde sizin için hazırlasın." },
+              { "title": "Akıllı Aday Eşleştirme", "desc": "İlanlarınız için en uygun adayları, adaylarınız için en uygun ilanları otomatik olarak listeleyin. Skorlama sistemiyle en iyiyi bulun." },
+              { "title": "AI Chatbot Asistanı", "desc": "Aday profilleri hakkında sorular sorun. \"Bu aday hangi teknolojilerde güçlü?\", \"Liderlik vasfı var mı?\" gibi sorulara anında yanıt alın." },
+              { "title": "CV Analizi & Puanlama", "desc": "Yüklenen CV'leri teknik yetkinlik, deneyim ve dil gibi kriterlere göre analiz edin. Objektif ve sayısal bir değerlendirme raporu alın." },
+              { "title": "Video Mülakat Analizi", "desc": "Mülakat kayıtlarını izlemeye son. Yapay zeka, konuşmaları metne döker, soruları ayrıştırır ve adayın yanıtlarını analiz eder." },
+              { "title": "Soru Havuzu Oluşturma", "desc": "Pozisyona ve adaya özel mülakat soruları üretin. Teknik ve yetkinlik bazlı sorularla mülakat kalitenizi artırın." }
+            ]
+          },
+          "deepDive": {
+            "heading": "İlan Oluşturma Hiç Bu Kadar Kolay Olmamıştı",
+            "body": "Geleneksel ilan hazırlama süreçlerindeki zaman kaybını unutun. AI Hiring Assistant, yüklediğiniz kısa notlardan veya dosyalardan yola çıkarak, profesyonel, detaylı ve SEO uyumlu iş ilanları oluşturur.",
+            "bullets": [
+              "Otomatik yetkinlik ve gereksinim listeleme",
+              "Aday havuzundan anında eşleşme önerileri",
+              "Çoklu dil desteği ile global ilanlar"
+            ]
+          }
+        }
+      },
+      "cv-converter": {
+        "name": "CV-CONVERTER",
+        "description": "Dağınık CV formatlarını standart hale getirin.",
+        "detail": {
+          "hero": {
+            "title": "Tüm CV'ler",
+            "titleAccent": "Tek Bir Formatta",
+            "subtitle": "Farklı kaynaklardan gelen CV'leri otomatik olarak kurumunuzun standart formatına dönüştürün. Dağınıklığı ortadan kaldırın, aday veritabanınızı düzenli tutun.",
+            "cta": "Uzmanımızla Görüşün"
+          },
+          "problem": {
+            "heading": "Karmaşık CV Formatlarıyla Vakit Kaybetmeyin",
+            "body": "Adaylardan gelen Word, PDF, Canva veya PowerPoint formatındaki CV'ler, İK süreçlerinde veri bütünlüğünü bozar ve karşılaştırma yapmayı zorlaştırır.",
+            "problemLabel": "Standart Olmayan Veri",
+            "problemDesc": "Her adayın özgeçmişi farklı bir düzende, aradığınızı bulmak zor.",
+            "solutionLabel": "CV-Converter Çözümü",
+            "solutionDesc": "Tüm formatları tek bir yapıya dönüştürür, eksik bilgileri tamamlamanıza olanak tanır.",
+            "pdfLabel": "PDF Formatı",
+            "wordLabel": "Word Belgesi",
+            "outputLabel": "Standart Kurumsal CV"
+          },
+          "features": {
+            "heading": "Öne Çıkan Özellikler",
+            "subheading": "CV dönüşüm ve yönetim süreçlerinizi kolaylaştıran araçlar.",
+            "items": [
+              { "title": "Toplu İşlem & Takip", "desc": "Yüzlerce CV'yi aynı anda sisteme yükleyin. Yükleme durumunu, başarı ve hata oranlarını tek ekrandan anlık olarak takip edin." },
+              { "title": "Akıllı Dönüştürme", "desc": "Gelişmiş parsing algoritmalari ile karmaşık CV tasarımlarını bile başarıyla analiz eder ve standart şablona oturtur." },
+              { "title": "Veri Düzenleme", "desc": "Otomatik dönüştürülen CV'ler üzerinde manuel düzeltmeler yapabilir, eksik sertifika veya proje bilgilerini kolaylıkla ekleyebilirsiniz." }
+            ]
+          },
+          "cta": {
+            "heading": "CV Havuzunuzu Düzenlemeye Başlayın",
+            "body": "CV-Converter ile veri karmaşasına son verin, İK operasyonlarınıza hız ve düzen katın.",
+            "button": "Hemen Başvurun"
+          }
+        }
+      },
+      "cortex": {
+        "name": "CORTEX",
+        "description": "Yazılım yaşam döngüsünü AI agent'larla otomatikleştirin.",
+        "detail": {
+          "hero": {
+            "title": "BGTS",
+            "titleAccent": "Cortex",
+            "subtitle": "Yazılım geliştirme yaşam döngüsünü yapay zeka destekli agent'larla otomatikleştiren kurumsal platform. Kod inceleme, test yazma, hata düzelme ve dokümantasyon analizi artık otopilotta.",
+            "cta": "Uzmanımızla Görüşün",
+            "visualTitle": "AI-Driven SDLC",
+            "visualDesc": "Cortex platformu ile geliştirme süreçlerinizi %40'a kadar hızlandırın."
+          },
+          "features": {
+            "heading": "Geleneksel Süreçlerdeki Darboğazları Aşın",
+            "subheading": "Cortex ile yazılım ekiplerinizin yükünü hafifletin ve hata payını sıfıra indirin.",
+            "items": [
+              { "title": "REVIEWER Agent", "badge": "İnceleme", "desc": "Otomatik PR inceleme yapar, kod kalitesini ve güvenlik açıklarını analiz eder.", "problem": "Manuel kod inceleme darboğazları" },
+              { "title": "DEVELOPER Agent", "badge": "Geliştirme", "desc": "Standart kalitede bug fix üretir ve otomatik PR oluşturur (Sadece P2-P4 arası).", "problem": "Tutarsız ve zaman alan hata düzeltmeleri" },
+              { "title": "GAP_ANALYZER", "badge": "Analiz", "desc": "Dokümantasyon ile gerçek kod arasındaki uyumsuzlukları tespit eder ve raporlar.", "problem": "Dokümantasyon ve kod uyumsuzlukları" },
+              { "title": "TESTER Agent", "badge": "Test", "desc": "Verilen kaynak kod için otomatik unit test yazar ve kod kalitesini artırır.", "problem": "Eksik test kapsamları ve manuel test yazımı" },
+              { "title": "REQUIREMENTS", "badge": "Planlama", "desc": "Confluence'dan PBI ve test senaryolarını otomatik yapılandırır.", "problem": "Zaman alan manuel gereksinim çıkarma süreci" },
+              { "title": "Human in the Loop", "badge": "Kontrol", "desc": "Kritik işlemlerde ve merge kararlarında mutlaka insan onayı gerektirir.", "problem": "Kontrolsüz ve risk barındıran tam otomasyon" }
+            ],
+            "problemLabel": "Çözülen Problem"
+          },
+          "agents": {
+            "heading": "Yapay Zeka Ekibinizle Tanışın",
+            "whatLabel": "Ne Yapar:",
+            "outputLabel": "Çıktı:",
+            "ruleLabel": "Kural:",
+            "items": [
+              { "title": "REVIEWER — Kod İncelemeci", "desc": "Bitbucket'ta PR açıldığında otomatik tetiklenir. Kod kalitesini analiz eder.", "output": "PR üzerinde yorum (rapor) bırakır.", "rule": "Merge yapamaz." },
+              { "title": "TESTER — Test Yazıcı", "desc": "Verilen kaynak kod için otomatik unit test yazar.", "output": "Test dosyaları + PR oluşturur.", "rule": "Commit öncesi insan onayı gerektirir." },
+              { "title": "DEVELOPER — Geliştirici", "desc": "Jira'da P2-P4 öncelikli bug'lar için otomatik kod düzeltmesi yapar.", "output": "Bug fix kodu + PR.", "rule": "PR onayı zorunludur. Yeni özellik YAZAMAZ, P1'e DOKUNAMAZ." },
+              { "title": "PLANNER — Planlamacı", "desc": "Karmaşık görevleri alt görevlere parçalar, uygulama planı oluşturur.", "output": "Yapılandırılmış plan dokümanı.", "rule": "E2E pipeline'da ilk adım olarak çalışır." },
+              { "title": "INDEXER — İndeksleyici", "desc": "Kaynak kodu, Jira tasklarını ve Confluence'ı Qdrant'a indexler.", "output": "Aranabilir vektör verileri.", "rule": "Diğer agent'ların arama yapması için temel oluşturur." },
+              { "title": "GAP_ANALYZER — Boşluk Analizcisi", "desc": "Dokümantasyon ile gerçek kod arasındaki uyumsuzluğu bulur.", "output": "Uyumsuzluk detay raporu.", "rule": "INDEXER'ın çalışmış olması gerekir." },
+              { "title": "MFE_DEVELOPER — Frontend Geliştirici", "desc": "React bileşenlerini ve Storybook hikayelerini otomatik üretir.", "output": "React component + Storybook + PR.", "rule": "İnsan onayı zorunludur." },
+              { "title": "REQUIREMENTS_ANALYST — Gereksinim Analisti", "desc": "Confluence sayfalarından PBI ve test case'leri otomatik çıkarır.", "output": "Gereksinim listesi ve test senaryoları.", "rule": "Manuel dokümanları yapısal hale getirir." }
+            ]
+          },
+          "security": {
+            "heading": "Kesin Güvenlik Kuralları",
+            "subheading": "Cortex, operasyonlarınızı kolaylaştırırken sistem güvenliğini ve insan kontrolnü daima merkeze alır.",
+            "visualTitle": "Human-in-the-Loop Mimarisi",
+            "visualDesc": "Tüm kritik karar noktalarında insan onayı zorunludur.",
+            "items": [
+              { "title": "P1 Bug'lar Engellendi", "desc": "Sadece insanlar çözebilir, agent asla kritik P1 hatalara dokunamaz." },
+              { "title": "Yeni Özellik Geliştirme Engellendi", "desc": "Agent sadece mevcut kodda bug fix yapabilir, sıfırdan feature yazamaz." },
+              { "title": "Merge Yapamaz", "desc": "Agent sadece Pull Request açar, merge kararı tamamen insana aittir." },
+              { "title": "Maliyet Takibi", "desc": "Her agent çalıştırmasında token kullanımı ve maliyet titizlikle kaydedilir." }
+            ]
+          }
+        }
+      },
+      "hcm": {
+        "name": "HCM PLATFORMU",
+        "description": "İK operasyonlarınızı uçtan uca dijitalleştiren HCM platformumuz.",
+        "detail": {
+          "hero": {
+            "subtitle": "16 entegre modül ile İK süreçlerinizi uçtan uca dijitalleştirin. İşe alımdan bordro yönetimine, performanstan eğitim planlamasına kadar tek platform.",
+            "ctaText": "Uzmanımızla Görüşün"
+          },
+          "overview": {
+            "heading": "İnsan Sermayesi Yönetim Sistemi",
+            "p1": "HRThema HCM, sunduğu modülleri ile tek bir güvenlik modeline ve benzer, entegre edilmiş kullanıcı deneyimine sahip uçtan uca bir HCM çözümüdür.",
+            "p2": "İşe alımdan bordro süreçlerine, performans yönetiminden eğitim planlamasına kadar tüm İK operasyonlarını tek bir platformda birleştirerek, kurumunuzun insan kaynağını stratejik bir varlık olarak yönetmenize olanak tanır.",
+            "p3": "Kurumunuzun en değerli varlığı olan iş gücünün yönetilmesine stratejik ve planlı bir yaklaşım getiren platform, iş gücünüzü finansal ve yönetimsel objektiften anlamak ve ele almak için tasarlanmıştır.",
+            "badge1": "Tek Güvenlik Modeli",
+            "badge2": "Mobil Uyumlu"
+          },
+          "highlights": [
+            { "label": "Uçtan Uca Çözüm", "desc": "İşe alımdan çıkışa kadar tüm İK süreçleri tek platformda." },
+            { "label": "Tek Güvenlik Modeli", "desc": "Merkezi yetkilendirme ve veri güvenliği altyapısı." },
+            { "label": "Entegre Deneyim", "desc": "Tüm modüllerde tutarlı ve modern kullanıcı arayüzü." },
+            { "label": "Mobil Erişim", "desc": "React Native ile her yerden erişilebilir İK portalı." }
+          ],
+          "differentiators": {
+            "heading": "Neden HR Thema HCM?",
+            "subtitle": "Kurumunuzun İK dönüşümünü hızlandıran üç temel avantaj.",
+            "items": [
+              { "title": "16 Entegre Modül", "desc": "İşe alımdan bordro süreçlerine, performans yönetiminden eğitim planlamasına kadar tüm İK operasyonlarını tek bir platformda birleştirin.", "stat": "16", "statLabel": "Modül" },
+              { "title": "360° İK Yönetimi", "desc": "Çalışan yaşam döngüsünün her aşamasını kapsamlı olarak yönetin. Veriye dayalı kararlar alın.", "stat": "360°", "statLabel": "Kapsam" },
+              { "title": "Modern Teknoloji", "desc": "ASP.NET Core, React Native, Redis, Kubernetes ve daha fazlası ile inşa edilmiş güçlü altyapı.", "stat": "16+", "statLabel": "Teknoloji" }
+            ]
+          },
+          "video": {
+            "heading": "Human Capital Management (HCM)",
+            "body": "Platformumuzun sunduğu kapsamlı İK yönetim deneyimini tanıtım videomuz ile keşfedin. 16 entegre modülün nasıl birlikte çalıştığını görün.",
+            "bullets": [
+              "İşe alımdan çıkışa kadar tam süreç yönetimi",
+              "Tek panel üzerinden tüm İK operasyonları",
+              "Mobil uygulama ile çalışanların self-servis erişimi"
+            ]
+          },
+          "modules": [
+            {
+              "id": "temel-ik", "title": "Temel İK & Organizasyon",
+              "description": "Organizasyon yapısı, personel yönetimi, işe alım ve bordro süreçlerinin entegre yönetimi.",
+              "modules": [
+                { "title": "Temel İK ve Organizasyon", "desc": "Organizasyon yapısı, personel kartları ve özlük bilgilerinin merkezi yönetimi." },
+                { "title": "İşe Alım ve Uyum", "desc": "Aday takip, mülakat süreçleri ve onboarding iş akışları." },
+                { "title": "Bordro ve Teşvik", "desc": "Yasal uyumlu bordro hesaplama, SGK ve teşvik raporlaması." },
+                { "title": "Üret ve Yan Haklar", "desc": "Üret yapısı, terfi/zam simülasyonu ve tazminat yönetimi." }
+              ]
+            },
+            {
+              "id": "yetenek-performans", "title": "Yetenek & Performans",
+              "description": "Çalışan potansiyellerini keşfedin, performansı ölçün ve stratejik iş gücü planlaması yapın.",
+              "modules": [
+                { "title": "Yetenek Yönetimi", "desc": "Çalışan potansiyellerinin belirlenmesi, yedekleme planları ve kariyer haritalari." },
+                { "title": "Performans", "desc": "Hedef bazlı değerlendirme, 360° geri bildirim ve OKR yönetimi." },
+                { "title": "İş gücü Analitiği ve Planlaması", "desc": "Stratejik iş gücü planlaması, trend analizi ve dashboard." },
+                { "title": "Değerlendirme ve Anket", "desc": "Çalışan memnuniyeti, baglılık ve iklim anketleri." }
+              ]
+            },
+            {
+              "id": "egitim-iletisim", "title": "Eğitim & İletişim",
+              "description": "Sürekli öğrenme kültürü oluşturun, sınav ve sertifikalarla yetkinlikleri doğrulayın.",
+              "modules": [
+                { "title": "Eğitim ve Gelişim Planı", "desc": "Eğitim kataloğu, sınıf yönetimi, e-öğrenme entegrasyonu." },
+                { "title": "Sınav", "desc": "Yetkinlik ve bilgi ölçme sınavları, otomatik puanlama." },
+                { "title": "Online Toplantı", "desc": "WebRTC tabanlı görüntülü toplantılar ve entegre takvim." },
+                { "title": "İK Portal", "desc": "Self-servis çalışan portalı, izin talepleri ve bildirimler." }
+              ]
+            },
+            {
+              "id": "operasyonel", "title": "Operasyonel Süreçler",
+              "description": "Günlük İK operasyonlarınızı otomatize edin — masraf, zaman, doküman ve talep yönetimi.",
+              "modules": [
+                { "title": "Masraf Yönetimi", "desc": "Masraf girişi, onay süreçleri ve muhasebe entegrasyonu." },
+                { "title": "Zaman ve Devamlılık", "desc": "Mesai takibi, vardiya planlama ve devamsızlık yönetimi." },
+                { "title": "Doküman Yönetimi", "desc": "Merkezi belge arşivi, sürüm kontrolü ve dijital imza." },
+                { "title": "Sorun ve Talep Yönetimi", "desc": "Çalışan talep/şikâyet sistemi, SLA takibi ve raporlama." }
+              ]
+            }
+          ],
+          "techStack": {
+            "heading": "Güçlü Teknoloji Altyapısı",
+            "subtitle": "HR Thema HCM'in arkasında en yeni teknolojiler ile inşa edilmiş, ölçeklenebilir ve güvenli bir mimari bulunur."
+          }
+        }
+      },
+      "praxila": {
+        "name": "PRAXILA",
+        "description": "Yeni nesil otomasyon ve operasyon yönetimi platformumuz.",
+        "detail": {
+          "hero": {
+            "title": "Praxila: Bütleşik IT Hizmet & Operasyon Yönetimi",
+            "subtitle": "ITSM, PPM ve ITOM süreçlerinizi tek bir platformda birleştiren, yapay zeka destekli yeni nesil operasyon yönetim çözümü.",
+            "ctaText": "Uzmanımızla Görüşün"
+          },
+          "overview": {
+            "heading": "Güçlü Temel, Akıllı Operasyon",
+            "p1": "Praxila, Enterprise Service Management vizyonuyla tasarılanmış; esnek, ölçeklenebilir ve yapay zeka destekli güçlü bir Foundation üzerine inşa edilmiştir.",
+            "p2": "ITSM, PPM ve ITOM modülleri ile IT operasyonlarınızı uçtan uca yönetin. Gelişmiş otomasyon, keşif ve analitik yetenekleri ile proaktif bir operasyon yönetimi deneyimi yaşayın.",
+            "badges": ["ITIL Uyumlu", "AI Destekli", "Multi-Tenant"],
+            "stats": [
+              { "stat": "3", "label": "Ana Modül" },
+              { "stat": "17+", "label": "Alt Süreç" },
+              { "stat": "AI", "label": "Destekli" }
+            ]
+          },
+          "foundation": {
+            "heading": "Foundation Core",
+            "subtitle": "Tüm modüllerin üzerine inşa edildiği güçlü altyapı bileşenleri.",
+            "items": [
+              { "name": "CMDB", "desc": "Konfigürasyon ve varlık ilişkilerinin merkezi yönetimi." },
+              { "name": "Service Catalog", "desc": "Hizmet kataloğu ve self-servis talep portalı." },
+              { "name": "Service Portal", "desc": "Kullanıcı dostu self-servis erişim noktası." },
+              { "name": "Knowledge", "desc": "Bilgi bankası ve çözüm kütüphanesi yönetimi." },
+              { "name": "SLM", "desc": "Hizmet seviyesi anlaşmaları ve SLA takibi." },
+              { "name": "Notification", "desc": "Çok kanalı bildirim ve eskalasyon yönetimi." },
+              { "name": "Multi Tenancy", "desc": "Çok kiralı mimari ile izole ortam desteği." },
+              { "name": "Resource Plan", "desc": "Kaynak planlama ve kapasite yönetimi." },
+              { "name": "TimeSheet", "desc": "Zaman takibi ve iş gücü raporlaması." },
+              { "name": "Task Management", "desc": "Görev atama, takip ve tamamlama yönetimi." },
+              { "name": "Workflow", "desc": "Esnek iş akışı motoruyla süreç otomasyonu." }
+            ]
+          },
+          "advanced": {
+            "heading": "Gelişmiş Yetenekler",
+            "subtitle": "Yapay zeka ve otomasyon ile desteklenen ileri seviye özellikler.",
+            "items": [
+              { "name": "KanBan Board", "desc": "Görsel görev yönetimi ve sprint takibi.", "isAI": false },
+              { "name": "Business Intelligence", "desc": "Gelişmiş raporlama ve veri analitiği.", "isAI": false },
+              { "name": "Chat Bot", "desc": "Yapay zeka destekli self-servis destek botu.", "isAI": false },
+              { "name": "Remote Desktop", "desc": "Uzaktan masaüstü erişimi ve destek.", "isAI": false },
+              { "name": "Employee Monitoring", "desc": "Çalışan aktivite izleme ve raporlama.", "isAI": false },
+              { "name": "Machine Learning", "desc": "Prediktif analiz ve anomali tespiti.", "isAI": true },
+              { "name": "Conversational AI", "desc": "Doğal dil işleme tabanlı etkileşim.", "isAI": true }
+            ]
+          },
+          "modules": [
+            {
+              "id": "itsm", "title": "ITSM", "subtitle": "IT Service Management",
+              "description": "Enterprise Service Management çatısı altında uçtan uca IT Hizmet Yönetimi.",
+              "modules": [
+                { "title": "Service Desk", "desc": "Tüm taleplerin tek noktadan karşılanması ve yönlendirilmesi." },
+                { "title": "Incident", "desc": "Hizmet kesintilerinin hızlı çözümü ve yönetimi." },
+                { "title": "Request Fulfillment", "desc": "Kullanıcı isteklerinin iş akışları ile karşılanması." },
+                { "title": "Problem", "desc": "Kök neden analizi ile tekrarlayan sorunların engellenmesi." },
+                { "title": "Change", "desc": "Değişikliklerin risk analizi ve onay süreçleri ile yönetimi." },
+                { "title": "Release", "desc": "Sürüm ve yaygınlaştırma süreçlerinin planlanması." },
+                { "title": "Asset & Capacity", "desc": "Varlık yönetimi ve kapasite planlama süreçleri." }
+              ]
+            },
+            {
+              "id": "ppm", "title": "PPM", "subtitle": "Project Portfolio Management",
+              "description": "Talep, proje ve portföy süreçlerinin bütünleşik yönetimi.",
+              "modules": [
+                { "title": "Demand", "desc": "Taleplerin toplanması, değerlendirilmesi ve önceliklendirilmesi." },
+                { "title": "Project", "desc": "Onaylanan taleplerin proje olarak planlanması ve yürütülmesi." },
+                { "title": "Portfolio", "desc": "Projelerin stratejik hedeflere göre portföy bazında yönetimi." },
+                { "title": "Finance & Budget", "desc": "Proje bütçelerinin ve finansal kaynakların takibi." },
+                { "title": "SDLC (Scrum)", "desc": "Yazılım geliştirme yaşam döngüsü ve çevik proje yönetimi." }
+              ]
+            },
+            {
+              "id": "itom", "title": "ITOM", "subtitle": "IT Operations Management",
+              "description": "IT Operasyonlarının otomasyon ve keşif yetenekleri ile güçlendirilmesi.",
+              "modules": [
+                { "title": "Orchestration", "desc": "Operasyonel süreçlerin otomasyonu ve iş akışı yönetimi." },
+                { "title": "Client Discovery", "desc": "Son kullanıcı cihazlarının ağ üzerinde keşfedilmesi." },
+                { "title": "Infrastructure Discovery", "desc": "Sunucu ve ağ altyapısının otomatik keşfi." },
+                { "title": "Service Mapping", "desc": "İş servisleri ve altyapı ilişkilerinin haritalanması." },
+                { "title": "Event Management", "desc": "Olayların izlenmesi, korelasyonu ve yönetimi." }
+              ]
+            }
+          ]
+        }
+      },
+      "meetsense": {
+        "name": "MEETSENSE",
+        "description": "Toplantıları AI ile kaydedin, analiz edin ve kurumsal hafızaya dönüştürün.",
+        "detail": {
+          "hero": {
+            "tagline": "Toplantılarınızı AI'ın Gücüyle Dönüştürün.",
+            "subtitle": "Akıllı asistan, canlı transkript, otomatik Jira entegrasyonu ve organizasyonel içgörüler ile toplantılarınızı kalıcı kurumsal hafızaya dönüştürün.",
+            "cta": "Uzmanımızla Görüşün"
+          },
+          "overview": {
+            "heading": "MeetSense Nedir?",
+            "subtitle": "Kurumsal ekiplerin toplantılarına otomatik katılır, yüksek kaliteli ses kaydı alır, AI ile transkript üretir ve analizlerle değerini maksimize eder.",
+            "capabilities": [
+              { "name": "Takvim Entegrasyonu", "desc": "Takviminizi okur, planlanmış toplantılarınıza otomatik olarak katılır." },
+              { "name": "Yüksek Kaliteli Kayıt", "desc": "Otomatik ses kaydı ile konuşulan her şeyi güvenle yedekler." },
+              { "name": "AI Transkript", "desc": "Speaker Diarization ile kimin ne dediğini metne dökerek ayrıştırır." },
+              { "name": "Derinlemesine Analiz", "desc": "Gelişmiş AI destekli analizler ile kararları ve aksiyonları tespit eder." }
+            ]
+          },
+          "process": {
+            "heading": "Toplantı Yaşam Döngüsü",
+            "subtitle": "Başlangıçtan tamamlanmaya kadar her adım otomatik yönetilir.",
+            "steps": [
+              { "num": "01", "title": "Planlandı", "desc": "Takvim entegrasyonu ile otomatik veya manuel olarak toplantılar tespit edilir." },
+              { "num": "02", "title": "Bot Katılıyor", "desc": "Kural bazlı veya manuel tetikleyici ile sanal asistanımız görüşmeye katılır." },
+              { "num": "03", "title": "Kayıt Ediliyor", "desc": "Yüksek kalitede ses ve veri kaydı aktif hale gelir." },
+              { "num": "04", "title": "İşleniyor", "desc": "Ses verisi AI ile metne dökülür ve anlamlı analizler için işlenir." },
+              { "num": "05", "title": "Tamamlandı", "desc": "Zengin raporlar, aksiyon maddeleri ve entegrasyon çıktıları sunulur." }
+            ]
+          },
+          "features": {
+            "heading": "Platformun Gücünü Keşfedin",
+            "subtitle": "Sadece kayıt tutmanın ötesine geçen, yapay zeka destekli akıllı özellikler.",
+            "items": [
+              { "id": "ai-transcript", "title": "AI Transkript ve Analiz Detayları", "description": "Klasik metin dökümünün ötesinde, her konuşmayı bağlamına oturtan gelişmiş analizler.", "items": [ { "title": "Konuşmacı Bazlı Ayrım", "desc": "Speaker Diarization ile her sözün sahibini net biçimde tespit eder." }, { "title": "Segment Bazlı Dinleme", "desc": "Transkripte tıklayarak o anki sese anında gidin." } ] },
+              { "id": "chat-bot", "title": "MeetSense Chatbot", "description": "Verilerinizle doğal dilde konuşun. Geçmişi veya mevcut toplantıyı anlık olarak sorgulayın.", "items": [ { "title": "Anlık Analiz", "desc": "Devam eden toplantıda bile anında özet alın." }, { "title": "Geçmiş Tarama", "desc": "Belirli bir projeye veya ekibe ait toplantı serilerini tarayın." } ] },
+              { "id": "dashboard", "title": "Organizasyonel İçgörüler", "description": "Tüm toplantılarınızın büyük resmi. Ekiplerin üretkenliğini kuş bakışı değerlendirin.", "items": [ { "title": "Haftalık & Aylık Özetler", "desc": "Toplantı, karar ve aksiyon istatistiklerine tek bakış." }, { "title": "Trend Analizi", "desc": "En çok konuşulan konuları ve riskleri tespit edin." } ] },
+              { "id": "integrations", "title": "İş Takibi & Entegrasyonlar", "description": "AI ile alınan kararlar otomatik olarak Jira, Trello gibi iş platformlarınıza akar.", "items": [ { "title": "Jira Entegrasyonu", "desc": "Teknik kararları otomatik Jira tasklerine dönüştürün." }, { "title": "AI Atama Algoritması", "desc": "Görevi transkripten çıkarıp doğru kişiye linkler." } ] }
+            ]
+          },
+          "values": {
+            "heading": "Sözde Kalmasın,",
+            "headingAccent": "İşe Dönüssün",
+            "subtitle": "MeetSense size sadece kayıt araçları sunmaz; aksiyon alır, riskleri tespit eder ve toplantılarınızı organizasyonel değere dönüştürür.",
+            "cta": "Daha Fazla Bilgi İstiyorum",
+            "items": [
+              { "title": "Zaman Tasarrufu", "desc": "Not alma ve rapor yazma süreleri ortadan kalkar.", "num": "01" },
+              { "title": "Güvenli İçerik", "desc": "Hassas içerikler sadece yetkili kişilere ulaşır.", "num": "02" },
+              { "title": "Aksiyon Takibi", "desc": "Her karar kaydedilir, sorumlu atanır ve takip edilir.", "num": "03" },
+              { "title": "Derin Analiz", "desc": "Riskler ve açık konular otomatik tespit edilir.", "num": "04" },
+              { "title": "Doğal Dil Sorgusu", "desc": "Okumak yerine soru sorun, anında cevap alın.", "num": "05" },
+              { "title": "Trend & Pattern", "desc": "Çoklu toplantı verilerinden trendleri yakalayın.", "num": "06" }
+            ]
+          }
+        }
+      },
+      "doc2bot": {
+        "name": "DOC2BOT",
+        "description": "Kurum içi bilgi bankanızı akıllı bir asistana dönüştürün.",
+        "detail": {
+          "hero": {
+            "title": "Bilgi Bankanız",
+            "titleAccent": "Konuşuyor",
+            "subtitle": "Confluence ve dokümanlarınızdaki bilgiye ulaşmak hiç bu kadar kolay olmamıştı. Doc2Bot, çalışanlarınızın sorularını 7/24 anında yanıtlar.",
+            "cta": "Uzmanımızla Görüşün",
+            "chatQ1": "Yemek kartı limitleri bu ay ne kadar oldu?",
+            "chatA1": "2024 yılı itibarıyla günlük yemek bedeli istisnası <strong>170 TL + KDV</strong> olarak belirlenmiştir. (Kaynak: İK Politikaları v2.4)",
+            "chatQ2": "VPN kurulumu nasıl yapılır?",
+            "chatA2": "VPN kurulumu için GlobalProtect istemcisini indirmeniz gerekmektedir."
+          },
+          "features": {
+            "whyLabel": "Neden Doc2Bot?",
+            "heading": "Ekipleriniz Arasındaki Bilgi Köprüsü",
+            "body": "Kurum içinde tekrar eden sorularla zaman kaybetmeyin. Doc2Bot, dokümantasyonunuzu yaşayan bir bilgi kaynağına dönüştürür.",
+            "learnMore": "Detaylı Bilgi Al",
+            "items": [
+              { "title": "Confluence Entegrasyonu", "desc": "Mevcut Confluence alanlarınızı (Spaces) doğrudan bağlayın. Ekstra veri girişine gerek kalmadan botunuz hazır." },
+              { "title": "Doğru ve Güvenilir", "desc": "Doc2Bot hayal kurmaz (hallucination-free). Sadece dokümanlarınızda var olan bilgiyi referans vererek sunar." },
+              { "title": "Çoklu Dil Desteği", "desc": "Dokümanlarınız İngilizce olsa bile çalışanlarınız Türkçe sorabilir. Doc2Bot diller arası çeviri yaparak yanıtlar." },
+              { "title": "Slack & Teams", "desc": "Çalışanlarınızın halihazırda kullandığı iletişim kanallarına (Slack, MS Teams) entegre olur." }
+            ]
+          }
+        }
+      },
+      "docmind": {
+        "name": "DOCMIND",
+        "description": "Kod tabanınızdan otomatik teknik dokümantasyon üretin.",
+        "detail": {
+          "hero": {
+            "title": "Kod Yazmak Size,",
+            "titleAccent": "Dokümantasyon Bize",
+            "titleSuffix": "Kalsın",
+            "subtitle": "DocMind, kaynak kodunuzu analiz eder, yapısını anlar ve her zaman güncel kalan teknik dokümantasyonlar üretir. \"Döküan güncel değil\" sorununa son verin.",
+            "cta": "Uzmanımızla Görüşün"
+          },
+          "process": {
+            "step1Title": "1. Repo Bağlantısı",
+            "step1Desc": "Bitbucket veya Git reponuzu sisteme tanımlayın.",
+            "step2Title": "2. AI Analizi",
+            "step2Desc": "Entegre LLM modelleri kod yapınızı tarar ve anlar.",
+            "step3Title": "3. Canlı Doküman",
+            "step3Desc": "Confluence veya PDF çıktılarınız hazır ve güncel."
+          },
+          "features": {
+            "heading": "Geliştiricilerin En Sevmediği İşte En Büyük Yardımcı",
+            "body": "Kod yazmak keyifli ama dokümantasyon sıkıcıdır. DocMind ile teknik borçlarınız azalır, on-boarding süreleri kısalır.",
+            "items": [
+              { "title": "Esnek Kapsam", "desc": "İster üst seviye mimari özeti, ister fonksiyon bazlı detaylı API dokümanı. İhtiyacınıza göre ayarlayın." },
+              { "title": "Özelleştirilebilir Başlıklar", "desc": "\"Hakkında / Genel Bakış\", \"Mimari & Sistem Tasarımı\", \"API Referansı\" gibi dilediğiniz başlıkları seçerek doküman yapısını siz belirleyin." },
+              { "title": "Dil Desteği", "desc": "Dokümanlarınızın dilini seçin (TR/EN). Global ekipler için İngilizce, yerel ekipler için Türkçe çıktılar alın." }
+            ]
+          },
+          "cta": {
+            "heading": "Teknik Dokümantasyon Artık Yük Değil",
+            "body": "DocMind ile kodunuz geliştikçe dokümanınız da gelişsin."
+          }
+        }
+      }
+    }
+  },
+  "partnerships_page": {
+    "hero": {
+      "title": "Teknoloji Yatırımlarınızdan <br/> <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400\">Maksimum Faydayı Sağlayın</span>",
+      "subtitle": "BGTS, kurumsal platform çözümleriyle verimliliği artırır, iş birliğini güçlendirir ve dijital dönüşümü hızlandırır. Microsoft'un güçlü altyapısından AWS'in ölçeklenebilir bulut çözümlerlerine, ServiceNow'ın operasyonel verimlilik kazandıran otomasyonlarından Atlassian, Xurrent ve Mendix platformlarının sunduğu esneklik ve çevikliğe kadar farklı alanlarda çözümler sağlıyoruz."
+    },
+    "items": {
+      "qlik": {
+        "name": "Qlik",
+        "description": "BGTS, Qlik Yetkili İş Ortağı olarak; kurumsal ölçekte yönetilen analitiği ve güvenilir veri entegrasyonunu destekleyen Qlik platformlarını tasarlar, devreye alır, yönetir ve ölçeklendirir."
+      },
+      "microsoft": {
+        "name": "Microsoft",
+        "description": "Microsoft teknolojileri ile ekiplerinizi daha verimli hale getirin, iş akışlarınızı kolaylaştırın ve BT altyapınızı modernleştirin. Microsoft'un güvenilir iş ortağı olarak, uzman danışmanlarımızla bulut hizmetlerinden siber güvenliğe kadar uçtan uca çözümler sunuyoruz."
+      },
+      "aws": {
+        "name": "AWS",
+        "description": "BGTS'in AWS uzmanlığıyla bulut bilişimin tüm potansiyelinden faydalanın. İş ihtiyaçlarınıza göre uyarlanmış ölçeklenebilir, güvenli ve uygun maliyetli bulut çözümleri sağlıyoruz."
+      },
+      "servicenow": {
+        "name": "ServiceNow",
+        "description": "ServiceNow ile kurumsal iş akışlarını modernize edin ve operasyonel verimliliği artırın. BGTS; BT hizmet yönetimi, iş süreçleri otomasyonu ve güvenlik operasyonlarını geliştirmek için özel ServiceNow çözümleri sunar."
+      },
+      "atlassian": {
+        "name": "Atlassian",
+        "description": "Atlassian araçlarıyla ekiplerin iş birliğini artırın, iş akışlarını düzenleyin ve çevik dönüşüm sağlayın. BGTS kurumlara Jira, Confluence, Trello ve Bitbucket gibi Atlassian araçlarını en iyi şekilde uygulamak, özelleştirmek ve optimize etmek için destek verir."
+      },
+      "temenos": {
+        "name": "Temenos",
+        "description": "BGTS olarak, dünyanın lider temel bankacılı platformu Temenos iş birliğiyle finans kuruluşlarının modernleşmesini ve ölçeklenmesini destekliyoruz. Sertifikalı uzmanlarımız kurulum ve entegrasyondan uzun vadeli desteğe kadar, Temenos'un tüm potansiyelinden yararlanmanızı sağlayan uçtan uca hizmetler sunar."
+      },
+      "xurrent": {
+        "name": "Xurrent",
+        "description": "Kurumsal hizmet yönetimini (ESM) Xurrent ile yeniden şekillendirin. BGTS kurumlara BT operasyonlarından müşteri hizmetleri otomasyonu ve iş akışlarına kadar birçok Xurrent çözümünü kusursuz bir şekilde entegre eder."
+      },
+      "mendix": {
+        "name": "Mendix",
+        "description": "Mendix'in düşük kodlu platformu ile dijital inovasyonu hızlandırın. Yapay zeka destekli Chatbot'lardan müşteri portallarına kadar birçok özel uygulama geliştirerek, hızlı ve ölçeklenebilir çözümler sunuyoruz."
+      }
+    }
+  },
+  "hr_page": {
+    "hero": {
+      "title": "Yeteneklerinize Değer Veriyoruz",
+      "subtitle": "Tutkulu, yenilikçi ve sürekli öğrenen bir ekibin parçası olun. Kariyerinizi bizimle şekillendirin."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "subtitle": "Bizi biz yapan, çalışma şeklimizi ve kararlarımızı yönlendiren temel prensiplerimiz.",
+      "innovation": {
+        "title": "İnovasyon Tutkusu",
+        "description": "Sürekli gelişim ve yeni teknolojileri keşfetme arzusu DNA'mızda var. Hata yapmaktan korkmadan deneriz."
+      },
+      "success": {
+        "title": "Birlikte Başarı",
+        "description": "Takım çalışmasına inanırız. Birbirimizi destekler, bilgiyi paylaşır ve başarıyı birlikte kutlarız."
+      },
+      "human": {
+        "title": "İnsan Odaklılık",
+        "description": "Çalışanlarımızın mutluluğu ve gelişimi önceliğimizdir. Adil, kapsayıcı ve saygılı bir ortam sunarız."
+      }
+    },
+    "life": {
+      "title": "BGTS'de Yaşam",
+      "subtitle": "Sadece çalışmıyoruz; birlikte üretiyor, eğleniyor ve büyüyoruz. İşte ofisimizden ve ekibimizden kareler.",
+      "caption1": "Birlikte Üretim Kültürü",
+      "caption2": "Global Mühendislik Ekibi",
+      "caption3": "Ofisimizden Kareler",
+      "location": "Maslak, İstanbul — Teknoloji Üssü"
+    },
+    "why": {
+      "title": "Neden BGTS?",
+      "items": [
+        {
+          "title": "Sürekli Eğitim",
+          "desc": "Udemy, Pluralsight üyelikleri ve sertifika destekleri."
+        },
+        {
+          "title": "Esnek Yan Haklar",
+          "desc": "Özel sağlık sigortası, yemek kartı ve spor desteği."
+        },
+        {
+          "title": "Mutlu Ofis",
+          "desc": "Ergonomik çalışma ortamı, playstation köşesi ve happy hour'lar."
+        },
+        {
+          "title": "Kariyer Gelişimi",
+          "desc": "Net kariyer yolu ve düzenli performans geri bildirimleri."
+        }
+      ]
+    },
+    "young_teaser": {
+      "title": "Geleceği Kodlamaya Hazır Mısın?",
+      "subtitle": "Sıradan bir staj veya iş başlangıcı değil. Gerçek projeler, modern teknolojiler ve sınırsız gelişim dünyasının kapılarını arala.",
+      "cta": "Programı İncele"
+    },
+    "passion": {
+      "title": "Sadece Bir İş Değil, <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600\">Tutku.</span>",
+      "subtitle": "BGTS'de mühendislik, kod yazmaktan fazlasıdır. Birlikte öğrenir, birlikte eğlenir ve geleceği birlikte inşa ederiz.",
+      "path": {
+        "title": "Hızlı Kariyer Yolu",
+        "desc": "Performans odaklı net ilerleme adımları ve düzenli geri bildirimlerle yerinde sayma, sürekli yüksel."
+      },
+      "vision": {
+        "title": "Global Vizyon",
+        "desc": "Uluslararası standartlarda projeler ve dünya çapında teknolojilerle sınırlarını zorla."
+      },
+      "talent_count": "+50 Genç Yetenek",
+      "talent_wait": "Seninle tanışmayı bekliyor."
+    },
+    "testimonials": {
+      "title": "Çalışanlarımız Ne Diyor?",
+      "items": [
+        {
+          "quote": "BGTS'de çalışmak, sürekli öğrenmek ve gelişmek demek. Burada fikirlerinize değer veriliyor ve inisiyatif almanız destekleniyor.",
+          "author": "Ayşe Yılmaz",
+          "role": "Senior Software Engineer - 3 Yıl"
+        },
+        {
+          "quote": "Samimi ve destekleyici bir çalışma ortamı var. Hem profesyonel hem de kişisel gelişimim için harika bir yer.",
+          "author": "Mehmet Demir",
+          "role": "DevOps Engineer - 1.5 Yıl"
+        }
+      ]
+    },
+    "footer_cta": {
+      "title": "Başka Bir Pozisyon mu Arıyorsunuz?",
+      "subtitle": "Açık pozisyonlarımızı LinkedIn üzerinden takip edebilir veya genel başvuru için bize ulaşabilirsiniz.",
+      "cta": "LinkedIn'de Bizi Takip Edin"
+    }
+  },
+  "meetsense_viewer": {
+    "title": "MeetSense AI Sunum Görüntüleyici",
+    "slides_label": "Slayt",
+    "other_images": "Diğer Görseller",
+    "main_image": "Ana Görsel"
+  },
+  "breadcrumb": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "industries": "Sektörler",
+    "products": "Ürünler",
+    "contact": "İletişim",
+    "about": "Hakkımızda",
+    "hr": "Kariyer",
+    "genc-muhendis-programi": "Genç Mühendisler Programı",
+    "software-development": "Yazılım Geliştirme",
+    "managed-services": "Yönetilen Hizmetler",
+    "devops": "DevOps",
+    "banking": "Bankacılık & Finans",
+    "defense": "Savunma Sanayi",
+    "retail-telecom": "Perakende & Telekom",
+    "ai-hiring-assistant": "AI Hiring Assistant",
+    "cv-converter": "CV Converter",
+    "doc2bot": "Doc2Bot",
+    "docmind": "DocMind",
+    "consultancy": "Danışmanlık",
+    "talent": "Yetenek Yönetimi",
+    "career-paths": "Kariyer Yolları",
+    "culture": "Kültürümüz",
+    "learning": "Öğrenme & Gelişim",
+    "partnerships": "İş Ortaklıkları",
+    "resources": "Kaynaklar",
+    "success-stories": "Başarı Hikayeleri",
+    "infographics": "İnfografikler",
+    "hcm": "HCM",
+    "meetsense": "MeetSense",
+    "praxila": "Praxila",
+    "cortex": "Cortex",
+    "social-contribution": "Toplumsal Katkı",
+    "retail": "Perakende",
+    "telecommunications": "Telekomünikasyon"
+  }
+}

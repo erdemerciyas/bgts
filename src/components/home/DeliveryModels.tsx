@@ -5,7 +5,7 @@ import { CheckCircle, Users, Settings, ArrowRight } from "lucide-react"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
-import { HOME_CONTENT } from "@/content/home"
+import { getHomeContent } from "@/content/home"
 import { cn } from "@/lib/utils"
 
 function GeometricPatterns() {
@@ -121,8 +121,8 @@ function CardDecoration({ variant }: { variant: string }) {
     )
 }
 
-export function DeliveryModels() {
-    const { heading, description, models } = HOME_CONTENT.deliveryModels;
+export function DeliveryModels({ content, lang = "tr" }: { content?: any; lang?: string }) {
+    const { heading, description, models } = content || getHomeContent().deliveryModels;
 
     return (
         <Section id="is-modelleri" className="relative z-0 overflow-hidden py-16 lg:py-24">
@@ -139,7 +139,7 @@ export function DeliveryModels() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
-                    {models.map((model) => (
+                    {models.map((model: any) => (
                         <div
                             key={model.id}
                             className={cn(
@@ -193,7 +193,7 @@ export function DeliveryModels() {
 
                                 {/* Features */}
                                 <div className="space-y-4 mb-10">
-                                    {model.features.map(item => (
+                                    {model.features.map((item: string) => (
                                         <div key={item} className={cn(
                                             "flex items-center gap-3.5",
                                             model.variant === "light" ? "text-corporate-dark" : "text-white"
@@ -216,7 +216,7 @@ export function DeliveryModels() {
 
                                 {/* CTA */}
                                 <Link
-                                    href={model.ctaLink}
+                                    href={model.ctaLink.startsWith("http") ? model.ctaLink : `/${lang}${model.ctaLink}`}
                                     className={cn(
                                         "group/btn relative flex items-center justify-center gap-2.5 w-full py-4 rounded-xl font-bold text-center text-sm transition-all duration-300 mt-auto overflow-hidden",
                                         model.variant === "light"

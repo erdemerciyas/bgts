@@ -37,7 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/products/praxila`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
 
     // Kariyer
-    { url: `${baseUrl}/hr`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/career-paths`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/culture`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/learning`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
