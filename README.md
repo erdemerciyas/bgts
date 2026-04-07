@@ -8,6 +8,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-38bdf8?logo=tailwindcss)
 ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12-purple?logo=framer)
 ![Vitest](https://img.shields.io/badge/Vitest-4-6e9f18?logo=vitest)
+![i18n](https://img.shields.io/badge/i18n-TR%20%7C%20EN-green)
 
 ---
 
@@ -30,13 +31,14 @@
 - [Tasarım Sistemi](#tasarım-sistemi)
 - [Test](#test)
 - [Versiyon Geçmişi](#versiyon-geçmişi)
+- [Çoklu Dil Desteği (i18n)](#çoklu-dil-desteği-i18n)
 - [Katkıda Bulunma](#katkıda-bulunma)
 
 ---
 
 ## Proje Hakkında
 
-Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal web varlığını en güncel web teknolojileriyle sunan, performans, güvenlik ve kullanıcı deneyimi odaklı bir platformdur. Next.js 16 App Router mimarisi üzerine inşa edilmiş olup; SSR/SSG yetenekleri, Edge Runtime API'lar, rate limiting middleware, Google Analytics entegrasyonu ve AI chatbot sistemi içermektedir.
+Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal web varlığını en güncel web teknolojileriyle sunan, performans, güvenlik ve kullanıcı deneyimi odaklı bir platformdur. Next.js 16 App Router mimarisi üzerine inşa edilmiş olup; **çoklu dil desteği (Türkçe/İngilizce)**, SSR/SSG yetenekleri, Edge Runtime API'lar, rate limiting middleware, Google Analytics entegrasyonu ve AI chatbot sistemi içermektedir.
 
 **Hedefler:**
 - Kurumsal marka kimliğini güçlü biçimde yansıtmak
@@ -64,6 +66,7 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 | CSS Utility | class-variance-authority + tailwind-merge + clsx | — |
 | Form Yönetimi | React Hook Form + Zod | ^7.69 + ^4.3 |
 | AI / Chatbot | Vercel AI SDK + Groq | ^3.4 / Llama 3.3 70B |
+| i18n | @formatjs/intl-localematcher + negotiator | ^0.8 / ^1.0 |
 | Markdown Render | react-markdown | ^10.1 |
 | E-posta | Nodemailer | ^8 |
 | Analytics | Google Analytics (GA4) | — |
@@ -73,6 +76,12 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 ---
 
 ## Özellikler
+
+### Çoklu Dil (i18n)
+- **Türkçe ve İngilizce** tam destek — URL tabanlı dil ayrımı (`/tr/...`, `/en/...`)
+- Middleware ile otomatik dil algılama (Accept-Language header)
+- JSON tabanlı sözlük sistemi (`src/dictionaries/tr.json`, `src/dictionaries/en.json`)
+- Varsayılan dil: Türkçe (`tr`)
 
 ### Tasarım ve Kullanıcı Deneyimi
 - **Mega Menu Navigasyon:** Hizmetler, Ürünler, Sektörler, Kariyer ve Kaynaklar için tam genişlikte, detaylı açıklamalı mega menüler
@@ -147,50 +156,53 @@ bgts-web/
 │   │   │   ├── contact/        # İletişim formu e-posta API
 │   │   │   └── application/    # İK başvuru + CV yükleme API
 │   │   │
-│   │   ├── about/              # Hakkımızda (+ LocationsMap bileşeni)
-│   │   ├── contact/            # İletişim
-│   │   ├── culture/            # Çalışma Kültürü
-│   │   ├── career-paths/       # Kariyer Yolları
-│   │   ├── learning/           # Eğitim ve Gelişim
-│   │   ├── genc-muhendis-programi/  # Genç Mühendis Programı
-│   │   ├── hr/                 # İnsan Kaynakları
-│   │   ├── partnerships/       # İş Ortakları
-│   │   ├── social-contribution/# Sürdürülebilir Değer
-│   │   ├── meetsense-viewer/   # MeetSense Demo Görüntüleyici
+│   │   ├── [lang]/             # 🌐 i18n dinamik rota segmenti (tr/en)
+│   │   │   ├── about/          # Hakkımızda (+ LocationsMap bileşeni)
+│   │   │   ├── contact/        # İletişim
+│   │   │   ├── culture/        # Çalışma Kültürü
+│   │   │   ├── career-paths/   # Kariyer Yolları
+│   │   │   ├── learning/       # Eğitim ve Gelişim
+│   │   │   ├── genc-muhendis-programi/  # Genç Mühendis Programı
+│   │   │   ├── hr/             # İnsan Kaynakları
+│   │   │   ├── partnerships/   # İş Ortakları
+│   │   │   ├── social-contribution/ # Sürdürülebilir Değer
+│   │   │   ├── meetsense-viewer/    # MeetSense Demo Görüntüleyici
+│   │   │   │
+│   │   │   ├── services/
+│   │   │   │   ├── software-development/
+│   │   │   │   ├── managed-services/
+│   │   │   │   └── devops/
+│   │   │   │
+│   │   │   ├── industries/
+│   │   │   │   ├── banking/
+│   │   │   │   ├── defense/
+│   │   │   │   ├── telecommunications/
+│   │   │   │   ├── retail/
+│   │   │   │   └── retail-telecom/
+│   │   │   │
+│   │   │   ├── products/
+│   │   │   │   ├── ai-hiring-assistant/
+│   │   │   │   ├── cortex/
+│   │   │   │   ├── cv-converter/
+│   │   │   │   ├── doc2bot/
+│   │   │   │   ├── docmind/
+│   │   │   │   ├── hcm/
+│   │   │   │   ├── meetsense/
+│   │   │   │   └── praxila/
+│   │   │   │
+│   │   │   ├── resources/
+│   │   │   │   ├── infographics/
+│   │   │   │   └── success-stories/
+│   │   │   │
+│   │   │   ├── layout.tsx      # Lang layout (Header, Footer, GA, ChatBot)
+│   │   │   ├── page.tsx        # Ana sayfa
+│   │   │   ├── error.tsx       # Global hata sayfası
+│   │   │   └── not-found.tsx   # 404 sayfası
 │   │   │
-│   │   ├── services/
-│   │   │   ├── software-development/
-│   │   │   ├── managed-services/
-│   │   │   └── devops/
-│   │   │
-│   │   ├── industries/
-│   │   │   ├── banking/
-│   │   │   ├── defense/
-│   │   │   ├── telecommunications/
-│   │   │   ├── retail/
-│   │   │   └── retail-telecom/
-│   │   │
-│   │   ├── products/
-│   │   │   ├── ai-hiring-assistant/
-│   │   │   ├── cortex/
-│   │   │   ├── cv-converter/
-│   │   │   ├── doc2bot/
-│   │   │   ├── docmind/
-│   │   │   ├── hcm/
-│   │   │   ├── meetsense/
-│   │   │   └── praxila/
-│   │   │
-│   │   ├── resources/
-│   │   │   ├── infographics/
-│   │   │   └── success-stories/
-│   │   │
+│   │   ├── favicon.ico         # Favicon
 │   │   ├── icon.png            # Next.js App Router favicon (otomatik)
-│   │   ├── layout.tsx          # Root layout (Header, Footer, GA, ChatBot)
-│   │   ├── page.tsx            # Ana sayfa
 │   │   ├── globals.css         # Tailwind v4 import + global stiller
-│   │   ├── sitemap.ts          # Dinamik sitemap üretimi
-│   │   ├── error.tsx           # Global hata sayfası
-│   │   └── not-found.tsx       # 404 sayfası
+│   │   └── sitemap.ts          # Dinamik sitemap üretimi
 │   │
 │   ├── components/
 │   │   ├── analytics/          # GoogleAnalytics.tsx
@@ -228,13 +240,21 @@ bgts-web/
 │   │   └── managed-services.ts
 │   │
 │   ├── data/
-│   │   └── case-studies.ts     # 20+ vaka çalışması verisi
+│   │   ├── case-studies.tr.ts  # Vaka çalışmaları (Türkçe)
+│   │   └── case-studies.en.ts  # Vaka çalışmaları (İngilizce)
+│   │
+│   ├── dictionaries/           # 🌐 i18n sözlük dosyaları
+│   │   ├── tr.json             # Türkçe çeviriler
+│   │   └── en.json             # İngilizce çeviriler
+│   │
+│   ├── i18n-config.ts          # Dil yapılandırması (desteklenen diller, varsayılan dil)
+│   ├── get-dictionary.ts       # Sözlük yükleyici (server-only)
 │   │
 │   ├── lib/
 │   │   ├── email.ts            # Nodemailer transporter yapılandırması
 │   │   └── utils.ts            # cn() class merge yardımcısı
 │   │
-│   ├── middleware.ts            # API rate limiting middleware
+│   ├── middleware.ts            # i18n locale detection + API rate limiting
 │   └── test/
 │       └── setup.ts            # Vitest test setup
 │
@@ -338,70 +358,72 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 ## Sayfalar ve Rotalar
 
+> **Not:** Tüm sayfa rotaları `/{lang}/...` prefixiyle çalışır. Örn: `/tr/about`, `/en/about`. Varsayılan dil (`tr`) için middleware otomatik yönlendirme yapar.
+
 ### Kurumsal Sayfalar
 
 | Rota | Sayfa | Açıklama |
 |------|-------|----------|
-| `/` | Ana Sayfa | Hero slider, hizmetler, sektörler, teslimat modelleri |
-| `/about` | Hakkımızda | Şirket tanıtımı, lokasyon haritası |
-| `/contact` | İletişim | Premium tasarım iletişim formu, ofis bilgileri |
-| `/partnerships` | İş Ortakları | Stratejik iş ortaklıkları |
-| `/social-contribution` | Sürdürülebilir Değer | Kolaj fotoğraflı sosyal sorumluluk |
+| `/{lang}` | Ana Sayfa | Hero slider, hizmetler, sektörler, teslimat modelleri |
+| `/{lang}/about` | Hakkımızda | Şirket tanıtımı, lokasyon haritası |
+| `/{lang}/contact` | İletişim | Premium tasarım iletişim formu, ofis bilgileri |
+| `/{lang}/partnerships` | İş Ortakları | Stratejik iş ortaklıkları |
+| `/{lang}/social-contribution` | Sürdürülebilir Değer | Kolaj fotoğraflı sosyal sorumluluk |
 
 ### Hizmetler
 
 | Rota | Sayfa |
 |------|-------|
-| `/services/software-development` | Yazılım Geliştirme |
-| `/services/managed-services` | Yönetilen Hizmetler (MSP) |
-| `/services/devops` | DevOps & Cloud |
+| `/{lang}/services/software-development` | Yazılım Geliştirme |
+| `/{lang}/services/managed-services` | Yönetilen Hizmetler (MSP) |
+| `/{lang}/services/devops` | DevOps & Cloud |
 
 ### Sektörler
 
 | Rota | Sayfa |
 |------|-------|
-| `/industries/banking` | Bankacılık & Finans |
-| `/industries/defense` | Savunma Sanayi |
-| `/industries/telecommunications` | Telekomünikasyon |
-| `/industries/retail` | Perakende & E-Ticaret |
-| `/industries/retail-telecom` | Perakende & Telekom |
+| `/{lang}/industries/banking` | Bankacılık & Finans |
+| `/{lang}/industries/defense` | Savunma Sanayi |
+| `/{lang}/industries/telecommunications` | Telekomünikasyon |
+| `/{lang}/industries/retail` | Perakende & E-Ticaret |
+| `/{lang}/industries/retail-telecom` | Perakende & Telekom |
 
 ### Ürünler (8 Adet)
 
 | Rota | Ürün | Açıklama |
 |------|------|----------|
-| `/products` | Ürün Kataloğu | Tüm ürünlerin listesi |
-| `/products/ai-hiring-assistant` | AI Hiring Assistant | Yapay zeka destekli işe alım asistanı |
-| `/products/cortex` | Cortex | AI platform çözümü |
-| `/products/cv-converter` | CV Converter | Özgeçmiş dönüştürme aracı |
-| `/products/doc2bot` | Doc2Bot | Doküman tabanlı chatbot oluşturucu |
-| `/products/docmind` | DocMind | Akıllı doküman analiz platformu |
-| `/products/hcm` | HCM Platform | İnsan kaynakları yönetim sistemi |
-| `/products/meetsense` | MeetSense | Toplantı analiz ve raporlama |
-| `/products/praxila` | Praxila | Süreç yönetimi çözümü |
+| `/{lang}/products` | Ürün Kataloğu | Tüm ürünlerin listesi |
+| `/{lang}/products/ai-hiring-assistant` | AI Hiring Assistant | Yapay zeka destekli işe alım asistanı |
+| `/{lang}/products/cortex` | Cortex | AI platform çözümü |
+| `/{lang}/products/cv-converter` | CV Converter | Özgeçmiş dönüştürme aracı |
+| `/{lang}/products/doc2bot` | Doc2Bot | Doküman tabanlı chatbot oluşturucu |
+| `/{lang}/products/docmind` | DocMind | Akıllı doküman analiz platformu |
+| `/{lang}/products/hcm` | HCM Platform | İnsan kaynakları yönetim sistemi |
+| `/{lang}/products/meetsense` | MeetSense | Toplantı analiz ve raporlama |
+| `/{lang}/products/praxila` | Praxila | Süreç yönetimi çözümü |
 
 ### Kariyer
 
 | Rota | Sayfa |
 |------|-------|
-| `/hr` | İnsan Kaynakları |
-| `/career-paths` | Kariyer Yolları |
-| `/culture` | Çalışma Kültürü |
-| `/learning` | Eğitim ve Gelişim |
-| `/genc-muhendis-programi` | Genç Mühendis Programı |
+| `/{lang}/hr` | İnsan Kaynakları |
+| `/{lang}/career-paths` | Kariyer Yolları |
+| `/{lang}/culture` | Çalışma Kültürü |
+| `/{lang}/learning` | Eğitim ve Gelişim |
+| `/{lang}/genc-muhendis-programi` | Genç Mühendis Programı |
 
 ### Kaynaklar
 
 | Rota | Sayfa |
 |------|-------|
-| `/resources/success-stories` | Başarı Hikayeleri (Case Studies) |
-| `/resources/infographics` | İnfografikler |
+| `/{lang}/resources/success-stories` | Başarı Hikayeleri (Case Studies) |
+| `/{lang}/resources/infographics` | İnfografikler |
 
 ### Diğer
 
 | Rota | Sayfa |
 |------|-------|
-| `/meetsense-viewer` | MeetSense Demo Görüntüleyici |
+| `/{lang}/meetsense-viewer` | MeetSense Demo Görüntüleyici |
 
 ---
 
@@ -555,7 +577,10 @@ Proje, içerik verilerini TypeScript objeleri olarak yönetir (headless CMS kull
 | `src/content/home.ts` | Ana sayfa tüm bölüm verileri |
 | `src/content/software-development.ts` | Yazılım geliştirme hizmet detayları |
 | `src/content/managed-services.ts` | Yönetilen hizmetler (MSP) detayları |
-| `src/data/case-studies.ts` | 20+ vaka çalışması (başlık, gereksinim, çözüm, teknolojiler) |
+| `src/data/case-studies.tr.ts` | 20+ vaka çalışması — Türkçe (başlık, gereksinim, çözüm, teknolojiler) |
+| `src/data/case-studies.en.ts` | 20+ vaka çalışması — İngilizce |
+| `src/dictionaries/tr.json` | Tüm UI metinleri — Türkçe sözlük |
+| `src/dictionaries/en.json` | Tüm UI metinleri — İngilizce sözlük |
 | `src/components/layout/header/data.ts` | Mega menü navigasyon verileri |
 | `src/components/layout/search/data.ts` | Arama endeksi verileri |
 
@@ -572,7 +597,14 @@ Proje, içerik verilerini TypeScript objeleri olarak yönetir (headless CMS kull
 - **Permissions-Policy:** Kamera, mikrofon, konum erişimi devre dışı
 - **X-DNS-Prefetch-Control:** Açık (performans)
 
-### API Rate Limiting (`middleware.ts`)
+### Middleware (`middleware.ts`)
+
+**i18n Locale Detection:**
+- `Accept-Language` header'ından tarayıcı dili algılama (`@formatjs/intl-localematcher` + `negotiator`)
+- Desteklenen dil yoksa varsayılan dil (`tr`) ile yönlendirme
+- Statik dosyalar ve API rotaları için locale redirect atlanır
+
+**API Rate Limiting:**
 - IP bazlı istek sınırlama (in-memory Map)
 - `/api/chat`: 10 istek/dakika
 - `/api/contact`: 5 istek/dakika
@@ -670,6 +702,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.22.0 | — | **Çoklu dil desteği (i18n):** Türkçe/İngilizce tam destek; `[lang]` dinamik rota segmenti; middleware ile otomatik dil algılama; JSON sözlük sistemi; vaka çalışmaları dil bazlı ayrımı; tüm sayfa rotaları `/{lang}/...` formatına taşındı |
 | v0.21.0 | — | Favicon eklendi; HCM ürün sayfası video alanı cover görseline dönüştürüldü; İnfografik hero alanı fotoğraflı tasarıma geçirildi; Ana sayfa slider sıralama güncellendi; Vaka çalışması içerik düzeltmeleri |
 | v0.20.0 | — | Sürdürülebilir Değer kolaj görselleri orijinal oranlarına uygun hale getirildi; kolaj kartları gerçek görsel boyutlarına göre yeniden boyutlandırıldı |
 | v0.19.0 | — | Sayfa hero alanları fotoğraflı tasarıma geçirildi; kolaj fotoğraf hero tasarımı; Genç Mühendis içerik revizyonu; stok fotoğraflar yerine kurumsal görsellere geçiş |
@@ -688,6 +721,43 @@ npm run test:coverage
 | v0.5.0 | — | BGTS Dijital Asistan chatbot (Groq + Llama 3.3) |
 | v0.4.0 | — | Codebase temizliği; Header mega menu revizyonu |
 | v0.3.0 | — | Bankacılık redesign; AI Hiring Assistant; İnfografikler |
+
+---
+
+## Çoklu Dil Desteği (i18n)
+
+### Mimari
+
+```
+Kullanıcı isteği (örn: /about)
+    ↓ middleware.ts
+Accept-Language header ile dil algılama
+    ↓ @formatjs/intl-localematcher + negotiator
+Yönlendirme: /tr/about veya /en/about
+    ↓ [lang] dinamik segment
+getDictionary(lang) → ilgili JSON sözlük yüklenir
+    ↓ Server Component
+Sayfa, doğru dilde render edilir
+```
+
+### Dosya Yapısı
+
+| Dosya | Görev |
+|-------|-------|
+| `src/i18n-config.ts` | Desteklenen diller ve varsayılan dil tanımı |
+| `src/get-dictionary.ts` | Server-only sözlük yükleyici fonksiyon |
+| `src/dictionaries/tr.json` | Türkçe çeviriler (tüm UI metinleri) |
+| `src/dictionaries/en.json` | İngilizce çeviriler (tüm UI metinleri) |
+| `src/middleware.ts` | Locale algılama ve yönlendirme |
+| `src/data/case-studies.tr.ts` | Vaka çalışmaları (Türkçe) |
+| `src/data/case-studies.en.ts` | Vaka çalışmaları (İngilizce) |
+
+### Yeni Dil Ekleme
+
+1. `src/i18n-config.ts` dosyasında `locales` dizisine yeni dil kodu ekleyin
+2. `src/dictionaries/` altına yeni JSON sözlük dosyası oluşturun (örn: `de.json`)
+3. `src/get-dictionary.ts` dosyasına yeni import ekleyin
+4. Gerekli veri dosyalarının dil varyantlarını oluşturun
 
 ---
 
