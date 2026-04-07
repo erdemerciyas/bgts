@@ -57,7 +57,7 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
                             <div className="relative">
                                 <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-violet-100 rounded-3xl -z-10" />
                                 <div className="relative h-[520px] rounded-2xl overflow-hidden shadow-2xl">
-                                    <Image src="/images/culture/culture-1.jpg" alt="BGTS Kültür" fill className="object-cover" />
+                                    <Image src="/images/contact/itu-ari3.jpg" alt="BGTS Merkez Ofis" fill className="object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
                                     <div className="absolute bottom-6 left-6 right-6">
                                         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-5">
