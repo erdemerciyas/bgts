@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { match as matchLocale } from '@formatjs/intl-localematcher';
-import Negotiator from 'negotiator';
 import { i18n } from './i18n-config';
 
 // === RATE LIMITING LOGIC ===
@@ -46,18 +44,7 @@ if (typeof globalThis !== 'undefined') {
   }, 60_000);
 }
 
-// === I18N LOCALE MATCHING LOGIC ===
-function getLocale(request: NextRequest): string | undefined {
-  // Negotiator expects plain object so we need to transform headers
-  const negotiatorHeaders: Record<string, string> = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-
-  // Use negotiator and intl-localematcher to get best locale
-  let languages = new Negotiator({ headers: negotiatorHeaders }).languages();
-  // @ts-ignore locales are readonly
-  const locales: string[] = i18n.locales;
-  return matchLocale(languages, locales, i18n.defaultLocale);
-}
+// === I18N LOCALE — her zaman varsayılan dil (tr) kullan, tarayıcı diline bakma ===
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -98,15 +85,11 @@ export function middleware(request: NextRequest) {
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
-  // Locale bulunamadıysa yönlendir
+  // Locale bulunamadıysa varsayılan dile (tr) yönlendir
   if (pathnameIsMissingLocale) {
-    const locale = getLocale(request);
-
-    // e.g. incoming request is /products
-    // The new URL is now /en/products
     return NextResponse.redirect(
       new URL(
-        `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
+        `/${i18n.defaultLocale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
         request.url
       )
     );
