@@ -118,12 +118,12 @@ export default function SoftwareDevClient({ content }: { content: any }) {
                 )}
             >
                 <div className={cn(
-                    "flex flex-col lg:flex-row items-stretch min-h-[500px]",
-                    isReversed ? "lg:flex-row-reverse" : ""
+                    "flex flex-row items-stretch min-h-[300px] lg:min-h-[500px]",
+                    isReversed ? "flex-row-reverse" : ""
                 )}>
                     {/* Image Section */}
                     <div 
-                        className="w-full lg:w-[20%] relative min-h-[300px] lg:min-h-auto shrink-0"
+                        className="w-[10%] lg:w-[20%] relative shrink-0"
                         style={{
                             WebkitMaskImage: isReversed 
                                 ? "linear-gradient(to left, black 40%, transparent 100%)" 
@@ -139,12 +139,11 @@ export default function SoftwareDevClient({ content }: { content: any }) {
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
-                        {/* Overlay Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80" />
                     </div>
 
                     {/* Content Section */}
-                    <div className="w-full lg:w-[80%] p-8 lg:p-14 flex flex-col justify-center space-y-8">
+                    <div className="w-[90%] lg:w-[80%] p-5 lg:p-14 flex flex-col justify-center space-y-8">
                         <div>
                             <Heading variant="h2" className="text-slate-900 mb-6 leading-tight">
                                 {domain.subtitle}

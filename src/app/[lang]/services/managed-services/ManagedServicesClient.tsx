@@ -20,6 +20,27 @@ const ICONS: Record<string, any> = {
   Server, ShieldCheck, Database, LayoutTemplate, Users, Settings, Lock, Cloud, AppWindow, Monitor, LineChart, Cpu, RefreshCw, LayoutGrid, ShieldAlert, GitBranch, Infinity, Activity
 };
 
+const IMAGES: Record<string, string> = {
+  "veri-merkezi": "/images/iso/datacenter.jpg",
+  "noc": "/images/iso/monitoring.jpg",
+  "euc": "/images/iso/desktop.jpg",
+  "sccm": "/images/iso/endpoint.jpg",
+  "itsm": "/images/iso/itsm.jpg",
+  "devops": "/images/iso/devops.jpg",
+  "sre": "/images/iso/sre.jpg",
+  "dba": "/images/iso/database.jpg",
+  "cloud": "/images/iso/cloud.jpg",
+  "finops": "/images/iso/finops.jpg",
+  "m365": "/images/iso/m365.jpg",
+  "bcdr": "/images/iso/bcdr.jpg",
+  "ai": "/images/iso/ai.jpg",
+  "bakim": "/images/iso/support.jpg",
+  "surec": "/images/iso/process.jpg",
+  "risk": "/images/iso/risk.jpg",
+  "maturity": "/images/iso/maturity.jpg",
+  "hardening": "/images/iso/hardening.jpg",
+};
+
 export default function ManagedServicesClient({ pillars }: { pillars: any[] }) {
     // Stronger colors for better visibility
     const sectionColors = [
@@ -272,12 +293,12 @@ export default function ManagedServicesClient({ pillars }: { pillars: any[] }) {
                 )}
             >
                 <div className={cn(
-                    "flex flex-col lg:flex-row items-stretch min-h-[500px]",
-                    isReversed ? "lg:flex-row-reverse" : ""
+                    "flex flex-row items-stretch min-h-[300px] lg:min-h-[500px]",
+                    isReversed ? "flex-row-reverse" : ""
                 )}>
                     {/* Image Section - Full Bleed */}
                     <div 
-                        className="w-full lg:w-[20%] relative min-h-[300px] lg:min-h-auto shrink-0"
+                        className="w-[10%] lg:w-[20%] relative shrink-0"
                         style={{
                             WebkitMaskImage: isReversed 
                                 ? "linear-gradient(to left, black 40%, transparent 100%)" 
@@ -287,21 +308,19 @@ export default function ManagedServicesClient({ pillars }: { pillars: any[] }) {
                                 : "linear-gradient(to right, black 40%, transparent 100%)"
                         }}
                     >
-                        {domain.image && (
+                        {IMAGES[domain.id] && (
                           <Image
-                              src={domain.image}
+                              src={IMAGES[domain.id]}
                               alt={domain.title}
                               fill
                               className="object-cover transition-transform duration-700 group-hover:scale-105"
                           />
                         )}
-                        {/* Overlay Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80" />
-
                     </div>
 
                     {/* Content Section */}
-                    <div className="w-full lg:w-[80%] p-8 lg:p-14 flex flex-col justify-center">
+                    <div className="w-[90%] lg:w-[80%] p-5 lg:p-14 flex flex-col justify-center">
                         <div className="mb-8">
                             <Heading variant="h2" className="text-slate-900 mb-4 leading-tight">
                                 {domain.title}

@@ -702,6 +702,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.23.0 | — | **Mobil uyumluluk ve hizmet sayfası iyileştirmeleri:** HeroSlider mobil layout optimize edildi (kompakt partner kartları, indicator düzeltmesi); Yazılım Geliştirme ve Yönetilen Hizmetler sayfalarında hizmet kartları mobilde yan yana layout'a geçirildi; Yönetilen Hizmetler kartlarına `/images/iso/` görsel eşleştirmesi eklendi (IMAGES map) |
 | v0.22.0 | — | **Çoklu dil desteği (i18n):** Türkçe/İngilizce tam destek; `[lang]` dinamik rota segmenti; middleware ile otomatik dil algılama; JSON sözlük sistemi; vaka çalışmaları dil bazlı ayrımı; tüm sayfa rotaları `/{lang}/...` formatına taşındı |
 | v0.21.0 | — | Favicon eklendi; HCM ürün sayfası video alanı cover görseline dönüştürüldü; İnfografik hero alanı fotoğraflı tasarıma geçirildi; Ana sayfa slider sıralama güncellendi; Vaka çalışması içerik düzeltmeleri |
 | v0.20.0 | — | Sürdürülebilir Değer kolaj görselleri orijinal oranlarına uygun hale getirildi; kolaj kartları gerçek görsel boyutlarına göre yeniden boyutlandırıldı |

@@ -212,7 +212,7 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
 
     return (
         <div
-            className="relative h-[75vh] min-h-[500px] w-full overflow-hidden bg-slate-900 select-none"
+            className="relative h-[55svh] min-h-[400px] md:h-[75vh] md:min-h-[500px] w-full overflow-hidden bg-slate-900 select-none"
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
             onMouseDown={onMouseDown}
@@ -242,9 +242,9 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
                 </motion.div>
             </AnimatePresence>
 
-            <Container className="relative z-10 h-full flex items-center pb-20 md:pb-0">
+            <Container className="relative z-10 h-full flex flex-col justify-center pb-10 md:pb-24 md:pt-24">
 
-                <div className="w-full pt-20 md:pt-0 md:px-14 lg:px-20 relative z-10 pointer-events-none">
+                <div className="w-full md:px-14 lg:px-20 relative z-10 pointer-events-none">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentSlide}
@@ -290,15 +290,15 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.6, duration: 0.5 }}
-                                        className="mt-12 flex flex-wrap gap-4 items-center"
+                                        className="mt-4 md:mt-12 flex flex-wrap gap-2 md:gap-4 items-center"
                                     >
-                                        <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+                                        <div className="w-full grid grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-2 md:gap-4">
                                             {PARTNERS.map((partner, i) => (
-                                                <div key={i} className="bg-white rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:-translate-y-1 transition-transform shadow-xl h-24 truncate">
-                                                    <div className={partner.color}>
+                                                <div key={i} className="bg-white rounded-lg md:rounded-xl p-1.5 md:p-4 flex flex-col items-center justify-center gap-1 md:gap-3 hover:-translate-y-1 transition-transform shadow-xl h-16 md:h-24 truncate">
+                                                    <div className={`${partner.color} [&_svg]:w-5 [&_svg]:h-5 md:[&_svg]:w-8 md:[&_svg]:h-8`}>
                                                         {partner.icon}
                                                     </div>
-                                                    <span className="text-slate-900 font-bold text-xs truncate max-w-[90%]">{partner.name}</span>
+                                                    <span className="text-slate-900 font-bold text-[10px] md:text-xs truncate max-w-[90%]">{partner.name}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -308,6 +308,19 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
 
                         </motion.div>
                     </AnimatePresence>
+                </div>
+
+                {/* Slide Indicators */}
+                <div className="flex justify-center gap-2.5 z-30 pointer-events-auto mt-6 md:absolute md:bottom-8 md:left-1/2 md:-translate-x-1/2 md:mt-0">
+                    {SLIDES.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentSlide(index)}
+                            className={`transition-all duration-500 rounded-full h-2 ${currentSlide === index ? "w-8 md:w-10 bg-corporate-secondary" : "w-2 bg-white/25 hover:bg-white/50"
+                                }`}
+                            aria-label={`Slayt ${index + 1}`}
+                        />
+                    ))}
                 </div>
             </Container>
 
@@ -326,19 +339,6 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
             >
                 <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-
-            {/* Slide Indicators - Bottom center, slightly above edge */}
-            <div className="absolute bottom-28 left-1/2 -translate-x-1/2 flex gap-2.5 z-20">
-                {SLIDES.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setCurrentSlide(index)}
-                        className={`transition-all duration-500 rounded-full h-2 ${currentSlide === index ? "w-8 md:w-10 bg-corporate-secondary" : "w-2 bg-white/25 hover:bg-white/50"
-                            }`}
-                        aria-label={`Slayt ${index + 1}`}
-                    />
-                ))}
-            </div>
         </div>
     )
 }
