@@ -587,7 +587,7 @@
             ],
             "model": {
               "title": "MSP Hizmet Modeli",
-              "description": "BGTS Yönetilen Hizmetler modeli; teknik operasyonları dışarıdan yönetmekle sınırlı kalmaz. Altyapınızı tanır, süreçlerinizi geliştirir ve kurumunuzun büyümesine paralel ölçekleniriz. İlişki başlamadan önce alarm kalitesi, olay müdahalesi, otomasyon olgunluğu, gözlemlenebilirlik kapsamı ve SRE hazırlığını yapılandırılmış bir değerlendirmeyle analiz eder; bulguları ekibinizin de yönetimin de kullanabileceği somut bir rapor olarak sunarız. Sabit ve değişken maliyetleri öngörülebilir bir hizmet modeline dönüştürürken işe alım, eğitim ve elde tutma riskini de üstleniriz. Yalnızca arızayı değil; değişiklik ve talep süreçlerini de aynı olgunlukla, müşteriye özel SLA taahhütleri ve düzenli raporlarla şeffaf biçimde yönetiriz."
+              "description": "MSP hizmet modeli kapsamında BGTS Yönetilen Hizmetler; teknik operasyonları dışarıdan yönetmekle sınırlı kalmaz. Altyapınızı tanımayı, süreçlerinizi geliştirmeyi ve kurumunuzun büyümesine paralel ölçeklenmeyi hedefler. İş birliğinin başlangıcında; alarm kalitesi, olay müdahalesi, otomasyon olgunluğu, gözlemlenebilirlik kapsamı ve SRE hazırlığı gibi alanlar ön değerlendirmeyle ele alınır, elde edilen bulgular yönetsel ve teknik ekiplerinizle paylaşılır."
             },
             "layersTitle": "Üst Seviye Hizmet Kapsamı — 3 Katmanlı MSP Modeli",
             "layers": [

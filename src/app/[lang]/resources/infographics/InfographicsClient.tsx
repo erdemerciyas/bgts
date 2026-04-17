@@ -94,7 +94,7 @@ export default function InfographicsClient({ dict: d }: { dict: InfographicsDict
 
                     <div className="mt-12 flex justify-center">
                         <Link
-                            href="https://www.linkedin.com/company/bilgi-net-bilgi-teknolojileri"
+                            href="https://www.linkedin.com/feed/update/urn:li:activity:7408814201223249920"
                             target="_blank"
                             className="inline-flex items-center gap-4 group"
                         >
@@ -216,7 +216,7 @@ export default function InfographicsClient({ dict: d }: { dict: InfographicsDict
 
                     <div className="mt-12 flex justify-center">
                         <Link
-                            href="https://www.linkedin.com/company/bilgi-net-bilgi-teknolojileri"
+                            href="https://www.linkedin.com/feed/update/urn:li:activity:7363897243139026944"
                             target="_blank"
                             className="inline-flex items-center gap-4 group"
                         >

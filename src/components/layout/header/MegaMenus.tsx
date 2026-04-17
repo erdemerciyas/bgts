@@ -464,10 +464,16 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
             <div className="grid grid-cols-4 grid-rows-2 gap-4 h-[480px]">
 
                 {/* FEATURED: Main Knowledge Hub */}
-                <div className="col-span-2 row-span-2 relative group overflow-hidden rounded-3xl bg-slate-900 shadow-lg ring-1 ring-slate-900/5 cursor-default">
+                <Link
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7449781930562101248"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                    className="col-span-2 row-span-2 relative group overflow-hidden rounded-3xl bg-slate-900 shadow-lg ring-1 ring-slate-900/5"
+                >
                     <div className="absolute inset-0">
                         <Image
-                            src="/images/events/ebintec-bg.jpg"
+                            src="/images/events/ebintec-2026.jpg"
                             alt={t(lang, "BİLGİ MERKEZİ", "KNOWLEDGE CENTER")}
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
@@ -480,20 +486,27 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             <div className="w-8 h-8 rounded-full bg-rose-500/80 shadow-lg flex items-center justify-center border border-rose-400">
                                 <Calendar className="w-4 h-4 text-white" />
                             </div>
-                            <span className="text-xs font-bold text-white drop-shadow-md tracking-widest uppercase">{t(lang, "Gelecek Etkinlik", "Upcoming Event")}</span>
+                            <span className="text-xs font-bold text-white drop-shadow-md tracking-widest uppercase">{t(lang, "Gerçekleşen Etkinlik", "Past Event")}</span>
                         </div>
 
                         <div className="mt-auto bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-2xl">
                             <h3 className="text-2xl font-black text-white mb-3 leading-tight">
                                 EBINTEC BANKING INNOVATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-400">CONFERENCE</span>
                             </h3>
+                            <p className="text-slate-200 text-sm mb-3 leading-relaxed">
+                                {t(
+                                    lang,
+                                    "Ana sponsor olarak yer aldığımız etkinlikte, finans sektörünün dönüşümüne dair güncel içgörüleri paylaştık.",
+                                    "As the main sponsor of the event, we shared up-to-date insights on the transformation of the finance sector."
+                                )}
+                            </p>
                             <p className="text-slate-200 text-sm font-bold flex items-center gap-2 group-hover:-translate-y-1 transition-transform">
                                 <span className="bg-white/20 px-2 py-1 rounded text-white backdrop-blur-sm">{t(lang, "14 Nisan", "April 14")}</span>
                                 <span>İstanbul</span>
                             </p>
                         </div>
                     </div>
-                </div>
+                </Link>
 
                 {/* CARD 2: Success Stories */}
                 <Link href={`/${lang}/resources/success-stories`} onClick={closeMenu}

@@ -493,7 +493,7 @@
             ],
             "model": {
               "title": "MSP Service Model",
-              "description": "The BGTS Managed Services model goes beyond outsourcing technical operations. We get to know your infrastructure, improve your processes, and scale in parallel with the growth of your organization. Before the relationship begins, we analyze alarm quality, incident response, automation maturity, observability scope, and SRE readiness with a structured assessment; presenting the findings as a concrete report that both your team and management can use. We convert fixed and variable costs into a predictable service model while taking on the risks of recruitment, training, and retention. We seamlessly manage not only faults but also change and request processes with the same maturity, transparency, customer-specific SLA commitments, and regular reports."
+              "description": "Within the MSP service model, BGTS Managed Services goes beyond outsourcing technical operations. It aims to get to know your infrastructure, improve your processes, and scale in parallel with the growth of your organization. At the beginning of the collaboration, areas such as alarm quality, incident response, automation maturity, observability scope, and SRE readiness are addressed through a preliminary assessment, and the resulting findings are shared with your management and technical teams."
             },
             "layersTitle": "High-Level Service Scope — 3 Tier MSP Model",
             "layers": [

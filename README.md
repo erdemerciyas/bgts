@@ -702,6 +702,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.24.0 | — | **MSP yönetilen hizmetler kart düzeltmeleri:** KOM ve Analytics grid kartlarında sabit `h-10` başlık yüksekliğinden kaynaklanan metin çakışmaları giderildi (örn. "Servis Organizasyonu Tasarımı" başlığının altındaki liste öğeleriyle ezişmesi); başlıklar `min-h-10 leading-snug break-words` ile esnek hale getirildi |
 | v0.23.0 | — | **Mobil uyumluluk ve hizmet sayfası iyileştirmeleri:** HeroSlider mobil layout optimize edildi (kompakt partner kartları, indicator düzeltmesi); Yazılım Geliştirme ve Yönetilen Hizmetler sayfalarında hizmet kartları mobilde yan yana layout'a geçirildi; Yönetilen Hizmetler kartlarına `/images/iso/` görsel eşleştirmesi eklendi (IMAGES map) |
 | v0.22.0 | — | **Çoklu dil desteği (i18n):** Türkçe/İngilizce tam destek; `[lang]` dinamik rota segmenti; middleware ile otomatik dil algılama; JSON sözlük sistemi; vaka çalışmaları dil bazlı ayrımı; tüm sayfa rotaları `/{lang}/...` formatına taşındı |
 | v0.21.0 | — | Favicon eklendi; HCM ürün sayfası video alanı cover görseline dönüştürüldü; İnfografik hero alanı fotoğraflı tasarıma geçirildi; Ana sayfa slider sıralama güncellendi; Vaka çalışması içerik düzeltmeleri |

@@ -195,7 +195,7 @@ export default function ManagedServicesClient({ pillars }: { pillars: any[] }) {
                                     <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
                                         <CheckSquare className="w-5 h-5" />
                                     </div>
-                                    <h4 className="font-bold text-slate-900 mb-4 h-10">{cat.title}</h4>
+                                    <h4 className="font-bold text-slate-900 mb-4 min-h-10 leading-snug break-words">{cat.title}</h4>
                                     <ul className="space-y-3">
                                         {cat.items.map((item: string, j: number) => (
                                             <li key={j} className="flex items-start gap-2 text-sm text-slate-600">
@@ -251,7 +251,7 @@ export default function ManagedServicesClient({ pillars }: { pillars: any[] }) {
                                      <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-4">
                                         <Activity className="w-5 h-5" />
                                     </div>
-                                    <h4 className="font-bold text-slate-900 mb-4 h-10">{cat.title}</h4>
+                                    <h4 className="font-bold text-slate-900 mb-4 min-h-10 leading-snug break-words">{cat.title}</h4>
                                     <ul className="space-y-3">
                                         {cat.items.map((item: string, j: number) => (
                                             <li key={j} className="flex items-start gap-2 text-sm text-slate-600">
