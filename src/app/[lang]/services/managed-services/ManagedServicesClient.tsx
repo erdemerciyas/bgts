@@ -9,6 +9,7 @@ import { ChevronRight, Layers, CheckSquare, Settings, Activity } from "lucide-re
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { highlightAI } from "@/lib/highlight-ai"
 
 import {
   Server, ShieldCheck, Database, LayoutTemplate,
@@ -130,7 +131,7 @@ export default function ManagedServicesClient({ pillars }: { pillars: any[] }) {
                 {/* 1. Header (Title & Desc) */}
                 <div className="space-y-6 max-w-5xl">
                     <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-                        {ov.title}
+                        {highlightAI(ov.title)}
                     </h2>
                     <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-4xl">
                         {ov.description}
@@ -438,7 +439,7 @@ export default function ManagedServicesClient({ pillars }: { pillars: any[] }) {
                                             "font-extrabold tracking-widest uppercase mb-2 pl-0 text-xs transition-colors",
                                             isPillarActive ? "text-blue-700 px-1" : "text-slate-900 group-hover/head:text-blue-600"
                                         )}>
-                                            {pillar.title}
+                                            {highlightAI(pillar.title)}
                                         </Text>
                                     </Link>
                                     <nav className="flex flex-col space-y-1 border-l-2 border-slate-100 ml-[7px] pl-2">

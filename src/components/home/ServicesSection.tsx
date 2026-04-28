@@ -69,7 +69,7 @@ export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?
                             <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/5 blur-3xl rounded-full group-hover:bg-white/10 transition-colors duration-700"></div>
 
                             <div className="relative z-20">
-                                <Heading variant="h3" className="mb-6 text-white font-manrope">{service.title}</Heading>
+                                <Heading variant="h3" className="mb-6 text-white font-sans">{service.title}</Heading>
                                 <Text variant="large" className="text-blue-100/90 mb-8 leading-relaxed">
                                     {service.description}
                                 </Text>

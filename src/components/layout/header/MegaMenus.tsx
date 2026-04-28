@@ -12,6 +12,7 @@ import {
     GraduationCap, Heart, Rocket, Smile
 } from "lucide-react"
 import { STYLES } from "./data"
+import { highlightAI } from "@/lib/highlight-ai"
 
 const BackgroundPattern = () => (
     <div className="absolute -bottom-24 -right-24 w-64 h-64 opacity-[0.03] pointer-events-none z-0 rotate-12 text-slate-900">
@@ -141,7 +142,7 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     <div className="space-y-6">
                         <Link onClick={closeMenu} href={`/${lang}/services/managed-services#p1`} className="group flex items-center gap-3">
                             <Server className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-emerald-600 transition-colors" />
-                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-emerald-600 transition-colors">{t(lang, "MSP & AIOps", "MSP & AIOps")}</h4>
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-emerald-600 transition-colors">{highlightAI(t(lang, "MSP & AIOps", "MSP & AIOps"))}</h4>
                         </Link>
                         <Link onClick={closeMenu} href={`/${lang}/services/managed-services#p2`} className="group flex items-center gap-3">
                             <Cpu className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-sky-600 transition-colors" />
