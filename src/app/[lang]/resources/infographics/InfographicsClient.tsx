@@ -124,7 +124,7 @@ export default function InfographicsClient({ dict: d }: { dict: InfographicsDict
                             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
                                 <div className="flex items-center justify-between mb-8 pb-8 border-b border-slate-100">
                                     <div>
-                                        <div className="text-5xl font-black text-slate-900">1800+</div>
+                                        <div className="text-5xl font-black text-slate-900">2000+</div>
                                         <div className="text-slate-500 font-medium mt-1">{d.team.totalEmployees}</div>
                                     </div>
                                     <div className="h-12 w-px bg-slate-200" />

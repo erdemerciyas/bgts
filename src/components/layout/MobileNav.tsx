@@ -55,10 +55,10 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
         {
           heading: t("services", "software", "Yazılım ve Teknoloji Servisleri", "Software & Technology Services"),
           links: [
-            { title: tr(lang, "Büyük Veri & Gerçek Zamanlı Veri İşleme", "Big Data & Real-Time Processing"), href: p("/services/software-development#bigdata"), icon: Database },
+            { title: tr(lang, "Yazılım Geliştirme Hizmetleri", "Software Development Services"), href: p("/services/software-development#development-services"), icon: Layers },
             { title: tr(lang, "Yapay Zekâ & AI-First Mimari", "AI & AI-First Architecture"), href: p("/services/software-development#ai"), icon: Cpu },
             { title: tr(lang, "Yazılım Modernizasyonu & Mikroservis", "Software Modernization & Microservices"), href: p("/services/software-development#modernization"), icon: RefreshCw },
-            { title: tr(lang, "Yazılım Geliştirme Hizmetleri", "Software Development Services"), href: p("/services/software-development#development-services"), icon: Layers },
+            { title: tr(lang, "Büyük Veri & Gerçek Zamanlı Veri İşleme", "Big Data & Real-Time Processing"), href: p("/services/software-development#bigdata"), icon: Database },
           ]
         },
         {
@@ -96,7 +96,7 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
         {
           heading: t("industries", "commercial", "Ticari & Telekom", "Commercial & Telecom"),
           links: [
-            { title: t("industries", "telecommunications", "Telekomünikasyon", "Telecommunications"), href: p("/industries/telecommunications"), icon: Server },
+            { title: t("industries", "telecommunications", "Telekomünikasyon & Teknoloji", "Telecommunications & Technology"), href: p("/industries/telecommunications"), icon: Server },
             { title: t("industries", "retail", "Perakende & E-Ticaret", "Retail & E-Commerce"), href: p("/industries/retail"), icon: ShoppingBag },
           ]
         }
@@ -107,26 +107,12 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
       id: "products",
       subGroups: [
         {
-          heading: t("products", "hiring", "İşe Alım Teknolojileri", "Hiring Technologies"),
-          links: [
-            { title: "AI Hiring Assistant", href: p("/products/ai-hiring-assistant"), icon: CheckCircle2 },
-            { title: "CV-Converter", href: p("/products/cv-converter"), icon: FileText },
-          ]
-        },
-        {
           heading: t("products", "enterprise", "Kurumsal Çözümler", "Enterprise Solutions"),
           links: [
             { title: "Cortex", href: p("/products/cortex"), icon: Cpu },
             { title: t("products", "hcm", "HCM Platformu", "HCM Platform"), href: p("/products/hcm"), icon: Briefcase },
             { title: "Praxila", href: p("/products/praxila"), icon: Activity },
             { title: "MeetSense", href: p("/products/meetsense"), icon: Mic },
-          ]
-        },
-        {
-          heading: t("products", "docKnowledge", "Doküman & Bilgi Yönetimi", "Document & Knowledge Management"),
-          links: [
-            { title: "Doc2Bot", href: p("/products/doc2bot"), icon: Bot },
-            { title: "DocMind", href: p("/products/docmind"), icon: Code },
           ]
         }
       ]

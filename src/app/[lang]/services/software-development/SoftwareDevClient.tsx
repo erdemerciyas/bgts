@@ -146,7 +146,7 @@ export default function SoftwareDevClient({ content }: { content: any }) {
                     <div className="w-[90%] lg:w-[80%] p-5 lg:p-14 flex flex-col justify-center space-y-8">
                         <div>
                             <Heading variant="h2" className="text-slate-900 mb-6 leading-tight">
-                                {domain.subtitle}
+                                {domain.title}
                             </Heading>
                             <Text className="text-lg text-slate-600 leading-relaxed font-normal">
                                 {domain.description}

@@ -93,9 +93,9 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 <div className="bg-blue-50/40 p-10 border-r border-slate-200/80 flex flex-col relative">
                     <h3 className={STYLES.columnHeader}>{t(lang, "Yazılım Geliştirme", "Software Development")}</h3>
                     <div className="space-y-6">
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#bigdata`} className="group flex items-center gap-3">
-                            <Database className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-indigo-600 transition-colors" />
-                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-indigo-600 transition-colors">{t(lang, "Büyük Veri & Gerçek Zamanlı Veri İşleme", "Big Data & Real-Time Processing")}</h4>
+                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#development-services`} className="group flex items-center gap-3">
+                            <Layers className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-blue-600 transition-colors">{t(lang, "Yazılım Geliştirme Hizmetleri", "Software Development Services")}</h4>
                         </Link>
                         <Link onClick={closeMenu} href={`/${lang}/services/software-development#ai`} className="group flex items-center gap-3">
                             <Cpu className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-amber-600 transition-colors" />
@@ -105,9 +105,9 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             <RefreshCw className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-cyan-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-cyan-600 transition-colors">{t(lang, "Yazılım Modernizasyonu & Mikroservis Dönüşümü", "Software Modernization & Microservices")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#development-services`} className="group flex items-center gap-3">
-                            <Layers className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-blue-600 transition-colors" />
-                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-blue-600 transition-colors">{t(lang, "Yazılım Geliştirme Hizmetleri", "Software Development Services")}</h4>
+                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#bigdata`} className="group flex items-center gap-3">
+                            <Database className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-indigo-600 transition-colors" />
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-indigo-600 transition-colors">{t(lang, "Büyük Veri & Gerçek Zamanlı Veri İşleme", "Big Data & Real-Time Processing")}</h4>
                         </Link>
                     </div>
                 </div>
@@ -141,7 +141,7 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     <div className="space-y-6">
                         <Link onClick={closeMenu} href={`/${lang}/services/managed-services#p1`} className="group flex items-center gap-3">
                             <Server className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-emerald-600 transition-colors" />
-                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-emerald-600 transition-colors">{t(lang, "MSP & Yönetilen Hizmetler", "MSP & Managed Services")}</h4>
+                            <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-emerald-600 transition-colors">{t(lang, "MSP & AIOps", "MSP & AIOps")}</h4>
                         </Link>
                         <Link onClick={closeMenu} href={`/${lang}/services/managed-services#p2`} className="group flex items-center gap-3">
                             <Cpu className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-sky-600 transition-colors" />
@@ -200,7 +200,7 @@ export const IndustriesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         <Link onClick={closeMenu} href={`/${lang}/industries/telecommunications`} className={STYLES.linkGroup}>
                             <Server className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
-                                <div className="flex-1"><h4 className={STYLES.itemTitle}>{t(lang, "Telekomünikasyon", "Telecommunications")}</h4><p className={STYLES.itemDesc}>{t(lang, "OSS/BSS ve dijital kanal platformlarında 7/24 erişilebilirlik.", "24/7 availability on OSS/BSS and digital channel platforms.")}</p></div>
+                                <div className="flex-1"><h4 className={STYLES.itemTitle}>{t(lang, "Telekomünikasyon & Teknoloji", "Telecommunications & Technology")}</h4><p className={STYLES.itemDesc}>{t(lang, "OSS/BSS ve dijital kanal platformlarında 7/24 erişilebilirlik.", "24/7 availability on OSS/BSS and digital channel platforms.")}</p></div>
                             </div>
                         </Link>
                         <Link onClick={closeMenu} href={`/${lang}/industries/retail`} className={STYLES.linkGroup}>
@@ -227,105 +227,56 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
             role="menu"
             aria-label={t(lang, "Ürünler menüsü", "Products menu")}
         >
-            <div className="flex relative">
+            <div className="relative">
                 <ProductsBackgroundPattern />
-
-                {/* Column 1: Hiring Tech */}
-                <div className="w-[33.33%] p-8 border-r border-blue-100/40 flex flex-col justify-start relative z-10">
-                    <div className="mb-auto">
-                        <h3 className={STYLES.columnHeader}>{t(lang, "İŞE ALIM TEKNOLOJİLERİ", "HIRING TECHNOLOGIES")}</h3>
-                        <div className="space-y-3">
-                            <Link onClick={closeMenu} href={`/${lang}/products/ai-hiring-assistant`} className={STYLES.linkGroup}>
-                                <CheckCircle2 className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="flex-1">
-                                        <h4 className={STYLES.itemTitle}>AI HIRING ASSISTANT</h4>
-                                        <p className={STYLES.itemDescItalic}>{t(lang, `"İşe alım süreçlerini yapay zeka ile hızlandırın."`, `"Speed up your hiring processes with AI."`)}</p>
-                                    </div>
+                <div className="grid grid-cols-2 relative z-10">
+                    <div className="bg-blue-50/50 p-10 border-r border-b border-blue-100 flex flex-col justify-start">
+                        <h3 className={STYLES.columnHeader}>{t(lang, "AI & OTOMASYON", "AI & AUTOMATION")}</h3>
+                        <Link onClick={closeMenu} href={`/${lang}/products/cortex`} className={STYLES.linkGroup}>
+                            <Cpu className={STYLES.iconContainer} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>CORTEX</h4>
+                                    <p className={STYLES.itemDesc}>{t(lang, "Yazılım yaşam döngüsünü uçtan uca otomatikleştiren AI agent platformu; kod üretimi, test, dokümantasyon ve operasyon süreçlerini hızlandırır.", "AI agent platform that automates the entire software lifecycle end-to-end; accelerates code generation, testing, documentation, and operations.")}</p>
                                 </div>
-                            </Link>
-                            <Link onClick={closeMenu} href={`/${lang}/products/cv-converter`} className={STYLES.linkGroup}>
-                                <FileText className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="flex-1">
-                                        <h4 className={STYLES.itemTitle}>CV-CONVERTER</h4>
-                                        <p className={STYLES.itemDescItalic}>{t(lang, `"Dağınık CV formatlarını standart hale getirin."`, `"Standardize scattered CV formats."`)}</p>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     </div>
-                </div>
-
-                {/* Column 2: Enterprise Solutions */}
-                <div className="w-[33.33%] p-8 border-r border-slate-100/40 flex flex-col justify-start relative z-10">
-                    <div className="mb-auto">
-                        <h3 className={STYLES.columnHeader}>{t(lang, "KURUMSAL ÇÖZÜMLER", "ENTERPRISE SOLUTIONS")}</h3>
-                        <div className="space-y-3">
-                            <Link onClick={closeMenu} href={`/${lang}/products/cortex`} className={STYLES.linkGroup}>
-                                <Cpu className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="flex-1">
-                                        <h4 className={STYLES.itemTitle}>CORTEX</h4>
-                                        <p className={STYLES.itemDescItalic}>{t(lang, `"Yazılım yaşam döngüsünü AI agent'larla otomatikleştirin."`, `"Automate software lifecycle with AI agents."`)}</p>
-                                    </div>
+                    <div className="bg-[#f8f9fa] p-10 border-b border-slate-100 flex flex-col justify-start">
+                        <h3 className={STYLES.columnHeader}>{t(lang, "İNSAN KAYNAKLARI", "HUMAN RESOURCES")}</h3>
+                        <Link onClick={closeMenu} href={`/${lang}/products/hcm`} className={STYLES.linkGroup}>
+                            <Briefcase className={STYLES.iconContainer} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>{t(lang, "HCM Platformu", "HCM Platform")}</h4>
+                                    <p className={STYLES.itemDesc}>{t(lang, "Bordro, özlük, izin, performans ve yetenek yönetimini tek çatı altında toplayan, İK operasyonlarınızı uçtan uca dijitalleştiren bütünleşik HCM çözümü.", "Integrated HCM solution that unifies payroll, personnel, leave, performance and talent management; digitalizing HR operations end-to-end.")}</p>
                                 </div>
-                            </Link>
-                            <Link onClick={closeMenu} href={`/${lang}/products/hcm`} className={STYLES.linkGroup}>
-                                <Briefcase className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="flex-1">
-                                        <h4 className={STYLES.itemTitle}>{t(lang, "HCM Platformu", "HCM Platform")}</h4>
-                                        <p className={STYLES.itemDescItalic}>{t(lang, `"İK operasyonlarınızı uçtan uca dijitalleştiren HCM platformumuz."`, `"Our HCM platform that digitalizes your HR operations end-to-end."`)}</p>
-                                    </div>
-                                </div>
-                            </Link>
-                            <Link onClick={closeMenu} href={`/${lang}/products/praxila`} className={STYLES.linkGroup}>
-                                <Activity className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="flex-1">
-                                        <h4 className={STYLES.itemTitle}>PRAXILA</h4>
-                                        <p className={STYLES.itemDescItalic}>{t(lang, `"Yeni nesil otomasyon ve operasyon yönetimi platformumuz."`, `"Our next-generation automation and operations management platform."`)}</p>
-                                    </div>
-                                </div>
-                            </Link>
-                            <Link onClick={closeMenu} href={`/${lang}/products/meetsense`} className={STYLES.linkGroup}>
-                                <Mic className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="flex-1">
-                                        <h4 className={STYLES.itemTitle}>MEETSENSE</h4>
-                                        <p className={STYLES.itemDescItalic}>{t(lang, `"Toplantıları AI ile kaydedin, analiz edin ve kurumsal hafızaya dönüştürün."`, `"Record, analyze meetings with AI and turn them into corporate memory."`)}</p>
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     </div>
-                </div>
-
-                {/* Column 3: Document & Knowledge Management */}
-                <div className="w-[33.33%] p-8 flex flex-col justify-start relative z-10">
-                    <div className="mb-auto">
-                        <h3 className={STYLES.columnHeader}>{t(lang, "DOKÜMAN & BİLGİ YÖNETİMİ", "DOCUMENT & KNOWLEDGE MANAGEMENT")}</h3>
-                        <div className="space-y-3">
-                            <Link onClick={closeMenu} href={`/${lang}/products/doc2bot`} className={STYLES.linkGroup}>
-                                <Bot className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="flex-1">
-                                        <h4 className={STYLES.itemTitle}>DOC2BOT</h4>
-                                        <p className={STYLES.itemDescItalic}>{t(lang, `"Kurum içi bilgi bankanızı akıllı bir asistana dönüştürün."`, `"Turn your internal knowledge base into a smart assistant."`)}</p>
-                                    </div>
+                    <div className="bg-[#f8f9fa] p-10 border-r border-slate-100 flex flex-col justify-start">
+                        <h3 className={STYLES.columnHeader}>{t(lang, "OPERASYON & OTOMASYON", "OPERATIONS & AUTOMATION")}</h3>
+                        <Link onClick={closeMenu} href={`/${lang}/products/praxila`} className={STYLES.linkGroup}>
+                            <Activity className={STYLES.iconContainer} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>PRAXILA</h4>
+                                    <p className={STYLES.itemDesc}>{t(lang, "Süreç otomasyonu, iş akışı yönetimi ve operasyonel görünürlüğü tek platformda birleştiren yeni nesil otomasyon ve operasyon yönetimi çözümü.", "Next-generation automation and operations management platform that unifies process automation, workflow management and operational visibility in a single platform.")}</p>
                                 </div>
-                            </Link>
-                            <Link onClick={closeMenu} href={`/${lang}/products/docmind`} className={STYLES.linkGroup}>
-                                <Code className={cn(STYLES.iconContainer, STYLES.iconLarge)} />
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="flex-1">
-                                        <h4 className={STYLES.itemTitle}>DOCMIND</h4>
-                                        <p className={STYLES.itemDescItalic}>{t(lang, `"Kod tabanınızdan otomatik teknik dokümantasyon üretin."`, `"Generate automatic technical documentation from your codebase."`)}</p>
-                                    </div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="bg-blue-50/50 p-10 border-blue-100 flex flex-col justify-start">
+                        <h3 className={STYLES.columnHeader}>{t(lang, "TOPLANTI & BİLGİ YÖNETİMİ", "MEETING & KNOWLEDGE")}</h3>
+                        <Link onClick={closeMenu} href={`/${lang}/products/meetsense`} className={STYLES.linkGroup}>
+                            <Mic className={STYLES.iconContainer} />
+                            <div className="flex justify-between items-start gap-4">
+                                <div className="flex-1">
+                                    <h4 className={STYLES.itemTitle}>MEETSENSE</h4>
+                                    <p className={STYLES.itemDesc}>{t(lang, "Toplantıları AI ile kayıt altına alan; özet, aksiyon ve karar üreterek kurumsal hafızaya dönüştüren akıllı toplantı asistanı.", "Smart meeting assistant that records meetings with AI; produces summaries, actions and decisions, turning them into corporate memory.")}</p>
                                 </div>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

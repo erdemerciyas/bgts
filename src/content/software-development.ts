@@ -100,20 +100,24 @@ export const SOFTWARE_DEV_CONTENT = {
     ],
     technicalDomains: [
         {
-            id: "bigdata",
-            title: "Büyük Veri & Gerçek Zamanlı Veri İşleme",
-            subtitle: "Gerçek Zamanlı Veri İşleme",
-            icon: Database,
-            image: "/images/services/buyuk-veri-analitigi.png",
-            description: "Büyük hacimli verileri gerçek zamanlı işleyen, ölçeklenebilir ve dayanıklı veri altyapıları kuruyoruz.",
+            id: "development-services",
+            title: "Yazılım Geliştirme Hizmetleri",
+            subtitle: "Modern Mimari, DevOps & Güvenlik",
+            icon: Layers,
+            image: "/images/services/yazilim-modernizasyonu.png",
+            description: "Modern yazılım mimarileri, DevOps uyumlu geliştirme süreçleri ve güvenlik odaklı yaklaşımımızla kurumsal yazılım projelerinizi uçtan uca destekliyoruz.",
             features: [
                 {
-                    title: "Streaming & Dağıtık Veri Mimarileri",
-                    description: "Kafka, Spark ve streaming tabanlı mimariler ile büyük hacimli verileri gerçek zamanlı işleyen platformlar kuruyoruz."
+                    title: "Modern Yazılım Mimarileri",
+                    description: "DDD, API-first, mikroservis ve event-driven mimarilerle ölçeklenebilir sistemler tasarlıyoruz. Clean Architecture ve SOLID prensipleriyle uzun ömürlü yazılım çözümleri üretiyoruz."
                 },
                 {
-                    title: "Event-Driven & High Availability",
-                    description: "Dağıtık, event-driven ve high-availability mimariler sayesinde ölçeklenebilir ve dayanıklı veri altyapıları oluşturuyoruz."
+                    title: "DevOps Uyumlu Yazılım Geliştirme",
+                    description: "CI/CD pipeline'ları, test otomasyonu, containerized deployment (Docker, Kubernetes) ve observability çözümleri ile yazılım yaşam döngüsünü uçtan uca yönetiyoruz."
+                },
+                {
+                    title: "Güvenlik & Regülasyon Uyumlu Geliştirme",
+                    description: "OWASP, API security, IAM, rate-limit, HSM entegrasyonu, zaman damgası ve e-imza çözümleri ile güvenliği yazılımın merkezine alıyoruz."
                 }
             ]
         },
@@ -152,30 +156,25 @@ export const SOFTWARE_DEV_CONTENT = {
                     description: "Performans optimizasyonu, sistem modernizasyonu, ölçeklenebilirlik ve maliyet optimizasyonu konularında danışmanlık ve uygulama desteği sağlıyoruz."
                 }
             ]
-        }
-    ],
-    developmentDomains: [
+        },
         {
-            id: "development-services",
-            title: "Yazılım Geliştirme Hizmetleri",
-            subtitle: "Modern Mimari, DevOps & Güvenlik",
-            icon: Layers,
-            image: "/images/services/yazilim-modernizasyonu.png",
-            description: "Modern yazılım mimarileri, DevOps uyumlu geliştirme süreçleri ve güvenlik odaklı yaklaşımımızla kurumsal yazılım projelerinizi uçtan uca destekliyoruz.",
+            id: "bigdata",
+            title: "Büyük Veri & Gerçek Zamanlı Veri İşleme",
+            subtitle: "Gerçek Zamanlı Veri İşleme",
+            icon: Database,
+            image: "/images/services/buyuk-veri-analitigi.png",
+            description: "Büyük hacimli verileri gerçek zamanlı işleyen, ölçeklenebilir ve dayanıklı veri altyapıları kuruyoruz.",
             features: [
                 {
-                    title: "Modern Yazılım Mimarileri",
-                    description: "DDD, API-first, mikroservis ve event-driven mimarilerle ölçeklenebilir sistemler tasarlıyoruz. Clean Architecture ve SOLID prensipleriyle uzun ömürlü yazılım çözümleri üretiyoruz."
+                    title: "Streaming & Dağıtık Veri Mimarileri",
+                    description: "Kafka, Spark ve streaming tabanlı mimariler ile büyük hacimli verileri gerçek zamanlı işleyen platformlar kuruyoruz."
                 },
                 {
-                    title: "DevOps Uyumlu Yazılım Geliştirme",
-                    description: "CI/CD pipeline'ları, test otomasyonu, containerized deployment (Docker, Kubernetes) ve observability çözümleri ile yazılım yaşam döngüsünü uçtan uca yönetiyoruz."
-                },
-                {
-                    title: "Güvenlik & Regülasyon Uyumlu Geliştirme",
-                    description: "OWASP, API security, IAM, rate-limit, HSM entegrasyonu, zaman damgası ve e-imza çözümleri ile güvenliği yazılımın merkezine alıyoruz."
+                    title: "Event-Driven & High Availability",
+                    description: "Dağıtık, event-driven ve high-availability mimariler sayesinde ölçeklenebilir ve dayanıklı veri altyapıları oluşturuyoruz."
                 }
             ]
         }
-    ]
+    ],
+    developmentDomains: []
 };

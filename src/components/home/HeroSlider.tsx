@@ -212,7 +212,7 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
 
     return (
         <div
-            className="relative h-[55svh] min-h-[400px] md:h-[75vh] md:min-h-[500px] w-full overflow-hidden bg-slate-900 select-none"
+            className="relative min-h-[55svh] md:h-[75vh] md:min-h-[500px] w-full overflow-hidden bg-slate-900 select-none"
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
             onMouseDown={onMouseDown}
@@ -242,7 +242,7 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
                 </motion.div>
             </AnimatePresence>
 
-            <Container className="relative z-10 h-full flex flex-col justify-center pb-10 md:pb-24 md:pt-24">
+            <Container className="relative z-10 h-full flex flex-col justify-center pt-24 pb-10 md:pb-24 md:pt-24">
 
                 <div className="w-full md:px-14 lg:px-20 relative z-10 pointer-events-none">
                     <AnimatePresence mode="wait">
@@ -309,20 +309,20 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
                         </motion.div>
                     </AnimatePresence>
                 </div>
-
-                {/* Slide Indicators */}
-                <div className="flex justify-center gap-2.5 z-30 pointer-events-auto mt-6 md:absolute md:bottom-8 md:left-1/2 md:-translate-x-1/2 md:mt-0">
-                    {SLIDES.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentSlide(index)}
-                            className={`transition-all duration-500 rounded-full h-2 ${currentSlide === index ? "w-8 md:w-10 bg-corporate-secondary" : "w-2 bg-white/25 hover:bg-white/50"
-                                }`}
-                            aria-label={`Slayt ${index + 1}`}
-                        />
-                    ))}
-                </div>
             </Container>
+
+            {/* Slide Indicators - pinned to slider bottom-center */}
+            <div className="absolute bottom-6 md:bottom-44 left-1/2 -translate-x-1/2 flex justify-center gap-2.5 z-30 pointer-events-auto">
+                {SLIDES.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`transition-all duration-500 rounded-full h-2 ${currentSlide === index ? "w-8 md:w-10 bg-corporate-secondary" : "w-2 bg-white/25 hover:bg-white/50"
+                            }`}
+                        aria-label={`Slayt ${index + 1}`}
+                    />
+                ))}
+            </div>
 
             {/* Navigation Arrows - Left & Right sides */}
             <button

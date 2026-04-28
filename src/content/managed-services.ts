@@ -15,7 +15,7 @@ export const MANAGED_SERVICES_CONTENT = {
     pillars: [
         {
             id: "p1",
-            title: "MSP & Yönetilen Hizmetler",
+            title: "MSP & AIOps",
             overview: {
                 title: "BT Operasyonlarınızı Bize Devredin. Siz İşinize Odaklanın.",
                 description: "400+ mühendis, 30 yılı aşkın sektör deneyimi ve 5.000+ sunucu ölçeğindeki operasyon kapasitesiyle veri merkezi platformlarından son kullanıcı desteğine kadar tüm BT operasyonlarınızı İzleme & Müdahale, Geliştirme & Katma Değer ve Yönetim & Analitik katmanlarında 7/24 yönetiyoruz.",

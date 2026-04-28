@@ -364,18 +364,22 @@
       ],
       "technicalDomains": [
         {
-          "id": "bigdata",
-          "title": "Big Data & Real-Time Data Processing",
-          "subtitle": "Real-Time Data Processing",
-          "description": "We build scalable and durable data infrastructures that process large volumes of data in real time.",
+          "id": "development-services",
+          "title": "Software Development Services",
+          "subtitle": "Modern Architecture, DevOps & Security",
+          "description": "We support your enterprise software projects end-to-end with our modern software architectures, DevOps compliant development processes, and security-oriented approach.",
           "features": [
             {
-              "title": "Streaming & Distributed Data Architectures",
-              "description": "We build platforms that process massive data volumes in real-time using Kafka, Spark, and streaming-based architectures."
+              "title": "Modern Software Architectures",
+              "description": "We design scalable systems with DDD, API-first, microservice, and event-driven architectures. We produce long-lasting software solutions using Clean Architecture and SOLID principles."
             },
             {
-              "title": "Event-Driven & High Availability",
-              "description": "We create scalable and durable data infrastructures through distributed, event-driven, and high-availability architectures."
+              "title": "DevOps Compliant Software Development",
+              "description": "We manage the software lifecycle end-to-end with CI/CD pipelines, test automation, containerized deployment (Docker, Kubernetes), and observability solutions."
+            },
+            {
+              "title": "Security & Regulation Compliant Development",
+              "description": "We place security at the center of the software with OWASP, API security, IAM, rate-limit, HSM integration, timestamp, and digital signature solutions."
             }
           ]
         },
@@ -410,30 +414,25 @@
               "description": "We provide consultancy and implementation support on performance optimization, system modernization, scalability, and cost optimization."
             }
           ]
-        }
-      ],
-      "developmentDomains": [
+        },
         {
-          "id": "development-services",
-          "title": "Software Development Services",
-          "subtitle": "Modern Architecture, DevOps & Security",
-          "description": "We support your enterprise software projects end-to-end with our modern software architectures, DevOps compliant development processes, and security-oriented approach.",
+          "id": "bigdata",
+          "title": "Big Data & Real-Time Data Processing",
+          "subtitle": "Real-Time Data Processing",
+          "description": "We build scalable and durable data infrastructures that process large volumes of data in real time.",
           "features": [
             {
-              "title": "Modern Software Architectures",
-              "description": "We design scalable systems with DDD, API-first, microservice, and event-driven architectures. We produce long-lasting software solutions using Clean Architecture and SOLID principles."
+              "title": "Streaming & Distributed Data Architectures",
+              "description": "We build platforms that process massive data volumes in real-time using Kafka, Spark, and streaming-based architectures."
             },
             {
-              "title": "DevOps Compliant Software Development",
-              "description": "We manage the software lifecycle end-to-end with CI/CD pipelines, test automation, containerized deployment (Docker, Kubernetes), and observability solutions."
-            },
-            {
-              "title": "Security & Regulation Compliant Development",
-              "description": "We place security at the center of the software with OWASP, API security, IAM, rate-limit, HSM integration, timestamp, and digital signature solutions."
+              "title": "Event-Driven & High Availability",
+              "description": "We create scalable and durable data infrastructures through distributed, event-driven, and high-availability architectures."
             }
           ]
         }
-      ]
+      ],
+      "developmentDomains": []
     },
     "managedServices": {
       "hero": {
@@ -445,7 +444,7 @@
       "pillars": [
         {
           "id": "p1",
-          "title": "MSP & Managed Services",
+          "title": "MSP & AIOps",
           "overview": {
             "title": "Delegate Your IT Operations to Us. You Focus on Your Business.",
             "description": "With 400+ engineers, over 30 years of industry experience, and an operational capacity of 5,000+ servers, we manage all your IT operations from data center platforms to end-user support 24/7 across Monitoring & Intervention, Development & Value-Add, and Management & Analytics layers.",
@@ -1694,7 +1693,7 @@
       "bankingFinance": "Banking & Finance",
       "defense": "Defense Industry",
       "commercial": "Commercial & Telecom",
-      "telecommunications": "Telecommunications",
+      "telecommunications": "Telecommunications & Technology",
       "retail": "Retail & E-Commerce"
     },
     "products": {

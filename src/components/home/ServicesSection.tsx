@@ -17,7 +17,7 @@ export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?
     return (
         <Section background="muted" className="pt-0 pb-0 overflow-visible relative">
             <GradientMesh opacity={0.03} className="z-0" />
-            <Container className="relative z-10 -mt-24 md:-mt-40 mb-24">
+            <Container className="relative z-10 mt-8 md:-mt-40 mb-16 md:mb-24">
                 <div className="bg-white rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-100/50">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                         <div className="lg:w-1/2">
