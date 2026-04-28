@@ -1,9 +1,0 @@
-style: navigasyon, tipografi ve AI highlight iyilestirmeleri
-
-- src/lib/highlight-ai.tsx helper'i eklendi: metinlerdeki "AI" kelimesini
-  vurgulu render eden yardimci
-- MegaMenus: MSP & AIOps basliginda highlightAI kullanildi
-- header/data.ts: "GENC MUHENDISLER" nav itemi yorum satirina alindi
-- ServicesSection: heading font-manrope -> font-sans
-- MobileNav, ManagedServicesClient, Typography, globals.css: kucuk
-  tipografi ve mobil layout iyilestirmeleri
