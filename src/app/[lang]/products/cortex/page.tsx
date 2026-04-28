@@ -1,19 +1,37 @@
 import type { Metadata } from "next"
 import { getDictionary } from "@/get-dictionary"
 import type { Locale } from "@/i18n-config"
+import { buildAlternates, buildOgUrl } from "@/lib/seo"
 import CortexClient from "./CortexClient"
 
-export const metadata: Metadata = {
-    title: "Cortex - AI-Powered SDLC Platform | BGTS",
-    description: "An enterprise SDLC platform that automates the software development lifecycle with AI agents.",
-    alternates: {
-        canonical: "https://bgts.com.tr/products/cortex",
-    },
-    openGraph: {
-        title: "Cortex - AI-Powered SDLC Platform | BGTS",
-        description: "An enterprise SDLC platform that automates the software development lifecycle with AI agents.",
-        url: "https://bgts.com.tr/products/cortex",
-    },
+const PATH = "/products/cortex"
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+    const { lang } = await params
+    const locale = lang as Locale
+    const isTr = locale === "tr"
+
+    const title = isTr
+        ? "Cortex - Yapay Zeka Destekli SDLC Platformu | BGTS"
+        : "Cortex - AI-Powered SDLC Platform | BGTS"
+    const description = isTr
+        ? "Yazılım geliştirme yaşam döngüsünü AI ajanlarıyla otomatikleştiren kurumsal SDLC platformu."
+        : "An enterprise SDLC platform that automates the software development lifecycle with AI agents."
+
+    return {
+        title,
+        description,
+        alternates: buildAlternates(PATH, locale),
+        openGraph: {
+            title,
+            description,
+            url: buildOgUrl(PATH, locale),
+        },
+    }
 }
 
 export default async function CortexPage({

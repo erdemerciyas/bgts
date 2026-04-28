@@ -1,24 +1,41 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
+import { buildAlternates, buildOgUrl } from "@/lib/seo";
+import type { Locale } from "@/i18n-config";
 
-export const metadata: Metadata = {
-    title: "AI Ürünleri - Kurumsal Yapay Zeka Çözümleri | BGTS",
-    description:
-        "İşe alımdan kurumsal otomasyona, belge yönetiminden bilgi asistanlarına 8 yapay zeka platformu.",
-    alternates: {
-        canonical: "https://bgts.com.tr/products",
-    },
-    openGraph: {
-        title: "AI Ürünleri - Kurumsal Yapay Zeka Çözümleri | BGTS",
-        description:
-            "İşe alımdan kurumsal otomasyona, belge yönetiminden bilgi asistanlarına 8 yapay zeka platformu.",
-        url: "https://bgts.com.tr/products",
-    },
+const PATH = "/products";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+    const { lang } = await params;
+    const locale = lang as Locale;
+    const isTr = locale === "tr";
+
+    const title = isTr
+        ? "AI Ürünleri - Kurumsal Yapay Zeka Çözümleri | BGTS"
+        : "AI Products - Enterprise AI Solutions | BGTS";
+    const description = isTr
+        ? "İşe alımdan kurumsal otomasyona, belge yönetiminden bilgi asistanlarına 8 yapay zeka platformu."
+        : "8 AI platforms spanning recruitment, enterprise automation, document management, and knowledge assistants.";
+
+    return {
+        title,
+        description,
+        alternates: buildAlternates(PATH, locale),
+        openGraph: {
+            title,
+            description,
+            url: buildOgUrl(PATH, locale),
+        },
+    };
 }
 
 export default function ProductsLayout({
     children,
 }: {
-    children: React.ReactNode
+    children: React.ReactNode;
 }) {
-    return children
+    return children;
 }
