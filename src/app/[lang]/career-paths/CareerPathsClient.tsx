@@ -12,10 +12,16 @@ import {
 type CareerPathsDict = {
     hero: { title: string; subtitle: string }
     cta: string
+    cta_intern: string
     section1: { title: string; desc: string; points: string[] }
     section2: { title: string; desc: string; targetsTitle: string; targetsDesc: string; feedbackTitle: string; feedbackDesc: string }
     section3: { title: string; desc: string; boxTitle: string; boxDesc: string }
     section4: { title: string; desc: string; competence: string; performance: string; potential: string }
+    internship: {
+        intro: string
+        criteriaTitle: string
+        criteria: string[]
+    }
 }
 
 const SECTION4_ICONS = [Award, BarChart3, Rocket]
@@ -56,6 +62,13 @@ export default function CareerPathsClient({ dict: d }: { dict: CareerPathsDict }
                                 className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-full transition-all hover:scale-105 shadow-lg"
                             >
                                 {d.cta} <ArrowRight className="w-5 h-5 ml-2" />
+                            </Link>
+
+                            <Link
+                                href="#staj-programi"
+                                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg border border-blue-500/20"
+                            >
+                                {d.cta_intern} <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
 
                         </div>
@@ -230,6 +243,54 @@ export default function CareerPathsClient({ dict: d }: { dict: CareerPathsDict }
                                         className="object-cover"
                                     />
                                 </div>
+                            </div>
+                        </AnimatedDiv>
+                    </div>
+                </Container>
+            </section>
+
+            {/* ═══════════ INTERNSHIP SECTION ═══════════ */}
+            <section id="staj-programi" className="py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 text-white">
+                <Container>
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <AnimatedDiv className="lg:w-1/2 order-2 lg:order-1">
+                            <div className="relative">
+                                <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/20 to-violet-500/20 rounded-3xl blur-xl" />
+                                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                                    <Image
+                                        src="/images/genc-muhendis/staj.jpg"
+                                        alt="BGTS Staj Programı"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            </div>
+                            <div className="mt-6 text-center">
+                                <Link
+                                    href="#"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg border border-blue-500/20"
+                                >
+                                    Programa Başvur <ArrowRight className="w-5 h-5 ml-2" />
+                                </Link>
+                            </div>
+                        </AnimatedDiv>
+
+                        <AnimatedDiv className="lg:w-1/2 order-1 lg:order-2">
+                            <p className="text-lg lg:text-xl text-blue-200 leading-relaxed mb-8">
+                                {d.internship.intro}
+                            </p>
+                            <h3 className="text-xl font-bold text-white mb-4">
+                                {d.internship.criteriaTitle}
+                            </h3>
+                            <div className="space-y-3">
+                                {d.internship.criteria.map((item, i) => (
+                                    <div key={i} className="flex items-start gap-3 p-3 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                                        <div className="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center shrink-0 mt-0.5">
+                                            <span className="text-xs font-bold">{i + 1}</span>
+                                        </div>
+                                        <span className="text-blue-100 leading-relaxed">{item}</span>
+                                    </div>
+                                ))}
                             </div>
                         </AnimatedDiv>
                     </div>

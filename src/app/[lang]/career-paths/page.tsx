@@ -9,5 +9,5 @@ export default async function CareerPathsPage({
 }) {
     const { lang } = await params
     const dict = await getDictionary(lang as Locale)
-    return <CareerPathsClient dict={dict.careers_paths} />
+    return <CareerPathsClient dict={{ ...dict.careers_paths, internship: dict.careers_internship }} />
 }

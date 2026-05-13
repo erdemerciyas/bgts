@@ -4,7 +4,7 @@
       "services": "HİZMETLER",
       "industries": "SEKTÖRLER",
       "products": "ÜRÜNLER",
-      "talent": "GENÇ MÜHENDİSLER",
+      "talent": "YETENEK GELİŞİM PROGRAMI",
       "resources": "BİLGİ MERKEZİ",
       "careers": "YERİNİ AL",
       "about": "HAKKIMIZDA"
@@ -198,6 +198,38 @@
       "heading": "Kanıtlanmış Uzmanlık",
       "subtitle": "Bilişim 500 araştırmasına göre finans ve bankacılık yazılımlarında 5 yıldır peş peşe ilk 5'te yer almanın gururunu yaşıyoruz.",
       "ctaText": "Detaylı Bilgi"
+    },
+    "peopleFirst": {
+      "badge": "Felsefemiz",
+      "heading": "İnsan Her Zaman Önce",
+      "subtitle": "Sunduğumuz işin kalitesi, birlikte çalışma biçimimizin kalitesinden ayrı düşünülemez.",
+      "principles": [
+        {
+          "number": "01",
+          "title": "İnsan Odaklılık",
+          "desc": "Gücümüzün kaynağı insandır. Yaptığımız işin kalitesi, birlikte çalışma biçimimizden ayrı düşünülemeyeceği için takım çalışması, empati ve karşılıklı saygı üzerine kurulu ekipler oluştururuz."
+        },
+        {
+          "number": "02",
+          "title": "Güvenilirlik",
+          "desc": "Çalışma arkadaşlarımıza, müşterilerimize ve toplumumuza karşı dürüst, adil ve sorumlu davranırız. Güven, sahip olduğumuzu iddia ettiğimiz değil, kazandığımız bir değerdir."
+        },
+        {
+          "number": "03",
+          "title": "Yenilikçilik",
+          "desc": "Teknolojideki uzmanlığımızı yenilikçi bir kültür ve daha iyisini başarma kararlılığıyla birleştirerek fark yaratırız. Karmaşık problemleri rekabetçiliğimiz ve özgün düşünceyle kalıcı çözümlere dönüştürürüz."
+        },
+        {
+          "number": "04",
+          "title": "Mükemmelliyetçilik",
+          "desc": "Her yaptığımız işte en yüksek standartları hedefleriz. Mükemmelliyetçiliği bir çalışma biçimi olarak benimseyerek, yetkinliklerimizi sürekli geliştirir, sonuçlara odaklanır, özenle ve sabırla çalışırız."
+        },
+        {
+          "number": "05",
+          "title": "Sürdürülebilirlik",
+          "desc": "Uzun vadeli düşünür ve geliştiririz. Sunduğumuz hizmetler, büyüttüğümüz ekipler ve kurduğumuz iş ortaklıklarıyla değerini, güncelliğini ve gücünü zamana karşı koruyabilen çözümler üretiriz."
+        }
+      ]
     },
     "values": {
       "badge": "Temel Prensipler",
@@ -1667,6 +1699,142 @@
         "default": "Hata oluştu",
         "alert": "Başvuru sırasında bir hata oluştu, lütfen tekrar deneyin."
       }
+    },
+    "talentAcceleration": {
+      "enterpriseChallenge": {
+        "tag": "Kurumsal Teslimat Dönüşümü",
+        "title": "Yetenek Hızlandırma Modeli ile Özel Ekipler Oluşturma ve Ölçekleme",
+        "p1": "Kurumsal kuruluşlar, dağıtık ekipler genelinde operasyonel tutarlılık, yönetişim ve teslimat kalitesini korurken mühendislik kapasitesini ölçeklendirme konusunda sıklıkla zorluklarla karşılaşır.",
+        "p2": "Geleneksel işe alım modelleri, özellikle uzmanlaşmış teknik uzmanlık ve uzun entegrasyon süreçleri gerektiren ortamlarda hızlı büyüme taleplerini karşılamakta sıklıkla zorlanır."
+      },
+      "processFlow": {
+        "title": "BGTS Yetenek Hızlandırma Çerçevesi",
+        "subtitle": "Müşteri ihtiyaçlarıyla yakın uyum içinde özel mühendislik ekipleri oluşturmak ve olgunlaştırmak için yapılandırılmış bir yaklaşım.",
+        "steps": [
+          {
+            "key": "select",
+            "title": "Seç",
+            "businessObj": "Güçlü ve ölçeklenebilir bir yetenek havuzu oluşturun",
+            "operationalValue": "Aday kalitesini ve devreye alma hazırlığını artırır"
+          },
+          {
+            "key": "train",
+            "title": "Eğit",
+            "businessObj": "İş gücü hazırlığını hızlandırın",
+            "operationalValue": "Entegrasyon ve adaptasyon süresini azaltır"
+          },
+          {
+            "key": "deploy",
+            "title": "Konuşlandır",
+            "businessObj": "Anında operasyonel katkı sağlayın",
+            "operationalValue": "Teslimat sürekliliğini ve ölçeklenebilirliği artırır"
+          },
+          {
+            "key": "operate",
+            "title": "Çalıştır",
+            "businessObj": "Kararlı teslimat performansı sağlayın",
+            "operationalValue": "Ölçülebilir ve sürdürülebilir operasyonel olgunluk oluşturur"
+          },
+          {
+            "key": "transfer",
+            "title": "Devret",
+            "businessObj": "Uzun vadeli iş gücü entegrasyonunu destekleyin",
+            "operationalValue": "Sürdürülebilir müşteri tarafı yetenek büyümesi yaratır"
+          }
+        ]
+      },
+      "scaleImpact": {
+        "title": "Ölçek ve Etki",
+        "metrics": [
+          { "val": "3.750+", "label": "Eğitilen Aday" },
+          { "val": "65+", "label": "Özel Program" },
+          { "val": "45+", "label": "Desteklenen Kuruluş" },
+          { "val": "%92", "label": "Teslimat Elde Tutma Oranı" },
+          { "val": "%30", "label": "Daha Hızlı Ekip Ramp-Up" },
+          { "val": "%85", "label": "İç Terfi Hazırlığı" },
+          { "val": "2 Yıllık", "label": "Operasyonel Olgunluk Çerçevesi" }
+        ]
+      },
+      "approach": {
+        "title": "Yaklaşım",
+        "intro": "Model, anında işe alıma güvenmek yerine, yetenekleri erken aşamalarından itibaren teslimat ortamlarına entegre etmeye odaklanır.",
+        "bullets": [
+          "Müşteri ile ortak aday seçimi",
+          "Yapılandırılmış eğitim ve entegrasyon programları",
+          "BGTS bünyesinde özel teslimat ekiplerinin oluşturulması",
+          "Müşteri araçları, süreçleri ve çalışma yöntemleriyle uyum",
+          "Kararlı, yüksek performanslı ekiplere aşamalı gelişim",
+          "Gerekirse uzun vadeli entegrasyon için açık yol"
+        ]
+      },
+      "executionModel": {
+        "title": "Yürütme Modeli",
+        "bullets": [
+          "Yetenek, yapılandırılmış bir pipeline'dan geçirilir ve süreç başında gerçek teslimat ortamlarına konuşlandırılır",
+          "Adaylar yoğun teknik ve pratik eğitimden geçer",
+          "Ekipler, deneyimli liderlik altında aktif projelere katkıda bulunur",
+          "Teslimat, tanımlanmış KPI'lar ve performans takibi ile yönetilir",
+          "Ekipler, iki yıla kadar olan bir sürede operasyonel olarak olgunlaşır"
+        ]
+      },
+      "deliveryGovernance": {
+        "title": "Teslimat Yönetişimi",
+        "intro": "BGTS, teslimat tutarlılığı, operasyonel şeffaflık ve ölçülebilir ekip performansı sağlamak için yapılandırılmış yönetişim modelleri uygular.",
+        "bullets": [
+          "Tanımlanmış operasyonel KPI'lar ve raporlama yapıları",
+          "Sürekli mentorluk ve liderlik gözetimi",
+          "Yapılandırılmış geri bildirim ve performans değerlendirme döngüleri",
+          "Kurumsal uyum ve teslimat standartlarıyla uyum",
+          "Aşamalı operasyonel olgunluk ile risk azaltma"
+        ]
+      },
+      "teamMaturity": {
+        "title": "Ekip Olgunluk Yolculuğu",
+        "phases": [
+          {
+            "phase": "Aşama 01",
+            "title": "Temel",
+            "desc": "Teknik entegrasyon, teslimat yönlendirmesi ve yapılandırılmış yetenek geliştirme."
+          },
+          {
+            "phase": "Aşama 02",
+            "title": "Destekli Teslimat",
+            "desc": "Ekipler, artan operasyonel sorumlulukla kıdemli gözetim altında katkıda bulunur."
+          },
+          {
+            "phase": "Aşama 03",
+            "title": "Bağımsız Teslimat",
+            "desc": "Ekipler, kararlı performans metrikleri, teslimat sahipliği ve ölçeklenebilir kapasite ile çalışır."
+          },
+          {
+            "phase": "Aşama 04",
+            "title": "Stratejik Entegrasyon",
+            "desc": "Müşteri teslimat ekosistemleri ve kurumsal hedeflerle uzun vadeli uyum."
+          }
+        ]
+      },
+      "businessValue": {
+        "title": "Sunulan İş Değeri",
+        "intro": "Yetenek Hızlandırma Modeli, kurumsal kuruluşların işe alım bağımlılığını azaltırken operasyonel hedeflerle uyumlu, ölçeklenebilir, teslimat için hazır mühendislik yetenekleri oluşturmasını sağlar.",
+        "bullets": [
+          "Azaltılmış işe alım ve entegrasyon riski",
+          "Teslimat için hazır teknik ekiplere daha hızlı erişim",
+          "İyileştirilmiş operasyonel süreklilik",
+          "Öngörülebilir ölçekleme kapasitesi",
+          "Artırılmış uzun vadeli iş gücü sürdürülebilirliği",
+          "Kurumsal teslimat çerçeveleriyle uyum"
+        ]
+      },
+      "outcome": {
+        "title": "Sonuç",
+        "bullets": [
+          "Müşteri ortamlarıyla uyumlu, tam eğitimli ve teslimat için hazır ekipler",
+          "Azaltılmış işe alım ve entegrasyon riski",
+          "Daha hızlı ve güvenilir ramp-up",
+          "Yapılandırılmış ekip geliştirme yoluyla tutarlı teslimat kalitesi",
+          "Uzun vadeli sürekliliğe sahip sürdürülebilir ekip modelleri"
+        ]
+      }
     }
   },
   "mobileNav": {
@@ -1704,7 +1872,7 @@
       "docKnowledge": "Doküman & Bilgi Yönetimi"
     },
     "talent": {
-      "name": "Genç Mühendisler",
+      "name": "Yetenek Gelişim Programı",
       "programs": "Programlar",
       "software": "Yazılımcı Yetiştirme",
       "infrastructure": "Altyapı Teknolojileri",
@@ -1783,7 +1951,7 @@
           ]
         },
         {
-          "title": "Genç Mühendisler",
+          "title": "Yetenek Gelişim Programı",
           "desc": "Finans sektörünün ihtiyaç duyduğu yazılım ve altyapı yeteneklerini yetiştiriyor, kendi çalışanlarınıza yeni yetkinlikler kazandırıyoruz.",
           "items": [
             "Kampüs Etkileşimi & Seçim",
@@ -2377,6 +2545,7 @@
       "subtitle": "Her çalışanın kariyer yolculuğu kendine özgüdür. Kendi hızında gelişebileceğin, potansiyelini ortaya koyabileceğin esnek ve sürdürülebilir kariyer yolları sunuyoruz."
     },
     "cta": "Açık Pozisyonlar",
+    "cta_intern": "2026 Staj Programı",
     "section1": {
       "title": "Teknik ve Yönetsel <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600\">Kariyer Yolları</span>",
       "desc": "Çalışanlarımıza uzmanlıklarını derinleştirebilecekleri teknik kariyer yolları ile ekip ve organizasyon yönetimine odaklanabilecekleri yönetsel kariyer yolları sunuyoruz.",
@@ -2407,6 +2576,20 @@
       "performance": "Performans",
       "potential": "Potansiyel"
     }
+  },
+  "careers_internship": {
+    "intro": "BGTS staj programı; güçlü mühendislik kültürünü deneyimlemek, gerçek proje simülasyonlarında yer almak ve sektör deneyimi kazanmak isteyen genç yeteneklere yöneliktir.",
+    "criteriaTitle": "2026 yılı için stajyer seçiminde dikkate alınacak temel kriterler aşağıdaki gibidir:",
+    "criteria": [
+      "Tercihen prestijli üniversitelerin Yazılım, Bilgisayar ve Yapay Zeka Müh. bölümlerinde öğrenim görmek",
+      "3. veya 4. sınıf öğrencisi olmak",
+      "Genel not ortalamasının (GPA) en az 3.50 olması",
+      "Üniversite yerleşme sıralamasının ilk 100.000 içerisinde yer alması",
+      "Vakıf üniversitesinde okuyan öğrencilerin burs oranının %100 olması",
+      "Zorunlu stajı bulunmak (gönüllü stajyer alımları için GMY onayı gereklidir)",
+      "Tercihen daha önce proje (github) ya da staj tecrübesi olması",
+      "Tercihen daha önce BGTS bünyesinde staj yapmamış olmak"
+    ]
   },
   "careers_learning": {
     "hero": {

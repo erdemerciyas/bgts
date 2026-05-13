@@ -4,7 +4,7 @@
       "services": "SERVICES",
       "industries": "INDUSTRIES",
       "products": "PRODUCTS",
-      "talent": "TALENT",
+      "talent": "TALENT DEVELOPMENT PROGRAM",
       "resources": "RESOURCES",
       "careers": "CAREERS",
       "about": "ABOUT US"
@@ -198,6 +198,38 @@
       "heading": "Proven Expertise",
       "subtitle": "According to the Bilişim 500 research, we are proud to have been in the top 5 for 5 consecutive years in finance and banking software.",
       "ctaText": "Detailed Information"
+    },
+    "peopleFirst": {
+      "badge": "Our Philosophy",
+      "heading": "People First, Always",
+      "subtitle": "The quality of what we deliver is inseparable from the quality of how we work together.",
+      "principles": [
+        {
+          "number": "01",
+          "title": "People-First",
+          "desc": "Our strength lies in our people. We build teams grounded in collaboration, empathy, and respect, because the quality of what we deliver is inseparable from the quality of how we work together."
+        },
+        {
+          "number": "02",
+          "title": "Integrity",
+          "desc": "We act with honesty, fairness, and a deep sense of responsibility towards our clients, our colleagues, and the communities we operate in. Trust is not something we claim; it is something we earn."
+        },
+        {
+          "number": "03",
+          "title": "Ingenuity",
+          "desc": "We stay ahead by combining technological expertise with a culture of innovation and a competitive drive to deliver better. Bold, original thinking is how we turn complex problems into lasting solutions."
+        },
+        {
+          "number": "04",
+          "title": "Excellence",
+          "desc": "We hold ourselves to high standards across every engagement. Through continuous development of our skills, execution, and a focus on outcomes, we pursue excellence not as a destination but as a practice."
+        },
+        {
+          "number": "05",
+          "title": "Sustainability",
+          "desc": "We build for the long term. Whether the solutions we deliver, the teams we grow, or the partnerships we form, we are committed to creating results that remain valuable, relevant, and resilient over time."
+        }
+      ]
     },
     "values": {
       "badge": "Core Principles",
@@ -1667,6 +1699,142 @@
         "default": "An error occurred",
         "alert": "An error occurred during your application, please try again."
       }
+    },
+    "talentAcceleration": {
+      "enterpriseChallenge": {
+        "tag": "Enterprise Delivery Transformation",
+        "title": "Building and Scaling Dedicated Teams Through a Talent Acceleration Model",
+        "p1": "Enterprise organisations frequently face challenges in scaling engineering capacity while maintaining operational consistency, governance, and delivery quality across distributed teams.",
+        "p2": "Traditional hiring models often struggle to support rapid growth demands, particularly in environments requiring specialised technical expertise and long onboarding cycles."
+      },
+      "processFlow": {
+        "title": "The BGTS Talent Acceleration Framework",
+        "subtitle": "A structured approach to building and maturing dedicated engineering teams in close alignment with client needs.",
+        "steps": [
+          {
+            "key": "select",
+            "title": "Select",
+            "businessObj": "Build a strong and scalable talent pipeline",
+            "operationalValue": "Improves candidate quality and deployment readiness"
+          },
+          {
+            "key": "train",
+            "title": "Train",
+            "businessObj": "Accelerate workforce readiness",
+            "operationalValue": "Reduces onboarding and adaptation time"
+          },
+          {
+            "key": "deploy",
+            "title": "Deploy",
+            "businessObj": "Enable immediate operational contribution",
+            "operationalValue": "Improves delivery continuity and scalability"
+          },
+          {
+            "key": "operate",
+            "title": "Operate",
+            "businessObj": "Ensure stable delivery performance",
+            "operationalValue": "Creates measurable and sustainable operational maturity"
+          },
+          {
+            "key": "transfer",
+            "title": "Transfer",
+            "businessObj": "Support long-term workforce integration",
+            "operationalValue": "Creates sustainable client-side capability growth"
+          }
+        ]
+      },
+      "scaleImpact": {
+        "title": "Scale & Impact",
+        "metrics": [
+          { "val": "3,750+", "label": "Candidates Trained" },
+          { "val": "65+", "label": "Dedicated Programmes" },
+          { "val": "45+", "label": "Organisations Supported" },
+          { "val": "92%", "label": "Delivery Retention Rate" },
+          { "val": "30%", "label": "Faster Team Ramp-Up" },
+          { "val": "85%", "label": "Internal Promotion Readiness" },
+          { "val": "2-Year", "label": "Operational Maturity Framework" }
+        ]
+      },
+      "approach": {
+        "title": "Approach",
+        "intro": "Rather than relying on immediate hiring, the model focuses on developing talent and integrating it into delivery environments from an early stage.",
+        "bullets": [
+          "Joint candidate selection with the client",
+          "Structured training and onboarding programmes",
+          "Formation of dedicated delivery teams within BGTS",
+          "Alignment with client tools, processes, and ways of working",
+          "Progressive development into stable, high-performing teams",
+          "Clear pathway for long-term integration if required"
+        ]
+      },
+      "executionModel": {
+        "title": "Execution Model",
+        "bullets": [
+          "Talent is developed through a structured pipeline and deployed into real delivery environments early in the process",
+          "Candidates undergo intensive technical and practical training",
+          "Teams contribute to active projects under experienced leadership",
+          "Delivery is managed with defined KPIs and performance tracking",
+          "Teams mature operationally over a period of up to two years"
+        ]
+      },
+      "deliveryGovernance": {
+        "title": "Delivery Governance",
+        "intro": "BGTS applies structured governance models to ensure delivery consistency, operational transparency, and measurable team performance throughout the engagement lifecycle.",
+        "bullets": [
+          "Defined operational KPIs and reporting structures",
+          "Continuous mentoring and leadership oversight",
+          "Structured feedback and performance evaluation cycles",
+          "Alignment with enterprise compliance and delivery standards",
+          "Risk mitigation through phased operational maturity"
+        ]
+      },
+      "teamMaturity": {
+        "title": "Team Maturity Journey",
+        "phases": [
+          {
+            "phase": "Phase 01",
+            "title": "Foundation",
+            "desc": "Technical onboarding, delivery orientation, and structured capability development."
+          },
+          {
+            "phase": "Phase 02",
+            "title": "Assisted Delivery",
+            "desc": "Teams contribute under senior supervision with increasing operational responsibility."
+          },
+          {
+            "phase": "Phase 03",
+            "title": "Independent Delivery",
+            "desc": "Teams operate with stable performance metrics, delivery ownership, and scalable capacity."
+          },
+          {
+            "phase": "Phase 04",
+            "title": "Strategic Integration",
+            "desc": "Long-term alignment with client delivery ecosystems and organisational objectives."
+          }
+        ]
+      },
+      "businessValue": {
+        "title": "Business Value Delivered",
+        "intro": "The Talent Acceleration Model enables enterprise organisations to reduce hiring dependency while creating scalable, delivery-ready engineering capabilities aligned with operational goals.",
+        "bullets": [
+          "Reduced recruitment and onboarding risk",
+          "Faster access to delivery-ready technical teams",
+          "Improved operational continuity",
+          "Predictable scaling capacity",
+          "Increased long-term workforce sustainability",
+          "Alignment with enterprise delivery frameworks"
+        ]
+      },
+      "outcome": {
+        "title": "Outcome",
+        "bullets": [
+          "Fully trained, delivery-ready teams aligned with client environments",
+          "Reduced hiring and onboarding risk",
+          "Faster and more reliable ramp-up",
+          "Consistent delivery quality through structured team development",
+          "Sustainable team models with long-term continuity"
+        ]
+      }
     }
   },
   "mobileNav": {
@@ -1704,7 +1872,7 @@
       "docKnowledge": "Document & Knowledge Management"
     },
     "talent": {
-      "name": "Young Engineers",
+      "name": "Talent Development Program",
       "programs": "Programs",
       "software": "Software Developer Training",
       "infrastructure": "Infrastructure Technologies",
@@ -2377,6 +2545,7 @@
       "subtitle": "Every employee's career journey is unique. We offer flexible and sustainable career paths where you can develop at your own pace and reveal your potential."
     },
     "cta": "Open Positions",
+    "cta_intern": "2026 Internship Program",
     "section1": {
       "title": "Technical and Managerial <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600\">Career Paths</span>",
       "desc": "We offer our employees technical career paths to deepen their expertise, and managerial career paths to focus on team and organizational management.",
@@ -2407,6 +2576,20 @@
       "performance": "Performance",
       "potential": "Potential"
     }
+  },
+  "careers_internship": {
+    "intro": "The BGTS internship program is designed for young talents who want to experience a strong engineering culture, participate in real project simulations, and gain industry experience.",
+    "criteriaTitle": "The main criteria to be considered for intern selection for 2026 are as follows:",
+    "criteria": [
+      "Preferably studying at prestigious universities in Software, Computer and AI Engineering departments",
+      "Being a 3rd or 4th year student",
+      "Having a minimum GPA of 3.50",
+      "Being ranked within the top 100,000 in university placement ranking",
+      "Having 100% scholarship status for students at foundation universities",
+      "Having mandatory internship (GMY approval required for voluntary interns)",
+      "Preferably having previous project (github) or internship experience",
+      "Preferably not having previously interned at BGTS"
+    ]
   },
   "resources_success_stories": {
     "hero": {

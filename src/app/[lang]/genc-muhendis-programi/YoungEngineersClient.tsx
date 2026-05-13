@@ -13,6 +13,7 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import ApplicationForm from "@/components/hr/ApplicationForm"
+import TalentAccelerationSection from "@/components/hr/TalentAccelerationSection"
 import { motion } from "framer-motion"
 import {
     AnimatedDiv, FadeInRight,
@@ -36,6 +37,17 @@ type YoungEngineersDict = {
     programs: { sectionHeading: string; sectionHeadingHighlight: string; sectionSubtitle: string; applyLink: string; items: { id: string; title: string; desc: string; items: string[] }[] }
     steps: { sectionHeading: string; sectionSubtitle: string; stepLabel: string; items: { step: string; title: string; desc: string }[] }
     application: { heading: string; headingHighlight: string; subtitle: string; tipsHeading: string; tips: string[]; notice: string }
+    talentAcceleration: {
+        enterpriseChallenge: { tag: string; title: string; p1: string; p2: string }
+        processFlow: { title: string; subtitle: string; steps: { key: string; title: string; businessObj: string; operationalValue: string }[] }
+        scaleImpact: { title: string; metrics: { val: string; label: string }[] }
+        approach: { title: string; intro: string; bullets: string[] }
+        executionModel: { title: string; bullets: string[] }
+        deliveryGovernance: { title: string; intro: string; bullets: string[] }
+        teamMaturity: { title: string; phases: { phase: string; title: string; desc: string }[] }
+        businessValue: { title: string; intro: string; bullets: string[] }
+        outcome: { title: string; bullets: string[] }
+    }
     form: any
 }
 
@@ -280,6 +292,9 @@ export default function YoungEngineersClient({ dict: d, lang }: { dict: YoungEng
                     </div>
                 </Container>
             </Section>
+
+            {/* TALENT ACCELERATION MODEL - New Section */}
+            <TalentAccelerationSection dict={d.talentAcceleration} />
 
             {/* APPLICATION FORM */}
             <section id="application-form" className="relative bg-[#060B18] py-24 lg:py-32 overflow-hidden">

@@ -49,6 +49,84 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
             </div>
 
 
+            {/* ═══ PEOPLE FIRST — Side-by-side split with cover image ═══ */}
+            <Section className="py-20 lg:py-28 overflow-hidden">
+                <Container>
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                        {/* Left — Image */}
+                        <AnimatedDiv className="relative">
+                            <div className="relative h-[450px] lg:h-[550px] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20">
+                                <Image
+                                    src="/images/about/people-first.jpg"
+                                    alt="BGTS Team"
+                                    fill
+                                    className="object-cover object-center"
+                                />
+                            </div>
+                            {/* Decorative element */}
+                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl -z-10" />
+                            <div className="absolute -top-6 -left-6 w-24 h-24 bg-violet-500/10 rounded-full blur-2xl -z-10" />
+                        </AnimatedDiv>
+
+                        {/* Right — Content */}
+                        <AnimatedDiv delay={0.15}>
+                            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-black text-slate-900 leading-[1.1] mb-4">
+                                {about.peopleFirst.heading}
+                            </h2>
+                            <p className="text-slate-600 text-base lg:text-lg leading-relaxed mb-8">
+                                {about.peopleFirst.subtitle}
+                            </p>
+
+                            {/* Principles */}
+                            <div className="space-y-3">
+                                {about.peopleFirst.principles.map((p: any, i: number) => {
+                                    const gradients = [
+                                        "from-blue-500 to-blue-600",
+                                        "from-violet-500 to-violet-600",
+                                        "from-emerald-500 to-emerald-600",
+                                        "from-amber-500 to-amber-600",
+                                        "from-rose-500 to-rose-600",
+                                    ];
+                                    const borders = [
+                                        "border-blue-100 hover:border-blue-300 hover:bg-blue-50",
+                                        "border-violet-100 hover:border-violet-300 hover:bg-violet-50",
+                                        "border-emerald-100 hover:border-emerald-300 hover:bg-emerald-50",
+                                        "border-amber-100 hover:border-amber-300 hover:bg-amber-50",
+                                        "border-rose-100 hover:border-rose-300 hover:bg-rose-50",
+                                    ];
+                                    const textColors = [
+                                        "text-blue-600",
+                                        "text-violet-600",
+                                        "text-emerald-600",
+                                        "text-amber-600",
+                                        "text-rose-600",
+                                    ];
+                                    return (
+                                        <div
+                                            key={i}
+                                            className={`group flex items-start gap-4 p-4 rounded-xl border bg-white ${borders[i % 5]} transition-all duration-300 hover:shadow-lg cursor-default`}
+                                        >
+                                            <span className={`shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br ${gradients[i % 5]} text-white font-black text-sm shadow-sm`}>
+                                                {p.number}
+                                            </span>
+                                            <div className="flex-1">
+                                                <h3 className={`font-bold text-sm mb-1 ${textColors[i % 5]}`}>{p.title}</h3>
+                                                <p className="text-slate-500 text-xs leading-relaxed group-hover:text-slate-700 transition-colors">{p.desc}</p>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </AnimatedDiv>
+                    </div>
+                </Container>
+            </Section>
+
+
+            {/* ═══ Colorful divider between sections ═══ */}
+            <div className="h-1.5 bg-gradient-to-r from-blue-500 via-violet-500 to-amber-500" />
+
+
             {/* ═══ GENEL BAKIŞ — Asymmetric Split ═══ */}
             <Section className="pt-24 lg:pt-32">
                 <Container>

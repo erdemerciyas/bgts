@@ -313,6 +313,48 @@ npm start
 
 ---
 
+## Vercel Deploy
+
+Bu proje Vercel üzerinde sorunsuz çalışacak şekilde yapılandırılmıştır.
+
+### Otomatik Deploy
+
+1. [Vercel](https://vercel.com) hesabınıza giriş yapın
+2. "New Project" ile GitHub repo'nuzu bağlayın (`erdemerciyas/bgts`)
+3. Framework: **Next.js** (otomatik algılanır)
+4. Root Directory: `.` (varsayılan)
+5. **Environment Variables** ekleyin:
+
+| Değişken | Açıklama |
+|----------|----------|
+| `GROQ_API_KEY` | Groq AI API key (chatbot için) |
+| `SMTP_HOST` | SMTP sunucu adresi |
+| `SMTP_PORT` | SMTP port (genellikle 587) |
+| `SMTP_USER` | SMTP kullanıcı adı |
+| `SMTP_PASS` | SMTP şifresi |
+| `CONTACT_EMAIL` | İletişim formu hedef e-posta |
+| `HR_EMAIL` | İK başvuru hedef e-posta |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics Measurement ID (G-XXXXXXXXXX) |
+
+6. **Deploy** butonuna tıklayın
+
+### Önemli Notlar
+
+- **Edge Runtime:** `/api/chat` endpoint Edge Runtime üzerinde çalışır — Vercel Edge Functions uyumluluğu sağlanmıştır
+- **Image Optimization:** `next.config.ts`'de `images.unsplash.com` ve `i.pravatar.cc` remote patterns olarak tanımlıdır
+- **Security Headers:** CSP, HSTS, X-Frame-Options gibi güvenlik başlıkları `next.config.ts` içinde yapılandırılmıştır
+- **Build Command:** `npm run build`
+- **Install Command:** `npm install`
+
+### Vercel CLI ile Deploy
+
+```bash
+npm i -g vercel
+vercel
+```
+
+---
+
 ## Ortam Değişkenleri
 
 `.env.local` dosyası oluşturun ve aşağıdaki değerleri doldurun:

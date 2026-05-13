@@ -118,9 +118,9 @@ const SLIDES: Slide[] = [
     {
         id: 3,
         image: "/images/headers/bgts-kariyer-firsatlari.jpg",
-        title: "Geleceğin Mühendislerini Yetiştiriyoruz",
-        subtitle: "Genç mühendis programlarımızla teknolojiye değer katan yeni nesil yetenekleri yetiştiriyoruz.",
-        ctaText: "Kariyer Fırsatları",
+        title: "Yetenek Gelişim Programı",
+        subtitle: "Gerçek projelerde çalışarak sektör deneyimi kazan, mentorlarla kariyerine güçlü bir başlangıç yap.",
+        ctaText: "Programı Keşfet",
         ctaLink: "/genc-muhendis-programi",
     },
     {

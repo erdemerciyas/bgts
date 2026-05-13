@@ -298,7 +298,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
             transition={{ duration: 0.2 }}
             className={cn(STYLES.megaMenuWrapper, "p-5")}
             role="menu"
-            aria-label={t(lang, "Genç mühendisler menüsü", "Young engineers menu")}
+            aria-label={t(lang, "Yetenek gelişim menüsü", "Talent development menu")}
         >
             <div className="grid grid-cols-5 gap-4 h-[400px]">
 
@@ -310,7 +310,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 >
                     <Image
                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
-                        alt={t(lang, "Genç Mühendis Programı", "Young Engineer Program")}
+                        alt={t(lang, "Yetenek Gelişim Programı", "Talent Development Program")}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
                     />
@@ -321,7 +321,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             <div className="w-7 h-7 rounded-full bg-white/15 backdrop-blur flex items-center justify-center">
                                 <GraduationCap className="w-3.5 h-3.5 text-white" />
                             </div>
-                            <span className="text-[10px] font-black text-white/70 tracking-[0.2em] uppercase">{t(lang, "Genç Mühendis Programı", "Young Engineer Program")}</span>
+                            <span className="text-[10px] font-black text-white/70 tracking-[0.2em] uppercase">{t(lang, "Yetenek Gelişim Programı", "Talent Development Program")}</span>
                         </div>
 
                         <div>
