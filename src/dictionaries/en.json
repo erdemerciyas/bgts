@@ -1748,15 +1748,11 @@
         "metrics": [
           { "val": "3,750+", "label": "Candidates Trained" },
           { "val": "65+", "label": "Dedicated Programmes" },
-          { "val": "45+", "label": "Organisations Supported" },
-          { "val": "92%", "label": "Delivery Retention Rate" },
-          { "val": "30%", "label": "Faster Team Ramp-Up" },
-          { "val": "85%", "label": "Internal Promotion Readiness" },
-          { "val": "2-Year", "label": "Operational Maturity Framework" }
+          { "val": "45+", "label": "Organisations Supported" }
         ]
       },
       "approach": {
-        "title": "Approach",
+        "title": "Approach Model",
         "intro": "Rather than relying on immediate hiring, the model focuses on developing talent and integrating it into delivery environments from an early stage.",
         "bullets": [
           "Joint candidate selection with the client",
@@ -1777,56 +1773,8 @@
           "Teams mature operationally over a period of up to two years"
         ]
       },
-      "deliveryGovernance": {
-        "title": "Delivery Governance",
-        "intro": "BGTS applies structured governance models to ensure delivery consistency, operational transparency, and measurable team performance throughout the engagement lifecycle.",
-        "bullets": [
-          "Defined operational KPIs and reporting structures",
-          "Continuous mentoring and leadership oversight",
-          "Structured feedback and performance evaluation cycles",
-          "Alignment with enterprise compliance and delivery standards",
-          "Risk mitigation through phased operational maturity"
-        ]
-      },
-      "teamMaturity": {
-        "title": "Team Maturity Journey",
-        "phases": [
-          {
-            "phase": "Phase 01",
-            "title": "Foundation",
-            "desc": "Technical onboarding, delivery orientation, and structured capability development."
-          },
-          {
-            "phase": "Phase 02",
-            "title": "Assisted Delivery",
-            "desc": "Teams contribute under senior supervision with increasing operational responsibility."
-          },
-          {
-            "phase": "Phase 03",
-            "title": "Independent Delivery",
-            "desc": "Teams operate with stable performance metrics, delivery ownership, and scalable capacity."
-          },
-          {
-            "phase": "Phase 04",
-            "title": "Strategic Integration",
-            "desc": "Long-term alignment with client delivery ecosystems and organisational objectives."
-          }
-        ]
-      },
-      "businessValue": {
-        "title": "Business Value Delivered",
-        "intro": "The Talent Acceleration Model enables enterprise organisations to reduce hiring dependency while creating scalable, delivery-ready engineering capabilities aligned with operational goals.",
-        "bullets": [
-          "Reduced recruitment and onboarding risk",
-          "Faster access to delivery-ready technical teams",
-          "Improved operational continuity",
-          "Predictable scaling capacity",
-          "Increased long-term workforce sustainability",
-          "Alignment with enterprise delivery frameworks"
-        ]
-      },
       "outcome": {
-        "title": "Outcome",
+        "title": "Outcomes",
         "bullets": [
           "Fully trained, delivery-ready teams aligned with client environments",
           "Reduced hiring and onboarding risk",
@@ -2578,7 +2526,9 @@
     }
   },
   "careers_internship": {
+    "sectionTitle": "BGTS Internship Program",
     "intro": "The BGTS internship program is designed for young talents who want to experience a strong engineering culture, participate in real project simulations, and gain industry experience.",
+    "applyCta": "Apply to the program",
     "criteriaTitle": "The main criteria to be considered for intern selection for 2026 are as follows:",
     "criteria": [
       "Preferably studying at prestigious universities in Software, Computer and AI Engineering departments",

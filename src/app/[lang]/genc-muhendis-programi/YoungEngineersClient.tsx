@@ -43,9 +43,6 @@ type YoungEngineersDict = {
         scaleImpact: { title: string; metrics: { val: string; label: string }[] }
         approach: { title: string; intro: string; bullets: string[] }
         executionModel: { title: string; bullets: string[] }
-        deliveryGovernance: { title: string; intro: string; bullets: string[] }
-        teamMaturity: { title: string; phases: { phase: string; title: string; desc: string }[] }
-        businessValue: { title: string; intro: string; bullets: string[] }
         outcome: { title: string; bullets: string[] }
     }
     form: any

@@ -3,7 +3,7 @@
 import { Container } from "@/components/ui/Container"
 import {
     CheckCircle2, Users, GraduationCap, Rocket, Server, FileSearch,
-    Shield, Target, Layers
+    Target, Flag,
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { AnimatedDiv } from "@/components/ui/AnimatedElements"
@@ -36,20 +36,6 @@ type TalentAccelerationDict = {
     }
     executionModel: {
         title: string
-        bullets: string[]
-    }
-    deliveryGovernance: {
-        title: string
-        intro: string
-        bullets: string[]
-    }
-    teamMaturity: {
-        title: string
-        phases: { phase: string; title: string; desc: string }[]
-    }
-    businessValue: {
-        title: string
-        intro: string
         bullets: string[]
     }
     outcome: {
@@ -88,12 +74,6 @@ export default function TalentAccelerationSection({ dict: d }: { dict: TalentAcc
                 <Container className="relative z-10 px-6 lg:px-12">
                     {/* Header */}
                     <AnimatedDiv className="text-center mb-12 max-w-4xl mx-auto">
-                        <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-[#12A8FF]/10 border-2 border-[#12A8FF]/30 mb-6">
-                            <Layers className="w-4 h-4 text-[#12A8FF]" />
-                            <span className="text-[#12A8FF] text-xs font-bold uppercase tracking-widest">
-                                {d.enterpriseChallenge.tag}
-                            </span>
-                        </div>
                         <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-5 tracking-tight">
                             {d.enterpriseChallenge.title}
                         </h2>
@@ -138,7 +118,6 @@ export default function TalentAccelerationSection({ dict: d }: { dict: TalentAcc
                                             color === 'emerald' ? 'text-emerald-600' :
                                             'text-orange-600'
                                         }`}>{step.title}</span>
-                                        <span className="text-slate-300 text-xs font-medium">0{i + 1}</span>
                                         {i < d.processFlow.steps.length - 1 && (
                                             <div className="absolute top-[34px] left-full w-full h-0.5 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 z-0" style={{ width: 'calc(100% + 2rem)' }} />
                                         )}
@@ -149,33 +128,28 @@ export default function TalentAccelerationSection({ dict: d }: { dict: TalentAcc
                     </div>
 
                     {/* Scale & Impact - KPIs */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-5xl mx-auto mb-12 px-4">
-                        {d.scaleImpact.metrics.map((metric, i) => (
-                            <div key={i} className={`relative rounded-2xl border-2 p-5 text-center ${
-                                i < 4 ? 'bg-white border-slate-200 shadow-sm' : 'bg-gradient-to-br from-[#12A8FF]/5 to-cyan-50 border-[#12A8FF]/30'
-                            }`}>
-                                <div className={`absolute inset-x-0 top-0 h-1.5 rounded-t-xl ${
-                                    i < 4 ? 'bg-[#12A8FF]' : 'bg-gradient-to-r from-[#12A8FF] to-cyan-400'
-                                }`} />
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12 px-4">
+                        {d.scaleImpact.metrics.map((metric) => (
+                            <div key={`${metric.val}-${metric.label}`} className="relative rounded-2xl border-2 p-5 text-center bg-white border-slate-200 shadow-sm">
+                                <div className="absolute inset-x-0 top-0 h-1.5 rounded-t-xl bg-[#12A8FF]" />
                                 <div className="text-2xl lg:text-3xl font-bold text-[#0E355F] font-heading mb-2">{metric.val}</div>
                                 <div className="text-xs text-slate-500 font-medium">{metric.label}</div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Three Column Layout */}
-                    <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12 px-4">
-                        {/* Approach */}
-                        <div className="bg-white rounded-2xl border-2 border-slate-200 shadow-sm p-6 hover:shadow-md hover:border-slate-300 transition-all duration-300">
+                    {/* Approach / Execution Model / Outcome */}
+                    <div className="max-w-4xl mx-auto space-y-6 mb-12 px-4">
+                        <div className="bg-white rounded-2xl border-2 border-slate-200 shadow-sm p-6 md:p-8 hover:shadow-md hover:border-slate-300 transition-all duration-300">
                             <h3 className="text-slate-900 font-bold text-sm uppercase tracking-wide mb-3 flex items-center gap-3">
                                 <div className="w-10 h-10 rounded-xl bg-[#12A8FF]/10 flex items-center justify-center">
                                     <Target className="w-5 h-5 text-[#12A8FF]" />
                                 </div>
                                 {d.approach.title}
                             </h3>
-                            <p className="text-slate-500 text-sm leading-relaxed mb-4">{d.approach.intro}</p>
+                            <p className="text-slate-500 text-sm leading-relaxed mb-5">{d.approach.intro}</p>
                             <ul className="space-y-3">
-                                {d.approach.bullets.slice(0, 4).map((bullet, i) => (
+                                {d.approach.bullets.map((bullet, i) => (
                                     <li key={i} className="flex items-start gap-3 text-slate-600 text-sm">
                                         <CheckCircle2 className="w-4 h-4 text-[#12A8FF] shrink-0 mt-0.5" />
                                         <span>{bullet}</span>
@@ -184,91 +158,34 @@ export default function TalentAccelerationSection({ dict: d }: { dict: TalentAcc
                             </ul>
                         </div>
 
-                        {/* Execution Model */}
-                        <div className="bg-white rounded-2xl border-2 border-violet-200 shadow-sm p-6 hover:shadow-md hover:border-violet-300 transition-all duration-300">
-                            <h3 className="text-slate-900 font-bold text-sm uppercase tracking-wide mb-3 flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center">
-                                    <Rocket className="w-5 h-5 text-violet-500" />
+                        <div className="rounded-2xl border-2 border-[#12A8FF]/40 bg-gradient-to-br from-[#12A8FF]/12 to-blue-50 shadow-sm p-6 md:p-8">
+                            <h3 className="text-slate-900 font-bold text-sm uppercase tracking-wide mb-4 flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-xl bg-[#12A8FF]/15 flex items-center justify-center border border-[#12A8FF]/25">
+                                    <Rocket className="w-5 h-5 text-[#12A8FF]" />
                                 </div>
                                 {d.executionModel.title}
                             </h3>
                             <ul className="space-y-3">
                                 {d.executionModel.bullets.map((bullet, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-slate-600 text-sm">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0 mt-2" />
+                                    <li key={i} className="flex items-start gap-3 text-slate-700 text-sm">
+                                        <CheckCircle2 className="w-4 h-4 text-[#12A8FF] shrink-0 mt-0.5" />
                                         <span>{bullet}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
-                        {/* Delivery Governance */}
-                        <div className="bg-white rounded-2xl border-2 border-emerald-200 shadow-sm p-6 hover:shadow-md hover:border-emerald-300 transition-all duration-300">
-                            <h3 className="text-slate-900 font-bold text-sm uppercase tracking-wide mb-3 flex items-center gap-3">
+                        <div className="bg-white rounded-2xl border-2 border-slate-200 shadow-sm p-6 md:p-8 hover:shadow-md hover:border-slate-300 transition-all duration-300">
+                            <h3 className="text-slate-900 font-bold text-sm uppercase tracking-wide mb-4 flex items-center gap-3">
                                 <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-                                    <Shield className="w-5 h-5 text-emerald-500" />
+                                    <Flag className="w-5 h-5 text-emerald-600" />
                                 </div>
-                                {d.deliveryGovernance.title}
+                                {d.outcome.title}
                             </h3>
-                            <p className="text-slate-500 text-sm leading-relaxed mb-4">{d.deliveryGovernance.intro}</p>
                             <ul className="space-y-3">
-                                {d.deliveryGovernance.bullets.slice(0, 3).map((bullet, i) => (
+                                {d.outcome.bullets.map((bullet, i) => (
                                     <li key={i} className="flex items-start gap-3 text-slate-600 text-sm">
                                         <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                                        <span>{bullet}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Team Maturity Journey */}
-                    <div className="mb-12 px-4">
-                        <h3 className="text-slate-900 font-bold text-center text-sm uppercase tracking-wider mb-6">
-                            {d.teamMaturity.title}
-                        </h3>
-                        <div className="grid grid-cols-4 gap-5 max-w-4xl mx-auto">
-                            {d.teamMaturity.phases.map((phase, i) => (
-                                <div key={i} className={`relative rounded-xl border-2 p-5 text-center ${
-                                    i === 0 ? 'bg-blue-50 border-blue-300' :
-                                    i === 1 ? 'bg-violet-50 border-violet-300' :
-                                    i === 2 ? 'bg-emerald-50 border-emerald-300' :
-                                    'bg-cyan-50 border-cyan-300'
-                                }`}>
-                                    <div className={`w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center ${
-                                        i === 0 ? 'bg-blue-100 text-blue-600' :
-                                        i === 1 ? 'bg-violet-100 text-violet-600' :
-                                        i === 2 ? 'bg-emerald-100 text-emerald-600' :
-                                        'bg-cyan-100 text-cyan-600'
-                                    }`}>
-                                        <span className="text-xs font-bold">{phase.phase}</span>
-                                    </div>
-                                    <h4 className="text-slate-900 text-sm font-bold mb-2">{phase.title}</h4>
-                                    <p className="text-slate-500 text-xs leading-relaxed">{phase.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Business Value & Outcome */}
-                    <div className="grid lg:grid-cols-2 gap-6 max-w-4xl mx-auto px-4">
-                        <div className="bg-gradient-to-br from-[#12A8FF]/10 to-blue-50 rounded-2xl border-2 border-[#12A8FF]/40 p-6">
-                            <h3 className="text-slate-900 font-bold text-sm mb-4">{d.businessValue.title}</h3>
-                            <ul className="space-y-2">
-                                {d.businessValue.bullets.slice(0, 4).map((bullet, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-slate-600 text-sm">
-                                        <CheckCircle2 className="w-4 h-4 text-[#12A8FF] shrink-0" />
-                                        <span>{bullet}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl border-2 border-emerald-300 p-6">
-                            <h3 className="text-slate-900 font-bold text-sm mb-4">{d.outcome.title}</h3>
-                            <ul className="space-y-2">
-                                {d.outcome.bullets.slice(0, 4).map((bullet, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-slate-600 text-sm">
-                                        <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                                         <span>{bullet}</span>
                                     </li>
                                 ))}

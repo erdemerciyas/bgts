@@ -1748,90 +1748,38 @@
         "metrics": [
           { "val": "3.750+", "label": "Eğitilen Aday" },
           { "val": "65+", "label": "Özel Program" },
-          { "val": "45+", "label": "Desteklenen Kuruluş" },
-          { "val": "%92", "label": "Teslimat Elde Tutma Oranı" },
-          { "val": "%30", "label": "Daha Hızlı Ekip Ramp-Up" },
-          { "val": "%85", "label": "İç Terfi Hazırlığı" },
-          { "val": "2 Yıllık", "label": "Operasyonel Olgunluk Çerçevesi" }
+          { "val": "45+", "label": "Desteklenen Kuruluş" }
         ]
       },
       "approach": {
-        "title": "Yaklaşım",
-        "intro": "Model, anında işe alıma güvenmek yerine, yetenekleri erken aşamalarından itibaren teslimat ortamlarına entegre etmeye odaklanır.",
+        "title": "Yaklaşım Modeli",
+        "intro": "Doğrudan işe alıma güvenmek yerine, model yetenek geliştirmeye ve bunu erken bir aşamadan itibaren teslimat ortamlarına entegre etmeye odaklanır.",
         "bullets": [
           "Müşteri ile ortak aday seçimi",
-          "Yapılandırılmış eğitim ve entegrasyon programları",
+          "Yapılandırılmış eğitim ve işe alıştırma programları",
           "BGTS bünyesinde özel teslimat ekiplerinin oluşturulması",
           "Müşteri araçları, süreçleri ve çalışma yöntemleriyle uyum",
-          "Kararlı, yüksek performanslı ekiplere aşamalı gelişim",
-          "Gerekirse uzun vadeli entegrasyon için açık yol"
+          "İstikrarlı, yüksek performanslı ekiplere doğru aşamalı gelişim",
+          "Gerektiğinde uzun vadeli entegrasyon için net bir yol"
         ]
       },
       "executionModel": {
-        "title": "Yürütme Modeli",
+        "title": "Uygulama Modeli",
         "bullets": [
-          "Yetenek, yapılandırılmış bir pipeline'dan geçirilir ve süreç başında gerçek teslimat ortamlarına konuşlandırılır",
-          "Adaylar yoğun teknik ve pratik eğitimden geçer",
+          "Yetenek, yapılandırılmış bir boru hattı aracılığıyla geliştirilir ve sürecin başlarında gerçek teslimat ortamlarına yerleştirilir",
+          "Adaylar yoğun teknik ve pratik eğitimden geçerler",
           "Ekipler, deneyimli liderlik altında aktif projelere katkıda bulunur",
           "Teslimat, tanımlanmış KPI'lar ve performans takibi ile yönetilir",
-          "Ekipler, iki yıla kadar olan bir sürede operasyonel olarak olgunlaşır"
-        ]
-      },
-      "deliveryGovernance": {
-        "title": "Teslimat Yönetişimi",
-        "intro": "BGTS, teslimat tutarlılığı, operasyonel şeffaflık ve ölçülebilir ekip performansı sağlamak için yapılandırılmış yönetişim modelleri uygular.",
-        "bullets": [
-          "Tanımlanmış operasyonel KPI'lar ve raporlama yapıları",
-          "Sürekli mentorluk ve liderlik gözetimi",
-          "Yapılandırılmış geri bildirim ve performans değerlendirme döngüleri",
-          "Kurumsal uyum ve teslimat standartlarıyla uyum",
-          "Aşamalı operasyonel olgunluk ile risk azaltma"
-        ]
-      },
-      "teamMaturity": {
-        "title": "Ekip Olgunluk Yolculuğu",
-        "phases": [
-          {
-            "phase": "Aşama 01",
-            "title": "Temel",
-            "desc": "Teknik entegrasyon, teslimat yönlendirmesi ve yapılandırılmış yetenek geliştirme."
-          },
-          {
-            "phase": "Aşama 02",
-            "title": "Destekli Teslimat",
-            "desc": "Ekipler, artan operasyonel sorumlulukla kıdemli gözetim altında katkıda bulunur."
-          },
-          {
-            "phase": "Aşama 03",
-            "title": "Bağımsız Teslimat",
-            "desc": "Ekipler, kararlı performans metrikleri, teslimat sahipliği ve ölçeklenebilir kapasite ile çalışır."
-          },
-          {
-            "phase": "Aşama 04",
-            "title": "Stratejik Entegrasyon",
-            "desc": "Müşteri teslimat ekosistemleri ve kurumsal hedeflerle uzun vadeli uyum."
-          }
-        ]
-      },
-      "businessValue": {
-        "title": "Sunulan İş Değeri",
-        "intro": "Yetenek Hızlandırma Modeli, kurumsal kuruluşların işe alım bağımlılığını azaltırken operasyonel hedeflerle uyumlu, ölçeklenebilir, teslimat için hazır mühendislik yetenekleri oluşturmasını sağlar.",
-        "bullets": [
-          "Azaltılmış işe alım ve entegrasyon riski",
-          "Teslimat için hazır teknik ekiplere daha hızlı erişim",
-          "İyileştirilmiş operasyonel süreklilik",
-          "Öngörülebilir ölçekleme kapasitesi",
-          "Artırılmış uzun vadeli iş gücü sürdürülebilirliği",
-          "Kurumsal teslimat çerçeveleriyle uyum"
+          "Ekipler iki yıla kadar bir süre içinde operasyonel olarak olgunlaşır"
         ]
       },
       "outcome": {
-        "title": "Sonuç",
+        "title": "Kazanımlar",
         "bullets": [
-          "Müşteri ortamlarıyla uyumlu, tam eğitimli ve teslimat için hazır ekipler",
-          "Azaltılmış işe alım ve entegrasyon riski",
-          "Daha hızlı ve güvenilir ramp-up",
-          "Yapılandırılmış ekip geliştirme yoluyla tutarlı teslimat kalitesi",
+          "Müşteri ortamlarıyla uyumlu, tam eğitimli, teslimata hazır ekipler",
+          "Azaltılmış işe alım ve işe alıştırma riski",
+          "Daha hızlı ve daha güvenilir hazırlık süreci",
+          "Yapılandırılmış ekip gelişimi yoluyla tutarlı teslimat kalitesi",
           "Uzun vadeli sürekliliğe sahip sürdürülebilir ekip modelleri"
         ]
       }
@@ -2578,7 +2526,9 @@
     }
   },
   "careers_internship": {
+    "sectionTitle": "BGTS Staj Programı",
     "intro": "BGTS staj programı; güçlü mühendislik kültürünü deneyimlemek, gerçek proje simülasyonlarında yer almak ve sektör deneyimi kazanmak isteyen genç yeteneklere yöneliktir.",
+    "applyCta": "Programa Başvur",
     "criteriaTitle": "2026 yılı için stajyer seçiminde dikkate alınacak temel kriterler aşağıdaki gibidir:",
     "criteria": [
       "Tercihen prestijli üniversitelerin Yazılım, Bilgisayar ve Yapay Zeka Müh. bölümlerinde öğrenim görmek",

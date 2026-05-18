@@ -449,7 +449,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 | Rota | Sayfa |
 |------|-------|
 | `/{lang}/hr` | İnsan Kaynakları |
-| `/{lang}/career-paths` | Kariyer Yolları |
+| `/{lang}/career-paths` | Kariyer Yolları (anchor: `#staj-programi` — BGTS staj programı ve seçim kriterleri) |
 | `/{lang}/culture` | Çalışma Kültürü |
 | `/{lang}/learning` | Eğitim ve Gelişim |
 | `/{lang}/genc-muhendis-programi` | Genç Mühendis Programı |
@@ -752,6 +752,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.27.0 | — | **Kariyer — Staj programı ve İK içerik düzeni:** `/{lang}/career-paths` sayfasında `#staj-programi` bölümü açık (light) tema ile sayfa bütünlüğüne uyumlu hale getirildi; bölüm başlığı ve giriş metni sol kolonda, 2026 stajyer kriterleri sağ kolonda; `careers_internship` sözlüğüne `sectionTitle` ve `applyCta` (TR/EN) eklendi; tekrarlayan intro sağ kolondan kaldırıldı; başvuru CTA’sı LinkedIn şirket iş ilanlarına yönlendiriliyor. **İK / Genç Mühendis:** Yetenek Hızlandırma bileşeninde (`TalentAccelerationSection`) teslimat, ekip olgunluğu ve iş değeri alt blokları ile ilgili tip ve sözlük girdileri sadeleştirildi; `staj.jpg` görseli güncellendi. |
 | v0.26.0 | — | **i18n SEO altyapısı (canonical + hreflang):** `src/lib/seo.ts` helper'ı eklendi (`buildAlternates`, `buildOgUrl`, `ogLocale`, `SITE_URL`); tüm sayfa `layout.tsx` ve ürün `page.tsx` dosyaları static `metadata` exportundan dinamik `generateMetadata` fonksiyonuna geçirildi (32 dosya); her sayfa locale'e göre TR/EN title + description üretiyor; canonical URL'ler artık doğru locale ile eşleşiyor (`/en/about` sayfasının canonical'ı `https://bgts.com.tr/en/about`); her sayfada hreflang etiketleri (`tr`, `en`, `x-default`) Google'a iki dilli içeriği bildiriyor; `sitemap.ts` her route için hem `/tr/...` hem `/en/...` URL'lerini `alternates.languages` ile yayınlıyor; SEO yaklaşımı: URL slug'lar tek dil İngilizce kalır, metadata ve hreflang locale-aware yönetilir (kurumsal B2B standardı) |
 | v0.25.0 | — | **Navigasyon ve mobil hero düzeltmeleri:** Yazılım Geliştirme alt menüsü yeniden sıralandı (Yazılım Geliştirme Hizmetleri ilk sırada); hizmet detay sayfası sticky sidebar başlıkları sağdaki blok başlıklarıyla eşitlendi (`domain.title`); nav menüde "Telekomünikasyon" → "Telekomünikasyon & Teknoloji", "MSP & Yönetilen Hizmetler" → "MSP & AIOps" olarak güncellendi; Ürünler mega menüsü 4 kurumsal ürüne (Cortex, HCM, Praxila, MeetSense) odaklı 2x2 grid tasarımıyla yeniden kurgulandı; mobil hero slider'da içerik kırpılması ve bir sonraki section ile çakışma giderildi (`min-h-[55svh]`, üst padding, beyaz kart `mt-8` ile artık binmiyor); slide göstergeleri her ekranda slider'ın gerçek alt-merkezinde sabitlendi, desktop'ta beyaz kartın üzerine binmesi engellendi (`md:bottom-44`) |
 | v0.24.0 | — | **MSP yönetilen hizmetler kart düzeltmeleri:** KOM ve Analytics grid kartlarında sabit `h-10` başlık yüksekliğinden kaynaklanan metin çakışmaları giderildi (örn. "Servis Organizasyonu Tasarımı" başlığının altındaki liste öğeleriyle ezişmesi); başlıklar `min-h-10 leading-snug break-words` ile esnek hale getirildi |

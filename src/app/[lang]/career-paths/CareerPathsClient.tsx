@@ -18,9 +18,11 @@ type CareerPathsDict = {
     section3: { title: string; desc: string; boxTitle: string; boxDesc: string }
     section4: { title: string; desc: string; competence: string; performance: string; potential: string }
     internship: {
+        sectionTitle: string
         intro: string
         criteriaTitle: string
         criteria: string[]
+        applyCta: string
     }
 }
 
@@ -250,16 +252,25 @@ export default function CareerPathsClient({ dict: d }: { dict: CareerPathsDict }
             </section>
 
             {/* ═══════════ INTERNSHIP SECTION ═══════════ */}
-            <section id="staj-programi" className="py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 text-white">
+            <section
+                id="staj-programi"
+                className="py-20 bg-white border-t border-slate-100 scroll-mt-20"
+            >
                 <Container>
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <AnimatedDiv className="lg:w-1/2 order-2 lg:order-1">
+                        <AnimatedDiv className="lg:w-1/2 order-2 lg:order-1 w-full">
+                            <h2 className="text-3xl lg:text-4xl font-black text-slate-900 text-center lg:text-left leading-tight tracking-tight mb-5">
+                                {d.internship.sectionTitle}
+                            </h2>
+                            <p className="text-lg lg:text-xl text-slate-600 leading-relaxed text-center lg:text-left mb-8 max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                                {d.internship.intro}
+                            </p>
                             <div className="relative">
-                                <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/20 to-violet-500/20 rounded-3xl blur-xl" />
-                                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                                <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/12 to-indigo-500/12 rounded-3xl blur-xl" />
+                                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl ring-1 ring-slate-200/80">
                                     <Image
                                         src="/images/genc-muhendis/staj.jpg"
-                                        alt="BGTS Staj Programı"
+                                        alt={d.internship.sectionTitle}
                                         fill
                                         className="object-cover"
                                     />
@@ -267,28 +278,31 @@ export default function CareerPathsClient({ dict: d }: { dict: CareerPathsDict }
                             </div>
                             <div className="mt-6 text-center">
                                 <Link
-                                    href="#"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg border border-blue-500/20"
+                                    href="https://www.linkedin.com/company/bilgeadam/jobs/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all hover:scale-[1.02] shadow-md shadow-blue-600/25 ring-1 ring-blue-600/20"
                                 >
-                                    Programa Başvur <ArrowRight className="w-5 h-5 ml-2" />
+                                    {d.internship.applyCta}{" "}
+                                    <ArrowRight className="w-5 h-5 ml-2" />
                                 </Link>
                             </div>
                         </AnimatedDiv>
 
                         <AnimatedDiv className="lg:w-1/2 order-1 lg:order-2">
-                            <p className="text-lg lg:text-xl text-blue-200 leading-relaxed mb-8">
-                                {d.internship.intro}
-                            </p>
-                            <h3 className="text-xl font-bold text-white mb-4">
+                            <h3 className="text-xl font-bold text-slate-900 mb-4">
                                 {d.internship.criteriaTitle}
                             </h3>
                             <div className="space-y-3">
                                 {d.internship.criteria.map((item, i) => (
-                                    <div key={i} className="flex items-start gap-3 p-3 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-                                        <div className="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center shrink-0 mt-0.5">
+                                    <div
+                                        key={i}
+                                        className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm hover:border-slate-300/90 hover:shadow transition-[box-shadow,border-color]"
+                                    >
+                                        <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                                             <span className="text-xs font-bold">{i + 1}</span>
                                         </div>
-                                        <span className="text-blue-100 leading-relaxed">{item}</span>
+                                        <span className="text-slate-700 leading-relaxed">{item}</span>
                                     </div>
                                 ))}
                             </div>
