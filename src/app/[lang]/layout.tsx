@@ -4,11 +4,11 @@ import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import GlobalBreadcrumb from "@/components/layout/GlobalBreadcrumb";
-import { OrganizationStructuredData, WebSiteStructuredData } from "@/components/seo/StructuredData";
+import { OrganizationStructuredData, WebSiteStructuredData, LocalBusinessStructuredData } from "@/components/seo/StructuredData";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { buildAlternates, buildOgUrl, ogLocale, SITE_URL } from "@/lib/seo";
 import { getDictionary } from "@/get-dictionary";
-import type { Locale } from "@/i18n-config";
+import { i18n, type Locale } from "@/i18n-config";
 // import ChatbotWidget from "@/components/chat/ChatbotWidget"; // Temporarily disabled
 
 const inter = Inter({
@@ -56,6 +56,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: ogLocale(locale),
+      alternateLocale: i18n.locales.filter(l => l !== locale).map(l => ogLocale(l)),
       url: buildOgUrl("/", locale),
       title,
       description,
@@ -111,7 +112,10 @@ export default async function RootLayout(props: {
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/icon.png" />
+        {/* Google Search Console Verification - Replace YOUR_VERIFICATION_CODE with your actual code */}
+        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
         <OrganizationStructuredData />
+        <LocalBusinessStructuredData />
         <WebSiteStructuredData />
         <GoogleAnalytics />
       </head>

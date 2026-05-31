@@ -1,6 +1,15 @@
 import Link from "next/link"
 import { Home, Search } from "lucide-react"
 
+export const metadata = {
+  title: "404 - Sayfa Bulunamadı | BGTS",
+  description: "Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
+
 export default function NotFound() {
   return (
     <div className="flex min-h-[80vh] items-center justify-center bg-slate-50 px-6">

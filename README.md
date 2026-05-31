@@ -110,12 +110,15 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 
 ### SEO ve Performans
 - Her sayfa için özelleştirilmiş metadata (`title`, `description`, OpenGraph, Twitter Card)
-- `sitemap.ts` ile 30+ URL'lik otomatik sitemap üretimi
+- `sitemap.ts` ile 30+ URL'lik otomatik sitemap üretimi (hreflang desteği)
 - `robots.txt` arama motoru yönergeleri
-- Schema.org yapılandırılmış veri (Organization, Breadcrumb, Product JSON-LD)
-- `next/image` ile otomatik görsel optimizasyonu (WebP, lazy loading)
+- Schema.org yapılandırılmış veri (Organization, WebSite, LocalBusiness, Breadcrumb, Product, Service, FAQPage, HowTo, VideoObject JSON-LD)
+- Google Search Console doğrulama meta tag desteği
+- `next/image` ile otomatik görsel optimizasyonu (AVIF/WebP, lazy loading)
 - Güvenlik başlıkları (HSTS, X-Frame-Options, CSP, Permissions-Policy)
+- Core Web Vitals optimizasyonu (image formats, cache headers, compression)
 - Google Analytics (GA4) entegrasyonu
+- Canonical URL ve alternateLocale desteği
 
 ### Başarı Hikayeleri (Case Studies)
 - 20+ vaka çalışması — yazılım, altyapı, yönetilen hizmet ve eğitim kategorilerinde
