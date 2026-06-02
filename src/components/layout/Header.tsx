@@ -105,7 +105,8 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
                             <div
                                 key={item.name}
                                 className="relative h-full flex items-center"
-                                onMouseEnter={() => hasMegaMenu && setHoveredNav(item.id || item.name)}
+                                onMouseEnter={() => setHoveredNav(item.id || item.name)}
+                                onMouseLeave={() => { if (!hasMegaMenu) setHoveredNav(null); }}
                             >
                                 <Link
                                     // Make links language-aware
