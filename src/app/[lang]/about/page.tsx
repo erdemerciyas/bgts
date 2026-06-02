@@ -18,28 +18,10 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
 
             {/* ═══ HERO ═══ */}
             <Hero
-                title={about.hero.title}
                 subtitle={about.hero.subtitle}
                 backgroundImage="/images/headers/bgts-hakkimizda-ekip.jpg"
-                className="bg-slate-900"
+                className="bg-slate-900 min-h-[68vh]"
             />
-
-
-            {/* ═══ FLOATING STATS BAR — overlaps hero bottom ═══ */}
-            <div className="relative z-20 -mt-16 px-4 lg:px-0">
-                <Container>
-                    <AnimatedDiv
-                        className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-100 grid grid-cols-2 md:grid-cols-5 divide-x divide-slate-100"
-                    >
-                        {about.stats.map((s: any, i: number) => (
-                            <div key={i} className="py-6 md:py-8 px-4 md:px-6 text-center group hover:bg-blue-50/60 transition-colors first:rounded-l-2xl last:rounded-r-2xl">
-                                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-600 group-hover:scale-110 transition-transform inline-block">{s.val}<span className="text-sm sm:text-lg font-bold">{s.unit}</span></div>
-                                <div className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest mt-1.5 sm:mt-2">{s.label}</div>
-                            </div>
-                        ))}
-                    </AnimatedDiv>
-                </Container>
-            </div>
 
 
             {/* ═══ PEOPLE FIRST — Modern values section ═══ */}

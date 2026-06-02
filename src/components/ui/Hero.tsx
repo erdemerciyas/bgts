@@ -11,8 +11,8 @@ import { Heading, Text } from "@/components/ui/Typography"
 import { usePathname } from "next/navigation"
 
 interface HeroProps {
-    title: string
-    subtitle: string
+    title?: string
+    subtitle?: string
     badge?: string
     ctaText?: string
     ctaLink?: string
@@ -174,20 +174,22 @@ export default function Hero({
             <Container className="relative z-10 text-center">
 
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 }}
-                >
-                    <Heading
-                        variant="h1"
-                        className={cn(
-                            "max-w-4xl mx-auto mb-6 text-4xl md:text-5xl leading-tight",
-                            (videoSrc || backgroundImage) && "text-white drop-shadow-md"
-                        )}>
-                        {title}
-                    </Heading>
-                </motion.div>
+                    {title && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                        >
+                            <Heading
+                                variant="h1"
+                                className={cn(
+                                    "max-w-4xl mx-auto mb-6 text-4xl md:text-5xl leading-tight",
+                                    (videoSrc || backgroundImage) && "text-white drop-shadow-md"
+                                )}>
+                                {title}
+                            </Heading>
+                        </motion.div>
+                    )}
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -198,7 +200,9 @@ export default function Hero({
                         variant="large"
                         className={cn(
                             "max-w-2xl mx-auto mb-10",
-                            (videoSrc || backgroundImage) ? "text-slate-100/90" : "text-slate-600"
+                            (videoSrc || backgroundImage)
+                                ? "text-white text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-lg max-w-3xl"
+                                : "text-slate-600"
                         )}>
                         {subtitle}
                     </Text>
