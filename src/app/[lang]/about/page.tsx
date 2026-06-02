@@ -1,7 +1,6 @@
 import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
-import Image from "next/image"
 import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 import { LocationsMap } from "./LocationsMap"
 
@@ -125,16 +124,6 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
                         </div>
                     </AnimatedDiv>
 
-                    {/* Image — full natural display */}
-                    <AnimatedDiv delay={0.2} className="mt-14 lg:mt-20">
-                        <Image
-                            src="/images/about/people-first.png"
-                            alt="BGTS Team"
-                            width={1433}
-                            height={736}
-                            className="w-full h-auto"
-                        />
-                    </AnimatedDiv>
                 </Container>
             </Section>
 

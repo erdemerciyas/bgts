@@ -33,7 +33,7 @@ export const NAV_ITEMS = [
     { name: "SEKTÖRLER", href: "#", id: "industries" },
     { name: "ÜRÜNLER", href: "#", id: "products" },
     // { name: "YETENEK GELİŞİM PROGRAMI", href: "/genc-muhendis-programi", id: "talent" },
-    { name: "YETENEK GELİŞİM MODELİ", href: "/yetenek-gelisim-modeli", id: "talent-model" },
+    // { name: "YETENEK GELİŞİM MODELİ", href: "/yetenek-gelisim-modeli", id: "talent-model" },
     { name: "BİLGİ MERKEZİ", href: "#", id: "resources" },
     { name: "YERİNİ AL", href: "/social-contribution", id: "careers" },
     { name: "HAKKIMIZDA", href: "/about", id: "about" },
