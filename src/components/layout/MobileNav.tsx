@@ -117,21 +117,26 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
         }
       ]
     },
+    // {
+    //   name: t("talent", "name", "Yetenek Gelişim Programı", "Talent Development Program"),
+    //   id: "talent",
+    //   href: p("/genc-muhendis-programi"),
+    //   subGroups: [
+    //     {
+    //       heading: t("talent", "programs", "Programlar", "Programs"),
+    //       links: [
+    //         { title: t("talent", "software", "Yazılımcı Yetiştirme", "Software Developer Training"), href: p("/genc-muhendis-programi#track-software"), icon: Code },
+    //         { title: t("talent", "infrastructure", "Altyapı Teknolojileri", "Infrastructure Technologies"), href: p("/genc-muhendis-programi#track-infrastructure"), icon: Server },
+    //         { title: t("talent", "test", "Test ve Analist", "Test & Analyst"), href: p("/genc-muhendis-programi#track-test"), icon: BarChart3 },
+    //         { title: t("talent", "apply", "Başvuru Yap", "Apply Now"), href: p("/genc-muhendis-programi#application-form"), icon: GraduationCap },
+    //       ]
+    //     }
+    //   ]
+    // },
     {
-      name: t("talent", "name", "Yetenek Gelişim Programı", "Talent Development Program"),
-      id: "talent",
-      href: p("/genc-muhendis-programi"),
-      subGroups: [
-        {
-          heading: t("talent", "programs", "Programlar", "Programs"),
-          links: [
-            { title: t("talent", "software", "Yazılımcı Yetiştirme", "Software Developer Training"), href: p("/genc-muhendis-programi#track-software"), icon: Code },
-            { title: t("talent", "infrastructure", "Altyapı Teknolojileri", "Infrastructure Technologies"), href: p("/genc-muhendis-programi#track-infrastructure"), icon: Server },
-            { title: t("talent", "test", "Test ve Analist", "Test & Analyst"), href: p("/genc-muhendis-programi#track-test"), icon: BarChart3 },
-            { title: t("talent", "apply", "Başvuru Yap", "Apply Now"), href: p("/genc-muhendis-programi#application-form"), icon: GraduationCap },
-          ]
-        }
-      ]
+      name: t("talentModel", "name", "Yetenek Gelişim Modeli", "Talent Development Model"),
+      id: "talent-model",
+      href: p("/yetenek-gelisim-modeli"),
     },
     {
       name: t("resources", "name", "Bilgi Merkezi", "Resources"),

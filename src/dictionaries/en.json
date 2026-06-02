@@ -201,7 +201,7 @@
     },
     "peopleFirst": {
       "badge": "Our Philosophy",
-      "heading": "People First, Always",
+      "heading": "Our Values",
       "subtitle": "The quality of what we deliver is inseparable from the quality of how we work together.",
       "principles": [
         {
@@ -1719,19 +1719,19 @@
           },
           {
             "key": "train",
-            "title": "Train",
+            "title": "Nurture",
             "businessObj": "Accelerate workforce readiness",
             "operationalValue": "Reduces onboarding and adaptation time"
           },
           {
             "key": "deploy",
-            "title": "Deploy",
+            "title": "Position",
             "businessObj": "Enable immediate operational contribution",
             "operationalValue": "Improves delivery continuity and scalability"
           },
           {
             "key": "operate",
-            "title": "Operate",
+            "title": "Manage",
             "businessObj": "Ensure stable delivery performance",
             "operationalValue": "Creates measurable and sustainable operational maturity"
           },
@@ -1826,6 +1826,9 @@
       "infrastructure": "Infrastructure Technologies",
       "test": "Test & Analyst",
       "apply": "Apply Now"
+    },
+    "talentModel": {
+      "name": "Talent Development Model"
     },
     "resources": {
       "name": "Resources",
@@ -3177,6 +3180,7 @@
     "about": "About Us",
     "hr": "Careers",
     "genc-muhendis-programi": "Young Engineers Program",
+    "yetenek-gelisim-modeli": "Talent Development Model",
     "software-development": "Software Development",
     "managed-services": "Managed Services",
     "devops": "DevOps",

@@ -55,11 +55,8 @@ export function LocationsMap({ lang = "tr", dict }: { lang?: string; dict?: any 
 
             <Container className="relative z-10">
                 <AnimatedDiv className="mb-10">
-                    <span className="text-cyan-400 font-bold tracking-widest uppercase text-sm mb-3 block">
-                        {lang === "en" ? "Global Presence" : "Küresel Varlık"}
-                    </span>
                     <Heading variant="h2" className="mb-4 !text-3xl md:!text-4xl !font-bold text-white">
-                        {lang === "en" ? "Locations" : "Konumlar"}
+                        {lang === "en" ? "Our Offices" : "Ofislerimiz"}
                     </Heading>
                     <Text className="text-slate-400 text-lg max-w-2xl">
                         {lang === "en" 

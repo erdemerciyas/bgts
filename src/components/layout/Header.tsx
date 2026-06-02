@@ -20,7 +20,7 @@ const MegaMenus = dynamic(() => import('./header/MegaMenus').then(mod => ({
             services: mod.ServicesMenu,
             industries: mod.IndustriesMenu,
             products: mod.ProductsMenu,
-            talent: mod.TalentMenu,
+            // talent: mod.TalentMenu,
             resources: mod.ResourcesMenu,
             careers: mod.CareersMenu,
         }
@@ -45,6 +45,7 @@ type MobileNavDict = {
     industries: Record<string, string>
     products: Record<string, string>
     talent: Record<string, string>
+    talentModel: Record<string, string>
     resources: Record<string, string>
     careers: Record<string, string>
     quickLinks: Record<string, string>
@@ -98,11 +99,13 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
                     </Link>
 
                     <nav className="hidden lg:flex items-center h-full gap-4 xl:gap-6 flex-1 justify-start" role="navigation" aria-label="Ana navigasyon">
-                        {translatedNavItems.map((item) => (
+                        {translatedNavItems.map((item) => {
+                            const hasMegaMenu = ["services", "industries", "products", /* "talent", */ "resources", "careers"].includes(item.id || "");
+                            return (
                             <div
                                 key={item.name}
                                 className="relative h-full flex items-center"
-                                onMouseEnter={() => setHoveredNav(item.id || item.name)}
+                                onMouseEnter={() => hasMegaMenu && setHoveredNav(item.id || item.name)}
                             >
                                 <Link
                                     // Make links language-aware
@@ -117,16 +120,16 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
                                         textColorClass,
                                         hoveredNav === (item.id || item.name) ? (isTransparent ? "text-corporate-accent border-corporate-accent opacity-100" : "text-corporate-secondary border-corporate-secondary") : ""
                                     )}
-                                    aria-haspopup={["services", "industries", "products", "talent", "resources", "careers"].includes(item.id || "") ? "true" : undefined}
+                                    aria-haspopup={hasMegaMenu ? "true" : undefined}
                                     aria-expanded={hoveredNav === (item.id || item.name)}
                                 >
                                     {item.name}
-                                    {(["services", "industries", "products", "talent", "resources", "careers"].includes(item.id || "")) && (
+                                    {hasMegaMenu && (
                                         <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-200", hoveredNav === (item.id || item.name) ? "rotate-180" : "")} aria-hidden="true" />
                                     )}
                                 </Link>
                             </div>
-                        ))}
+                        )})}
                     </nav>
 
                     <div className="hidden lg:flex items-center gap-4 ml-auto">

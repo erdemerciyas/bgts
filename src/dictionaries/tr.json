@@ -201,7 +201,7 @@
     },
     "peopleFirst": {
       "badge": "Felsefemiz",
-      "heading": "İnsan Her Zaman Önce",
+      "heading": "Değerlerimiz",
       "subtitle": "Sunduğumuz işin kalitesi, birlikte çalışma biçimimizin kalitesinden ayrı düşünülemez.",
       "principles": [
         {
@@ -1719,25 +1719,25 @@
           },
           {
             "key": "train",
-            "title": "Eğit",
+            "title": "Yetiştir",
             "businessObj": "İş gücü hazırlığını hızlandırın",
             "operationalValue": "Entegrasyon ve adaptasyon süresini azaltır"
           },
           {
             "key": "deploy",
-            "title": "Konuşlandır",
+            "title": "Konumlandır",
             "businessObj": "Anında operasyonel katkı sağlayın",
             "operationalValue": "Teslimat sürekliliğini ve ölçeklenebilirliği artırır"
           },
           {
             "key": "operate",
-            "title": "Çalıştır",
+            "title": "Yönet",
             "businessObj": "Kararlı teslimat performansı sağlayın",
             "operationalValue": "Ölçülebilir ve sürdürülebilir operasyonel olgunluk oluşturur"
           },
           {
             "key": "transfer",
-            "title": "Devret",
+            "title": "Aktar",
             "businessObj": "Uzun vadeli iş gücü entegrasyonunu destekleyin",
             "operationalValue": "Sürdürülebilir müşteri tarafı yetenek büyümesi yaratır"
           }
@@ -1826,6 +1826,9 @@
       "infrastructure": "Altyapı Teknolojileri",
       "test": "Test ve Analist",
       "apply": "Başvuru Yap"
+    },
+    "talentModel": {
+      "name": "Yetenek Gelişim Modeli"
     },
     "resources": {
       "name": "Bilgi Merkezi",
@@ -3203,5 +3206,10 @@
     "social-contribution": "Toplumsal Katkı",
     "retail": "Perakende",
     "telecommunications": "Telekomünikasyon"
+  },
+  "breadcrumb": {
+    "home": "Ana Sayfa",
+    "genc-muhendis-programi": "Genç Mühendis Programı",
+    "yetenek-gelisim-modeli": "Yetenek Gelişim Modeli"
   }
 }
