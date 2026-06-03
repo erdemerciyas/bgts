@@ -1397,7 +1397,7 @@
         "title": "Ankara Ofisi",
         "address": "Bilkent Cyberpark",
         "mapUrl": "https://maps.google.com/?q=Bilkent+Cyberpark",
-        "image": "/images/contact/itu-ari3.jpg"
+        "image": "/images/contact/bilkent-cyberpark.jpg"
       }
     ],
     "form": {
@@ -2534,12 +2534,12 @@
     "applyCta": "Programa Başvur",
     "criteriaTitle": "2026 yılı için stajyer seçiminde dikkate alınacak temel kriterler aşağıdaki gibidir:",
     "criteria": [
-      "Tercihen prestijli üniversitelerin Yazılım, Bilgisayar ve Yapay Zeka Müh. bölümlerinde öğrenim görmek",
+      "Tercihen üniversitelerin Yazılım, Bilgisayar ve Yapay Zeka Müh. bölümlerinde öğrenim görmek",
       "3. veya 4. sınıf öğrencisi olmak",
       "Genel not ortalamasının (GPA) en az 3.50 olması",
       "Üniversite yerleşme sıralamasının ilk 100.000 içerisinde yer alması",
       "Vakıf üniversitesinde okuyan öğrencilerin burs oranının %100 olması",
-      "Zorunlu stajı bulunmak (gönüllü stajyer alımları için GMY onayı gereklidir)",
+      "Zorunlu stajı bulunmak",
       "Tercihen daha önce proje (github) ya da staj tecrübesi olması",
       "Tercihen daha önce BGTS bünyesinde staj yapmamış olmak"
     ]

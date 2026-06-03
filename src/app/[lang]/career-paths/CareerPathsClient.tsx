@@ -278,7 +278,7 @@ export default function CareerPathsClient({ dict: d }: { dict: CareerPathsDict }
                             </div>
                             <div className="mt-6 text-center">
                                 <Link
-                                    href="https://www.linkedin.com/company/bilgeadam/jobs/"
+                                    href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=1C_AnU3vWE2CLmh88-G621dwCQF5et1CuSvVsbV3b2ZUMDRYTkdFSVlNOTA1V1c3NjhIQTRXNEJNTi4u"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all hover:scale-[1.02] shadow-md shadow-blue-600/25 ring-1 ring-blue-600/20"

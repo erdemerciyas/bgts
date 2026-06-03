@@ -1397,7 +1397,7 @@
         "title": "Ankara Office",
         "address": "Bilkent Cyberpark",
         "mapUrl": "https://maps.google.com/?q=Bilkent+Cyberpark",
-        "image": "/images/contact/itu-ari3.jpg"
+        "image": "/images/contact/bilkent-cyberpark.jpg"
       }
     ],
     "form": {
@@ -2534,12 +2534,12 @@
     "applyCta": "Apply to the program",
     "criteriaTitle": "The main criteria to be considered for intern selection for 2026 are as follows:",
     "criteria": [
-      "Preferably studying at prestigious universities in Software, Computer and AI Engineering departments",
+      "Preferably studying at universities in Software, Computer and AI Engineering departments",
       "Being a 3rd or 4th year student",
       "Having a minimum GPA of 3.50",
       "Being ranked within the top 100,000 in university placement ranking",
       "Having 100% scholarship status for students at foundation universities",
-      "Having mandatory internship (GMY approval required for voluntary interns)",
+      "Having mandatory internship",
       "Preferably having previous project (github) or internship experience",
       "Preferably not having previously interned at BGTS"
     ]
