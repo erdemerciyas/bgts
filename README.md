@@ -160,7 +160,7 @@ bgts-web/
 │   │   │   └── application/    # İK başvuru + CV yükleme API
 │   │   │
 │   │   ├── [lang]/             # 🌐 i18n dinamik rota segmenti (tr/en)
-│   │   │   ├── about/          # Hakkımızda (+ LocationsMap bileşeni)
+│   │   │   ├── about/          # Hakkımızda (+ AboutValuesSection, LocationsMap)
 │   │   │   ├── contact/        # İletişim
 │   │   │   ├── culture/        # Çalışma Kültürü
 │   │   │   ├── career-paths/   # Kariyer Yolları
@@ -410,7 +410,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 | Rota | Sayfa | Açıklama |
 |------|-------|----------|
 | `/{lang}` | Ana Sayfa | Hero slider, hizmetler, sektörler, teslimat modelleri |
-| `/{lang}/about` | Hakkımızda | Şirket tanıtımı, lokasyon haritası |
+| `/{lang}/about` | Hakkımızda | Hero, Değerlerimiz bölümü, ofis haritası |
 | `/{lang}/contact` | İletişim | Premium tasarım iletişim formu, ofis bilgileri |
 | `/{lang}/partnerships` | İş Ortakları | Stratejik iş ortaklıkları |
 | `/{lang}/social-contribution` | Sürdürülebilir Değer | Kolaj fotoğraflı sosyal sorumluluk |
@@ -755,6 +755,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.32.0 | — | **Hakkımızda — Değerlerimiz ve Ofislerimiz revizyonu:** Değerlerimiz bloğu `AboutValuesSection.tsx` client bileşenine taşındı; tam genişlikte yığılmış paneller, büyük tipografi (`h3` + `bodyLg`), kurumsal renk token'ları ve arka plan vektör geometrisi ile premium editorial düzen; fotoğraf kullanılmıyor, "Felsefemiz" badge kaldırıldı, sözlük metinleri tam uzunlukta korunuyor; `.cursor/skills/bgts-about-values/` tasarım skill paketi eklendi. **Hero başlık:** "Güçlü Mühendislik." / "Sürdürülebilir Başarı." iki satırda render (`\n` + `<br />`, TR/EN). **Ofislerimiz:** Hizmet Noktaları bölümü tamamen kaldırıldı (harita pinleri, alt liste, `deliveryCenters` verisi); yalnızca ofis pinleri ve ofis kartları kaldı; açıklama metni sadeleştirildi. |
 | v0.31.0 | — | **İletişim sayfası Ankara ofisi görseli:** Ankara ofisi için Bilkent Cyberpark görseli (`bilkent-cyberpark.jpg`) eklendi; TR/EN sözlüklerde Ankara ofis görseli `itu-ari3.jpg` → `bilkent-cyberpark.jpg` olarak güncellendi. |
 | v0.30.0 | — | **Hakkımızda hero alanı ana sayfa slider formatına geçiş:** Hero bileşeni yerine ana sayfadaki HeroSlider ile aynı görsel formatta özel hero bölümü oluşturuldu; sola yaslı içerik düzeni (`max-w-4xl` başlık, `max-w-2xl` alt metin); çift katmanlı gradient overlay (`from-slate-950/90 via-slate-900/60` + `from-slate-950 via-transparent`); yükseklik `min-h-[55svh] md:h-[75vh] md:min-h-[500px]`; tipografi: başlık `text-3xl sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-2xl`, alt metin `text-base md:text-xl font-light drop-shadow-lg`; yeni içerik: "Güçlü Mühendislik. Sürdürülebilir Başarı." / "30 yılı aşkın deneyimimiz ve uzman ekiplerimizle teknoloji projelerini güvenle hayata geçiriyoruz."; Hero bileşeni import'u kaldırıldı, `next/image` ile doğrudan arka plan görsel yönetimi. |
 | v0.29.0 | — | **Hakkımızda hero alanı sadeleştirme:** Hero başlığı kaldırılarak yalnızca tek paragraf metin bırakıldı ("Güçlü Mühendislik Kültürümüz, Sektör Uzmanlığımız ve Deneyimli Ekiplerimizle Teknoloji Yolculuğunuza Değer Katıyoruz"); kayan istatistik barı (30 Yıl, 3000+ Proje, 14 Ülke, 850+ Uzman, 100+ Partner) tamamen kaldırıldı; hero yüksekliği `min-h-[68vh]` olarak ayarlandı; hero alt yazı okunabilirliği artırıldı (`text-xl md:text-2xl lg:text-3xl`, `font-semibold`, `drop-shadow-lg`, `max-w-3xl`, tam beyaz); Hero bileşeninde `title` ve `subtitle` prop'ları opsiyonel hale getirildi, başlık yoksa render atlanıyor; TR/EN sözlük metinleri güncellendi. |

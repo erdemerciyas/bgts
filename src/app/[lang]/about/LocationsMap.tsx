@@ -19,24 +19,6 @@ const offices = [
     { id: "amsterdam", city: "Amsterdam", country: "Hollanda", address: "Gustav Mahlerplein 2, 1082 MA, Amsterdam (Zuidas)", email: "info-nl@bgts.com", phone: "+31 20 3691184", x: 46.32, y: 20.22, type: "office" as const, isCentral: false },
 ]
 
-const deliveryCenters = [
-    { id: "polonya", city: "Polonya", x: 51.92, y: 19.71 },
-    { id: "macaristan", city: "Macaristan", x: 52.42, y: 22.51 },
-    { id: "sirbistan", city: "Sırbistan", x: 53.62, y: 23.51 },
-    { id: "hindistan", city: "Hindistan", x: 71.12, y: 49.61 },
-    { id: "kirgizistan", city: "Kırgızistan", x: 68.3, y: 29.21 },
-    { id: "ozbekistan", city: "Özbekistan", x: 65.5, y: 28.41 },
-    { id: "azerbaycan", city: "Azerbaycan", x: 62.12, y: 29.81 },
-    { id: "gurcistan", city: "Gürcistan", x: 60.82, y: 27.41 },
-    { id: "estonya", city: "Estonya", x: 53.72, y: 17.11 },
-    { id: "cekya", city: "Çekya", x: 49.52, y: 20.11 },
-    { id: "avusturya", city: "Avusturya", x: 50.12, y: 22.11 },
-    { id: "arnavutluk", city: "Arnavutluk", x: 52.82, y: 26.31 },
-    { id: "bulgaristan", city: "Bulgaristan", x: 54.62, y: 25.51 },
-    { id: "ispanya", city: "İspanya", x: 44.12, y: 27.11 },
-    { id: "romanya", city: "Romanya", x: 54.42, y: 22.11 },
-]
-
 export function LocationsMap({ lang = "tr", dict }: { lang?: string; dict?: any }) {
     const [activeId, setActiveId] = useState<string | null>(null)
     const cardContainerRef = useRef<HTMLDivElement>(null)
@@ -59,9 +41,9 @@ export function LocationsMap({ lang = "tr", dict }: { lang?: string; dict?: any 
                         {lang === "en" ? "Our Offices" : "Ofislerimiz"}
                     </Heading>
                     <Text className="text-slate-400 text-lg max-w-2xl">
-                        {lang === "en" 
-                            ? "BGTS has a total of 8 offices in the UK, Europe, and Turkey. In addition to these offices, we have delivery centers in many strategic locations."
-                            : "BGTS'in İngiltere, Avrupa ve Türkiye'de toplam 8 ofisi bulunmaktadır. Bu ofislere ek olarak, birçok stratejik konumda hizmet noktalarımız yer almaktadır."}
+                        {lang === "en"
+                            ? "BGTS has offices across the UK, Europe, and Turkey."
+                            : "BGTS'in İngiltere, Avrupa ve Türkiye'de ofisleri bulunmaktadır."}
                     </Text>
                 </AnimatedDiv>
 
@@ -106,31 +88,6 @@ export function LocationsMap({ lang = "tr", dict }: { lang?: string; dict?: any 
                         </button>
                     ))}
 
-                    {/* Delivery Center Pins */}
-                    {deliveryCenters.map((dc) => (
-                        <button
-                            key={dc.id}
-                            onClick={() => setActiveId(dc.id)}
-                            className={`absolute group cursor-pointer ${activeId === dc.id ? 'z-40' : 'z-10 hover:z-50'}`}
-                            style={{ left: `${dc.x}%`, top: `${dc.y}%`, transform: "translate(-50%, -50%)" }}
-                            aria-label={dc.city}
-                        >
-                            {activeId === dc.id && (
-                                <span className="absolute inset-0 w-6 h-6 -ml-1 -mt-1 rounded-full bg-cyan-400/30 animate-ping" />
-                            )}
-                            <span className={`block w-0 h-0 border-l-[6px] border-r-[6px] border-b-[10px] border-l-transparent border-r-transparent transition-all duration-300 ${activeId === dc.id
-                                ? "border-b-cyan-400 scale-150"
-                                : "border-b-white/70 group-hover:border-b-cyan-400 group-hover:scale-125"
-                                }`} />
-                            {/* Tooltip */}
-                            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-2 bg-slate-900/95 border border-slate-600 backdrop-blur-md rounded-lg text-xs text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">
-                                <span className="font-bold">{dc.city}</span>
-                                <br />
-                                <span className="text-slate-400">{lang === "en" ? "Delivery Center" : "Hizmet Noktası"}</span>
-                            </span>
-                        </button>
-                    ))}
-
                     {/* Office Cards Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 z-20">
                         <div className="bg-gradient-to-t from-[#0B1628] via-[#0B1628]/90 to-transparent pt-16 pb-4 px-4">
@@ -170,26 +127,8 @@ export function LocationsMap({ lang = "tr", dict }: { lang?: string; dict?: any 
                         </div>
                     </div>
                 </FadeIn>
-
-                {/* Delivery Center List */}
-                <div className="mt-6 flex flex-wrap gap-3">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mr-2 self-center">
-                        {lang === "en" ? "Delivery Centers:" : "Hizmet Noktaları:"}
-                    </span>
-                    {deliveryCenters.map((dc) => (
-                        <button
-                            key={dc.id}
-                            onClick={() => setActiveId(dc.id)}
-                            className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 ${activeId === dc.id
-                                ? "bg-cyan-500/20 border-cyan-500/50 text-cyan-300"
-                                : "bg-slate-800/50 border-slate-700/50 text-slate-400 hover:border-slate-500 hover:text-slate-300"
-                                }`}
-                        >
-                            {dc.city}
-                        </button>
-                    ))}
-                </div>
             </Container>
         </Section>
     )
 }
+
