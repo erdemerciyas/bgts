@@ -160,7 +160,7 @@ bgts-web/
 │   │   │   └── application/    # İK başvuru + CV yükleme API
 │   │   │
 │   │   ├── [lang]/             # 🌐 i18n dinamik rota segmenti (tr/en)
-│   │   │   ├── about/          # Hakkımızda (+ AboutStatsSection, AboutValuesSection, LocationsMap)
+│   │   │   ├── about/          # Hakkımızda (+ AboutStatsSection, AboutValuesSection, AboutPartnersSection, AboutCertificationsSection, LocationsMap)
 │   │   │   ├── contact/        # İletişim
 │   │   │   ├── culture/        # Çalışma Kültürü
 │   │   │   ├── career-paths/   # Kariyer Yolları
@@ -410,7 +410,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 | Rota | Sayfa | Açıklama |
 |------|-------|----------|
 | `/{lang}` | Ana Sayfa | Hero slider, hizmetler, sektörler, teslimat modelleri |
-| `/{lang}/about` | Hakkımızda | Hero, Sayılarla BGTS banner kartı, Değerlerimiz bölümü, ofis haritası |
+| `/{lang}/about` | Hakkımızda | Hero, Sayılarla BGTS banner kartı, Değerlerimiz, iş ortaklıkları, sertifikasyonlar, ofis haritası |
 | `/{lang}/contact` | İletişim | Premium tasarım iletişim formu, ofis bilgileri |
 | `/{lang}/partnerships` | İş Ortakları | Stratejik iş ortaklıkları |
 | `/{lang}/social-contribution` | Sürdürülebilir Değer | Kolaj fotoğraflı sosyal sorumluluk |
@@ -755,6 +755,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.34.0 | — | **Hakkımızda — İş Ortaklıkları ve Sertifikasyonlar geri eklendi:** Değerlerimiz ile ofis haritası arasına eski about sayfasındaki iki bölüm yeniden yerleştirildi; `AboutPartnersSection.tsx` (koyu arka plan, 9 partner logosu grid), `AboutCertificationsSection.tsx` (açık arka plan, 6 ISO sertifikası + etiketler); mevcut `about.partners` ve `about.certifications` sözlük anahtarları kullanılıyor (TR/EN). |
 | v0.33.0 | — | **Hakkımızda — Sayılarla BGTS banner kartı:** Hero ile Değerlerimiz arasına `AboutStatsSection.tsx` eklendi; hero altına taşan (`-mt-14 md:-mt-24`) tek parça bar banner card (gradient üst şerit, kurumsal vektör geometri, `divide-x` istatistik barı); 5 metrik: 30+ yıllık deneyim, 2.000+ çalışan, 1.400+ mühendis, 1.500+ tamamlanan proje, 50+ yetenek gelişim programı; `about.byNumbers` sözlük anahtarı (TR/EN). **Hero başlık:** "Hakkımızda" / "About Us" olarak sadeleştirildi. |
 | v0.32.0 | — | **Hakkımızda — Değerlerimiz ve Ofislerimiz revizyonu:** Değerlerimiz bloğu `AboutValuesSection.tsx` client bileşenine taşındı; tam genişlikte yığılmış paneller, büyük tipografi (`h3` + `bodyLg`), kurumsal renk token'ları ve arka plan vektör geometrisi ile premium editorial düzen; fotoğraf kullanılmıyor, "Felsefemiz" badge kaldırıldı, sözlük metinleri tam uzunlukta korunuyor; `.cursor/skills/bgts-about-values/` tasarım skill paketi eklendi. **Hero başlık:** "Güçlü Mühendislik." / "Sürdürülebilir Başarı." iki satırda render (`\n` + `<br />`, TR/EN). **Ofislerimiz:** Hizmet Noktaları bölümü tamamen kaldırıldı (harita pinleri, alt liste, `deliveryCenters` verisi); yalnızca ofis pinleri ve ofis kartları kaldı; açıklama metni sadeleştirildi. |
 | v0.31.0 | — | **İletişim sayfası Ankara ofisi görseli:** Ankara ofisi için Bilkent Cyberpark görseli (`bilkent-cyberpark.jpg`) eklendi; TR/EN sözlüklerde Ankara ofis görseli `itu-ari3.jpg` → `bilkent-cyberpark.jpg` olarak güncellendi. |

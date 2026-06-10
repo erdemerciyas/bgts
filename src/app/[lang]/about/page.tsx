@@ -1,5 +1,7 @@
 import Image from "next/image"
 import { Container } from "@/components/ui/Container"
+import { AboutCertificationsSection } from "./AboutCertificationsSection"
+import { AboutPartnersSection } from "./AboutPartnersSection"
 import { AboutStatsSection } from "./AboutStatsSection"
 import { AboutValuesSection } from "./AboutValuesSection"
 import { LocationsMap } from "./LocationsMap"
@@ -56,6 +58,9 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
 
             <AboutValuesSection peopleFirst={about.peopleFirst} />
 
+            <AboutPartnersSection partners={about.partners} />
+
+            <AboutCertificationsSection certifications={about.certifications} />
 
             {/* ═══ KONUMLAR — Interactive Map ═══ */}
             <LocationsMap lang={lang} dict={dict} />
