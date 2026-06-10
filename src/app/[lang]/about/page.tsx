@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Container } from "@/components/ui/Container"
+import { AboutStatsSection } from "./AboutStatsSection"
 import { AboutValuesSection } from "./AboutValuesSection"
 import { LocationsMap } from "./LocationsMap"
 
@@ -50,6 +51,8 @@ export default async function AboutPage(props: { params: Promise<{ lang: string 
                 </Container>
             </div>
 
+
+            <AboutStatsSection byNumbers={about.byNumbers} />
 
             <AboutValuesSection peopleFirst={about.peopleFirst} />
 

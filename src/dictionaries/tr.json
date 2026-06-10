@@ -148,8 +148,19 @@
   },
   "about": {
     "hero": {
-      "title": "Güçlü Mühendislik.\nSürdürülebilir Başarı.",
+      "title": "Hakkımızda",
       "subtitle": "30 yılı aşkın deneyimimiz ve uzman ekiplerimizle teknoloji projelerini güvenle hayata geçiriyoruz."
+    },
+    "byNumbers": {
+      "heading": "Sayılarla BGTS",
+      "subtitle": "Mühendislik odaklı yaklaşım, güçlü ekipler ve gelişen bir teknoloji ekosistemi.",
+      "items": [
+        { "val": "30+", "label": "Yıllık Deneyim" },
+        { "val": "2.000+", "label": "Çalışan" },
+        { "val": "1.400+", "label": "Mühendis" },
+        { "val": "1.500+", "label": "Tamamlanan Proje" },
+        { "val": "50+", "label": "Yetenek Gelişim Programı" }
+      ]
     },
     "stats": [
       {

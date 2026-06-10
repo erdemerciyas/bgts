@@ -148,8 +148,19 @@
   },
   "about": {
     "hero": {
-      "title": "Strong Engineering.\nSustainable Success.",
+      "title": "About Us",
       "subtitle": "With over 30 years of experience and expert teams, we confidently deliver technology projects."
+    },
+    "byNumbers": {
+      "heading": "BGTS in Numbers",
+      "subtitle": "An engineering-focused approach, strong teams, and a growing technology ecosystem.",
+      "items": [
+        { "val": "30+", "label": "Years of Experience" },
+        { "val": "2,000+", "label": "Employees" },
+        { "val": "1,400+", "label": "Engineers" },
+        { "val": "1,500+", "label": "Completed Projects" },
+        { "val": "50+", "label": "Talent Development Programs" }
+      ]
     },
     "stats": [
       {
