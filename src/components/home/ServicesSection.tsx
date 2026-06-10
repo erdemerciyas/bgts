@@ -67,7 +67,7 @@ export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?
                             <div className={cn("absolute inset-0 pointer-events-none", service.theme === "dark" ? "bg-[#0A1628]/80" : "bg-corporate-dark/80")}></div>
 
                             {/* Decorative Blur */}
-                            <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/5 blur-3xl rounded-full group-hover:bg-white/10 transition-colors duration-700"></div>
+                            <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/5 blur-3xl rounded-full group-hover:bg-white/10 transition-colors duration-700 pointer-events-none"></div>
 
                             <div className="relative z-20">
                                 <Heading variant="h3" className="mb-6 text-white font-sans">{service.title}</Heading>
