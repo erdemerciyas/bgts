@@ -13,7 +13,7 @@ export async function generateMetadata({
   const locale = lang as Locale;
   const isTr = locale === "tr";
 
-  const title = isTr ? "İş Ortakları | BGTS" : "Partnerships | BGTS";
+  const title = isTr ? "İş Ortakları | BGTS" : "Business Partnerships | BGTS";
   const description = isTr
     ? "BGTS iş ortaklarını tanıyın. Microsoft, AWS ve daha fazlası ile güçlü teknoloji çözümleri sunuyoruz."
     : "Meet BGTS partners. We deliver powerful technology solutions with Microsoft, AWS, and many more.";

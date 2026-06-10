@@ -15,8 +15,8 @@ export async function generateMetadata({
 
   const title = isTr ? "Yetenek Gelişim Modeli | BGTS" : "Talent Development Model | BGTS";
   const description = isTr
-    ? "BGTS Yetenek Gelişim Modeli ile kariyerine güçlü bir başlangıç yap. Mentorluk, eğitim ve gerçek projelerde deneyim."
-    : "Kickstart your career with the BGTS Talent Development Model. Mentorship, training, and real-world project experience.";
+    ? "BGTS Yetenek Gelişim Modeli ile kariyer yolculuğunu planla. Mentorluk, eğitim ve yetkinlik gelişim aşamalarını keşfet."
+    : "Plan your career journey with the BGTS Talent Development Model. Explore mentorship, training, and competency growth stages.";
 
   return {
     title,

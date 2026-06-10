@@ -127,6 +127,13 @@ export const SEARCH_ITEMS: SearchItem[] = [
         tags: ["staj", "bootcamp", "yeni mezun", "genç mühendis", "program", "iş başvurusu", "ik", "kariyer"]
     },
     {
+        title: "Yetenek Gelişim Modeli",
+        description: "Kariyer yolculuğunu planla; mentorluk, eğitim ve yetkinlik gelişim aşamaları.",
+        href: "/yetenek-gelisim-modeli",
+        category: "Kariyer",
+        tags: ["yetenek", "gelişim", "model", "kariyer", "mentorluk", "eğitim"]
+    },
+    {
         title: "Kariyer Yolları",
         description: "Potansiyelinizi ortaya çıkaran net ve şeffaf kariyer haritaları.",
         href: "/career-paths",

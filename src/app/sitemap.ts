@@ -33,12 +33,15 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
   { path: '/products/hcm', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/products/meetsense', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/products/praxila', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/meetsense-viewer', priority: 0.4, changeFrequency: 'monthly' },
 
   // Kariyer
   { path: '/career-paths', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/culture', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/learning', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/genc-muhendis-programi', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/yetenek-gelisim-modeli', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/hr', priority: 0.6, changeFrequency: 'monthly' },
 
   // Kaynaklar
   { path: '/resources/success-stories', priority: 0.6, changeFrequency: 'monthly' },

@@ -13,10 +13,10 @@ export async function generateMetadata({
   const locale = lang as Locale;
   const isTr = locale === "tr";
 
-  const title = isTr ? "Yetenek Gelişim Programı | BGTS" : "Talent Development Program | BGTS";
+  const title = isTr ? "Genç Mühendis Programı | BGTS" : "Young Engineers Program | BGTS";
   const description = isTr
-    ? "BGTS Yetenek Gelişim Programı ile kariyerine güçlü bir başlangıç yap. Mentorluk, eğitim ve gerçek projelerde deneyim."
-    : "Kickstart your career with the BGTS Talent Development Program. Mentorship, training, and real-world project experience.";
+    ? "BGTS Genç Mühendis Programı ile proje bazlı öğrenim, mentorluk ve gerçek projelerde deneyim kazan."
+    : "Gain project-based learning, mentorship, and real-world project experience with the BGTS Young Engineers Program.";
 
   return {
     title,
