@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -30,7 +31,7 @@ export default function DocMindClient({ dict, lang }: { dict: DocMindDetail; lan
             <SoftwareApplicationStructuredData
                 name="DocMind"
                 description={d.features.body}
-                url="/products/docmind"
+                url={localizedPathForLang(lang, '/products/docmind')}
             />
 
             {/* HERO */}
@@ -50,7 +51,7 @@ export default function DocMindClient({ dict, lang }: { dict: DocMindDetail; lan
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <Link
-                                    href={`/${lang}/contact`}
+                                    href={localizedPathForLang(lang, '/contact')}
                                     className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-teal-500/25 hover:scale-105"
                                 >
                                     {d.hero.cta} <ArrowRight className="w-5 h-5 ml-2" />

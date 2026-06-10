@@ -3,9 +3,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import { MapPin } from "lucide-react"
+import { localizedHref } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 
 export default function Footer({ dict, lang = "tr" }: { dict: any; lang?: string }) {
     if (!dict) return null;
+    const locale = lang as Locale;
+    const href = (path: string) => localizedHref(locale, path);
 
     return (
         <footer className="flex flex-col">
@@ -29,9 +33,9 @@ export default function Footer({ dict, lang = "tr" }: { dict: any; lang?: string
                         <div className="space-y-4">
                             <h4 className="font-bold text-white mb-4">{dict.columns.services}</h4>
                             <ul className="space-y-2 text-white/50 text-sm">
-                                <li><Link href={`/${lang}/services/managed-services`} className="hover:text-corporate-accent transition-colors">{dict.links.managedServices}</Link></li>
-                                <li><Link href={`/${lang}/services/devops`} className="hover:text-corporate-accent transition-colors">{dict.links.devops}</Link></li>
-                                <li><Link href={`/${lang}/services/software-development`} className="hover:text-corporate-accent transition-colors">{dict.links.softwareDev}</Link></li>
+                                <li><Link href={href('/services/managed-services')} className="hover:text-corporate-accent transition-colors">{dict.links.managedServices}</Link></li>
+                                <li><Link href={href('/services/devops')} className="hover:text-corporate-accent transition-colors">{dict.links.devops}</Link></li>
+                                <li><Link href={href('/services/software-development')} className="hover:text-corporate-accent transition-colors">{dict.links.softwareDev}</Link></li>
                             </ul>
                         </div>
 
@@ -39,9 +43,9 @@ export default function Footer({ dict, lang = "tr" }: { dict: any; lang?: string
                         <div className="space-y-4">
                             <h4 className="font-bold text-white mb-4">{dict.columns.industries}</h4>
                             <ul className="space-y-2 text-white/50 text-sm">
-                                <li><Link href={`/${lang}/industries/banking`} className="hover:text-corporate-accent transition-colors">{dict.links.banking}</Link></li>
-                                <li><Link href={`/${lang}/industries/defense`} className="hover:text-corporate-accent transition-colors">{dict.links.defense}</Link></li>
-                                <li><Link href={`/${lang}/industries/retail-telecom`} className="hover:text-corporate-accent transition-colors">{dict.links.retailTelecom}</Link></li>
+                                <li><Link href={href('/industries/banking')} className="hover:text-corporate-accent transition-colors">{dict.links.banking}</Link></li>
+                                <li><Link href={href('/industries/defense')} className="hover:text-corporate-accent transition-colors">{dict.links.defense}</Link></li>
+                                <li><Link href={href('/industries/retail-telecom')} className="hover:text-corporate-accent transition-colors">{dict.links.retailTelecom}</Link></li>
                             </ul>
                         </div>
 
@@ -49,8 +53,8 @@ export default function Footer({ dict, lang = "tr" }: { dict: any; lang?: string
                         <div className="space-y-4">
                             <h4 className="font-bold text-white mb-4">{dict.columns.corporate}</h4>
                             <ul className="space-y-2 text-white/50 text-sm">
-                                <li><Link href={`/${lang}/about`} className="hover:text-corporate-accent transition-colors">{dict.links.about}</Link></li>
-                                <li><Link href={`/${lang}/contact`} className="hover:text-corporate-accent transition-colors">{dict.links.contact}</Link></li>
+                                <li><Link href={href('/about')} className="hover:text-corporate-accent transition-colors">{dict.links.about}</Link></li>
+                                <li><Link href={href('/contact')} className="hover:text-corporate-accent transition-colors">{dict.links.contact}</Link></li>
                             </ul>
                         </div>
 

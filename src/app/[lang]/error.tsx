@@ -3,6 +3,9 @@
 import { useEffect } from "react"
 import { AlertTriangle, RefreshCw } from "lucide-react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { localizedPathForLang } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 
 export default function Error({
   error,
@@ -11,6 +14,9 @@ export default function Error({
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  const pathname = usePathname()
+  const lang = (pathname.split('/')[1] === 'en' ? 'en' : 'tr') as Locale
+
   useEffect(() => {
     console.error("Application error:", error)
   }, [error])
@@ -34,7 +40,7 @@ export default function Error({
             Sayfayı Yenile
           </button>
           <Link
-            href="/"
+            href={localizedPathForLang(lang, '/')}
             className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 transition-all bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:border-slate-300"
           >
             Ana Sayfaya Dön

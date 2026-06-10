@@ -9,6 +9,8 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { usePathname } from "next/navigation"
+import { localizedPathForLang } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 
 interface HeroProps {
     title?: string
@@ -40,7 +42,8 @@ export default function Hero({
     children
 }: HeroProps) {
     const pathname = usePathname()
-    const isEn = pathname.startsWith('/en')
+    const lang = (pathname.split('/')[1] === 'en' ? 'en' : 'tr') as Locale
+    const isEn = lang === 'en'
     const contactLabel = isEn ? 'Contact Us' : 'İletişime Geçin'
     const exploreLabel = isEn ? 'Explore' : 'Keşfedin'
     const learnMoreLabel = isEn ? 'Learn More' : 'Daha Fazlası'
@@ -86,7 +89,7 @@ export default function Hero({
                                         <ArrowRight className="w-5 h-5 ml-2" />
                                     </Link>
                                     <Link
-                                        href="/contact"
+                                        href={localizedPathForLang(lang, '/contact')}
                                         className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-corporate-dark transition-all bg-white border border-border rounded-full hover:bg-corporate-surface hover:border-corporate-accent shadow-sm"
                                     >
                                         {contactLabel}

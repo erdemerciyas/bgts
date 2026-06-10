@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import React from "react"
 import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
@@ -72,7 +73,7 @@ export default function PraxilaClient({ dict, lang }: { dict: PraxilaDetail; lan
             <SoftwareApplicationStructuredData
                 name="Praxila"
                 description={d.overview.heading}
-                url="/products/praxila"
+                url={localizedPathForLang(lang, '/products/praxila')}
             />
 
             <Hero
@@ -81,7 +82,7 @@ export default function PraxilaClient({ dict, lang }: { dict: PraxilaDetail; lan
                 className="bg-indigo-900"
                 backgroundImage="/images/headers/bgts-teknoloji-urunleri.jpg"
                 ctaText={d.hero.ctaText}
-                ctaLink={`/${lang}/contact`}
+                ctaLink={localizedPathForLang(lang, '/contact')}
             />
 
             {/* OVERVIEW */}

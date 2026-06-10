@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from "@/lib/routes"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, CheckCircle } from "lucide-react"
@@ -82,7 +83,7 @@ export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?
                                 </ul>
                             </div>
                             <div className="relative z-20 pt-8 mt-auto border-t border-white/10">
-                                <Link href={service.ctaLink.startsWith("http") ? service.ctaLink : `/${lang}${service.ctaLink}`} className="inline-flex items-center font-bold text-white hover:text-blue-300 transition-colors text-lg group/link">
+                                <Link href={service.ctaLink.startsWith("http") ? service.ctaLink : localizedPathForLang(lang, service.ctaLink)} className="inline-flex items-center font-bold text-white hover:text-blue-300 transition-colors text-lg group/link">
                                     {service.ctaText}
                                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover/link:translate-x-1" />
                                 </Link>

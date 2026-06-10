@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -36,7 +37,7 @@ export default function CvConverterClient({ dict, lang }: { dict: CvConverterDet
             <SoftwareApplicationStructuredData
                 name="CV Converter"
                 description={d.features.subheading}
-                url="/products/cv-converter"
+                url={localizedPathForLang(lang, '/products/cv-converter')}
             />
 
             {/* HERO */}
@@ -56,7 +57,7 @@ export default function CvConverterClient({ dict, lang }: { dict: CvConverterDet
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <Link
-                                    href={`/${lang}/contact`}
+                                    href={localizedPathForLang(lang, '/contact')}
                                     className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:scale-105"
                                 >
                                     {d.hero.cta} <ArrowRight className="w-5 h-5 ml-2" />
@@ -154,7 +155,7 @@ export default function CvConverterClient({ dict, lang }: { dict: CvConverterDet
                     <h2 className="text-3xl lg:text-4xl font-black mb-6">{d.cta.heading}</h2>
                     <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">{d.cta.body}</p>
                     <Link
-                        href={`/${lang}/contact`}
+                        href={localizedPathForLang(lang, '/contact')}
                         className="inline-flex items-center justify-center px-10 py-4 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all text-lg"
                     >
                         {d.cta.button}

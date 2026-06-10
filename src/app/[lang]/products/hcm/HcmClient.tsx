@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import React from "react"
 import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
@@ -107,7 +108,7 @@ export default function HcmClient({ dict, lang }: { dict: HcmDetail; lang: strin
             <SoftwareApplicationStructuredData
                 name="HCM Platform"
                 description={d.overview.heading}
-                url="/products/hcm"
+                url={localizedPathForLang(lang, '/products/hcm')}
             />
 
             <Hero
@@ -116,7 +117,7 @@ export default function HcmClient({ dict, lang }: { dict: HcmDetail; lang: strin
                 className="bg-slate-900"
                 backgroundImage="/images/headers/bgts-teknoloji-urunleri.jpg"
                 ctaText={d.hero.ctaText}
-                ctaLink={`/${lang}/contact`}
+                ctaLink={localizedPathForLang(lang, '/contact')}
             />
 
             {/* OVERVIEW */}

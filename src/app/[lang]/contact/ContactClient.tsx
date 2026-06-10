@@ -3,6 +3,8 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { localizedHref } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 import { motion } from "framer-motion"
 import {
     Mail, Phone, MapPin, ArrowRight, Send, CheckCircle,
@@ -169,7 +171,7 @@ export default function ContactClient({ dict: d, lang }: { dict: ContactDict; la
                                         </li>
                                     ))}
                                 </ul>
-                                <Link href={`/${lang}/about`} className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors mt-5 group">
+                                <Link href={localizedHref(lang as Locale, '/about')} className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors mt-5 group">
                                     {d.sidebar.aboutLink}
                                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                                 </Link>

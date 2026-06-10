@@ -1,8 +1,9 @@
 import Hero from "@/components/ui/Hero"
 import { ServiceStructuredData } from "@/components/seo/StructuredData"
+import { localizedPathForLang } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 import ManagedServicesClient from "./ManagedServicesClient"
 import { getDictionary } from "@/get-dictionary"
-import type { Locale } from "@/i18n-config"
 
 export default async function ManagedServicesPage(props: { params: Promise<{ lang: Locale }> }) {
     const params = await props.params;
@@ -15,7 +16,7 @@ export default async function ManagedServicesPage(props: { params: Promise<{ lan
             <ServiceStructuredData
                 name={hero.title}
                 description={hero.subtitle}
-                url="/services/managed-services"
+                url={localizedPathForLang(lang, '/services/managed-services')}
             />
             <Hero
                 title={hero.title}

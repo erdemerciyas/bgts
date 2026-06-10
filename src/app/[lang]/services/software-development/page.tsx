@@ -1,3 +1,4 @@
+import { localizedPathForLang } from '@/lib/routes'
 import { getDictionary } from "@/get-dictionary"
 import type { Locale } from "@/i18n-config"
 import Hero from "@/components/ui/Hero"
@@ -15,7 +16,7 @@ export default async function SoftwareDevelopmentPage(props: { params: Promise<{
             <ServiceStructuredData
                 name={content.hero.title}
                 description={content.hero.subtitle}
-                url={`/${lang}/services/software-development`}
+                url={localizedPathForLang(lang, '/services/software-development')}
             />
             <Hero
                 title={content.hero.title}

@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from "@/lib/routes"
 import Link from "next/link"
 import { CheckCircle, Users, Settings, ArrowRight } from "lucide-react"
 import { Container } from "@/components/ui/Container"
@@ -216,7 +217,7 @@ export function DeliveryModels({ content, lang = "tr" }: { content?: any; lang?:
 
                                 {/* CTA */}
                                 <Link
-                                    href={model.ctaLink.startsWith("http") ? model.ctaLink : `/${lang}${model.ctaLink}`}
+                                    href={model.ctaLink.startsWith("http") ? model.ctaLink : localizedPathForLang(lang, model.ctaLink)}
                                     className={cn(
                                         "group/btn relative flex items-center justify-center gap-2.5 w-full py-4 rounded-xl font-bold text-center text-sm transition-all duration-300 mt-auto overflow-hidden",
                                         model.variant === "light"

@@ -9,5 +9,5 @@ export default async function ProductsPage({
 }) {
     const { lang } = await params
     const dict = await getDictionary(lang as Locale)
-    return <ProductsClient dict={dict.products_page} />
+    return <ProductsClient dict={dict.products_page} lang={lang as Locale} />
 }

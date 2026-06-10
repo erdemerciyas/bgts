@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import React from "react"
 import Link from "next/link"
 import { Container } from "@/components/ui/Container"
@@ -29,7 +30,7 @@ export default function Doc2BotClient({ dict, lang }: { dict: Doc2BotDetail; lan
             <SoftwareApplicationStructuredData
                 name="Doc2Bot"
                 description={d.features.body}
-                url="/products/doc2bot"
+                url={localizedPathForLang(lang, '/products/doc2bot')}
             />
 
             {/* HERO */}
@@ -50,7 +51,7 @@ export default function Doc2BotClient({ dict, lang }: { dict: Doc2BotDetail; lan
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <Link
-                                    href={`/${lang}/contact`}
+                                    href={localizedPathForLang(lang, '/contact')}
                                     className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:scale-105"
                                 >
                                     {d.hero.cta} <ArrowRight className="w-5 h-5 ml-2" />
@@ -100,7 +101,7 @@ export default function Doc2BotClient({ dict, lang }: { dict: Doc2BotDetail; lan
                             <span className="text-blue-600 font-bold tracking-wider uppercase text-sm">{d.features.whyLabel}</span>
                             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 leading-tight">{d.features.heading}</h2>
                             <p className="text-slate-600 text-lg leading-relaxed">{d.features.body}</p>
-                            <Link href={`/${lang}/contact`} className="inline-flex items-center font-bold text-slate-900 hover:text-blue-600 transition-colors">
+                            <Link href={localizedPathForLang(lang, '/contact')} className="inline-flex items-center font-bold text-slate-900 hover:text-blue-600 transition-colors">
                                 {d.features.learnMore} <ArrowRight className="w-4 h-4 ml-2" />
                             </Link>
                         </div>

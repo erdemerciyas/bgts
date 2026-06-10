@@ -1,4 +1,3 @@
-"use strict";
 "use client";
 
 import Hero from "@/components/ui/Hero"
@@ -6,19 +5,25 @@ import ContentSection from "@/components/ui/ContentSection"
 import Breadcrumb from "@/components/ui/Breadcrumb"
 import CaseStudyCard from "@/components/ui/CaseStudyCard"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
+import { localizedPathForLang } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 import { ShoppingCart, Smartphone, Tags, Truck, Wifi, BarChart3, Users, Zap, Globe, CheckCircle2, Wallet, Layers, ShieldCheck } from "lucide-react"
 import { Section } from "@/components/ui/Section"
 import { Container } from "@/components/ui/Container"
 import { Heading, Text } from "@/components/ui/Typography"
 
 export default function RetailTelecomPage() {
+    const pathname = usePathname()
+    const lang = (pathname.split('/')[1] === 'en' ? 'en' : 'tr') as Locale
+
     return (
         <>
             <div className="bg-white min-h-screen">
                 <Breadcrumb
                     items={[
-                        { label: "Sektörler", href: "/industries", icon: ShoppingCart },
-                        { label: "Perakende & Telekom", href: "/industries/retail-telecom", icon: Smartphone }
+                        { label: "Sektörler", href: localizedPathForLang(lang, '/industries'), icon: ShoppingCart },
+                        { label: "Perakende & Telekom", href: localizedPathForLang(lang, '/industries/retail-telecom'), icon: Smartphone }
                     ]}
                 />
 
@@ -327,7 +332,7 @@ export default function RetailTelecomPage() {
                                 description="Türkiye'nin önde gelen moda perakendecisi için mağaza ve online kanalları tek platformda birleştirdik. Stok yönetimi ve sipariş karşılama süreçleri %60 hızlandı."
                                 client="Moda Perakendecisi"
                                 image="/images/industries/retail-telecom/retail-case-study.png"
-                                href="/case-studies/retail-omnichannel"
+                                href={localizedPathForLang(lang, '/resources/success-stories')}
                                 color="blue"
                                 metrics={[
                                     { label: "Ciro Artışı", value: "%60", icon: BarChart3 },
@@ -340,7 +345,7 @@ export default function RetailTelecomPage() {
                                 description="Global bir telekom operatörü için geliştirdiğimiz gerçek zamanlı ağ izleme aracı ile arıza tespit sürelerini dakikalardan saniyelere indirdik."
                                 client="Global Telekom"
                                 image="/images/industries/retail-telecom/telecom-case-study.png"
-                                href="/case-studies/telecom-monitoring"
+                                href={localizedPathForLang(lang, '/resources/success-stories')}
                                 color="blue"
                                 metrics={[
                                     { label: "Tespit Süresi", value: "-95%", icon: Zap },

@@ -6,6 +6,8 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { cn } from "@/lib/utils"
+import { localizedHref } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 import {
     CheckCircle2,
     FileText,
@@ -88,12 +90,14 @@ function ProductCard({
     product, 
     index, 
     dict, 
-    categoryConfig 
+    categoryConfig,
+    lang,
 }: { 
     product: Product; 
     index: number; 
     dict: ProductsDict;
-    categoryConfig: typeof CATEGORIES_CONFIG[0]
+    categoryConfig: typeof CATEGORIES_CONFIG[0];
+    lang: Locale;
 }) {
     const Icon = ICON_MAP[product.slug]
     const item = dict.items[product.slug]
@@ -144,7 +148,7 @@ function ProductCard({
 
             <div className="px-6 py-4 border-t border-slate-100 flex justify-end">
                 <Link
-                    href={`/products/${product.slug}`}
+                    href={localizedHref(lang, `/products/${product.slug}`)}
                     className={cn(
                         "inline-flex items-center gap-1.5 text-sm font-bold",
                         categoryConfig.accentColor,
@@ -165,12 +169,14 @@ function CategorySection({
     category,
     background,
     dict,
-    allProducts
+    allProducts,
+    lang,
 }: {
     category: typeof CATEGORIES_CONFIG[0]
     background: "default" | "glazed"
     dict: ProductsDict
     allProducts: Product[]
+    lang: Locale
 }) {
     const products = allProducts.filter(p => p.category === category.id)
     const catDict = dict.categories[category.id]
@@ -210,6 +216,7 @@ function CategorySection({
                             index={index} 
                             dict={dict}
                             categoryConfig={category}
+                            lang={lang}
                         />
                     ))}
                 </div>
@@ -233,7 +240,7 @@ const PRODUCT_LIST: Product[] = [
 
 const sectionBg: Array<"default" | "glazed"> = ["default", "glazed", "default"]
 
-export default function ProductsClient({ dict: d }: { dict: ProductsDict }) {
+export default function ProductsClient({ dict: d, lang }: { dict: ProductsDict; lang: Locale }) {
     return (
         <div className="bg-white min-h-screen">
 
@@ -289,6 +296,7 @@ export default function ProductsClient({ dict: d }: { dict: ProductsDict }) {
                     background={sectionBg[i]}
                     dict={d}
                     allProducts={PRODUCT_LIST}
+                    lang={lang}
                 />
             ))}
         </div>

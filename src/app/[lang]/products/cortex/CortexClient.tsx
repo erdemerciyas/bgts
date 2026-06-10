@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import React from "react"
 import Link from "next/link"
 import { Container } from "@/components/ui/Container"
@@ -46,7 +47,7 @@ export default function CortexClient({ dict, lang }: { dict: CortexDetail; lang:
             <SoftwareApplicationStructuredData
                 name="Cortex"
                 description={d.features.subheading}
-                url="/products/cortex"
+                url={localizedPathForLang(lang, '/products/cortex')}
             />
 
             {/* HERO */}
@@ -66,7 +67,7 @@ export default function CortexClient({ dict, lang }: { dict: CortexDetail; lang:
                             </p>
                             <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-4">
                                 <Link
-                                    href={`/${lang}/contact`}
+                                    href={localizedPathForLang(lang, '/contact')}
                                     className="inline-flex items-center justify-center px-8 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:scale-105"
                                 >
                                     {d.hero.cta} <ArrowRight className="w-5 h-5 ml-2" />

@@ -5,6 +5,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
+import { localizedHref, switchLocalePath } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 import {
   X, ChevronDown, Phone, Mail,
   Database, Code, Cpu, RefreshCw, Layers,
@@ -46,7 +48,7 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
     return tr(lang, fallbackTr, fallbackEn)
   }
 
-  const p = (path: string) => `/${lang}${path}`
+  const p = (path: string) => localizedHref(lang as Locale, path)
   return [
     {
       name: t("services", "name", "Hizmetler", "Services"),
@@ -183,9 +185,7 @@ export default function MobileNav({ isOpen, onClose, mobileNavDict }: MobileNavP
   const pathname = usePathname()
   const currentLang = pathname.split('/')[1] || 'tr'
   const otherLang = currentLang === 'tr' ? 'en' : 'tr'
-  const switchHref = currentLang === 'tr'
-    ? pathname.replace(/^\/tr/, '/en') || '/en'
-    : pathname.replace(/^\/en/, '/tr') || '/tr'
+  const switchHref = switchLocalePath(pathname, otherLang as Locale)
   const MOBILE_NAV_DATA = getMobileNavData(currentLang, mobileNavDict)
 
   const toggleSection = (id: string) => {
@@ -330,7 +330,7 @@ export default function MobileNav({ isOpen, onClose, mobileNavDict }: MobileNavP
               <div className="px-5 py-4 border-t border-gray-100">
                 <div className="grid grid-cols-2 gap-3">
                   <Link
-                    href={`/${currentLang}/about`}
+                    href={localizedHref(currentLang as Locale, '/about')}
                     onClick={onClose}
                     className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors"
                   >
@@ -338,7 +338,7 @@ export default function MobileNav({ isOpen, onClose, mobileNavDict }: MobileNavP
                     <span className="text-sm font-bold text-slate-700">{currentLang === 'en' ? 'About Us' : 'Hakkımızda'}</span>
                   </Link>
                   <Link
-                    href={`/${currentLang}/contact`}
+                    href={localizedHref(currentLang as Locale, '/contact')}
                     onClick={onClose}
                     className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors"
                   >

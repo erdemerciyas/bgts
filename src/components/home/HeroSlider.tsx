@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -205,8 +206,8 @@ export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; la
             subtitle: dictSlide.subtitle || slide.subtitle,
             ctaText: dictSlide.ctaText || slide.ctaText,
             ctaText2: dictSlide.ctaText2 || slide.ctaText2,
-            ctaLink: slide.ctaLink.startsWith("http") || slide.ctaLink.startsWith("#") ? slide.ctaLink : `/${lang}${slide.ctaLink}`,
-            ctaLink2: slide.ctaLink2 ? (slide.ctaLink2.startsWith("http") || slide.ctaLink2.startsWith("#") ? slide.ctaLink2 : `/${lang}${slide.ctaLink2}`) : undefined,
+            ctaLink: slide.ctaLink.startsWith("http") || slide.ctaLink.startsWith("#") ? slide.ctaLink : localizedPathForLang(lang, slide.ctaLink),
+            ctaLink2: slide.ctaLink2 ? (slide.ctaLink2.startsWith("http") || slide.ctaLink2.startsWith("#") ? slide.ctaLink2 : localizedPathForLang(lang, slide.ctaLink2)) : undefined,
         };
     });
 

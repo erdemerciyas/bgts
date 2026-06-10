@@ -1,6 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import { localizedPathForLang } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 import { Users, Heart, Zap, Smile, BookOpen, Coffee, Target, Rocket, Globe, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { Section } from "@/components/ui/Section"
@@ -56,7 +58,7 @@ type HRDict = {
     }
 }
 
-export default function HRClient({ dict: d }: { dict: HRDict }) {
+export default function HRClient({ dict: d, lang }: { dict: HRDict; lang: Locale }) {
     const WHY_ICONS = [BookOpen, Coffee, Smile, Target]
 
     return (
@@ -200,7 +202,7 @@ export default function HRClient({ dict: d }: { dict: HRDict }) {
                     </Text>
 
                     <div className="flex justify-center">
-                        <Link href="/genc-muhendis-programi" className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.5)]">
+                        <Link href={localizedPathForLang(lang, '/genc-muhendis-programi')} className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.5)]">
                             <span className="relative z-10 flex items-center gap-2">
                                 {d.young_teaser.cta} <Rocket className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
                             </span>

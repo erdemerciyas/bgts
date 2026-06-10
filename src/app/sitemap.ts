@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
-import { i18n } from '@/i18n-config'
+import { i18n, type Locale } from '@/i18n-config'
+import { getLocalizedPath } from '@/lib/routes'
 import { SITE_URL } from '@/lib/seo'
 
 const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'weekly' | 'daily' }[] = [
@@ -48,18 +49,24 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
   { path: '/resources/infographics', priority: 0.5, changeFrequency: 'monthly' },
 ]
 
+function localeUrl(locale: Locale, internalPath: string): string {
+  const localized = getLocalizedPath(locale, internalPath)
+  return localized === '/'
+    ? `${SITE_URL}/${locale}`
+    : `${SITE_URL}/${locale}${localized}`
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
   return ROUTES.flatMap(({ path, priority, changeFrequency }) => {
-    const normalized = path === '/' ? '' : path
     const languages: Record<string, string> = {}
     for (const locale of i18n.locales) {
-      languages[locale] = `${SITE_URL}/${locale}${normalized}`
+      languages[locale] = localeUrl(locale, path)
     }
 
     return i18n.locales.map((locale) => ({
-      url: `${SITE_URL}/${locale}${normalized}`,
+      url: localeUrl(locale, path),
       lastModified,
       changeFrequency,
       priority,

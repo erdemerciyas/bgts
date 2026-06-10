@@ -13,6 +13,8 @@ import {
 } from "lucide-react"
 import { STYLES } from "./data"
 import { highlightAI } from "@/lib/highlight-ai"
+import { localizedHref } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 
 const BackgroundPattern = () => (
     <div className="absolute -bottom-24 -right-24 w-64 h-64 opacity-[0.03] pointer-events-none z-0 rotate-12 text-slate-900">
@@ -78,6 +80,10 @@ function t(lang: string, tr: string, en: string) {
     return lang === 'en' ? en : tr
 }
 
+function lh(lang: string, path: string) {
+    return localizedHref(lang as Locale, path)
+}
+
 export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
     const lang = useLang()
     return (
@@ -94,19 +100,19 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 <div className="bg-blue-50/40 p-10 border-r border-slate-200/80 flex flex-col relative">
                     <h3 className={STYLES.columnHeader}>{t(lang, "Yazılım Geliştirme", "Software Development")}</h3>
                     <div className="space-y-6">
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#development-services`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/software-development#development-services')} className="group flex items-center gap-3">
                             <Layers className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-blue-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-blue-600 transition-colors">{t(lang, "Yazılım Geliştirme Hizmetleri", "Software Development Services")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#ai`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/software-development#ai')} className="group flex items-center gap-3">
                             <Cpu className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-amber-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-amber-600 transition-colors">{t(lang, "Yapay Zekâ & AI-First Mimari Çözümleri", "AI & AI-First Architectural Solutions")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#modernization`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/software-development#modernization')} className="group flex items-center gap-3">
                             <RefreshCw className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-cyan-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-cyan-600 transition-colors">{t(lang, "Yazılım Modernizasyonu & Mikroservis Dönüşümü", "Software Modernization & Microservices")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#bigdata`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/software-development#bigdata')} className="group flex items-center gap-3">
                             <Database className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-indigo-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-indigo-600 transition-colors">{t(lang, "Büyük Veri & Gerçek Zamanlı Veri İşleme", "Big Data & Real-Time Processing")}</h4>
                         </Link>
@@ -117,19 +123,19 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 <div className="bg-white p-10 border-r border-slate-200/80 flex flex-col relative">
                     <h3 className={STYLES.columnHeader}>{t(lang, "SEKTÖREL YAZILIM ÇÖZÜMLERİ", "SECTORAL SOFTWARE SOLUTIONS")}</h3>
                     <div className="space-y-6">
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#banking`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/software-development#banking')} className="group flex items-center gap-3">
                             <Landmark className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-emerald-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-emerald-600 transition-colors">{t(lang, "Bankacılık & Finansal Sistemler", "Banking & Financial Systems")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#trading`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/software-development#trading')} className="group flex items-center gap-3">
                             <TrendingUp className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-sky-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-sky-600 transition-colors">{t(lang, "E-Trading & Market Data & Düşük Gecikmeli Sistemler", "E-Trading & Market Data & Low-Latency Systems")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#telecom`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/software-development#telecom')} className="group flex items-center gap-3">
                             <Radio className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-violet-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-violet-600 transition-colors">{t(lang, "Telekom & Dijital İletişim Platformları", "Telecom & Digital Communication Platforms")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/software-development#fraud`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/software-development#fraud')} className="group flex items-center gap-3">
                             <ShieldAlert className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-rose-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-rose-600 transition-colors">{t(lang, "Fraud & Risk & AI Destekli Doğrulama Sistemleri", "Fraud & Risk & AI-Supported Verification Systems")}</h4>
                         </Link>
@@ -140,19 +146,19 @@ export const ServicesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 <div className="bg-[#f8f9fa] p-10 flex flex-col relative">
                     <h3 className={STYLES.columnHeader}>{t(lang, "Teknoloji Servisleri", "Technology Services")}</h3>
                     <div className="space-y-6">
-                        <Link onClick={closeMenu} href={`/${lang}/services/managed-services#p1`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/managed-services#p1')} className="group flex items-center gap-3">
                             <Server className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-emerald-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-emerald-600 transition-colors">{highlightAI(t(lang, "MSP & AIOps", "MSP & AIOps"))}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/managed-services#p2`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/managed-services#p2')} className="group flex items-center gap-3">
                             <Cpu className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-sky-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-sky-600 transition-colors">{t(lang, "Teknoloji Danışmanlığı", "Technology Consulting")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/managed-services#p3`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/managed-services#p3')} className="group flex items-center gap-3">
                             <RefreshCw className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-indigo-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-indigo-600 transition-colors">{t(lang, "Süreç Danışmanlığı", "Process Consulting")}</h4>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/services/managed-services#p4`} className="group flex items-center gap-3">
+                        <Link onClick={closeMenu} href={lh(lang, '/services/managed-services#p4')} className="group flex items-center gap-3">
                             <ShieldAlert className="w-5 h-5 shrink-0 text-slate-400 group-hover:text-purple-600 transition-colors" />
                             <h4 className="font-bold text-slate-900 text-[15px] leading-tight group-hover:text-purple-600 transition-colors">{t(lang, "Uyumluluk, Güvenlik & IT Olgunluk", "Compliance, Security & IT Maturity")}</h4>
                         </Link>
@@ -181,13 +187,13 @@ export const IndustriesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 <div className="w-[50%] bg-blue-50/50 p-10 border-r border-blue-100 flex flex-col justify-start">
                     <h3 className={STYLES.columnHeader}>{t(lang, "KURUMSAL & SAVUNMA", "ENTERPRISE & DEFENSE")}</h3>
                     <div className="space-y-6">
-                        <Link onClick={closeMenu} href={`/${lang}/industries/banking`} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/industries/banking')} className={STYLES.linkGroup}>
                             <Globe className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1"><h4 className={STYLES.itemTitle}>{t(lang, "Bankacılık & Finans", "Banking & Finance")}</h4><p className={STYLES.itemDesc}>{t(lang, "Dijital kanallar ve regülasyon uyumu için uçtan uca çözümler.", "End-to-end solutions for digital channels and regulatory compliance.")}</p></div>
                             </div>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/industries/defense`} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/industries/defense')} className={STYLES.linkGroup}>
                             <Shield className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1"><h4 className={STYLES.itemTitle}>{t(lang, "Savunma Sanayi", "Defense Industry")}</h4><p className={STYLES.itemDesc}>{t(lang, "Komuta kontrol yazılımları, test ve analizleri.", "Command control software, testing and analysis.")}</p></div>
@@ -198,13 +204,13 @@ export const IndustriesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 <div className="w-[50%] bg-[#f8f9fa] p-10 flex flex-col justify-start">
                     <h3 className={STYLES.columnHeader}>{t(lang, "TİCARİ & TELEKOM", "COMMERCIAL & TELECOM")}</h3>
                     <div className="space-y-6">
-                        <Link onClick={closeMenu} href={`/${lang}/industries/telecommunications`} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/industries/telecommunications')} className={STYLES.linkGroup}>
                             <Server className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1"><h4 className={STYLES.itemTitle}>{t(lang, "Telekomünikasyon & Teknoloji", "Telecommunications & Technology")}</h4><p className={STYLES.itemDesc}>{t(lang, "OSS/BSS ve dijital kanal platformlarında 7/24 erişilebilirlik.", "24/7 availability on OSS/BSS and digital channel platforms.")}</p></div>
                             </div>
                         </Link>
-                        <Link onClick={closeMenu} href={`/${lang}/industries/retail`} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/industries/retail')} className={STYLES.linkGroup}>
                             <ShoppingBag className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1"><h4 className={STYLES.itemTitle}>{t(lang, "Perakende & E-Ticaret", "Retail & E-Commerce")}</h4><p className={STYLES.itemDesc}>{t(lang, "Omnichannel yapılar ve yüksek hacimli işlem yönetimi.", "Omnichannel structures and high-volume transaction management.")}</p></div>
@@ -233,7 +239,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 <div className="grid grid-cols-2 relative z-10">
                     <div className="bg-blue-50/50 p-10 border-r border-b border-blue-100 flex flex-col justify-start">
                         <h3 className={STYLES.columnHeader}>{t(lang, "AI & OTOMASYON", "AI & AUTOMATION")}</h3>
-                        <Link onClick={closeMenu} href={`/${lang}/products/cortex`} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/products/cortex')} className={STYLES.linkGroup}>
                             <Cpu className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1">
@@ -245,7 +251,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
                     <div className="bg-[#f8f9fa] p-10 border-b border-slate-100 flex flex-col justify-start">
                         <h3 className={STYLES.columnHeader}>{t(lang, "İNSAN KAYNAKLARI", "HUMAN RESOURCES")}</h3>
-                        <Link onClick={closeMenu} href={`/${lang}/products/hcm`} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/products/hcm')} className={STYLES.linkGroup}>
                             <Briefcase className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1">
@@ -257,7 +263,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
                     <div className="bg-[#f8f9fa] p-10 border-r border-slate-100 flex flex-col justify-start">
                         <h3 className={STYLES.columnHeader}>{t(lang, "OPERASYON & OTOMASYON", "OPERATIONS & AUTOMATION")}</h3>
-                        <Link onClick={closeMenu} href={`/${lang}/products/praxila`} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/products/praxila')} className={STYLES.linkGroup}>
                             <Activity className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1">
@@ -269,7 +275,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
                     <div className="bg-blue-50/50 p-10 border-blue-100 flex flex-col justify-start">
                         <h3 className={STYLES.columnHeader}>{t(lang, "TOPLANTI & BİLGİ YÖNETİMİ", "MEETING & KNOWLEDGE")}</h3>
-                        <Link onClick={closeMenu} href={`/${lang}/products/meetsense`} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/products/meetsense')} className={STYLES.linkGroup}>
                             <Mic className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1">
@@ -304,7 +310,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
                 {/* HERO CARD */}
                 <Link
-                    href={`/${lang}/genc-muhendis-programi`}
+                    href={lh(lang, '/genc-muhendis-programi')}
                     onClick={closeMenu}
                     className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg"
                 >
@@ -340,7 +346,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
                 {/* MIDDLE COLUMN - 3 Stacked Track Cards */}
                 <div className="col-span-2 flex flex-col gap-3">
-                    <Link href={`/${lang}/genc-muhendis-programi#track-software`} onClick={closeMenu}
+                    <Link href={lh(lang, '/genc-muhendis-programi#track-software')} onClick={closeMenu}
                         className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
                         <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-blue-200">
                             <Code className="w-6 h-6" />
@@ -352,7 +358,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         <ArrowUpRight className="w-4 h-4 text-blue-300 group-hover:text-blue-600 transition-colors shrink-0" />
                     </Link>
 
-                    <Link href={`/${lang}/genc-muhendis-programi#track-infrastructure`} onClick={closeMenu}
+                    <Link href={lh(lang, '/genc-muhendis-programi#track-infrastructure')} onClick={closeMenu}
                         className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
                         <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-200">
                             <Server className="w-6 h-6" />
@@ -364,7 +370,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         <ArrowUpRight className="w-4 h-4 text-emerald-300 group-hover:text-emerald-600 transition-colors shrink-0" />
                     </Link>
 
-                    <Link href={`/${lang}/genc-muhendis-programi#track-test`} onClick={closeMenu}
+                    <Link href={lh(lang, '/genc-muhendis-programi#track-test')} onClick={closeMenu}
                         className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-violet-50 to-purple-50 border border-violet-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
                         <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-violet-200">
                             <BarChart3 className="w-6 h-6" />
@@ -378,7 +384,7 @@ export const TalentMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 </div>
 
                 {/* CTA CARD */}
-                <Link href={`/${lang}/genc-muhendis-programi#application-form`} onClick={closeMenu}
+                <Link href={lh(lang, '/genc-muhendis-programi#application-form')} onClick={closeMenu}
                     className="col-span-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">
                     <div className="absolute top-[-30px] right-[-30px] w-24 h-24 bg-white/10 rounded-full" />
                     <div className="absolute bottom-[-20px] left-[-20px] w-20 h-20 bg-white/5 rounded-full" />
@@ -461,7 +467,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 </Link>
 
                 {/* CARD 2: Success Stories */}
-                <Link href={`/${lang}/resources/success-stories`} onClick={closeMenu}
+                <Link href={lh(lang, '/resources/success-stories')} onClick={closeMenu}
                     className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 p-6 flex flex-col justify-between shadow-lg hover:shadow-pink-500/25 transition-all hover:-translate-y-1">
                     <div>
                         <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 text-white">
@@ -496,7 +502,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 </Link>
 
                 {/* CARD 4: Business Partners */}
-                <Link href={`/${lang}/partnerships`} onClick={closeMenu}
+                <Link href={lh(lang, '/partnerships')} onClick={closeMenu}
                     className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-slate-900 border border-slate-700 shadow-lg hover:shadow-slate-800/50 transition-all hover:border-slate-600 flex flex-col justify-between p-6">
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-soft-light"></div>
                     <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-slate-700/30 rounded-full blur-2xl group-hover:bg-slate-600/40 transition-colors"></div>
@@ -513,7 +519,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 </Link>
 
                 {/* CARD 5: Infographics */}
-                <Link href={`/${lang}/resources/infographics`} onClick={closeMenu}
+                <Link href={lh(lang, '/resources/infographics')} onClick={closeMenu}
                     className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500 to-violet-600 border border-indigo-400/50 p-6 flex flex-col justify-between shadow-lg hover:shadow-indigo-500/25 transition-all">
                     <BackgroundPattern />
                     <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -551,7 +557,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
             <div className="grid grid-cols-5 gap-4 h-[400px]">
 
                 {/* CARD 1: CULTURE - Hero Card */}
-                <Link href={`/${lang}/culture`} onClick={closeMenu}
+                <Link href={lh(lang, '/culture')} onClick={closeMenu}
                     className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
                     <Image src="/images/headers/bgts-hakkimizda-ekip.jpg" alt="Culture" fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" />
@@ -582,7 +588,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 {/* MIDDLE COLUMN - 3 Stacked Cards */}
                 <div className="col-span-2 flex flex-col gap-3">
 
-                    <Link href={`/${lang}/career-paths`} onClick={closeMenu}
+                    <Link href={lh(lang, '/career-paths')} onClick={closeMenu}
                         className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
                         <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-violet-200">
                             <Rocket className="w-6 h-6" />
@@ -594,7 +600,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         <ArrowUpRight className="w-4 h-4 text-violet-300 group-hover:text-violet-600 transition-colors shrink-0" />
                     </Link>
 
-                    <Link href={`/${lang}/learning`} onClick={closeMenu}
+                    <Link href={lh(lang, '/learning')} onClick={closeMenu}
                         className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
                         <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-200">
                             <GraduationCap className="w-6 h-6" />
@@ -606,7 +612,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         <ArrowUpRight className="w-4 h-4 text-emerald-300 group-hover:text-emerald-600 transition-colors shrink-0" />
                     </Link>
 
-                    <Link href={`/${lang}/social-contribution`} onClick={closeMenu}
+                    <Link href={lh(lang, '/social-contribution')} onClick={closeMenu}
                         className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
                         <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-rose-200">
                             <Heart className="w-6 h-6" />

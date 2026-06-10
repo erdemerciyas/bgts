@@ -13,6 +13,8 @@ import {
 import { AnimatePresence } from "framer-motion"
 import { NAV_ITEMS } from "./header/data"
 import { Container } from "@/components/ui/Container"
+import { localizedHref, switchLocalePath } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 
 const MegaMenus = dynamic(() => import('./header/MegaMenus').then(mod => ({
     default: ({ type, closeMenu }: { type: string; closeMenu: () => void }) => {
@@ -110,7 +112,7 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
                             >
                                 <Link
                                     // Make links language-aware
-                                    href={item.href === "#" ? "#" : `/${currentLang}${item.href}`}
+                                    href={item.href === "#" ? "#" : localizedHref(currentLang as Locale, item.href)}
                                     onClick={(e) => {
                                         if (item.href === "#" || item.href === "") {
                                             e.preventDefault();
@@ -144,10 +146,7 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
 
                         {/* Language Switcher */}
                         <Link
-                            href={currentLang === 'tr'
-                                ? pathname.replace(/^\/tr/, '/en') || '/en'
-                                : pathname.replace(/^\/en/, '/tr') || '/tr'
-                            }
+                            href={switchLocalePath(pathname, currentLang === 'tr' ? 'en' : 'tr')}
                             className={cn(
                                 "flex items-center justify-center w-10 h-10 rounded-full text-[13px] font-extrabold tracking-widest transition-all border",
                                 isTransparent
@@ -169,7 +168,7 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
                                 <Linkedin className="w-5 h-5" aria-hidden="true" />
                             </Link>
                             <Link
-                                href={`/${currentLang}/contact`}
+                                href={localizedHref(currentLang as Locale, '/contact')}
                                 className={cn("transition-colors hover:scale-110", isTransparent ? "text-white/80 hover:text-white" : "text-corporate-dark hover:text-corporate-secondary")}
                                 aria-label="İletişim"
                             >

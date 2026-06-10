@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { i18n } from './i18n-config';
+import { resolveTrLegacyRedirect, resolveTrRewrite } from './lib/routes';
 
 // === RATE LIMITING LOGIC ===
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -93,6 +94,25 @@ export function middleware(request: NextRequest) {
         request.url
       )
     );
+  }
+
+  const locale = pathname.split('/')[1];
+  const urlPath = pathname.replace(/^\/(tr|en)/, '') || '/';
+
+  if (locale === 'tr') {
+    const legacyTarget = resolveTrLegacyRedirect(urlPath);
+    if (legacyTarget && legacyTarget !== urlPath) {
+      const redirectUrl = request.nextUrl.clone();
+      redirectUrl.pathname = `/tr${legacyTarget}`;
+      return NextResponse.redirect(redirectUrl, 301);
+    }
+
+    const internalPath = resolveTrRewrite(urlPath);
+    if (internalPath && internalPath !== urlPath) {
+      const rewriteUrl = request.nextUrl.clone();
+      rewriteUrl.pathname = `/tr${internalPath}`;
+      return NextResponse.rewrite(rewriteUrl);
+    }
   }
 
   return NextResponse.next();

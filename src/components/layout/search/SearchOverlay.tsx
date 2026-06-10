@@ -2,10 +2,13 @@
 
 import React, { useState, useMemo, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Search, ArrowRight, CornerDownLeft } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { SEARCH_ITEMS } from "./data"
+import { localizedHref } from "@/lib/routes"
+import type { Locale } from "@/i18n-config"
 
 interface SearchOverlayProps {
     isOpen: boolean
@@ -14,6 +17,8 @@ interface SearchOverlayProps {
 
 export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
     const [query, setQuery] = useState("")
+    const pathname = usePathname()
+    const currentLang = (pathname.split('/')[1] || 'tr') as Locale
 
     // Reset query when closed
     useEffect(() => {
@@ -121,7 +126,7 @@ export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
                                         {filteredResults.map((item, i) => (
                                             <Link
                                                 key={i}
-                                                href={item.href}
+                                                href={localizedHref(currentLang, item.href)}
                                                 onClick={onClose}
                                                 className="group flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50/50 transition-colors"
                                             >

@@ -9,11 +9,16 @@ import { LayoutGrid, Briefcase, Box, Users, Info, Phone } from "lucide-react"
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const SEGMENT_ICONS: Record<string, any> = {
     "services": LayoutGrid,
+    "hizmetler": LayoutGrid,
     "industries": Briefcase,
+    "sektorler": Briefcase,
     "products": Box,
+    "urunler": Box,
     "hr": Users,
     "about": Info,
-    "contact": Phone
+    "hakkimizda": Info,
+    "contact": Phone,
+    "iletisim": Phone,
 }
 
 const LOCALES = ["tr", "en"];

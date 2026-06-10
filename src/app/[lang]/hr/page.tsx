@@ -9,5 +9,5 @@ export default async function HRPage({
 }) {
     const { lang } = await params
     const dict = await getDictionary(lang as Locale)
-    return <HRClient dict={dict.hr_page} />
+    return <HRClient dict={dict.hr_page} lang={lang as Locale} />
 }

@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from "@/lib/routes"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, BarChart, Users, Globe, ShieldCheck } from "lucide-react"
@@ -38,7 +39,7 @@ export function IndustriesGrid({ content, lang = "tr" }: { content?: any; lang?:
                         return (
                             <Link
                                 key={item.title}
-                                href={item.link.startsWith("http") ? item.link : `/${lang}${item.link}`}
+                                href={item.link.startsWith("http") ? item.link : localizedPathForLang(lang, item.link)}
                                 className="group relative bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-border hover:border-corporate-tertiary/30 flex flex-col h-full"
                             >
                                 <div className="relative h-72 w-full overflow-hidden">

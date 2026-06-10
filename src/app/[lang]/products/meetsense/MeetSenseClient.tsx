@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -61,7 +62,7 @@ export default function MeetSenseClient({ dict, lang }: { dict: MeetSenseDetail;
             <SoftwareApplicationStructuredData
                 name="MeetSense"
                 description={d.overview.subtitle}
-                url="/products/meetsense"
+                url={localizedPathForLang(lang, '/products/meetsense')}
             />
 
             {/* HERO */}
@@ -76,7 +77,7 @@ export default function MeetSenseClient({ dict, lang }: { dict: MeetSenseDetail;
                             </h1>
                             <h2 className="text-2xl lg:text-3xl font-medium text-slate-700 mb-6">{d.hero.tagline}</h2>
                             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-xl">{d.hero.subtitle}</p>
-                            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 hover:-translate-y-1 transition-all duration-300">
+                            <Link href={localizedPathForLang(lang, '/contact')} className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 hover:-translate-y-1 transition-all duration-300">
                                 {d.hero.cta} <ArrowRight className="w-5 h-5" />
                             </Link>
                         </motion.div>
@@ -205,7 +206,7 @@ export default function MeetSenseClient({ dict, lang }: { dict: MeetSenseDetail;
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{d.values.headingAccent}</span>
                             </h2>
                             <p className="text-lg font-medium text-slate-300 mb-8">{d.values.subtitle}</p>
-                            <Link href={`/${lang}/contact`} className="inline-flex flex-wrap items-center justify-center px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 hover:-translate-y-1 transition-all duration-300">
+                            <Link href={localizedPathForLang(lang, '/contact')} className="inline-flex flex-wrap items-center justify-center px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 hover:-translate-y-1 transition-all duration-300">
                                 {d.values.cta}
                             </Link>
                         </div>

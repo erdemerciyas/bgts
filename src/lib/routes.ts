@@ -1,0 +1,214 @@
+import { type Locale } from '@/i18n-config';
+
+/**
+ * Internal (filesystem) paths mapped to locale-specific URL segments.
+ * Keys use English folder names from src/app/[lang]/.
+ */
+export const ROUTE_MAP: Record<string, { tr: string; en: string }> = {
+  '/about': { tr: '/hakkimizda', en: '/about' },
+  '/contact': { tr: '/iletisim', en: '/contact' },
+  '/products': { tr: '/urunler', en: '/products' },
+  '/products/hcm': { tr: '/urunler/hcm', en: '/products/hcm' },
+  '/products/praxila': { tr: '/urunler/praxilla', en: '/products/praxila' },
+  '/services/software-development': {
+    tr: '/hizmetler/yazilim-muhendisligi',
+    en: '/services/software-development',
+  },
+  '/services/managed-services': {
+    tr: '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
+    en: '/services/managed-services',
+  },
+  '/services/managed-desktop-services': {
+    tr: '/hizmetler/yonetilen-masaustu-hizmetleri',
+    en: '/services/managed-services',
+  },
+  '/services/devops': {
+    tr: '/hizmetler/servis-dayanikliligi-muhendisligi',
+    en: '/services/devops',
+  },
+  '/services': { tr: '/hizmetler', en: '/services' },
+  '/industries': { tr: '/sektorler', en: '/industries' },
+  '/resources': { tr: '/bilgi-merkezi', en: '/resources' },
+  '/industries/banking': { tr: '/sektorler/bankacilik-finans', en: '/industries/banking' },
+  '/industries/defense': { tr: '/sektorler/savunma-sanayi', en: '/industries/defense' },
+  '/industries/telecommunications': {
+    tr: '/sektorler/telekom',
+    en: '/industries/telecommunications',
+  },
+  '/industries/retail': { tr: '/sektorler/perakende-e-ticaret', en: '/industries/retail' },
+  '/industries/retail-telecom': {
+    tr: '/sektorler/diger-sektorler',
+    en: '/industries/retail-telecom',
+  },
+  '/social-contribution': { tr: '/yerini-al', en: '/social-contribution' },
+  '/career-paths': { tr: '/kariyer-yollari', en: '/career-paths' },
+  '/culture': { tr: '/calisma-kulturu', en: '/culture' },
+  '/genc-muhendis-programi': {
+    tr: '/genc-muhendis-programi',
+    en: '/genc-muhendis-programi',
+  },
+  '/hr': { tr: '/acik-pozisyonlar', en: '/hr' },
+  '/resources/success-stories': { tr: '/basari-hikayeleri', en: '/resources/success-stories' },
+  '/resources/infographics': { tr: '/infografikler', en: '/resources/infographics' },
+  '/partnerships': { tr: '/is-ortaklari', en: '/partnerships' },
+  '/learning': { tr: '/egitim-ve-gelisim', en: '/learning' },
+  '/yetenek-gelisim-modeli': {
+    tr: '/yetenek-gelisim-modeli',
+    en: '/yetenek-gelisim-modeli',
+  },
+  '/meetsense-viewer': { tr: '/meetsense-goruntuleyici', en: '/meetsense-viewer' },
+  '/products/cortex': { tr: '/urunler/cortex', en: '/products/cortex' },
+  '/products/meetsense': { tr: '/urunler/meetsense', en: '/products/meetsense' },
+  '/products/doc2bot': { tr: '/urunler/doc2bot', en: '/products/doc2bot' },
+  '/products/docmind': { tr: '/urunler/docmind', en: '/products/docmind' },
+  '/products/ai-hiring-assistant': {
+    tr: '/urunler/yapay-zeka-ise-alim-asistani',
+    en: '/products/ai-hiring-assistant',
+  },
+  '/products/cv-converter': { tr: '/urunler/cv-donusturucu', en: '/products/cv-converter' },
+};
+
+/** Top-level Turkish aliases without a dedicated page — redirect targets (internal path). */
+export const TR_TOP_LEVEL_ALIASES: Record<string, string> = {
+  '/hizmetler': '/services/software-development',
+  '/sektorler': '/industries/banking',
+  '/bilgi-merkezi': '/resources/success-stories',
+};
+
+/** Legacy English slugs on /tr/ that should 301 to Turkish equivalents. */
+export const TR_LEGACY_REDIRECTS: Record<string, string> = {
+  '/about': '/hakkimizda',
+  '/contact': '/iletisim',
+  '/products': '/urunler',
+  '/products/hcm': '/urunler/hcm',
+  '/products/praxila': '/urunler/praxilla',
+  '/services': '/hizmetler',
+  '/services/data-center-platforms-applications-management':
+    '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
+  '/services/managed-desktop-services': '/hizmetler/yonetilen-masaustu-hizmetleri',
+  '/services/site-reliability-engineering':
+    '/hizmetler/servis-dayanikliligi-muhendisligi',
+  '/services/software-engineering': '/hizmetler/yazilim-muhendisligi',
+  '/services/software-development': '/hizmetler/yazilim-muhendisligi',
+  '/services/managed-services': '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
+  '/services/devops': '/hizmetler/servis-dayanikliligi-muhendisligi',
+  '/services/data-ai': '/hizmetler/data-ai',
+  '/services/professional-services': '/hizmetler/professional-services',
+  '/sectors': '/sektorler',
+  '/industries': '/sektorler',
+  '/industries/banking': '/sektorler/bankacilik-finans',
+  '/industries/banking-finance': '/sektorler/bankacilik-finans',
+  '/industries/defense': '/sektorler/savunma-sanayi',
+  '/industries/defense-industry': '/sektorler/savunma-sanayi',
+  '/industries/telecommunications': '/sektorler/telekom',
+  '/industries/retail': '/sektorler/perakende-e-ticaret',
+  '/industries/retail-ecommerce': '/sektorler/perakende-e-ticaret',
+  '/industries/retail-telecom': '/sektorler/diger-sektorler',
+  '/industries/other-industries': '/sektorler/diger-sektorler',
+  '/knowledge-center': '/bilgi-merkezi',
+  '/resources': '/bilgi-merkezi',
+  '/career': '/yerini-al',
+  '/social-contribution': '/yerini-al',
+  '/career-paths': '/kariyer-yollari',
+  '/working-culture': '/calisma-kulturu',
+  '/culture': '/calisma-kulturu',
+  '/young-engineers': '/genc-muhendis-programi',
+  '/open-positions': '/acik-pozisyonlar',
+  '/hr': '/acik-pozisyonlar',
+  '/apply': '/basvuru',
+  '/resources/success-stories': '/basari-hikayeleri',
+  '/case-studies': '/basari-hikayeleri',
+  '/articles': '/makaleler',
+  '/events': '/etkinlikler',
+  '/webinars': '/webinarlar',
+  '/news': '/haberler',
+  '/partnerships': '/is-ortaklari',
+  '/learning': '/egitim-ve-gelisim',
+  '/resources/infographics': '/infografikler',
+  '/meetsense-viewer': '/meetsense-goruntuleyici',
+  '/products/cortex': '/urunler/cortex',
+  '/products/meetsense': '/urunler/meetsense',
+  '/products/doc2bot': '/urunler/doc2bot',
+  '/products/docmind': '/urunler/docmind',
+  '/products/ai-hiring-assistant': '/urunler/yapay-zeka-ise-alim-asistani',
+  '/products/cv-converter': '/urunler/cv-donusturucu',
+};
+
+function normalizePath(path: string): string {
+  if (!path || path === '/') return '/';
+  return path.startsWith('/') ? path : `/${path}`;
+}
+
+const trLocalizedToInternal = new Map<string, string>();
+const enLocalizedToInternal = new Map<string, string>();
+
+for (const [internal, paths] of Object.entries(ROUTE_MAP)) {
+  trLocalizedToInternal.set(normalizePath(paths.tr), internal);
+  enLocalizedToInternal.set(normalizePath(paths.en), internal);
+}
+
+for (const [alias, internal] of Object.entries(TR_TOP_LEVEL_ALIASES)) {
+  trLocalizedToInternal.set(normalizePath(alias), internal);
+}
+
+/** Public URL path for a locale (without /{lang} prefix). */
+export function getLocalizedPath(locale: Locale, internalPath: string): string {
+  const normalized = normalizePath(internalPath);
+  const mapping = ROUTE_MAP[normalized];
+  if (mapping) return mapping[locale];
+  return normalized;
+}
+
+/** Resolve a locale-specific URL path to the internal filesystem path. */
+export function getInternalPath(locale: Locale, urlPath: string): string | null {
+  const normalized = normalizePath(urlPath);
+  const map = locale === 'tr' ? trLocalizedToInternal : enLocalizedToInternal;
+  return map.get(normalized) ?? null;
+}
+
+/** Full href including locale prefix. Supports hash fragments on internalPath. */
+export function localizedHref(locale: Locale, internalPath: string): string {
+  const [path, hash] = internalPath.split('#');
+  const localized = getLocalizedPath(locale, path);
+  const href = localized === '/' ? `/${locale}` : `/${locale}${localized}`;
+  return hash ? `${href}#${hash}` : href;
+}
+
+/** Switch the current pathname to another locale, translating slugs when mapped. */
+export function switchLocalePath(pathname: string, targetLocale: Locale): string {
+  const segments = pathname.split('/').filter(Boolean);
+  const sourceLocale = segments[0];
+
+  if (sourceLocale !== 'tr' && sourceLocale !== 'en') {
+    return `/${targetLocale}`;
+  }
+
+  const urlPath = normalizePath(`/${segments.slice(1).join('/')}`);
+  const internal = getInternalPath(sourceLocale as Locale, urlPath);
+
+  if (internal) {
+    return localizedHref(targetLocale, internal);
+  }
+
+  if (urlPath === '/') {
+    return `/${targetLocale}`;
+  }
+
+  return `/${targetLocale}${urlPath}`;
+}
+
+/** Convenience wrapper when lang comes from route params as string. */
+export function localizedPathForLang(lang: string, internalPath: string): string {
+  return localizedHref(lang === 'en' ? 'en' : 'tr', internalPath);
+}
+
+/** Resolve middleware rewrite: localized TR path → internal path for Next.js routing. */
+export function resolveTrRewrite(urlPath: string): string | null {
+  return getInternalPath('tr', urlPath);
+}
+
+/** Resolve middleware redirect: legacy English slug on /tr/ → Turkish slug. */
+export function resolveTrLegacyRedirect(urlPath: string): string | null {
+  const normalized = normalizePath(urlPath);
+  return TR_LEGACY_REDIRECTS[normalized] ?? null;
+}

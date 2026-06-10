@@ -49,15 +49,15 @@ BGTS, kurumsal dijital dönüşüm alanında çalışan, özellikle bankacılık
 
 ### Yazılım Geliştirme
 Büyük veri işleme, yapay zeka entegrasyonu, sistem modernizasyonu ve sektöre özel yazılım projeleri. Özellikle bankacılık core sistemleri ve telekom BSS/OSS alanlarında derin uzmanlığımız var.
-→ [Yazılım Geliştirme Hizmetleri](/services/software-development)
+→ [Yazılım Geliştirme Hizmetleri](/hizmetler/yazilim-muhendisligi)
 
 ### Yönetilen Hizmetler (MSP)
 Veri merkezi yönetimi, 7/24 altyapı izleme, ITSM süreçleri, SCCM, SRE ve DevOps as a Service dahil eksiksiz bir IT operasyon desteği.
-→ [Yönetilen Hizmetler](/services/managed-services)
+→ [Yönetilen Hizmetler](/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi)
 
 ### DevOps
 CI/CD pipeline kurulumu, otomasyon, konteyner orkestrasyonu (Kubernetes/Docker), bulut mühendisliği ve altyapı kodlaması (IaC).
-→ [DevOps Hizmetleri](/services/devops)
+→ [DevOps Hizmetleri](/hizmetler/servis-dayanikliligi-muhendisligi)
 
 ---
 
@@ -65,35 +65,35 @@ CI/CD pipeline kurulumu, otomasyon, konteyner orkestrasyonu (Kubernetes/Docker),
 
 ### AI Hiring Assistant
 Özgeçmiş filtreleme, otomatik mülakat sorusu oluşturma ve aday eşleştirme süreçlerini yapay zeka ile hızlandıran işe alım platformu. İK ekiplerinin zamanını 3 katına kadar kazandırır.
-→ [AI Hiring Assistant](/products/ai-hiring-assistant)
+→ [AI Hiring Assistant](/urunler/yapay-zeka-ise-alim-asistani)
 
 ### CV Converter
 Farklı formatlardaki CV'leri (Word, PDF, LinkedIn dışa aktarma) tek ve standart bir kurumsal formata dönüştüren akıllı araç.
-→ [CV Converter](/products/cv-converter)
+→ [CV Converter](/urunler/cv-donusturucu)
 
 ### Cortex
 Yazılım geliştirme yaşam döngüsünü (SDLC) yapay zeka ajanlarıyla otomatikleştiren platform. Gereksinim analizinden kod üretimine, test otomasyonundan deployment'a kadar tüm süreci kapsıyor.
-→ [Cortex](/products/cortex)
+→ [Cortex](/urunler/cortex)
 
 ### HCM Platformu
 Bordro, performans yönetimi, işe alım ve çalışan gelişimini uçtan uca dijitalleştiren insan kaynakları yönetim sistemi.
-→ [HCM](/products/hcm)
+→ [HCM](/urunler/hcm)
 
 ### Praxila
 Kurumsal operasyon süreçlerini, iş akışlarını ve karar mekanizmalarını otomatikleştiren yeni nesil platform.
-→ [Praxila](/products/praxila)
+→ [Praxila](/urunler/praxilla)
 
 ### MeetSense
 Toplantıları gerçek zamanlı kaydeden, transkript oluşturan, özetleyen ve aksiyon maddelerini çıkaran yapay zeka destekli platform. Kurumsal hafıza ve bilgi yönetimi için idealdir.
-→ [MeetSense](/products/meetsense)
+→ [MeetSense](/urunler/meetsense)
 
 ### Doc2Bot
 Şirketin mevcut dokümanlarını (PDF, Word, politika belgeleri) tarayarak akıllı bir chatbot oluşturan platform. Çalışanlar ve müşteriler anlık yanıt alabilir.
-→ [Doc2Bot](/products/doc2bot)
+→ [Doc2Bot](/urunler/doc2bot)
 
 ### DocMind
 Kod tabanını analiz ederek otomatik teknik dokümantasyon üreten araç. Yazılım ekiplerinin dokümantasyon yükünü ciddi ölçüde azaltır.
-→ [DocMind](/products/docmind)
+→ [DocMind](/urunler/docmind)
 
 ---
 
@@ -101,19 +101,19 @@ Kod tabanını analiz ederek otomatik teknik dokümantasyon üreten araç. Yazı
 
 ### Bankacılık & Finans
 Dijital bankacılık kanalları, core banking modernizasyonu, API banking, regülasyon uyumu (BDDK, KVKK), dolandırıcılık tespiti ve açık bankacılık entegrasyonları.
-→ [Bankacılık & Finans](/industries/banking)
+→ [Bankacılık & Finans](/sektorler/bankacilik-finans)
 
 ### Savunma Sanayi
 MIL-STD ve IEEE standartlarına uygun görev kritik sistemler, ConOps analizi, sistem mühendisliği, NAF/DODAF/TOGAF mimari çerçeveleri ve yüksek güvenlikli yazılım geliştirme.
-→ [Savunma Sanayi](/industries/defense)
+→ [Savunma Sanayi](/sektorler/savunma-sanayi)
 
 ### Telekomünikasyon
 OSS/BSS platformları, ağ yönetimi, dijital iletişim kanalları, abone deneyimi ve servis kataloğu otomasyonu.
-→ [Telekomünikasyon](/industries/telecommunications)
+→ [Telekomünikasyon](/sektorler/telekom)
 
 ### Perakende & E-Ticaret
 Omnichannel satış yapıları, envanter optimizasyonu, müşteri deneyimi platformları ve yüksek hacimli işlem yönetimi.
-→ [Perakende & E-Ticaret](/industries/retail)
+→ [Perakende & E-Ticaret](/sektorler/perakende-e-ticaret)
 
 ---
 
@@ -126,24 +126,24 @@ Omnichannel satış yapıları, envanter optimizasyonu, müşteri deneyimi platf
 - Gerçek müşteri projeleri: Bankaların core sistemlerinden savunma projelerine kadar geniş bir portföy.
 
 ### Kariyer Sayfaları
-- [Kariyer Yolları](/career-paths) — Mühendislik ve yönetim kariyer haritaları
-- [Çalışma Kültürü](/culture) — Ekip değerleri ve çalışma ortamı
-- [Eğitim ve Gelişim](/learning) — Akademi, eğitimler ve büyüme fırsatları
+- [Kariyer Yolları](/kariyer-yollari) — Mühendislik ve yönetim kariyer haritaları
+- [Çalışma Kültürü](/calisma-kulturu) — Ekip değerleri ve çalışma ortamı
+- [Eğitim ve Gelişim](/egitim-ve-gelisim) — Akademi, eğitimler ve büyüme fırsatları
 - [Genç Mühendis Programı](/genc-muhendis-programi) — Yeni mezunlar için yapılandırılmış eğitim (Yazılım, Test/Analiz, DevOps)
 
 ### Açık Pozisyonlar
-Güncel iş ilanları için İletişim sayfasını ([İletişim](/contact)) ziyaret edebilirsin. Özgeçmişini direkt hr@bgts.com.tr adresine de gönderebilirsin.
+Güncel iş ilanları için İletişim sayfasını ([İletişim](/iletisim)) ziyaret edebilirsin. Özgeçmişini direkt hr@bgts.com.tr adresine de gönderebilirsin.
 
 ---
 
 ## Kurumsal
 
-- [Hakkımızda](/about) — Vizyon, misyon, global ofisler ve iş ortakları
-- [İş Ortakları](/partnerships) — Microsoft, AWS, ServiceNow ve diğer stratejik teknoloji partnerleri
-- [Sürdürülebilir Değer Programı](/social-contribution) — Eğitim destekleri, sosyal sorumluluk ve sürdürülebilirlik projeleri
-- [Başarı Hikayeleri](/resources/success-stories) — Müşteri projeleri ve referanslar
-- [İnfografikler](/resources/infographics) — Sektörel veriler, trend analizleri
-- [İletişim](/contact) — Ofis adresleri, telefon, e-posta
+- [Hakkımızda](/hakkimizda) — Vizyon, misyon, global ofisler ve iş ortakları
+- [İş Ortakları](/is-ortaklari) — Microsoft, AWS, ServiceNow ve diğer stratejik teknoloji partnerleri
+- [Sürdürülebilir Değer Programı](/yerini-al) — Eğitim destekleri, sosyal sorumluluk ve sürdürülebilirlik projeleri
+- [Başarı Hikayeleri](/basari-hikayeleri) — Müşteri projeleri ve referanslar
+- [İnfografikler](/infografikler) — Sektörel veriler, trend analizleri
+- [İletişim](/iletisim) — Ofis adresleri, telefon, e-posta
 
 **E-posta:** info@bgts.com.tr
 **Adres:** İstanbul (Merkez) & Ankara Ofisleri

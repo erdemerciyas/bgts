@@ -1,3 +1,4 @@
+import { localizedPathForLang } from '@/lib/routes'
 import { getDictionary } from "@/get-dictionary"
 import type { Locale } from "@/i18n-config"
 import Hero from "@/components/ui/Hero"
@@ -22,7 +23,7 @@ export default async function DevOpsPage(props: { params: Promise<{ lang: string
             <ServiceStructuredData
                 name={devops.hero.title}
                 description={devops.hero.subtitle}
-                url={`/${lang}/services/devops`}
+                url={localizedPathForLang(lang, '/services/devops')}
             />
             <div className="bg-white min-h-screen">
 

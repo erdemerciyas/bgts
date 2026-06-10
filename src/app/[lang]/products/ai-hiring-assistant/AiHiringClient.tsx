@@ -1,5 +1,6 @@
 "use client"
 
+import { localizedPathForLang } from '@/lib/routes'
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -33,7 +34,7 @@ export default function AiHiringClient({ dict, lang }: { dict: AiHiringDetail; l
             <SoftwareApplicationStructuredData
                 name="AI Hiring Assistant"
                 description={d.features.subheading}
-                url="/products/ai-hiring-assistant"
+                url={localizedPathForLang(lang, '/products/ai-hiring-assistant')}
             />
 
             {/* HERO SECTION */}
@@ -53,7 +54,7 @@ export default function AiHiringClient({ dict, lang }: { dict: AiHiringDetail; l
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <Link
-                                    href={`/${lang}/contact`}
+                                    href={localizedPathForLang(lang, '/contact')}
                                     className="inline-flex items-center justify-center px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:scale-105"
                                 >
                                     {d.hero.cta} <ArrowRight className="w-5 h-5 ml-2" />
