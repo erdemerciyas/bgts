@@ -4,11 +4,12 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Home, Search } from "lucide-react"
 import { localizedPathForLang } from "@/lib/routes"
+import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 
 export default function NotFound() {
   const pathname = usePathname()
-  const lang = (pathname.split('/')[1] === 'en' ? 'en' : 'tr') as Locale
+  const lang = getLocaleFromPathname(pathname)
 
   return (
     <div className="flex min-h-[80vh] items-center justify-center bg-slate-50 px-6">

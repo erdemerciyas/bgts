@@ -10,7 +10,7 @@ import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { usePathname } from "next/navigation"
 import { localizedPathForLang } from "@/lib/routes"
-import type { Locale } from "@/i18n-config"
+import { getLocaleFromPathname } from "@/lib/base-path"
 
 interface HeroProps {
     title?: string
@@ -42,8 +42,8 @@ export default function Hero({
     children
 }: HeroProps) {
     const pathname = usePathname()
-    const lang = (pathname.split('/')[1] === 'en' ? 'en' : 'tr') as Locale
-    const isEn = lang === 'en'
+    const lang = getLocaleFromPathname(pathname)
+    const isEn = lang === 'eng'
     const contactLabel = isEn ? 'Contact Us' : 'İletişime Geçin'
     const exploreLabel = isEn ? 'Explore' : 'Keşfedin'
     const learnMoreLabel = isEn ? 'Learn More' : 'Daha Fazlası'

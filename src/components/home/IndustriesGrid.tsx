@@ -70,7 +70,7 @@ export function IndustriesGrid({ content, lang = "tr" }: { content?: any; lang?:
                                     </Text>
 
                                     <div className="mt-auto flex items-center font-bold text-corporate-dark text-sm tracking-wide group-hover:text-corporate-tertiary transition-colors">
-                                        {lang === "en" ? "EXPLORE" : "İNCELE"} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                        {lang === "eng" ? "EXPLORE" : "İNCELE"} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </div>
                             </Link>

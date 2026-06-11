@@ -3,6 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { getLocaleFromPathname } from "@/lib/base-path"
 import { motion } from "framer-motion"
 import { Home, ChevronRight, LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -22,8 +23,8 @@ interface BreadcrumbProps {
 
 export default function Breadcrumb({ items, className, showHome = true, homeLabel }: BreadcrumbProps) {
   const pathname = usePathname()
-  const lang = pathname.split('/')[1] || 'tr'
-  const resolvedHomeLabel = homeLabel || (lang === 'en' ? 'Home' : 'Ana Sayfa')
+  const lang = getLocaleFromPathname(pathname)
+  const resolvedHomeLabel = homeLabel || (lang === 'eng' ? 'Home' : 'Ana Sayfa')
 
   // Generate structured data for SEO
   const structuredData = {

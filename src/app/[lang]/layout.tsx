@@ -9,7 +9,7 @@ import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import CookieConsent from "@/components/cookies/CookieConsent";
 import { buildAlternates, buildOgUrl, ogLocale, SITE_URL } from "@/lib/seo";
 import { getDictionary } from "@/get-dictionary";
-import { i18n, type Locale } from "@/i18n-config";
+import { htmlLang, i18n, type Locale } from "@/i18n-config";
 // import ChatbotWidget from "@/components/chat/ChatbotWidget"; // Temporarily disabled
 
 const inter = Inter({
@@ -109,7 +109,7 @@ export default async function RootLayout(props: {
   const dict = await getDictionary(params.lang as Locale);
 
   return (
-    <html lang={params.lang} className="scroll-smooth">
+    <html lang={htmlLang(params.lang as Locale)} className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/icon.png" />

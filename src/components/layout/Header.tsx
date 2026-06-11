@@ -14,6 +14,7 @@ import { AnimatePresence } from "framer-motion"
 import { NAV_ITEMS } from "./header/data"
 import { Container } from "@/components/ui/Container"
 import { localizedHref, switchLocalePath } from "@/lib/routes"
+import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 
 const MegaMenus = dynamic(() => import('./header/MegaMenus').then(mod => ({
@@ -58,7 +59,7 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
     const pathname = usePathname()
 
     // Determine current language by splitting pathname, fallback to tr
-    const currentLang = pathname.split('/')[1] || 'tr';
+    const currentLang = getLocaleFromPathname(pathname);
     const isHome = pathname === `/${currentLang}` || pathname === '/';
     const isTransparent = isHome && !isScrolled && hoveredNav === null;
 
@@ -143,7 +144,7 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
 
                         {/* Language Switcher */}
                         <Link
-                            href={switchLocalePath(pathname, currentLang === 'tr' ? 'en' : 'tr')}
+                            href={switchLocalePath(pathname, currentLang === 'tr' ? 'eng' : 'tr')}
                             className={cn(
                                 "flex items-center justify-center w-10 h-10 rounded-full text-[13px] font-extrabold tracking-widest transition-all border",
                                 isTransparent

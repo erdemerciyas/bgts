@@ -8,6 +8,7 @@ import { Search, ArrowRight, CornerDownLeft } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { SEARCH_ITEMS } from "./data"
 import { localizedHref } from "@/lib/routes"
+import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 
 interface SearchOverlayProps {
@@ -18,7 +19,7 @@ interface SearchOverlayProps {
 export function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
     const [query, setQuery] = useState("")
     const pathname = usePathname()
-    const currentLang = (pathname.split('/')[1] || 'tr') as Locale
+    const currentLang = getLocaleFromPathname(pathname)
 
     // Reset query when closed
     useEffect(() => {

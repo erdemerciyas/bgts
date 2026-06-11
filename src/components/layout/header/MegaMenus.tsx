@@ -14,6 +14,7 @@ import {
 import { STYLES } from "./data"
 import { highlightAI } from "@/lib/highlight-ai"
 import { localizedHref } from "@/lib/routes"
+import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 
 const BackgroundPattern = () => (
@@ -72,12 +73,12 @@ const ProductsBackgroundPattern = () => (
 // Helper hook to get current language
 function useLang() {
     const pathname = usePathname()
-    return pathname.split('/')[1] || 'tr'
+    return getLocaleFromPathname(pathname)
 }
 
 // Simple inline translator: returns TR or EN text
 function t(lang: string, tr: string, en: string) {
-    return lang === 'en' ? en : tr
+    return lang === 'eng' ? en : tr
 }
 
 function lh(lang: string, path: string) {

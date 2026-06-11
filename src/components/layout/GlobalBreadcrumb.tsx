@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import Breadcrumb, { BreadcrumbItem } from "@/components/ui/Breadcrumb"
+import { dictionaryKey, i18n, type Locale } from "@/i18n-config"
+import { getLocaleFromPathname, stripBasePath } from "@/lib/base-path"
 import { LayoutGrid, Briefcase, Box, Users, Info, Phone } from "lucide-react"
 
 // Optional: Specific icons for top-level segments
@@ -21,7 +23,7 @@ const SEGMENT_ICONS: Record<string, any> = {
     "iletisim": Phone,
 }
 
-const LOCALES = ["tr", "en"];
+const LOCALES: readonly string[] = i18n.locales;
 
 type BreadcrumbDict = Record<string, string>;
 
@@ -29,7 +31,8 @@ const dictionaryCache: Record<string, BreadcrumbDict> = {};
 
 async function loadBreadcrumbDict(lang: string): Promise<BreadcrumbDict> {
     if (dictionaryCache[lang]) return dictionaryCache[lang];
-    const mod = await import(`@/dictionaries/${lang}.json`);
+    const file = dictionaryKey(lang as Locale);
+    const mod = await import(`@/dictionaries/${file}.json`);
     const dict = mod.default?.breadcrumb ?? {};
     dictionaryCache[lang] = dict;
     return dict;
@@ -37,8 +40,9 @@ async function loadBreadcrumbDict(lang: string): Promise<BreadcrumbDict> {
 
 export default function GlobalBreadcrumb() {
     const pathname = usePathname()
-    const currentLang = pathname.split('/')[1] || 'tr';
-    const isHome = pathname === `/${currentLang}` || pathname === "/";
+    const currentLang = getLocaleFromPathname(pathname);
+    const pathWithoutBase = stripBasePath(pathname);
+    const isHome = pathWithoutBase === `/${currentLang}` || pathWithoutBase === "/";
 
     const [labels, setLabels] = useState<BreadcrumbDict>({});
 
@@ -50,7 +54,7 @@ export default function GlobalBreadcrumb() {
     if (isHome) return null
 
     // Remove query params and split path
-    const pathWithoutQuery = pathname.split("?")[0]
+    const pathWithoutQuery = pathWithoutBase.split("?")[0]
 
     // Filter out empty segments and locale segments
     const pathSegments = pathWithoutQuery.split("/").filter((segment) => segment !== "" && !LOCALES.includes(segment))

@@ -1,58 +1,59 @@
 import { type Locale } from '@/i18n-config';
+import { getLocaleFromPathname, isLocale, stripBasePath } from '@/lib/base-path';
 
 /**
  * Internal (filesystem) paths mapped to locale-specific URL segments.
  * Keys use English folder names from src/app/[lang]/.
  */
-export const ROUTE_MAP: Record<string, { tr: string; en: string }> = {
-  '/about': { tr: '/hakkimizda', en: '/about' },
-  '/contact': { tr: '/iletisim', en: '/contact' },
-  '/products': { tr: '/urunler', en: '/products' },
-  '/products/hcm': { tr: '/urunler/hcm', en: '/products/hcm' },
-  '/products/praxila': { tr: '/urunler/praxilla', en: '/products/praxila' },
+export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
+  '/about': { tr: '/hakkimizda', eng: '/about' },
+  '/contact': { tr: '/iletisim', eng: '/contact' },
+  '/products': { tr: '/urunler', eng: '/products' },
+  '/products/hcm': { tr: '/urunler/hcm', eng: '/products/hcm' },
+  '/products/praxila': { tr: '/urunler/praxilla', eng: '/products/praxila' },
   '/services/software-development': {
     tr: '/hizmetler/yazilim-muhendisligi',
-    en: '/services/software-development',
+    eng: '/services/software-development',
   },
   '/services/managed-services': {
     tr: '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
-    en: '/services/managed-services',
+    eng: '/services/managed-services',
   },
   '/services/managed-desktop-services': {
     tr: '/hizmetler/yonetilen-masaustu-hizmetleri',
-    en: '/services/managed-services',
+    eng: '/services/managed-services',
   },
-  '/services': { tr: '/hizmetler', en: '/services' },
-  '/industries': { tr: '/sektorler', en: '/industries' },
-  '/resources': { tr: '/bilgi-merkezi', en: '/resources' },
-  '/industries/banking': { tr: '/sektorler/bankacilik-finans', en: '/industries/banking' },
-  '/industries/defense': { tr: '/sektorler/savunma-sanayi', en: '/industries/defense' },
+  '/services': { tr: '/hizmetler', eng: '/services' },
+  '/industries': { tr: '/sektorler', eng: '/industries' },
+  '/resources': { tr: '/bilgi-merkezi', eng: '/resources' },
+  '/industries/banking': { tr: '/sektorler/bankacilik-finans', eng: '/industries/banking' },
+  '/industries/defense': { tr: '/sektorler/savunma-sanayi', eng: '/industries/defense' },
   '/industries/telecommunications': {
     tr: '/sektorler/telekom',
-    en: '/industries/telecommunications',
+    eng: '/industries/telecommunications',
   },
-  '/industries/retail': { tr: '/sektorler/perakende-e-ticaret', en: '/industries/retail' },
+  '/industries/retail': { tr: '/sektorler/perakende-e-ticaret', eng: '/industries/retail' },
   '/industries/retail-telecom': {
     tr: '/sektorler/diger-sektorler',
-    en: '/industries/retail-telecom',
+    eng: '/industries/retail-telecom',
   },
-  '/social-contribution': { tr: '/yerini-al', en: '/social-contribution' },
-  '/career-paths': { tr: '/kariyer-yollari', en: '/career-paths' },
-  '/culture': { tr: '/calisma-kulturu', en: '/culture' },
-  '/resources/success-stories': { tr: '/basari-hikayeleri', en: '/resources/success-stories' },
-  '/resources/infographics': { tr: '/infografikler', en: '/resources/infographics' },
-  '/partnerships': { tr: '/is-ortaklari', en: '/partnerships' },
-  '/learning': { tr: '/egitim-ve-gelisim', en: '/learning' },
-  '/meetsense-viewer': { tr: '/meetsense-goruntuleyici', en: '/meetsense-viewer' },
-  '/products/cortex': { tr: '/urunler/cortex', en: '/products/cortex' },
-  '/products/meetsense': { tr: '/urunler/meetsense', en: '/products/meetsense' },
-  '/products/doc2bot': { tr: '/urunler/doc2bot', en: '/products/doc2bot' },
-  '/products/docmind': { tr: '/urunler/docmind', en: '/products/docmind' },
+  '/social-contribution': { tr: '/yerini-al', eng: '/social-contribution' },
+  '/career-paths': { tr: '/kariyer-yollari', eng: '/career-paths' },
+  '/culture': { tr: '/calisma-kulturu', eng: '/culture' },
+  '/resources/success-stories': { tr: '/basari-hikayeleri', eng: '/resources/success-stories' },
+  '/resources/infographics': { tr: '/infografikler', eng: '/resources/infographics' },
+  '/partnerships': { tr: '/is-ortaklari', eng: '/partnerships' },
+  '/learning': { tr: '/egitim-ve-gelisim', eng: '/learning' },
+  '/meetsense-viewer': { tr: '/meetsense-goruntuleyici', eng: '/meetsense-viewer' },
+  '/products/cortex': { tr: '/urunler/cortex', eng: '/products/cortex' },
+  '/products/meetsense': { tr: '/urunler/meetsense', eng: '/products/meetsense' },
+  '/products/doc2bot': { tr: '/urunler/doc2bot', eng: '/products/doc2bot' },
+  '/products/docmind': { tr: '/urunler/docmind', eng: '/products/docmind' },
   '/products/ai-hiring-assistant': {
     tr: '/urunler/yapay-zeka-ise-alim-asistani',
-    en: '/products/ai-hiring-assistant',
+    eng: '/products/ai-hiring-assistant',
   },
-  '/products/cv-converter': { tr: '/urunler/cv-donusturucu', en: '/products/cv-converter' },
+  '/products/cv-converter': { tr: '/urunler/cv-donusturucu', eng: '/products/cv-converter' },
 };
 
 /** Top-level Turkish aliases without a dedicated page — redirect targets (internal path). */
@@ -132,11 +133,11 @@ function normalizePath(path: string): string {
 }
 
 const trLocalizedToInternal = new Map<string, string>();
-const enLocalizedToInternal = new Map<string, string>();
+const engLocalizedToInternal = new Map<string, string>();
 
 for (const [internal, paths] of Object.entries(ROUTE_MAP)) {
   trLocalizedToInternal.set(normalizePath(paths.tr), internal);
-  enLocalizedToInternal.set(normalizePath(paths.en), internal);
+  engLocalizedToInternal.set(normalizePath(paths.eng), internal);
 }
 
 for (const [alias, internal] of Object.entries(TR_TOP_LEVEL_ALIASES)) {
@@ -147,36 +148,39 @@ for (const [alias, internal] of Object.entries(TR_TOP_LEVEL_ALIASES)) {
 export function getLocalizedPath(locale: Locale, internalPath: string): string {
   const normalized = normalizePath(internalPath);
   const mapping = ROUTE_MAP[normalized];
-  if (mapping) return mapping[locale];
+  if (mapping) return mapping[locale] ?? mapping.tr ?? normalized;
   return normalized;
 }
 
 /** Resolve a locale-specific URL path to the internal filesystem path. */
 export function getInternalPath(locale: Locale, urlPath: string): string | null {
   const normalized = normalizePath(urlPath);
-  const map = locale === 'tr' ? trLocalizedToInternal : enLocalizedToInternal;
+  const map = locale === 'tr' ? trLocalizedToInternal : engLocalizedToInternal;
   return map.get(normalized) ?? null;
 }
 
 /** Full href including locale prefix. Supports hash fragments on internalPath. */
-export function localizedHref(locale: Locale, internalPath: string): string {
+export function localizedHref(locale: Locale | string, internalPath: string): string {
+  const validLocale: Locale = isLocale(locale) ? locale : getLocaleFromPathname(`/${locale}`);
   const [path, hash] = internalPath.split('#');
-  const localized = getLocalizedPath(locale, path);
-  const href = localized === '/' ? `/${locale}` : `/${locale}${localized}`;
+  const localized = getLocalizedPath(validLocale, path);
+  const href = localized === '/' ? `/${validLocale}` : `/${validLocale}${localized}`;
   return hash ? `${href}#${hash}` : href;
 }
 
 /** Switch the current pathname to another locale, translating slugs when mapped. */
 export function switchLocalePath(pathname: string, targetLocale: Locale): string {
-  const segments = pathname.split('/').filter(Boolean);
-  const sourceLocale = segments[0];
+  const path = stripBasePath(pathname);
+  const segments = path.split('/').filter(Boolean);
+  const localeIndex = segments.findIndex((s) => s === 'tr' || s === 'eng');
 
-  if (sourceLocale !== 'tr' && sourceLocale !== 'en') {
+  if (localeIndex === -1) {
     return `/${targetLocale}`;
   }
 
-  const urlPath = normalizePath(`/${segments.slice(1).join('/')}`);
-  const internal = getInternalPath(sourceLocale as Locale, urlPath);
+  const sourceLocale = segments[localeIndex] as Locale;
+  const urlPath = normalizePath(`/${segments.slice(localeIndex + 1).join('/')}`);
+  const internal = getInternalPath(sourceLocale, urlPath);
 
   if (internal) {
     return localizedHref(targetLocale, internal);
@@ -191,7 +195,7 @@ export function switchLocalePath(pathname: string, targetLocale: Locale): string
 
 /** Convenience wrapper when lang comes from route params as string. */
 export function localizedPathForLang(lang: string, internalPath: string): string {
-  return localizedHref(lang === 'en' ? 'en' : 'tr', internalPath);
+  return localizedHref(lang === 'eng' ? 'eng' : 'tr', internalPath);
 }
 
 /** Resolve middleware rewrite: localized TR path → internal path for Next.js routing. */

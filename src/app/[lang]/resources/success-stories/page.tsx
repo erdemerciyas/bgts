@@ -12,7 +12,7 @@ export default async function SuccessStoriesPage({
     const { lang } = await params
     const dict = await getDictionary(lang as Locale)
     
-    const cases = lang === "en" ? CASE_STUDIES_EN : CASE_STUDIES_TR;
+    const cases = lang === "eng" ? CASE_STUDIES_EN : CASE_STUDIES_TR;
 
     return <SuccessStoriesClient dict={dict.resources_success_stories} cases={cases} lang={lang} />
 }

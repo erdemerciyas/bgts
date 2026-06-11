@@ -5,6 +5,7 @@ import { AlertTriangle, RefreshCw } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { localizedPathForLang } from "@/lib/routes"
+import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 
 export default function Error({
@@ -15,7 +16,7 @@ export default function Error({
   reset: () => void
 }) {
   const pathname = usePathname()
-  const lang = (pathname.split('/')[1] === 'en' ? 'en' : 'tr') as Locale
+  const lang = getLocaleFromPathname(pathname)
 
   useEffect(() => {
     console.error("Application error:", error)

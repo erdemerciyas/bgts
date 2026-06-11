@@ -41,5 +41,5 @@ export function buildOgUrl(path: string, lang: Locale): string {
 }
 
 export function ogLocale(lang: Locale): string {
-  return lang === "tr" ? "tr_TR" : "en_US";
+  return lang === "tr" ? "tr_TR" : "en_US"; // eng locale → en_US OpenGraph
 }

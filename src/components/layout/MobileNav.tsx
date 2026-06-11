@@ -6,6 +6,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { localizedHref, switchLocalePath } from "@/lib/routes"
+import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 import {
   X, ChevronDown, Phone, Mail,
@@ -37,7 +38,7 @@ interface MobileNavSection {
 }
 
 function tr(lang: string, trText: string, enText: string) {
-  return lang === 'en' ? enText : trText
+  return lang === 'eng' ? enText : trText
 }
 
 function getMobileNavData(lang: string, dict?: Record<string, Record<string, string>>): MobileNavSection[] {
@@ -162,8 +163,8 @@ interface MobileNavProps {
 export default function MobileNav({ isOpen, onClose, mobileNavDict }: MobileNavProps) {
   const [expandedSection, setExpandedSection] = React.useState<string | null>(null)
   const pathname = usePathname()
-  const currentLang = pathname.split('/')[1] || 'tr'
-  const otherLang = currentLang === 'tr' ? 'en' : 'tr'
+  const currentLang = getLocaleFromPathname(pathname)
+  const otherLang = currentLang === 'tr' ? 'eng' : 'tr'
   const switchHref = switchLocalePath(pathname, otherLang as Locale)
   const MOBILE_NAV_DATA = getMobileNavData(currentLang, mobileNavDict)
 
@@ -314,7 +315,7 @@ export default function MobileNav({ isOpen, onClose, mobileNavDict }: MobileNavP
                     className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors"
                   >
                     <Globe className="w-4 h-4 text-slate-500" />
-                    <span className="text-sm font-bold text-slate-700">{currentLang === 'en' ? 'About Us' : 'Hakkımızda'}</span>
+                    <span className="text-sm font-bold text-slate-700">{currentLang === 'eng' ? 'About Us' : 'Hakkımızda'}</span>
                   </Link>
                   <Link
                     href={localizedHref(currentLang as Locale, '/contact')}
@@ -322,7 +323,7 @@ export default function MobileNav({ isOpen, onClose, mobileNavDict }: MobileNavP
                     className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors"
                   >
                     <Mail className="w-4 h-4 text-white" />
-                    <span className="text-sm font-bold text-white">{currentLang === 'en' ? 'Contact' : 'İletişim'}</span>
+                    <span className="text-sm font-bold text-white">{currentLang === 'eng' ? 'Contact' : 'İletişim'}</span>
                   </Link>
                 </div>
               </div>
@@ -333,7 +334,7 @@ export default function MobileNav({ isOpen, onClose, mobileNavDict }: MobileNavP
               <div className="flex items-center justify-between">
                 <a href="tel:+902123456789" className="flex items-center gap-2 text-sm font-semibold text-slate-600">
                   <Phone className="w-4 h-4" />
-                  <span>{currentLang === 'en' ? 'Contact' : 'İletişim'}</span>
+                  <span>{currentLang === 'eng' ? 'Contact' : 'İletişim'}</span>
                 </a>
                 <div className="flex items-center gap-3">
                   <a href="https://www.linkedin.com/company/bilgeadam/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-blue-50 hover:border-blue-200 transition-colors">

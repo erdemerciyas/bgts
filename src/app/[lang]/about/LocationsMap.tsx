@@ -38,10 +38,10 @@ export function LocationsMap({ lang = "tr", dict }: { lang?: string; dict?: any 
             <Container className="relative z-10">
                 <AnimatedDiv className="mb-10">
                     <Heading variant="h2" className="mb-4 !text-3xl md:!text-4xl !font-bold text-white">
-                        {lang === "en" ? "Our Offices" : "Ofislerimiz"}
+                        {lang === "eng" ? "Our Offices" : "Ofislerimiz"}
                     </Heading>
                     <Text className="text-slate-400 text-lg max-w-2xl">
-                        {lang === "en"
+                        {lang === "eng"
                             ? "BGTS has offices across the UK, Europe, and Turkey."
                             : "BGTS'in İngiltere, Avrupa ve Türkiye'de ofisleri bulunmaktadır."}
                     </Text>
@@ -82,7 +82,7 @@ export function LocationsMap({ lang = "tr", dict }: { lang?: string; dict?: any 
                                 <span className="font-bold">{office.city}</span>
                                 <br />
                                 <span className="text-slate-400">
-                                    {office.country} • {office.isCentral ? (lang === "en" ? "Head Office" : "Merkez Ofis") : (lang === "en" ? "Office" : "Ofis")}
+                                    {office.country} • {office.isCentral ? (lang === "eng" ? "Head Office" : "Merkez Ofis") : (lang === "eng" ? "Office" : "Ofis")}
                                 </span>
                             </span>
                         </button>

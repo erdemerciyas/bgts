@@ -7,6 +7,7 @@ import CaseStudyCard from "@/components/ui/CaseStudyCard"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { localizedPathForLang } from "@/lib/routes"
+import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 import { ShoppingCart, Smartphone, Tags, Truck, Wifi, BarChart3, Users, Zap, Globe, CheckCircle2, Wallet, Layers, ShieldCheck } from "lucide-react"
 import { Section } from "@/components/ui/Section"
@@ -15,7 +16,7 @@ import { Heading, Text } from "@/components/ui/Typography"
 
 export default function RetailTelecomPage() {
     const pathname = usePathname()
-    const lang = (pathname.split('/')[1] === 'en' ? 'en' : 'tr') as Locale
+    const lang = getLocaleFromPathname(pathname)
 
     return (
         <>

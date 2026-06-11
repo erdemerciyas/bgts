@@ -1,5 +1,5 @@
 import 'server-only';
-import type { Locale } from './i18n-config';
+import { dictionaryKey, type Locale } from './i18n-config';
 
 const dictionaries = {
   tr: () => import('./dictionaries/tr.json').then((module) => module.default),
@@ -7,5 +7,6 @@ const dictionaries = {
 };
 
 export const getDictionary = async (locale: Locale) => {
-  return dictionaries[locale]?.() ?? dictionaries.tr();
+  const key = dictionaryKey(locale);
+  return dictionaries[key]?.() ?? dictionaries.tr();
 };
