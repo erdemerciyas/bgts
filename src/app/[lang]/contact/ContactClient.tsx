@@ -218,7 +218,7 @@ export default function ContactClient({ dict: d, lang }: { dict: ContactDict; la
                                                 </label>
                                                 <input type="text" placeholder={d.form.namePlaceholder} value={formData.name}
                                                     onChange={e => update("name", e.target.value)}
-                                                    className={`w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all ${errors.name ? "border-red-300 bg-red-50" : "border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white"}`}
+                                                    className={`w-full rounded-xl border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all ${errors.name ? "border-red-300 bg-red-50" : "border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white"}`}
                                                 />
                                                 {errors.name && <p className="text-xs text-red-600 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.name}</p>}
                                             </div>
@@ -228,7 +228,7 @@ export default function ContactClient({ dict: d, lang }: { dict: ContactDict; la
                                                 </label>
                                                 <input type="email" placeholder={d.form.emailPlaceholder} value={formData.email}
                                                     onChange={e => update("email", e.target.value)}
-                                                    className={`w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all ${errors.email ? "border-red-300 bg-red-50" : "border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white"}`}
+                                                    className={`w-full rounded-xl border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all ${errors.email ? "border-red-300 bg-red-50" : "border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white"}`}
                                                 />
                                                 {errors.email && <p className="text-xs text-red-600 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.email}</p>}
                                             </div>
@@ -242,7 +242,7 @@ export default function ContactClient({ dict: d, lang }: { dict: ContactDict; la
                                                 </label>
                                                 <input type="text" placeholder={d.form.companyPlaceholder} value={formData.company}
                                                     onChange={e => update("company", e.target.value)}
-                                                    className="w-full rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all"
+                                                    className="w-full rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all"
                                                 />
                                             </div>
                                             <div>
@@ -251,7 +251,7 @@ export default function ContactClient({ dict: d, lang }: { dict: ContactDict; la
                                                 </label>
                                                 <input type="tel" placeholder={d.form.phonePlaceholder} value={formData.phone}
                                                     onChange={e => update("phone", e.target.value)}
-                                                    className="w-full rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all"
+                                                    className="w-full rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all"
                                                 />
                                             </div>
                                         </div>
@@ -263,7 +263,7 @@ export default function ContactClient({ dict: d, lang }: { dict: ContactDict; la
                                             </label>
                                             <textarea rows={5} placeholder={d.form.messagePlaceholder} value={formData.message}
                                                 onChange={e => update("message", e.target.value)}
-                                                className={`w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all resize-none ${errors.message ? "border-red-300 bg-red-50" : "border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white"}`}
+                                                className={`w-full rounded-xl border px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all resize-none ${errors.message ? "border-red-300 bg-red-50" : "border-slate-200 bg-slate-50 hover:border-slate-300 focus:border-blue-400 focus:bg-white"}`}
                                             />
                                             {errors.message && <p className="text-xs text-red-600 mt-1 flex items-center gap-1"><AlertCircle className="w-3 h-3" />{errors.message}</p>}
                                         </div>
