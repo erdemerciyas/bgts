@@ -30,7 +30,7 @@ export const getHomeContent = (dict?: any) => {
                     title: sDict.sections?.[1]?.title || "DevOps & Cloud",
                     description: sDict.sections?.[1]?.description || "Otomatik dağıtım süreçleri (CI/CD) ve bulut modernizasyonu ile yazılım teslimat hızınızı ve kalitenizi artırarak operasyonel verimlilik sağlıyoruz.",
                     features: sDict.sections?.[1]?.features || ["Kubernetes & Konteyner", "Cloud-Native Dönüşüm"],
-                    ctaLink: "/services/devops",
+                    ctaLink: "/services/managed-services",
                     ctaText: sDict.sections?.[1]?.ctaText || "Çözümleri Keşfedin",
                     image: "/images/home/devops-cozumleri.jpg",
                     theme: "corporate" // corporate-dark

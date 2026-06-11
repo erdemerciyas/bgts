@@ -4,7 +4,6 @@
       "services": "HİZMETLER",
       "industries": "SEKTÖRLER",
       "products": "ÜRÜNLER",
-      "talent": "YETENEK GELİŞİM PROGRAMI",
       "resources": "BİLGİ MERKEZİ",
       "careers": "YERİNİ AL",
       "about": "HAKKIMIZDA"
@@ -26,7 +25,7 @@
         },
         {
           "title": "Geleceğin Mühendislerini Yetiştiriyoruz",
-          "subtitle": "Genç mühendis programlarımızla teknolojiye değer katan yeni nesil yetenekleri yetiştiriyoruz.",
+          "subtitle": "Net kariyer yolları, sürekli öğrenme kültürü ve gerçek müşteri projelerinde büyüme fırsatları.",
           "ctaText": "Kariyer Fırsatları"
         },
         {
@@ -140,8 +139,6 @@
       "defense": "Savunma Sanayi",
       "retailTelecom": "Perakende & Telekom",
       "about": "Hakkımızda",
-      "careers": "Kariyer",
-      "talent": "Genç Yetenek",
       "contact": "İletişim"
     },
     "copyright": "© 2026 BGTS. Tüm hakları saklıdır."
@@ -155,11 +152,26 @@
       "heading": "Sayılarla BGTS",
       "subtitle": "Mühendislik odaklı yaklaşım, güçlü ekipler ve gelişen bir teknoloji ekosistemi.",
       "items": [
-        { "val": "30+", "label": "Yıllık Deneyim" },
-        { "val": "2.000+", "label": "Çalışan" },
-        { "val": "1.400+", "label": "Mühendis" },
-        { "val": "1.500+", "label": "Tamamlanan Proje" },
-        { "val": "50+", "label": "Yetenek Gelişim Programı" }
+        {
+          "val": "30+",
+          "label": "Yıllık Deneyim"
+        },
+        {
+          "val": "2.000+",
+          "label": "Çalışan"
+        },
+        {
+          "val": "1.400+",
+          "label": "Mühendis"
+        },
+        {
+          "val": "1.500+",
+          "label": "Tamamlanan Proje"
+        },
+        {
+          "val": "50+",
+          "label": "Yetenek Gelişim Programı"
+        }
       ]
     },
     "stats": [
@@ -1497,305 +1509,6 @@
       "imageAlt": "Topluma Değer Katıyoruz"
     }
   },
-  "youngEngineers": {
-    "hero": {
-      "title": "Geleceği İnşa Eden",
-      "highlight": "Mühendisler",
-      "subtitle": "Genç Mühendis Programı ile proje bazlı öğrenim, gerçek proje simülasyonları ve mentor desteğiyle kariyerine",
-      "subtitleBold": "güçlü bir başlangıç",
-      "subtitleEnd": "yap.",
-      "applyBtn": "Hemen Başvur",
-      "exploreBtn": "Programları İncele"
-    },
-    "metrics": [
-      {
-        "val": "3",
-        "label": "Program",
-        "desc": "Yazılım, Test, Altyapı"
-      },
-      {
-        "val": "12",
-        "label": "Hafta",
-        "desc": "Yapılandırılmış eğitim"
-      },
-      {
-        "val": "1:1",
-        "label": "Mentorluk",
-        "desc": "Kıdemli rehberlik"
-      },
-      {
-        "val": "100%",
-        "label": "Gerçek Proje",
-        "desc": "Canlı sistemler"
-      }
-    ],
-    "culture": {
-      "heading": "Uygulamalı Öğrenim,",
-      "headingLine2": "Güçlü Mühendislik Kültürü",
-      "imageAlt": "BGTS Genç Mühendisler Kültürü",
-      "quote": "Farklı sektör dinamiklerini tanıyarak güçlü bir mühendislik ortamında deneyim kazanırsın.",
-      "p1": "Genç Mühendis Programı, gerçek projeler üzerinde çalışarak farklı sektörlerdeki lider firmalarla deneyim kazanma fırsatı sunar. Teknik gelişimin yanında güçlü bir mühendislik kültürüyle seni geleceğe hazırlar.",
-      "p1Bold": "lider firmalarla deneyim kazanma",
-      "p2": "Program süresince yalnızca teknik becerilerini değil, problem çözme yaklaşımını ve takım içi iletişimini de geliştirirsin. Modern geliştirme süreçleri, gerçek proje senaryoları ve mentor desteğiyle profesyonel hayata güçlü bir başlangıç yaparsın.",
-      "p2Bold": "problem çözme yaklaşımını",
-      "features": [
-        {
-          "title": "Gerçek Projeler",
-          "desc": "Canlı sistemlerde geliştirme"
-        },
-        {
-          "title": "1:1 Mentorluk",
-          "desc": "Kıdemli mühendis rehberliği"
-        },
-        {
-          "title": "Tech Talks",
-          "desc": "Haftalık teknik sunumlar"
-        },
-        {
-          "title": "Kariyer Yolu",
-          "desc": "Tam zamanlı kariyer fırsatları"
-        }
-      ]
-    },
-    "photoStrip": [
-      {
-        "img": "/images/genc-muhendis/mentorluk.jpg",
-        "title": "Mentorluk",
-        "tag": "Gelişim"
-      },
-      {
-        "img": "/images/genc-muhendis/ogrenme.jpg",
-        "title": "Tech Talks",
-        "tag": "Öğrenme"
-      },
-      {
-        "img": "/images/culture/culture-3.jpg",
-        "title": "Takım Çalışması",
-        "tag": "Kültür"
-      },
-      {
-        "img": "/images/genc-muhendis/proje.jpg",
-        "title": "Kariyer Planlama",
-        "tag": "Proje"
-      }
-    ],
-    "programs": {
-      "sectionHeading": "Hangi yola",
-      "sectionHeadingHighlight": "çıkmak istiyorsun?",
-      "sectionSubtitle": "Genç Mühendis Programı kapsamında farklı uzmanlık alanlarından birini seçebilirsin.",
-      "applyLink": "Başvur",
-      "items": [
-        {
-          "id": "track-software",
-          "title": "Yazılım Geliştirme",
-          "desc": "Uçtan uca ürün geliştirme deneyimi ile modern yazılım mühendisliği yetkinlikleri kazan.",
-          "items": [
-            "Modern backend & frontend geliştirme",
-            "API tasarımı ve veri yönetimi",
-            "Test süreçleri ve kod kalitesi",
-            "Agile & Scrum ile proje geliştirme"
-          ]
-        },
-        {
-          "id": "track-test",
-          "title": "Test & İş Analizi",
-          "desc": "Projelerin kalitesini ve sürdürülebilirliğini sağlayan test ve analiz uzmanlığı kazan.",
-          "items": [
-            "Test süreçleri ve kalite güvencesi",
-            "Manuel ve otomasyon testleri",
-            "İş analizi ve gereksinim yönetimi",
-            "Test senaryosu ve dokümantasyon"
-          ]
-        },
-        {
-          "id": "track-infrastructure",
-          "title": "Altyapı Teknolojileri",
-          "desc": "Ölçeklenebilir ve güvenilir sistem altyapıları tasarlama ve yönetme yetkinliği kazan.",
-          "items": [
-            "Linux ve sistem yönetimi",
-            "CI/CD, DevOps ve otomasyon",
-            "Cloud platformları (AWS, Azure, GCP)",
-            "Monitoring, logging ve takip"
-          ]
-        }
-      ]
-    },
-    "steps": {
-      "sectionHeading": "Programa Katılım Adımları",
-      "sectionSubtitle": "Başvurudan projeye dahil olmaya kadar net ve şeffaf adımlarla ilerle.",
-      "stepLabel": "Adım",
-      "items": [
-        {
-          "step": "01",
-          "title": "Başvuru",
-          "desc": "Online başvuru formunu doldur, CV'ni yükle ve ilk adımını at."
-        },
-        {
-          "step": "02",
-          "title": "Değerlendirme",
-          "desc": "Teknik yetkinlik ve motivasyon değerlendirmesine katıl."
-        },
-        {
-          "step": "03",
-          "title": "Eğitim Dönemi",
-          "desc": "12 haftalık yapılandırılmış eğitim programı ve birebir mentorluk."
-        },
-        {
-          "step": "04",
-          "title": "Projeye Dahil",
-          "desc": "Genç projelerde rol almaya başla."
-        }
-      ]
-    },
-    "application": {
-      "heading": "Kariyerine",
-      "headingHighlight": "Güçlü Başla",
-      "subtitle": "Formu doldur, CV'ni yükle ve Genç Mühendis Programı'na ilk adımını at.",
-      "tipsHeading": "Başvuru İpuçları",
-      "tips": [
-        "CV'nin güncel olduğundan emin ol.",
-        "Projelerinden ve deneyimlerinden bahset.",
-        "Seni neyin heyecanlandırdığını kısaca yaz."
-      ],
-      "notice": "Başvurular sürekli değerlendirmeye alınır. En kısa sürede geri dönüş yapılır."
-    },
-    "form": {
-      "title": "Hemen Başvur",
-      "subtitle": "Formu doldurarak Genç Mühendis Programı'na ilk adımını at.",
-      "fullName": {
-        "label": "Ad Soyad",
-        "placeholder": "Adınız Soyadınız"
-      },
-      "email": {
-        "label": "E-posta",
-        "placeholder": "ornek@email.com"
-      },
-      "phone": {
-        "label": "Telefon",
-        "placeholder": "0555 555 55 55"
-      },
-      "university": {
-        "label": "Üniversite",
-        "placeholder": "Üniversite Adı"
-      },
-      "department": {
-        "label": "Bölüm",
-        "placeholder": "Bölümünüz"
-      },
-      "grade": {
-        "label": "Sınıf",
-        "placeholder": "Seçiniz",
-        "year3": "3. Sınıf",
-        "year4": "4. Sınıf",
-        "graduate": "Yeni Mezun",
-        "master": "Yüksek Lisans"
-      },
-      "cv": {
-        "label": "CV Yükle",
-        "dragDrop": "Dosya seçmek için tıklayın veya sürükleyin",
-        "restrictions": "PDF, DOC, DOCX (Max 5MB)",
-        "errorMsg": "Lütfen güncel CV'nizi yükleyin."
-      },
-      "message": {
-        "label": "Kısa Notunuz",
-        "placeholder": "Eklemek istedikleriniz..."
-      },
-      "submit": "Başvuruyu Tamamla",
-      "submitting": "Gönderiliyor...",
-      "success": {
-        "title": "Başvurunuz Alındı!",
-        "desc": "İlgilendiğiniz için teşekkür ederiz. Başvurunuz değerlendirildikten sonra sizinle iletişime geçeceğiz."
-      },
-      "error": {
-        "default": "Hata oluştu",
-        "alert": "Başvuru sırasında bir hata oluştu, lütfen tekrar deneyin."
-      }
-    },
-    "talentAcceleration": {
-      "enterpriseChallenge": {
-        "tag": "Kurumsal Teslimat Dönüşümü",
-        "title": "Yetenek Hızlandırma Modeli ile Özel Ekipler Oluşturma ve Ölçekleme",
-        "p1": "Kurumsal kuruluşlar, dağıtık ekipler genelinde operasyonel tutarlılık, yönetişim ve teslimat kalitesini korurken mühendislik kapasitesini ölçeklendirme konusunda sıklıkla zorluklarla karşılaşır.",
-        "p2": "Geleneksel işe alım modelleri, özellikle uzmanlaşmış teknik uzmanlık ve uzun entegrasyon süreçleri gerektiren ortamlarda hızlı büyüme taleplerini karşılamakta sıklıkla zorlanır."
-      },
-      "processFlow": {
-        "title": "BGTS Yetenek Hızlandırma Çerçevesi",
-        "subtitle": "Müşteri ihtiyaçlarıyla yakın uyum içinde özel mühendislik ekipleri oluşturmak ve olgunlaştırmak için yapılandırılmış bir yaklaşım.",
-        "steps": [
-          {
-            "key": "select",
-            "title": "Seç",
-            "businessObj": "Güçlü ve ölçeklenebilir bir yetenek havuzu oluşturun",
-            "operationalValue": "Aday kalitesini ve devreye alma hazırlığını artırır"
-          },
-          {
-            "key": "train",
-            "title": "Yetiştir",
-            "businessObj": "İş gücü hazırlığını hızlandırın",
-            "operationalValue": "Entegrasyon ve adaptasyon süresini azaltır"
-          },
-          {
-            "key": "deploy",
-            "title": "Konumlandır",
-            "businessObj": "Anında operasyonel katkı sağlayın",
-            "operationalValue": "Teslimat sürekliliğini ve ölçeklenebilirliği artırır"
-          },
-          {
-            "key": "operate",
-            "title": "Yönet",
-            "businessObj": "Kararlı teslimat performansı sağlayın",
-            "operationalValue": "Ölçülebilir ve sürdürülebilir operasyonel olgunluk oluşturur"
-          },
-          {
-            "key": "transfer",
-            "title": "Aktar",
-            "businessObj": "Uzun vadeli iş gücü entegrasyonunu destekleyin",
-            "operationalValue": "Sürdürülebilir müşteri tarafı yetenek büyümesi yaratır"
-          }
-        ]
-      },
-      "scaleImpact": {
-        "title": "Ölçek ve Etki",
-        "metrics": [
-          { "val": "3.750+", "label": "Eğitilen Aday" },
-          { "val": "65+", "label": "Özel Program" },
-          { "val": "45+", "label": "Desteklenen Kuruluş" }
-        ]
-      },
-      "approach": {
-        "title": "Yaklaşım Modeli",
-        "intro": "Doğrudan işe alıma güvenmek yerine, model yetenek geliştirmeye ve bunu erken bir aşamadan itibaren teslimat ortamlarına entegre etmeye odaklanır.",
-        "bullets": [
-          "Müşteri ile ortak aday seçimi",
-          "Yapılandırılmış eğitim ve işe alıştırma programları",
-          "BGTS bünyesinde özel teslimat ekiplerinin oluşturulması",
-          "Müşteri araçları, süreçleri ve çalışma yöntemleriyle uyum",
-          "İstikrarlı, yüksek performanslı ekiplere doğru aşamalı gelişim",
-          "Gerektiğinde uzun vadeli entegrasyon için net bir yol"
-        ]
-      },
-      "executionModel": {
-        "title": "Uygulama Modeli",
-        "bullets": [
-          "Yetenek, yapılandırılmış bir boru hattı aracılığıyla geliştirilir ve sürecin başlarında gerçek teslimat ortamlarına yerleştirilir",
-          "Adaylar yoğun teknik ve pratik eğitimden geçerler",
-          "Ekipler, deneyimli liderlik altında aktif projelere katkıda bulunur",
-          "Teslimat, tanımlanmış KPI'lar ve performans takibi ile yönetilir",
-          "Ekipler iki yıla kadar bir süre içinde operasyonel olarak olgunlaşır"
-        ]
-      },
-      "outcome": {
-        "title": "Kazanımlar",
-        "bullets": [
-          "Müşteri ortamlarıyla uyumlu, tam eğitimli, teslimata hazır ekipler",
-          "Azaltılmış işe alım ve işe alıştırma riski",
-          "Daha hızlı ve daha güvenilir hazırlık süreci",
-          "Yapılandırılmış ekip gelişimi yoluyla tutarlı teslimat kalitesi",
-          "Uzun vadeli sürekliliğe sahip sürdürülebilir ekip modelleri"
-        ]
-      }
-    }
-  },
   "mobileNav": {
     "services": {
       "name": "Hizmetler",
@@ -1829,17 +1542,6 @@
       "enterprise": "Kurumsal Çözümler",
       "hcm": "HCM Platformu",
       "docKnowledge": "Doküman & Bilgi Yönetimi"
-    },
-    "talent": {
-      "name": "Yetenek Gelişim Programı",
-      "programs": "Programlar",
-      "software": "Yazılımcı Yetiştirme",
-      "infrastructure": "Altyapı Teknolojileri",
-      "test": "Test ve Analist",
-      "apply": "Başvuru Yap"
-    },
-    "talentModel": {
-      "name": "Yetenek Gelişim Modeli"
     },
     "resources": {
       "name": "Bilgi Merkezi",
@@ -2638,12 +2340,30 @@
             "heading": "İşe Alım Sürecinizi Uçtan Uca Yönetin",
             "subheading": "Manuel süreçleri otomatize eden, veriye dayalı kararlar almanızı sağlayan güçlü özellikler.",
             "items": [
-              { "title": "Otomatik İlan Oluşturma", "desc": "Sadece pozisyon adını girin veya bir dosya yükleyin. Yapay zeka, gereksinimleri ve iş tanımını saniyeler içinde sizin için hazırlasın." },
-              { "title": "Akıllı Aday Eşleştirme", "desc": "İlanlarınız için en uygun adayları, adaylarınız için en uygun ilanları otomatik olarak listeleyin. Skorlama sistemiyle en iyiyi bulun." },
-              { "title": "AI Chatbot Asistanı", "desc": "Aday profilleri hakkında sorular sorun. \"Bu aday hangi teknolojilerde güçlü?\", \"Liderlik vasfı var mı?\" gibi sorulara anında yanıt alın." },
-              { "title": "CV Analizi & Puanlama", "desc": "Yüklenen CV'leri teknik yetkinlik, deneyim ve dil gibi kriterlere göre analiz edin. Objektif ve sayısal bir değerlendirme raporu alın." },
-              { "title": "Video Mülakat Analizi", "desc": "Mülakat kayıtlarını izlemeye son. Yapay zeka, konuşmaları metne döker, soruları ayrıştırır ve adayın yanıtlarını analiz eder." },
-              { "title": "Soru Havuzu Oluşturma", "desc": "Pozisyona ve adaya özel mülakat soruları üretin. Teknik ve yetkinlik bazlı sorularla mülakat kalitenizi artırın." }
+              {
+                "title": "Otomatik İlan Oluşturma",
+                "desc": "Sadece pozisyon adını girin veya bir dosya yükleyin. Yapay zeka, gereksinimleri ve iş tanımını saniyeler içinde sizin için hazırlasın."
+              },
+              {
+                "title": "Akıllı Aday Eşleştirme",
+                "desc": "İlanlarınız için en uygun adayları, adaylarınız için en uygun ilanları otomatik olarak listeleyin. Skorlama sistemiyle en iyiyi bulun."
+              },
+              {
+                "title": "AI Chatbot Asistanı",
+                "desc": "Aday profilleri hakkında sorular sorun. \"Bu aday hangi teknolojilerde güçlü?\", \"Liderlik vasfı var mı?\" gibi sorulara anında yanıt alın."
+              },
+              {
+                "title": "CV Analizi & Puanlama",
+                "desc": "Yüklenen CV'leri teknik yetkinlik, deneyim ve dil gibi kriterlere göre analiz edin. Objektif ve sayısal bir değerlendirme raporu alın."
+              },
+              {
+                "title": "Video Mülakat Analizi",
+                "desc": "Mülakat kayıtlarını izlemeye son. Yapay zeka, konuşmaları metne döker, soruları ayrıştırır ve adayın yanıtlarını analiz eder."
+              },
+              {
+                "title": "Soru Havuzu Oluşturma",
+                "desc": "Pozisyona ve adaya özel mülakat soruları üretin. Teknik ve yetkinlik bazlı sorularla mülakat kalitenizi artırın."
+              }
             ]
           },
           "deepDive": {
@@ -2682,9 +2402,18 @@
             "heading": "Öne Çıkan Özellikler",
             "subheading": "CV dönüşüm ve yönetim süreçlerinizi kolaylaştıran araçlar.",
             "items": [
-              { "title": "Toplu İşlem & Takip", "desc": "Yüzlerce CV'yi aynı anda sisteme yükleyin. Yükleme durumunu, başarı ve hata oranlarını tek ekrandan anlık olarak takip edin." },
-              { "title": "Akıllı Dönüştürme", "desc": "Gelişmiş parsing algoritmalari ile karmaşık CV tasarımlarını bile başarıyla analiz eder ve standart şablona oturtur." },
-              { "title": "Veri Düzenleme", "desc": "Otomatik dönüştürülen CV'ler üzerinde manuel düzeltmeler yapabilir, eksik sertifika veya proje bilgilerini kolaylıkla ekleyebilirsiniz." }
+              {
+                "title": "Toplu İşlem & Takip",
+                "desc": "Yüzlerce CV'yi aynı anda sisteme yükleyin. Yükleme durumunu, başarı ve hata oranlarını tek ekrandan anlık olarak takip edin."
+              },
+              {
+                "title": "Akıllı Dönüştürme",
+                "desc": "Gelişmiş parsing algoritmalari ile karmaşık CV tasarımlarını bile başarıyla analiz eder ve standart şablona oturtur."
+              },
+              {
+                "title": "Veri Düzenleme",
+                "desc": "Otomatik dönüştürülen CV'ler üzerinde manuel düzeltmeler yapabilir, eksik sertifika veya proje bilgilerini kolaylıkla ekleyebilirsiniz."
+              }
             ]
           },
           "cta": {
@@ -2710,12 +2439,42 @@
             "heading": "Geleneksel Süreçlerdeki Darboğazları Aşın",
             "subheading": "Cortex ile yazılım ekiplerinizin yükünü hafifletin ve hata payını sıfıra indirin.",
             "items": [
-              { "title": "REVIEWER Agent", "badge": "İnceleme", "desc": "Otomatik PR inceleme yapar, kod kalitesini ve güvenlik açıklarını analiz eder.", "problem": "Manuel kod inceleme darboğazları" },
-              { "title": "DEVELOPER Agent", "badge": "Geliştirme", "desc": "Standart kalitede bug fix üretir ve otomatik PR oluşturur (Sadece P2-P4 arası).", "problem": "Tutarsız ve zaman alan hata düzeltmeleri" },
-              { "title": "GAP_ANALYZER", "badge": "Analiz", "desc": "Dokümantasyon ile gerçek kod arasındaki uyumsuzlukları tespit eder ve raporlar.", "problem": "Dokümantasyon ve kod uyumsuzlukları" },
-              { "title": "TESTER Agent", "badge": "Test", "desc": "Verilen kaynak kod için otomatik unit test yazar ve kod kalitesini artırır.", "problem": "Eksik test kapsamları ve manuel test yazımı" },
-              { "title": "REQUIREMENTS", "badge": "Planlama", "desc": "Confluence'dan PBI ve test senaryolarını otomatik yapılandırır.", "problem": "Zaman alan manuel gereksinim çıkarma süreci" },
-              { "title": "Human in the Loop", "badge": "Kontrol", "desc": "Kritik işlemlerde ve merge kararlarında mutlaka insan onayı gerektirir.", "problem": "Kontrolsüz ve risk barındıran tam otomasyon" }
+              {
+                "title": "REVIEWER Agent",
+                "badge": "İnceleme",
+                "desc": "Otomatik PR inceleme yapar, kod kalitesini ve güvenlik açıklarını analiz eder.",
+                "problem": "Manuel kod inceleme darboğazları"
+              },
+              {
+                "title": "DEVELOPER Agent",
+                "badge": "Geliştirme",
+                "desc": "Standart kalitede bug fix üretir ve otomatik PR oluşturur (Sadece P2-P4 arası).",
+                "problem": "Tutarsız ve zaman alan hata düzeltmeleri"
+              },
+              {
+                "title": "GAP_ANALYZER",
+                "badge": "Analiz",
+                "desc": "Dokümantasyon ile gerçek kod arasındaki uyumsuzlukları tespit eder ve raporlar.",
+                "problem": "Dokümantasyon ve kod uyumsuzlukları"
+              },
+              {
+                "title": "TESTER Agent",
+                "badge": "Test",
+                "desc": "Verilen kaynak kod için otomatik unit test yazar ve kod kalitesini artırır.",
+                "problem": "Eksik test kapsamları ve manuel test yazımı"
+              },
+              {
+                "title": "REQUIREMENTS",
+                "badge": "Planlama",
+                "desc": "Confluence'dan PBI ve test senaryolarını otomatik yapılandırır.",
+                "problem": "Zaman alan manuel gereksinim çıkarma süreci"
+              },
+              {
+                "title": "Human in the Loop",
+                "badge": "Kontrol",
+                "desc": "Kritik işlemlerde ve merge kararlarında mutlaka insan onayı gerektirir.",
+                "problem": "Kontrolsüz ve risk barındıran tam otomasyon"
+              }
             ],
             "problemLabel": "Çözülen Problem"
           },
@@ -2725,14 +2484,54 @@
             "outputLabel": "Çıktı:",
             "ruleLabel": "Kural:",
             "items": [
-              { "title": "REVIEWER — Kod İncelemeci", "desc": "Bitbucket'ta PR açıldığında otomatik tetiklenir. Kod kalitesini analiz eder.", "output": "PR üzerinde yorum (rapor) bırakır.", "rule": "Merge yapamaz." },
-              { "title": "TESTER — Test Yazıcı", "desc": "Verilen kaynak kod için otomatik unit test yazar.", "output": "Test dosyaları + PR oluşturur.", "rule": "Commit öncesi insan onayı gerektirir." },
-              { "title": "DEVELOPER — Geliştirici", "desc": "Jira'da P2-P4 öncelikli bug'lar için otomatik kod düzeltmesi yapar.", "output": "Bug fix kodu + PR.", "rule": "PR onayı zorunludur. Yeni özellik YAZAMAZ, P1'e DOKUNAMAZ." },
-              { "title": "PLANNER — Planlamacı", "desc": "Karmaşık görevleri alt görevlere parçalar, uygulama planı oluşturur.", "output": "Yapılandırılmış plan dokümanı.", "rule": "E2E pipeline'da ilk adım olarak çalışır." },
-              { "title": "INDEXER — İndeksleyici", "desc": "Kaynak kodu, Jira tasklarını ve Confluence'ı Qdrant'a indexler.", "output": "Aranabilir vektör verileri.", "rule": "Diğer agent'ların arama yapması için temel oluşturur." },
-              { "title": "GAP_ANALYZER — Boşluk Analizcisi", "desc": "Dokümantasyon ile gerçek kod arasındaki uyumsuzluğu bulur.", "output": "Uyumsuzluk detay raporu.", "rule": "INDEXER'ın çalışmış olması gerekir." },
-              { "title": "MFE_DEVELOPER — Frontend Geliştirici", "desc": "React bileşenlerini ve Storybook hikayelerini otomatik üretir.", "output": "React component + Storybook + PR.", "rule": "İnsan onayı zorunludur." },
-              { "title": "REQUIREMENTS_ANALYST — Gereksinim Analisti", "desc": "Confluence sayfalarından PBI ve test case'leri otomatik çıkarır.", "output": "Gereksinim listesi ve test senaryoları.", "rule": "Manuel dokümanları yapısal hale getirir." }
+              {
+                "title": "REVIEWER — Kod İncelemeci",
+                "desc": "Bitbucket'ta PR açıldığında otomatik tetiklenir. Kod kalitesini analiz eder.",
+                "output": "PR üzerinde yorum (rapor) bırakır.",
+                "rule": "Merge yapamaz."
+              },
+              {
+                "title": "TESTER — Test Yazıcı",
+                "desc": "Verilen kaynak kod için otomatik unit test yazar.",
+                "output": "Test dosyaları + PR oluşturur.",
+                "rule": "Commit öncesi insan onayı gerektirir."
+              },
+              {
+                "title": "DEVELOPER — Geliştirici",
+                "desc": "Jira'da P2-P4 öncelikli bug'lar için otomatik kod düzeltmesi yapar.",
+                "output": "Bug fix kodu + PR.",
+                "rule": "PR onayı zorunludur. Yeni özellik YAZAMAZ, P1'e DOKUNAMAZ."
+              },
+              {
+                "title": "PLANNER — Planlamacı",
+                "desc": "Karmaşık görevleri alt görevlere parçalar, uygulama planı oluşturur.",
+                "output": "Yapılandırılmış plan dokümanı.",
+                "rule": "E2E pipeline'da ilk adım olarak çalışır."
+              },
+              {
+                "title": "INDEXER — İndeksleyici",
+                "desc": "Kaynak kodu, Jira tasklarını ve Confluence'ı Qdrant'a indexler.",
+                "output": "Aranabilir vektör verileri.",
+                "rule": "Diğer agent'ların arama yapması için temel oluşturur."
+              },
+              {
+                "title": "GAP_ANALYZER — Boşluk Analizcisi",
+                "desc": "Dokümantasyon ile gerçek kod arasındaki uyumsuzluğu bulur.",
+                "output": "Uyumsuzluk detay raporu.",
+                "rule": "INDEXER'ın çalışmış olması gerekir."
+              },
+              {
+                "title": "MFE_DEVELOPER — Frontend Geliştirici",
+                "desc": "React bileşenlerini ve Storybook hikayelerini otomatik üretir.",
+                "output": "React component + Storybook + PR.",
+                "rule": "İnsan onayı zorunludur."
+              },
+              {
+                "title": "REQUIREMENTS_ANALYST — Gereksinim Analisti",
+                "desc": "Confluence sayfalarından PBI ve test case'leri otomatik çıkarır.",
+                "output": "Gereksinim listesi ve test senaryoları.",
+                "rule": "Manuel dokümanları yapısal hale getirir."
+              }
             ]
           },
           "security": {
@@ -2741,10 +2540,22 @@
             "visualTitle": "Human-in-the-Loop Mimarisi",
             "visualDesc": "Tüm kritik karar noktalarında insan onayı zorunludur.",
             "items": [
-              { "title": "P1 Bug'lar Engellendi", "desc": "Sadece insanlar çözebilir, agent asla kritik P1 hatalara dokunamaz." },
-              { "title": "Yeni Özellik Geliştirme Engellendi", "desc": "Agent sadece mevcut kodda bug fix yapabilir, sıfırdan feature yazamaz." },
-              { "title": "Merge Yapamaz", "desc": "Agent sadece Pull Request açar, merge kararı tamamen insana aittir." },
-              { "title": "Maliyet Takibi", "desc": "Her agent çalıştırmasında token kullanımı ve maliyet titizlikle kaydedilir." }
+              {
+                "title": "P1 Bug'lar Engellendi",
+                "desc": "Sadece insanlar çözebilir, agent asla kritik P1 hatalara dokunamaz."
+              },
+              {
+                "title": "Yeni Özellik Geliştirme Engellendi",
+                "desc": "Agent sadece mevcut kodda bug fix yapabilir, sıfırdan feature yazamaz."
+              },
+              {
+                "title": "Merge Yapamaz",
+                "desc": "Agent sadece Pull Request açar, merge kararı tamamen insana aittir."
+              },
+              {
+                "title": "Maliyet Takibi",
+                "desc": "Her agent çalıştırmasında token kullanımı ve maliyet titizlikle kaydedilir."
+              }
             ]
           }
         }
@@ -2766,18 +2577,45 @@
             "badge2": "Mobil Uyumlu"
           },
           "highlights": [
-            { "label": "Uçtan Uca Çözüm", "desc": "İşe alımdan çıkışa kadar tüm İK süreçleri tek platformda." },
-            { "label": "Tek Güvenlik Modeli", "desc": "Merkezi yetkilendirme ve veri güvenliği altyapısı." },
-            { "label": "Entegre Deneyim", "desc": "Tüm modüllerde tutarlı ve modern kullanıcı arayüzü." },
-            { "label": "Mobil Erişim", "desc": "React Native ile her yerden erişilebilir İK portalı." }
+            {
+              "label": "Uçtan Uca Çözüm",
+              "desc": "İşe alımdan çıkışa kadar tüm İK süreçleri tek platformda."
+            },
+            {
+              "label": "Tek Güvenlik Modeli",
+              "desc": "Merkezi yetkilendirme ve veri güvenliği altyapısı."
+            },
+            {
+              "label": "Entegre Deneyim",
+              "desc": "Tüm modüllerde tutarlı ve modern kullanıcı arayüzü."
+            },
+            {
+              "label": "Mobil Erişim",
+              "desc": "React Native ile her yerden erişilebilir İK portalı."
+            }
           ],
           "differentiators": {
             "heading": "Neden HR Thema HCM?",
             "subtitle": "Kurumunuzun İK dönüşümünü hızlandıran üç temel avantaj.",
             "items": [
-              { "title": "16 Entegre Modül", "desc": "İşe alımdan bordro süreçlerine, performans yönetiminden eğitim planlamasına kadar tüm İK operasyonlarını tek bir platformda birleştirin.", "stat": "16", "statLabel": "Modül" },
-              { "title": "360° İK Yönetimi", "desc": "Çalışan yaşam döngüsünün her aşamasını kapsamlı olarak yönetin. Veriye dayalı kararlar alın.", "stat": "360°", "statLabel": "Kapsam" },
-              { "title": "Modern Teknoloji", "desc": "ASP.NET Core, React Native, Redis, Kubernetes ve daha fazlası ile inşa edilmiş güçlü altyapı.", "stat": "16+", "statLabel": "Teknoloji" }
+              {
+                "title": "16 Entegre Modül",
+                "desc": "İşe alımdan bordro süreçlerine, performans yönetiminden eğitim planlamasına kadar tüm İK operasyonlarını tek bir platformda birleştirin.",
+                "stat": "16",
+                "statLabel": "Modül"
+              },
+              {
+                "title": "360° İK Yönetimi",
+                "desc": "Çalışan yaşam döngüsünün her aşamasını kapsamlı olarak yönetin. Veriye dayalı kararlar alın.",
+                "stat": "360°",
+                "statLabel": "Kapsam"
+              },
+              {
+                "title": "Modern Teknoloji",
+                "desc": "ASP.NET Core, React Native, Redis, Kubernetes ve daha fazlası ile inşa edilmiş güçlü altyapı.",
+                "stat": "16+",
+                "statLabel": "Teknoloji"
+              }
             ]
           },
           "video": {
@@ -2791,43 +2629,95 @@
           },
           "modules": [
             {
-              "id": "temel-ik", "title": "Temel İK & Organizasyon",
+              "id": "temel-ik",
+              "title": "Temel İK & Organizasyon",
               "description": "Organizasyon yapısı, personel yönetimi, işe alım ve bordro süreçlerinin entegre yönetimi.",
               "modules": [
-                { "title": "Temel İK ve Organizasyon", "desc": "Organizasyon yapısı, personel kartları ve özlük bilgilerinin merkezi yönetimi." },
-                { "title": "İşe Alım ve Uyum", "desc": "Aday takip, mülakat süreçleri ve onboarding iş akışları." },
-                { "title": "Bordro ve Teşvik", "desc": "Yasal uyumlu bordro hesaplama, SGK ve teşvik raporlaması." },
-                { "title": "Üret ve Yan Haklar", "desc": "Üret yapısı, terfi/zam simülasyonu ve tazminat yönetimi." }
+                {
+                  "title": "Temel İK ve Organizasyon",
+                  "desc": "Organizasyon yapısı, personel kartları ve özlük bilgilerinin merkezi yönetimi."
+                },
+                {
+                  "title": "İşe Alım ve Uyum",
+                  "desc": "Aday takip, mülakat süreçleri ve onboarding iş akışları."
+                },
+                {
+                  "title": "Bordro ve Teşvik",
+                  "desc": "Yasal uyumlu bordro hesaplama, SGK ve teşvik raporlaması."
+                },
+                {
+                  "title": "Üret ve Yan Haklar",
+                  "desc": "Üret yapısı, terfi/zam simülasyonu ve tazminat yönetimi."
+                }
               ]
             },
             {
-              "id": "yetenek-performans", "title": "Yetenek & Performans",
+              "id": "yetenek-performans",
+              "title": "Yetenek & Performans",
               "description": "Çalışan potansiyellerini keşfedin, performansı ölçün ve stratejik iş gücü planlaması yapın.",
               "modules": [
-                { "title": "Yetenek Yönetimi", "desc": "Çalışan potansiyellerinin belirlenmesi, yedekleme planları ve kariyer haritalari." },
-                { "title": "Performans", "desc": "Hedef bazlı değerlendirme, 360° geri bildirim ve OKR yönetimi." },
-                { "title": "İş gücü Analitiği ve Planlaması", "desc": "Stratejik iş gücü planlaması, trend analizi ve dashboard." },
-                { "title": "Değerlendirme ve Anket", "desc": "Çalışan memnuniyeti, baglılık ve iklim anketleri." }
+                {
+                  "title": "Yetenek Yönetimi",
+                  "desc": "Çalışan potansiyellerinin belirlenmesi, yedekleme planları ve kariyer haritalari."
+                },
+                {
+                  "title": "Performans",
+                  "desc": "Hedef bazlı değerlendirme, 360° geri bildirim ve OKR yönetimi."
+                },
+                {
+                  "title": "İş gücü Analitiği ve Planlaması",
+                  "desc": "Stratejik iş gücü planlaması, trend analizi ve dashboard."
+                },
+                {
+                  "title": "Değerlendirme ve Anket",
+                  "desc": "Çalışan memnuniyeti, baglılık ve iklim anketleri."
+                }
               ]
             },
             {
-              "id": "egitim-iletisim", "title": "Eğitim & İletişim",
+              "id": "egitim-iletisim",
+              "title": "Eğitim & İletişim",
               "description": "Sürekli öğrenme kültürü oluşturun, sınav ve sertifikalarla yetkinlikleri doğrulayın.",
               "modules": [
-                { "title": "Eğitim ve Gelişim Planı", "desc": "Eğitim kataloğu, sınıf yönetimi, e-öğrenme entegrasyonu." },
-                { "title": "Sınav", "desc": "Yetkinlik ve bilgi ölçme sınavları, otomatik puanlama." },
-                { "title": "Online Toplantı", "desc": "WebRTC tabanlı görüntülü toplantılar ve entegre takvim." },
-                { "title": "İK Portal", "desc": "Self-servis çalışan portalı, izin talepleri ve bildirimler." }
+                {
+                  "title": "Eğitim ve Gelişim Planı",
+                  "desc": "Eğitim kataloğu, sınıf yönetimi, e-öğrenme entegrasyonu."
+                },
+                {
+                  "title": "Sınav",
+                  "desc": "Yetkinlik ve bilgi ölçme sınavları, otomatik puanlama."
+                },
+                {
+                  "title": "Online Toplantı",
+                  "desc": "WebRTC tabanlı görüntülü toplantılar ve entegre takvim."
+                },
+                {
+                  "title": "İK Portal",
+                  "desc": "Self-servis çalışan portalı, izin talepleri ve bildirimler."
+                }
               ]
             },
             {
-              "id": "operasyonel", "title": "Operasyonel Süreçler",
+              "id": "operasyonel",
+              "title": "Operasyonel Süreçler",
               "description": "Günlük İK operasyonlarınızı otomatize edin — masraf, zaman, doküman ve talep yönetimi.",
               "modules": [
-                { "title": "Masraf Yönetimi", "desc": "Masraf girişi, onay süreçleri ve muhasebe entegrasyonu." },
-                { "title": "Zaman ve Devamlılık", "desc": "Mesai takibi, vardiya planlama ve devamsızlık yönetimi." },
-                { "title": "Doküman Yönetimi", "desc": "Merkezi belge arşivi, sürüm kontrolü ve dijital imza." },
-                { "title": "Sorun ve Talep Yönetimi", "desc": "Çalışan talep/şikâyet sistemi, SLA takibi ve raporlama." }
+                {
+                  "title": "Masraf Yönetimi",
+                  "desc": "Masraf girişi, onay süreçleri ve muhasebe entegrasyonu."
+                },
+                {
+                  "title": "Zaman ve Devamlılık",
+                  "desc": "Mesai takibi, vardiya planlama ve devamsızlık yönetimi."
+                },
+                {
+                  "title": "Doküman Yönetimi",
+                  "desc": "Merkezi belge arşivi, sürüm kontrolü ve dijital imza."
+                },
+                {
+                  "title": "Sorun ve Talep Yönetimi",
+                  "desc": "Çalışan talep/şikâyet sistemi, SLA takibi ve raporlama."
+                }
               ]
             }
           ],
@@ -2850,77 +2740,208 @@
             "heading": "Güçlü Temel, Akıllı Operasyon",
             "p1": "Praxila, Enterprise Service Management vizyonuyla tasarılanmış; esnek, ölçeklenebilir ve yapay zeka destekli güçlü bir Foundation üzerine inşa edilmiştir.",
             "p2": "ITSM, PPM ve ITOM modülleri ile IT operasyonlarınızı uçtan uca yönetin. Gelişmiş otomasyon, keşif ve analitik yetenekleri ile proaktif bir operasyon yönetimi deneyimi yaşayın.",
-            "badges": ["ITIL Uyumlu", "AI Destekli", "Multi-Tenant"],
+            "badges": [
+              "ITIL Uyumlu",
+              "AI Destekli",
+              "Multi-Tenant"
+            ],
             "stats": [
-              { "stat": "3", "label": "Ana Modül" },
-              { "stat": "17+", "label": "Alt Süreç" },
-              { "stat": "AI", "label": "Destekli" }
+              {
+                "stat": "3",
+                "label": "Ana Modül"
+              },
+              {
+                "stat": "17+",
+                "label": "Alt Süreç"
+              },
+              {
+                "stat": "AI",
+                "label": "Destekli"
+              }
             ]
           },
           "foundation": {
             "heading": "Foundation Core",
             "subtitle": "Tüm modüllerin üzerine inşa edildiği güçlü altyapı bileşenleri.",
             "items": [
-              { "name": "CMDB", "desc": "Konfigürasyon ve varlık ilişkilerinin merkezi yönetimi." },
-              { "name": "Service Catalog", "desc": "Hizmet kataloğu ve self-servis talep portalı." },
-              { "name": "Service Portal", "desc": "Kullanıcı dostu self-servis erişim noktası." },
-              { "name": "Knowledge", "desc": "Bilgi bankası ve çözüm kütüphanesi yönetimi." },
-              { "name": "SLM", "desc": "Hizmet seviyesi anlaşmaları ve SLA takibi." },
-              { "name": "Notification", "desc": "Çok kanalı bildirim ve eskalasyon yönetimi." },
-              { "name": "Multi Tenancy", "desc": "Çok kiralı mimari ile izole ortam desteği." },
-              { "name": "Resource Plan", "desc": "Kaynak planlama ve kapasite yönetimi." },
-              { "name": "TimeSheet", "desc": "Zaman takibi ve iş gücü raporlaması." },
-              { "name": "Task Management", "desc": "Görev atama, takip ve tamamlama yönetimi." },
-              { "name": "Workflow", "desc": "Esnek iş akışı motoruyla süreç otomasyonu." }
+              {
+                "name": "CMDB",
+                "desc": "Konfigürasyon ve varlık ilişkilerinin merkezi yönetimi."
+              },
+              {
+                "name": "Service Catalog",
+                "desc": "Hizmet kataloğu ve self-servis talep portalı."
+              },
+              {
+                "name": "Service Portal",
+                "desc": "Kullanıcı dostu self-servis erişim noktası."
+              },
+              {
+                "name": "Knowledge",
+                "desc": "Bilgi bankası ve çözüm kütüphanesi yönetimi."
+              },
+              {
+                "name": "SLM",
+                "desc": "Hizmet seviyesi anlaşmaları ve SLA takibi."
+              },
+              {
+                "name": "Notification",
+                "desc": "Çok kanalı bildirim ve eskalasyon yönetimi."
+              },
+              {
+                "name": "Multi Tenancy",
+                "desc": "Çok kiralı mimari ile izole ortam desteği."
+              },
+              {
+                "name": "Resource Plan",
+                "desc": "Kaynak planlama ve kapasite yönetimi."
+              },
+              {
+                "name": "TimeSheet",
+                "desc": "Zaman takibi ve iş gücü raporlaması."
+              },
+              {
+                "name": "Task Management",
+                "desc": "Görev atama, takip ve tamamlama yönetimi."
+              },
+              {
+                "name": "Workflow",
+                "desc": "Esnek iş akışı motoruyla süreç otomasyonu."
+              }
             ]
           },
           "advanced": {
             "heading": "Gelişmiş Yetenekler",
             "subtitle": "Yapay zeka ve otomasyon ile desteklenen ileri seviye özellikler.",
             "items": [
-              { "name": "KanBan Board", "desc": "Görsel görev yönetimi ve sprint takibi.", "isAI": false },
-              { "name": "Business Intelligence", "desc": "Gelişmiş raporlama ve veri analitiği.", "isAI": false },
-              { "name": "Chat Bot", "desc": "Yapay zeka destekli self-servis destek botu.", "isAI": false },
-              { "name": "Remote Desktop", "desc": "Uzaktan masaüstü erişimi ve destek.", "isAI": false },
-              { "name": "Employee Monitoring", "desc": "Çalışan aktivite izleme ve raporlama.", "isAI": false },
-              { "name": "Machine Learning", "desc": "Prediktif analiz ve anomali tespiti.", "isAI": true },
-              { "name": "Conversational AI", "desc": "Doğal dil işleme tabanlı etkileşim.", "isAI": true }
+              {
+                "name": "KanBan Board",
+                "desc": "Görsel görev yönetimi ve sprint takibi.",
+                "isAI": false
+              },
+              {
+                "name": "Business Intelligence",
+                "desc": "Gelişmiş raporlama ve veri analitiği.",
+                "isAI": false
+              },
+              {
+                "name": "Chat Bot",
+                "desc": "Yapay zeka destekli self-servis destek botu.",
+                "isAI": false
+              },
+              {
+                "name": "Remote Desktop",
+                "desc": "Uzaktan masaüstü erişimi ve destek.",
+                "isAI": false
+              },
+              {
+                "name": "Employee Monitoring",
+                "desc": "Çalışan aktivite izleme ve raporlama.",
+                "isAI": false
+              },
+              {
+                "name": "Machine Learning",
+                "desc": "Prediktif analiz ve anomali tespiti.",
+                "isAI": true
+              },
+              {
+                "name": "Conversational AI",
+                "desc": "Doğal dil işleme tabanlı etkileşim.",
+                "isAI": true
+              }
             ]
           },
           "modules": [
             {
-              "id": "itsm", "title": "ITSM", "subtitle": "IT Service Management",
+              "id": "itsm",
+              "title": "ITSM",
+              "subtitle": "IT Service Management",
               "description": "Enterprise Service Management çatısı altında uçtan uca IT Hizmet Yönetimi.",
               "modules": [
-                { "title": "Service Desk", "desc": "Tüm taleplerin tek noktadan karşılanması ve yönlendirilmesi." },
-                { "title": "Incident", "desc": "Hizmet kesintilerinin hızlı çözümü ve yönetimi." },
-                { "title": "Request Fulfillment", "desc": "Kullanıcı isteklerinin iş akışları ile karşılanması." },
-                { "title": "Problem", "desc": "Kök neden analizi ile tekrarlayan sorunların engellenmesi." },
-                { "title": "Change", "desc": "Değişikliklerin risk analizi ve onay süreçleri ile yönetimi." },
-                { "title": "Release", "desc": "Sürüm ve yaygınlaştırma süreçlerinin planlanması." },
-                { "title": "Asset & Capacity", "desc": "Varlık yönetimi ve kapasite planlama süreçleri." }
+                {
+                  "title": "Service Desk",
+                  "desc": "Tüm taleplerin tek noktadan karşılanması ve yönlendirilmesi."
+                },
+                {
+                  "title": "Incident",
+                  "desc": "Hizmet kesintilerinin hızlı çözümü ve yönetimi."
+                },
+                {
+                  "title": "Request Fulfillment",
+                  "desc": "Kullanıcı isteklerinin iş akışları ile karşılanması."
+                },
+                {
+                  "title": "Problem",
+                  "desc": "Kök neden analizi ile tekrarlayan sorunların engellenmesi."
+                },
+                {
+                  "title": "Change",
+                  "desc": "Değişikliklerin risk analizi ve onay süreçleri ile yönetimi."
+                },
+                {
+                  "title": "Release",
+                  "desc": "Sürüm ve yaygınlaştırma süreçlerinin planlanması."
+                },
+                {
+                  "title": "Asset & Capacity",
+                  "desc": "Varlık yönetimi ve kapasite planlama süreçleri."
+                }
               ]
             },
             {
-              "id": "ppm", "title": "PPM", "subtitle": "Project Portfolio Management",
+              "id": "ppm",
+              "title": "PPM",
+              "subtitle": "Project Portfolio Management",
               "description": "Talep, proje ve portföy süreçlerinin bütünleşik yönetimi.",
               "modules": [
-                { "title": "Demand", "desc": "Taleplerin toplanması, değerlendirilmesi ve önceliklendirilmesi." },
-                { "title": "Project", "desc": "Onaylanan taleplerin proje olarak planlanması ve yürütülmesi." },
-                { "title": "Portfolio", "desc": "Projelerin stratejik hedeflere göre portföy bazında yönetimi." },
-                { "title": "Finance & Budget", "desc": "Proje bütçelerinin ve finansal kaynakların takibi." },
-                { "title": "SDLC (Scrum)", "desc": "Yazılım geliştirme yaşam döngüsü ve çevik proje yönetimi." }
+                {
+                  "title": "Demand",
+                  "desc": "Taleplerin toplanması, değerlendirilmesi ve önceliklendirilmesi."
+                },
+                {
+                  "title": "Project",
+                  "desc": "Onaylanan taleplerin proje olarak planlanması ve yürütülmesi."
+                },
+                {
+                  "title": "Portfolio",
+                  "desc": "Projelerin stratejik hedeflere göre portföy bazında yönetimi."
+                },
+                {
+                  "title": "Finance & Budget",
+                  "desc": "Proje bütçelerinin ve finansal kaynakların takibi."
+                },
+                {
+                  "title": "SDLC (Scrum)",
+                  "desc": "Yazılım geliştirme yaşam döngüsü ve çevik proje yönetimi."
+                }
               ]
             },
             {
-              "id": "itom", "title": "ITOM", "subtitle": "IT Operations Management",
+              "id": "itom",
+              "title": "ITOM",
+              "subtitle": "IT Operations Management",
               "description": "IT Operasyonlarının otomasyon ve keşif yetenekleri ile güçlendirilmesi.",
               "modules": [
-                { "title": "Orchestration", "desc": "Operasyonel süreçlerin otomasyonu ve iş akışı yönetimi." },
-                { "title": "Client Discovery", "desc": "Son kullanıcı cihazlarının ağ üzerinde keşfedilmesi." },
-                { "title": "Infrastructure Discovery", "desc": "Sunucu ve ağ altyapısının otomatik keşfi." },
-                { "title": "Service Mapping", "desc": "İş servisleri ve altyapı ilişkilerinin haritalanması." },
-                { "title": "Event Management", "desc": "Olayların izlenmesi, korelasyonu ve yönetimi." }
+                {
+                  "title": "Orchestration",
+                  "desc": "Operasyonel süreçlerin otomasyonu ve iş akışı yönetimi."
+                },
+                {
+                  "title": "Client Discovery",
+                  "desc": "Son kullanıcı cihazlarının ağ üzerinde keşfedilmesi."
+                },
+                {
+                  "title": "Infrastructure Discovery",
+                  "desc": "Sunucu ve ağ altyapısının otomatik keşfi."
+                },
+                {
+                  "title": "Service Mapping",
+                  "desc": "İş servisleri ve altyapı ilişkilerinin haritalanması."
+                },
+                {
+                  "title": "Event Management",
+                  "desc": "Olayların izlenmesi, korelasyonu ve yönetimi."
+                }
               ]
             }
           ]
@@ -2939,31 +2960,119 @@
             "heading": "MeetSense Nedir?",
             "subtitle": "Kurumsal ekiplerin toplantılarına otomatik katılır, yüksek kaliteli ses kaydı alır, AI ile transkript üretir ve analizlerle değerini maksimize eder.",
             "capabilities": [
-              { "name": "Takvim Entegrasyonu", "desc": "Takviminizi okur, planlanmış toplantılarınıza otomatik olarak katılır." },
-              { "name": "Yüksek Kaliteli Kayıt", "desc": "Otomatik ses kaydı ile konuşulan her şeyi güvenle yedekler." },
-              { "name": "AI Transkript", "desc": "Speaker Diarization ile kimin ne dediğini metne dökerek ayrıştırır." },
-              { "name": "Derinlemesine Analiz", "desc": "Gelişmiş AI destekli analizler ile kararları ve aksiyonları tespit eder." }
+              {
+                "name": "Takvim Entegrasyonu",
+                "desc": "Takviminizi okur, planlanmış toplantılarınıza otomatik olarak katılır."
+              },
+              {
+                "name": "Yüksek Kaliteli Kayıt",
+                "desc": "Otomatik ses kaydı ile konuşulan her şeyi güvenle yedekler."
+              },
+              {
+                "name": "AI Transkript",
+                "desc": "Speaker Diarization ile kimin ne dediğini metne dökerek ayrıştırır."
+              },
+              {
+                "name": "Derinlemesine Analiz",
+                "desc": "Gelişmiş AI destekli analizler ile kararları ve aksiyonları tespit eder."
+              }
             ]
           },
           "process": {
             "heading": "Toplantı Yaşam Döngüsü",
             "subtitle": "Başlangıçtan tamamlanmaya kadar her adım otomatik yönetilir.",
             "steps": [
-              { "num": "01", "title": "Planlandı", "desc": "Takvim entegrasyonu ile otomatik veya manuel olarak toplantılar tespit edilir." },
-              { "num": "02", "title": "Bot Katılıyor", "desc": "Kural bazlı veya manuel tetikleyici ile sanal asistanımız görüşmeye katılır." },
-              { "num": "03", "title": "Kayıt Ediliyor", "desc": "Yüksek kalitede ses ve veri kaydı aktif hale gelir." },
-              { "num": "04", "title": "İşleniyor", "desc": "Ses verisi AI ile metne dökülür ve anlamlı analizler için işlenir." },
-              { "num": "05", "title": "Tamamlandı", "desc": "Zengin raporlar, aksiyon maddeleri ve entegrasyon çıktıları sunulur." }
+              {
+                "num": "01",
+                "title": "Planlandı",
+                "desc": "Takvim entegrasyonu ile otomatik veya manuel olarak toplantılar tespit edilir."
+              },
+              {
+                "num": "02",
+                "title": "Bot Katılıyor",
+                "desc": "Kural bazlı veya manuel tetikleyici ile sanal asistanımız görüşmeye katılır."
+              },
+              {
+                "num": "03",
+                "title": "Kayıt Ediliyor",
+                "desc": "Yüksek kalitede ses ve veri kaydı aktif hale gelir."
+              },
+              {
+                "num": "04",
+                "title": "İşleniyor",
+                "desc": "Ses verisi AI ile metne dökülür ve anlamlı analizler için işlenir."
+              },
+              {
+                "num": "05",
+                "title": "Tamamlandı",
+                "desc": "Zengin raporlar, aksiyon maddeleri ve entegrasyon çıktıları sunulur."
+              }
             ]
           },
           "features": {
             "heading": "Platformun Gücünü Keşfedin",
             "subtitle": "Sadece kayıt tutmanın ötesine geçen, yapay zeka destekli akıllı özellikler.",
             "items": [
-              { "id": "ai-transcript", "title": "AI Transkript ve Analiz Detayları", "description": "Klasik metin dökümünün ötesinde, her konuşmayı bağlamına oturtan gelişmiş analizler.", "items": [ { "title": "Konuşmacı Bazlı Ayrım", "desc": "Speaker Diarization ile her sözün sahibini net biçimde tespit eder." }, { "title": "Segment Bazlı Dinleme", "desc": "Transkripte tıklayarak o anki sese anında gidin." } ] },
-              { "id": "chat-bot", "title": "MeetSense Chatbot", "description": "Verilerinizle doğal dilde konuşun. Geçmişi veya mevcut toplantıyı anlık olarak sorgulayın.", "items": [ { "title": "Anlık Analiz", "desc": "Devam eden toplantıda bile anında özet alın." }, { "title": "Geçmiş Tarama", "desc": "Belirli bir projeye veya ekibe ait toplantı serilerini tarayın." } ] },
-              { "id": "dashboard", "title": "Organizasyonel İçgörüler", "description": "Tüm toplantılarınızın büyük resmi. Ekiplerin üretkenliğini kuş bakışı değerlendirin.", "items": [ { "title": "Haftalık & Aylık Özetler", "desc": "Toplantı, karar ve aksiyon istatistiklerine tek bakış." }, { "title": "Trend Analizi", "desc": "En çok konuşulan konuları ve riskleri tespit edin." } ] },
-              { "id": "integrations", "title": "İş Takibi & Entegrasyonlar", "description": "AI ile alınan kararlar otomatik olarak Jira, Trello gibi iş platformlarınıza akar.", "items": [ { "title": "Jira Entegrasyonu", "desc": "Teknik kararları otomatik Jira tasklerine dönüştürün." }, { "title": "AI Atama Algoritması", "desc": "Görevi transkripten çıkarıp doğru kişiye linkler." } ] }
+              {
+                "id": "ai-transcript",
+                "title": "AI Transkript ve Analiz Detayları",
+                "description": "Klasik metin dökümünün ötesinde, her konuşmayı bağlamına oturtan gelişmiş analizler.",
+                "items": [
+                  {
+                    "title": "Konuşmacı Bazlı Ayrım",
+                    "desc": "Speaker Diarization ile her sözün sahibini net biçimde tespit eder."
+                  },
+                  {
+                    "title": "Segment Bazlı Dinleme",
+                    "desc": "Transkripte tıklayarak o anki sese anında gidin."
+                  }
+                ]
+              },
+              {
+                "id": "chat-bot",
+                "title": "MeetSense Chatbot",
+                "description": "Verilerinizle doğal dilde konuşun. Geçmişi veya mevcut toplantıyı anlık olarak sorgulayın.",
+                "items": [
+                  {
+                    "title": "Anlık Analiz",
+                    "desc": "Devam eden toplantıda bile anında özet alın."
+                  },
+                  {
+                    "title": "Geçmiş Tarama",
+                    "desc": "Belirli bir projeye veya ekibe ait toplantı serilerini tarayın."
+                  }
+                ]
+              },
+              {
+                "id": "dashboard",
+                "title": "Organizasyonel İçgörüler",
+                "description": "Tüm toplantılarınızın büyük resmi. Ekiplerin üretkenliğini kuş bakışı değerlendirin.",
+                "items": [
+                  {
+                    "title": "Haftalık & Aylık Özetler",
+                    "desc": "Toplantı, karar ve aksiyon istatistiklerine tek bakış."
+                  },
+                  {
+                    "title": "Trend Analizi",
+                    "desc": "En çok konuşulan konuları ve riskleri tespit edin."
+                  }
+                ]
+              },
+              {
+                "id": "integrations",
+                "title": "İş Takibi & Entegrasyonlar",
+                "description": "AI ile alınan kararlar otomatik olarak Jira, Trello gibi iş platformlarınıza akar.",
+                "items": [
+                  {
+                    "title": "Jira Entegrasyonu",
+                    "desc": "Teknik kararları otomatik Jira tasklerine dönüştürün."
+                  },
+                  {
+                    "title": "AI Atama Algoritması",
+                    "desc": "Görevi transkripten çıkarıp doğru kişiye linkler."
+                  }
+                ]
+              }
             ]
           },
           "values": {
@@ -2972,12 +3081,36 @@
             "subtitle": "MeetSense size sadece kayıt araçları sunmaz; aksiyon alır, riskleri tespit eder ve toplantılarınızı organizasyonel değere dönüştürür.",
             "cta": "Daha Fazla Bilgi İstiyorum",
             "items": [
-              { "title": "Zaman Tasarrufu", "desc": "Not alma ve rapor yazma süreleri ortadan kalkar.", "num": "01" },
-              { "title": "Güvenli İçerik", "desc": "Hassas içerikler sadece yetkili kişilere ulaşır.", "num": "02" },
-              { "title": "Aksiyon Takibi", "desc": "Her karar kaydedilir, sorumlu atanır ve takip edilir.", "num": "03" },
-              { "title": "Derin Analiz", "desc": "Riskler ve açık konular otomatik tespit edilir.", "num": "04" },
-              { "title": "Doğal Dil Sorgusu", "desc": "Okumak yerine soru sorun, anında cevap alın.", "num": "05" },
-              { "title": "Trend & Pattern", "desc": "Çoklu toplantı verilerinden trendleri yakalayın.", "num": "06" }
+              {
+                "title": "Zaman Tasarrufu",
+                "desc": "Not alma ve rapor yazma süreleri ortadan kalkar.",
+                "num": "01"
+              },
+              {
+                "title": "Güvenli İçerik",
+                "desc": "Hassas içerikler sadece yetkili kişilere ulaşır.",
+                "num": "02"
+              },
+              {
+                "title": "Aksiyon Takibi",
+                "desc": "Her karar kaydedilir, sorumlu atanır ve takip edilir.",
+                "num": "03"
+              },
+              {
+                "title": "Derin Analiz",
+                "desc": "Riskler ve açık konular otomatik tespit edilir.",
+                "num": "04"
+              },
+              {
+                "title": "Doğal Dil Sorgusu",
+                "desc": "Okumak yerine soru sorun, anında cevap alın.",
+                "num": "05"
+              },
+              {
+                "title": "Trend & Pattern",
+                "desc": "Çoklu toplantı verilerinden trendleri yakalayın.",
+                "num": "06"
+              }
             ]
           }
         }
@@ -3002,10 +3135,22 @@
             "body": "Kurum içinde tekrar eden sorularla zaman kaybetmeyin. Doc2Bot, dokümantasyonunuzu yaşayan bir bilgi kaynağına dönüştürür.",
             "learnMore": "Detaylı Bilgi Al",
             "items": [
-              { "title": "Confluence Entegrasyonu", "desc": "Mevcut Confluence alanlarınızı (Spaces) doğrudan bağlayın. Ekstra veri girişine gerek kalmadan botunuz hazır." },
-              { "title": "Doğru ve Güvenilir", "desc": "Doc2Bot hayal kurmaz (hallucination-free). Sadece dokümanlarınızda var olan bilgiyi referans vererek sunar." },
-              { "title": "Çoklu Dil Desteği", "desc": "Dokümanlarınız İngilizce olsa bile çalışanlarınız Türkçe sorabilir. Doc2Bot diller arası çeviri yaparak yanıtlar." },
-              { "title": "Slack & Teams", "desc": "Çalışanlarınızın halihazırda kullandığı iletişim kanallarına (Slack, MS Teams) entegre olur." }
+              {
+                "title": "Confluence Entegrasyonu",
+                "desc": "Mevcut Confluence alanlarınızı (Spaces) doğrudan bağlayın. Ekstra veri girişine gerek kalmadan botunuz hazır."
+              },
+              {
+                "title": "Doğru ve Güvenilir",
+                "desc": "Doc2Bot hayal kurmaz (hallucination-free). Sadece dokümanlarınızda var olan bilgiyi referans vererek sunar."
+              },
+              {
+                "title": "Çoklu Dil Desteği",
+                "desc": "Dokümanlarınız İngilizce olsa bile çalışanlarınız Türkçe sorabilir. Doc2Bot diller arası çeviri yaparak yanıtlar."
+              },
+              {
+                "title": "Slack & Teams",
+                "desc": "Çalışanlarınızın halihazırda kullandığı iletişim kanallarına (Slack, MS Teams) entegre olur."
+              }
             ]
           }
         }
@@ -3033,9 +3178,18 @@
             "heading": "Geliştiricilerin En Sevmediği İşte En Büyük Yardımcı",
             "body": "Kod yazmak keyifli ama dokümantasyon sıkıcıdır. DocMind ile teknik borçlarınız azalır, on-boarding süreleri kısalır.",
             "items": [
-              { "title": "Esnek Kapsam", "desc": "İster üst seviye mimari özeti, ister fonksiyon bazlı detaylı API dokümanı. İhtiyacınıza göre ayarlayın." },
-              { "title": "Özelleştirilebilir Başlıklar", "desc": "\"Hakkında / Genel Bakış\", \"Mimari & Sistem Tasarımı\", \"API Referansı\" gibi dilediğiniz başlıkları seçerek doküman yapısını siz belirleyin." },
-              { "title": "Dil Desteği", "desc": "Dokümanlarınızın dilini seçin (TR/EN). Global ekipler için İngilizce, yerel ekipler için Türkçe çıktılar alın." }
+              {
+                "title": "Esnek Kapsam",
+                "desc": "İster üst seviye mimari özeti, ister fonksiyon bazlı detaylı API dokümanı. İhtiyacınıza göre ayarlayın."
+              },
+              {
+                "title": "Özelleştirilebilir Başlıklar",
+                "desc": "\"Hakkında / Genel Bakış\", \"Mimari & Sistem Tasarımı\", \"API Referansı\" gibi dilediğiniz başlıkları seçerek doküman yapısını siz belirleyin."
+              },
+              {
+                "title": "Dil Desteği",
+                "desc": "Dokümanlarınızın dilini seçin (TR/EN). Global ekipler için İngilizce, yerel ekipler için Türkçe çıktılar alın."
+              }
             ]
           },
           "cta": {
@@ -3086,101 +3240,60 @@
       }
     }
   },
-  "hr_page": {
-    "hero": {
-      "title": "Yeteneklerinize Değer Veriyoruz",
-      "subtitle": "Tutkulu, yenilikçi ve sürekli öğrenen bir ekibin parçası olun. Kariyerinizi bizimle şekillendirin."
-    },
-    "values": {
-      "title": "Değerlerimiz",
-      "subtitle": "Bizi biz yapan, çalışma şeklimizi ve kararlarımızı yönlendiren temel prensiplerimiz.",
-      "innovation": {
-        "title": "İnovasyon Tutkusu",
-        "description": "Sürekli gelişim ve yeni teknolojileri keşfetme arzusu DNA'mızda var. Hata yapmaktan korkmadan deneriz."
-      },
-      "success": {
-        "title": "Birlikte Başarı",
-        "description": "Takım çalışmasına inanırız. Birbirimizi destekler, bilgiyi paylaşır ve başarıyı birlikte kutlarız."
-      },
-      "human": {
-        "title": "İnsan Odaklılık",
-        "description": "Çalışanlarımızın mutluluğu ve gelişimi önceliğimizdir. Adil, kapsayıcı ve saygılı bir ortam sunarız."
-      }
-    },
-    "life": {
-      "title": "BGTS'de Yaşam",
-      "subtitle": "Sadece çalışmıyoruz; birlikte üretiyor, eğleniyor ve büyüyoruz. İşte ofisimizden ve ekibimizden kareler.",
-      "caption1": "Birlikte Üretim Kültürü",
-      "caption2": "Global Mühendislik Ekibi",
-      "caption3": "Ofisimizden Kareler",
-      "location": "Maslak, İstanbul — Teknoloji Üssü"
-    },
-    "why": {
-      "title": "Neden BGTS?",
-      "items": [
-        {
-          "title": "Sürekli Eğitim",
-          "desc": "Udemy, Pluralsight üyelikleri ve sertifika destekleri."
-        },
-        {
-          "title": "Esnek Yan Haklar",
-          "desc": "Özel sağlık sigortası, yemek kartı ve spor desteği."
-        },
-        {
-          "title": "Mutlu Ofis",
-          "desc": "Ergonomik çalışma ortamı, playstation köşesi ve happy hour'lar."
-        },
-        {
-          "title": "Kariyer Gelişimi",
-          "desc": "Net kariyer yolu ve düzenli performans geri bildirimleri."
-        }
-      ]
-    },
-    "young_teaser": {
-      "title": "Geleceği Kodlamaya Hazır Mısın?",
-      "subtitle": "Sıradan bir staj veya iş başlangıcı değil. Gerçek projeler, modern teknolojiler ve sınırsız gelişim dünyasının kapılarını arala.",
-      "cta": "Programı İncele"
-    },
-    "passion": {
-      "title": "Sadece Bir İş Değil, <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600\">Tutku.</span>",
-      "subtitle": "BGTS'de mühendislik, kod yazmaktan fazlasıdır. Birlikte öğrenir, birlikte eğlenir ve geleceği birlikte inşa ederiz.",
-      "path": {
-        "title": "Hızlı Kariyer Yolu",
-        "desc": "Performans odaklı net ilerleme adımları ve düzenli geri bildirimlerle yerinde sayma, sürekli yüksel."
-      },
-      "vision": {
-        "title": "Global Vizyon",
-        "desc": "Uluslararası standartlarda projeler ve dünya çapında teknolojilerle sınırlarını zorla."
-      },
-      "talent_count": "+50 Genç Yetenek",
-      "talent_wait": "Seninle tanışmayı bekliyor."
-    },
-    "testimonials": {
-      "title": "Çalışanlarımız Ne Diyor?",
-      "items": [
-        {
-          "quote": "BGTS'de çalışmak, sürekli öğrenmek ve gelişmek demek. Burada fikirlerinize değer veriliyor ve inisiyatif almanız destekleniyor.",
-          "author": "Ayşe Yılmaz",
-          "role": "Senior Software Engineer - 3 Yıl"
-        },
-        {
-          "quote": "Samimi ve destekleyici bir çalışma ortamı var. Hem profesyonel hem de kişisel gelişimim için harika bir yer.",
-          "author": "Mehmet Demir",
-          "role": "DevOps Engineer - 1.5 Yıl"
-        }
-      ]
-    },
-    "footer_cta": {
-      "title": "Başka Bir Pozisyon mu Arıyorsunuz?",
-      "subtitle": "Açık pozisyonlarımızı LinkedIn üzerinden takip edebilir veya genel başvuru için bize ulaşabilirsiniz.",
-      "cta": "LinkedIn'de Bizi Takip Edin"
-    }
-  },
   "meetsense_viewer": {
     "title": "MeetSense AI Sunum Görüntüleyici",
     "slides_label": "Slayt",
     "other_images": "Diğer Görseller",
     "main_image": "Ana Görsel"
+  },
+  "cookies": {
+    "title": "Gizliliğinize değer veriyoruz",
+    "description": "Tarama deneyiminizi geliştirmek, kişiselleştirilmiş reklamlar veya içerik sunmak ve trafiğimizi analiz etmek için çerezler kullanıyoruz. \"Tümünü Kabul Et\"e tıklayarak çerez kullanımımıza onay vermiş olursunuz.",
+    "customise": "Özelleştir",
+    "rejectAll": "Tümünü Reddet",
+    "acceptAll": "Tümünü Kabul Et",
+    "revisitLabel": "Onay Tercihleri",
+    "preferenceTitle": "Onay Tercihlerini Özelleştir",
+    "preferenceIntro": [
+      "Sitede verimli gezinmenize ve belirli işlevleri yerine getirmenize yardımcı olmak için çerezler kullanıyoruz. Tüm çerezlere ilişkin ayrıntılı bilgileri aşağıdaki onay kategorilerinde bulabilirsiniz.",
+      "\"Gerekli\" olarak sınıflandırılan çerezler, sitenin temel işlevlerini etkinleştirmek için gerekli olduklarından tarayıcınızda saklanır.",
+      "Bu web sitesini nasıl kullandığınızı analiz etmemize, tercihlerinizi saklamamıza ve size uygun içerik ile reklamları sunmamıza yardımcı olan üçüncü taraf çerezleri de kullanıyoruz. Bu çerezler yalnızca önceden onay vermeniz halinde tarayıcınızda saklanır.",
+      "Bu çerezlerin bir kısmını veya tamamını etkinleştirmeyi ya da devre dışı bırakmayı seçebilirsiniz; ancak bazılarını devre dışı bırakmak tarama deneyiminizi etkileyebilir."
+    ],
+    "savePreferences": "Tercihlerimi Kaydet",
+    "close": "Kapat",
+    "categories": {
+      "necessary": {
+        "title": "Gerekli",
+        "description": "Gerekli çerezler, güvenli oturum açma veya onay tercihlerinizi ayarlama gibi sitenin temel özelliklerini etkinleştirmek için zorunludur. Bu çerezler kişisel olarak tanımlanabilir veri saklamaz.",
+        "alwaysActive": "Her Zaman Etkin",
+        "noCookies": "Gösterilecek çerez yok."
+      },
+      "functional": {
+        "title": "İşlevsel",
+        "description": "İşlevsel çerezler, web sitesi içeriğini sosyal medya platformlarında paylaşma, geri bildirim toplama ve diğer üçüncü taraf özellikleri gibi belirli işlevleri yerine getirmeye yardımcı olur.",
+        "alwaysActive": "Her Zaman Etkin",
+        "noCookies": "Gösterilecek çerez yok."
+      },
+      "analytics": {
+        "title": "Analitik",
+        "description": "Analitik çerezler, ziyaretçilerin web sitesiyle nasıl etkileşime girdiğini anlamak için kullanılır. Ziyaretçi sayısı, hemen çıkma oranı, trafik kaynağı gibi metrikler hakkında bilgi sağlarlar.",
+        "alwaysActive": "Her Zaman Etkin",
+        "noCookies": "Gösterilecek çerez yok."
+      },
+      "performance": {
+        "title": "Performans",
+        "description": "Performans çerezleri, web sitesinin temel performans göstergelerini anlamak ve analiz etmek için kullanılır; bu da ziyaretçiler için daha iyi bir kullanıcı deneyimi sunulmasına yardımcı olur.",
+        "alwaysActive": "Her Zaman Etkin",
+        "noCookies": "Gösterilecek çerez yok."
+      },
+      "advertisement": {
+        "title": "Reklam",
+        "description": "Reklam çerezleri, daha önce ziyaret ettiğiniz sayfalara göre özelleştirilmiş reklamlar sunmak ve reklam kampanyalarının etkinliğini analiz etmek için kullanılır.",
+        "alwaysActive": "Her Zaman Etkin",
+        "noCookies": "Gösterilecek çerez yok."
+      }
+    }
   },
   "breadcrumb": {
     "home": "Ana Sayfa",
@@ -3203,7 +3316,6 @@
     "yerini-al": "Yerini Al",
     "kariyer-yollari": "Kariyer Yolları",
     "calisma-kulturu": "Çalışma Kültürü",
-    "acik-pozisyonlar": "Açık Pozisyonlar",
     "basari-hikayeleri": "Başarı Hikayeleri",
     "makaleler": "Makaleler",
     "etkinlikler": "Etkinlikler",
@@ -3222,9 +3334,6 @@
     "products": "Ürünler",
     "contact": "İletişim",
     "about": "Hakkımızda",
-    "hr": "İnsan Kaynakları",
-    "genc-muhendis-programi": "Genç Mühendis Programı",
-    "yetenek-gelisim-modeli": "Yetenek Gelişim Modeli",
     "software-development": "Yazılım Geliştirme",
     "managed-services": "Yönetilen Hizmetler",
     "devops": "DevOps",
@@ -3236,7 +3345,6 @@
     "doc2bot": "Doc2Bot",
     "docmind": "DocMind",
     "consultancy": "Danışmanlık",
-    "talent": "Yetenek Gelişim Programı",
     "career-paths": "Kariyer Yolları",
     "culture": "Çalışma Kültürü",
     "learning": "Eğitim ve Gelişim",
@@ -3248,7 +3356,6 @@
     "meetsense": "MeetSense",
     "meetsense-viewer": "MeetSense Görüntüleyici",
     "praxila": "Praxila",
-    "cortex": "Cortex",
     "social-contribution": "Sürdürülebilir Değer Programı",
     "retail": "Perakende",
     "telecommunications": "Telekomünikasyon"

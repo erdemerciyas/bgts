@@ -22,10 +22,6 @@ export const ROUTE_MAP: Record<string, { tr: string; en: string }> = {
     tr: '/hizmetler/yonetilen-masaustu-hizmetleri',
     en: '/services/managed-services',
   },
-  '/services/devops': {
-    tr: '/hizmetler/servis-dayanikliligi-muhendisligi',
-    en: '/services/devops',
-  },
   '/services': { tr: '/hizmetler', en: '/services' },
   '/industries': { tr: '/sektorler', en: '/industries' },
   '/resources': { tr: '/bilgi-merkezi', en: '/resources' },
@@ -43,19 +39,10 @@ export const ROUTE_MAP: Record<string, { tr: string; en: string }> = {
   '/social-contribution': { tr: '/yerini-al', en: '/social-contribution' },
   '/career-paths': { tr: '/kariyer-yollari', en: '/career-paths' },
   '/culture': { tr: '/calisma-kulturu', en: '/culture' },
-  '/genc-muhendis-programi': {
-    tr: '/genc-muhendis-programi',
-    en: '/genc-muhendis-programi',
-  },
-  '/hr': { tr: '/acik-pozisyonlar', en: '/hr' },
   '/resources/success-stories': { tr: '/basari-hikayeleri', en: '/resources/success-stories' },
   '/resources/infographics': { tr: '/infografikler', en: '/resources/infographics' },
   '/partnerships': { tr: '/is-ortaklari', en: '/partnerships' },
   '/learning': { tr: '/egitim-ve-gelisim', en: '/learning' },
-  '/yetenek-gelisim-modeli': {
-    tr: '/yetenek-gelisim-modeli',
-    en: '/yetenek-gelisim-modeli',
-  },
   '/meetsense-viewer': { tr: '/meetsense-goruntuleyici', en: '/meetsense-viewer' },
   '/products/cortex': { tr: '/urunler/cortex', en: '/products/cortex' },
   '/products/meetsense': { tr: '/urunler/meetsense', en: '/products/meetsense' },
@@ -87,11 +74,13 @@ export const TR_LEGACY_REDIRECTS: Record<string, string> = {
     '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
   '/services/managed-desktop-services': '/hizmetler/yonetilen-masaustu-hizmetleri',
   '/services/site-reliability-engineering':
-    '/hizmetler/servis-dayanikliligi-muhendisligi',
+    '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
   '/services/software-engineering': '/hizmetler/yazilim-muhendisligi',
   '/services/software-development': '/hizmetler/yazilim-muhendisligi',
   '/services/managed-services': '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
-  '/services/devops': '/hizmetler/servis-dayanikliligi-muhendisligi',
+  '/services/devops': '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
+  '/hizmetler/servis-dayanikliligi-muhendisligi':
+    '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
   '/services/data-ai': '/hizmetler/data-ai',
   '/services/professional-services': '/hizmetler/professional-services',
   '/sectors': '/sektorler',
@@ -112,9 +101,12 @@ export const TR_LEGACY_REDIRECTS: Record<string, string> = {
   '/career-paths': '/kariyer-yollari',
   '/working-culture': '/calisma-kulturu',
   '/culture': '/calisma-kulturu',
-  '/young-engineers': '/genc-muhendis-programi',
-  '/open-positions': '/acik-pozisyonlar',
-  '/hr': '/acik-pozisyonlar',
+  '/young-engineers': '/kariyer-yollari',
+  '/open-positions': '/kariyer-yollari',
+  '/hr': '/kariyer-yollari',
+  '/genc-muhendis-programi': '/kariyer-yollari',
+  '/yetenek-gelisim-modeli': '/kariyer-yollari',
+  '/acik-pozisyonlar': '/kariyer-yollari',
   '/apply': '/basvuru',
   '/resources/success-stories': '/basari-hikayeleri',
   '/case-studies': '/basari-hikayeleri',
@@ -211,4 +203,17 @@ export function resolveTrRewrite(urlPath: string): string | null {
 export function resolveTrLegacyRedirect(urlPath: string): string | null {
   const normalized = normalizePath(urlPath);
   return TR_LEGACY_REDIRECTS[normalized] ?? null;
+}
+
+/** Removed pages: internal path → replacement internal path (both locales). */
+export const OBSOLETE_INTERNAL_REDIRECTS: Record<string, string> = {
+  '/services/devops': '/services/managed-services',
+  '/genc-muhendis-programi': '/career-paths',
+  '/yetenek-gelisim-modeli': '/career-paths',
+  '/hr': '/career-paths',
+};
+
+/** Replacement internal path for a removed route URL segment. */
+export function getObsoleteRedirectTarget(urlPath: string): string | null {
+  return OBSOLETE_INTERNAL_REDIRECTS[normalizePath(urlPath)] ?? null;
 }

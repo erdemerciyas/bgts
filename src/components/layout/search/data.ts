@@ -25,7 +25,7 @@ export const SEARCH_ITEMS: SearchItem[] = [
     {
         title: "DevOps & SRE",
         description: "CI/CD süreçleri, otomasyon ve bulut mühendisliği hizmetleri.",
-        href: "/services/devops",
+        href: "/services/managed-services",
         category: "Hizmet",
         tags: ["otomasyon", "pipeline", "docker", "kubernetes", "jenkins", "ci/cd", "sre", "bulut", "cloud"]
     },
@@ -119,20 +119,6 @@ export const SEARCH_ITEMS: SearchItem[] = [
     },
 
     // Kariyer
-    {
-        title: "Genç Mühendis Programı",
-        description: "Yeni mezunlar için yazılım, test ve altyapı eğitim programları.",
-        href: "/genc-muhendis-programi",
-        category: "Kariyer",
-        tags: ["staj", "bootcamp", "yeni mezun", "genç mühendis", "program", "iş başvurusu", "ik", "kariyer"]
-    },
-    {
-        title: "Yetenek Gelişim Modeli",
-        description: "Kariyer yolculuğunu planla; mentorluk, eğitim ve yetkinlik gelişim aşamaları.",
-        href: "/yetenek-gelisim-modeli",
-        category: "Kariyer",
-        tags: ["yetenek", "gelişim", "model", "kariyer", "mentorluk", "eğitim"]
-    },
     {
         title: "Kariyer Yolları",
         description: "Potansiyelinizi ortaya çıkaran net ve şeffaf kariyer haritaları.",

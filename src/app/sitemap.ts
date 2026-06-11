@@ -15,7 +15,6 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
   // Hizmetler
   { path: '/services/software-development', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/services/managed-services', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/services/devops', priority: 0.9, changeFrequency: 'monthly' },
 
   // Sektorler
   { path: '/industries/banking', priority: 0.8, changeFrequency: 'monthly' },
@@ -40,9 +39,6 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
   { path: '/career-paths', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/culture', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/learning', priority: 0.6, changeFrequency: 'monthly' },
-  { path: '/genc-muhendis-programi', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/yetenek-gelisim-modeli', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/hr', priority: 0.6, changeFrequency: 'monthly' },
 
   // Kaynaklar
   { path: '/resources/success-stories', priority: 0.6, changeFrequency: 'monthly' },

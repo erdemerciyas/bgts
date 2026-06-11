@@ -4,7 +4,6 @@
       "services": "SERVICES",
       "industries": "INDUSTRIES",
       "products": "PRODUCTS",
-      "talent": "TALENT DEVELOPMENT PROGRAM",
       "resources": "RESOURCES",
       "careers": "CAREERS",
       "about": "ABOUT US"
@@ -26,7 +25,7 @@
         },
         {
           "title": "Nurturing the Engineers of the Future",
-          "subtitle": "We train the next generation of talents who add value to technology through our young engineer programs.",
+          "subtitle": "Clear career paths, a culture of continuous learning, and growth opportunities on real client projects.",
           "ctaText": "Career Opportunities"
         },
         {
@@ -140,8 +139,6 @@
       "defense": "Defense Industry",
       "retailTelecom": "Retail & Telecom",
       "about": "About Us",
-      "careers": "Careers",
-      "talent": "Young Talent",
       "contact": "Contact"
     },
     "copyright": "© 2026 BGTS. All rights reserved."
@@ -155,11 +152,26 @@
       "heading": "BGTS in Numbers",
       "subtitle": "An engineering-focused approach, strong teams, and a growing technology ecosystem.",
       "items": [
-        { "val": "30+", "label": "Years of Experience" },
-        { "val": "2,000+", "label": "Employees" },
-        { "val": "1,400+", "label": "Engineers" },
-        { "val": "1,500+", "label": "Completed Projects" },
-        { "val": "50+", "label": "Talent Development Programs" }
+        {
+          "val": "30+",
+          "label": "Years of Experience"
+        },
+        {
+          "val": "2,000+",
+          "label": "Employees"
+        },
+        {
+          "val": "1,400+",
+          "label": "Engineers"
+        },
+        {
+          "val": "1,500+",
+          "label": "Completed Projects"
+        },
+        {
+          "val": "50+",
+          "label": "Talent Development Programs"
+        }
       ]
     },
     "stats": [
@@ -1497,305 +1509,6 @@
       "imageAlt": "Adding Value to Society"
     }
   },
-  "youngEngineers": {
-    "hero": {
-      "title": "Engineers Building",
-      "highlight": "the Future",
-      "subtitle": "With the Young Engineers Program, get a",
-      "subtitleBold": "strong start",
-      "subtitleEnd": "in your career through project-based learning, real project simulations and mentor support.",
-      "applyBtn": "Apply Now",
-      "exploreBtn": "Explore Programs"
-    },
-    "metrics": [
-      {
-        "val": "3",
-        "label": "Programs",
-        "desc": "Software, Test, Infrastructure"
-      },
-      {
-        "val": "12",
-        "label": "Weeks",
-        "desc": "Structured training"
-      },
-      {
-        "val": "1:1",
-        "label": "Mentoring",
-        "desc": "Senior guidance"
-      },
-      {
-        "val": "100%",
-        "label": "Real Projects",
-        "desc": "Live systems"
-      }
-    ],
-    "culture": {
-      "heading": "Hands-on Learning,",
-      "headingLine2": "Strong Engineering Culture",
-      "imageAlt": "BGTS Young Engineers Culture",
-      "quote": "You gain experience in a strong engineering environment by learning different industry dynamics.",
-      "p1": "The Young Engineer Program offers the opportunity to gain experience with leading companies in various sectors by working on real projects. It prepares you for the future with a strong engineering culture alongside technical development.",
-      "p1Bold": "gain experience with leading companies",
-      "p2": "Throughout the program, you develop not only your technical skills but also your problem-solving approach and team communication. You make a strong start in professional life with modern development processes, real project scenarios and mentor support.",
-      "p2Bold": "problem-solving approach",
-      "features": [
-        {
-          "title": "Real Projects",
-          "desc": "Development on live systems"
-        },
-        {
-          "title": "1:1 Mentoring",
-          "desc": "Senior engineer guidance"
-        },
-        {
-          "title": "Tech Talks",
-          "desc": "Weekly technical presentations"
-        },
-        {
-          "title": "Career Path",
-          "desc": "Full-time career opportunities"
-        }
-      ]
-    },
-    "photoStrip": [
-      {
-        "img": "/images/genc-muhendis/mentorluk.jpg",
-        "title": "Mentoring",
-        "tag": "Growth"
-      },
-      {
-        "img": "/images/genc-muhendis/ogrenme.jpg",
-        "title": "Tech Talks",
-        "tag": "Learning"
-      },
-      {
-        "img": "/images/culture/culture-3.jpg",
-        "title": "Teamwork",
-        "tag": "Culture"
-      },
-      {
-        "img": "/images/genc-muhendis/proje.jpg",
-        "title": "Career Planning",
-        "tag": "Project"
-      }
-    ],
-    "programs": {
-      "sectionHeading": "Which path do",
-      "sectionHeadingHighlight": "you want to take?",
-      "sectionSubtitle": "You can choose one of the different areas of expertise within the Young Engineer Program.",
-      "applyLink": "Apply",
-      "items": [
-        {
-          "id": "track-software",
-          "title": "Software Development",
-          "desc": "Gain modern software engineering skills with end-to-end product development experience.",
-          "items": [
-            "Modern backend & frontend development",
-            "API design and data management",
-            "Testing processes and code quality",
-            "Project development with Agile & Scrum"
-          ]
-        },
-        {
-          "id": "track-test",
-          "title": "Test & Business Analysis",
-          "desc": "Gain testing and analysis expertise that ensures project quality and sustainability.",
-          "items": [
-            "Testing processes and quality assurance",
-            "Manual and automation testing",
-            "Business analysis and requirements management",
-            "Test scenarios and documentation"
-          ]
-        },
-        {
-          "id": "track-infrastructure",
-          "title": "Infrastructure Technologies",
-          "desc": "Gain the skills to design and manage scalable and reliable system infrastructures.",
-          "items": [
-            "Linux and system management",
-            "CI/CD, DevOps and automation",
-            "Cloud platforms (AWS, Azure, GCP)",
-            "Monitoring, logging and tracking"
-          ]
-        }
-      ]
-    },
-    "steps": {
-      "sectionHeading": "Steps to Join the Program",
-      "sectionSubtitle": "Progress with clear and transparent steps from application to joining a project.",
-      "stepLabel": "Step",
-      "items": [
-        {
-          "step": "01",
-          "title": "Application",
-          "desc": "Fill out the online application form, upload your CV and take your first step."
-        },
-        {
-          "step": "02",
-          "title": "Evaluation",
-          "desc": "Participate in a technical competency and motivation assessment."
-        },
-        {
-          "step": "03",
-          "title": "Training Period",
-          "desc": "12-week structured training program and one-on-one mentoring."
-        },
-        {
-          "step": "04",
-          "title": "Join a Project",
-          "desc": "Start taking roles in active projects."
-        }
-      ]
-    },
-    "application": {
-      "heading": "Start Your",
-      "headingHighlight": "Career Strong",
-      "subtitle": "Fill out the form, upload your CV and take your first step into the Young Engineer Program.",
-      "tipsHeading": "Application Tips",
-      "tips": [
-        "Make sure your CV is up to date.",
-        "Talk about your projects and experiences.",
-        "Briefly write about what excites you."
-      ],
-      "notice": "Applications are continuously reviewed. You will be contacted as soon as possible."
-    },
-    "form": {
-      "title": "Apply Now",
-      "subtitle": "Take your first step into the Young Engineer Program by filling out the form.",
-      "fullName": {
-        "label": "Full Name",
-        "placeholder": "Your Full Name"
-      },
-      "email": {
-        "label": "Email",
-        "placeholder": "example@email.com"
-      },
-      "phone": {
-        "label": "Phone",
-        "placeholder": "0555 555 55 55"
-      },
-      "university": {
-        "label": "University",
-        "placeholder": "University Name"
-      },
-      "department": {
-        "label": "Department",
-        "placeholder": "Your Department"
-      },
-      "grade": {
-        "label": "Grade",
-        "placeholder": "Select",
-        "year3": "Junior (3rd Year)",
-        "year4": "Senior (4th Year)",
-        "graduate": "New Graduate",
-        "master": "Master's Degree"
-      },
-      "cv": {
-        "label": "Upload CV",
-        "dragDrop": "Click or drag to select a file",
-        "restrictions": "PDF, DOC, DOCX (Max 5MB)",
-        "errorMsg": "Please upload your current CV."
-      },
-      "message": {
-        "label": "Brief Note",
-        "placeholder": "Anything you want to add..."
-      },
-      "submit": "Submit Application",
-      "submitting": "Submitting...",
-      "success": {
-        "title": "Application Received!",
-        "desc": "Thank you for your interest. We will contact you after evaluating your application."
-      },
-      "error": {
-        "default": "An error occurred",
-        "alert": "An error occurred during your application, please try again."
-      }
-    },
-    "talentAcceleration": {
-      "enterpriseChallenge": {
-        "tag": "Enterprise Delivery Transformation",
-        "title": "Building and Scaling Dedicated Teams Through a Talent Acceleration Model",
-        "p1": "Enterprise organisations frequently face challenges in scaling engineering capacity while maintaining operational consistency, governance, and delivery quality across distributed teams.",
-        "p2": "Traditional hiring models often struggle to support rapid growth demands, particularly in environments requiring specialised technical expertise and long onboarding cycles."
-      },
-      "processFlow": {
-        "title": "The BGTS Talent Acceleration Framework",
-        "subtitle": "A structured approach to building and maturing dedicated engineering teams in close alignment with client needs.",
-        "steps": [
-          {
-            "key": "select",
-            "title": "Select",
-            "businessObj": "Build a strong and scalable talent pipeline",
-            "operationalValue": "Improves candidate quality and deployment readiness"
-          },
-          {
-            "key": "train",
-            "title": "Nurture",
-            "businessObj": "Accelerate workforce readiness",
-            "operationalValue": "Reduces onboarding and adaptation time"
-          },
-          {
-            "key": "deploy",
-            "title": "Position",
-            "businessObj": "Enable immediate operational contribution",
-            "operationalValue": "Improves delivery continuity and scalability"
-          },
-          {
-            "key": "operate",
-            "title": "Manage",
-            "businessObj": "Ensure stable delivery performance",
-            "operationalValue": "Creates measurable and sustainable operational maturity"
-          },
-          {
-            "key": "transfer",
-            "title": "Transfer",
-            "businessObj": "Support long-term workforce integration",
-            "operationalValue": "Creates sustainable client-side capability growth"
-          }
-        ]
-      },
-      "scaleImpact": {
-        "title": "Scale & Impact",
-        "metrics": [
-          { "val": "3,750+", "label": "Candidates Trained" },
-          { "val": "65+", "label": "Dedicated Programmes" },
-          { "val": "45+", "label": "Organisations Supported" }
-        ]
-      },
-      "approach": {
-        "title": "Approach Model",
-        "intro": "Rather than relying on immediate hiring, the model focuses on developing talent and integrating it into delivery environments from an early stage.",
-        "bullets": [
-          "Joint candidate selection with the client",
-          "Structured training and onboarding programmes",
-          "Formation of dedicated delivery teams within BGTS",
-          "Alignment with client tools, processes, and ways of working",
-          "Progressive development into stable, high-performing teams",
-          "Clear pathway for long-term integration if required"
-        ]
-      },
-      "executionModel": {
-        "title": "Execution Model",
-        "bullets": [
-          "Talent is developed through a structured pipeline and deployed into real delivery environments early in the process",
-          "Candidates undergo intensive technical and practical training",
-          "Teams contribute to active projects under experienced leadership",
-          "Delivery is managed with defined KPIs and performance tracking",
-          "Teams mature operationally over a period of up to two years"
-        ]
-      },
-      "outcome": {
-        "title": "Outcomes",
-        "bullets": [
-          "Fully trained, delivery-ready teams aligned with client environments",
-          "Reduced hiring and onboarding risk",
-          "Faster and more reliable ramp-up",
-          "Consistent delivery quality through structured team development",
-          "Sustainable team models with long-term continuity"
-        ]
-      }
-    }
-  },
   "mobileNav": {
     "services": {
       "name": "Services",
@@ -1829,17 +1542,6 @@
       "enterprise": "Enterprise Solutions",
       "hcm": "HCM Platform",
       "docKnowledge": "Document & Knowledge Management"
-    },
-    "talent": {
-      "name": "Talent Development Program",
-      "programs": "Programs",
-      "software": "Software Developer Training",
-      "infrastructure": "Infrastructure Technologies",
-      "test": "Test & Analyst",
-      "apply": "Apply Now"
-    },
-    "talentModel": {
-      "name": "Talent Development Model"
     },
     "resources": {
       "name": "Resources",
@@ -2609,12 +2311,30 @@
             "heading": "Manage Your Recruitment Process End-to-End",
             "subheading": "Powerful features that automate manual processes and enable data-driven decisions.",
             "items": [
-              { "title": "Automatic Job Posting Creation", "desc": "Just enter the position name or upload a file. Let AI prepare the requirements and job description for you in seconds." },
-              { "title": "Smart Candidate Matching", "desc": "Automatically list the most suitable candidates for your postings and the most suitable postings for your candidates. Find the best with the scoring system." },
-              { "title": "AI Chatbot Assistant", "desc": "Ask questions about candidate profiles. Get instant answers to questions like 'What technologies is this candidate strong in?' or 'Does this candidate have leadership qualities?'" },
-              { "title": "CV Analysis & Scoring", "desc": "Analyze uploaded CVs according to criteria such as technical competence, experience, and language. Get an objective and numerical evaluation report." },
-              { "title": "Video Interview Analysis", "desc": "No more watching interview recordings. AI transcribes conversations, parses questions, and analyzes the candidate's answers." },
-              { "title": "Question Pool Generation", "desc": "Generate interview questions specific to the position and candidate. Improve your interview quality with technical and competency-based questions." }
+              {
+                "title": "Automatic Job Posting Creation",
+                "desc": "Just enter the position name or upload a file. Let AI prepare the requirements and job description for you in seconds."
+              },
+              {
+                "title": "Smart Candidate Matching",
+                "desc": "Automatically list the most suitable candidates for your postings and the most suitable postings for your candidates. Find the best with the scoring system."
+              },
+              {
+                "title": "AI Chatbot Assistant",
+                "desc": "Ask questions about candidate profiles. Get instant answers to questions like 'What technologies is this candidate strong in?' or 'Does this candidate have leadership qualities?'"
+              },
+              {
+                "title": "CV Analysis & Scoring",
+                "desc": "Analyze uploaded CVs according to criteria such as technical competence, experience, and language. Get an objective and numerical evaluation report."
+              },
+              {
+                "title": "Video Interview Analysis",
+                "desc": "No more watching interview recordings. AI transcribes conversations, parses questions, and analyzes the candidate's answers."
+              },
+              {
+                "title": "Question Pool Generation",
+                "desc": "Generate interview questions specific to the position and candidate. Improve your interview quality with technical and competency-based questions."
+              }
             ]
           },
           "deepDive": {
@@ -2653,9 +2373,18 @@
             "heading": "Key Features",
             "subheading": "Tools that simplify your CV conversion and management processes.",
             "items": [
-              { "title": "Bulk Processing & Tracking", "desc": "Upload hundreds of CVs to the system at once. Track upload status, success and error rates from a single screen in real time." },
-              { "title": "Smart Conversion", "desc": "Advanced parsing algorithms successfully analyze even complex CV designs and fit them into the standard template." },
-              { "title": "Data Editing", "desc": "Make manual corrections on automatically converted CVs and easily add missing certification or project information." }
+              {
+                "title": "Bulk Processing & Tracking",
+                "desc": "Upload hundreds of CVs to the system at once. Track upload status, success and error rates from a single screen in real time."
+              },
+              {
+                "title": "Smart Conversion",
+                "desc": "Advanced parsing algorithms successfully analyze even complex CV designs and fit them into the standard template."
+              },
+              {
+                "title": "Data Editing",
+                "desc": "Make manual corrections on automatically converted CVs and easily add missing certification or project information."
+              }
             ]
           },
           "cta": {
@@ -2681,12 +2410,42 @@
             "heading": "Overcome Bottlenecks in Traditional Processes",
             "subheading": "Lighten the load on your software teams and reduce the margin of error to zero with Cortex.",
             "items": [
-              { "title": "REVIEWER Agent", "badge": "Review", "desc": "Performs automatic PR reviews, analyzes code quality and security vulnerabilities.", "problem": "Manual code review bottlenecks" },
-              { "title": "DEVELOPER Agent", "badge": "Development", "desc": "Produces standard-quality bug fixes and creates automatic PRs (P2-P4 only).", "problem": "Inconsistent and time-consuming bug fixes" },
-              { "title": "GAP_ANALYZER", "badge": "Analysis", "desc": "Detects and reports inconsistencies between documentation and actual code.", "problem": "Documentation and code inconsistencies" },
-              { "title": "TESTER Agent", "badge": "Testing", "desc": "Writes automatic unit tests for given source code and improves code quality.", "problem": "Missing test coverage and manual test writing" },
-              { "title": "REQUIREMENTS", "badge": "Planning", "desc": "Automatically structures PBIs and test scenarios from Confluence.", "problem": "Time-consuming manual requirements extraction process" },
-              { "title": "Human in the Loop", "badge": "Control", "desc": "Always requires human approval for critical operations and merge decisions.", "problem": "Uncontrolled full automation carrying risk" }
+              {
+                "title": "REVIEWER Agent",
+                "badge": "Review",
+                "desc": "Performs automatic PR reviews, analyzes code quality and security vulnerabilities.",
+                "problem": "Manual code review bottlenecks"
+              },
+              {
+                "title": "DEVELOPER Agent",
+                "badge": "Development",
+                "desc": "Produces standard-quality bug fixes and creates automatic PRs (P2-P4 only).",
+                "problem": "Inconsistent and time-consuming bug fixes"
+              },
+              {
+                "title": "GAP_ANALYZER",
+                "badge": "Analysis",
+                "desc": "Detects and reports inconsistencies between documentation and actual code.",
+                "problem": "Documentation and code inconsistencies"
+              },
+              {
+                "title": "TESTER Agent",
+                "badge": "Testing",
+                "desc": "Writes automatic unit tests for given source code and improves code quality.",
+                "problem": "Missing test coverage and manual test writing"
+              },
+              {
+                "title": "REQUIREMENTS",
+                "badge": "Planning",
+                "desc": "Automatically structures PBIs and test scenarios from Confluence.",
+                "problem": "Time-consuming manual requirements extraction process"
+              },
+              {
+                "title": "Human in the Loop",
+                "badge": "Control",
+                "desc": "Always requires human approval for critical operations and merge decisions.",
+                "problem": "Uncontrolled full automation carrying risk"
+              }
             ],
             "problemLabel": "Problem Solved"
           },
@@ -2696,14 +2455,54 @@
             "outputLabel": "Output:",
             "ruleLabel": "Rule:",
             "items": [
-              { "title": "REVIEWER — Code Reviewer", "desc": "Automatically triggered when a PR is opened in Bitbucket. Analyzes code quality.", "output": "Leaves a comment (report) on the PR.", "rule": "Cannot merge." },
-              { "title": "TESTER — Test Writer", "desc": "Writes automatic unit tests for given source code.", "output": "Test files + Creates PR.", "rule": "Requires human approval before commit." },
-              { "title": "DEVELOPER — Developer", "desc": "Automatically fixes bugs with P2-P4 priority in Jira.", "output": "Bug fix code + PR.", "rule": "PR approval is mandatory. Cannot write new features, cannot touch P1." },
-              { "title": "PLANNER — Planner", "desc": "Breaks complex tasks into subtasks, creates implementation plan.", "output": "Structured plan document.", "rule": "Works as the first step in the E2E pipeline." },
-              { "title": "INDEXER — Indexer", "desc": "Indexes source code, Jira tasks, and Confluence into Qdrant.", "output": "Searchable vector data.", "rule": "Forms the basis for other agents to search." },
-              { "title": "GAP_ANALYZER — Gap Analyzer", "desc": "Finds inconsistencies between documentation and actual code.", "output": "Inconsistency detail report.", "rule": "INDEXER must have run first." },
-              { "title": "MFE_DEVELOPER — Frontend Developer", "desc": "Automatically generates React components and Storybook stories.", "output": "React component + Storybook + PR.", "rule": "Human approval is mandatory." },
-              { "title": "REQUIREMENTS_ANALYST — Requirements Analyst", "desc": "Automatically extracts PBIs and test cases from Confluence pages.", "output": "Requirements list and test scenarios.", "rule": "Converts manual documents to structured format." }
+              {
+                "title": "REVIEWER — Code Reviewer",
+                "desc": "Automatically triggered when a PR is opened in Bitbucket. Analyzes code quality.",
+                "output": "Leaves a comment (report) on the PR.",
+                "rule": "Cannot merge."
+              },
+              {
+                "title": "TESTER — Test Writer",
+                "desc": "Writes automatic unit tests for given source code.",
+                "output": "Test files + Creates PR.",
+                "rule": "Requires human approval before commit."
+              },
+              {
+                "title": "DEVELOPER — Developer",
+                "desc": "Automatically fixes bugs with P2-P4 priority in Jira.",
+                "output": "Bug fix code + PR.",
+                "rule": "PR approval is mandatory. Cannot write new features, cannot touch P1."
+              },
+              {
+                "title": "PLANNER — Planner",
+                "desc": "Breaks complex tasks into subtasks, creates implementation plan.",
+                "output": "Structured plan document.",
+                "rule": "Works as the first step in the E2E pipeline."
+              },
+              {
+                "title": "INDEXER — Indexer",
+                "desc": "Indexes source code, Jira tasks, and Confluence into Qdrant.",
+                "output": "Searchable vector data.",
+                "rule": "Forms the basis for other agents to search."
+              },
+              {
+                "title": "GAP_ANALYZER — Gap Analyzer",
+                "desc": "Finds inconsistencies between documentation and actual code.",
+                "output": "Inconsistency detail report.",
+                "rule": "INDEXER must have run first."
+              },
+              {
+                "title": "MFE_DEVELOPER — Frontend Developer",
+                "desc": "Automatically generates React components and Storybook stories.",
+                "output": "React component + Storybook + PR.",
+                "rule": "Human approval is mandatory."
+              },
+              {
+                "title": "REQUIREMENTS_ANALYST — Requirements Analyst",
+                "desc": "Automatically extracts PBIs and test cases from Confluence pages.",
+                "output": "Requirements list and test scenarios.",
+                "rule": "Converts manual documents to structured format."
+              }
             ]
           },
           "security": {
@@ -2712,10 +2511,22 @@
             "visualTitle": "Human-in-the-Loop Architecture",
             "visualDesc": "Human approval is mandatory at all critical decision points.",
             "items": [
-              { "title": "P1 Bugs Blocked", "desc": "Only humans can solve them; the agent can never touch critical P1 errors." },
-              { "title": "New Feature Development Blocked", "desc": "The agent can only fix bugs in existing code; it cannot write features from scratch." },
-              { "title": "Cannot Merge", "desc": "The agent only opens a Pull Request; the merge decision belongs entirely to humans." },
-              { "title": "Cost Tracking", "desc": "Token usage and cost are meticulously logged for every agent execution." }
+              {
+                "title": "P1 Bugs Blocked",
+                "desc": "Only humans can solve them; the agent can never touch critical P1 errors."
+              },
+              {
+                "title": "New Feature Development Blocked",
+                "desc": "The agent can only fix bugs in existing code; it cannot write features from scratch."
+              },
+              {
+                "title": "Cannot Merge",
+                "desc": "The agent only opens a Pull Request; the merge decision belongs entirely to humans."
+              },
+              {
+                "title": "Cost Tracking",
+                "desc": "Token usage and cost are meticulously logged for every agent execution."
+              }
             ]
           }
         }
@@ -2737,18 +2548,45 @@
             "badge2": "Mobile Compatible"
           },
           "highlights": [
-            { "label": "End-to-End Solution", "desc": "All HR processes from hiring to exit in one platform." },
-            { "label": "Single Security Model", "desc": "Centralized authorization and data security infrastructure." },
-            { "label": "Integrated Experience", "desc": "Consistent and modern user interface across all modules." },
-            { "label": "Mobile Access", "desc": "HR portal accessible from anywhere with React Native." }
+            {
+              "label": "End-to-End Solution",
+              "desc": "All HR processes from hiring to exit in one platform."
+            },
+            {
+              "label": "Single Security Model",
+              "desc": "Centralized authorization and data security infrastructure."
+            },
+            {
+              "label": "Integrated Experience",
+              "desc": "Consistent and modern user interface across all modules."
+            },
+            {
+              "label": "Mobile Access",
+              "desc": "HR portal accessible from anywhere with React Native."
+            }
           ],
           "differentiators": {
             "heading": "Why HR Thema HCM?",
             "subtitle": "Three fundamental advantages accelerating your organization's HR transformation.",
             "items": [
-              { "title": "16 Integrated Modules", "desc": "Consolidate all HR operations from recruitment to payroll, performance management to training planning in a single platform.", "stat": "16", "statLabel": "Modules" },
-              { "title": "360° HR Management", "desc": "Comprehensively manage every stage of the employee lifecycle. Make data-driven decisions.", "stat": "360°", "statLabel": "Coverage" },
-              { "title": "Modern Technology", "desc": "Powerful infrastructure built with ASP.NET Core, React Native, Redis, Kubernetes and more.", "stat": "16+", "statLabel": "Technologies" }
+              {
+                "title": "16 Integrated Modules",
+                "desc": "Consolidate all HR operations from recruitment to payroll, performance management to training planning in a single platform.",
+                "stat": "16",
+                "statLabel": "Modules"
+              },
+              {
+                "title": "360° HR Management",
+                "desc": "Comprehensively manage every stage of the employee lifecycle. Make data-driven decisions.",
+                "stat": "360°",
+                "statLabel": "Coverage"
+              },
+              {
+                "title": "Modern Technology",
+                "desc": "Powerful infrastructure built with ASP.NET Core, React Native, Redis, Kubernetes and more.",
+                "stat": "16+",
+                "statLabel": "Technologies"
+              }
             ]
           },
           "video": {
@@ -2762,43 +2600,95 @@
           },
           "modules": [
             {
-              "id": "temel-ik", "title": "Core HR & Organization",
+              "id": "temel-ik",
+              "title": "Core HR & Organization",
               "description": "Integrated management of organizational structure, personnel management, recruitment, and payroll processes.",
               "modules": [
-                { "title": "Core HR and Organization", "desc": "Central management of organizational structure, employee cards, and personal records." },
-                { "title": "Recruitment and Onboarding", "desc": "Candidate tracking, interview processes, and onboarding workflows." },
-                { "title": "Payroll and Incentives", "desc": "Legally compliant payroll calculation, SSI, and incentive reporting." },
-                { "title": "Compensation & Benefits", "desc": "Salary structure, promotion/raise simulation, and compensation management." }
+                {
+                  "title": "Core HR and Organization",
+                  "desc": "Central management of organizational structure, employee cards, and personal records."
+                },
+                {
+                  "title": "Recruitment and Onboarding",
+                  "desc": "Candidate tracking, interview processes, and onboarding workflows."
+                },
+                {
+                  "title": "Payroll and Incentives",
+                  "desc": "Legally compliant payroll calculation, SSI, and incentive reporting."
+                },
+                {
+                  "title": "Compensation & Benefits",
+                  "desc": "Salary structure, promotion/raise simulation, and compensation management."
+                }
               ]
             },
             {
-              "id": "yetenek-performans", "title": "Talent & Performance",
+              "id": "yetenek-performans",
+              "title": "Talent & Performance",
               "description": "Discover employee potential, measure performance, and plan your strategic workforce.",
               "modules": [
-                { "title": "Talent Management", "desc": "Identifying employee potential, succession plans, and career maps." },
-                { "title": "Performance", "desc": "Goal-based evaluation, 360° feedback, and OKR management." },
-                { "title": "Workforce Analytics & Planning", "desc": "Strategic workforce planning, trend analysis, and dashboard." },
-                { "title": "Assessment and Survey", "desc": "Employee satisfaction, engagement, and climate surveys." }
+                {
+                  "title": "Talent Management",
+                  "desc": "Identifying employee potential, succession plans, and career maps."
+                },
+                {
+                  "title": "Performance",
+                  "desc": "Goal-based evaluation, 360° feedback, and OKR management."
+                },
+                {
+                  "title": "Workforce Analytics & Planning",
+                  "desc": "Strategic workforce planning, trend analysis, and dashboard."
+                },
+                {
+                  "title": "Assessment and Survey",
+                  "desc": "Employee satisfaction, engagement, and climate surveys."
+                }
               ]
             },
             {
-              "id": "egitim-iletisim", "title": "Training & Communication",
+              "id": "egitim-iletisim",
+              "title": "Training & Communication",
               "description": "Build a culture of continuous learning, and validate competencies with exams and certificates.",
               "modules": [
-                { "title": "Training and Development Plan", "desc": "Training catalog, classroom management, e-learning integration." },
-                { "title": "Exam", "desc": "Competence and knowledge assessment exams, automatic scoring." },
-                { "title": "Online Meeting", "desc": "WebRTC-based video meetings and integrated calendar." },
-                { "title": "HR Portal", "desc": "Self-service employee portal, leave requests, and notifications." }
+                {
+                  "title": "Training and Development Plan",
+                  "desc": "Training catalog, classroom management, e-learning integration."
+                },
+                {
+                  "title": "Exam",
+                  "desc": "Competence and knowledge assessment exams, automatic scoring."
+                },
+                {
+                  "title": "Online Meeting",
+                  "desc": "WebRTC-based video meetings and integrated calendar."
+                },
+                {
+                  "title": "HR Portal",
+                  "desc": "Self-service employee portal, leave requests, and notifications."
+                }
               ]
             },
             {
-              "id": "operasyonal", "title": "Operational Processes",
+              "id": "operasyonal",
+              "title": "Operational Processes",
               "description": "Automate your daily HR operations — expense, time, document, and request management.",
               "modules": [
-                { "title": "Expense Management", "desc": "Expense entry, approval processes, and accounting integration." },
-                { "title": "Time and Attendance", "desc": "Overtime tracking, shift planning, and absence management." },
-                { "title": "Document Management", "desc": "Central document archive, version control, and digital signature." },
-                { "title": "Issue and Request Management", "desc": "Employee request/complaint system, SLA tracking, and reporting." }
+                {
+                  "title": "Expense Management",
+                  "desc": "Expense entry, approval processes, and accounting integration."
+                },
+                {
+                  "title": "Time and Attendance",
+                  "desc": "Overtime tracking, shift planning, and absence management."
+                },
+                {
+                  "title": "Document Management",
+                  "desc": "Central document archive, version control, and digital signature."
+                },
+                {
+                  "title": "Issue and Request Management",
+                  "desc": "Employee request/complaint system, SLA tracking, and reporting."
+                }
               ]
             }
           ],
@@ -2821,77 +2711,208 @@
             "heading": "Strong Foundation, Smart Operations",
             "p1": "Praxila is designed with an Enterprise Service Management vision; built on a flexible, scalable, and AI-powered strong Foundation.",
             "p2": "Manage your IT operations end-to-end with ITSM, PPM, and ITOM modules. Experience proactive operations management with advanced automation, discovery, and analytical capabilities.",
-            "badges": ["ITIL Compliant", "AI-Powered", "Multi-Tenant"],
+            "badges": [
+              "ITIL Compliant",
+              "AI-Powered",
+              "Multi-Tenant"
+            ],
             "stats": [
-              { "stat": "3", "label": "Main Modules" },
-              { "stat": "17+", "label": "Sub-Processes" },
-              { "stat": "AI", "label": "Powered" }
+              {
+                "stat": "3",
+                "label": "Main Modules"
+              },
+              {
+                "stat": "17+",
+                "label": "Sub-Processes"
+              },
+              {
+                "stat": "AI",
+                "label": "Powered"
+              }
             ]
           },
           "foundation": {
             "heading": "Foundation Core",
             "subtitle": "Powerful infrastructure components on which all modules are built.",
             "items": [
-              { "name": "CMDB", "desc": "Central management of configuration and asset relationships." },
-              { "name": "Service Catalog", "desc": "Service catalog and self-service request portal." },
-              { "name": "Service Portal", "desc": "User-friendly self-service access point." },
-              { "name": "Knowledge", "desc": "Knowledge base and solution library management." },
-              { "name": "SLM", "desc": "Service level agreements and SLA tracking." },
-              { "name": "Notification", "desc": "Multi-channel notification and escalation management." },
-              { "name": "Multi Tenancy", "desc": "Isolated environment support with multi-tenant architecture." },
-              { "name": "Resource Plan", "desc": "Resource planning and capacity management." },
-              { "name": "TimeSheet", "desc": "Time tracking and workforce reporting." },
-              { "name": "Task Management", "desc": "Task assignment, tracking, and completion management." },
-              { "name": "Workflow", "desc": "Process automation with a flexible workflow engine." }
+              {
+                "name": "CMDB",
+                "desc": "Central management of configuration and asset relationships."
+              },
+              {
+                "name": "Service Catalog",
+                "desc": "Service catalog and self-service request portal."
+              },
+              {
+                "name": "Service Portal",
+                "desc": "User-friendly self-service access point."
+              },
+              {
+                "name": "Knowledge",
+                "desc": "Knowledge base and solution library management."
+              },
+              {
+                "name": "SLM",
+                "desc": "Service level agreements and SLA tracking."
+              },
+              {
+                "name": "Notification",
+                "desc": "Multi-channel notification and escalation management."
+              },
+              {
+                "name": "Multi Tenancy",
+                "desc": "Isolated environment support with multi-tenant architecture."
+              },
+              {
+                "name": "Resource Plan",
+                "desc": "Resource planning and capacity management."
+              },
+              {
+                "name": "TimeSheet",
+                "desc": "Time tracking and workforce reporting."
+              },
+              {
+                "name": "Task Management",
+                "desc": "Task assignment, tracking, and completion management."
+              },
+              {
+                "name": "Workflow",
+                "desc": "Process automation with a flexible workflow engine."
+              }
             ]
           },
           "advanced": {
             "heading": "Advanced Capabilities",
             "subtitle": "Advanced features supported by artificial intelligence and automation.",
             "items": [
-              { "name": "KanBan Board", "desc": "Visual task management and sprint tracking.", "isAI": false },
-              { "name": "Business Intelligence", "desc": "Advanced reporting and data analytics.", "isAI": false },
-              { "name": "Chat Bot", "desc": "AI-powered self-service support bot.", "isAI": false },
-              { "name": "Remote Desktop", "desc": "Remote desktop access and support.", "isAI": false },
-              { "name": "Employee Monitoring", "desc": "Employee activity monitoring and reporting.", "isAI": false },
-              { "name": "Machine Learning", "desc": "Predictive analysis and anomaly detection.", "isAI": true },
-              { "name": "Conversational AI", "desc": "Natural language processing-based interaction.", "isAI": true }
+              {
+                "name": "KanBan Board",
+                "desc": "Visual task management and sprint tracking.",
+                "isAI": false
+              },
+              {
+                "name": "Business Intelligence",
+                "desc": "Advanced reporting and data analytics.",
+                "isAI": false
+              },
+              {
+                "name": "Chat Bot",
+                "desc": "AI-powered self-service support bot.",
+                "isAI": false
+              },
+              {
+                "name": "Remote Desktop",
+                "desc": "Remote desktop access and support.",
+                "isAI": false
+              },
+              {
+                "name": "Employee Monitoring",
+                "desc": "Employee activity monitoring and reporting.",
+                "isAI": false
+              },
+              {
+                "name": "Machine Learning",
+                "desc": "Predictive analysis and anomaly detection.",
+                "isAI": true
+              },
+              {
+                "name": "Conversational AI",
+                "desc": "Natural language processing-based interaction.",
+                "isAI": true
+              }
             ]
           },
           "modules": [
             {
-              "id": "itsm", "title": "ITSM", "subtitle": "IT Service Management",
+              "id": "itsm",
+              "title": "ITSM",
+              "subtitle": "IT Service Management",
               "description": "End-to-end IT Service Management under the Enterprise Service Management umbrella.",
               "modules": [
-                { "title": "Service Desk", "desc": "Meeting and routing all requests from a single point." },
-                { "title": "Incident", "desc": "Quick resolution and management of service outages." },
-                { "title": "Request Fulfillment", "desc": "Meeting user requests through workflows." },
-                { "title": "Problem", "desc": "Preventing recurring issues through root cause analysis." },
-                { "title": "Change", "desc": "Managing changes with risk analysis and approval processes." },
-                { "title": "Release", "desc": "Planning release and deployment processes." },
-                { "title": "Asset & Capacity", "desc": "Asset management and capacity planning processes." }
+                {
+                  "title": "Service Desk",
+                  "desc": "Meeting and routing all requests from a single point."
+                },
+                {
+                  "title": "Incident",
+                  "desc": "Quick resolution and management of service outages."
+                },
+                {
+                  "title": "Request Fulfillment",
+                  "desc": "Meeting user requests through workflows."
+                },
+                {
+                  "title": "Problem",
+                  "desc": "Preventing recurring issues through root cause analysis."
+                },
+                {
+                  "title": "Change",
+                  "desc": "Managing changes with risk analysis and approval processes."
+                },
+                {
+                  "title": "Release",
+                  "desc": "Planning release and deployment processes."
+                },
+                {
+                  "title": "Asset & Capacity",
+                  "desc": "Asset management and capacity planning processes."
+                }
               ]
             },
             {
-              "id": "ppm", "title": "PPM", "subtitle": "Project Portfolio Management",
+              "id": "ppm",
+              "title": "PPM",
+              "subtitle": "Project Portfolio Management",
               "description": "Integrated management of demand, project, and portfolio processes.",
               "modules": [
-                { "title": "Demand", "desc": "Collecting, evaluating, and prioritizing demands." },
-                { "title": "Project", "desc": "Planning and executing approved demands as projects." },
-                { "title": "Portfolio", "desc": "Portfolio-based management of projects according to strategic goals." },
-                { "title": "Finance & Budget", "desc": "Tracking project budgets and financial resources." },
-                { "title": "SDLC (Scrum)", "desc": "Software development lifecycle and agile project management." }
+                {
+                  "title": "Demand",
+                  "desc": "Collecting, evaluating, and prioritizing demands."
+                },
+                {
+                  "title": "Project",
+                  "desc": "Planning and executing approved demands as projects."
+                },
+                {
+                  "title": "Portfolio",
+                  "desc": "Portfolio-based management of projects according to strategic goals."
+                },
+                {
+                  "title": "Finance & Budget",
+                  "desc": "Tracking project budgets and financial resources."
+                },
+                {
+                  "title": "SDLC (Scrum)",
+                  "desc": "Software development lifecycle and agile project management."
+                }
               ]
             },
             {
-              "id": "itom", "title": "ITOM", "subtitle": "IT Operations Management",
+              "id": "itom",
+              "title": "ITOM",
+              "subtitle": "IT Operations Management",
               "description": "Empowering IT Operations with automation and discovery capabilities.",
               "modules": [
-                { "title": "Orchestration", "desc": "Automation of operational processes and workflow management." },
-                { "title": "Client Discovery", "desc": "Discovering end-user devices on the network." },
-                { "title": "Infrastructure Discovery", "desc": "Automatic discovery of server and network infrastructure." },
-                { "title": "Service Mapping", "desc": "Mapping business services and infrastructure relationships." },
-                { "title": "Event Management", "desc": "Monitoring, correlation, and management of events." }
+                {
+                  "title": "Orchestration",
+                  "desc": "Automation of operational processes and workflow management."
+                },
+                {
+                  "title": "Client Discovery",
+                  "desc": "Discovering end-user devices on the network."
+                },
+                {
+                  "title": "Infrastructure Discovery",
+                  "desc": "Automatic discovery of server and network infrastructure."
+                },
+                {
+                  "title": "Service Mapping",
+                  "desc": "Mapping business services and infrastructure relationships."
+                },
+                {
+                  "title": "Event Management",
+                  "desc": "Monitoring, correlation, and management of events."
+                }
               ]
             }
           ]
@@ -2910,31 +2931,119 @@
             "heading": "What is MeetSense?",
             "subtitle": "Automatically joins corporate team meetings, takes high-quality audio recordings, creates AI transcripts, and maximizes value with analyses.",
             "capabilities": [
-              { "name": "Calendar Integration", "desc": "Reads your calendar and automatically joins your scheduled meetings." },
-              { "name": "High-Quality Recording", "desc": "Automatically backs up everything spoken with audio recording." },
-              { "name": "AI Transcript", "desc": "Uses Speaker Diarization to clearly identify who said what and transcribes it." },
-              { "name": "In-Depth Analysis", "desc": "Detects decisions and action items with advanced AI-powered analytics." }
+              {
+                "name": "Calendar Integration",
+                "desc": "Reads your calendar and automatically joins your scheduled meetings."
+              },
+              {
+                "name": "High-Quality Recording",
+                "desc": "Automatically backs up everything spoken with audio recording."
+              },
+              {
+                "name": "AI Transcript",
+                "desc": "Uses Speaker Diarization to clearly identify who said what and transcribes it."
+              },
+              {
+                "name": "In-Depth Analysis",
+                "desc": "Detects decisions and action items with advanced AI-powered analytics."
+              }
             ]
           },
           "process": {
             "heading": "Meeting Lifecycle",
             "subtitle": "Every step from start to completion is automatically managed.",
             "steps": [
-              { "num": "01", "title": "Scheduled", "desc": "Meetings are detected automatically or manually through calendar integration." },
-              { "num": "02", "title": "Bot Joining", "desc": "Our virtual assistant joins the meeting with a rule-based or manual trigger." },
-              { "num": "03", "title": "Recording", "desc": "High-quality audio and data recording becomes active." },
-              { "num": "04", "title": "Processing", "desc": "Audio data is transcribed by AI and processed for meaningful analyses." },
-              { "num": "05", "title": "Completed", "desc": "Rich reports, action items, and integration outputs are presented." }
+              {
+                "num": "01",
+                "title": "Scheduled",
+                "desc": "Meetings are detected automatically or manually through calendar integration."
+              },
+              {
+                "num": "02",
+                "title": "Bot Joining",
+                "desc": "Our virtual assistant joins the meeting with a rule-based or manual trigger."
+              },
+              {
+                "num": "03",
+                "title": "Recording",
+                "desc": "High-quality audio and data recording becomes active."
+              },
+              {
+                "num": "04",
+                "title": "Processing",
+                "desc": "Audio data is transcribed by AI and processed for meaningful analyses."
+              },
+              {
+                "num": "05",
+                "title": "Completed",
+                "desc": "Rich reports, action items, and integration outputs are presented."
+              }
             ]
           },
           "features": {
             "heading": "Discover the Power of the Platform",
             "subtitle": "Smart features powered by AI that go beyond just recording.",
             "items": [
-              { "id": "ai-transcript", "title": "AI Transcript and Analysis Details", "description": "Advanced analyses that place each conversation in its context, beyond classic text transcription.", "items": [ { "title": "Speaker-Based Distinction", "desc": "Clearly identifies owner of each statement with Speaker Diarization." }, { "title": "Segment-Based Listening", "desc": "Click on the transcript to jump to that moment's audio instantly." } ] },
-              { "id": "chat-bot", "title": "MeetSense Chatbot", "description": "Talk to your data in natural language. Query history or current meetings in real time.", "items": [ { "title": "Instant Analysis", "desc": "Get an instant summary even during an ongoing meeting." }, { "title": "History Search", "desc": "Search meeting series belonging to a specific project or team." } ] },
-              { "id": "dashboard", "title": "Organizational Insights", "description": "The big picture of all your meetings. Evaluate team productivity from a bird's eye view.", "items": [ { "title": "Weekly & Monthly Summaries", "desc": "Single glance at meeting, decision, and action statistics." }, { "title": "Trend Analysis", "desc": "Identify the most discussed topics and risks." } ] },
-              { "id": "integrations", "title": "Task Tracking & Integrations", "description": "Decisions made by AI automatically flow into work platforms like Jira and Trello.", "items": [ { "title": "Jira Integration", "desc": "Convert technical decisions into automatic Jira tasks." }, { "title": "AI Assignment Algorithm", "desc": "Extracts the task from the transcript and links it to the right person." } ] }
+              {
+                "id": "ai-transcript",
+                "title": "AI Transcript and Analysis Details",
+                "description": "Advanced analyses that place each conversation in its context, beyond classic text transcription.",
+                "items": [
+                  {
+                    "title": "Speaker-Based Distinction",
+                    "desc": "Clearly identifies owner of each statement with Speaker Diarization."
+                  },
+                  {
+                    "title": "Segment-Based Listening",
+                    "desc": "Click on the transcript to jump to that moment's audio instantly."
+                  }
+                ]
+              },
+              {
+                "id": "chat-bot",
+                "title": "MeetSense Chatbot",
+                "description": "Talk to your data in natural language. Query history or current meetings in real time.",
+                "items": [
+                  {
+                    "title": "Instant Analysis",
+                    "desc": "Get an instant summary even during an ongoing meeting."
+                  },
+                  {
+                    "title": "History Search",
+                    "desc": "Search meeting series belonging to a specific project or team."
+                  }
+                ]
+              },
+              {
+                "id": "dashboard",
+                "title": "Organizational Insights",
+                "description": "The big picture of all your meetings. Evaluate team productivity from a bird's eye view.",
+                "items": [
+                  {
+                    "title": "Weekly & Monthly Summaries",
+                    "desc": "Single glance at meeting, decision, and action statistics."
+                  },
+                  {
+                    "title": "Trend Analysis",
+                    "desc": "Identify the most discussed topics and risks."
+                  }
+                ]
+              },
+              {
+                "id": "integrations",
+                "title": "Task Tracking & Integrations",
+                "description": "Decisions made by AI automatically flow into work platforms like Jira and Trello.",
+                "items": [
+                  {
+                    "title": "Jira Integration",
+                    "desc": "Convert technical decisions into automatic Jira tasks."
+                  },
+                  {
+                    "title": "AI Assignment Algorithm",
+                    "desc": "Extracts the task from the transcript and links it to the right person."
+                  }
+                ]
+              }
             ]
           },
           "values": {
@@ -2943,12 +3052,36 @@
             "subtitle": "MeetSense doesn't just give you recording tools; it takes action, identifies risks, and turns your meetings into organizational value.",
             "cta": "I Want to Learn More",
             "items": [
-              { "title": "Time Savings", "desc": "Note-taking and report writing time is eliminated.", "num": "01" },
-              { "title": "Secure Content", "desc": "Sensitive content only reaches authorized people.", "num": "02" },
-              { "title": "Action Tracking", "desc": "Every decision is recorded, assigned a responsible, and tracked.", "num": "03" },
-              { "title": "Deep Analysis", "desc": "Risks and open items are automatically detected.", "num": "04" },
-              { "title": "Natural Language Query", "desc": "Ask questions instead of reading, get instant answers.", "num": "05" },
-              { "title": "Trend & Pattern", "desc": "Capture trends from multi-meeting data.", "num": "06" }
+              {
+                "title": "Time Savings",
+                "desc": "Note-taking and report writing time is eliminated.",
+                "num": "01"
+              },
+              {
+                "title": "Secure Content",
+                "desc": "Sensitive content only reaches authorized people.",
+                "num": "02"
+              },
+              {
+                "title": "Action Tracking",
+                "desc": "Every decision is recorded, assigned a responsible, and tracked.",
+                "num": "03"
+              },
+              {
+                "title": "Deep Analysis",
+                "desc": "Risks and open items are automatically detected.",
+                "num": "04"
+              },
+              {
+                "title": "Natural Language Query",
+                "desc": "Ask questions instead of reading, get instant answers.",
+                "num": "05"
+              },
+              {
+                "title": "Trend & Pattern",
+                "desc": "Capture trends from multi-meeting data.",
+                "num": "06"
+              }
             ]
           }
         }
@@ -2973,10 +3106,22 @@
             "body": "Stop wasting time on repetitive questions within the organization. Doc2Bot turns your documentation into a living knowledge source.",
             "learnMore": "Learn More",
             "items": [
-              { "title": "Confluence Integration", "desc": "Connect your existing Confluence spaces directly. Your bot is ready without any extra data entry." },
-              { "title": "Accurate and Reliable", "desc": "Doc2Bot doesn't hallucinate. It presents only the information available in your documents with references." },
-              { "title": "Multi-Language Support", "desc": "Even if your documents are in English, your employees can ask in Turkish. Doc2Bot answers with cross-language translation." },
-              { "title": "Slack & Teams", "desc": "Integrates with communication channels your employees already use (Slack, MS Teams)." }
+              {
+                "title": "Confluence Integration",
+                "desc": "Connect your existing Confluence spaces directly. Your bot is ready without any extra data entry."
+              },
+              {
+                "title": "Accurate and Reliable",
+                "desc": "Doc2Bot doesn't hallucinate. It presents only the information available in your documents with references."
+              },
+              {
+                "title": "Multi-Language Support",
+                "desc": "Even if your documents are in English, your employees can ask in Turkish. Doc2Bot answers with cross-language translation."
+              },
+              {
+                "title": "Slack & Teams",
+                "desc": "Integrates with communication channels your employees already use (Slack, MS Teams)."
+              }
             ]
           }
         }
@@ -3004,9 +3149,18 @@
             "heading": "The Greatest Helper for Developers' Least Favorite Task",
             "body": "Writing code is fun but documentation is boring. With DocMind, your technical debt decreases and onboarding times shorten.",
             "items": [
-              { "title": "Flexible Scope", "desc": "Whether a high-level architectural summary or a function-level detailed API document. Adjust according to your needs." },
-              { "title": "Customizable Headings", "desc": "Choose the headings you want such as 'About / Overview', 'Architecture & System Design', 'API Reference' and you determine the document structure." },
-              { "title": "Language Support", "desc": "Choose the language of your documents (TR/EN). Get English output for global teams, Turkish for local teams." }
+              {
+                "title": "Flexible Scope",
+                "desc": "Whether a high-level architectural summary or a function-level detailed API document. Adjust according to your needs."
+              },
+              {
+                "title": "Customizable Headings",
+                "desc": "Choose the headings you want such as 'About / Overview', 'Architecture & System Design', 'API Reference' and you determine the document structure."
+              },
+              {
+                "title": "Language Support",
+                "desc": "Choose the language of your documents (TR/EN). Get English output for global teams, Turkish for local teams."
+              }
             ]
           },
           "cta": {
@@ -3057,96 +3211,6 @@
       }
     }
   },
-  "hr_page": {
-    "hero": {
-      "title": "We Value Your Talents",
-      "subtitle": "Be part of a passionate, innovative, and constantly learning team. Shape your career with us."
-    },
-    "values": {
-      "title": "Our Values",
-      "subtitle": "The core principles that make us who we are, guiding our way of working and our decisions.",
-      "innovation": {
-        "title": "Passion for Innovation",
-        "description": "The desire for continuous improvement and exploring new technologies is in our DNA. We try without being afraid of making mistakes."
-      },
-      "success": {
-        "title": "Success Together",
-        "description": "We believe in teamwork. We support each other, share knowledge, and celebrate success together."
-      },
-      "human": {
-        "title": "Human Centricity",
-        "description": "The happiness and development of our employees are our priority. We offer a fair, inclusive, and respectful environment."
-      }
-    },
-    "life": {
-      "title": "Life at BGTS",
-      "subtitle": "We don't just work; we produce, have fun, and grow together. Here are snapshots from our office and team.",
-      "caption1": "Culture of Co-production",
-      "caption2": "Global Engineering Team",
-      "caption3": "Snapshots from Our Office",
-      "location": "Maslak, Istanbul — Technology Hub"
-    },
-    "why": {
-      "title": "Why BGTS?",
-      "items": [
-        {
-          "title": "Continuous Education",
-          "desc": "Udemy, Pluralsight memberships, and certification supports."
-        },
-        {
-          "title": "Flexible Benefits",
-          "desc": "Private health insurance, meal card, and sports support."
-        },
-        {
-          "title": "Happy Office",
-          "desc": "Ergonomic working environment, PlayStation corner, and happy hours."
-        },
-        {
-          "title": "Career Development",
-          "desc": "Clear career path and regular performance feedback."
-        }
-      ]
-    },
-    "young_teaser": {
-      "title": "Are You Ready to Code the Future?",
-      "subtitle": "It's not just an ordinary internship or job start. Open the doors to real projects, modern technologies, and a world of unlimited growth.",
-      "cta": "Explore the Program"
-    },
-    "passion": {
-      "title": "Not Just a Job, <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600\">Passion.</span>",
-      "subtitle": "At BGTS, engineering is more than writing code. We learn together, have fun together, and build the future together.",
-      "path": {
-        "title": "Fast Career Path",
-        "desc": "Move forward with performance-oriented clear steps and regular feedback; don't stay in place, rise continuously."
-      },
-      "vision": {
-        "title": "Global Vision",
-        "desc": "Push your limits with international standard projects and worldwide technologies."
-      },
-      "talent_count": "+50 Young Talents",
-      "talent_wait": "They are waiting to meet you."
-    },
-    "testimonials": {
-      "title": "What Do Our Employees Say?",
-      "items": [
-        {
-          "quote": "Working at BGTS means constantly learning and developing. Here, your ideas are valued and taking initiative is supported.",
-          "author": "Ayşe Yılmaz",
-          "role": "Senior Software Engineer - 3 Years"
-        },
-        {
-          "quote": "There is a friendly and supportive working environment. It's a great place for both my professional and personal development.",
-          "author": "Mehmet Demir",
-          "role": "DevOps Engineer - 1.5 Years"
-        }
-      ]
-    },
-    "footer_cta": {
-      "title": "Looking for Another Position?",
-      "subtitle": "You can follow our open positions on LinkedIn or contact us for a general application.",
-      "cta": "Follow Us on LinkedIn"
-    }
-  },
   "meetsense_viewer": {
     "title": "MeetSense AI Slides Viewer",
     "slides_label": "Slide",
@@ -3182,6 +3246,55 @@
       "boxDesc": "Sharing technical knowledge increases corporate memory and supports the culture of joint problem solving."
     }
   },
+  "cookies": {
+    "title": "We value your privacy",
+    "description": "We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+    "customise": "Customise",
+    "rejectAll": "Reject All",
+    "acceptAll": "Accept All",
+    "revisitLabel": "Consent Preferences",
+    "preferenceTitle": "Customise Consent Preferences",
+    "preferenceIntro": [
+      "We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.",
+      "The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site.",
+      "We also use third-party cookies that help us analyse how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. These cookies will only be stored in your browser with your prior consent.",
+      "You can choose to enable or disable some or all of these cookies but disabling some of them may affect your browsing experience."
+    ],
+    "savePreferences": "Save My Preferences",
+    "close": "Close",
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "description": "Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.",
+        "alwaysActive": "Always Active",
+        "noCookies": "No cookies to display."
+      },
+      "functional": {
+        "title": "Functional",
+        "description": "Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.",
+        "alwaysActive": "Always Active",
+        "noCookies": "No cookies to display."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.",
+        "alwaysActive": "Always Active",
+        "noCookies": "No cookies to display."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors.",
+        "alwaysActive": "Always Active",
+        "noCookies": "No cookies to display."
+      },
+      "advertisement": {
+        "title": "Advertisement",
+        "description": "Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns.",
+        "alwaysActive": "Always Active",
+        "noCookies": "No cookies to display."
+      }
+    }
+  },
   "breadcrumb": {
     "home": "Home",
     "services": "Services",
@@ -3189,9 +3302,6 @@
     "products": "Products",
     "contact": "Contact",
     "about": "About Us",
-    "hr": "Human Resources",
-    "genc-muhendis-programi": "Young Engineers Program",
-    "yetenek-gelisim-modeli": "Talent Development Model",
     "software-development": "Software Development",
     "managed-services": "Managed Services",
     "devops": "DevOps",
@@ -3203,7 +3313,6 @@
     "doc2bot": "Doc2Bot",
     "docmind": "DocMind",
     "consultancy": "Consultancy",
-    "talent": "Talent Development Program",
     "career-paths": "Career Paths",
     "culture": "Work Culture",
     "learning": "Learning & Development",

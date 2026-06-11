@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import GlobalBreadcrumb from "@/components/layout/GlobalBreadcrumb";
 import { OrganizationStructuredData, WebSiteStructuredData, LocalBusinessStructuredData } from "@/components/seo/StructuredData";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import CookieConsent from "@/components/cookies/CookieConsent";
 import { buildAlternates, buildOgUrl, ogLocale, SITE_URL } from "@/lib/seo";
 import { getDictionary } from "@/get-dictionary";
 import { i18n, type Locale } from "@/i18n-config";
@@ -117,7 +118,6 @@ export default async function RootLayout(props: {
         <OrganizationStructuredData />
         <LocalBusinessStructuredData />
         <WebSiteStructuredData />
-        <GoogleAnalytics />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased text-[#212121] bg-white`}>
         <div className="flex flex-col min-h-screen overflow-x-clip">
@@ -130,6 +130,8 @@ export default async function RootLayout(props: {
           <Footer dict={dict.footer} lang={params.lang} />
           {/* <ChatbotWidget /> */} {/* Temporarily disabled */}
         </div>
+        <CookieConsent dict={dict.cookies} />
+        <GoogleAnalytics />
       </body>
     </html>
   );

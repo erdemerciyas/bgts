@@ -34,7 +34,7 @@ export default function Footer({ dict, lang = "tr" }: { dict: any; lang?: string
                             <h4 className="font-bold text-white mb-4">{dict.columns.services}</h4>
                             <ul className="space-y-2 text-white/50 text-sm">
                                 <li><Link href={href('/services/managed-services')} className="hover:text-corporate-accent transition-colors">{dict.links.managedServices}</Link></li>
-                                <li><Link href={href('/services/devops')} className="hover:text-corporate-accent transition-colors">{dict.links.devops}</Link></li>
+                                <li><Link href={href('/services/managed-services')} className="hover:text-corporate-accent transition-colors">{dict.links.devops}</Link></li>
                                 <li><Link href={href('/services/software-development')} className="hover:text-corporate-accent transition-colors">{dict.links.softwareDev}</Link></li>
                             </ul>
                         </div>

@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { i18n } from './i18n-config';
-import { resolveTrLegacyRedirect, resolveTrRewrite } from './lib/routes';
+import { resolveTrLegacyRedirect, resolveTrRewrite, getObsoleteRedirectTarget, localizedHref } from './lib/routes';
+import type { Locale } from './i18n-config';
 
 // === RATE LIMITING LOGIC ===
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -9,7 +10,6 @@ const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMITS: Record<string, { windowMs: number; maxRequests: number }> = {
   '/api/chat': { windowMs: 60_000, maxRequests: 10 },
   '/api/contact': { windowMs: 60_000, maxRequests: 5 },
-  '/api/application': { windowMs: 60_000, maxRequests: 5 },
 };
 
 function getClientIp(request: NextRequest): string {
@@ -98,6 +98,13 @@ export function middleware(request: NextRequest) {
 
   const locale = pathname.split('/')[1];
   const urlPath = pathname.replace(/^\/(tr|en)/, '') || '/';
+
+  const obsoleteTarget = getObsoleteRedirectTarget(urlPath);
+  if (obsoleteTarget) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = localizedHref(locale as Locale, obsoleteTarget);
+    return NextResponse.redirect(redirectUrl, 301);
+  }
 
   if (locale === 'tr') {
     const legacyTarget = resolveTrLegacyRedirect(urlPath);

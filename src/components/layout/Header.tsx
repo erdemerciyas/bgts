@@ -22,7 +22,6 @@ const MegaMenus = dynamic(() => import('./header/MegaMenus').then(mod => ({
             services: mod.ServicesMenu,
             industries: mod.IndustriesMenu,
             products: mod.ProductsMenu,
-            // talent: mod.TalentMenu,
             resources: mod.ResourcesMenu,
             careers: mod.CareersMenu,
         }
@@ -46,8 +45,6 @@ type MobileNavDict = {
     services: Record<string, string>
     industries: Record<string, string>
     products: Record<string, string>
-    talent: Record<string, string>
-    talentModel: Record<string, string>
     resources: Record<string, string>
     careers: Record<string, string>
     quickLinks: Record<string, string>
