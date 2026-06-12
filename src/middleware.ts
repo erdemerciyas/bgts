@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { i18n } from './i18n-config';
-import { resolveTrLegacyRedirect, resolveTrRewrite, getObsoleteRedirectTarget, localizedHref } from './lib/routes';
-import { getLocaleFromPathname, isLocale, stripBasePath, withBasePath } from './lib/base-path';
+import { resolveTrLegacyRedirect, resolveTrRewrite, getObsoleteRedirectTarget, getInternalPath, localizedHref } from './lib/routes';
+import { pathnameHasLocale, stripBasePath, stripLocalePrefix, withBasePath } from './lib/base-path';
 import type { Locale } from './i18n-config';
 
 // === RATE LIMITING LOGIC ===
@@ -81,23 +81,25 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Legacy /en/ → /eng/ (301)
+  // Legacy /en/ ve /eng/ → /tr/en/ (301)
   if (pathname === '/en' || pathname.startsWith('/en/')) {
     const rest = pathname === '/en' ? '' : pathname.slice(3);
     return NextResponse.redirect(
-      new URL(withBasePath(`/eng${rest}`), request.url),
+      new URL(withBasePath(`/tr/en${rest}`), request.url),
       301
     );
   }
 
-  // 2. Locale Routing
-  // Dizin adında /tr/ veya /eng/ var mı kontrol et
-  const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  );
+  if (pathname === '/eng' || pathname.startsWith('/eng/')) {
+    const rest = pathname === '/eng' ? '' : pathname.slice(4);
+    return NextResponse.redirect(
+      new URL(withBasePath(`/tr/en${rest}`), request.url),
+      301
+    );
+  }
 
-  // Locale bulunamadıysa varsayılan dile (tr) yönlendir
-  if (pathnameIsMissingLocale) {
+  // 2. Locale Routing — /tr veya /tr/en prefix'i yoksa varsayılan dile yönlendir
+  if (!pathnameHasLocale(pathname)) {
     return NextResponse.redirect(
       new URL(
         withBasePath(
@@ -108,8 +110,7 @@ export function middleware(request: NextRequest) {
     );
   }
 
-  const locale = getLocaleFromPathname(pathname);
-  const urlPath = pathname.replace(new RegExp(`^/${locale}`), '') || '/';
+  const { locale, urlPath } = stripLocalePrefix(pathname);
 
   const obsoleteTarget = getObsoleteRedirectTarget(urlPath);
   if (obsoleteTarget) {
@@ -118,7 +119,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 301);
   }
 
-  if (isLocale(locale) && locale === 'tr') {
+  if (locale === 'eng') {
+    const internalPath = getInternalPath('eng', urlPath) ?? (urlPath === '/' ? '' : urlPath);
+    const rewriteUrl = request.nextUrl.clone();
+    rewriteUrl.pathname = withBasePath(`/eng${internalPath === '/' ? '' : internalPath}`);
+    return NextResponse.rewrite(rewriteUrl);
+  }
+
+  if (locale === 'tr') {
     const legacyTarget = resolveTrLegacyRedirect(urlPath);
     if (legacyTarget && legacyTarget !== urlPath) {
       const redirectUrl = request.nextUrl.clone();

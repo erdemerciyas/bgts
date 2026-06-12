@@ -78,11 +78,11 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 ## Özellikler
 
 ### Çoklu Dil (i18n)
-- **Türkçe ve İngilizce** tam destek — URL tabanlı dil ayrımı (`/tr/...`, `/eng/...`)
-- **Locale-aware URL slug'ları:** Türkçe sayfalar SEO dostu Türkçe path kullanır (`/tr/hakkimizda`), İngilizce sayfalar İngilizce path kullanır (`/eng/about`)
+- **Türkçe ve İngilizce** tam destek — URL tabanlı dil ayrımı (`/tr/...`, `/tr/en/...`)
+- **Locale-aware URL slug'ları:** Türkçe sayfalar SEO dostu Türkçe path kullanır (`/tr/hakkimizda`), İngilizce sayfalar `/tr/en` altında İngilizce path kullanır (`/tr/en/about`)
 - Merkezi route haritası (`src/lib/routes.ts`) — `localizedHref`, `switchLocalePath`, `localizedPathForLang` helper'ları
-- Middleware ile locale prefix ekleme, eski `/en/...` adreslerinden `/eng/...` **301 redirect**, eski `/tr/...` İngilizce slug'larından **301 redirect** ve Türkçe slug'lardan dahili route'a **rewrite**
-- İngilizce locale kodu URL'de `eng`; `html lang` attribute ISO 639-1 için `en` (`dictionaryKey`, `htmlLang` helper'ları)
+- Middleware ile locale prefix ekleme, eski `/en/...` ve `/eng/...` adreslerinden `/tr/en/...` **301 redirect**, eski `/tr/...` İngilizce slug'larından **301 redirect** ve Türkçe slug'lardan dahili route'a **rewrite**
+- Dahili locale kodu `eng` (dosya sistemi `[lang]` segmenti); ziyaretçiye görünen İngilizce prefix `/tr/en`; `html lang` attribute ISO 639-1 için `en` (`dictionaryKey`, `htmlLang` helper'ları)
 - JSON tabanlı sözlük sistemi (`src/dictionaries/tr.json`, `src/dictionaries/en.json`)
 - Varsayılan dil: Türkçe (`tr`)
 
@@ -412,9 +412,9 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 ## Sayfalar ve Rotalar
 
-> **Not:** Dosya sistemi İngilizce klasör adları kullanır (`about`, `services/...`). Ziyaretçiye görünen URL'ler dil bazlıdır. Türkçe canonical path'ler aşağıdaki gibidir; İngilizce karşılıkları `/eng/about`, `/eng/services/...` formatındadır.
+> **Not:** Dosya sistemi İngilizce klasör adları kullanır (`about`, `services/...`). Ziyaretçiye görünen URL'ler dil bazlıdır. Türkçe canonical path'ler aşağıdaki gibidir; İngilizce karşılıkları `/tr/en/about`, `/tr/en/services/...` formatındadır.
 >
-> Locale prefix yoksa middleware otomatik olarak `/tr/...` ekler. Eski `/en/...` adresleri kalıcı olarak `/eng/...` formatına yönlendirilir. Eski İngilizce Türkçe slug'lar (`/tr/about` gibi) kalıcı olarak yeni Türkçe URL'lere yönlendirilir. Kaldırılan sayfalar (`/hr`, `/genc-muhendis-programi`, `/yetenek-gelisim-modeli`, `/services/devops`) ilgili hedef sayfaya kalıcı yönlendirilir.
+> Locale prefix yoksa middleware otomatik olarak `/tr/...` ekler. Eski `/en/...` ve `/eng/...` adresleri kalıcı olarak `/tr/en/...` formatına yönlendirilir. Eski İngilizce Türkçe slug'lar (`/tr/about` gibi) kalıcı olarak yeni Türkçe URL'lere yönlendirilir. Kaldırılan sayfalar (`/hr`, `/genc-muhendis-programi`, `/yetenek-gelisim-modeli`, `/services/devops`) ilgili hedef sayfaya kalıcı yönlendirilir.
 
 ### URL Eşleme Özeti (TR canonical)
 
@@ -458,24 +458,24 @@ import { localizedHref, localizedPathForLang } from '@/lib/routes'
 
 // Server / client — lang biliniyorsa
 localizedHref('tr', '/about')           // → /tr/hakkimizda
-localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /eng/contact
+localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /tr/en/contact
 ```
 
 ### Kurumsal Sayfalar
 
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
-| `/tr/hakkimizda` | `/eng/about` | Hakkımızda |
-| `/tr/iletisim` | `/eng/contact` | İletişim |
-| `/tr/is-ortaklari` | `/eng/partnerships` | İş Ortakları |
-| `/tr/yerini-al` | `/eng/social-contribution` | Sürdürülebilir Değer / Yerini Al |
+| `/tr/hakkimizda` | `/tr/en/about` | Hakkımızda |
+| `/tr/iletisim` | `/tr/en/contact` | İletişim |
+| `/tr/is-ortaklari` | `/tr/en/partnerships` | İş Ortakları |
+| `/tr/yerini-al` | `/tr/en/social-contribution` | Sürdürülebilir Değer / Yerini Al |
 
 ### Hizmetler (2 Adet)
 
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
-| `/tr/hizmetler/yazilim-muhendisligi` | `/eng/services/software-development` | Yazılım Geliştirme |
-| `/tr/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi` | `/eng/services/managed-services` | Yönetilen Hizmetler (MSP) |
+| `/tr/hizmetler/yazilim-muhendisligi` | `/tr/en/services/software-development` | Yazılım Geliştirme |
+| `/tr/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi` | `/tr/en/services/managed-services` | Yönetilen Hizmetler (MSP) |
 
 > **Not:** Eski DevOps/SRE sayfası (`/services/devops`) kaldırıldı; kalıcı olarak Yönetilen Hizmetler sayfasına yönlendirilir.
 
@@ -483,34 +483,34 @@ localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /eng/contact
 
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
-| `/tr/sektorler/bankacilik-finans` | `/eng/industries/banking` | Bankacılık & Finans |
-| `/tr/sektorler/savunma-sanayi` | `/eng/industries/defense` | Savunma Sanayi |
-| `/tr/sektorler/telekom` | `/eng/industries/telecommunications` | Telekomünikasyon |
-| `/tr/sektorler/perakende-e-ticaret` | `/eng/industries/retail` | Perakende & E-Ticaret |
-| `/tr/sektorler/diger-sektorler` | `/eng/industries/retail-telecom` | Perakende & Telekom |
+| `/tr/sektorler/bankacilik-finans` | `/tr/en/industries/banking` | Bankacılık & Finans |
+| `/tr/sektorler/savunma-sanayi` | `/tr/en/industries/defense` | Savunma Sanayi |
+| `/tr/sektorler/telekom` | `/tr/en/industries/telecommunications` | Telekomünikasyon |
+| `/tr/sektorler/perakende-e-ticaret` | `/tr/en/industries/retail` | Perakende & E-Ticaret |
+| `/tr/sektorler/diger-sektorler` | `/tr/en/industries/retail-telecom` | Perakende & Telekom |
 
 ### Ürünler (8 Adet)
 
 | TR URL | EN URL | Ürün |
 |--------|--------|------|
-| `/tr/urunler` | `/eng/products` | Ürün Kataloğu |
-| `/tr/urunler/yapay-zeka-ise-alim-asistani` | `/eng/products/ai-hiring-assistant` | AI Hiring Assistant |
-| `/tr/urunler/cortex` | `/eng/products/cortex` | Cortex |
-| `/tr/urunler/cv-donusturucu` | `/eng/products/cv-converter` | CV Converter |
-| `/tr/urunler/doc2bot` | `/eng/products/doc2bot` | Doc2Bot |
-| `/tr/urunler/docmind` | `/eng/products/docmind` | DocMind |
-| `/tr/urunler/hcm` | `/eng/products/hcm` | HCM Platform |
-| `/tr/urunler/meetsense` | `/eng/products/meetsense` | MeetSense |
-| `/tr/urunler/praxilla` | `/eng/products/praxila` | Praxila |
+| `/tr/urunler` | `/tr/en/products` | Ürün Kataloğu |
+| `/tr/urunler/yapay-zeka-ise-alim-asistani` | `/tr/en/products/ai-hiring-assistant` | AI Hiring Assistant |
+| `/tr/urunler/cortex` | `/tr/en/products/cortex` | Cortex |
+| `/tr/urunler/cv-donusturucu` | `/tr/en/products/cv-converter` | CV Converter |
+| `/tr/urunler/doc2bot` | `/tr/en/products/doc2bot` | Doc2Bot |
+| `/tr/urunler/docmind` | `/tr/en/products/docmind` | DocMind |
+| `/tr/urunler/hcm` | `/tr/en/products/hcm` | HCM Platform |
+| `/tr/urunler/meetsense` | `/tr/en/products/meetsense` | MeetSense |
+| `/tr/urunler/praxilla` | `/tr/en/products/praxila` | Praxila |
 
 ### Kariyer
 
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
-| `/tr/kariyer-yollari` | `/eng/career-paths` | Kariyer Yolları (staj, Genç Mühendis, açık pozisyonlar) |
-| `/tr/calisma-kulturu` | `/eng/culture` | Çalışma Kültürü |
-| `/tr/egitim-ve-gelisim` | `/eng/learning` | Eğitim ve Gelişim |
-| `/tr/yerini-al` | `/eng/social-contribution` | Sürdürülebilir Değer / Yerini Al |
+| `/tr/kariyer-yollari` | `/tr/en/career-paths` | Kariyer Yolları (staj, Genç Mühendis, açık pozisyonlar) |
+| `/tr/calisma-kulturu` | `/tr/en/culture` | Çalışma Kültürü |
+| `/tr/egitim-ve-gelisim` | `/tr/en/learning` | Eğitim ve Gelişim |
+| `/tr/yerini-al` | `/tr/en/social-contribution` | Sürdürülebilir Değer / Yerini Al |
 
 > **Not:** Eski `/hr`, `/genc-muhendis-programi` ve `/yetenek-gelisim-modeli` sayfaları kaldırıldı; kalıcı olarak Kariyer Yolları sayfasına yönlendirilir.
 
@@ -518,14 +518,14 @@ localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /eng/contact
 
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
-| `/tr/basari-hikayeleri` | `/eng/resources/success-stories` | Başarı Hikayeleri |
-| `/tr/infografikler` | `/eng/resources/infographics` | İnfografikler |
+| `/tr/basari-hikayeleri` | `/tr/en/resources/success-stories` | Başarı Hikayeleri |
+| `/tr/infografikler` | `/tr/en/resources/infographics` | İnfografikler |
 
 ### Diğer
 
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
-| `/tr/meetsense-goruntuleyici` | `/eng/meetsense-viewer` | MeetSense Demo Görüntüleyici |
+| `/tr/meetsense-goruntuleyici` | `/tr/en/meetsense-viewer` | MeetSense Demo Görüntüleyici |
 
 ---
 
@@ -711,7 +711,7 @@ Proje, içerik verilerini TypeScript objeleri olarak yönetir (headless CMS kull
 - Her sayfa için **dinamik `generateMetadata`** ile locale-aware metadata üretimi
 - TR/EN dile göre `title`, `description`, `keywords` otomatik değişir
 - OpenGraph (`url`, `locale`) ve Twitter Card meta tag'leri locale ile eşlenir
-- **Canonical URL'ler locale-aware:** Her sayfa kendi diline ait canonical üretir (`/tr/hakkimizda`, `/eng/about`)
+- **Canonical URL'ler locale-aware:** Her sayfa kendi diline ait canonical üretir (`/tr/hakkimizda`, `/tr/en/about`)
 - Tüm metadata mantığı `src/lib/seo.ts` + `src/lib/routes.ts` üzerinden locale slug eşlemesi yapılır
 
 ### hreflang ve Çoklu Dil SEO
@@ -796,6 +796,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.39.0 | — | **İngilizce URL yapısı `/tr/en`:** Ziyaretçiye görünen İngilizce prefix `/eng/...` → `/tr/en/...`; `getLocalePrefix`, `stripLocalePrefix`, `pathnameHasLocale` helper'ları; middleware `/tr/en/*` → dahili `/eng/*` rewrite + eski `/eng/*` ve `/en/*` adreslerinden 301 yönlendirme; `localizedHref`, `switchLocalePath`, SEO canonical/hreflang, sitemap ve breadcrumb linkleri güncellendi. |
 | v0.38.0 | — | **İngilizce locale kodu `eng`:** URL prefix `/en/...` → `/eng/...`; `i18n-config` locale listesi `['tr', 'eng']`; eski `/en/...` adresleri middleware ile 301 `/eng/...` yönlendirmesi; `dictionaryKey` / `htmlLang` helper'ları (`en.json` dosya adı korunuyor); `src/lib/base-path.ts` deploy prefix + locale çözümlemesi; Plesk alt klasör deploy (`NEXT_PUBLIC_BASE_PATH`, `server.js`, `PLESK_DEPLOY.md`). |
 | v0.37.0 | — | **Gmail API e-posta geçişi:** Nodemailer/SMTP kaldırıldı; `googleapis` ile OAuth 2.0 Gmail API entegrasyonu; `scripts/gmail-get-refresh-token.mjs` ve `npm run gmail:auth` eklendi; `.env.example` güncellendi. **KVKK çerez onayı:** `CookieConsent.tsx` + `cookie-consent.ts`; GA yalnızca analitik onayı ile yüklenir. **Sayfa konsolidasyonu:** DevOps/SRE, İK, Genç Mühendis ve Yetenek Gelişim Modeli sayfaları kaldırıldı; kalıcı yönlendirmeler (`OBSOLETE_INTERNAL_REDIRECTS`); `/api/application` ve CV yükleme akışı kaldırıldı; kariyer içeriği Kariyer Yolları sayfasında birleştirildi. **Navigasyon:** "Yerini Al" ana nav öğesi; mega menü sadeleştirmesi. |
 | v0.36.0 | — | **Türkçe URL slug altyapısı:** `src/lib/routes.ts` ile merkezi TR/EN route haritası; middleware rewrite + legacy 301 redirect; `localizedHref`, `localizedPathForLang`, `switchLocalePath` helper'ları; navigasyon, ana sayfa, ürün sayfaları, SEO/sitemap, chatbot prompt ve breadcrumb etiketleri locale-aware URL'lere taşındı; TR canonical path'ler (`/hakkimizda`, `/hizmetler/...`, `/sektorler/...`, `/urunler/...` vb.) |
@@ -839,10 +840,11 @@ npm run test:coverage
 ### Mimari
 
 ```
-Kullanıcı isteği (örn: /hakkimizda veya /about)
+Kullanıcı isteği (örn: /hakkimizda veya /tr/en/about)
     ↓ middleware.ts
 Locale prefix yoksa → /tr/... yönlendirme
-/en/... → 301 /eng/... (legacy)
+/en/... ve /eng/... → 301 /tr/en/... (legacy)
+/tr/en/... → dahili /eng/... rewrite (örn. /tr/en/about → [lang]=eng/about)
 /tr/ altında eski EN slug → 301 Türkçe URL
 /tr/ altında TR slug → dahili route rewrite (örn. /tr/hakkimizda → about/page)
     ↓ [lang] dinamik segment + dahili klasör
@@ -851,20 +853,20 @@ getDictionary(lang) → ilgili JSON sözlük yüklenir
 Sayfa render edilir; linkler localizedHref() ile üretilir
 ```
 
-Dil değiştirici (`Header`, `MobileNav`) `switchLocalePath()` ile aynı sayfanın karşı dil URL'ine geçer (`/tr/hakkimizda` ↔ `/eng/about`).
+Dil değiştirici (`Header`, `MobileNav`) `switchLocalePath()` ile aynı sayfanın karşı dil URL'ine geçer (`/tr/hakkimizda` ↔ `/tr/en/about`).
 
 ### Dosya Yapısı
 
 | Dosya | Görev |
 |-------|-------|
 | `src/i18n-config.ts` | Desteklenen diller (`tr`, `eng`), `dictionaryKey`, `htmlLang` |
-| `src/lib/base-path.ts` | Deploy `basePath` strip/prefix; pathname'den locale çözümleme |
+| `src/lib/base-path.ts` | Deploy `basePath` strip/prefix; `getLocalePrefix` (`/tr`, `/tr/en`); pathname'den locale çözümleme |
 | `src/lib/routes.ts` | TR/ENG slug haritası, redirect/rewrite lookup, link helper'ları |
 | `src/lib/seo.ts` | Locale-aware canonical + hreflang (`buildAlternates`, `buildOgUrl`) |
 | `src/get-dictionary.ts` | Server-only sözlük yükleyici fonksiyon |
 | `src/dictionaries/tr.json` | Türkçe çeviriler; `breadcrumb` slug etiketleri (Türkçe URL segmentleri dahil) |
 | `src/dictionaries/en.json` | İngilizce çeviriler; `breadcrumb` slug etiketleri |
-| `src/middleware.ts` | Locale prefix, `/en`→`/eng` legacy redirect, TR slug rewrite/redirect, API rate limiting |
+| `src/middleware.ts` | Locale prefix, `/en` ve `/eng` → `/tr/en` legacy redirect, EN rewrite, TR slug rewrite/redirect, API rate limiting |
 | `src/data/case-studies.tr.ts` | Vaka çalışmaları (Türkçe) |
 | `src/data/case-studies.en.ts` | Vaka çalışmaları (İngilizce) |
 

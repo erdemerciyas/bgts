@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import Breadcrumb, { BreadcrumbItem } from "@/components/ui/Breadcrumb"
 import { dictionaryKey, i18n, type Locale } from "@/i18n-config"
-import { getLocaleFromPathname, stripBasePath } from "@/lib/base-path"
+import { stripBasePath, stripLocalePrefix } from "@/lib/base-path"
+import { localizedHref } from "@/lib/routes"
 import { LayoutGrid, Briefcase, Box, Users, Info, Phone } from "lucide-react"
 
 // Optional: Specific icons for top-level segments
@@ -40,9 +41,9 @@ async function loadBreadcrumbDict(lang: string): Promise<BreadcrumbDict> {
 
 export default function GlobalBreadcrumb() {
     const pathname = usePathname()
-    const currentLang = getLocaleFromPathname(pathname);
     const pathWithoutBase = stripBasePath(pathname);
-    const isHome = pathWithoutBase === `/${currentLang}` || pathWithoutBase === "/";
+    const { locale: currentLang, urlPath } = stripLocalePrefix(pathWithoutBase);
+    const isHome = urlPath === "/";
 
     const [labels, setLabels] = useState<BreadcrumbDict>({});
 
@@ -50,19 +51,12 @@ export default function GlobalBreadcrumb() {
         loadBreadcrumbDict(LOCALES.includes(currentLang) ? currentLang : 'tr').then(setLabels);
     }, [currentLang]);
 
-    // Don't show on homepage
     if (isHome) return null
 
-    // Remove query params and split path
-    const pathWithoutQuery = pathWithoutBase.split("?")[0]
+    const pathSegments = urlPath.split("/").filter((segment) => segment !== "")
 
-    // Filter out empty segments and locale segments
-    const pathSegments = pathWithoutQuery.split("/").filter((segment) => segment !== "" && !LOCALES.includes(segment))
-
-    // Build breadcrumb items
     const items: BreadcrumbItem[] = pathSegments.map((segment, index) => {
-        // Construct URL for this segment by including the language prefix
-        const href = `/${currentLang}/${pathSegments.slice(0, index + 1).join("/")}`
+        const href = localizedHref(currentLang, `/${pathSegments.slice(0, index + 1).join("/")}`)
 
         // Get label from dictionary or beautify the segment
         const label = labels[segment] || segment.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())

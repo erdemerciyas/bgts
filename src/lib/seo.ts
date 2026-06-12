@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { i18n, type Locale } from "@/i18n-config";
+import { getLocalePrefix } from "@/lib/base-path";
 import { getLocalizedPath } from "@/lib/routes";
 
 export const SITE_URL = "https://bgts.com.tr";
@@ -14,17 +15,19 @@ export function buildAlternates(path: string, lang: Locale): NonNullable<Metadat
   const languages: Record<string, string> = {};
   for (const locale of i18n.locales) {
     const localized = getLocalizedPath(locale, normalized);
+    const prefix = getLocalePrefix(locale);
     languages[locale] = localized === "/"
-      ? `${SITE_URL}/${locale}`
-      : `${SITE_URL}/${locale}${localized}`;
+      ? `${SITE_URL}${prefix}`
+      : `${SITE_URL}${prefix}${localized}`;
   }
   languages["x-default"] = languages[i18n.defaultLocale];
 
   const canonicalPath = getLocalizedPath(lang, normalized);
+  const canonicalPrefix = getLocalePrefix(lang);
   return {
     canonical: canonicalPath === "/"
-      ? `${SITE_URL}/${lang}`
-      : `${SITE_URL}/${lang}${canonicalPath}`,
+      ? `${SITE_URL}${canonicalPrefix}`
+      : `${SITE_URL}${canonicalPrefix}${canonicalPath}`,
     languages,
   };
 }
@@ -35,9 +38,10 @@ export function buildAlternates(path: string, lang: Locale): NonNullable<Metadat
 export function buildOgUrl(path: string, lang: Locale): string {
   const normalized = path === "/" ? "/" : path.startsWith("/") ? path : `/${path}`;
   const localized = getLocalizedPath(lang, normalized);
+  const prefix = getLocalePrefix(lang);
   return localized === "/"
-    ? `${SITE_URL}/${lang}`
-    : `${SITE_URL}/${lang}${localized}`;
+    ? `${SITE_URL}${prefix}`
+    : `${SITE_URL}${prefix}${localized}`;
 }
 
 export function ogLocale(lang: Locale): string {

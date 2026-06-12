@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { i18n, type Locale } from '@/i18n-config'
+import { getLocalePrefix } from '@/lib/base-path'
 import { getLocalizedPath } from '@/lib/routes'
 import { SITE_URL } from '@/lib/seo'
 
@@ -47,9 +48,10 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
 
 function localeUrl(locale: Locale, internalPath: string): string {
   const localized = getLocalizedPath(locale, internalPath)
+  const prefix = getLocalePrefix(locale)
   return localized === '/'
-    ? `${SITE_URL}/${locale}`
-    : `${SITE_URL}/${locale}${localized}`
+    ? `${SITE_URL}${prefix}`
+    : `${SITE_URL}${prefix}${localized}`
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {

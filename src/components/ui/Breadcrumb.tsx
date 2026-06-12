@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { getLocaleFromPathname } from "@/lib/base-path"
+import { localizedHref } from "@/lib/routes"
 import { motion } from "framer-motion"
 import { Home, ChevronRight, LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -38,8 +39,10 @@ export default function Breadcrumb({ items, className, showHome = true, homeLabe
     }))
   }
 
+  const homeHref = localizedHref(lang, '/')
+
   const allItems = showHome
-    ? [{ label: resolvedHomeLabel, href: "/", icon: Home }, ...items]
+    ? [{ label: resolvedHomeLabel, href: homeHref, icon: Home }, ...items]
     : items
 
   return (
@@ -85,7 +88,7 @@ export default function Breadcrumb({ items, className, showHome = true, homeLabe
                         {item.icon && <item.icon className="w-4 h-4 inline mr-1.5" />}
                         {item.label}
                       </span>
-                    ) : item.href === "/" ? (
+                    ) : item.href === homeHref ? (
                       <Link
                         href={item.href}
                         className={cn(

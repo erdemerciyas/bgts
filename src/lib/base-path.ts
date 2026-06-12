@@ -14,12 +14,43 @@ export function stripBasePath(pathname: string): string {
   return rest === '' ? '/' : rest.startsWith('/') ? rest : `/${rest}`;
 }
 
-/** Resolve tr/eng from pathname even when a deploy prefix (e.g. /tr3) precedes the locale. */
+/** Public URL prefix (Turkish: /tr, English: /tr/en). */
+export function getLocalePrefix(locale: Locale): string {
+  return locale === 'eng' ? '/tr/en' : '/tr';
+}
+
+/** Whether pathname includes a locale prefix (/tr or /tr/en). */
+export function pathnameHasLocale(pathname: string): boolean {
+  const stripped = stripBasePath(pathname);
+  return stripped === '/tr' || stripped.startsWith('/tr/');
+}
+
+/** Strip locale prefix from pathname; returns locale and path without prefix. */
+export function stripLocalePrefix(pathname: string): { locale: Locale; urlPath: string } {
+  const stripped = stripBasePath(pathname);
+
+  if (stripped === '/tr/en' || stripped.startsWith('/tr/en/')) {
+    const urlPath = stripped === '/tr/en' ? '/' : stripped.slice('/tr/en'.length) || '/';
+    return { locale: 'eng', urlPath };
+  }
+
+  // Legacy /eng (redirected in middleware; kept for internal rewrites)
+  if (stripped === '/eng' || stripped.startsWith('/eng/')) {
+    const urlPath = stripped === '/eng' ? '/' : stripped.slice('/eng'.length) || '/';
+    return { locale: 'eng', urlPath };
+  }
+
+  if (stripped === '/tr' || stripped.startsWith('/tr/')) {
+    const urlPath = stripped === '/tr' ? '/' : stripped.slice('/tr'.length) || '/';
+    return { locale: 'tr', urlPath };
+  }
+
+  return { locale: i18n.defaultLocale, urlPath: stripped.startsWith('/') ? stripped : `/${stripped}` };
+}
+
+/** Resolve locale from pathname even when a deploy prefix (e.g. /tr3) precedes the locale. */
 export function getLocaleFromPathname(pathname: string): Locale {
-  const segments = stripBasePath(pathname).split('/').filter(Boolean);
-  if (segments.includes('eng')) return 'eng';
-  if (segments.includes('tr')) return 'tr';
-  return i18n.defaultLocale;
+  return stripLocalePrefix(pathname).locale;
 }
 
 export function isLocale(value: string): value is Locale {

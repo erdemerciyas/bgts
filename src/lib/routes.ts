@@ -1,5 +1,5 @@
 import { type Locale } from '@/i18n-config';
-import { getLocaleFromPathname, isLocale, stripBasePath } from '@/lib/base-path';
+import { getLocaleFromPathname, getLocalePrefix, isLocale, stripBasePath, stripLocalePrefix } from '@/lib/base-path';
 
 /**
  * Internal (filesystem) paths mapped to locale-specific URL segments.
@@ -164,22 +164,14 @@ export function localizedHref(locale: Locale | string, internalPath: string): st
   const validLocale: Locale = isLocale(locale) ? locale : getLocaleFromPathname(`/${locale}`);
   const [path, hash] = internalPath.split('#');
   const localized = getLocalizedPath(validLocale, path);
-  const href = localized === '/' ? `/${validLocale}` : `/${validLocale}${localized}`;
+  const prefix = getLocalePrefix(validLocale);
+  const href = localized === '/' ? prefix : `${prefix}${localized}`;
   return hash ? `${href}#${hash}` : href;
 }
 
 /** Switch the current pathname to another locale, translating slugs when mapped. */
 export function switchLocalePath(pathname: string, targetLocale: Locale): string {
-  const path = stripBasePath(pathname);
-  const segments = path.split('/').filter(Boolean);
-  const localeIndex = segments.findIndex((s) => s === 'tr' || s === 'eng');
-
-  if (localeIndex === -1) {
-    return `/${targetLocale}`;
-  }
-
-  const sourceLocale = segments[localeIndex] as Locale;
-  const urlPath = normalizePath(`/${segments.slice(localeIndex + 1).join('/')}`);
+  const { locale: sourceLocale, urlPath } = stripLocalePrefix(stripBasePath(pathname));
   const internal = getInternalPath(sourceLocale, urlPath);
 
   if (internal) {
@@ -187,10 +179,10 @@ export function switchLocalePath(pathname: string, targetLocale: Locale): string
   }
 
   if (urlPath === '/') {
-    return `/${targetLocale}`;
+    return getLocalePrefix(targetLocale);
   }
 
-  return `/${targetLocale}${urlPath}`;
+  return `${getLocalePrefix(targetLocale)}${urlPath}`;
 }
 
 /** Convenience wrapper when lang comes from route params as string. */
