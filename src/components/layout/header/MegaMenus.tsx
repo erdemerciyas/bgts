@@ -307,27 +307,27 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
             role="menu"
             aria-label={t(lang, "Bilgi merkezi menüsü", "Knowledge center menu")}
         >
-            <div className="grid grid-cols-4 grid-rows-2 gap-4 h-[480px]">
+            <div className="grid grid-cols-4 grid-rows-2 gap-4 h-[540px]">
 
-                {/* FEATURED: Main Knowledge Hub */}
+                {/* LEFT COLUMN: Full-height Event Card */}
                 <Link
                     href="https://www.linkedin.com/feed/update/urn:li:activity:7449781930562101248"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={closeMenu}
-                    className="col-span-2 row-span-2 relative group overflow-hidden rounded-3xl bg-slate-900 shadow-lg ring-1 ring-slate-900/5"
+                    className="col-span-2 row-span-2 relative group overflow-hidden rounded-3xl bg-slate-900 shadow-lg ring-1 ring-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/40"
                 >
                     <div className="absolute inset-0">
                         <Image
                             src="/images/events/ebintec-2026.jpg"
                             alt={t(lang, "BİLGİ MERKEZİ", "KNOWLEDGE CENTER")}
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
+                            className="object-cover transition-all duration-700 ease-out group-hover:scale-110 opacity-90 group-hover:opacity-100 group-hover:blur-[1px]"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
                     </div>
 
-                    <div className="relative h-full flex flex-col justify-between p-8 z-10">
+                    <div className="relative h-full flex flex-col justify-between p-6 z-10 event-card-hover">
                         <div className="flex items-center gap-2">
                             <div className="w-8 h-8 rounded-full bg-rose-500/80 shadow-lg flex items-center justify-center border border-rose-400">
                                 <Calendar className="w-4 h-4 text-white" />
@@ -335,97 +335,230 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             <span className="text-xs font-bold text-white drop-shadow-md tracking-widest uppercase">{t(lang, "Gerçekleşen Etkinlik", "Past Event")}</span>
                         </div>
 
-                        <div className="mt-auto bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-2xl">
-                            <h3 className="text-2xl font-black text-white mb-3 leading-tight">
+                        <div className="mt-auto p-2 event-card-hover">
+                            <h3 className="text-2xl font-black text-white mb-3 leading-tight [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]">
                                 EBINTEC BANKING INNOVATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-400">CONFERENCE</span>
                             </h3>
-                            <p className="text-slate-200 text-sm mb-3 leading-relaxed">
+                            <p className="text-slate-200 text-sm mb-3 leading-relaxed line-clamp-2 [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]">
                                 {t(
                                     lang,
                                     "Ana sponsor olarak yer aldığımız etkinlikte, finans sektörünün dönüşümüne dair güncel içgörüleri paylaştık.",
                                     "As the main sponsor of the event, we shared up-to-date insights on the transformation of the finance sector."
                                 )}
                             </p>
-                            <p className="text-slate-200 text-sm font-bold flex items-center gap-2 group-hover:-translate-y-1 transition-transform">
+                            <p className="text-slate-200 text-sm font-bold flex items-center gap-2 group-hover:-translate-y-1 transition-transform [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]">
                                 <span className="bg-white/20 px-2 py-1 rounded text-white backdrop-blur-sm">{t(lang, "14 Nisan", "April 14")}</span>
                                 <span>İstanbul</span>
                             </p>
+                            {/* Makaleler link — below date */}
+                            <div
+                                role="link"
+                                tabIndex={0}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    closeMenu?.();
+                                    window.location.href = lh(lang, '/resources/articles');
+                                }}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        closeMenu?.();
+                                        window.location.href = lh(lang, '/resources/articles');
+                                    }
+                                }}
+                                className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-900 transition-all cursor-pointer group/articles bg-white px-3.5 py-1.5 rounded-full shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/25 hover:scale-105 duration-300 ring-1 ring-white/50 w-fit"
+                            >
+                                <FileText className="w-3.5 h-3.5" />
+                                <span>{t(lang, "Etkinlik Makaleleri", "Event Articles")}</span>
+                            </div>
+
                         </div>
                     </div>
                 </Link>
 
                 {/* CARD 2: Success Stories */}
                 <Link href={lh(lang, '/resources/success-stories')} onClick={closeMenu}
-                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 p-6 flex flex-col justify-between shadow-lg hover:shadow-pink-500/25 transition-all hover:-translate-y-1">
-                    <div>
-                        <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 text-white">
-                            <Quote className="w-5 h-5 fill-current" />
-                        </div>
-                        <h4 className="text-xl font-bold text-white mb-1">{t(lang, "Başarı Hikayeleri", "Success Stories")}</h4>
-                        <p className="text-pink-100 text-xs line-clamp-2">{t(lang, "Gerçek projeler, ölçülebilir sonuçlar ve başarıyla tamamlanan dönüşüm hikayeleri.", "Real projects, measurable results and successfully completed transformation stories.")}</p>
-                    </div>
-                    <div className="mt-4 flex -space-x-3 items-center">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="w-8 h-8 rounded-full border-2 border-pink-500 bg-white shadow-sm overflow-hidden relative">
-                                <Image src={`https://i.pravatar.cc/100?img=${10 + i}`} alt="User" fill className="object-cover" />
-                            </div>
-                        ))}
-                        <div className="w-8 h-8 rounded-full border-2 border-pink-500 bg-white/20 backdrop-blur-sm flex items-center justify-center text-[10px] font-bold text-white">+12</div>
-                    </div>
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0">
+                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 p-6 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-pink-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]">
+                    <motion.div
+                        className="flex flex-col justify-between h-full"
+                        animate="initial"
+                        whileHover="hover"
+                        initial={false}
+                    >
+                        <motion.div
+                            variants={{
+                                hover: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } }
+                            }}
+                        >
+                            <motion.div
+                                variants={{
+                                    initial: { y: 0 },
+                                    hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } }
+                                }}
+                            >
+                                <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 text-white">
+                                    <Quote className="w-5 h-5 fill-current" />
+                                </div>
+                            </motion.div>
+                            <motion.div
+                                variants={{
+                                    initial: { y: 0 },
+                                    hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } }
+                                }}
+                            >
+                                <h4 className="text-xl font-bold text-white mb-1">{t(lang, "Başarı Hikayeleri", "Success Stories")}</h4>
+                            </motion.div>
+                            <motion.div
+                                variants={{
+                                    initial: { y: 0 },
+                                    hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } }
+                                }}
+                            >
+                                <p className="text-pink-100 text-xs line-clamp-2">{t(lang, "Gerçek projeler, ölçülebilir sonuçlar ve başarıyla tamamlanan dönüşüm hikayeleri.", "Real projects, measurable results and successfully completed transformation stories.")}</p>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                            className="mt-4 flex -space-x-3 items-center"
+                            variants={{
+                                initial: { y: 0 },
+                                hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const, delay: 0.3 } }
+                            }}
+                        >
+                            {[1, 2, 3].map((i) => (
+                                <div key={i} className="w-8 h-8 rounded-full border-2 border-pink-500 bg-white shadow-sm overflow-hidden relative">
+                                    <Image src={`https://i.pravatar.cc/100?img=${10 + i}`} alt="User" fill className="object-cover" />
+                                </div>
+                            ))}
+                            <div className="w-8 h-8 rounded-full border-2 border-pink-500 bg-white/20 backdrop-blur-sm flex items-center justify-center text-[10px] font-bold text-white">+12</div>
+                        </motion.div>
+                    </motion.div>
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0">
                         <ArrowUpRight className="w-5 h-5 text-white" />
                     </div>
                 </Link>
 
                 {/* CARD 3: LinkedIn */}
                 <Link href="https://www.linkedin.com/company/bilgeadam/" target="_blank" onClick={closeMenu}
-                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-6 flex flex-col justify-between shadow-lg hover:shadow-blue-500/25 transition-all hover:-translate-y-1">
+                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-6 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]">
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light"></div>
-                    <div className="relative z-10">
-                        <Linkedin className="w-12 h-12 text-white mb-3" />
-                        <h4 className="font-bold text-white text-lg">{t(lang, "Bizi Takip Edin", "Follow Us")}</h4>
-                        <p className="text-blue-100 text-xs mt-1 mb-4">{t(lang, "Teknoloji, etkinlikler ve güncel gelişmelerden haberdar olun.", "Stay informed about technology, events and current developments.")}</p>
-                        <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold group-hover:bg-white group-hover:text-[#0077b5] transition-colors">@bgts</span>
-                    </div>
+                    <motion.div
+                        className="relative z-10 flex flex-col justify-between h-full"
+                        animate="initial"
+                        whileHover="hover"
+                        initial={false}
+                    >
+                        <motion.div
+                            variants={{
+                                hover: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } }
+                            }}
+                        >
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <Linkedin className="w-12 h-12 text-white mb-3" />
+                            </motion.div>
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <h4 className="font-bold text-white text-lg">{t(lang, "Bizi Takip Edin", "Follow Us")}</h4>
+                            </motion.div>
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <p className="text-blue-100 text-xs mt-1 mb-4">{t(lang, "Teknoloji, etkinlikler ve güncel gelişmelerden haberdar olun.", "Stay informed about technology, events and current developments.")}</p>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                            variants={{
+                                initial: { y: 0 },
+                                hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const, delay: 0.3 } }
+                            }}
+                        >
+                            <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold group-hover:bg-white group-hover:text-[#0077b5] transition-colors">@bgts</span>
+                        </motion.div>
+                    </motion.div>
                 </Link>
 
                 {/* CARD 4: Business Partners */}
                 <Link href={lh(lang, '/partnerships')} onClick={closeMenu}
-                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-slate-900 border border-slate-700 shadow-lg hover:shadow-slate-800/50 transition-all hover:border-slate-600 flex flex-col justify-between p-6">
+                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-slate-900 border border-slate-700 shadow-lg hover:shadow-2xl hover:shadow-slate-800/50 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-slate-600 flex flex-col justify-between p-6">
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-soft-light"></div>
                     <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-slate-700/30 rounded-full blur-2xl group-hover:bg-slate-600/40 transition-colors"></div>
-                    <div className="relative z-10">
-                        <div className="w-10 h-10 rounded-2xl bg-slate-800 flex items-center justify-center text-slate-300 mb-3 group-hover:bg-white group-hover:text-slate-900 transition-colors duration-300 shadow-sm border border-slate-700 group-hover:border-white">
-                            <Layers className="w-5 h-5" />
-                        </div>
-                        <h4 className="font-bold text-white">{t(lang, "İş Ortakları", "Business Partners")}</h4>
-                        <p className="text-slate-400 text-xs mt-1">{t(lang, "Güçlü iş ortaklıklarıyla oluşturduğumuz teknoloji ekosistemi.", "Technology ecosystem built through strong partnerships.")}</p>
-                    </div>
-                    <div className="mt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-white relative z-10">
-                        {t(lang, "İncele", "Explore")} <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    <motion.div
+                        className="relative z-10 flex flex-col justify-between h-full"
+                        animate="initial"
+                        whileHover="hover"
+                        initial={false}
+                    >
+                        <motion.div
+                            variants={{
+                                hover: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } }
+                            }}
+                        >
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <div className="w-10 h-10 rounded-2xl bg-slate-800 flex items-center justify-center text-slate-300 mb-3 group-hover:bg-white group-hover:text-slate-900 transition-colors duration-300 shadow-sm border border-slate-700 group-hover:border-white">
+                                    <Layers className="w-5 h-5" />
+                                </div>
+                            </motion.div>
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <h4 className="font-bold text-white">{t(lang, "İş Ortakları", "Business Partners")}</h4>
+                            </motion.div>
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <p className="text-slate-400 text-xs mt-1">{t(lang, "Güçlü iş ortaklıklarıyla oluşturduğumuz teknoloji ekosistemi.", "Technology ecosystem built through strong partnerships.")}</p>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                            className="mt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-white relative z-10"
+                            variants={{
+                                initial: { y: 0 },
+                                hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const, delay: 0.3 } }
+                            }}
+                        >
+                            {t(lang, "İncele", "Explore")} <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </motion.div>
+                    </motion.div>
                 </Link>
 
                 {/* CARD 5: Infographics */}
                 <Link href={lh(lang, '/resources/infographics')} onClick={closeMenu}
-                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500 to-violet-600 border border-indigo-400/50 p-6 flex flex-col justify-between shadow-lg hover:shadow-indigo-500/25 transition-all">
+                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500 to-violet-600 border border-indigo-400/50 p-6 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]">
                     <BackgroundPattern />
                     <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                         <BarChart3 className="w-24 h-24 text-white" />
                     </div>
-                    <div className="relative z-10">
-                        <div className="w-10 h-10 rounded-2xl bg-white/20 text-white flex items-center justify-center mb-3 group-hover:scale-110 transition-transform backdrop-blur-sm shadow-inner shadow-white/20 border border-white/10">
-                            <BarChart3 className="w-6 h-6" />
-                        </div>
-                        <h4 className="font-bold text-white">{t(lang, "İnfografikler", "Infographics")}</h4>
-                        <p className="text-indigo-100 text-xs mt-1">{t(lang, "Sektörel veriler, içgörüler ve trend analizleri.", "Industry data, insights and trend analyses.")}</p>
-                    </div>
-                    <div className="mt-4 flex items-center text-xs font-bold text-white relative z-10">
-                        {t(lang, "İncele", "Explore")} <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    <motion.div
+                        className="relative z-10 flex flex-col justify-between h-full"
+                        animate="initial"
+                        whileHover="hover"
+                        initial={false}
+                    >
+                        <motion.div
+                            variants={{
+                                hover: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } }
+                            }}
+                        >
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <div className="w-10 h-10 rounded-2xl bg-white/20 text-white flex items-center justify-center mb-3 group-hover:scale-110 transition-transform backdrop-blur-sm shadow-inner shadow-white/20 border border-white/10">
+                                    <BarChart3 className="w-6 h-6" />
+                                </div>
+                            </motion.div>
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <h4 className="font-bold text-white">{t(lang, "İnfografikler", "Infographics")}</h4>
+                            </motion.div>
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <p className="text-indigo-100 text-xs mt-1">{t(lang, "Sektörel veriler, içgörüler ve trend analizleri.", "Industry data, insights and trend analyses.")}</p>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                            className="mt-4 flex items-center text-xs font-bold text-white relative z-10"
+                            variants={{
+                                initial: { y: 0 },
+                                hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const, delay: 0.3 } }
+                            }}
+                        >
+                            {t(lang, "İncele", "Explore")} <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </motion.div>
+                    </motion.div>
                 </Link>
 
             </div>
+
         </motion.div>
     )
 }

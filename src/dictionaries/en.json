@@ -3329,5 +3329,16 @@
     "social-contribution": "Sustainable Value Program",
     "retail": "Retail",
     "telecommunications": "Telecommunications"
+  },
+  "articles": {
+    "title": "Articles",
+    "subtitle": "Latest insights and analysis from our industry experts.",
+    "readMore": "Read More",
+    "allArticles": "All Articles",
+    "closeModal": "Close",
+    "readTime": "min read",
+    "by": "By",
+    "category": "articles",
+    "publishedOn": "Published On"
   }
 }

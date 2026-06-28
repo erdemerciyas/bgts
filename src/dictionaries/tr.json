@@ -3360,5 +3360,16 @@
     "social-contribution": "Sürdürülebilir Değer Programı",
     "retail": "Perakende",
     "telecommunications": "Telekomünikasyon"
+  },
+  "articles": {
+    "title": "Makaleler",
+    "subtitle": "Sektör uzmanlarımızdan en güncel içgörüler ve analizler.",
+    "readMore": "Devamını Oku",
+    "allArticles": "Tüm Makaleler",
+    "closeModal": "Kapat",
+    "readTime": "dk okuma",
+    "by": "Yazan",
+    "category": "makale",
+    "publishedOn": "Yayın Tarihi"
   }
 }

@@ -53,6 +53,7 @@ export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
     eng: '/products/ai-hiring-assistant',
   },
   '/products/cv-converter': { tr: '/urunler/cv-donusturucu', eng: '/products/cv-converter' },
+  '/resources/articles': { tr: '/bilgi-merkezi/makaleler', eng: '/resources/articles' },
 };
 
 /** Top-level Turkish aliases without a dedicated page — redirect targets (internal path). */
@@ -110,7 +111,7 @@ export const TR_LEGACY_REDIRECTS: Record<string, string> = {
   '/apply': '/basvuru',
   '/resources/success-stories': '/basari-hikayeleri',
   '/case-studies': '/basari-hikayeleri',
-  '/articles': '/makaleler',
+  '/articles': '/bilgi-merkezi/makaleler',
   '/events': '/etkinlikler',
   '/webinars': '/webinarlar',
   '/news': '/haberler',

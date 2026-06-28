@@ -10,10 +10,17 @@
 - [sitemap.ts](file://src/app/sitemap.ts)
 - [Header.tsx](file://src/components/layout/Header.tsx)
 - [layout.tsx](file://src/app/[lang]/layout.tsx)
-- [page.tsx](file://src/app/[lang]/page.tsx)
+- [products/layout.tsx](file://src/app/[lang]/products/layout.tsx)
 - [get-dictionary.ts](file://src/get-dictionary.ts)
 - [next.config.ts](file://next.config.ts)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Updated Turkish URL redirection system to focus on /urunler/hcm as the primary redirect target
+- Modified legacy redirect configuration to streamline Turkish product route handling
+- Enhanced middleware logic to prioritize Turkish URL structure improvements
+- Updated routing configuration to reflect simplified redirect system
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -53,29 +60,32 @@ SM["Sitemap Generator<br/>src/app/sitemap.ts"] --> SEO
 SM --> RT
 CFG --> APP
 CFG --> MW
+PROD["Products Layout<br/>src/app/[lang]/products/layout.tsx"] --> SEO
 ```
 
 **Diagram sources**
 - [middleware.ts:1-153](file://src/middleware.ts#L1-L153)
 - [base-path.ts:1-67](file://src/lib/base-path.ts#L1-L67)
-- [routes.ts:1-215](file://src/lib/routes.ts#L1-L215)
+- [routes.ts:1-216](file://src/lib/routes.ts#L1-L216)
 - [seo.ts:1-50](file://src/lib/seo.ts#L1-L50)
 - [i18n-config.ts:1-21](file://src/i18n-config.ts#L1-L21)
 - [layout.tsx:1-139](file://src/app/[lang]/layout.tsx#L1-L139)
 - [get-dictionary.ts:1-13](file://src/get-dictionary.ts#L1-L13)
 - [Header.tsx:1-211](file://src/components/layout/Header.tsx#L1-L211)
 - [sitemap.ts:1-74](file://src/app/sitemap.ts#L1-L74)
+- [products/layout.tsx:1-42](file://src/app/[lang]/products/layout.tsx#L1-L42)
 
 **Section sources**
 - [middleware.ts:1-153](file://src/middleware.ts#L1-L153)
 - [base-path.ts:1-67](file://src/lib/base-path.ts#L1-L67)
-- [routes.ts:1-215](file://src/lib/routes.ts#L1-L215)
+- [routes.ts:1-216](file://src/lib/routes.ts#L1-L216)
 - [seo.ts:1-50](file://src/lib/seo.ts#L1-L50)
 - [i18n-config.ts:1-21](file://src/i18n-config.ts#L1-L21)
 - [layout.tsx:1-139](file://src/app/[lang]/layout.tsx#L1-L139)
 - [get-dictionary.ts:1-13](file://src/get-dictionary.ts#L1-L13)
 - [Header.tsx:1-211](file://src/components/layout/Header.tsx#L1-L211)
 - [sitemap.ts:1-74](file://src/app/sitemap.ts#L1-L74)
+- [products/layout.tsx:1-42](file://src/app/[lang]/products/layout.tsx#L1-L42)
 
 ## Core Components
 - Locale configuration defines default and supported locales and exposes helpers for HTML lang attributes and dictionary keys.
@@ -87,7 +97,7 @@ CFG --> MW
 
 **Section sources**
 - [i18n-config.ts:1-21](file://src/i18n-config.ts#L1-L21)
-- [routes.ts:8-56](file://src/lib/routes.ts#L8-L56)
+- [routes.ts:8-57](file://src/lib/routes.ts#L8-L57)
 - [base-path.ts:17-58](file://src/lib/base-path.ts#L17-L58)
 - [seo.ts:12-49](file://src/lib/seo.ts#L12-L49)
 - [middleware.ts:51-146](file://src/middleware.ts#L51-L146)
@@ -179,6 +189,8 @@ The route utilities define:
 - Reverse lookup maps localized URLs to internal paths.
 - Helpers to compute localized hrefs, switch locales, and resolve legacy redirects and obsolete routes.
 
+**Updated** Simplified Turkish URL redirection system focusing on /urunler/hcm as the primary redirect target
+
 ```mermaid
 classDiagram
 class RoutesUtils {
@@ -197,12 +209,12 @@ class RoutesUtils {
 ```
 
 **Diagram sources**
-- [routes.ts:8-215](file://src/lib/routes.ts#L8-L215)
+- [routes.ts:8-216](file://src/lib/routes.ts#L8-L216)
 
 **Section sources**
-- [routes.ts:8-56](file://src/lib/routes.ts#L8-L56)
+- [routes.ts:8-57](file://src/lib/routes.ts#L8-L57)
 - [routes.ts:146-185](file://src/lib/routes.ts#L146-L185)
-- [routes.ts:192-214](file://src/lib/routes.ts#L192-L214)
+- [routes.ts:192-215](file://src/lib/routes.ts#L192-L215)
 
 ### Base Path and Locale Prefix Handling
 Base path utilities:
@@ -281,6 +293,22 @@ RT-->>Nav : localized href or switched path
 - [Header.tsx:113-113](file://src/components/layout/Header.tsx#L113-L113)
 - [Header.tsx:147-147](file://src/components/layout/Header.tsx#L147-L147)
 
+### Product Route Redirection System
+**Updated** The Turkish URL redirection system has been streamlined to focus on /urunler/hcm as the primary redirect target, simplifying the legacy redirect configuration.
+
+The products route now follows a more focused redirection pattern:
+- `/products` → `/urunler/hcm` (Turkish)
+- `/products/hcm` → `/urunler/hcm` (Turkish)
+- `/products/praxila` → `/urunler/praxilla` (Turkish)
+
+This creates a cleaner URL structure where all product-related content is consolidated under the /urunler hierarchy, with HCM as the primary landing page.
+
+**Section sources**
+- [routes.ts:60-65](file://src/lib/routes.ts#L60-L65)
+- [routes.ts:67-128](file://src/lib/routes.ts#L67-L128)
+- [routes.ts:10-11](file://src/lib/routes.ts#L10-L11)
+- [routes.ts:122-127](file://src/lib/routes.ts#L122-L127)
+
 ### Example Workflows
 
 #### Generating Localized URLs
@@ -305,9 +333,9 @@ RT-->>Nav : localized href or switched path
 - Register obsolete routes in OBSOLETE_INTERNAL_REDIRECTS for 301 redirects.
 
 **Section sources**
-- [routes.ts:8-56](file://src/lib/routes.ts#L8-L56)
+- [routes.ts:8-57](file://src/lib/routes.ts#L8-L57)
 - [routes.ts:154-159](file://src/lib/routes.ts#L154-L159)
-- [routes.ts:204-214](file://src/lib/routes.ts#L204-L214)
+- [routes.ts:204-215](file://src/lib/routes.ts#L204-L215)
 
 ## Dependency Analysis
 The routing and localization stack exhibits clear separation of concerns:
@@ -327,6 +355,7 @@ HDR["components/layout/Header.tsx"] --> RT
 HDR --> BP
 SM["app/sitemap.ts"] --> SEO
 SM --> RT
+PROD["app/[lang]/products/layout.tsx"] --> SEO
 ```
 
 **Diagram sources**
@@ -334,20 +363,20 @@ SM --> RT
 - [layout.tsx:10-12](file://src/app/[lang]/layout.tsx#L10-L12)
 - [Header.tsx:16-17](file://src/components/layout/Header.tsx#L16-L17)
 - [sitemap.ts:2-5](file://src/app/sitemap.ts#L2-L5)
+- [products/layout.tsx:2](file://src/app/[lang]/products/layout.tsx#L2)
 
 **Section sources**
 - [middleware.ts:1-7](file://src/middleware.ts#L1-L7)
 - [layout.tsx:10-12](file://src/app/[lang]/layout.tsx#L10-L12)
 - [Header.tsx:16-17](file://src/components/layout/Header.tsx#L16-L17)
 - [sitemap.ts:2-5](file://src/app/sitemap.ts#L2-L5)
+- [products/layout.tsx:2](file://src/app/[lang]/products/layout.tsx#L2)
 
 ## Performance Considerations
 - Middleware applies rate limiting selectively to API endpoints to avoid unnecessary overhead.
 - Base path utilities normalize URLs efficiently using string operations.
 - Route mapping uses precomputed maps for O(1) lookups.
 - Deployment prefix handling avoids repeated computations by caching base path.
-
-[No sources needed since this section provides general guidance]
 
 ## Troubleshooting Guide
 Common issues and resolutions:
@@ -359,20 +388,20 @@ Common issues and resolutions:
 
 **Section sources**
 - [base-path.ts:10-58](file://src/lib/base-path.ts#L10-L58)
-- [routes.ts:67-127](file://src/lib/routes.ts#L67-L127)
-- [routes.ts:204-214](file://src/lib/routes.ts#L204-L214)
+- [routes.ts:67-128](file://src/lib/routes.ts#L67-L128)
+- [routes.ts:204-215](file://src/lib/routes.ts#L204-L215)
 - [seo.ts:12-33](file://src/lib/seo.ts#L12-L33)
 
 ## Conclusion
 The project implements a robust, locale-aware routing system with explicit URL prefix handling, automatic locale detection, and comprehensive utilities for route mapping, URL construction, and SEO metadata. Middleware ensures smooth transitions for legacy paths and obsolete routes while Next.js rewrites handle internal path resolution. The design cleanly separates concerns across modules, enabling maintainability and extensibility for future routing needs.
 
-[No sources needed since this section summarizes without analyzing specific files]
+**Updated** The routing system has been optimized to focus on Turkish URL structure improvements, particularly around the products route, creating a more streamlined and user-friendly navigation experience.
 
 ## Appendices
 
 ### SEO Configuration Examples
 - hreflang alternates: Generated per locale with x-default included.
-- Canonical URLs: Computed for the current locale’s localized path.
+- Canonical URLs: Computed for the current locale's localized path.
 - OpenGraph locale: Uses appropriate region codes for Turkish and English.
 
 **Section sources**
@@ -386,3 +415,17 @@ The project implements a robust, locale-aware routing system with explicit URL p
 **Section sources**
 - [base-path.ts:3-8](file://src/lib/base-path.ts#L3-L8)
 - [next.config.ts:3](file://next.config.ts#L3)
+
+### Turkish URL Redirection System
+**Updated** The Turkish URL redirection system now focuses on consolidating product-related content under /urunler/hcm, creating a more organized and SEO-friendly URL structure.
+
+Key improvements:
+- Simplified redirect targets for Turkish product routes
+- Consolidated product content under /urunler hierarchy
+- Streamlined legacy redirect configuration
+- Improved URL structure for better user experience
+
+**Section sources**
+- [routes.ts:60-65](file://src/lib/routes.ts#L60-L65)
+- [routes.ts:67-128](file://src/lib/routes.ts#L67-L128)
+- [routes.ts:204-215](file://src/lib/routes.ts#L204-L215)

@@ -2,6 +2,7 @@
 
 <cite>
 **Referenced Files in This Document**
+- [layout.tsx](file://src/app/[lang]/products/layout.tsx)
 - [page.tsx](file://src/app/[lang]/products/ai-hiring-assistant/page.tsx)
 - [AiHiringClient.tsx](file://src/app/[lang]/products/ai-hiring-assistant/AiHiringClient.tsx)
 - [page.tsx](file://src/app/[lang]/products/cortex/page.tsx)
@@ -27,6 +28,13 @@
 - [Typography.tsx](file://src/components/ui/Typography.tsx)
 </cite>
 
+## Update Summary
+**Changes Made**
+- Updated project structure to reflect the elimination of centralized products catalog page
+- Removed references to ProductsClient.tsx and Products page.tsx
+- Updated routing configuration to support direct product page access
+- Revised architecture overview to show direct product page navigation flow
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -39,16 +47,16 @@
 9. [Conclusion](#conclusion)
 
 ## Introduction
-This document explains the product showcase pages for BGTS products, including AI hiring assistant, Cortex, CV converter, Doc2Bot, DocMind, HCM platform, MeetSense, and Praxila. It covers how each product page is structured, how metadata is generated, how client-side components render interactive demonstrations, and how technical specifications and feature showcases are presented. The goal is to help developers and content teams understand the implementation patterns and maintain consistency across product pages.
+This document explains the product showcase pages for BGTS products, including AI hiring assistant, Cortex, CV converter, Doc2Bot, DocMind, HCM platform, MeetSense, and Praxila. The implementation follows a direct product page access model where users navigate directly to individual product pages rather than through a centralized catalog. Each product page is structured with SEO-optimized metadata generation and interactive client-side demonstrations.
 
 ## Project Structure
-Each product has a dedicated route under src/app/[lang]/products/<product-name>/ with two files:
-- page.tsx: Next.js page module that builds SEO metadata and renders the client component with localized content.
-- <Product>Client.tsx: Client component that renders the product-specific UI, interactive demos, and feature sections.
+The products section now operates with direct routing to individual product pages instead of a centralized catalog. Each product has a dedicated route under src/app/[lang]/products/<product-name>/ with two files:
+- page.tsx: Next.js page module that builds SEO metadata and renders the client component with localized content
+- <Product>Client.tsx: Client component that renders the product-specific UI, interactive demos, and feature sections
 
 ```mermaid
 graph TB
-subgraph "Next.js App Router"
+subgraph "Direct Product Page Routes"
 A["/[lang]/products/ai-hiring-assistant/page.tsx"]
 B["/[lang]/products/ai-hiring-assistant/AiHiringClient.tsx"]
 C["/[lang]/products/cortex/page.tsx"]
@@ -113,16 +121,18 @@ O --> P
 - [PraxilaClient.tsx:1-141](file://src/app/[lang]/products/praxila/PraxilaClient.tsx#L1-L141)
 
 ## Core Components
-- Page modules (page.tsx): Build SEO metadata using localized dictionaries and pass product-specific content to client components.
-- Client components (<Product>Client.tsx): Render product-specific layouts, interactive demos, feature grids, and CTAs. They also embed structured data for SEO.
+- **Products Layout**: Centralized layout handler that manages SEO metadata for the products section and provides consistent wrapper for all product pages
+- **Page Modules (page.tsx)**: Individual product page modules that build SEO metadata using localized dictionaries and pass product-specific content to client components
+- **Client Components (<Product>Client.tsx)**: Render product-specific layouts, interactive demos, feature grids, and CTAs with embedded structured data for SEO
 
 Key shared utilities:
-- Localization routing helper for canonical URLs.
-- SEO helpers for alternate links and Open Graph URLs.
-- Dictionary loader for localized content.
-- UI primitives for consistent layouts and typography.
+- Localization routing helper for canonical URLs
+- SEO helpers for alternate links and Open Graph URLs
+- Dictionary loader for localized content
+- UI primitives for consistent layouts and typography
 
 **Section sources**
+- [layout.tsx:1-42](file://src/app/[lang]/products/layout.tsx#L1-L42)
 - [page.tsx:9-35](file://src/app/[lang]/products/ai-hiring-assistant/page.tsx#L9-L35)
 - [AiHiringClient.tsx:34-38](file://src/app/[lang]/products/ai-hiring-assistant/AiHiringClient.tsx#L34-L38)
 - [routes.ts](file://src/lib/routes.ts)
@@ -131,20 +141,23 @@ Key shared utilities:
 - [StructuredData.tsx](file://src/components/seo/StructuredData.tsx)
 
 ## Architecture Overview
-The product pages follow a consistent pattern:
-- Server-side page module handles metadata generation and dictionary loading.
-- Client component renders the UI, interactive demos, and feature sections.
-- Shared UI components and utilities ensure visual and behavioral consistency.
+The product pages follow a direct routing pattern where users navigate directly to individual product pages:
+- Products layout handles section-wide SEO metadata and provides consistent wrapper
+- Individual product page modules handle product-specific metadata generation and dictionary loading
+- Client components render the UI, interactive demos, and feature sections
+- Shared UI components and utilities ensure visual and behavioral consistency
 
 ```mermaid
 sequenceDiagram
 participant U as "User"
 participant R as "Next.js Router"
-participant P as "page.tsx"
+participant PL as "Products Layout"
+participant P as "Product Page Module"
 participant D as "Dictionary Loader"
-participant C as "<Product>Client.tsx"
+participant C as "Product Client Component"
 U->>R : Navigate to "/products/ : slug"
-R->>P : Invoke page module
+R->>PL : Load products layout
+PL->>P : Route to specific product page
 P->>D : Load localized dictionary
 D-->>P : Product content payload
 P->>C : Render client component with props
@@ -152,6 +165,7 @@ C-->>U : Interactive product page
 ```
 
 **Diagram sources**
+- [layout.tsx:35-41](file://src/app/[lang]/products/layout.tsx#L35-L41)
 - [page.tsx:37-46](file://src/app/[lang]/products/ai-hiring-assistant/page.tsx#L37-L46)
 - [AiHiringClient.tsx:30-38](file://src/app/[lang]/products/ai-hiring-assistant/AiHiringClient.tsx#L30-L38)
 - [get-dictionary.ts](file://src/get-dictionary.ts)
@@ -160,12 +174,12 @@ C-->>U : Interactive product page
 ## Detailed Component Analysis
 
 ### AI Hiring Assistant
-- Purpose: Showcase AI-powered recruitment features with a hero, feature grid, and deep dive section.
+- Purpose: Showcase AI-powered recruitment features with a hero, feature grid, and deep dive section
 - Implementation highlights:
-  - Hero section with gradient background, CTA, and dashboard preview image.
-  - Feature cards with dynamic icons and color themes.
-  - Deep dive with image and bullet list for capability highlights.
-  - Structured data embedded for SEO.
+  - Hero section with gradient background, CTA, and dashboard preview image
+  - Feature cards with dynamic icons and color themes
+  - Deep dive with image and bullet list for capability highlights
+  - Structured data embedded for SEO
 
 ```mermaid
 flowchart TD
@@ -183,12 +197,12 @@ DeepDive --> End(["Complete"])
 - [AiHiringClient.tsx:30-141](file://src/app/[lang]/products/ai-hiring-assistant/AiHiringClient.tsx#L30-L141)
 
 ### Cortex
-- Purpose: Present an enterprise AI-powered SDLC platform with agent workflows and security highlights.
+- Purpose: Present an enterprise AI-powered SDLC platform with agent workflows and security highlights
 - Implementation highlights:
-  - Hero with CPU visualization and CTA.
-  - Feature cards with problem statements and badges.
-  - Agent workflow list with icons and labels.
-  - Security benefits panel with animated visuals.
+  - Hero with CPU visualization and CTA
+  - Feature cards with problem statements and badges
+  - Agent workflow list with icons and labels
+  - Security benefits panel with animated visuals
 
 ```mermaid
 flowchart TD
@@ -207,11 +221,11 @@ Security --> End(["Complete"])
 - [CortexClient.tsx:43-193](file://src/app/[lang]/products/cortex/CortexClient.tsx#L43-L193)
 
 ### CV Converter
-- Purpose: Demonstrate CV standardization from various formats to corporate templates.
+- Purpose: Demonstrate CV standardization from various formats to corporate templates
 - Implementation highlights:
-  - Problem/solution comparison with labeled cards.
-  - Feature grid with upload, template, and editing steps.
-  - Prominent CTA section with gradient background.
+  - Problem/solution comparison with labeled cards
+  - Feature grid with upload, template, and editing steps
+  - Prominent CTA section with gradient background
 
 ```mermaid
 flowchart TD
@@ -230,11 +244,11 @@ CTA --> End(["Complete"])
 - [CvConverterClient.tsx:33-168](file://src/app/[lang]/products/cv-converter/CvConverterClient.tsx#L33-L168)
 
 ### Doc2Bot
-- Purpose: Showcase an AI chatbot for internal documents with an interactive chat demo.
+- Purpose: Showcase an AI chatbot for internal documents with an interactive chat demo
 - Implementation highlights:
-  - Hero with animated chat widget simulation.
-  - Feature cards with contextual icons and colors.
-  - Responsive layout combining copy and feature grid.
+  - Hero with animated chat widget simulation
+  - Feature cards with contextual icons and colors
+  - Responsive layout combining copy and feature grid
 
 ```mermaid
 flowchart TD
@@ -251,12 +265,12 @@ Features --> End(["Complete"])
 - [Doc2BotClient.tsx:26-129](file://src/app/[lang]/products/doc2bot/Doc2BotClient.tsx#L26-L129)
 
 ### DocMind
-- Purpose: Present automatic technical documentation generation from source code.
+- Purpose: Present automatic technical documentation generation from source code
 - Implementation highlights:
-  - Hero with terminal-like interface preview.
-  - Three-step process visualization.
-  - Feature list with icons and descriptions.
-  - Dark-themed CTA section.
+  - Hero with terminal-like interface preview
+  - Three-step process visualization
+  - Feature list with icons and descriptions
+  - Dark-themed CTA section
 
 ```mermaid
 flowchart TD
@@ -275,10 +289,10 @@ CTA --> End(["Complete"])
 - [DocMindClient.tsx:27-171](file://src/app/[lang]/products/docmind/DocMindClient.tsx#L27-L171)
 
 ### HCM Platform
-- Purpose: Present an integrated HR platform with 16 modules spanning the HR lifecycle.
+- Purpose: Present an integrated HR platform with 16 modules spanning the HR lifecycle
 - Implementation highlights:
-  - Hero with gradient background and CTA.
-  - Feature-focused layout suitable for a comprehensive platform overview.
+  - Hero with gradient background and CTA
+  - Feature-focused layout suitable for a comprehensive platform overview
 
 ```mermaid
 flowchart TD
@@ -295,10 +309,10 @@ Features --> End(["Complete"])
 - [HcmClient.tsx:1-141](file://src/app/[lang]/products/hcm/HcmClient.tsx#L1-L141)
 
 ### MeetSense
-- Purpose: Showcase an AI meeting assistant with transcription and Jira integration.
+- Purpose: Showcase an AI meeting assistant with transcription and Jira integration
 - Implementation highlights:
-  - Hero with gradient background and CTA.
-  - Feature grid and capability presentation aligned with meeting workflows.
+  - Hero with gradient background and CTA
+  - Feature grid and capability presentation aligned with meeting workflows
 
 ```mermaid
 flowchart TD
@@ -315,10 +329,10 @@ Features --> End(["Complete"])
 - [MeetSenseClient.tsx:1-141](file://src/app/[lang]/products/meetsense/MeetSenseClient.tsx#L1-L141)
 
 ### Praxila
-- Purpose: Present an integrated IT service and operations management platform.
+- Purpose: Present an integrated IT service and operations management platform
 - Implementation highlights:
-  - Hero with gradient background and CTA.
-  - Feature-focused layout emphasizing unified ITSM, PPM, and ITOM capabilities.
+  - Hero with gradient background and CTA
+  - feature-focused layout emphasizing unified ITSM, PPM, and ITOM capabilities
 
 ```mermaid
 flowchart TD
@@ -335,21 +349,25 @@ Features --> End(["Complete"])
 - [PraxilaClient.tsx:1-141](file://src/app/[lang]/products/praxila/PraxilaClient.tsx#L1-L141)
 
 ## Dependency Analysis
-- Routing and localization:
-  - Each page uses a localized path helper to generate canonical URLs for structured data and SEO.
-- SEO:
-  - Open Graph and alternate links are built per-language.
-- Content:
-  - Localized dictionaries supply product-specific copy and feature lists.
-- UI:
-  - Shared components (Container, Section, Typography) ensure consistent spacing and typography.
+- **Routing and localization**:
+  - Products layout handles section-wide SEO metadata generation
+  - Individual product pages use localized path helper to generate canonical URLs for structured data and SEO
+- **SEO**:
+  - Open Graph and alternate links are built per-language at both layout and page levels
+- **Content**:
+  - Localized dictionaries supply product-specific copy and feature lists
+- **UI**:
+  - Shared components (Container, Section, Typography) ensure consistent spacing and typography
 
 ```mermaid
 graph LR
-PG["page.tsx"] --> RT["routes.ts"]
-PG --> SD["seo.ts"]
-PG --> GD["get-dictionary.ts"]
-PG --> CL["<Product>Client.tsx"]
+PL["Products Layout"] --> RT["routes.ts"]
+PL --> SD["seo.ts"]
+PL --> GD["get-dictionary.ts"]
+P["Product Page"] --> RT
+P --> SD
+P --> GD
+P --> CL["Product Client"]
 CL --> SDT["StructuredData.tsx"]
 CL --> UI["ui/Container.tsx"]
 CL --> UX["ui/Section.tsx"]
@@ -357,6 +375,7 @@ CL --> TXT["ui/Typography.tsx"]
 ```
 
 **Diagram sources**
+- [layout.tsx:1-42](file://src/app/[lang]/products/layout.tsx#L1-L42)
 - [page.tsx:1-47](file://src/app/[lang]/products/ai-hiring-assistant/page.tsx#L1-L47)
 - [AiHiringClient.tsx:1-141](file://src/app/[lang]/products/ai-hiring-assistant/AiHiringClient.tsx#L1-L141)
 - [routes.ts](file://src/lib/routes.ts)
@@ -368,6 +387,7 @@ CL --> TXT["ui/Typography.tsx"]
 - [Typography.tsx](file://src/components/ui/Typography.tsx)
 
 **Section sources**
+- [layout.tsx:1-42](file://src/app/[lang]/products/layout.tsx#L1-L42)
 - [page.tsx:1-47](file://src/app/[lang]/products/ai-hiring-assistant/page.tsx#L1-L47)
 - [AiHiringClient.tsx:1-141](file://src/app/[lang]/products/ai-hiring-assistant/AiHiringClient.tsx#L1-L141)
 - [routes.ts](file://src/lib/routes.ts)
@@ -379,23 +399,24 @@ CL --> TXT["ui/Typography.tsx"]
 - [Typography.tsx](file://src/components/ui/Typography.tsx)
 
 ## Performance Considerations
-- Keep client components lightweight; defer heavy assets to lazy-loaded images and minimal animations.
-- Use responsive image components and appropriate sizes to reduce bandwidth.
-- Minimize repeated computations in client components; pass precomputed props from server modules.
-- Prefer static metadata generation where possible and avoid unnecessary re-renders.
+- Keep client components lightweight; defer heavy assets to lazy-loaded images and minimal animations
+- Use responsive image components and appropriate sizes to reduce bandwidth
+- Minimize repeated computations in client components; pass precomputed props from server modules
+- Prefer static metadata generation where possible and avoid unnecessary re-renders
 
 ## Troubleshooting Guide
-- Metadata issues:
-  - Verify localized dictionary keys for each product and ensure fallbacks are handled.
-  - Confirm Open Graph and alternate URL builders are invoked with correct locale and path.
-- Client rendering:
-  - Ensure structured data component receives correct name, description, and URL.
-  - Validate that localized path helper produces expected canonical URLs.
-- Content consistency:
-  - Align feature item counts with icon/color arrays to prevent index mismatches.
-  - Keep image assets organized under public/images/products/<product> for predictable paths.
+- **Metadata issues**:
+  - Verify localized dictionary keys for each product and ensure fallbacks are handled
+  - Confirm Open Graph and alternate URL builders are invoked with correct locale and path
+- **Client rendering**:
+  - Ensure structured data component receives correct name, description, and URL
+  - Validate that localized path helper produces expected canonical URLs
+- **Content consistency**:
+  - Align feature item counts with icon/color arrays to prevent index mismatches
+  - Keep image assets organized under public/images/products/<product> for predictable paths
 
 **Section sources**
+- [layout.tsx:7-33](file://src/app/[lang]/products/layout.tsx#L7-L33)
 - [page.tsx:9-35](file://src/app/[lang]/products/ai-hiring-assistant/page.tsx#L9-L35)
 - [AiHiringClient.tsx:34-38](file://src/app/[lang]/products/ai-hiring-assistant/AiHiringClient.tsx#L34-L38)
 - [routes.ts](file://src/lib/routes.ts)
@@ -403,4 +424,4 @@ CL --> TXT["ui/Typography.tsx"]
 - [StructuredData.tsx](file://src/components/seo/StructuredData.tsx)
 
 ## Conclusion
-The product showcase pages implement a consistent, scalable pattern: server-side metadata generation with localized content and client-side rendering of interactive demos and feature presentations. By leveraging shared UI components and utilities, each product page communicates its technical capabilities effectively while maintaining a cohesive brand experience across languages and devices.
+The product showcase pages implement a streamlined, scalable pattern with direct product page access: centralized layout handling with section-wide SEO metadata and localized content loading at the product page level, combined with client-side rendering of interactive demos and feature presentations. By leveraging shared UI components and utilities, each product page communicates its technical capabilities effectively while maintaining a cohesive brand experience across languages and devices.

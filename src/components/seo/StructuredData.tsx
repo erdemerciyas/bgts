@@ -270,6 +270,47 @@ export function HowToStructuredData({ name, description, steps }: HowToSchemaPro
   )
 }
 
+interface ArticleSchemaProps {
+  title: string
+  author: string
+  date: string
+  excerpt: string
+  coverImage: string
+  url: string
+}
+
+export function ArticleStructuredData({ title, author, date, excerpt, coverImage, url }: ArticleSchemaProps) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    author: {
+      '@type': 'Person',
+      name: author,
+    },
+    datePublished: date,
+    description: excerpt,
+    image: coverImage,
+    url: `https://bgts.com.tr${url}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'BGTS - Business & Global Technology Solutions',
+      url: 'https://bgts.com.tr',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://bgts.com.tr/BGTS_logo.png',
+      },
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  )
+}
+
 interface VideoSchemaProps {
   name: string
   description: string
