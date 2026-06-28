@@ -88,7 +88,7 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 
 ### Tasarım ve Kullanıcı Deneyimi
 - **Mega Menu Navigasyon:** Hizmetler, Ürünler, Sektörler ve Bilgi Merkezi için tam genişlikte mega menüler; "Yerini Al" ve "Hakkımızda" doğrudan nav linkleri
-- **Site İçi Arama:** 27+ öğeli arama endeksi — ürünler, sektörler, kariyer sayfaları, kurumsal sayfalar ve hizmetler arasında zengin etiketli hızlı arama
+- **Site İçi Arama:** 30+ öğeli arama endeksi — ürünler, sektörler, kariyer sayfaları, kurumsal sayfalar, hizmetler ve makaleler arasında zengin etiketli hızlı arama
 - **Responsive Tasarım:** Mobil öncelikli yaklaşım; mobil navigasyon (accordion menü, scroll lock, backdrop overlay)
 - **Hero Slider:** Ana sayfada çok slaytlı, otomatik ilerleyen, swipe destekli animasyonlu kahraman alanı
 - **Framer Motion Animasyonları:** Scroll-triggered reveal, spring animasyonları, stagger efektleri
@@ -129,6 +129,14 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 - Google Analytics (GA4) entegrasyonu — çerez onayına bağlı koşullu yükleme
 - Canonical URL ve alternateLocale desteği
 
+### Makaleler / Blog
+- **Makaleler sayfası:** `/bilgi-merkezi/makaleler` (TR) / `/resources/articles` (EN) — kurumsal blog ve teknik makaleler
+- 7+ makale — Yapay Zeka, Otomasyon, Güvenlik, Yönetişim, Altyapı kategorilerinde
+- Kategori bazlı renk kodlu badge sistemi (TR/EN kategori eşleşmesi)
+- Modal detay görünümü (`ArticleModal.tsx`) — Markdown render desteği
+- Framer Motion animasyonlu kart grid'i (hover scale, stagger giriş)
+- TR/EN ayrı veri dosyaları (`src/data/articles.tr.ts`, `src/data/articles.en.ts`)
+
 ### Başarı Hikayeleri (Case Studies)
 - 20+ vaka çalışması — yazılım, altyapı, yönetilen hizmet ve eğitim kategorilerinde
 - Sektörel filtreleme (Finans, Savunma, Telekom, Perakende)
@@ -142,6 +150,7 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 bgts-web/
 ├── public/
 │   ├── images/                 # Tüm statik görseller
+│   │   ├── articles/         # Makale görselleri
 │   │   ├── collage/            # Sosyal katkı kolaj görselleri
 │   │   ├── contact/            # İletişim sayfası görselleri
 │   │   ├── culture/            # Çalışma kültürü görselleri
@@ -200,7 +209,8 @@ bgts-web/
 │   │   │   │
 │   │   │   ├── resources/
 │   │   │   │   ├── infographics/
-│   │   │   │   └── success-stories/
+│   │   │   │   ├── success-stories/
+│   │   │   │   └── articles/       # Makaleler sayfası (ArticlesClient, ArticleModal)
 │   │   │   │
 │   │   │   ├── layout.tsx      # Lang layout (Header, Footer, GA, CookieConsent)
 │   │   │   ├── page.tsx        # Ana sayfa
@@ -248,6 +258,8 @@ bgts-web/
 │   │   └── managed-services.ts
 │   │
 │   ├── data/
+│   │   ├── articles.tr.ts    # Makaleler (Türkçe)
+│   │   ├── articles.en.ts    # Makaleler (İngilizce)
 │   │   ├── case-studies.tr.ts  # Vaka çalışmaları (Türkçe)
 │   │   └── case-studies.en.ts  # Vaka çalışmaları (İngilizce)
 │   │
@@ -448,6 +460,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 | `/partnerships` | `/is-ortaklari` |
 | `/resources/success-stories` | `/basari-hikayeleri` |
 | `/resources/infographics` | `/infografikler` |
+| `/resources/articles` | `/bilgi-merkezi/makaleler` |
 | `/meetsense-viewer` | `/meetsense-goruntuleyici` |
 
 Yeni link üretirken dahili path kullanın; helper otomatik locale slug'ına çevirir:
@@ -520,6 +533,7 @@ localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /tr/en/contact
 |--------|--------|-------|
 | `/tr/basari-hikayeleri` | `/tr/en/resources/success-stories` | Başarı Hikayeleri |
 | `/tr/infografikler` | `/tr/en/resources/infographics` | İnfografikler |
+| `/tr/bilgi-merkezi/makaleler` | `/tr/en/resources/articles` | Makaleler |
 
 ### Diğer
 
@@ -660,6 +674,8 @@ Proje, içerik verilerini TypeScript objeleri olarak yönetir (headless CMS kull
 | `src/content/home.ts` | Ana sayfa tüm bölüm verileri |
 | `src/content/software-development.ts` | Yazılım geliştirme hizmet detayları |
 | `src/content/managed-services.ts` | Yönetilen hizmetler (MSP) detayları |
+| `src/data/articles.tr.ts` | Makaleler — Türkçe (başlık, özet, body, kategori, yazar) |
+| `src/data/articles.en.ts` | Makaleler — İngilizce |
 | `src/data/case-studies.tr.ts` | 20+ vaka çalışması — Türkçe (başlık, gereksinim, çözüm, teknolojiler) |
 | `src/data/case-studies.en.ts` | 20+ vaka çalışması — İngilizce |
 | `src/dictionaries/tr.json` | Tüm UI metinleri — Türkçe sözlük |
@@ -796,6 +812,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.41.0 | — | **Makaleler/Blog sistemi eklendi:** `/bilgi-merkezi/makaleler` (TR) ve `/resources/articles` (EN) sayfaları eklendi; `ArticlesClient.tsx` (kategori badge, animasyonlu kart grid, modal detay görünümü); `ArticleModal.tsx` (Markdown render, klavye erişilebilirlik); 7 makale (Yapay Zeka, Otomasyon, Güvenlik, Yönetişim, Altyapı); TR/EN ayrı veri dosyaları; sitemap ve structured data güncellemesi; mega menüye makaleler linki eklendi. |
 | v0.40.0 | — | **Ürünler katalog sayfası kaldırıldı:** `ProductsClient.tsx` ve `products/page.tsx` silindi; `/urunler` route'u `ROUTE_MAP`'ten kaldırıldı; `/urunler` URL'si `/urunler/hcm` adresine yönlendiriliyor (`TR_TOP_LEVEL_ALIASES`); sitemap'ten ürünler listeleme sayfası çıkarıldı. **ISO 42001 sertifikası eklendi:** `AboutCertificationsSection` bileşenine 7. sertifika olarak ISO 42001 (Yapay Zeka Yönetim Sistemi) eklendi; grid `lg:grid-cols-7` olarak genişletildi; TR/EN sözlüklere "Yapay Zeka Yönetim Sistemi" / "AI Management System" etiketleri eklendi. **Praxila → Praxilla isim düzeltmesi:** Ürün adı TR/EN sözlüklerde, `PraxilaClient`, layout ve page bileşenlerinde, breadcrumb ve route slug'larında "Praxilla" olarak düzeltildi. **Arama endeksi zenginleştirme:** `search/data.ts` dosyasında tüm arama öğelerine İngilizce `titleEn`, `descriptionEn` alanları ve genişletilmiş `tags` (bilingual etiketler) eklendi; `SearchOverlay` bileşeni güçlendirildi. **Metin düzeltmeleri:** Cortex güvenlik bölümü, HCM açıklama ve Temenos iş ortağı metinlerinde Türkçe imla düzeltmeleri. |
 | v0.39.0 | — | **İngilizce URL yapısı `/tr/en`:** Ziyaretçiye görünen İngilizce prefix `/eng/...` → `/tr/en/...`; `getLocalePrefix`, `stripLocalePrefix`, `pathnameHasLocale` helper'ları; middleware `/tr/en/*` → dahili `/eng/*` rewrite + eski `/eng/*` ve `/en/*` adreslerinden 301 yönlendirme; `localizedHref`, `switchLocalePath`, SEO canonical/hreflang, sitemap ve breadcrumb linkleri güncellendi. |
 | v0.38.0 | — | **İngilizce locale kodu `eng`:** URL prefix `/en/...` → `/eng/...`; `i18n-config` locale listesi `['tr', 'eng']`; eski `/en/...` adresleri middleware ile 301 `/eng/...` yönlendirmesi; `dictionaryKey` / `htmlLang` helper'ları (`en.json` dosya adı korunuyor); `src/lib/base-path.ts` deploy prefix + locale çözümlemesi; Plesk alt klasör deploy (`NEXT_PUBLIC_BASE_PATH`, `server.js`, `PLESK_DEPLOY.md`). |
