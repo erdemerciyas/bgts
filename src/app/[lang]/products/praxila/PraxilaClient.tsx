@@ -71,7 +71,7 @@ export default function PraxilaClient({ dict, lang }: { dict: PraxilaDetail; lan
     return (
         <div className="bg-white min-h-screen">
             <SoftwareApplicationStructuredData
-                name="Praxila"
+                name="Praxilla"
                 description={d.overview.heading}
                 url={localizedPathForLang(lang, '/products/praxila')}
             />

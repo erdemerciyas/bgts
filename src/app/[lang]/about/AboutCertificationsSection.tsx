@@ -18,6 +18,7 @@ const CERTIFICATION_LOGOS = [
     "/logos/certifications/iso-15504.png",
     "/logos/certifications/iso-27701.png",
     "/logos/certifications/iso-12207.png",
+    "/logos/certifications/iso-42001.png",
 ] as const
 
 interface AboutCertificationsSectionProps {
@@ -45,23 +46,23 @@ export function AboutCertificationsSection({ certifications }: AboutCertificatio
                     </p>
                 </AnimatedDiv>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 md:gap-6 max-w-5xl mx-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 md:gap-5 max-w-6xl mx-auto">
                     {CERTIFICATION_LOGOS.map((src, i) => (
                         <ScaleIn
                             key={src}
                             delay={i * 0.06}
-                            className="flex flex-col items-center bg-white p-5 md:p-6 rounded-2xl border border-border shadow-md hover:shadow-xl hover:border-corporate-highlight/40 hover:-translate-y-1 transition-all duration-300 text-center"
+                            className="flex flex-col items-center bg-white p-4 md:p-5 rounded-2xl border border-border shadow-md hover:shadow-xl hover:border-corporate-highlight/40 hover:-translate-y-1 transition-all duration-300 text-center"
                         >
-                            <div className="relative w-20 h-20 md:w-24 md:h-24 mb-3 md:mb-4">
+                            <div className="relative w-16 h-16 md:w-20 md:h-20 mb-2 md:mb-3">
                                 <Image
                                     src={src}
                                     alt={certifications.labels[i]}
                                     fill
                                     className="object-contain"
-                                    sizes="96px"
+                                    sizes="80px"
                                 />
                             </div>
-                            <span className="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">
+                            <span className="text-[10px] md:text-xs text-slate-500 font-semibold leading-tight">
                                 {certifications.labels[i]}
                             </span>
                         </ScaleIn>

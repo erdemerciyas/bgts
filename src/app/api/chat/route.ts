@@ -79,9 +79,9 @@ Yazılım geliştirme yaşam döngüsünü (SDLC) yapay zeka ajanlarıyla otomat
 Bordro, performans yönetimi, işe alım ve çalışan gelişimini uçtan uca dijitalleştiren insan kaynakları yönetim sistemi.
 → [HCM](/urunler/hcm)
 
-### Praxila
+### Praxilla
 Kurumsal operasyon süreçlerini, iş akışlarını ve karar mekanizmalarını otomatikleştiren yeni nesil platform.
-→ [Praxila](/urunler/praxilla)
+→ [Praxilla](/urunler/praxilla)
 
 ### MeetSense
 Toplantıları gerçek zamanlı kaydeden, transkript oluşturan, özetleyen ve aksiyon maddelerini çıkaran yapay zeka destekli platform. Kurumsal hafıza ve bilgi yönetimi için idealdir.

@@ -114,7 +114,7 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
           links: [
             { title: "Cortex", href: p("/products/cortex"), icon: Cpu },
             { title: t("products", "hcm", "HCM Platformu", "HCM Platform"), href: p("/products/hcm"), icon: Briefcase },
-            { title: "Praxila", href: p("/products/praxila"), icon: Activity },
+            { title: "Praxilla", href: p("/products/praxilla"), icon: Activity },
             { title: "MeetSense", href: p("/products/meetsense"), icon: Mic },
           ]
         }

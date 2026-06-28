@@ -43,7 +43,7 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 **Hedefler:**
 - Kurumsal marka kimliğini güçlü biçimde yansıtmak
 - Müşteri adaylarını doğru servis ve ürün sayfalarına yönlendirmek
-- 8 AI/kurumsal ürün ve 2 hizmet alanını detaylı şekilde tanıtmak
+- **8 AI/kurumsal ürün** ve 2 hizmet alanını detaylı şekilde tanıtmak
 - 5 sektör çözümünü vaka çalışmalarıyla desteklemek
 - Kariyer odaklı ziyaretçilere Kariyer Yolları sayfası üzerinden şeffaf bir büyüme yolu sunmak
 - AI destekli chatbot ile 7/24 kurumsal danışmanlık sağlamak *(şu anda pasif)*
@@ -422,7 +422,6 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 |---|---|
 | `/about` | `/hakkimizda` |
 | `/contact` | `/iletisim` |
-| `/products` | `/urunler` |
 | `/services` | `/hizmetler` |
 | `/industries` | `/sektorler` |
 | `/resources` | `/bilgi-merkezi` |
@@ -491,9 +490,10 @@ localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /tr/en/contact
 
 ### Ürünler (8 Adet)
 
+> **Not:** Ürünler katalog sayfası (`/urunler`) kaldırılmıştır; `/urunler` adresi `/urunler/hcm` sayfasına yönlendirilmektedir.
+
 | TR URL | EN URL | Ürün |
 |--------|--------|------|
-| `/tr/urunler` | `/tr/en/products` | Ürün Kataloğu |
 | `/tr/urunler/yapay-zeka-ise-alim-asistani` | `/tr/en/products/ai-hiring-assistant` | AI Hiring Assistant |
 | `/tr/urunler/cortex` | `/tr/en/products/cortex` | Cortex |
 | `/tr/urunler/cv-donusturucu` | `/tr/en/products/cv-converter` | CV Converter |
@@ -501,7 +501,7 @@ localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /tr/en/contact
 | `/tr/urunler/docmind` | `/tr/en/products/docmind` | DocMind |
 | `/tr/urunler/hcm` | `/tr/en/products/hcm` | HCM Platform |
 | `/tr/urunler/meetsense` | `/tr/en/products/meetsense` | MeetSense |
-| `/tr/urunler/praxilla` | `/tr/en/products/praxila` | Praxila |
+| `/tr/urunler/praxilla` | `/tr/en/products/praxila` | Praxilla |
 
 ### Kariyer
 
@@ -796,6 +796,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.40.0 | — | **Ürünler katalog sayfası kaldırıldı:** `ProductsClient.tsx` ve `products/page.tsx` silindi; `/urunler` route'u `ROUTE_MAP`'ten kaldırıldı; `/urunler` URL'si `/urunler/hcm` adresine yönlendiriliyor (`TR_TOP_LEVEL_ALIASES`); sitemap'ten ürünler listeleme sayfası çıkarıldı. **ISO 42001 sertifikası eklendi:** `AboutCertificationsSection` bileşenine 7. sertifika olarak ISO 42001 (Yapay Zeka Yönetim Sistemi) eklendi; grid `lg:grid-cols-7` olarak genişletildi; TR/EN sözlüklere "Yapay Zeka Yönetim Sistemi" / "AI Management System" etiketleri eklendi. **Praxila → Praxilla isim düzeltmesi:** Ürün adı TR/EN sözlüklerde, `PraxilaClient`, layout ve page bileşenlerinde, breadcrumb ve route slug'larında "Praxilla" olarak düzeltildi. **Arama endeksi zenginleştirme:** `search/data.ts` dosyasında tüm arama öğelerine İngilizce `titleEn`, `descriptionEn` alanları ve genişletilmiş `tags` (bilingual etiketler) eklendi; `SearchOverlay` bileşeni güçlendirildi. **Metin düzeltmeleri:** Cortex güvenlik bölümü, HCM açıklama ve Temenos iş ortağı metinlerinde Türkçe imla düzeltmeleri. |
 | v0.39.0 | — | **İngilizce URL yapısı `/tr/en`:** Ziyaretçiye görünen İngilizce prefix `/eng/...` → `/tr/en/...`; `getLocalePrefix`, `stripLocalePrefix`, `pathnameHasLocale` helper'ları; middleware `/tr/en/*` → dahili `/eng/*` rewrite + eski `/eng/*` ve `/en/*` adreslerinden 301 yönlendirme; `localizedHref`, `switchLocalePath`, SEO canonical/hreflang, sitemap ve breadcrumb linkleri güncellendi. |
 | v0.38.0 | — | **İngilizce locale kodu `eng`:** URL prefix `/en/...` → `/eng/...`; `i18n-config` locale listesi `['tr', 'eng']`; eski `/en/...` adresleri middleware ile 301 `/eng/...` yönlendirmesi; `dictionaryKey` / `htmlLang` helper'ları (`en.json` dosya adı korunuyor); `src/lib/base-path.ts` deploy prefix + locale çözümlemesi; Plesk alt klasör deploy (`NEXT_PUBLIC_BASE_PATH`, `server.js`, `PLESK_DEPLOY.md`). |
 | v0.37.0 | — | **Gmail API e-posta geçişi:** Nodemailer/SMTP kaldırıldı; `googleapis` ile OAuth 2.0 Gmail API entegrasyonu; `scripts/gmail-get-refresh-token.mjs` ve `npm run gmail:auth` eklendi; `.env.example` güncellendi. **KVKK çerez onayı:** `CookieConsent.tsx` + `cookie-consent.ts`; GA yalnızca analitik onayı ile yüklenir. **Sayfa konsolidasyonu:** DevOps/SRE, İK, Genç Mühendis ve Yetenek Gelişim Modeli sayfaları kaldırıldı; kalıcı yönlendirmeler (`OBSOLETE_INTERNAL_REDIRECTS`); `/api/application` ve CV yükleme akışı kaldırıldı; kariyer içeriği Kariyer Yolları sayfasında birleştirildi. **Navigasyon:** "Yerini Al" ana nav öğesi; mega menü sadeleştirmesi. |

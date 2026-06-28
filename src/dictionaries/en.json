@@ -290,7 +290,8 @@
         "Service Management",
         "Process Assessment",
         "Privacy Information Management",
-        "Software Lifecycle"
+        "Software Lifecycle",
+        "AI Management System"
       ]
     },
     "references": {
@@ -2699,17 +2700,17 @@
         }
       },
       "praxila": {
-        "name": "PRAXILA",
+        "name": "PRAXILLA",
         "description": "Our next-generation automation and operations management platform.",
         "detail": {
           "hero": {
-            "title": "Praxila: Integrated IT Service & Operations Management",
+            "title": "Praxilla: Integrated IT Service & Operations Management",
             "subtitle": "A next-generation AI-powered operations management solution that unifies your ITSM, PPM, and ITOM processes in a single platform.",
             "ctaText": "Talk to Our Expert"
           },
           "overview": {
             "heading": "Strong Foundation, Smart Operations",
-            "p1": "Praxila is designed with an Enterprise Service Management vision; built on a flexible, scalable, and AI-powered strong Foundation.",
+            "p1": "Praxilla is designed with an Enterprise Service Management vision; built on a flexible, scalable, and AI-powered strong Foundation.",
             "p2": "Manage your IT operations end-to-end with ITSM, PPM, and ITOM modules. Experience proactive operations management with advanced automation, discovery, and analytical capabilities.",
             "badges": [
               "ITIL Compliant",
@@ -3323,7 +3324,7 @@
     "hcm": "HCM",
     "meetsense": "MeetSense",
     "meetsense-viewer": "MeetSense Viewer",
-    "praxila": "Praxila",
+    "praxilla": "Praxilla",
     "cortex": "Cortex",
     "social-contribution": "Sustainable Value Program",
     "retail": "Retail",

@@ -14,8 +14,8 @@ export async function generateMetadata({
     const isTr = locale === "tr";
 
     const title = isTr
-        ? "Praxila - IT Hizmet ve Operasyon Yönetimi | BGTS"
-        : "Praxila - Integrated IT Service & Operations Management | BGTS";
+        ? "Praxilla - IT Hizmet ve Operasyon Yönetimi | BGTS"
+        : "Praxilla - Integrated IT Service & Operations Management | BGTS";
     const description = isTr
         ? "ITSM, PPM ve ITOM süreçlerini tek platformda birleştiren yapay zeka destekli operasyon yönetimi."
         : "An AI-powered operations management solution that unifies ITSM, PPM, and ITOM processes in a single platform.";

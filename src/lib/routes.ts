@@ -8,7 +8,6 @@ import { getLocaleFromPathname, getLocalePrefix, isLocale, stripBasePath, stripL
 export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
   '/about': { tr: '/hakkimizda', eng: '/about' },
   '/contact': { tr: '/iletisim', eng: '/contact' },
-  '/products': { tr: '/urunler', eng: '/products' },
   '/products/hcm': { tr: '/urunler/hcm', eng: '/products/hcm' },
   '/products/praxila': { tr: '/urunler/praxilla', eng: '/products/praxila' },
   '/services/software-development': {
@@ -61,13 +60,13 @@ export const TR_TOP_LEVEL_ALIASES: Record<string, string> = {
   '/hizmetler': '/services/software-development',
   '/sektorler': '/industries/banking',
   '/bilgi-merkezi': '/resources/success-stories',
+  '/urunler': '/urunler/hcm',
 };
 
 /** Legacy English slugs on /tr/ that should 301 to Turkish equivalents. */
 export const TR_LEGACY_REDIRECTS: Record<string, string> = {
   '/about': '/hakkimizda',
   '/contact': '/iletisim',
-  '/products': '/urunler',
   '/products/hcm': '/urunler/hcm',
   '/products/praxila': '/urunler/praxilla',
   '/services': '/hizmetler',

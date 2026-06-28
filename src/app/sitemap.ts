@@ -25,7 +25,6 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
   { path: '/industries/telecommunications', priority: 0.8, changeFrequency: 'monthly' },
 
   // Urunler
-  { path: '/products', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/products/ai-hiring-assistant', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/products/cortex', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/products/cv-converter', priority: 0.7, changeFrequency: 'monthly' },

@@ -130,7 +130,7 @@ const SLIDES: Slide[] = [
         title: "Yapay Zeka ile Güçlenen Ürünler",
         subtitle: "BGTS’nin AI destekli ürünleriyle süreçlerinizi otomatikleştirin, verimliliği artırın ve karar alma hızınızı yükseltin.",
         ctaText: "Ürünleri İncele",
-        ctaLink: "/products",
+        ctaLink: "/products/hcm",
         type: "ai-products",
     },
     {

@@ -290,7 +290,8 @@
         "Servis Yönetimi",
         "Süreç Değerlendirme",
         "Gizlilik Bilgi Yönetimi",
-        "Yazılım Yaşam Döngüsü"
+        "Yazılım Yaşam Döngüsü",
+        "Yapay Zeka Yönetim Sistemi"
       ]
     },
     "references": {
@@ -2536,7 +2537,7 @@
           },
           "security": {
             "heading": "Kesin Güvenlik Kuralları",
-            "subheading": "Cortex, operasyonlarınızı kolaylaştırırken sistem güvenliğini ve insan kontrolnü daima merkeze alır.",
+            "subheading": "Cortex, operasyonlarını kolaylaştıran sistem güvenliğini ve insan kontrolünü daima merkeze alır.",
             "visualTitle": "Human-in-the-Loop Mimarisi",
             "visualDesc": "Tüm kritik karar noktalarında insan onayı zorunludur.",
             "items": [
@@ -2570,7 +2571,7 @@
           },
           "overview": {
             "heading": "İnsan Sermayesi Yönetim Sistemi",
-            "p1": "HRThema HCM, sunduğu modülleri ile tek bir güvenlik modeline ve benzer, entegre edilmiş kullanıcı deneyimine sahip uçtan uca bir HCM çözümüdür.",
+            "p1": "HRThema HCM, sunduğu modülleri ile tek bir güvenlik modeline ve bütünleşik bir kullanıcı deneyimine sahip, uçtan uca bir HCM çözümüdür.",
             "p2": "İşe alımdan bordro süreçlerine, performans yönetiminden eğitim planlamasına kadar tüm İK operasyonlarını tek bir platformda birleştirerek, kurumunuzun insan kaynağını stratejik bir varlık olarak yönetmenize olanak tanır.",
             "p3": "Kurumunuzun en değerli varlığı olan iş gücünün yönetilmesine stratejik ve planlı bir yaklaşım getiren platform, iş gücünüzü finansal ve yönetimsel objektiften anlamak ve ele almak için tasarlanmıştır.",
             "badge1": "Tek Güvenlik Modeli",
@@ -2728,17 +2729,17 @@
         }
       },
       "praxila": {
-        "name": "PRAXILA",
+        "name": "PRAXILLA",
         "description": "Yeni nesil otomasyon ve operasyon yönetimi platformumuz.",
         "detail": {
           "hero": {
-            "title": "Praxila: Bütleşik IT Hizmet & Operasyon Yönetimi",
+            "title": "Praxilla: Bütünleşik IT Hizmet & Operasyon Yönetimi",
             "subtitle": "ITSM, PPM ve ITOM süreçlerinizi tek bir platformda birleştiren, yapay zeka destekli yeni nesil operasyon yönetim çözümü.",
             "ctaText": "Uzmanımızla Görüşün"
           },
           "overview": {
             "heading": "Güçlü Temel, Akıllı Operasyon",
-            "p1": "Praxila, Enterprise Service Management vizyonuyla tasarılanmış; esnek, ölçeklenebilir ve yapay zeka destekli güçlü bir Foundation üzerine inşa edilmiştir.",
+            "p1": "Praxilla, Enterprise Service Management vizyonuyla tasarılanmış; esnek, ölçeklenebilir ve yapay zeka destekli güçlü bir Foundation üzerine inşa edilmiştir.",
             "p2": "ITSM, PPM ve ITOM modülleri ile IT operasyonlarınızı uçtan uca yönetin. Gelişmiş otomasyon, keşif ve analitik yetenekleri ile proaktif bir operasyon yönetimi deneyimi yaşayın.",
             "badges": [
               "ITIL Uyumlu",
@@ -3228,7 +3229,7 @@
       },
       "temenos": {
         "name": "Temenos",
-        "description": "BGTS olarak, dünyanın lider temel bankacılı platformu Temenos iş birliğiyle finans kuruluşlarının modernleşmesini ve ölçeklenmesini destekliyoruz. Sertifikalı uzmanlarımız kurulum ve entegrasyondan uzun vadeli desteğe kadar, Temenos'un tüm potansiyelinden yararlanmanızı sağlayan uçtan uca hizmetler sunar."
+        "description": "BGTS olarak, dünyanın lider temel bankacılık platformu Temenos iş birliğiyle finans kuruluşlarının modernleşmesini ve ölçeklenmesini destekliyoruz. Sertifikalı uzmanlarımız kurulum ve entegrasyondan uzun vadeli desteğe kadar, Temenos'un tüm potansiyelinden yararlanmanızı sağlayan uçtan uca hizmetler sunar."
       },
       "xurrent": {
         "name": "Xurrent",
@@ -3300,7 +3301,7 @@
     "hakkimizda": "Hakkımızda",
     "iletisim": "İletişim",
     "urunler": "Ürünler",
-    "praxilla": "Praxila",
+    "praxilla": "Praxilla",
     "hizmetler": "Hizmetler",
     "yazilim-muhendisligi": "Yazılım Geliştirme",
     "veri-merkezi-platform-ve-uygulama-yonetimi": "Veri Merkezi Platform ve Uygulama Yönetimi",
@@ -3355,7 +3356,7 @@
     "hcm": "HCM",
     "meetsense": "MeetSense",
     "meetsense-viewer": "MeetSense Görüntüleyici",
-    "praxila": "Praxila",
+    "praxilla": "Praxilla",
     "social-contribution": "Sürdürülebilir Değer Programı",
     "retail": "Perakende",
     "telecommunications": "Telekomünikasyon"
