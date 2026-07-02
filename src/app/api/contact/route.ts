@@ -39,7 +39,7 @@ export async function POST(req: Request) {
     `;
 
         await sendEmail({
-            to: process.env.CONTACT_EMAIL || "contact@bgts.com.tr",
+            to: process.env.CONTACT_EMAIL || "info@bgts.com",
             subject: `İletişim Formu: ${escapeHtml(name)} (${escapeHtml(company || 'Bireysel')})`,
             html,
             replyTo: email,

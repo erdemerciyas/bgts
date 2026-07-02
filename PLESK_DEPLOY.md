@@ -113,10 +113,8 @@ GROQ_API_KEY=your_groq_api_key_here
 GMAIL_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
 GMAIL_CLIENT_SECRET=your_google_client_secret
 GMAIL_REFRESH_TOKEN=your_gmail_refresh_token
-GMAIL_USER=your-sender@gmail.com
-
-# Form mesajlarının iletileceği adres
-CONTACT_EMAIL=contact@bgts.com.tr
+GMAIL_USER=bgtsweb@gmail.com
+CONTACT_EMAIL=info@bgts.com
 
 # Google Analytics
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
@@ -126,6 +124,8 @@ NEXT_PUBLIC_GSC_VERIFICATION=
 ```
 
 > **Not:** `.env.local` dosyasını repoya eklemeyin. Tüm gizli değerleri yalnızca Plesk panelinden yönetin.
+
+**E-posta akışı:** Form mesajları `GMAIL_USER=bgtsweb@gmail.com` üzerinden gönderilir, `CONTACT_EMAIL=info@bgts.com` adresine iletilir. Detaylı şablon için [PLESK_ENV.md](./PLESK_ENV.md) dosyasına bakın.
 
 Gmail refresh token almak için yerelde:
 

@@ -355,8 +355,8 @@ Bu proje Vercel üzerinde sorunsuz çalışacak şekilde yapılandırılmıştı
 | `GMAIL_CLIENT_ID` | Google OAuth 2.0 Client ID |
 | `GMAIL_CLIENT_SECRET` | Google OAuth 2.0 Client Secret |
 | `GMAIL_REFRESH_TOKEN` | Gmail API refresh token |
-| `GMAIL_USER` | Gönderici Gmail adresi |
-| `CONTACT_EMAIL` | İletişim formu hedef e-posta |
+| `GMAIL_USER` | Sistem gönderici Gmail adresi (`bgtsweb@gmail.com`) |
+| `CONTACT_EMAIL` | Form mesajlarının iletileceği adres (`info@bgts.com`) |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics Measurement ID (G-XXXXXXXXXX) |
 | `NEXT_PUBLIC_GSC_VERIFICATION` | Google Search Console HTML tag doğrulama kodu |
 
@@ -395,10 +395,10 @@ GROQ_API_KEY=your_groq_api_key_here
 GMAIL_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
 GMAIL_CLIENT_SECRET=your_google_client_secret
 GMAIL_REFRESH_TOKEN=your_gmail_refresh_token
-GMAIL_USER=your-sender@gmail.com
+GMAIL_USER=bgtsweb@gmail.com
 
-# Form mesajlarının iletileceği adres
-CONTACT_EMAIL=contact@bgts.com.tr
+# Form mesajlarının iletileceği adres (GMAIL_USER üzerinden gönderilir)
+CONTACT_EMAIL=info@bgts.com
 
 # Google Analytics
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
@@ -417,6 +417,15 @@ NEXT_PUBLIC_GSC_VERIFICATION=
 ## Google Entegrasyonları Kurulumu
 
 GA4, Search Console ve Gmail API (iletişim formu) kurulumu için adım adım rehber. **Gmail şifrenizi repoya veya sohbete yazmayın** — yalnızca OAuth client ID/secret ve refresh token kullanılır.
+
+### E-posta akışı
+
+| Rol | Değişken | Adres |
+|-----|----------|-------|
+| Gönderici (sistem) | `GMAIL_USER` | `bgtsweb@gmail.com` |
+| Alıcı (form mesajları) | `CONTACT_EMAIL` | `info@bgts.com` |
+
+İletişim formu gönderildiğinde mail **bgtsweb@gmail.com** hesabı üzerinden Gmail API ile gönderilir; **info@bgts.com** adresine iletilir. Yanıtlamak için `Reply-To` alanı formu dolduran kişinin e-postasına ayarlanır.
 
 ### 1. Google Cloud projesi (Gmail API)
 
@@ -438,8 +447,8 @@ GA4, Search Console ve Gmail API (iletişim formu) kurulumu için adım adım re
 ```env
 GMAIL_CLIENT_ID=xxx.apps.googleusercontent.com
 GMAIL_CLIENT_SECRET=xxx
-GMAIL_USER=your-sender@gmail.com
-CONTACT_EMAIL=contact@bgts.com.tr
+GMAIL_USER=bgtsweb@gmail.com
+CONTACT_EMAIL=info@bgts.com
 ```
 
 ### 2. Gmail refresh token alma
