@@ -268,7 +268,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             <Activity className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1">
-                                    <h4 className={STYLES.itemTitle}>PRAXILA</h4>
+                                    <h4 className={STYLES.itemTitle}>PRAXILLA</h4>
                                     <p className={STYLES.itemDesc}>{t(lang, "Süreç otomasyonu, iş akışı yönetimi ve operasyonel görünürlüğü tek platformda birleştiren yeni nesil otomasyon ve operasyon yönetimi çözümü.", "Next-generation automation and operations management platform that unifies process automation, workflow management and operational visibility in a single platform.")}</p>
                                 </div>
                             </div>
