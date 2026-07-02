@@ -358,6 +358,7 @@ Bu proje Vercel üzerinde sorunsuz çalışacak şekilde yapılandırılmıştı
 | `GMAIL_USER` | Gönderici Gmail adresi |
 | `CONTACT_EMAIL` | İletişim formu hedef e-posta |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics Measurement ID (G-XXXXXXXXXX) |
+| `NEXT_PUBLIC_GSC_VERIFICATION` | Google Search Console HTML tag doğrulama kodu |
 
 6. **Deploy** butonuna tıklayın
 
@@ -401,9 +402,110 @@ CONTACT_EMAIL=contact@bgts.com.tr
 
 # Google Analytics
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+
+# Google Search Console (site canlı olduktan sonra)
+NEXT_PUBLIC_GSC_VERIFICATION=
+
+# Canonical site URL (opsiyonel)
+# NEXT_PUBLIC_SITE_URL=https://bgts.com.tr
 ```
 
 > **Not:** `.env.local` dosyası `.gitignore` kapsamındadır ve asla commit edilmemelidir.
+
+---
+
+## Google Entegrasyonları Kurulumu
+
+GA4, Search Console ve Gmail API (iletişim formu) kurulumu için adım adım rehber. **Gmail şifrenizi repoya veya sohbete yazmayın** — yalnızca OAuth client ID/secret ve refresh token kullanılır.
+
+### 1. Google Cloud projesi (Gmail API)
+
+1. [Google Cloud Console](https://console.cloud.google.com) → yeni Gmail hesabınızla giriş yapın
+2. **New Project** → proje adı: `bgts-web`
+3. **APIs & Services → Library** → **Gmail API** → **Enable**
+4. **APIs & Services → OAuth consent screen**
+   - User Type: **External**
+   - App name: `BGTS Web`
+   - User support email: Gmail adresiniz
+   - Scopes: `https://www.googleapis.com/auth/gmail.send` ekleyin
+   - **Test users:** gönderici Gmail adresinizi ekleyin (Testing modunda zorunlu)
+5. **APIs & Services → Credentials → Create Credentials → OAuth client ID**
+   - Type: **Web application**
+   - Authorized redirect URIs: `http://localhost:3001/oauth2callback`
+
+`.env.local` dosyasına ekleyin:
+
+```env
+GMAIL_CLIENT_ID=xxx.apps.googleusercontent.com
+GMAIL_CLIENT_SECRET=xxx
+GMAIL_USER=your-sender@gmail.com
+CONTACT_EMAIL=contact@bgts.com.tr
+```
+
+### 2. Gmail refresh token alma
+
+```bash
+npm run gmail:auth
+```
+
+1. Terminalde görünen URL'yi tarayıcıda açın
+2. Google hesabınızla giriş yapıp izin verin
+3. Terminaldeki `GMAIL_REFRESH_TOKEN=...` değerini `.env.local` dosyasına ekleyin
+4. `npm run dev` ile siteyi açın → İletişim formunu test edin
+
+> **Not:** OAuth uygulaması "Testing" modundayken yalnızca test users listesindeki hesaplar mail gönderebilir. Production'da daha geniş kullanım için Google OAuth doğrulama süreci gerekebilir.
+
+### 3. Google Analytics 4 (GA4)
+
+1. [Google Analytics](https://analytics.google.com) → Admin (⚙) → **Create → Property**
+   - Property name: `BGTS Web`
+   - Time zone: `(GMT+03:00) Istanbul`
+   - Currency: TRY
+2. **Data stream → Web**
+   - Website URL: `https://bgts.com.tr`
+   - Stream name: `BGTS Production`
+3. **Measurement ID** kopyalayın (`G-XXXXXXXXXX`)
+
+`.env.local` dosyasına ekleyin:
+
+```env
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+**Local test:** Siteyi açın → çerez banner'ında analitik çerezleri kabul edin → GA4 → Reports → Realtime'da ziyaretinizi görün. Sayfa geçişleri `GoogleAnalyticsPageView` bileşeni ile otomatik kaydedilir.
+
+### 4. Google Search Console (site canlı olduktan sonra)
+
+Site production'a deploy edildikten sonra:
+
+1. [Google Search Console](https://search.google.com/search-console) → **Add property**
+2. **URL prefix:** `https://bgts.com.tr`
+3. Doğrulama yöntemi: **HTML tag**
+4. Google'ın verdiği `content="..."` değerini (tırnak içindeki kod) kopyalayın
+5. Deploy ortamına ekleyin:
+
+```env
+NEXT_PUBLIC_GSC_VERIFICATION=abc123xyz...
+```
+
+6. Redeploy sonrası Search Console'da **Verify** tıklayın
+7. **Sitemaps → Submit:** `https://bgts.com.tr/sitemap.xml`
+
+Doğrulama meta tag'i `generateMetadata()` üzerinden env'den okunur; env boşken tag render edilmez.
+
+### Production env checklist
+
+| Değişken | Zorunlu |
+|----------|---------|
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Evet |
+| `NEXT_PUBLIC_GSC_VERIFICATION` | Site canlı olunca |
+| `GMAIL_CLIENT_ID` | Evet (iletişim formu) |
+| `GMAIL_CLIENT_SECRET` | Evet |
+| `GMAIL_REFRESH_TOKEN` | Evet |
+| `GMAIL_USER` | Evet |
+| `CONTACT_EMAIL` | Evet |
+
+Plesk'te `NEXT_PUBLIC_*` değişkenleri **build öncesi** ayarlanmalıdır.
 
 ---
 

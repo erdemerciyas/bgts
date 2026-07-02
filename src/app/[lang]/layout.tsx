@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/layout/Header";
@@ -6,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import GlobalBreadcrumb from "@/components/layout/GlobalBreadcrumb";
 import { OrganizationStructuredData, WebSiteStructuredData, LocalBusinessStructuredData } from "@/components/seo/StructuredData";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { GoogleAnalyticsPageView } from "@/components/analytics/GoogleAnalyticsPageView";
 import CookieConsent from "@/components/cookies/CookieConsent";
 import { buildAlternates, buildOgUrl, ogLocale, SITE_URL } from "@/lib/seo";
 import { getDictionary } from "@/get-dictionary";
@@ -43,6 +45,7 @@ export async function generateMetadata({
   const descriptionEn =
     "Leading technology partner for Finance, Defense, Retail, and Telecom sectors. With 25+ years of experience and 1,400+ engineers, we deliver digital transformation solutions.";
   const description = isTr ? descriptionTr : descriptionEn;
+  const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION?.trim();
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -95,6 +98,9 @@ export async function generateMetadata({
       ],
       apple: "/icon.png",
     },
+    ...(gscVerification
+      ? { verification: { google: gscVerification } }
+      : {}),
   };
 }
 
@@ -113,8 +119,6 @@ export default async function RootLayout(props: {
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/icon.png" />
-        {/* Google Search Console Verification - Replace YOUR_VERIFICATION_CODE with your actual code */}
-        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
         <OrganizationStructuredData />
         <LocalBusinessStructuredData />
         <WebSiteStructuredData />
@@ -132,6 +136,9 @@ export default async function RootLayout(props: {
         </div>
         <CookieConsent dict={dict.cookies} />
         <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <GoogleAnalyticsPageView />
+        </Suspense>
       </body>
     </html>
   );

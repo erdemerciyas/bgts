@@ -120,6 +120,9 @@ CONTACT_EMAIL=contact@bgts.com.tr
 
 # Google Analytics
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+
+# Google Search Console (site canlı olduktan sonra)
+NEXT_PUBLIC_GSC_VERIFICATION=
 ```
 
 > **Not:** `.env.local` dosyasını repoya eklemeyin. Tüm gizli değerleri yalnızca Plesk panelinden yönetin.
@@ -129,6 +132,15 @@ Gmail refresh token almak için yerelde:
 ```bash
 npm run gmail:auth
 ```
+
+Detaylı kurulum adımları için README.md → **Google Entegrasyonları Kurulumu** bölümüne bakın.
+
+### Search Console (deploy sonrası)
+
+1. [Google Search Console](https://search.google.com/search-console) → property ekleyin (`https://bgts.com.tr`)
+2. HTML tag doğrulama kodunu `NEXT_PUBLIC_GSC_VERIFICATION` olarak ekleyin
+3. **Rebuild + Restart App** (public env build-time'da gömülür)
+4. Search Console'da doğrulayın → Sitemap: `https://bgts.com.tr/sitemap.xml`
 
 ---
 
