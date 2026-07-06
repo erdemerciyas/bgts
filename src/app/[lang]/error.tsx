@@ -6,7 +6,6 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { localizedPathForLang } from "@/lib/routes"
 import { getLocaleFromPathname } from "@/lib/base-path"
-import type { Locale } from "@/i18n-config"
 
 export default function Error({
   error,
@@ -21,6 +20,16 @@ export default function Error({
   useEffect(() => {
     console.error("Application error:", error)
   }, [error])
+
+  useEffect(() => {
+    const meta = document.createElement("meta")
+    meta.name = "robots"
+    meta.content = "noindex, nofollow"
+    document.head.appendChild(meta)
+    return () => {
+      document.head.removeChild(meta)
+    }
+  }, [])
 
   return (
     <div className="flex min-h-[80vh] items-center justify-center bg-slate-50 px-6">

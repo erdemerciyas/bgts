@@ -13,12 +13,13 @@ export async function generateMetadata({
     const locale = lang as Locale;
     const isTr = locale === "tr";
 
-    const title = isTr
-        ? "MeetSense - Yapay Zeka Toplantı Asistanı | BGTS"
-        : "MeetSense - AI Meeting Assistant | BGTS";
     const description = isTr
-        ? "Toplantılarınızı AI ile kaydedin, analiz edin ve aksiyon maddelerine dönüştüren akıllı platform."
-        : "An intelligent platform that records, analyzes, and turns your meetings into action items with AI.";
+        ? "Toplantılarınızı akıllı asistan, canlı transkript ve otomatik Jira entegrasyonu ile kalıcı kurumsal hafızaya dönüştürün."
+        : "Turn your meetings into permanent corporate memory with smart assistant, live transcripts, and automatic Jira integration.";
+
+    const title = isTr
+        ? "MeetSense - Yapay Zeka Toplantı Asistanı"
+        : "MeetSense - AI Meeting Assistant";
 
     return {
         title,

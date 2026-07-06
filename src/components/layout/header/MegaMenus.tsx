@@ -264,7 +264,7 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
                     <div className="bg-[#f8f9fa] p-10 border-r border-slate-100 flex flex-col justify-start">
                         <h3 className={STYLES.columnHeader}>{t(lang, "OPERASYON & OTOMASYON", "OPERATIONS & AUTOMATION")}</h3>
-                        <Link onClick={closeMenu} href={lh(lang, '/products/praxila')} className={STYLES.linkGroup}>
+                        <Link onClick={closeMenu} href={lh(lang, '/products/praxilla')} className={STYLES.linkGroup}>
                             <Activity className={STYLES.iconContainer} />
                             <div className="flex justify-between items-start gap-4">
                                 <div className="flex-1">

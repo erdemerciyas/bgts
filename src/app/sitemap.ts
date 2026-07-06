@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { i18n, type Locale } from '@/i18n-config'
+import { htmlLang, i18n, type Locale } from '@/i18n-config'
 import { getLocalePrefix } from '@/lib/base-path'
 import { getLocalizedPath } from '@/lib/routes'
 import { SITE_URL } from '@/lib/seo'
@@ -32,7 +32,7 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
   { path: '/products/docmind', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/products/hcm', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/products/meetsense', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/products/praxila', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/products/praxilla', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/meetsense-viewer', priority: 0.4, changeFrequency: 'monthly' },
 
   // Kariyer
@@ -60,8 +60,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return ROUTES.flatMap(({ path, priority, changeFrequency }) => {
     const languages: Record<string, string> = {}
     for (const locale of i18n.locales) {
-      languages[locale] = localeUrl(locale, path)
+      languages[htmlLang(locale)] = localeUrl(locale, path)
     }
+    languages["x-default"] = localeUrl(i18n.defaultLocale, path)
 
     return i18n.locales.map((locale) => ({
       url: localeUrl(locale, path),

@@ -2699,7 +2699,7 @@
           }
         }
       },
-      "praxila": {
+      "praxilla": {
         "name": "PRAXILLA",
         "description": "Our next-generation automation and operations management platform.",
         "detail": {
@@ -3325,6 +3325,7 @@
     "meetsense": "MeetSense",
     "meetsense-viewer": "MeetSense Viewer",
     "praxilla": "Praxilla",
+    "praxila": "Praxilla",
     "cortex": "Cortex",
     "social-contribution": "Sustainable Value Program",
     "retail": "Retail",

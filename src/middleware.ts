@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { i18n } from './i18n-config';
-import { resolveTrLegacyRedirect, resolveTrRewrite, getObsoleteRedirectTarget, getInternalPath, localizedHref } from './lib/routes';
+import { resolveTrLegacyRedirect, resolveEngLegacyRedirect, resolveTrRewrite, getObsoleteRedirectTarget, getInternalPath, localizedHref } from './lib/routes';
 import { pathnameHasLocale, stripBasePath, stripLocalePrefix, withBasePath } from './lib/base-path';
 import type { Locale } from './i18n-config';
 
@@ -120,6 +120,13 @@ export function middleware(request: NextRequest) {
   }
 
   if (locale === 'eng') {
+    const engLegacyTarget = resolveEngLegacyRedirect(urlPath);
+    if (engLegacyTarget && engLegacyTarget !== urlPath) {
+      const redirectUrl = request.nextUrl.clone();
+      redirectUrl.pathname = withBasePath(`/tr/en${engLegacyTarget}`);
+      return NextResponse.redirect(redirectUrl, 301);
+    }
+
     const internalPath = getInternalPath('eng', urlPath) ?? (urlPath === '/' ? '' : urlPath);
     const rewriteUrl = request.nextUrl.clone();
     rewriteUrl.pathname = withBasePath(`/eng${internalPath === '/' ? '' : internalPath}`);

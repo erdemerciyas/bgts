@@ -1,11 +1,18 @@
-export function OrganizationStructuredData() {
+import type { Locale } from '@/i18n-config'
+
+const ORG_DESCRIPTION: Record<Locale, string> = {
+  tr: 'Finans, Savunma, Perakende ve Telekom sektörleri için lider teknoloji ortağı. 25 yılı aşkın deneyimle, 1,400+ mühendis ile dijital dönüşüm çözümleri sunuyoruz.',
+  eng: 'Leading technology partner for Finance, Defense, Retail, and Telecom sectors. With 25+ years of experience and 1,400+ engineers, we deliver digital transformation solutions.',
+}
+
+export function OrganizationStructuredData({ locale }: { locale: Locale }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'BGTS - Business & Global Technology Solutions',
     url: 'https://bgts.com.tr',
     logo: 'https://bgts.com.tr/BGTS_logo.png',
-    description: 'Finans, Savunma, Perakende ve Telekom sektörleri için lider teknoloji ortağı. 25 yılı aşkın deneyimle, 1,400+ mühendis ile dijital dönüşüm çözümleri sunuyoruz.',
+    description: ORG_DESCRIPTION[locale],
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Maslak Mahallesi',
@@ -36,14 +43,14 @@ export function OrganizationStructuredData() {
   )
 }
 
-export function WebSiteStructuredData() {
+export function WebSiteStructuredData({ locale }: { locale: Locale }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'BGTS - Business & Global Technology Solutions',
     url: 'https://bgts.com.tr',
-    description: 'Finans, Savunma, Perakende ve Telekom sektörleri için lider teknoloji ortağı. 25 yılı aşkın deneyimle, 1,400+ mühendis ile dijital dönüşüm çözümleri sunuyoruz.',
-    inLanguage: 'tr',
+    description: ORG_DESCRIPTION[locale],
+    inLanguage: ['tr', 'en'],
   }
 
   return (
@@ -153,7 +160,7 @@ export function LocalBusinessStructuredData() {
     name: 'BGTS - Business & Global Technology Solutions',
     description: 'Finans, Savunma, Perakende ve Telekom sektörleri için lider teknoloji ortağı. 25 yılı aşkın deneyimle, 1,400+ mühendis ile dijital dönüşüm çözümleri sunuyoruz.',
     url: 'https://bgts.com.tr',
-    telephone: '+90 212 555 0000',
+    telephone: '+90 444 3330',
     email: 'info@bgts.com.tr',
     address: {
       '@type': 'PostalAddress',
@@ -191,75 +198,10 @@ export function LocalBusinessStructuredData() {
         name: 'Germany',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-    },
     sameAs: [
       'https://www.linkedin.com/company/bgts',
       'https://twitter.com/bgts',
     ],
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
-  )
-}
-
-interface FAQPageSchemaProps {
-  questions: { question: string; answer: string }[]
-}
-
-export function FAQPageStructuredData({ questions }: FAQPageSchemaProps) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: questions.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
-  )
-}
-
-interface HowToSchemaProps {
-  name: string
-  description: string
-  steps: { name: string; text: string }[]
-}
-
-export function HowToStructuredData({ name, description, steps }: HowToSchemaProps) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name,
-    description,
-    totalTime: 'PT30M',
-    step: steps.map((step, index) => ({
-      '@type': 'HowToStep',
-      position: index + 1,
-      name: step.name,
-      text: step.text,
-    })),
-    provider: {
-      '@type': 'Organization',
-      name: 'BGTS - Business & Global Technology Solutions',
-      url: 'https://bgts.com.tr',
-    },
   }
 
   return (
@@ -300,38 +242,6 @@ export function ArticleStructuredData({ title, author, date, excerpt, coverImage
         '@type': 'ImageObject',
         url: 'https://bgts.com.tr/BGTS_logo.png',
       },
-    },
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
-  )
-}
-
-interface VideoSchemaProps {
-  name: string
-  description: string
-  uploadDate: string
-  thumbnailUrl: string
-  contentUrl: string
-}
-
-export function VideoStructuredData({ name, description, uploadDate, thumbnailUrl, contentUrl }: VideoSchemaProps) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'VideoObject',
-    name,
-    description,
-    uploadDate,
-    thumbnailUrl,
-    contentUrl,
-    publisher: {
-      '@type': 'Organization',
-      name: 'BGTS - Business & Global Technology Solutions',
-      url: 'https://bgts.com.tr',
     },
   }
 

@@ -1,6 +1,7 @@
 "use client"
 
 import { localizedPathForLang } from '@/lib/routes'
+import Image from "next/image"
 import React from "react"
 import Hero from "@/components/ui/Hero"
 import { Container } from "@/components/ui/Container"
@@ -232,7 +233,13 @@ export default function HcmClient({ dict, lang }: { dict: HcmDetail; lang: strin
                             <a href="https://www.youtube.com/watch?v=me_Z2xoZhEo" target="_blank" rel="noopener noreferrer" className="block relative group">
                                 <div className="absolute -inset-1 bg-gradient-to-br from-orange-500/30 via-green-500/20 to-purple-500/30 rounded-2xl blur-sm" />
                                 <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-video">
-                                    <img src="/images/products/hcm-cover.png" alt="HR Thema HCM" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                    <Image
+                                        src="/images/products/hcm-cover.png"
+                                        alt="HR Thema HCM platform overview"
+                                        fill
+                                        sizes="(max-width: 1024px) 100vw, 66vw"
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300" />
                                 </div>
                             </a>

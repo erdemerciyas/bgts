@@ -14,6 +14,10 @@ import { getDictionary } from "@/get-dictionary";
 import { htmlLang, i18n, type Locale } from "@/i18n-config";
 // import ChatbotWidget from "@/components/chat/ChatbotWidget"; // Temporarily disabled
 
+export function generateStaticParams() {
+  return i18n.locales.map((lang) => ({ lang }));
+}
+
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
@@ -49,7 +53,10 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
-    title,
+    title: {
+      template: "%s | BGTS",
+      default: "BGTS - Business & Global Technology Solutions",
+    },
     description,
     keywords: isTr
       ? ["yazılım geliştirme", "devops", "yönetilen hizmetler", "teknoloji danışmanlığı", "dijital dönüşüm", "finans", "savunma", "perakende", "telekom"]
@@ -119,9 +126,9 @@ export default async function RootLayout(props: {
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/icon.png" />
-        <OrganizationStructuredData />
+        <OrganizationStructuredData locale={params.lang as Locale} />
         <LocalBusinessStructuredData />
-        <WebSiteStructuredData />
+        <WebSiteStructuredData locale={params.lang as Locale} />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased text-[#212121] bg-white`}>
         <div className="flex flex-col min-h-screen overflow-x-clip">

@@ -1,5 +1,3 @@
-"use client"
-
 import { localizedPathForLang } from "@/lib/routes"
 import Link from "next/link"
 import { CheckCircle, Users, Settings, ArrowRight } from "lucide-react"

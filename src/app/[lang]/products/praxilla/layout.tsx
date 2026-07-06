@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildAlternates, buildOgUrl } from "@/lib/seo";
 import type { Locale } from "@/i18n-config";
 
-const PATH = "/products/praxila";
+const PATH = "/products/praxilla";
 
 export async function generateMetadata({
     params,
@@ -13,12 +13,13 @@ export async function generateMetadata({
     const locale = lang as Locale;
     const isTr = locale === "tr";
 
-    const title = isTr
-        ? "Praxilla - IT Hizmet ve Operasyon Yönetimi | BGTS"
-        : "Praxilla - Integrated IT Service & Operations Management | BGTS";
     const description = isTr
-        ? "ITSM, PPM ve ITOM süreçlerini tek platformda birleştiren yapay zeka destekli operasyon yönetimi."
-        : "An AI-powered operations management solution that unifies ITSM, PPM, and ITOM processes in a single platform.";
+        ? "ITSM, PPM ve ITOM süreçlerinizi tek platformda birleştiren yeni nesil yapay zeka destekli operasyon yönetimi çözümü."
+        : "A next-generation AI-powered operations management solution that unifies your ITSM, PPM, and ITOM processes in a single platform.";
+
+    const title = isTr
+        ? "Praxilla - IT Hizmet ve Operasyon Yönetimi"
+        : "Praxilla - Integrated IT Service & Operations Management";
 
     return {
         title,
@@ -32,7 +33,7 @@ export async function generateMetadata({
     };
 }
 
-export default function PraxilaLayout({
+export default function PraxillaLayout({
     children,
 }: {
     children: React.ReactNode;

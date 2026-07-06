@@ -2728,7 +2728,7 @@
           }
         }
       },
-      "praxila": {
+      "praxilla": {
         "name": "PRAXILLA",
         "description": "Yeni nesil otomasyon ve operasyon yönetimi platformumuz.",
         "detail": {
@@ -3302,6 +3302,7 @@
     "iletisim": "İletişim",
     "urunler": "Ürünler",
     "praxilla": "Praxilla",
+    "praxila": "Praxilla",
     "hizmetler": "Hizmetler",
     "yazilim-muhendisligi": "Yazılım Geliştirme",
     "veri-merkezi-platform-ve-uygulama-yonetimi": "Veri Merkezi Platform ve Uygulama Yönetimi",
@@ -3357,6 +3358,7 @@
     "meetsense": "MeetSense",
     "meetsense-viewer": "MeetSense Görüntüleyici",
     "praxilla": "Praxilla",
+    "praxila": "Praxilla",
     "social-contribution": "Sürdürülebilir Değer Programı",
     "retail": "Perakende",
     "telecommunications": "Telekomünikasyon"

@@ -13,12 +13,13 @@ export async function generateMetadata({
     const locale = lang as Locale;
     const isTr = locale === "tr";
 
-    const title = isTr
-        ? "HCM Platform - İnsan Kaynakları Yönetim Sistemi | BGTS"
-        : "HCM Platform - Human Capital Management | BGTS";
     const description = isTr
-        ? "16 entegre modül ile işe alımdan bordro yönetimine tüm İK süreçlerini dijitalleştiren HCM platformu."
-        : "An HCM platform that digitizes all HR processes end-to-end with 16 integrated modules — from recruitment to payroll.";
+        ? "16 entegre modül ile İK operasyonlarınızı uçtan uca dijitalleştirin. İşe alımdan bordroya, performanstan eğitim planlamasına."
+        : "Digitalize your HR operations end-to-end with 16 integrated modules. From recruitment to payroll, performance to training planning.";
+
+    const title = isTr
+        ? "HCM Platform - İnsan Kaynakları Yönetim Sistemi"
+        : "HCM Platform - Human Capital Management";
 
     return {
         title,

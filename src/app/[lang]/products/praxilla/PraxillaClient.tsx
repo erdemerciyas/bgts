@@ -52,20 +52,20 @@ const MODULE_CONFIG: Record<string, {
     },
 }
 
-type PraxilaModule = { title: string; desc: string }
-type PraxilaModuleGroup = { id: string; title: string; subtitle: string; description: string; modules: PraxilaModule[] }
-type PraxilaFoundationItem = { name: string; desc: string }
-type PraxilaAdvancedItem = { name: string; desc: string; isAI: boolean }
-type PraxilaStat = { stat: string; label: string }
-type PraxilaDetail = {
+type PraxillaModule = { title: string; desc: string }
+type PraxillaModuleGroup = { id: string; title: string; subtitle: string; description: string; modules: PraxillaModule[] }
+type PraxillaFoundationItem = { name: string; desc: string }
+type PraxillaAdvancedItem = { name: string; desc: string; isAI: boolean }
+type PraxillaStat = { stat: string; label: string }
+type PraxillaDetail = {
     hero: { title: string; subtitle: string; ctaText: string }
-    overview: { heading: string; p1: string; p2: string; badges: string[]; stats: PraxilaStat[] }
-    foundation: { heading: string; subtitle: string; items: PraxilaFoundationItem[] }
-    advanced: { heading: string; subtitle: string; items: PraxilaAdvancedItem[] }
-    modules: PraxilaModuleGroup[]
+    overview: { heading: string; p1: string; p2: string; badges: string[]; stats: PraxillaStat[] }
+    foundation: { heading: string; subtitle: string; items: PraxillaFoundationItem[] }
+    advanced: { heading: string; subtitle: string; items: PraxillaAdvancedItem[] }
+    modules: PraxillaModuleGroup[]
 }
 
-export default function PraxilaClient({ dict, lang }: { dict: PraxilaDetail; lang: string }) {
+export default function PraxillaClient({ dict, lang }: { dict: PraxillaDetail; lang: string }) {
     const d = dict
     const GRAD_LIST = ["from-indigo-500 to-blue-600", "from-emerald-500 to-teal-600", "from-purple-500 to-violet-600"]
     return (
@@ -73,7 +73,7 @@ export default function PraxilaClient({ dict, lang }: { dict: PraxilaDetail; lan
             <SoftwareApplicationStructuredData
                 name="Praxilla"
                 description={d.overview.heading}
-                url={localizedPathForLang(lang, '/products/praxila')}
+                url={localizedPathForLang(lang, '/products/praxilla')}
             />
 
             <Hero

@@ -37,6 +37,7 @@ export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?
                                 src={image}
                                 alt="BGTS Ödüller ve Başarılar"
                                 fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
@@ -61,7 +62,7 @@ export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?
                                 src={service.image}
                                 alt={service.title}
                                 fill
-                                unoptimized
+                                sizes="(max-width: 768px) 100vw, 33vw"
                                 className="object-cover opacity-10 group-hover:opacity-25 transition-opacity duration-700 mix-blend-overlay"
                             />
                             <div className={cn("absolute inset-0 pointer-events-none", service.theme === "dark" ? "bg-[#0A1628]/80" : "bg-corporate-dark/80")}></div>

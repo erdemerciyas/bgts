@@ -9,7 +9,7 @@ export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
   '/about': { tr: '/hakkimizda', eng: '/about' },
   '/contact': { tr: '/iletisim', eng: '/contact' },
   '/products/hcm': { tr: '/urunler/hcm', eng: '/products/hcm' },
-  '/products/praxila': { tr: '/urunler/praxilla', eng: '/products/praxila' },
+  '/products/praxilla': { tr: '/urunler/praxilla', eng: '/products/praxilla' },
   '/services/software-development': {
     tr: '/hizmetler/yazilim-muhendisligi',
     eng: '/services/software-development',
@@ -70,6 +70,7 @@ export const TR_LEGACY_REDIRECTS: Record<string, string> = {
   '/contact': '/iletisim',
   '/products/hcm': '/urunler/hcm',
   '/products/praxila': '/urunler/praxilla',
+  '/products/praxilla': '/urunler/praxilla',
   '/services': '/hizmetler',
   '/services/data-center-platforms-applications-management':
     '/hizmetler/veri-merkezi-platform-ve-uygulama-yonetimi',
@@ -199,6 +200,17 @@ export function resolveTrRewrite(urlPath: string): string | null {
 export function resolveTrLegacyRedirect(urlPath: string): string | null {
   const normalized = normalizePath(urlPath);
   return TR_LEGACY_REDIRECTS[normalized] ?? null;
+}
+
+/** Legacy English slugs on /tr/en/ that should 301 to updated equivalents. */
+export const ENG_LEGACY_REDIRECTS: Record<string, string> = {
+  '/products/praxila': '/products/praxilla',
+};
+
+/** Resolve middleware redirect: legacy English slug on /tr/en/ → updated English slug. */
+export function resolveEngLegacyRedirect(urlPath: string): string | null {
+  const normalized = normalizePath(urlPath);
+  return ENG_LEGACY_REDIRECTS[normalized] ?? null;
 }
 
 /** Removed pages: internal path → replacement internal path (both locales). */

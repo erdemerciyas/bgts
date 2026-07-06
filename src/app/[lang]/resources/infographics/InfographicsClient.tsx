@@ -6,6 +6,7 @@ import { Heading, Text } from "@/components/ui/Typography"
 import { Users, Star, Award, Briefcase, TrendingUp, UserCheck, MapPin, PersonStanding, Play } from "lucide-react"
 import { FadeInLeft, StaggerContainer, StaggerItem, FadeInRight } from "@/components/ui/AnimatedElements"
 import Link from "next/link"
+import Image from "next/image"
 
 const ICONS = [Users, UserCheck, Star, TrendingUp]
 const ICON_COLORS = ["text-blue-600", "text-emerald-600", "text-amber-500", "text-violet-600"]
@@ -31,10 +32,13 @@ export default function InfographicsClient({ dict: d }: { dict: InfographicsDict
             <Section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0B0F25]">
                 {/* Background Image */}
                 <div className="absolute inset-0 pointer-events-none">
-                    <img
+                    <Image
                         src="/images/products/info-hero.png"
-                        alt=""
-                        className="absolute inset-0 w-full h-full object-contain object-right"
+                        alt="BGTS infographics hero illustration"
+                        fill
+                        priority
+                        sizes="100vw"
+                        className="object-contain object-right"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F25] via-[#0B0F25]/70 to-transparent" />
                 </div>

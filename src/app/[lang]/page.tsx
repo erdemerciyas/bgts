@@ -7,6 +7,7 @@ import { DeliveryModels } from "@/components/home/DeliveryModels"
 import { getDictionary } from "@/get-dictionary"
 import type { Locale } from "@/i18n-config"
 import { getHomeContent } from "@/content/home"
+import { getLocalePrefix } from "@/lib/base-path"
 
 export default async function Home(props: { params: Promise<{ lang: string }> }) {
   const params = await props.params;
@@ -15,7 +16,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
 
   return (
     <>
-      <BreadcrumbStructuredData items={[{ name: "Ana Sayfa", url: "/" }]} />
+      <BreadcrumbStructuredData items={[{ name: "Ana Sayfa", url: getLocalePrefix(params.lang as Locale) }]} />
       <HeroSlider slidesDict={dict.home.hero.slides} lang={params.lang} />
       <ServicesSection content={homeContent.servicesSummary} lang={params.lang} />
       <DeliveryModels content={homeContent.deliveryModels} lang={params.lang} />

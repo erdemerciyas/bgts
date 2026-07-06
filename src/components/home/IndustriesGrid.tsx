@@ -1,5 +1,3 @@
-"use client"
-
 import { localizedPathForLang } from "@/lib/routes"
 import Link from "next/link"
 import Image from "next/image"
@@ -47,6 +45,7 @@ export function IndustriesGrid({ content, lang = "tr" }: { content?: any; lang?:
                                         src={item.image}
                                         alt={item.title}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 25vw"
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-corporate-dark/90 via-corporate-dark/40 to-transparent"></div>

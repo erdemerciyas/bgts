@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { i18n, type Locale } from "@/i18n-config";
+import { htmlLang, i18n, type Locale } from "@/i18n-config";
 import { getLocalePrefix } from "@/lib/base-path";
 import { getLocalizedPath } from "@/lib/routes";
 
@@ -16,11 +16,11 @@ export function buildAlternates(path: string, lang: Locale): NonNullable<Metadat
   for (const locale of i18n.locales) {
     const localized = getLocalizedPath(locale, normalized);
     const prefix = getLocalePrefix(locale);
-    languages[locale] = localized === "/"
+    languages[htmlLang(locale)] = localized === "/"
       ? `${SITE_URL}${prefix}`
       : `${SITE_URL}${prefix}${localized}`;
   }
-  languages["x-default"] = languages[i18n.defaultLocale];
+  languages["x-default"] = languages[htmlLang(i18n.defaultLocale)];
 
   const canonicalPath = getLocalizedPath(lang, normalized);
   const canonicalPrefix = getLocalePrefix(lang);
