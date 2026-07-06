@@ -230,7 +230,7 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.28, ease: "easeOut" }}
-                    className="fixed inset-0 z-[9999] flex items-start justify-center overflow-y-auto bg-black/70 backdrop-blur-sm p-4 sm:p-6 md:p-10"
+                    className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-black/70 backdrop-blur-sm p-4 sm:p-6 md:p-10"
                     onClick={onClose}
                     role="dialog"
                     aria-modal="true"
@@ -255,22 +255,23 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.96, y: 16 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="relative w-full max-w-5xl bg-white rounded-3xl shadow-2xl my-4 sm:my-8 overflow-hidden"
+                        className="relative flex w-full max-w-5xl max-h-[min(90dvh,calc(100dvh-2rem))] flex-col overflow-hidden bg-white rounded-3xl shadow-2xl"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* ── Cover image ── */}
-                        <div className="relative w-full aspect-[16/9] overflow-hidden">
+                        <div className="relative w-full shrink-0 overflow-hidden bg-slate-50">
                             <Image
                                 src={article.coverImage}
                                 alt={article.title}
-                                fill
-                                className="object-cover"
+                                width={1920}
+                                height={768}
+                                className="w-full h-auto block -my-[50px]"
                                 priority
+                                sizes="(max-width: 768px) 100vw, 1024px"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
                             {/* Category badge over image */}
-                            <div className="absolute bottom-4 left-5 sm:left-7">
+                            <div className="absolute top-4 left-5 sm:left-7">
                                 <span
                                     className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border backdrop-blur-sm ${categoryClass}`}
                                 >
@@ -280,7 +281,7 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                         </div>
 
                         {/* ── Header ── */}
-                        <div className="px-5 sm:px-7 pt-6 pb-4 border-b border-slate-100">
+                        <div className="shrink-0 px-5 sm:px-7 pt-6 pb-4 border-b border-slate-100">
                             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight tracking-tight mb-4">
                                 {article.title}
                             </h2>
@@ -305,7 +306,7 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                         </div>
 
                         {/* ── Markdown body ── */}
-                        <div className="px-5 sm:px-7 py-6 max-h-[55vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
+                        <div className="min-h-0 flex-1 overflow-y-auto px-5 sm:px-7 py-6 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
                             {article.body ? (
                                 <ReactMarkdown components={markdownComponents}>
                                     {article.body}

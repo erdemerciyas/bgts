@@ -6,12 +6,13 @@ import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import {
     Server, Activity, Database, Code, Cpu, Globe, Shield, ShoppingBag, Mic,
-    CheckCircle2, ArrowRight, FileText, Linkedin, Briefcase,
+    CheckCircle2, ArrowRight, Linkedin, Briefcase,
     Bot, Landmark, TrendingUp, Radio, ShieldAlert, RefreshCw, Layers,
-    Calendar, ArrowUpRight, BarChart3, Quote,
+    ArrowUpRight, BarChart3, Quote,
     GraduationCap, Heart, Rocket, Smile
 } from "lucide-react"
 import { STYLES } from "./data"
+import { ResourcesMenuLeftPanel } from "./ResourcesMenuLeftPanel"
 import { highlightAI } from "@/lib/highlight-ai"
 import { localizedHref } from "@/lib/routes"
 import { getLocaleFromPathname } from "@/lib/base-path"
@@ -309,74 +310,10 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
         >
             <div className="grid grid-cols-4 grid-rows-2 gap-4 h-[540px]">
 
-                {/* LEFT COLUMN: Full-height Event Card */}
-                <Link
-                    href="https://www.linkedin.com/feed/update/urn:li:activity:7449781930562101248"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={closeMenu}
-                    className="col-span-2 row-span-2 relative group overflow-hidden rounded-3xl bg-slate-900 shadow-lg ring-1 ring-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/40"
-                >
-                    <div className="absolute inset-0">
-                        <Image
-                            src="/images/events/ebintec-2026.jpg"
-                            alt={t(lang, "BİLGİ MERKEZİ", "KNOWLEDGE CENTER")}
-                            fill
-                            className="object-cover transition-all duration-700 ease-out group-hover:scale-110 opacity-90 group-hover:opacity-100 group-hover:blur-[1px]"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
-                    </div>
-
-                    <div className="relative h-full flex flex-col justify-between p-6 z-10 event-card-hover">
-                        <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 rounded-full bg-rose-500/80 shadow-lg flex items-center justify-center border border-rose-400">
-                                <Calendar className="w-4 h-4 text-white" />
-                            </div>
-                            <span className="text-xs font-bold text-white drop-shadow-md tracking-widest uppercase">{t(lang, "Gerçekleşen Etkinlik", "Past Event")}</span>
-                        </div>
-
-                        <div className="mt-auto p-2 event-card-hover">
-                            <h3 className="text-2xl font-black text-white mb-3 leading-tight [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]">
-                                EBINTEC BANKING INNOVATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-400">CONFERENCE</span>
-                            </h3>
-                            <p className="text-slate-200 text-sm mb-3 leading-relaxed line-clamp-2 [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]">
-                                {t(
-                                    lang,
-                                    "Ana sponsor olarak yer aldığımız etkinlikte, finans sektörünün dönüşümüne dair güncel içgörüleri paylaştık.",
-                                    "As the main sponsor of the event, we shared up-to-date insights on the transformation of the finance sector."
-                                )}
-                            </p>
-                            <p className="text-slate-200 text-sm font-bold flex items-center gap-2 group-hover:-translate-y-1 transition-transform [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]">
-                                <span className="bg-white/20 px-2 py-1 rounded text-white backdrop-blur-sm">{t(lang, "14 Nisan", "April 14")}</span>
-                                <span>İstanbul</span>
-                            </p>
-                            {/* Makaleler link — below date */}
-                            <div
-                                role="link"
-                                tabIndex={0}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    closeMenu?.();
-                                    window.location.href = lh(lang, '/resources/articles');
-                                }}
-                                onKeyDown={(e) => {
-                                    if (e.key === 'Enter' || e.key === ' ') {
-                                        e.preventDefault();
-                                        e.stopPropagation();
-                                        closeMenu?.();
-                                        window.location.href = lh(lang, '/resources/articles');
-                                    }
-                                }}
-                                className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-900 transition-all cursor-pointer group/articles bg-white px-3.5 py-1.5 rounded-full shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/25 hover:scale-105 duration-300 ring-1 ring-white/50 w-fit"
-                            >
-                                <FileText className="w-3.5 h-3.5" />
-                                <span>{t(lang, "Etkinlik Makaleleri", "Event Articles")}</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </Link>
+                {/* LEFT COLUMN: Event + latest article + testimonial flow */}
+                <div className="col-span-2 row-span-2 min-h-0">
+                    <ResourcesMenuLeftPanel lang={lang} closeMenu={closeMenu} />
+                </div>
 
                 {/* CARD 2: Success Stories */}
                 <Link href={lh(lang, '/resources/success-stories')} onClick={closeMenu}
