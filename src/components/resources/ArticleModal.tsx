@@ -255,69 +255,72 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.96, y: 16 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="relative flex w-full max-w-5xl max-h-[min(90dvh,calc(100dvh-2rem))] flex-col overflow-hidden bg-white rounded-3xl shadow-2xl"
+                        className="relative flex w-full max-w-5xl max-h-[min(94dvh,calc(100dvh-1rem))] sm:max-h-[min(90dvh,calc(100dvh-2rem))] flex-col overflow-hidden bg-white rounded-2xl sm:rounded-3xl shadow-2xl"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        {/* ── Cover image ── */}
-                        <div className="relative w-full shrink-0 overflow-hidden bg-slate-50">
-                            <Image
-                                src={article.coverImage}
-                                alt={article.title}
-                                width={1920}
-                                height={768}
-                                className="w-full h-auto block -my-[50px]"
-                                priority
-                                sizes="(max-width: 768px) 100vw, 1024px"
-                            />
+                        {/* ── Scrollable content (cover + header + body) ── */}
+                        <div className="min-h-0 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
+                            {/* Cover image */}
+                            <div className="relative shrink-0 overflow-hidden bg-slate-50">
+                                <Image
+                                    src={article.coverImage}
+                                    alt={article.title}
+                                    width={1920}
+                                    height={768}
+                                    className="block w-full h-auto md:-my-[50px]"
+                                    priority
+                                    sizes="(max-width: 768px) 100vw, 1024px"
+                                />
 
-                            {/* Category badge over image */}
-                            <div className="absolute top-4 left-5 sm:left-7">
-                                <span
-                                    className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border backdrop-blur-sm ${categoryClass}`}
-                                >
-                                    {article.category}
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* ── Header ── */}
-                        <div className="shrink-0 px-5 sm:px-7 pt-6 pb-4 border-b border-slate-100">
-                            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight tracking-tight mb-4">
-                                {article.title}
-                            </h2>
-
-                            {/* Meta row */}
-                            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-500">
-                                <span className="flex items-center gap-1.5">
-                                    <User className="w-4 h-4 text-slate-400" />
-                                    <span className="font-semibold text-slate-700">
-                                        {article.author}
+                                {/* Category badge over image */}
+                                <div className="absolute top-2 left-3 sm:top-4 sm:left-5 md:left-7">
+                                    <span
+                                        className={`inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider border backdrop-blur-sm ${categoryClass}`}
+                                    >
+                                        {article.category}
                                     </span>
-                                </span>
-                                <span className="flex items-center gap-1.5">
-                                    <Calendar className="w-4 h-4 text-slate-400" />
-                                    {formattedDate}
-                                </span>
-                                <span className="flex items-center gap-1.5">
-                                    <Clock className="w-4 h-4 text-slate-400" />
-                                    {article.readTime} {dict.readTime}
-                                </span>
+                                </div>
                             </div>
-                        </div>
 
-                        {/* ── Markdown body ── */}
-                        <div className="min-h-0 flex-1 overflow-y-auto px-5 sm:px-7 py-6 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
-                            {article.body ? (
-                                <ReactMarkdown components={markdownComponents}>
-                                    {article.body}
-                                </ReactMarkdown>
-                            ) : (
-                                <p className="text-slate-500 italic text-center py-8">
-                                    {lang === "eng"
-                                        ? "Content for this article will be added soon."
-                                        : "Bu makalenin içeriği yakında eklenecektir."}
-                                </p>
-                            )}
+                            {/* Header */}
+                            <div className="border-b border-slate-100 px-4 py-3 sm:px-7 sm:pt-6 sm:pb-4">
+                                <h2 className="mb-2 text-xl font-black leading-tight tracking-tight text-slate-900 sm:mb-4 sm:text-3xl">
+                                    {article.title}
+                                </h2>
+
+                                {/* Meta row */}
+                                <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-500 sm:gap-x-5 sm:gap-y-2 sm:text-sm">
+                                    <span className="flex items-center gap-1.5">
+                                        <User className="w-4 h-4 text-slate-400" />
+                                        <span className="font-semibold text-slate-700">
+                                            {article.author}
+                                        </span>
+                                    </span>
+                                    <span className="flex items-center gap-1.5">
+                                        <Calendar className="w-4 h-4 text-slate-400" />
+                                        {formattedDate}
+                                    </span>
+                                    <span className="flex items-center gap-1.5">
+                                        <Clock className="w-4 h-4 text-slate-400" />
+                                        {article.readTime} {dict.readTime}
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Markdown body */}
+                            <div className="px-4 py-4 sm:px-7 sm:py-6">
+                                {article.body ? (
+                                    <ReactMarkdown components={markdownComponents}>
+                                        {article.body}
+                                    </ReactMarkdown>
+                                ) : (
+                                    <p className="text-slate-500 italic text-center py-8">
+                                        {lang === "eng"
+                                            ? "Content for this article will be added soon."
+                                            : "Bu makalenin içeriği yakında eklenecektir."}
+                                    </p>
+                                )}
+                            </div>
                         </div>
                     </motion.div>
                 </motion.div>
