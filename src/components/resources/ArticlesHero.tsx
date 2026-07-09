@@ -55,21 +55,9 @@ export default function ArticlesHero({ dict }: ArticlesHeroProps) {
             <Container className="relative z-10 w-full pt-32 pb-14 lg:pt-40 lg:pb-20">
                 <div className="max-w-2xl">
                     <motion.div
-                        initial={{ opacity: 0, y: 18 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.55, ease }}
-                        className="mb-6 flex items-center gap-3"
-                    >
-                        <span className="h-px w-8 bg-corporate-highlight" />
-                        <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-corporate-highlight/90">
-                            BGTS
-                        </span>
-                    </motion.div>
-
-                    <motion.div
                         initial={{ opacity: 0, y: 28 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.08, ease }}
+                        transition={{ duration: 0.7, ease }}
                     >
                         <Heading
                             variant="h1"
