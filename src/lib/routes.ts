@@ -53,7 +53,7 @@ export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
     eng: '/products/ai-hiring-assistant',
   },
   '/products/cv-converter': { tr: '/urunler/cv-donusturucu', eng: '/products/cv-converter' },
-  '/resources/articles': { tr: '/bilgi-merkezi/makaleler', eng: '/resources/articles' },
+  '/resources/analyses': { tr: '/bilgi-merkezi/analizler', eng: '/resources/analyses' },
 };
 
 /** Top-level Turkish aliases without a dedicated page — redirect targets (internal path). */
@@ -112,7 +112,9 @@ export const TR_LEGACY_REDIRECTS: Record<string, string> = {
   '/apply': '/basvuru',
   '/resources/success-stories': '/basari-hikayeleri',
   '/case-studies': '/basari-hikayeleri',
-  '/articles': '/bilgi-merkezi/makaleler',
+  '/articles': '/bilgi-merkezi/analizler',
+  '/resources/articles': '/bilgi-merkezi/analizler',
+  '/bilgi-merkezi/makaleler': '/bilgi-merkezi/analizler',
   '/events': '/etkinlikler',
   '/webinars': '/webinarlar',
   '/news': '/haberler',
@@ -205,6 +207,7 @@ export function resolveTrLegacyRedirect(urlPath: string): string | null {
 /** Legacy English slugs on /tr/en/ that should 301 to updated equivalents. */
 export const ENG_LEGACY_REDIRECTS: Record<string, string> = {
   '/products/praxila': '/products/praxilla',
+  '/resources/articles': '/resources/analyses',
 };
 
 /** Resolve middleware redirect: legacy English slug on /tr/en/ → updated English slug. */

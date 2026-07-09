@@ -41,7 +41,7 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
   { path: '/learning', priority: 0.6, changeFrequency: 'monthly' },
 
   // Kaynaklar
-  { path: '/resources/articles', priority: 0.7, changeFrequency: 'weekly' },
+  { path: '/resources/analyses', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/resources/success-stories', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/resources/infographics', priority: 0.5, changeFrequency: 'monthly' },
 ]

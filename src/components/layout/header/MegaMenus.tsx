@@ -1,4 +1,5 @@
 "use client"
+import { useMemo } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -6,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import {
     Server, Activity, Database, Code, Cpu, Globe, Shield, ShoppingBag, Mic,
-    CheckCircle2, ArrowRight, Linkedin, Briefcase,
+    CheckCircle2, ArrowRight, Briefcase, FileText,
     Bot, Landmark, TrendingUp, Radio, ShieldAlert, RefreshCw, Layers,
     ArrowUpRight, BarChart3, Quote,
     GraduationCap, Heart, Rocket, Smile
@@ -17,6 +18,25 @@ import { highlightAI } from "@/lib/highlight-ai"
 import { localizedHref } from "@/lib/routes"
 import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
+import { ARTICLES_TR } from "@/data/articles.tr"
+import { ARTICLES_EN } from "@/data/articles.en"
+
+/** Male-only pravatar portraits (img ids known to be men). */
+const AUTHOR_AVATARS: Record<string, string> = {
+    "Alper Önsoy": "https://i.pravatar.cc/160?img=12",
+    "Erdoğan Bilici": "https://i.pravatar.cc/160?img=33",
+    "Sinan Demirci": "https://i.pravatar.cc/160?img=53",
+}
+
+const MALE_AVATAR_FALLBACKS = [11, 12, 13, 14, 15, 33, 51, 52, 53, 54, 56, 57, 58, 59, 60] as const
+
+function getAuthorAvatar(author: string) {
+    if (AUTHOR_AVATARS[author]) return AUTHOR_AVATARS[author]
+    let hash = 0
+    for (let i = 0; i < author.length; i++) hash = (hash + author.charCodeAt(i) * (i + 1)) % 997
+    const img = MALE_AVATAR_FALLBACKS[hash % MALE_AVATAR_FALLBACKS.length]
+    return `https://i.pravatar.cc/160?img=${img}`
+}
 
 const BackgroundPattern = () => (
     <div className="absolute -bottom-24 -right-24 w-64 h-64 opacity-[0.03] pointer-events-none z-0 rotate-12 text-slate-900">
@@ -298,6 +318,13 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
 export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
     const lang = useLang()
+    const latestArticle = useMemo(() => {
+        const articles = lang === "eng" ? ARTICLES_EN : ARTICLES_TR
+        return [...articles].sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+        )[0]
+    }, [lang])
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 15, scale: 0.98 }}
@@ -310,7 +337,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
         >
             <div className="grid grid-cols-4 grid-rows-2 gap-4 h-[540px]">
 
-                {/* LEFT COLUMN: Event + latest article + testimonial flow */}
+                {/* LEFT COLUMN: Past event (full height) */}
                 <div className="col-span-2 row-span-2 min-h-0">
                     <ResourcesMenuLeftPanel lang={lang} closeMenu={closeMenu} />
                 </div>
@@ -376,12 +403,12 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
                 </Link>
 
-                {/* CARD 3: LinkedIn */}
-                <Link href="https://www.linkedin.com/company/bilgeadam/" target="_blank" onClick={closeMenu}
-                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-6 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]">
+                {/* CARD 3: Analyses / Articles */}
+                <Link href={lh(lang, '/resources/analyses')} onClick={closeMenu}
+                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-5 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]">
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light"></div>
                     <motion.div
-                        className="relative z-10 flex flex-col justify-between h-full"
+                        className="relative z-10 flex flex-col justify-between h-full min-h-0"
                         animate="initial"
                         whileHover="hover"
                         initial={false}
@@ -392,22 +419,48 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             }}
                         >
                             <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
-                                <Linkedin className="w-12 h-12 text-white mb-3" />
+                                <div className="mb-3 flex items-center justify-between gap-2">
+                                    <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white/90 border border-white/20">
+                                        <FileText className="h-3 w-3" />
+                                        {t(lang, "Analizler", "Analyses")}
+                                    </span>
+                                    {latestArticle && (
+                                        <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-white/40 shadow-md ring-2 ring-white/10">
+                                            <Image
+                                                src={getAuthorAvatar(latestArticle.author)}
+                                                alt={latestArticle.author}
+                                                fill
+                                                className="object-cover"
+                                                sizes="44px"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
                             </motion.div>
                             <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
-                                <h4 className="font-bold text-white text-lg">{t(lang, "Bizi Takip Edin", "Follow Us")}</h4>
-                            </motion.div>
-                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
-                                <p className="text-blue-100 text-xs mt-1 mb-4">{t(lang, "Teknoloji, etkinlikler ve güncel gelişmelerden haberdar olun.", "Stay informed about technology, events and current developments.")}</p>
+                                <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-blue-100/80">
+                                    {t(lang, "Son Makale", "Latest Article")}
+                                </p>
+                                <h4 className="font-bold text-white text-[15px] leading-snug line-clamp-3">
+                                    {latestArticle?.title ?? t(lang, "Analizler", "Analyses")}
+                                </h4>
                             </motion.div>
                         </motion.div>
                         <motion.div
+                            className="mt-3 flex items-center justify-between gap-2"
                             variants={{
                                 initial: { y: 0 },
                                 hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const, delay: 0.3 } }
                             }}
                         >
-                            <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold group-hover:bg-white group-hover:text-[#0077b5] transition-colors">@bgts</span>
+                            {latestArticle && (
+                                <span className="truncate text-[11px] font-semibold text-blue-100/90">
+                                    {latestArticle.author}
+                                </span>
+                            )}
+                            <span className="inline-flex shrink-0 items-center text-xs font-bold text-white">
+                                {t(lang, "İncele", "Explore")} <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                            </span>
                         </motion.div>
                     </motion.div>
                 </Link>

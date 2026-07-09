@@ -142,6 +142,14 @@ const SLIDES: Slide[] = [
         ctaLink: "/partnerships",
         type: "partners",
     },
+    {
+        id: 6,
+        image: "/images/headers/analizler.png",
+        title: "Analizler",
+        subtitle: "Sektör uzmanlarımızdan en güncel içgörüler ve analizler.",
+        ctaText: "Tüm analizleri görüntüle",
+        ctaLink: "/resources/analyses",
+    },
 ]
 
 export function HeroSlider({ slidesDict, lang = "tr" }: { slidesDict?: any[]; lang?: string }) {

@@ -130,7 +130,7 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
             { title: t("resources", "successStories", "Başarı Hikayeleri", "Success Stories"), href: p("/resources/success-stories"), icon: Heart },
             { title: t("resources", "infographics", "İnfografikler", "Infographics"), href: p("/resources/infographics"), icon: BarChart3 },
             { title: t("resources", "partners", "İş Ortakları", "Business Partners"), href: p("/partnerships"), icon: Layers },
-            { title: "LinkedIn", href: "https://www.linkedin.com/company/bilgeadam/", icon: Linkedin },
+            { title: t("resources", "analyses", "Analizler", "Analyses"), href: p("/resources/analyses"), icon: FileText },
           ]
         }
       ]

@@ -37,6 +37,11 @@
           "title": "Teknoloji Partnerleriyle Güçlü Çözümler",
           "subtitle": "Atlassian, Qlik, ServiceNow ve lider platformlarla.",
           "ctaText": "İş Ortaklarımız"
+        },
+        {
+          "title": "Analizler",
+          "subtitle": "Sektör uzmanlarımızdan en güncel içgörüler ve analizler.",
+          "ctaText": "Tüm analizleri görüntüle"
         }
       ]
     },
@@ -3319,7 +3324,8 @@
     "kariyer-yollari": "Kariyer Yolları",
     "calisma-kulturu": "Çalışma Kültürü",
     "basari-hikayeleri": "Başarı Hikayeleri",
-    "makaleler": "Makaleler",
+    "makaleler": "Analizler",
+    "analizler": "Analizler",
     "etkinlikler": "Etkinlikler",
     "webinarlar": "Webinarlar",
     "haberler": "Haberler",
@@ -3364,14 +3370,14 @@
     "telecommunications": "Telekomünikasyon"
   },
   "articles": {
-    "title": "Makaleler",
-    "subtitle": "Sektör uzmanlarımızdan en güncel içgörüler ve analizler.",
+    "title": "Analizler",
+    "subtitle": "Teknoloji dünyasına dair güncel içgörüler ve uzman analizler",
     "readMore": "Devamını Oku",
-    "allArticles": "Tüm Makaleler",
+    "allArticles": "Tüm Analizler",
     "closeModal": "Kapat",
     "readTime": "dk okuma",
     "by": "Yazan",
-    "category": "makale",
+    "category": "analiz",
     "publishedOn": "Yayın Tarihi"
   }
 }

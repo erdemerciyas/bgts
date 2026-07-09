@@ -37,6 +37,11 @@
           "title": "Strong Solutions with Technology Partners",
           "subtitle": "With Atlassian, Qlik, ServiceNow and leading platforms.",
           "ctaText": "Our Partners"
+        },
+        {
+          "title": "Analyses",
+          "subtitle": "Latest insights and analysis from our industry experts.",
+          "ctaText": "View all analyses"
         }
       ]
     },
@@ -3321,6 +3326,8 @@
     "resources": "Resources",
     "success-stories": "Success Stories",
     "infographics": "Infographics",
+    "analyses": "Analyses",
+    "articles": "Analyses",
     "hcm": "HCM",
     "meetsense": "MeetSense",
     "meetsense-viewer": "MeetSense Viewer",
@@ -3332,14 +3339,14 @@
     "telecommunications": "Telecommunications"
   },
   "articles": {
-    "title": "Articles",
-    "subtitle": "Latest insights and analysis from our industry experts.",
+    "title": "Analyses",
+    "subtitle": "Current insights and expert analyses on the world of technology",
     "readMore": "Read More",
-    "allArticles": "All Articles",
+    "allArticles": "All Analyses",
     "closeModal": "Close",
     "readTime": "min read",
     "by": "By",
-    "category": "articles",
+    "category": "analyses",
     "publishedOn": "Published On"
   }
 }

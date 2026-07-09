@@ -12,23 +12,47 @@ import type { Article } from "@/data/articles.tr"
 import { cn } from "@/lib/utils"
 import ArticlesHero from "@/components/resources/ArticlesHero"
 
-const ArticleModal = dynamic(() => import("@/components/resources/ArticleModal"), { ssr: false })
+/* Soft accents — same layout, gentle visual separation */
+const RANK_TONES = [
+    {
+        card: "bg-white border-slate-100 hover:border-blue-200/70",
+        footer: "bg-slate-50/70 border-slate-100",
+        accent: "from-blue-500/80 to-sky-400/60",
+        titleHover: "group-hover:text-blue-700",
+    },
+    {
+        card: "bg-[#FBFCFD] border-slate-100 hover:border-teal-200/70",
+        footer: "bg-teal-50/40 border-teal-100/60",
+        accent: "from-teal-500/80 to-emerald-400/60",
+        titleHover: "group-hover:text-teal-700",
+    },
+    {
+        card: "bg-white border-slate-100 hover:border-amber-200/70",
+        footer: "bg-amber-50/35 border-amber-100/60",
+        accent: "from-amber-500/80 to-orange-400/60",
+        titleHover: "group-hover:text-amber-700",
+    },
+    {
+        card: "bg-[#FBFBFD] border-slate-100 hover:border-violet-200/70",
+        footer: "bg-violet-50/40 border-violet-100/60",
+        accent: "from-violet-500/80 to-indigo-400/60",
+        titleHover: "group-hover:text-violet-700",
+    },
+    {
+        card: "bg-white border-slate-100 hover:border-rose-200/70",
+        footer: "bg-rose-50/35 border-rose-100/60",
+        accent: "from-rose-500/80 to-pink-400/60",
+        titleHover: "group-hover:text-rose-700",
+    },
+    {
+        card: "bg-[#FAFCFB] border-slate-100 hover:border-cyan-200/70",
+        footer: "bg-cyan-50/40 border-cyan-100/60",
+        accent: "from-cyan-500/80 to-sky-400/60",
+        titleHover: "group-hover:text-cyan-700",
+    },
+] as const
 
-/* ── Category badge colors ── */
-const CATEGORY_COLORS: Record<string, string> = {
-    // TR
-    "Yapay Zeka":    "bg-blue-50 text-blue-700 border-blue-100",
-    "Otomasyon":     "bg-amber-50 text-amber-700 border-amber-100",
-    "Güvenlik":      "bg-rose-50 text-rose-700 border-rose-100",
-    "Yönetişim":     "bg-violet-50 text-violet-700 border-violet-100",
-    "Altyapı":       "bg-emerald-50 text-emerald-700 border-emerald-100",
-    // EN
-    "Artificial Intelligence": "bg-blue-50 text-blue-700 border-blue-100",
-    "Automation":              "bg-amber-50 text-amber-700 border-amber-100",
-    "Security":                "bg-rose-50 text-rose-700 border-rose-100",
-    "Governance":              "bg-violet-50 text-violet-700 border-violet-100",
-    "Infrastructure":          "bg-emerald-50 text-emerald-700 border-emerald-100",
-}
+const ArticleModal = dynamic(() => import("@/components/resources/ArticleModal"), { ssr: false })
 
 type ArticlesDict = {
     title: string
@@ -117,20 +141,13 @@ function ArticlesClientInner({ articles, dict, lang }: ArticlesClientProps) {
             <Section background="default" className="py-16 md:py-24">
                 <Container>
                     {/* Section header */}
-                    <div className="flex items-end justify-between mb-12 flex-wrap gap-4 pb-6 border-b border-slate-100">
-                        <div>
-                            <Heading variant="h2" className="text-slate-900 font-black text-3xl mb-1.5 tracking-tight">
-                                {dict.allArticles}
-                            </Heading>
-                            <div className="flex items-center gap-2">
-                                <span className="inline-flex items-center justify-center bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-0.5 rounded-full">
-                                    {articles.length}
-                                </span>
-                                <Text variant="small" className="text-slate-400 font-medium">
-                                    {dict.subtitle}
-                                </Text>
-                            </div>
-                        </div>
+                    <div className="mb-12 flex flex-wrap items-center gap-3 pb-6 border-b border-slate-100">
+                        <Heading variant="h2" className="text-slate-900 font-black text-3xl tracking-tight">
+                            {dict.allArticles}
+                        </Heading>
+                        <span className="inline-flex items-center justify-center bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-0.5 rounded-full">
+                            {articles.length}
+                        </span>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -170,7 +187,7 @@ function ArticleCard({
     dict: ArticlesDict
     onClick: () => void
 }) {
-    const categoryClass = CATEGORY_COLORS[article.category] ?? "bg-slate-50 text-slate-600 border-slate-100"
+    const tone = RANK_TONES[index % RANK_TONES.length]
 
     return (
         <motion.article
@@ -188,7 +205,10 @@ function ArticleCard({
             tabIndex={0}
             role="button"
             aria-label={article.title}
-            className="group relative bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 hover:border-slate-200 transition-all duration-300 flex flex-col cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className={cn(
+                "group relative rounded-3xl overflow-hidden border shadow-sm hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 flex flex-col cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
+                tone.card
+            )}
         >
             {/* Cover image */}
             <div className="relative aspect-video w-full overflow-hidden">
@@ -198,22 +218,17 @@ function ArticleCard({
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                {/* Category badge overlay */}
-                <div className="absolute top-4 left-4">
-                    <span className={cn(
-                        "inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border",
-                        categoryClass
-                    )}>
-                        {article.category}
-                    </span>
-                </div>
+                <div className={cn("absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r", tone.accent)} />
             </div>
 
             {/* Content */}
             <div className="flex flex-col flex-grow px-6 pt-5 pb-4">
                 <Heading
                     variant="h3"
-                    className="text-[1.05rem] font-extrabold text-slate-900 leading-snug line-clamp-2 mb-3 group-hover:text-blue-700 transition-colors duration-200"
+                    className={cn(
+                        "text-[1.05rem] font-extrabold text-slate-900 leading-snug line-clamp-2 mb-3 transition-colors duration-200",
+                        tone.titleHover
+                    )}
                 >
                     {article.title}
                 </Heading>
@@ -224,7 +239,7 @@ function ArticleCard({
             </div>
 
             {/* Footer */}
-            <div className="px-6 py-4 border-t border-slate-50 bg-slate-50/60 flex items-center justify-between text-xs text-slate-500">
+            <div className={cn("px-6 py-4 border-t flex items-center justify-between text-xs text-slate-500", tone.footer)}>
                 <span className="font-semibold text-slate-700 truncate max-w-[60%]">
                     {article.author}
                 </span>

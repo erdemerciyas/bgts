@@ -18,7 +18,7 @@ export default async function ArticlesPage({
     const locale = lang as Locale
     const articles = locale === "eng" ? ARTICLES_EN : ARTICLES_TR
     const prefix = getLocalePrefix(locale)
-    const articlesPath = getLocalizedPath(locale, "/resources/articles")
+    const articlesPath = getLocalizedPath(locale, "/resources/analyses")
 
     return (
         <>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildAlternates, buildOgUrl } from "@/lib/seo";
 import type { Locale } from "@/i18n-config";
 
-const PATH = "/resources/articles";
+const PATH = "/resources/analyses";
 
 export async function generateMetadata({
   params,
@@ -13,10 +13,10 @@ export async function generateMetadata({
   const locale = lang as Locale;
   const isTr = locale === "tr";
 
-  const title = isTr ? "Makaleler | BGTS" : "Articles | BGTS";
+  const title = isTr ? "Analizler | BGTS" : "Analyses | BGTS";
   const description = isTr
-    ? "Sektör uzmanlarımızdan en güncel içgörüler ve analizler. Yapay zeka, otomasyon, güvenlik ve yönetişim alanlarında makaleler."
-    : "Latest insights and analysis from our industry experts. Articles on AI, automation, security, and governance.";
+    ? "Teknoloji dünyasına dair güncel içgörüler ve uzman analizler"
+    : "Current insights and expert analyses on the world of technology";
 
   return {
     title,
