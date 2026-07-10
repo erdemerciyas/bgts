@@ -129,7 +129,9 @@ npm run gmail:auth
 
 Terminalde görünen `GMAIL_REFRESH_TOKEN` değerini Plesk'e ekleyin. OAuth hesabı **bgtsweb@gmail.com** olmalıdır.
 
-> OAuth uygulaması **Testing** modundaysa yalnızca test users listesindeki hesaplar mail gönderebilir. Production için Google Cloud Console → OAuth consent screen → **Publish App** gerekebilir.
+> Google Cloud Console → OAuth consent screen → **Publishing status: In production** olmalıdır. **Testing** modunda refresh token'lar yaklaşık **7 gün** sonra `invalid_grant` hatası verir.
+>
+> Form `Mesaj gönderilirken bir hata oluştu` dönerse Plesk'teki `GMAIL_REFRESH_TOKEN` süresi dolmuş olabilir. Yerelde `npm run gmail:auth` ile yeni token alın, Plesk'e yapıştırın ve **Restart App** yapın.
 
 ---
 
