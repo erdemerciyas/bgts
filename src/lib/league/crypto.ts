@@ -1,7 +1,11 @@
 import { createHmac, randomInt, timingSafeEqual } from "crypto";
 
+// Vercel/Next: env anahtarları statik erişimle bundle'a dahil edilir
+const LEAGUE_SECRET_ENV = process.env.LEAGUE_SECRET;
+const STAFF_EMAIL_DOMAIN_ENV = process.env.STAFF_EMAIL_DOMAIN;
+
 const DOMAIN = () =>
-  (process.env.STAFF_EMAIL_DOMAIN || "bgts.com").toLowerCase().replace(/^@/, "");
+  (STAFF_EMAIL_DOMAIN_ENV || "bgts.com").toLowerCase().replace(/^@/, "");
 
 export function getStaffEmailDomain(): string {
   return DOMAIN();
@@ -18,15 +22,46 @@ export function normalizeStaffEmail(email: string): string {
   return email.trim().toLowerCase();
 }
 
-function getSecret(): string {
-  const secret = process.env.LEAGUE_SECRET;
-  if (!secret || secret.length < 16) {
-    if (process.env.NODE_ENV === "production") {
-      throw new Error("LEAGUE_SECRET ortam değişkeni gerekli (min 16 karakter).");
-    }
-    return "dev-league-secret-change-me";
+/** Vercel'de tırnak/boşlukla yapıştırılan değerleri temizler */
+function normalizeSecret(raw: string | undefined): string {
+  if (!raw) return "";
+  let s = raw.trim();
+  if (
+    (s.startsWith('"') && s.endsWith('"')) ||
+    (s.startsWith("'") && s.endsWith("'"))
+  ) {
+    s = s.slice(1, -1).trim();
   }
-  return secret;
+  return s;
+}
+
+export function getLeagueEnvStatus() {
+  const secret = normalizeSecret(LEAGUE_SECRET_ENV);
+  return {
+    LEAGUE_SECRET: secret.length >= 16,
+    LEAGUE_SECRET_LENGTH: secret.length,
+    GMAIL_CLIENT_ID: Boolean(process.env.GMAIL_CLIENT_ID?.trim()),
+    GMAIL_CLIENT_SECRET: Boolean(process.env.GMAIL_CLIENT_SECRET?.trim()),
+    GMAIL_REFRESH_TOKEN: Boolean(process.env.GMAIL_REFRESH_TOKEN?.trim()),
+    GMAIL_USER: Boolean(process.env.GMAIL_USER?.trim()),
+    STAFF_EMAIL_DOMAIN: DOMAIN(),
+    NODE_ENV: process.env.NODE_ENV ?? null,
+    VERCEL_ENV: process.env.VERCEL_ENV ?? null,
+  };
+}
+
+function getSecret(): string {
+  const secret = normalizeSecret(LEAGUE_SECRET_ENV);
+  if (secret.length >= 16) return secret;
+
+  if (process.env.NODE_ENV === "production") {
+    throw new Error(
+      secret.length > 0
+        ? `LEAGUE_SECRET çok kısa (${secret.length} karakter). En az 16 karakter olmalı.`
+        : "LEAGUE_SECRET ortam değişkeni gerekli (min 16 karakter)."
+    );
+  }
+  return "dev-league-secret-change-me";
 }
 
 export function signPayload(payload: string): string {
