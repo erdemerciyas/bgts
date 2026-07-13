@@ -11,6 +11,9 @@ const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMITS: Record<string, { windowMs: number; maxRequests: number }> = {
   '/api/chat': { windowMs: 60_000, maxRequests: 10 },
   '/api/contact': { windowMs: 60_000, maxRequests: 5 },
+  '/api/league/send-code': { windowMs: 60_000, maxRequests: 5 },
+  '/api/league/verify': { windowMs: 60_000, maxRequests: 10 },
+  '/api/league/submit': { windowMs: 60_000, maxRequests: 10 },
 };
 
 function getClientIp(request: NextRequest): string {
@@ -47,6 +50,26 @@ if (typeof globalThis !== 'undefined') {
 }
 
 // === I18N LOCALE — her zaman varsayılan dil (tr) kullan, tarayıcı diline bakma ===
+
+function nextWithPathname(request: NextRequest, pathname: string): NextResponse {
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-pathname', pathname);
+  return NextResponse.next({
+    request: { headers: requestHeaders },
+  });
+}
+
+function rewriteWithPathname(
+  request: NextRequest,
+  pathname: string,
+  rewriteUrl: URL
+): NextResponse {
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-pathname', pathname);
+  return NextResponse.rewrite(rewriteUrl, {
+    request: { headers: requestHeaders },
+  });
+}
 
 export function middleware(request: NextRequest) {
   const pathname = stripBasePath(request.nextUrl.pathname);
@@ -130,7 +153,7 @@ export function middleware(request: NextRequest) {
     const internalPath = getInternalPath('eng', urlPath) ?? (urlPath === '/' ? '' : urlPath);
     const rewriteUrl = request.nextUrl.clone();
     rewriteUrl.pathname = withBasePath(`/eng${internalPath === '/' ? '' : internalPath}`);
-    return NextResponse.rewrite(rewriteUrl);
+    return rewriteWithPathname(request, pathname, rewriteUrl);
   }
 
   if (locale === 'tr') {
@@ -145,11 +168,11 @@ export function middleware(request: NextRequest) {
     if (internalPath && internalPath !== urlPath) {
       const rewriteUrl = request.nextUrl.clone();
       rewriteUrl.pathname = withBasePath(`/tr${internalPath}`);
-      return NextResponse.rewrite(rewriteUrl);
+      return rewriteWithPathname(request, pathname, rewriteUrl);
     }
   }
 
-  return NextResponse.next();
+  return nextWithPathname(request, pathname);
 }
 
 export const config = {

@@ -23,6 +23,7 @@
 - [Komutlar](#komutlar)
 - [Sayfalar ve Rotalar](#sayfalar-ve-rotalar)
 - [API Rotaları](#api-rotaları)
+- [BGTS League](#bgts-league)
 - [AI Chatbot Sistemi](#ai-chatbot-sistemi)
 - [Bileşen Mimarisi](#bileşen-mimarisi)
 - [İçerik Yönetimi](#içerik-yönetimi)
@@ -47,6 +48,7 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 - 5 sektör çözümünü vaka çalışmalarıyla desteklemek
 - Kariyer odaklı ziyaretçilere Kariyer Yolları sayfası üzerinden şeffaf bir büyüme yolu sunmak
 - AI destekli chatbot ile 7/24 kurumsal danışmanlık sağlamak *(şu anda pasif)*
+- Personel için gizli URL üzerinden **BGTS League** bilgi yarışması sunmak
 
 **Canlı Site:** [https://bgts.com.tr](https://bgts.com.tr)
 
@@ -105,6 +107,7 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 
 ### Form ve E-posta Sistemi
 - **İletişim Formu:** `ContactClient.tsx` içinde Zod validasyonlu, Gmail API (OAuth 2.0) ile HTML e-posta gönderimi
+- **BGTS League OTP:** Personel doğrulama kodları aynı Gmail API üzerinden `@bgts.com` adreslerine gönderilir
 - GDPR onay checkbox'ı
 - Hata/başarı bildirim mekanizmaları (toast feedback)
 - Refresh token alma yardımcı scripti: `npm run gmail:auth`
@@ -401,6 +404,12 @@ NEXT_PUBLIC_GSC_VERIFICATION=
 
 # Canonical site URL (opsiyonel)
 # NEXT_PUBLIC_SITE_URL=https://bgts.com.tr
+
+# BGTS League (personel yarışması)
+LEAGUE_SECRET=change-me-to-a-long-random-string
+STAFF_EMAIL_DOMAIN=bgts.com
+# Demo: tahmin güncellenince skor/cevap hemen hesaplanır (varsayılan: true)
+LEAGUE_DEMO=true
 ```
 
 > **Not:** `.env.local` dosyası `.gitignore` kapsamındadır ve asla commit edilmemelidir.
@@ -558,6 +567,7 @@ Plesk'te `NEXT_PUBLIC_*` değişkenleri **build öncesi** ayarlanmalıdır.
 | `/products/docmind` | `/urunler/docmind` |
 | `/products/ai-hiring-assistant` | `/urunler/yapay-zeka-ise-alim-asistani` |
 | `/products/cv-converter` | `/urunler/cv-donusturucu` |
+| `/league` | `/league` (gizli personel yarışması; nav/sitemap'te yok) |
 | `/career-paths` | `/kariyer-yollari` |
 | `/culture` | `/calisma-kulturu` |
 | `/learning` | `/egitim-ve-gelisim` |
@@ -644,6 +654,7 @@ localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /tr/en/contact
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
 | `/tr/meetsense-goruntuleyici` | `/tr/en/meetsense-viewer` | MeetSense Demo Görüntüleyici |
+| `/tr/league` | `/tr/en/league` | BGTS League (personel; `noindex`, nav yok) |
 
 ---
 
@@ -689,6 +700,39 @@ AI chatbot konuşma endpoint'i. Edge Runtime üzerinde çalışır.
 ```
 
 **Zorunlu alanlar:** `name`, `email`, `message`, `consent`
+
+---
+
+### BGTS League API
+
+Personel bilgi yarışması endpoint'leri. Nav/sitemap'te yer almaz; erişim gizli URL ile sağlanır.
+
+| Method | Path | Açıklama | Rate limit |
+|--------|------|----------|------------|
+| `POST` | `/api/league/send-code` | `@bgts.com` e-postaya 6 haneli OTP gönderir | 5/dk |
+| `POST` | `/api/league/verify` | OTP doğrular, session cookie yazar | 10/dk |
+| `GET` | `/api/league/question` | Aktif soru + sezon meta (cevap yok) | — |
+| `POST` | `/api/league/submit` | Tahmin kaydı; demo modunda skor döner | 10/dk |
+| `GET` | `/api/league/reveal` | `revealAt` sonrası (veya demo) doğru cevap + skor | — |
+
+**Send-code body:** `{ "name": "Ad Soyad", "email": "ad.soyad@bgts.com" }`  
+**Verify body:** `{ "email": "ad.soyad@bgts.com", "code": "123456" }`  
+**Submit body:** `{ "questionId": "2026-07-w1", "guess": 1396 }`
+
+---
+
+## BGTS League
+
+Personel için dahili bilgi yarışması (Phase 1 — veritabanı yok).
+
+- **URL:** `/tr/league` (nav, footer, arama ve sitemap'te **yok**; `noindex`)
+- **Erişim:** Yalnızca `@bgts.com` e-posta + Gmail OTP doğrulama
+- **Akış:** İK duyurusu → kayıt → OTP → haftalık tahmin → sonuç/skor → lig tablosu
+- **Kalıcılık:** OTP/session imzalı httpOnly cookie; tahminler `localStorage`
+- **Demo:** `LEAGUE_DEMO=true` iken tahmin güncellenince skor ve doğru cevap hemen hesaplanır
+- **UI:** Cortex login dilinde koyu canvas + sky accent; görsel sezon ödül vitrini
+- **Config:** `src/data/league/season-2026.ts` (sorular, ödüller, skor kuralları)
+- **Chrome:** `/league` rotalarında site Header/Footer gizlenir (`SiteChrome` + middleware `x-pathname`)
 
 ---
 
@@ -915,6 +959,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.45.0 | 2026-07 | **BGTS League (Phase 1):** Gizli `/tr/league` personel yarışması; `@bgts.com` OTP (Gmail); haftalık sorular; demo skoru; görsel ödül vitrini; Cortex-benzeri UI (Geist); Header/Footer gizleme hydration düzeltmesi (`SiteChrome` + `x-pathname`); `LEAGUE_SECRET` / `LEAGUE_DEMO` env. |
 | v0.44.0 | 2026-07 | **Makale modalı mobil UX:** `ArticleModal.tsx` kapak, başlık/meta ve gövde tek scroll alanına alındı; küçük ekranlarda header alanı gövdeyi gizleme sorunu giderildi; responsive padding, tipografi ve modal yüksekliği iyileştirildi. |
 | v0.43.0 | 2026-07 | **Makaleler deneyimi iyileştirmeleri:** `ArticlesHero.tsx` ile kurumsal editorial hero; `ArticleModal.tsx` viewport'a sığan flex layout, kapak görseli tam oranında gösterim ve optimize edilmiş banner yüksekliği; `ArticlesClient.tsx` URL deep linking (`?article=<id>`) ve Suspense sınırı. **Bilgi Merkezi mega menü:** `ResourcesMenuLeftPanel.tsx` eklendi — EBINTEC etkinlik kartı, son makale ve rastgele 3'lü makale karuseli; mega menüden makale sayfasına doğrudan modal açılışı. |
 | v0.42.0 | 2026-07 | **Praxilla route düzeltmesi:** Dahili route `/products/praxila` → `/products/praxilla`; `PraxillaClient.tsx`, sitemap, mega menü, arama endeksi ve legacy redirect'ler güncellendi. **Codebase temizliği:** Kullanılmayan UI bileşenleri kaldırıldı (`Button`, `ContactCard`, `CultureCard`, `MetricCard`, `TechStackGrid`, `TestimonialCard`, `ZoomableImage`); `ContactForm.tsx` kaldırılıp iletişim formu `ContactClient.tsx`'e taşındı; `src/content/software-development.ts` ve `managed-services.ts` silindi (içerik sözlüklerde); `.qoder/repowiki` ve `PROJECT_ANALYSIS.md` kaldırıldı; kullanılmayan Genç Mühendis görselleri temizlendi. **SEO altyapısı:** Statik `public/robots.txt` yerine `src/app/robots.ts` (basePath destekli dinamik robots); `src/app/manifest.ts` ile PWA manifest eklendi; `StructuredData.tsx` sadeleştirildi. **404 sayfası:** Locale-aware `NotFoundClient.tsx` eklendi. **Bağımlılık sadeleştirmesi:** Radix UI, React Hook Form, CVA, mammoth, ts-node ve kullanılmayan test paketleri kaldırıldı. |

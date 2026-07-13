@@ -5,6 +5,7 @@ import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import GlobalBreadcrumb from "@/components/layout/GlobalBreadcrumb";
+import SiteChrome from "@/components/layout/SiteChrome";
 import { OrganizationStructuredData, WebSiteStructuredData, LocalBusinessStructuredData } from "@/components/seo/StructuredData";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { GoogleAnalyticsPageView } from "@/components/analytics/GoogleAnalyticsPageView";
@@ -131,16 +132,13 @@ export default async function RootLayout(props: {
         <WebSiteStructuredData locale={params.lang as Locale} />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased text-[#212121] bg-white`}>
-        <div className="flex flex-col min-h-screen overflow-x-clip">
-          <Header dict={dict.header} />
-          <GlobalBreadcrumb />
-
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer dict={dict.footer} lang={params.lang} />
-          {/* <ChatbotWidget /> */} {/* Temporarily disabled */}
-        </div>
+        <SiteChrome
+          header={<Header dict={dict.header} />}
+          breadcrumb={<GlobalBreadcrumb />}
+          footer={<Footer dict={dict.footer} lang={params.lang} />}
+        >
+          {children}
+        </SiteChrome>
         <CookieConsent dict={dict.cookies} />
         <GoogleAnalytics />
         <Suspense fallback={null}>

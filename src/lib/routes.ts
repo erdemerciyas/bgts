@@ -54,6 +54,7 @@ export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
   },
   '/products/cv-converter': { tr: '/urunler/cv-donusturucu', eng: '/products/cv-converter' },
   '/resources/analyses': { tr: '/bilgi-merkezi/analizler', eng: '/resources/analyses' },
+  '/league': { tr: '/league', eng: '/league' },
 };
 
 /** Top-level Turkish aliases without a dedicated page — redirect targets (internal path). */
