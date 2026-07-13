@@ -1,9 +1,15 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { sendEmail } from "@/lib/email";
-import { isStaffEmail, normalizeStaffEmail } from "@/lib/league/crypto";
+import {
+  getLeagueEnvStatus,
+  isStaffEmail,
+  normalizeStaffEmail,
+} from "@/lib/league/crypto";
 import { buildLeagueOtpEmailHtml } from "@/lib/league/otp-email";
 import { cookieOptions, createOtpToken, OTP_COOKIE } from "@/lib/league/session";
+
+export const runtime = "nodejs";
 
 const schema = z.object({
   name: z.string().trim().min(3).max(80),
@@ -12,13 +18,16 @@ const schema = z.object({
 
 function classifyConfigError(error: unknown): NextResponse | null {
   const msg = error instanceof Error ? error.message : String(error);
+  const env = getLeagueEnvStatus();
 
   if (msg.includes("LEAGUE_SECRET")) {
     return NextResponse.json(
       {
-        message:
-          "Sunucu yapılandırması eksik: Vercel Environment Variables içine LEAGUE_SECRET ekleyin (min 16 karakter).",
+        message: env.LEAGUE_SECRET
+          ? "LEAGUE_SECRET okunamadı. Vercel'de değeri tırnaksız kaydedip Redeploy edin."
+          : "LEAGUE_SECRET bu ortamda yok. Vercel → Environment Variables → Production/Preview işaretli olduğundan emin olun, kaydedin ve Redeploy edin.",
         code: "LEAGUE_SECRET_MISSING",
+        env,
       },
       { status: 503 }
     );
@@ -33,8 +42,9 @@ function classifyConfigError(error: unknown): NextResponse | null {
     return NextResponse.json(
       {
         message:
-          "E-posta servisi yapılandırması eksik veya geçersiz. Vercel'de GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, GMAIL_REFRESH_TOKEN ve GMAIL_USER değişkenlerini kontrol edin.",
+          "E-posta servisi yapılandırması eksik veya geçersiz. Vercel'de GMAIL_* değişkenlerini kontrol edip Redeploy edin.",
         code: "GMAIL_CONFIG_ERROR",
+        env,
       },
       { status: 503 }
     );
@@ -64,6 +74,19 @@ export async function POST(req: Request) {
       );
     }
 
+    const env = getLeagueEnvStatus();
+    if (!env.LEAGUE_SECRET) {
+      return NextResponse.json(
+        {
+          message:
+            "LEAGUE_SECRET bu ortamda yok. Vercel → Settings → Environment Variables → Production ve Preview'ı işaretleyin → Save → Deployments → Redeploy.",
+          code: "LEAGUE_SECRET_MISSING",
+          env,
+        },
+        { status: 503 }
+      );
+    }
+
     let code: string;
     let token: string;
     try {
@@ -89,6 +112,7 @@ export async function POST(req: Request) {
           message:
             "Doğrulama kodu gönderilemedi. Gmail API yetkilendirmesini kontrol edin.",
           code: "GMAIL_SEND_FAILED",
+          env,
         },
         { status: 502 }
       );
@@ -105,7 +129,10 @@ export async function POST(req: Request) {
     const classified = classifyConfigError(error);
     if (classified) return classified;
     return NextResponse.json(
-      { message: "Kod gönderilirken bir hata oluştu. Lütfen tekrar deneyin." },
+      {
+        message: "Kod gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+        env: getLeagueEnvStatus(),
+      },
       { status: 500 }
     );
   }
