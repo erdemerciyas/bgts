@@ -64,6 +64,7 @@ type ArticlesDict = {
     by: string
     category: string
     publishedOn: string
+    viewOnLinkedIn: string
 }
 
 interface ArticlesClientProps {

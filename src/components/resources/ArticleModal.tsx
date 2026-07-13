@@ -5,9 +5,9 @@ import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import ReactMarkdown, { Components } from "react-markdown"
-import { X, Calendar, Clock } from "lucide-react"
+import { X, Calendar, Clock, ExternalLink } from "lucide-react"
 import type { Article } from "@/data/articles.tr"
-import { getAuthorAvatar, hasAuthorPortrait } from "@/lib/articles"
+import { getAuthorAvatar, hasAuthorPortrait, getArticleLinkedInUrl } from "@/lib/articles"
 import { cn } from "@/lib/utils"
 
 /* ── Category badge colors (mirrors ArticlesClient) ── */
@@ -35,6 +35,7 @@ interface ArticleModalProps {
         by: string
         publishedOn: string
         closeModal: string
+        viewOnLinkedIn: string
     }
 }
 
@@ -317,6 +318,17 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                                         <Clock className="w-4 h-4 text-slate-400" />
                                         {article.readTime} {dict.readTime}
                                     </span>
+                                    {getArticleLinkedInUrl(article.id) && (
+                                        <a
+                                            href={getArticleLinkedInUrl(article.id)}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1.5 font-semibold text-[#0077b5] hover:text-[#005885] transition-colors"
+                                        >
+                                            <ExternalLink className="w-3.5 h-3.5" />
+                                            {dict.viewOnLinkedIn}
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 

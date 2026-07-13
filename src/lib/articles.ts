@@ -9,6 +9,23 @@ export const AUTHOR_AVATARS: Record<string, string> = {
   "Sinan Demirci": "/images/articles/writer/sinan-dermirci.png",
 }
 
+export const ARTICLE_LINKEDIN_URLS: Record<string, string> = {
+  "llm-lerden-dslm-lere-donusum":
+    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7459558198862221313/",
+  "malicious-server-cagi":
+    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7467549004407562240/",
+  "kurumlarda-yapay-zeka":
+    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7475525109777346560/",
+  "ai-governance-101":
+    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7478014456204161024/",
+  "pazarlamanin-yeni-musterisi-yapay-zeka-ajanalari":
+    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7478413649469054976/",
+}
+
+export function getArticleLinkedInUrl(articleId: string): string | undefined {
+  return ARTICLE_LINKEDIN_URLS[articleId]
+}
+
 export function getAuthorAvatar(author: string): string {
   return AUTHOR_AVATARS[author] ?? AUTHOR_AVATAR_FALLBACK
 }

@@ -8,7 +8,7 @@ export const ARTICLES_EN: Article[] = [
     excerpt:
       "The question of who should be entrusted with AI at the executive level remains a significant challenge for many large organizations. The imbalance of authority and responsibility among CDOs, CIOs, COOs, and CFOs directly impacts the success of AI projects.",
     coverImage: "/images/articles/kurumlarda-yapay-zeka.jpg",
-    date: "2025-01-15",
+    date: "2026-03-18",
     category: "Artificial Intelligence",
     readTime: 4,
     body: `## Who Is Entrusted with the AI Initiative at C-Level in Enterprises?
@@ -27,7 +27,7 @@ CDOs who own the AI vision in companies are not adequately supported by CIOs/COO
 
 CIOs generally view AI as a "technology layer" focused on infrastructure, integration, and cybersecurity. The biggest operational challenge for CIOs, who need to be strict about SLA and IT processes, is their inability to allow the **fail fast** approach that AI specialists in other teams require.
 
-Another problem is that they tend to focus too much on technology and often miss the cost and governance aspects. Yet another risk in this area is that the resulting AI technology solution lacks "business value." Most organizations are at a point where they have a working AI technology, but they don't know how to sell it, price it, or convert it into value.
+Another problem is that they tend to focus too much on technology and often miss the cost and governance aspects. Yet another risk in this area is that the resulting AI technology solution lacks "business value." Most organizations are at a point where they have a working AI technology, but they don't know how to sell it, price it, or convert it into value. Many organizations with AI tied to the CIO struggle with this challenge.
 
 ### The COO Perspective: A Business-Focused Approach
 
@@ -56,7 +56,7 @@ Perhaps the solution is not to entrust the organization to a single power, but t
     excerpt:
       "AI is evolving from LLMs with the most data to domain-specific language models (DSLMs). The transition from costly and unregulated LLMs to SLMs offered in AI marketplaces provides cost and efficiency advantages for organizations.",
     coverImage: "/images/articles/llm-lerden-dslm-lere-donusum.jpg",
-    date: "2025-01-15",
+    date: "2026-03-08",
     category: "Artificial Intelligence",
     readTime: 3,
     body: `## The Transition from Costly and Unregulated LLMs to DSLMs
@@ -86,7 +86,7 @@ As a pioneering example, we currently use our own local **"Operational Excellenc
     excerpt:
       "Protocols enabling AI agents to shop among themselves are evolving every day. Brands that fail to adapt risk losing their connection with customers and becoming mere back-end warehouses where only large AI models place orders.",
     coverImage: "/images/articles/pazarlamanin-yeni-musterisi-yapay-zeka-ajanlari.jpg",
-    date: "2025-02-10",
+    date: "2026-03-25",
     category: "Artificial Intelligence",
     readTime: 3,
     body: `## Marketing's New Customer: AI Agents
@@ -124,7 +124,7 @@ When I put all this together, one question comes to mind: **Have you ever though
     excerpt:
       "A comprehensive guide covering the fundamental principles of AI governance, regulatory requirements, and the creation of corporate AI policies. The roadmap organizations should follow in light of the EU AI Act and global governance standards.",
     coverImage: "/images/articles/ai-governance-101.jpg",
-    date: "2025-02-20",
+    date: "2026-03-22",
     category: "Governance",
     readTime: 5,
     body: `## AI Governance 101
@@ -227,7 +227,7 @@ The table below clearly shows how the vision change is reflected in operational 
     excerpt:
       "The evolution of cybersecurity threats from computer viruses in the 1990s to attacks targeting AI agents in the 2020s. Malicious MCP Servers emerge as next-generation attack surfaces that manipulate AI agents' decision-making mechanisms.",
     coverImage: "/images/articles/malicious-server-cagi.jpg",
-    date: "2025-01-15",
+    date: "2026-03-12",
     category: "Security",
     readTime: 3,
     body: `## From Computer Viruses to the "Malicious MCP Server" Era
