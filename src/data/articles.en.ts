@@ -85,8 +85,8 @@ As a pioneering example, we currently use our own local **"Operational Excellenc
     author: "Alper Önsoy",
     excerpt:
       "Protocols enabling AI agents to shop among themselves are evolving every day. Brands that fail to adapt risk losing their connection with customers and becoming mere back-end warehouses where only large AI models place orders.",
-    coverImage: "/images/articles/default-article.jpg",
-    date: "2025-01-15",
+    coverImage: "/images/articles/pazarlamanin-yeni-musterisi-yapay-zeka-ajanlari.jpg",
+    date: "2025-02-10",
     category: "Artificial Intelligence",
     readTime: 3,
     body: `## Marketing's New Customer: AI Agents
@@ -123,25 +123,49 @@ When I put all this together, one question comes to mind: **Have you ever though
     author: "Erdoğan Bilici",
     excerpt:
       "A comprehensive guide covering the fundamental principles of AI governance, regulatory requirements, and the creation of corporate AI policies. The roadmap organizations should follow in light of the EU AI Act and global governance standards.",
-    coverImage: "/images/articles/default-article.jpg",
-    date: "2025-01-15",
+    coverImage: "/images/articles/ai-governance-101.jpg",
+    date: "2025-02-20",
     category: "Governance",
-    readTime: 1,
+    readTime: 5,
     body: `## AI Governance 101
 
-This article has been prepared in PDF format. Please contact us for the full content.
+### Risk, Transparency, and the Balance of Responsibility
 
-AI governance is a critical discipline that enables organizations to develop and use AI systems in a responsible, transparent, and regulation-compliant manner. The EU AI Act and similar global regulations are increasing the requirements in this field every day.
+Artificial intelligence is no longer solely the domain of technical teams or innovation units. As AI becomes part of everyday work life in the corporate world, the need for it to be controlled and audited by a governing authority has become essential. Today, while businesses use AI for productivity gains, customer experience, decision support mechanisms, and new business models, they also face challenges around trust, accountability, data quality, ethical principles, and regulatory compliance. At this point, AI governance is not just a control mechanism — it becomes the fundamental framework for sustainable and trustworthy use.
 
-### Key Topics
+### Why Is AI Governance Important?
 
-- AI risk classification and management
-- Model transparency and explainability
-- Data privacy and ethical usage policies
-- EU AI Act compliance requirements
-- Creation of corporate AI policies and procedures
+AI systems differ from classical software in that they learn from data, produce variable outcomes depending on context, and can sometimes make decisions that are difficult to explain. Therefore, the need for governance is not merely a technical requirement. Questions such as what data a model was trained on, how fair its outputs are, what risk level it is assessed at, and how human oversight is positioned have moved to the center of every organization's agenda that uses AI. Especially in high-impact use scenarios, a lack of governance can lead to both reputational damage and legal consequences.
 
-> For the full article, please contact us at info@bgts.com.tr.`,
+### Core Principles of a Strong AI Governance Approach
+
+- **Transparency:** The purpose for which an AI system is used, how it works, and how its outputs should be interpreted should be as open as possible.
+- **Accountability:** Clear roles and responsibilities within the organization should be defined for outcomes arising from AI systems.
+- **Human oversight:** In critical decision areas, final evaluation should not be left entirely to automation.
+- **Fairness and prevention of discrimination:** Training data and model outputs should be regularly reviewed against bias risks.
+- **Privacy and data governance:** The quality, source, access rights, and regulatory compliance of data used should be managed together.
+- **Security and resilience:** Models must be protected against misuse, manipulation, and unexpected error scenarios.
+
+### How Are Regulations Shaping This Field?
+
+Globally, AI governance is evolving from ethical principles into a field supported by concrete legislation and standards.
+
+**The European Union's AI Act approach** classifies AI applications by risk level, imposing stricter obligations in high-risk use areas. Expected to be enacted in 2026, this approach makes transparency, record-keeping, human oversight, risk management, and conformity processes part of corporate responsibility.
+
+**ISO 42001**, published in 2023, is the first international standard for AI management systems. Inspired by the ISO 27001 information security management standard, it defines what organizations must do for AI governance and enables them to demonstrate compliance through certification.
+
+### Where Should Organizations Start with AI Governance?
+
+- Create an inventory of AI applications
+- Include each use scenario in risk analysis based on its impact and criticality
+- Regularly test data quality, model performance, and potential biases
+- Establish governance committees involving legal, information security, data management, and business units
+- Provide AI literacy and responsible use training to employees
+- Define human approval and appeal mechanisms in critical decision processes
+
+### Conclusion
+
+In the coming period, the key differentiator for organizations seeking to generate value from AI will not be simply using more advanced models. The real competitive advantage will come from managing these technologies within a reliable, explainable, traceable, and responsible framework. AI governance should therefore be viewed not as an obstacle, but as a strategic management layer that sustains innovation and builds long-term value and trust. When properly designed, it both facilitates regulatory compliance and builds trust among employees, customers, and stakeholders.`,
   },
   {
     id: "akilli-otomasyon",
@@ -149,8 +173,8 @@ AI governance is a critical discipline that enables organizations to develop and
     author: "Sinan Demirci",
     excerpt:
       "In the managed services ecosystem, AI tools exist not to replace the technical team but to free them from the shackles of routine. Automation of repetitive requests, focus on analytical tasks, and 24/7 uninterrupted customer experience.",
-    coverImage: "/images/articles/default-article.jpg",
-    date: "2025-01-15",
+    coverImage: "/images/articles/akilli-otomasyon.png",
+    date: "2025-02-05",
     category: "Automation",
     readTime: 4,
     body: `## How Smart Automation Liberates the Technical Team
@@ -267,8 +291,8 @@ Because the question is no longer: "Is this code secure?" The question now is: *
     author: "Sinan Demirci",
     excerpt:
       "Having green SLA success rates is not enough for an IT service to be considered successful. We explore data analytics, automation, and gamification strategies to transform from a reactive supplier to a proactive business partner.",
-    coverImage: "/images/articles/default-article.jpg",
-    date: "2025-01-15",
+    coverImage: "/images/articles/sla.png",
+    date: "2025-02-15",
     category: "Infrastructure",
     readTime: 3,
     body: `## Beyond SLA Numbers: Delivering "Value-Added" Services to Customers

@@ -5,8 +5,10 @@ import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import ReactMarkdown, { Components } from "react-markdown"
-import { X, Calendar, Clock, User } from "lucide-react"
+import { X, Calendar, Clock } from "lucide-react"
 import type { Article } from "@/data/articles.tr"
+import { getAuthorAvatar, hasAuthorPortrait } from "@/lib/articles"
+import { cn } from "@/lib/utils"
 
 /* ── Category badge colors (mirrors ArticlesClient) ── */
 const CATEGORY_COLORS: Record<string, string> = {
@@ -291,7 +293,18 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                                 {/* Meta row */}
                                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-500 sm:gap-x-5 sm:gap-y-2 sm:text-sm">
                                     <span className="flex items-center gap-1.5">
-                                        <User className="w-4 h-4 text-slate-400" />
+                                        <span className={cn(
+                                            "relative h-7 w-7 shrink-0 overflow-hidden rounded-full border border-slate-200",
+                                            !hasAuthorPortrait(article.author) && "bg-white"
+                                        )}>
+                                            <Image
+                                                src={getAuthorAvatar(article.author)}
+                                                alt={article.author}
+                                                fill
+                                                className={hasAuthorPortrait(article.author) ? "object-cover" : "object-contain p-0.5"}
+                                                sizes="28px"
+                                            />
+                                        </span>
                                         <span className="font-semibold text-slate-700">
                                             {article.author}
                                         </span>

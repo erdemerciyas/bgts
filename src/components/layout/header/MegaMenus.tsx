@@ -20,23 +20,7 @@ import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 import { ARTICLES_TR } from "@/data/articles.tr"
 import { ARTICLES_EN } from "@/data/articles.en"
-
-/** Male-only pravatar portraits (img ids known to be men). */
-const AUTHOR_AVATARS: Record<string, string> = {
-    "Alper Önsoy": "https://i.pravatar.cc/160?img=12",
-    "Erdoğan Bilici": "https://i.pravatar.cc/160?img=33",
-    "Sinan Demirci": "https://i.pravatar.cc/160?img=53",
-}
-
-const MALE_AVATAR_FALLBACKS = [11, 12, 13, 14, 15, 33, 51, 52, 53, 54, 56, 57, 58, 59, 60] as const
-
-function getAuthorAvatar(author: string) {
-    if (AUTHOR_AVATARS[author]) return AUTHOR_AVATARS[author]
-    let hash = 0
-    for (let i = 0; i < author.length; i++) hash = (hash + author.charCodeAt(i) * (i + 1)) % 997
-    const img = MALE_AVATAR_FALLBACKS[hash % MALE_AVATAR_FALLBACKS.length]
-    return `https://i.pravatar.cc/160?img=${img}`
-}
+import { getRandomFromLatestArticles, getAuthorAvatar, hasAuthorPortrait } from "@/lib/articles"
 
 const BackgroundPattern = () => (
     <div className="absolute -bottom-24 -right-24 w-64 h-64 opacity-[0.03] pointer-events-none z-0 rotate-12 text-slate-900">
@@ -318,11 +302,9 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
 export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
     const lang = useLang()
-    const latestArticle = useMemo(() => {
+    const featuredArticle = useMemo(() => {
         const articles = lang === "eng" ? ARTICLES_EN : ARTICLES_TR
-        return [...articles].sort(
-            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-        )[0]
+        return getRandomFromLatestArticles(articles, 5)
     }, [lang])
 
     return (
@@ -403,10 +385,13 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
                 </Link>
 
-                {/* CARD 3: Analyses / Articles */}
-                <Link href={lh(lang, '/resources/analyses')} onClick={closeMenu}
-                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-5 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]">
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light"></div>
+                {/* CARD 3: Analyses — 1 random pick from latest 5 */}
+                <Link
+                    href={featuredArticle ? `${lh(lang, '/resources/analyses')}?article=${featuredArticle.id}` : lh(lang, '/resources/analyses')}
+                    onClick={closeMenu}
+                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-5 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
+                >
+                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light" />
                     <motion.div
                         className="relative z-10 flex flex-col justify-between h-full min-h-0"
                         animate="initial"
@@ -424,13 +409,16 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                                         <FileText className="h-3 w-3" />
                                         {t(lang, "Analizler", "Analyses")}
                                     </span>
-                                    {latestArticle && (
-                                        <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-white/40 shadow-md ring-2 ring-white/10">
+                                    {featuredArticle && (
+                                        <div className={cn(
+                                            "relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-white/40 shadow-md ring-2 ring-white/10",
+                                            !hasAuthorPortrait(featuredArticle.author) && "bg-white"
+                                        )}>
                                             <Image
-                                                src={getAuthorAvatar(latestArticle.author)}
-                                                alt={latestArticle.author}
+                                                src={getAuthorAvatar(featuredArticle.author)}
+                                                alt={featuredArticle.author}
                                                 fill
-                                                className="object-cover"
+                                                className={hasAuthorPortrait(featuredArticle.author) ? "object-cover" : "object-contain p-1.5"}
                                                 sizes="44px"
                                             />
                                         </div>
@@ -441,9 +429,14 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                                 <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-blue-100/80">
                                     {t(lang, "Son Makale", "Latest Article")}
                                 </p>
-                                <h4 className="font-bold text-white text-[15px] leading-snug line-clamp-3">
-                                    {latestArticle?.title ?? t(lang, "Analizler", "Analyses")}
+                                <h4 className="font-bold text-white text-[15px] leading-snug line-clamp-2">
+                                    {featuredArticle?.title ?? t(lang, "Analizler", "Analyses")}
                                 </h4>
+                                {featuredArticle?.excerpt && (
+                                    <p className="mt-2 text-blue-100/85 text-xs leading-relaxed line-clamp-2">
+                                        {featuredArticle.excerpt}
+                                    </p>
+                                )}
                             </motion.div>
                         </motion.div>
                         <motion.div
@@ -453,9 +446,9 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                                 hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const, delay: 0.3 } }
                             }}
                         >
-                            {latestArticle && (
+                            {featuredArticle && (
                                 <span className="truncate text-[11px] font-semibold text-blue-100/90">
-                                    {latestArticle.author}
+                                    {featuredArticle.author}
                                 </span>
                             )}
                             <span className="inline-flex shrink-0 items-center text-xs font-bold text-white">
