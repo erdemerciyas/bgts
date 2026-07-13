@@ -106,6 +106,7 @@ export async function generateMetadata({
       ],
       apple: "/icon.png",
     },
+    manifest: "/manifest.webmanifest",
     ...(gscVerification
       ? { verification: { google: gscVerification } }
       : {}),

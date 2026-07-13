@@ -10,6 +10,39 @@ const schema = z.object({
   email: z.string().email().max(254),
 });
 
+function classifyConfigError(error: unknown): NextResponse | null {
+  const msg = error instanceof Error ? error.message : String(error);
+
+  if (msg.includes("LEAGUE_SECRET")) {
+    return NextResponse.json(
+      {
+        message:
+          "Sunucu yapılandırması eksik: Vercel Environment Variables içine LEAGUE_SECRET ekleyin (min 16 karakter).",
+        code: "LEAGUE_SECRET_MISSING",
+      },
+      { status: 503 }
+    );
+  }
+
+  if (
+    msg.includes("Gmail yapılandırması eksik") ||
+    msg.includes("GMAIL_") ||
+    msg.includes("invalid_grant") ||
+    msg.includes("unauthorized_client")
+  ) {
+    return NextResponse.json(
+      {
+        message:
+          "E-posta servisi yapılandırması eksik veya geçersiz. Vercel'de GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, GMAIL_REFRESH_TOKEN ve GMAIL_USER değişkenlerini kontrol edin.",
+        code: "GMAIL_CONFIG_ERROR",
+      },
+      { status: 503 }
+    );
+  }
+
+  return null;
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -31,13 +64,35 @@ export async function POST(req: Request) {
       );
     }
 
-    const { code, token } = createOtpToken(name, email);
+    let code: string;
+    let token: string;
+    try {
+      ({ code, token } = createOtpToken(name, email));
+    } catch (error) {
+      const classified = classifyConfigError(error);
+      if (classified) return classified;
+      throw error;
+    }
 
-    await sendEmail({
-      to: email,
-      subject: "BGTS League — Doğrulama Kodu",
-      html: buildLeagueOtpEmailHtml(name, code),
-    });
+    try {
+      await sendEmail({
+        to: email,
+        subject: "BGTS League — Doğrulama Kodu",
+        html: buildLeagueOtpEmailHtml(name, code),
+      });
+    } catch (error) {
+      const classified = classifyConfigError(error);
+      if (classified) return classified;
+      console.error("League send-code Gmail error:", error);
+      return NextResponse.json(
+        {
+          message:
+            "Doğrulama kodu gönderilemedi. Gmail API yetkilendirmesini kontrol edin.",
+          code: "GMAIL_SEND_FAILED",
+        },
+        { status: 502 }
+      );
+    }
 
     const res = NextResponse.json({
       message: "Doğrulama kodu e-posta adresine gönderildi.",
@@ -47,6 +102,8 @@ export async function POST(req: Request) {
     return res;
   } catch (error) {
     console.error("League send-code error:", error);
+    const classified = classifyConfigError(error);
+    if (classified) return classified;
     return NextResponse.json(
       { message: "Kod gönderilirken bir hata oluştu. Lütfen tekrar deneyin." },
       { status: 500 }

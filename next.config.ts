@@ -25,6 +25,14 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  async rewrites() {
+    return [
+      // Locale altından istenen manifest kök dosyaya yönlendirilir
+      { source: "/tr/manifest.webmanifest", destination: "/manifest.webmanifest" },
+      { source: "/eng/manifest.webmanifest", destination: "/manifest.webmanifest" },
+      { source: "/tr/en/manifest.webmanifest", destination: "/manifest.webmanifest" },
+    ];
+  },
   async headers() {
     return [
       {
@@ -52,7 +60,15 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.unsplash.com https://i.pravatar.cc https://*.vidyard.com; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://api.groq.com; frame-src 'self' https://*.vidyard.com https://www.youtube.com https://youtube.com;"
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://vercel.live",
+              "style-src 'self' 'unsafe-inline' https://vercel.live",
+              "img-src 'self' data: blob: https://*.unsplash.com https://i.pravatar.cc https://*.vidyard.com https://vercel.live https://*.vercel.com",
+              "font-src 'self' data:",
+              "connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://api.groq.com https://vercel.live wss://*.vercel.live",
+              "frame-src 'self' https://*.vidyard.com https://www.youtube.com https://youtube.com https://vercel.live",
+            ].join("; ")
           },
           {
             key: 'Permissions-Policy',

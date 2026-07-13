@@ -3,7 +3,8 @@ import { htmlLang, i18n, type Locale } from "@/i18n-config";
 import { getLocalePrefix } from "@/lib/base-path";
 import { getLocalizedPath } from "@/lib/routes";
 
-export const SITE_URL = "https://bgts.com.tr";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://bgts.com.tr";
 
 /**
  * Returns the canonical URL plus hreflang alternates for a given path.
