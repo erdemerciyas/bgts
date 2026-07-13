@@ -387,7 +387,7 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
                 {/* CARD 3: Analyses — 1 random pick from latest 5 */}
                 <Link
-                    href={featuredArticle ? `${lh(lang, '/resources/analyses')}?article=${featuredArticle.id}` : lh(lang, '/resources/analyses')}
+                    href={lh(lang, '/resources/analyses')}
                     onClick={closeMenu}
                     className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-5 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
                 >
