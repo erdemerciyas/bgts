@@ -1,6 +1,7 @@
 export const STYLES = {
     // Container
     megaMenuWrapper: "absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] max-w-[96vw] bg-white shadow-2xl rounded-b-xl border-t border-gray-100 ring-1 ring-black/5 overflow-hidden z-50 mega-menu-scale",
+    megaMenuWrapperAnalyses: "absolute top-0 left-1/2 -translate-x-1/2 w-[960px] max-w-[90vw] bg-white shadow-2xl rounded-b-xl border-t border-gray-100 ring-1 ring-black/5 overflow-hidden z-50 mega-menu-scale",
 
     // Headers (Column Headers) - TRACKING + UPPERCASE
     columnHeader: "font-extrabold text-slate-900 text-[12px] tracking-[0.2em] uppercase mb-6",
@@ -34,5 +35,6 @@ export const NAV_ITEMS = [
     { name: "ÜRÜNLER", href: "#", id: "products" },
     { name: "BİLGİ MERKEZİ", href: "#", id: "resources" },
     { name: "YERİNİ AL", href: "/social-contribution", id: "careers" },
+    { name: "ANALİZLER", href: "/resources/analyses", id: "analyses" },
     { name: "HAKKIMIZDA", href: "/about", id: "about" },
 ]

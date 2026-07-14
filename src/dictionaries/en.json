@@ -6,6 +6,7 @@
       "products": "PRODUCTS",
       "resources": "RESOURCES",
       "careers": "CAREERS",
+      "analyses": "ANALYSES",
       "about": "ABOUT US"
     }
   },
@@ -1563,6 +1564,11 @@
       "careerPaths": "Career Paths",
       "learning": "Training & Development",
       "social": "Sustainable Value Program"
+    },
+    "analyses": {
+      "name": "Analyses",
+      "heading": "Latest Articles",
+      "allArticles": "All Analyses"
     },
     "quickLinks": {
       "about": "About Us",

@@ -25,6 +25,7 @@ const MegaMenus = dynamic(() => import('./header/MegaMenus').then(mod => ({
             products: mod.ProductsMenu,
             resources: mod.ResourcesMenu,
             careers: mod.CareersMenu,
+            analyses: mod.AnalysesMenu,
         }
         const MenuComponent = menus[type]
         return MenuComponent ? <MenuComponent closeMenu={closeMenu} /> : null
@@ -48,6 +49,7 @@ type MobileNavDict = {
     products: Record<string, string>
     resources: Record<string, string>
     careers: Record<string, string>
+    analyses: Record<string, string>
     quickLinks: Record<string, string>
 }
 
@@ -100,7 +102,7 @@ export default function Header({ dict, mobileNavDict }: { dict?: { nav: Record<s
 
                     <nav className="hidden lg:flex items-center h-full gap-4 xl:gap-6 flex-1 justify-start" role="navigation" aria-label="Ana navigasyon">
                         {translatedNavItems.map((item) => {
-                            const hasMegaMenu = ["services", "industries", "products", /* "talent", */ "resources", "careers"].includes(item.id || "");
+                            const hasMegaMenu = ["services", "industries", "products", /* "talent", */ "resources", "careers", "analyses"].includes(item.id || "");
                             return (
                             <div
                                 key={item.name}

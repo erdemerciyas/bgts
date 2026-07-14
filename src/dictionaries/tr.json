@@ -6,6 +6,7 @@
       "products": "ÜRÜNLER",
       "resources": "BİLGİ MERKEZİ",
       "careers": "YERİNİ AL",
+      "analyses": "ANALİZLER",
       "about": "HAKKIMIZDA"
     }
   },
@@ -1563,6 +1564,11 @@
       "careerPaths": "Kariyer Yolları",
       "learning": "Eğitim ve Gelişim",
       "social": "Sürdürülebilir Değer Programı"
+    },
+    "analyses": {
+      "name": "Analizler",
+      "heading": "Son Makaleler",
+      "allArticles": "Tüm Analizler"
     },
     "quickLinks": {
       "about": "Hakkımızda",

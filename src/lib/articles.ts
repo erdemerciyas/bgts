@@ -86,3 +86,18 @@ export function getRandomFromLatestArticles(
   if (latest.length === 0) return null
   return latest[Math.floor(Math.random() * latest.length)]
 }
+
+export function formatArticleDate(
+  date: string,
+  lang: string,
+  style: "short" | "long" = "long"
+): string {
+  const options: Intl.DateTimeFormatOptions =
+    style === "short"
+      ? { year: "numeric", month: "short", day: "numeric" }
+      : { year: "numeric", month: "long", day: "numeric" }
+  return new Date(date).toLocaleDateString(
+    lang === "eng" ? "en-US" : "tr-TR",
+    options
+  )
+}

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import {
     Server, Activity, Database, Code, Cpu, Globe, Shield, ShoppingBag, Mic,
-    CheckCircle2, ArrowRight, Briefcase, FileText,
+    CheckCircle2, ArrowRight, Briefcase, FileText, Linkedin,
     Bot, Landmark, TrendingUp, Radio, ShieldAlert, RefreshCw, Layers,
     ArrowUpRight, BarChart3, Quote,
     GraduationCap, Heart, Rocket, Smile
@@ -20,7 +20,8 @@ import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 import { ARTICLES_TR } from "@/data/articles.tr"
 import { ARTICLES_EN } from "@/data/articles.en"
-import { getRandomFromLatestArticles, getAuthorAvatar, hasAuthorPortrait } from "@/lib/articles"
+import { getLatestArticles, formatArticleDate } from "@/lib/articles"
+import type { Article, ArticleCardTheme } from "@/data/articles.tr"
 
 const BackgroundPattern = () => (
     <div className="absolute -bottom-24 -right-24 w-64 h-64 opacity-[0.03] pointer-events-none z-0 rotate-12 text-slate-900">
@@ -302,10 +303,6 @@ export const ProductsMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
 export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
     const lang = useLang()
-    const featuredArticle = useMemo(() => {
-        const articles = lang === "eng" ? ARTICLES_EN : ARTICLES_TR
-        return getRandomFromLatestArticles(articles, 5)
-    }, [lang])
 
     return (
         <motion.div
@@ -385,15 +382,12 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
                 </Link>
 
-                {/* CARD 3: Analyses — 1 random pick from latest 5 */}
-                <Link
-                    href={lh(lang, '/resources/analyses')}
-                    onClick={closeMenu}
-                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-5 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
-                >
+                {/* CARD 3: LinkedIn */}
+                <Link href="https://www.linkedin.com/company/bilgeadam/" target="_blank" onClick={closeMenu}
+                    className="col-span-1 row-span-1 relative group overflow-hidden rounded-3xl bg-[#0077b5] p-6 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]">
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light" />
                     <motion.div
-                        className="relative z-10 flex flex-col justify-between h-full min-h-0"
+                        className="relative z-10 flex flex-col justify-between h-full"
                         animate="initial"
                         whileHover="hover"
                         initial={false}
@@ -404,56 +398,22 @@ export const ResourcesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             }}
                         >
                             <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
-                                <div className="mb-3 flex items-center justify-between gap-2">
-                                    <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white/90 border border-white/20">
-                                        <FileText className="h-3 w-3" />
-                                        {t(lang, "Analizler", "Analyses")}
-                                    </span>
-                                    {featuredArticle && (
-                                        <div className={cn(
-                                            "relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-white/40 shadow-md ring-2 ring-white/10",
-                                            !hasAuthorPortrait(featuredArticle.author) && "bg-white"
-                                        )}>
-                                            <Image
-                                                src={getAuthorAvatar(featuredArticle.author)}
-                                                alt={featuredArticle.author}
-                                                fill
-                                                className={hasAuthorPortrait(featuredArticle.author) ? "object-cover" : "object-contain p-1.5"}
-                                                sizes="44px"
-                                            />
-                                        </div>
-                                    )}
-                                </div>
+                                <Linkedin className="w-12 h-12 text-white mb-3" />
                             </motion.div>
                             <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
-                                <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-blue-100/80">
-                                    {t(lang, "Son Makale", "Latest Article")}
-                                </p>
-                                <h4 className="font-bold text-white text-[15px] leading-snug line-clamp-2">
-                                    {featuredArticle?.title ?? t(lang, "Analizler", "Analyses")}
-                                </h4>
-                                {featuredArticle?.excerpt && (
-                                    <p className="mt-2 text-blue-100/85 text-xs leading-relaxed line-clamp-2">
-                                        {featuredArticle.excerpt}
-                                    </p>
-                                )}
+                                <h4 className="font-bold text-white text-lg">{t(lang, "Bizi Takip Edin", "Follow Us")}</h4>
+                            </motion.div>
+                            <motion.div variants={{ initial: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const } } }}>
+                                <p className="text-blue-100 text-xs mt-1 mb-4">{t(lang, "Teknoloji, etkinlikler ve güncel gelişmelerden haberdar olun.", "Stay informed about technology, events and current developments.")}</p>
                             </motion.div>
                         </motion.div>
                         <motion.div
-                            className="mt-3 flex items-center justify-between gap-2"
                             variants={{
                                 initial: { y: 0 },
                                 hover: { y: -4, transition: { duration: 0.3, ease: "easeOut" as const, delay: 0.3 } }
                             }}
                         >
-                            {featuredArticle && (
-                                <span className="truncate text-[11px] font-semibold text-blue-100/90">
-                                    {featuredArticle.author}
-                                </span>
-                            )}
-                            <span className="inline-flex shrink-0 items-center text-xs font-bold text-white">
-                                {t(lang, "İncele", "Explore")} <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                            </span>
+                            <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold group-hover:bg-white group-hover:text-[#0077b5] transition-colors">@bgts</span>
                         </motion.div>
                     </motion.div>
                 </Link>
@@ -647,6 +607,168 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         </div>
                     </div>
                 </Link>
+
+            </div>
+        </motion.div>
+    )
+}
+
+const ARTICLE_MENU_THEMES: Record<
+    ArticleCardTheme,
+    { bg: string; border: string; iconBg: string; iconColor: string; arrowColor: string }
+> = {
+    blue: {
+        bg: "from-blue-50 to-sky-50",
+        border: "border-blue-100/80",
+        iconBg: "from-blue-500 to-sky-600",
+        iconColor: "text-blue-300 group-hover:text-blue-600",
+        arrowColor: "text-blue-300 group-hover:text-blue-600",
+    },
+    green: {
+        bg: "from-emerald-50 to-teal-50",
+        border: "border-emerald-100/80",
+        iconBg: "from-emerald-500 to-teal-600",
+        iconColor: "text-emerald-300 group-hover:text-emerald-600",
+        arrowColor: "text-emerald-300 group-hover:text-emerald-600",
+    },
+    orange: {
+        bg: "from-amber-50 to-orange-50",
+        border: "border-amber-100/80",
+        iconBg: "from-amber-500 to-orange-600",
+        iconColor: "text-amber-300 group-hover:text-amber-600",
+        arrowColor: "text-amber-300 group-hover:text-amber-600",
+    },
+    violet: {
+        bg: "from-violet-50 to-indigo-50",
+        border: "border-violet-100/80",
+        iconBg: "from-violet-500 to-indigo-600",
+        iconColor: "text-violet-300 group-hover:text-violet-600",
+        arrowColor: "text-violet-300 group-hover:text-violet-600",
+    },
+    rose: {
+        bg: "from-rose-50 to-pink-50",
+        border: "border-rose-100/80",
+        iconBg: "from-rose-500 to-pink-600",
+        iconColor: "text-rose-300 group-hover:text-rose-600",
+        arrowColor: "text-rose-300 group-hover:text-rose-600",
+    },
+    cyan: {
+        bg: "from-cyan-50 to-sky-50",
+        border: "border-cyan-100/80",
+        iconBg: "from-cyan-500 to-sky-600",
+        iconColor: "text-cyan-300 group-hover:text-cyan-600",
+        arrowColor: "text-cyan-300 group-hover:text-cyan-600",
+    },
+}
+
+function articleMenuHref(lang: string, articleId: string) {
+    return `${lh(lang, "/resources/analyses")}?article=${articleId}`
+}
+
+export const AnalysesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
+    const lang = useLang()
+    const articles = lang === "eng" ? ARTICLES_EN : ARTICLES_TR
+    const latestArticles = useMemo(() => getLatestArticles(articles, 5), [articles])
+    const featuredArticle = latestArticles[0] ?? null
+    const quoteArticles = latestArticles.slice(1, 5)
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 15, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+            className={cn(STYLES.megaMenuWrapperAnalyses, "p-5")}
+            role="menu"
+            aria-label={t(lang, "Analizler menüsü", "Analyses menu")}
+        >
+            <div className="grid grid-cols-5 gap-4 h-[400px]">
+
+                {/* CARD 1: Featured latest article */}
+                {featuredArticle ? (
+                    <Link
+                        href={articleMenuHref(lang, featuredArticle.id)}
+                        onClick={closeMenu}
+                        className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg flex flex-col"
+                    >
+                        <div className="relative h-[52%] shrink-0 overflow-hidden">
+                            <Image
+                                src={featuredArticle.coverImage}
+                                alt={featuredArticle.title}
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                sizes="480px"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent" />
+                        </div>
+
+                        <div className="relative flex flex-1 flex-col justify-between p-6 z-10 bg-slate-900">
+                            <div className="flex items-center gap-2">
+                                <div className="w-7 h-7 rounded-full bg-white/15 backdrop-blur flex items-center justify-center">
+                                    <FileText className="w-3.5 h-3.5 text-white" />
+                                </div>
+                                <span className="text-[10px] font-black text-white/70 tracking-[0.2em] uppercase">
+                                    {t(lang, "Son Makale", "Latest Article")}
+                                </span>
+                            </div>
+
+                            <div>
+                                <h3 className="text-lg font-black text-white mb-2 leading-snug line-clamp-2">
+                                    {featuredArticle.title}
+                                </h3>
+                                <p className="text-white/60 text-xs mb-4">
+                                    {formatArticleDate(featuredArticle.date, lang, "long")}
+                                </p>
+                                <div className="inline-flex items-center gap-2 bg-white text-slate-900 pl-4 pr-3 py-2 rounded-full font-bold text-xs hover:bg-blue-50 transition-all group-hover:gap-3">
+                                    {t(lang, "Makaleyi Oku", "Read Article")} <ArrowRight className="w-3.5 h-3.5" />
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                ) : (
+                    <Link
+                        href={lh(lang, "/resources/analyses")}
+                        onClick={closeMenu}
+                        className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg flex items-center justify-center p-7"
+                    >
+                        <h3 className="text-2xl font-black text-white">{t(lang, "Analizler", "Analyses")}</h3>
+                    </Link>
+                )}
+
+                {/* MIDDLE COLUMN - 4 quote-style article cards */}
+                <div className="col-span-3 flex flex-col gap-3">
+                    {quoteArticles.map((article: Article) => {
+                        const theme = ARTICLE_MENU_THEMES[article.cardTheme]
+                        return (
+                            <Link
+                                key={article.id}
+                                href={articleMenuHref(lang, article.id)}
+                                onClick={closeMenu}
+                                className={cn(
+                                    "flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br border p-4 flex items-start gap-4 hover:shadow-lg transition-all hover:-translate-y-0.5",
+                                    theme.bg,
+                                    theme.border
+                                )}
+                            >
+                                <div className={cn(
+                                    "w-10 h-10 rounded-2xl bg-gradient-to-br text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-md",
+                                    theme.iconBg
+                                )}>
+                                    <Quote className="w-4 h-4 fill-current" />
+                                </div>
+                                <div className="flex-1 min-w-0 flex flex-col h-full pr-16">
+                                    <p className="text-slate-700 text-[13px] font-semibold leading-snug line-clamp-2 italic">
+                                        {article.title}
+                                    </p>
+                                    <span className="absolute bottom-4 right-4 text-[10px] font-semibold text-slate-400">
+                                        {formatArticleDate(article.date, lang, "short")}
+                                    </span>
+                                </div>
+                                <ArrowUpRight className={cn("absolute top-4 right-4 w-4 h-4 transition-colors shrink-0", theme.arrowColor)} />
+                            </Link>
+                        )
+                    })}
+                </div>
 
             </div>
         </motion.div>

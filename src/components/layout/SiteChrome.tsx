@@ -8,7 +8,7 @@ type Props = {
 };
 
 function isLeaguePath(pathname: string): boolean {
-  return /\/lig(?:\/|$)/.test(pathname);
+  return /\/league(?:\/|$)/.test(pathname);
 }
 
 export default async function SiteChrome({

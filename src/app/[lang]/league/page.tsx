@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { Chakra_Petch } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import LeagueClient from "./LeagueClient";
 
+const leagueDisplay = Chakra_Petch({
+  subsets: ["latin", "latin-ext"],
+  weight: ["600", "700"],
+  variable: "--font-league-display",
+});
+
 export const metadata: Metadata = {
-  title: "BGTS Lig",
+  title: "BGTS LİG",
   description: "Şirketi En İyi Kim Tanıyor? Personel bilgi yarışması.",
   robots: {
     index: false,
@@ -19,7 +26,9 @@ export default async function LeaguePage({
 }) {
   const { lang } = await params;
   return (
-    <div className={`${GeistSans.variable} ${GeistSans.className}`}>
+    <div
+      className={`${GeistSans.variable} ${GeistSans.className} ${leagueDisplay.variable}`}
+    >
       <LeagueClient lang={lang} />
     </div>
   );

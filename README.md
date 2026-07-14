@@ -180,7 +180,8 @@ bgts-web/
 │   ├── app/                    # Next.js App Router
 │   │   ├── api/
 │   │   │   ├── chat/           # AI chatbot endpoint (Edge Runtime)
-│   │   │   └── contact/        # İletişim formu e-posta API
+│   │   │   ├── contact/        # İletişim formu e-posta API
+│   │   │   └── league/         # BGTS League API (OTP, soru, tahmin, skor)
 │   │   │
 │   │   ├── [lang]/             # 🌐 i18n dinamik rota segmenti (tr/eng)
 │   │   │   ├── about/          # Hakkımızda (+ AboutStatsSection, AboutValuesSection, AboutPartnersSection, AboutCertificationsSection, LocationsMap)
@@ -190,6 +191,12 @@ bgts-web/
 │   │   │   ├── learning/       # Eğitim ve Gelişim
 │   │   │   ├── partnerships/   # İş Ortakları
 │   │   │   ├── social-contribution/ # Sürdürülebilir Değer / Yerini Al
+│   │   │   ├── league/             # BGTS League (personel yarışması — gizli)
+│   │   │   │   ├── LeagueClient.tsx    # Ekran akışı, gaming backdrop, EA-style başlık
+│   │   │   │   ├── CursorParticles.tsx # Yumuşak cursor aura (canvas)
+│   │   │   │   ├── PerspectiveStage.tsx # Fare ile hafif 3D perspektif tilt
+│   │   │   │   ├── league.css          # League özel tema ve animasyonlar
+│   │   │   │   └── page.tsx
 │   │   │   ├── meetsense-viewer/    # MeetSense Demo Görüntüleyici
 │   │   │   │
 │   │   │   ├── services/
@@ -571,7 +578,7 @@ Plesk'te `NEXT_PUBLIC_*` değişkenleri **build öncesi** ayarlanmalıdır.
 | `/products/docmind` | `/urunler/docmind` |
 | `/products/ai-hiring-assistant` | `/urunler/yapay-zeka-ise-alim-asistani` |
 | `/products/cv-converter` | `/urunler/cv-donusturucu` |
-| `/league` | `/league` (gizli personel yarışması; nav/sitemap'te yok) |
+| `/league` | `/league` (gizli personel yarışması; nav/sitemap'te yok; eski `/lig` → `/league` 301) |
 | `/career-paths` | `/kariyer-yollari` |
 | `/culture` | `/calisma-kulturu` |
 | `/learning` | `/egitim-ve-gelisim` |
@@ -729,14 +736,20 @@ Personel bilgi yarışması endpoint'leri. Nav/sitemap'te yer almaz; erişim giz
 
 Personel için dahili bilgi yarışması (Phase 1 — veritabanı yok).
 
-- **URL:** `/tr/league` (nav, footer, arama ve sitemap'te **yok**; `noindex`)
+- **URL:** `/tr/league` ve `/tr/en/league` (nav, footer, arama ve sitemap'te **yok**; `noindex`)
+- **Legacy redirect:** Eski `/tr/lig` ve `/tr/en/lig` adresleri kalıcı olarak `/league` rotasına yönlendirilir (`src/lib/routes.ts`)
 - **Erişim:** Yalnızca `@bgts.com` e-posta + Gmail OTP doğrulama
 - **Akış:** İK duyurusu → kayıt → OTP → haftalık tahmin → sonuç/skor → lig tablosu
 - **Kalıcılık:** OTP/session imzalı httpOnly cookie; tahminler `localStorage`
 - **Demo:** `LEAGUE_DEMO=true` iken tahmin güncellenince skor ve doğru cevap hemen hesaplanır
-- **UI:** Cortex login dilinde koyu canvas + sky accent; görsel sezon ödül vitrini
+- **UI / tema:** Açık kurumsal-gaming atmosferi — pastel mavi zemin, frosted glass header, Chakra Petch display font
+- **Animasyonlar:** EA Sports tarzı `BGTS LİG` başlık girişi (Framer Motion); kartlarda HUD köşe bracket'leri ve spring hover
+- **3D deneme:** `PerspectiveStage` ile fareye bağlı hafif perspektif tilt; altta perspektif grid zemin (`league-grid-fx`)
+- **Cursor efekti:** `CursorParticles` — yoğun parçacık yerine yumuşak aurora izi, hafif bokeh ve tıklamada soft ripple (canvas)
+- **OTP e-posta:** Kurumsal beyaz kart şablonu (`src/lib/league/otp-email.ts`); konu: `BGTS LİG — Doğrulama Kodu`
 - **Config:** `src/data/league/season-2026.ts` (sorular, ödüller, skor kuralları)
 - **Chrome:** `/league` rotalarında site Header/Footer gizlenir (`SiteChrome` + middleware `x-pathname`)
+- **Erişilebilirlik:** `prefers-reduced-motion` açıkken 3D tilt, cursor aura ve arka plan animasyonları devre dışı
 
 ---
 
@@ -966,6 +979,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.48.0 | 2026-07 | **BGTS League UI revizyonu:** URL `/lig` → `/league` (legacy redirect); açık kurumsal-gaming tema; EA Sports tarzı `BGTS LİG` başlık animasyonu; `PerspectiveStage` ile hafif 3D perspektif; perspektif grid zemin; yumuşak cursor aura (`CursorParticles` canvas); kurumsal OTP e-posta şablonu; league sayfasında özel Chakra Petch font. |
 | v0.47.0 | 2026-07 | **Analizler sayfası revizyonu:** Görselsiz kart tasarımı (`ArticleCardHeader`, tema renkleri, subgrid hizalı ayırıcı); modalda kapak yerine aynı header sistemi; ayrı hero görseli (`analizler-hero.png`, slider `analizler.png` korundu); standart hero tipografisi; TR makale metinlerinde yazım/dil düzeltmeleri; `getAuthorProfile()` ve kart meta alanları (`cardTags`, `cardQuote`, `cardTheme`). |
 | v0.46.0 | 2026-07 | **Analizler entegrasyonu:** 7 makale tam içerik + kapak görselleri (AI Governance PDF dahil); yazar portreleri (`writer/`) ve BGTS logo fallback; `src/lib/articles.ts` (`getRandomFromLatestArticles`, `getAuthorAvatar`); Bilgi Merkezi nav'da son 5 makaleden rastgele 1 kayıt (başlık, özet, yazar fotoğrafı); `ArticleModal` yazar avatarı; TR URL `/bilgi-merkezi/analizler`. |
 | v0.45.0 | 2026-07 | **BGTS League (Phase 1):** Gizli `/tr/league` personel yarışması; `@bgts.com` OTP (Gmail); haftalık sorular; demo skoru; görsel ödül vitrini; Cortex-benzeri UI (Geist); Header/Footer gizleme hydration düzeltmesi (`SiteChrome` + `x-pathname`); `LEAGUE_SECRET` / `LEAGUE_DEMO` env. |

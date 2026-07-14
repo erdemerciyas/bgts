@@ -14,6 +14,8 @@ import {
   type LeagueLocalState,
 } from "@/lib/league/storage";
 import "./league.css";
+import { CursorParticles } from "./CursorParticles";
+import { PerspectiveStage } from "./PerspectiveStage";
 
 type Screen =
   | "announce"
@@ -65,6 +67,27 @@ type Bootstrap = {
 
 type BoardTab = "month" | "season";
 
+const BG_PARTICLES = [
+  { id: 1, type: "square", top: "7%", left: "6%", size: 10, delay: 0, duration: 16 },
+  { id: 2, type: "diamond", top: "14%", left: "78%", size: 12, delay: 1.2, duration: 18 },
+  { id: 3, type: "ring", top: "22%", left: "42%", size: 18, delay: 0.6, duration: 14 },
+  { id: 4, type: "square", top: "34%", left: "88%", size: 8, delay: 2.4, duration: 20 },
+  { id: 5, type: "diamond", top: "48%", left: "4%", size: 14, delay: 1.8, duration: 17 },
+  { id: 6, type: "ring", top: "56%", left: "62%", size: 22, delay: 0.3, duration: 22 },
+  { id: 7, type: "square", top: "68%", left: "24%", size: 9, delay: 3.1, duration: 15 },
+  { id: 8, type: "diamond", top: "72%", left: "90%", size: 11, delay: 1.5, duration: 19 },
+  { id: 9, type: "square", top: "82%", left: "48%", size: 10, delay: 2.8, duration: 16 },
+  { id: 10, type: "ring", top: "38%", left: "18%", size: 16, delay: 4, duration: 21 },
+  { id: 11, type: "diamond", top: "8%", left: "52%", size: 9, delay: 2.2, duration: 18 },
+  { id: 12, type: "square", top: "88%", left: "12%", size: 12, delay: 0.9, duration: 17 },
+  { id: 13, type: "square", top: "18%", left: "32%", size: 7, delay: 1.1, duration: 13 },
+  { id: 14, type: "ring", top: "62%", left: "38%", size: 14, delay: 2.6, duration: 19 },
+  { id: 15, type: "diamond", top: "44%", left: "72%", size: 10, delay: 0.4, duration: 15 },
+  { id: 16, type: "square", top: "52%", left: "14%", size: 11, delay: 3.4, duration: 18 },
+  { id: 17, type: "ring", top: "76%", left: "68%", size: 20, delay: 1.7, duration: 20 },
+  { id: 18, type: "diamond", top: "30%", left: "92%", size: 8, delay: 2.1, duration: 16 },
+] as const;
+
 function formatCountdown(targetIso: string, nowMs: number): string {
   const diff = new Date(targetIso).getTime() - nowMs;
   if (diff <= 0) return "Şimdi";
@@ -84,6 +107,44 @@ function parseGuessInput(raw: string): number | null {
   const n = Number.parseInt(cleaned, 10);
   if (!Number.isFinite(n) || n < 0 || n > 999999) return null;
   return n;
+}
+
+function GamingBackdrop({ reduceMotion }: { reduceMotion: boolean | null }) {
+  return (
+    <>
+      <div className="league-glow" aria-hidden />
+      <div className="league-vignette" aria-hidden />
+      <div className="league-noise" aria-hidden />
+      {!reduceMotion && (
+        <>
+          <div className="league-orbs" aria-hidden>
+            <span className="league-orb league-orb--1" />
+            <span className="league-orb league-orb--2" />
+            <span className="league-orb league-orb--3" />
+            <span className="league-orb league-orb--4" />
+          </div>
+          <div className="league-particles" aria-hidden>
+            {BG_PARTICLES.map((p) => (
+              <span
+                key={p.id}
+                className={`league-particle league-particle--${p.type}`}
+                style={{
+                  top: p.top,
+                  left: p.left,
+                  width: p.size,
+                  height: p.size,
+                  ["--delay" as string]: `${p.delay}s`,
+                  ["--dur" as string]: `${p.duration}s`,
+                }}
+              />
+            ))}
+          </div>
+        </>
+      )}
+      <GeometryBackdrop />
+      {!reduceMotion && <div className="league-grid-fx" aria-hidden />}
+    </>
+  );
 }
 
 function GeometryBackdrop() {
@@ -106,18 +167,20 @@ function GeometryBackdrop() {
 }
 
 function BgtsLockup({
-  subtitle = "Dahili Lig",
+  subtitle,
   size = "md",
+  lang = "tr",
 }: {
   subtitle?: string;
   size?: "md" | "lg";
+  lang?: string;
 }) {
   const width = size === "lg" ? 200 : 156;
   const height = size === "lg" ? 54 : 42;
   return (
     <div className={`league-lockup${size === "lg" ? " league-lockup--lg" : ""}`}>
       <Image
-        src="/BGTS_logo_white.png"
+        src="/BGTS_logo.png"
         alt="BGTS"
         width={width}
         height={height}
@@ -126,7 +189,7 @@ function BgtsLockup({
       />
       <div className="league-lockup-text">
         <div className="league-lockup-title">
-          BGTS <span>Lig</span>
+          BGTS <span>{lang === "eng" ? "LEAGUE" : "LİG"}</span>
         </div>
         {subtitle ? <div className="league-lockup-sub">{subtitle}</div> : null}
       </div>
@@ -134,11 +197,70 @@ function BgtsLockup({
   );
 }
 
-function BrandBar({ seasonLabel }: { seasonLabel: string }) {
+function LeaguePageHeader({ lang, screenKey }: { lang: string; screenKey: string }) {
+  const leagueLabel = lang === "eng" ? "LEAGUE" : "LİG";
+  const reduceMotion = useReducedMotion();
+
+  const eaSpring = {
+    type: "spring" as const,
+    stiffness: 280,
+    damping: 18,
+    mass: 0.9,
+  };
+
   return (
-    <div className="league-brand">
-      <BgtsLockup subtitle={seasonLabel} />
-    </div>
+    <motion.header
+      className="league-landing-header"
+      initial={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <div className="league-landing-header-inner">
+        <Image
+          src="/BGTS_logo.png"
+          alt="BGTS"
+          width={124}
+          height={33}
+          priority
+          className="league-landing-logo"
+        />
+        <div className="league-ea-title-wrap" key={screenKey}>
+          {!reduceMotion && (
+            <>
+              <span className="league-ea-swoosh" aria-hidden />
+              <span className="league-ea-flash" aria-hidden />
+            </>
+          )}
+          <h1 className="league-landing-title" aria-label={`BGTS ${leagueLabel}`}>
+            {reduceMotion ? (
+              <>
+                <span className="league-landing-brand">BGTS</span>
+                <span className="league-landing-accent">{leagueLabel}</span>
+              </>
+            ) : (
+              <>
+                <motion.span
+                  className="league-landing-brand league-ea-word"
+                  initial={{ scale: 3.2, opacity: 0, filter: "blur(10px)" }}
+                  animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+                  transition={{ ...eaSpring, delay: 0.08 }}
+                >
+                  BGTS
+                </motion.span>
+                <motion.span
+                  className="league-landing-accent league-ea-word"
+                  initial={{ scale: 3.2, opacity: 0, x: 24, filter: "blur(8px)" }}
+                  animate={{ scale: 1, opacity: 1, x: 0, filter: "blur(0px)" }}
+                  transition={{ ...eaSpring, delay: 0.2 }}
+                >
+                  {leagueLabel}
+                </motion.span>
+              </>
+            )}
+          </h1>
+        </div>
+      </div>
+    </motion.header>
   );
 }
 
@@ -468,6 +590,29 @@ export default function LeagueClient({ lang }: { lang: string }) {
     ? { duration: 0 }
     : { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const };
 
+  const cardSpring = reduceMotion
+    ? {}
+    : {
+        whileHover: { y: -10, scale: 1.02 },
+        transition: { type: "spring" as const, stiffness: 520, damping: 24 },
+      };
+
+  const tileSpring = reduceMotion
+    ? {}
+    : {
+        whileHover: { y: -8, scale: 1.06, rotate: -1 },
+        whileTap: { scale: 0.95 },
+        transition: { type: "spring" as const, stiffness: 600, damping: 22 },
+      };
+
+  const btnMotion = reduceMotion
+    ? {}
+    : {
+        whileHover: { scale: 1.06, y: -3 },
+        whileTap: { scale: 0.94 },
+        transition: { type: "spring" as const, stiffness: 600, damping: 22 },
+      };
+
   if (loadError) {
     return (
       <div className="league-root">
@@ -490,12 +635,11 @@ export default function LeagueClient({ lang }: { lang: string }) {
 
   return (
     <div className="league-root">
-      <div className="league-glow" aria-hidden />
-      <GeometryBackdrop />
-      <div className="league-shell">
-        {screen !== "announce" && (
-          <BrandBar seasonLabel={season.label} />
-        )}
+      <GamingBackdrop reduceMotion={reduceMotion} />
+      <CursorParticles enabled={!reduceMotion} />
+      <PerspectiveStage enabled={!reduceMotion}>
+        <div className="league-shell">
+        {screen !== "announce" && <LeaguePageHeader lang={lang} screenKey={screen} />}
 
         <AnimatePresence mode="wait">
           {screen === "announce" && (
@@ -508,11 +652,17 @@ export default function LeagueClient({ lang }: { lang: string }) {
               className="league-ann-wrap"
             >
               <p className="league-ann-eyebrow">İnsan Kaynakları · Dahili Duyuru</p>
-              <div className="league-ann-card">
+              <motion.div
+                className="league-ann-card league-card-interactive league-card-hud"
+                initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.94 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ ...transition, delay: 0.05 }}
+                {...cardSpring}
+              >
                 <div className="league-ann-top">
-                  <BgtsLockup size="lg" subtitle="Şirketi En İyi Kim Tanıyor?" />
+                  <BgtsLockup size="lg" subtitle="Şirketi En İyi Kim Tanıyor?" lang={lang} />
                   <h1 className="league-ann-title">
-                    BGTS <em>Lig</em>
+                    BGTS <em>{lang === "eng" ? "LEAGUE" : "LİG"}</em>
                   </h1>
                   <p className="league-ann-sub">
                     {season.titles.main}
@@ -537,20 +687,21 @@ export default function LeagueClient({ lang }: { lang: string }) {
                   <p style={{ whiteSpace: "pre-line", marginTop: 16 }}>
                     {season.announcement.signOff}
                   </p>
-                  <button
+                  <motion.button
                     type="button"
                     className="league-btn"
                     onClick={() => setScreen("landing")}
+                    {...btnMotion}
                   >
                     Yarışmaya Katıl →
-                  </button>
+                  </motion.button>
                 </div>
                 <div className="league-ann-meta">
                   <span>{season.label}</span>
                   <span>·</span>
                   <span>{season.monthLeg}</span>
                 </div>
-              </div>
+              </motion.div>
             </motion.section>
           )}
 
@@ -562,21 +713,25 @@ export default function LeagueClient({ lang }: { lang: string }) {
               exit={{ opacity: 0, y: reduceMotion ? 0 : -10 }}
               transition={transition}
             >
-              <div className="league-chip-row">
-                <span className="league-chip">Haftalık soru</span>
-                <span className="league-chip gold">Aylık zirve</span>
-                <span className="league-chip">Sezon ödülleri</span>
-              </div>
-
               <div className="league-grid-2">
-                <div className="league-card league-prizes-panel">
+                <motion.div
+                  className="league-card league-prizes-panel league-card-interactive league-card-hud"
+                  initial={{ opacity: 0, x: reduceMotion ? 0 : -24 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ ...transition, delay: reduceMotion ? 0 : 0.08 }}
+                  {...cardSpring}
+                >
                   <div className="league-prizes-title">Sezon Sonu Ödülleri</div>
                   <p className="league-prizes-lead">
                     Zirveye çık, hediyeyi kap. İlk üçe özel sürprizler seni bekliyor.
                   </p>
 
                   {season.prizes[0] && (
-                    <div className="league-prize-hero">
+                    <motion.div
+                      className="league-prize-hero"
+                      whileHover={reduceMotion ? undefined : { scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 24 }}
+                    >
                       <div className="league-prize-hero-media">
                         <Image
                           src={season.prizes[0].image}
@@ -594,12 +749,36 @@ export default function LeagueClient({ lang }: { lang: string }) {
                           <p className="league-prize-detail">{season.prizes[0].detail}</p>
                         )}
                       </div>
-                    </div>
+                    </motion.div>
                   )}
 
-                  <div className="league-prize-grid">
+                  <motion.div
+                    className="league-prize-grid"
+                    initial="hidden"
+                    animate="show"
+                    variants={
+                      reduceMotion
+                        ? undefined
+                        : {
+                            hidden: {},
+                            show: { transition: { staggerChildren: 0.1 } },
+                          }
+                    }
+                  >
                     {season.prizes.slice(1).map((p) => (
-                      <article key={p.rank} className="league-prize-tile">
+                      <motion.article
+                        key={p.rank}
+                        className="league-prize-tile"
+                        variants={
+                          reduceMotion
+                            ? undefined
+                            : {
+                                hidden: { opacity: 0, y: 16, scale: 0.95 },
+                                show: { opacity: 1, y: 0, scale: 1 },
+                              }
+                        }
+                        {...tileSpring}
+                      >
                         <div className="league-prize-tile-media">
                           <Image
                             src={p.image}
@@ -613,16 +792,18 @@ export default function LeagueClient({ lang }: { lang: string }) {
                         <p className="league-prize-hook">{p.hook}</p>
                         <h4 className="league-prize-name">{p.label}</h4>
                         {p.detail && <p className="league-prize-detail">{p.detail}</p>}
-                      </article>
+                      </motion.article>
                     ))}
-                  </div>
+                  </motion.div>
+                </motion.div>
 
-                  <p className="league-hint league-prizes-bonus">
-                    {season.monthlyBonusNote}
-                  </p>
-                </div>
-
-                <div className="league-card league-join-pulse">
+                <motion.div
+                  className="league-card league-join-pulse league-card-interactive league-card-hud"
+                  initial={{ opacity: 0, x: reduceMotion ? 0 : 24 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ ...transition, delay: reduceMotion ? 0 : 0.16 }}
+                  {...cardSpring}
+                >
                   <h2 className="league-screen-title">Hemen katıl</h2>
                   <p className="league-sub">Sadece @bgts.com uzantılı adresler kabul edilir.</p>
                   <label htmlFor="league-name">Ad Soyad</label>
@@ -645,15 +826,16 @@ export default function LeagueClient({ lang }: { lang: string }) {
                   />
                   <p className="league-hint">Doğrulama kodu bu adrese gelir.</p>
                   {error && <p className="league-error">{error}</p>}
-                  <button
+                  <motion.button
                     type="button"
                     className="league-btn"
                     disabled={busy}
                     onClick={() => void sendCode(false)}
+                    {...btnMotion}
                   >
                     {busy ? "Gönderiliyor…" : "Doğrulama Kodunu Gönder"}
-                  </button>
-                </div>
+                  </motion.button>
+                </motion.div>
               </div>
             </motion.section>
           )}
@@ -667,21 +849,36 @@ export default function LeagueClient({ lang }: { lang: string }) {
               transition={transition}
               className="league-auth-wrap"
             >
-              <div className="league-card league-auth-card">
+              <motion.div
+                className="league-card league-auth-card league-card-interactive league-card-hud"
+                initial={{ opacity: 0, y: reduceMotion ? 0 : 20, scale: reduceMotion ? 1 : 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ ...transition, delay: reduceMotion ? 0 : 0.12 }}
+                {...cardSpring}
+              >
                 <p className="league-auth-eyebrow">E-posta doğrulama</p>
-                <h2 className="league-screen-title">Tekrar hoş geldin</h2>
-                <p className="league-sub league-auth-copy">
-                  <strong>{email}</strong> adresine 6 haneli kod gönderdik.
-                  Gelen kutunu kontrol et ve kodu aşağıya gir.
+                <h2 className="league-screen-title league-auth-title">Kodunu gir</h2>
+                <p className="league-sub league-auth-lead">
+                  6 haneli doğrulama kodunu aşağıya yaz.
                 </p>
 
+                <div className="league-auth-email">
+                  <span className="league-auth-email-label">Gönderilen adres</span>
+                  <strong>{email}</strong>
+                </div>
+
+                <label className="league-auth-otp-label" htmlFor="league-otp-0">
+                  Doğrulama kodu
+                </label>
                 <div className="league-otp-row" onPaste={onOtpPaste}>
                   {otp.map((d, i) => (
-                    <input
+                    <motion.input
                       key={i}
+                      id={i === 0 ? "league-otp-0" : undefined}
                       ref={(el) => {
                         otpRefs.current[i] = el;
                       }}
+                      className={d ? "filled" : undefined}
                       inputMode="numeric"
                       autoComplete={i === 0 ? "one-time-code" : "off"}
                       maxLength={1}
@@ -689,6 +886,14 @@ export default function LeagueClient({ lang }: { lang: string }) {
                       onChange={(e) => onOtpChange(i, e.target.value)}
                       onKeyDown={(e) => onOtpKeyDown(i, e)}
                       aria-label={`Kod hanesi ${i + 1}`}
+                      animate={
+                        reduceMotion
+                          ? undefined
+                          : d
+                            ? { scale: 1.06, borderColor: "var(--accent)" }
+                            : { scale: 1 }
+                      }
+                      transition={{ type: "spring", stiffness: 500, damping: 28 }}
                     />
                   ))}
                 </div>
@@ -696,14 +901,15 @@ export default function LeagueClient({ lang }: { lang: string }) {
                 {error && <p className="league-error">{error}</p>}
                 {info && <p className="league-auth-info">{info}</p>}
 
-                <button
+                <motion.button
                   type="button"
                   className="league-btn league-btn-block"
                   disabled={busy}
                   onClick={() => void verifyCode()}
+                  {...btnMotion}
                 >
                   {busy ? "Doğrulanıyor…" : "Kodu Doğrula"}
-                </button>
+                </motion.button>
 
                 <div className="league-auth-footer">
                   <button
@@ -729,7 +935,7 @@ export default function LeagueClient({ lang }: { lang: string }) {
                 </div>
 
                 <p className="league-auth-meta">Kod 10 dakika geçerlidir · @bgts.com</p>
-              </div>
+              </motion.div>
             </motion.section>
           )}
 
@@ -742,40 +948,58 @@ export default function LeagueClient({ lang }: { lang: string }) {
               transition={transition}
             >
               {!question ? (
-                <div className="league-card">
-                  <h2 className="league-screen-title">Şu an açık soru yok</h2>
+                <motion.div
+                  className="league-card league-card-interactive league-card-hud"
+                  {...cardSpring}
+                  initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                >
+                  <h2 className="league-screen-title league-screen-title--game">Şu an açık soru yok</h2>
                   <p className="league-sub">
                     {countdownTarget
                       ? `Sonraki adım: ${formatCountdown(countdownTarget, nowTick)}`
                       : "Yeni soru yakında."}
                   </p>
                   {storedGuess && (
-                    <button
+                    <motion.button
                       type="button"
                       className="league-btn"
                       onClick={() => setScreen("result")}
+                      {...btnMotion}
                     >
                       Sonucu Gör
-                    </button>
+                    </motion.button>
                   )}
-                  <button
+                  <motion.button
                     type="button"
                     className="league-btn ghost"
                     onClick={() => setScreen("league")}
+                    {...btnMotion}
                   >
                     Lig Tablosu
-                  </button>
-                </div>
+                  </motion.button>
+                </motion.div>
               ) : (
                 <div className="league-q-stage">
-                  <div className="league-q-head">
+                  <motion.div
+                    className="league-q-head"
+                    initial={{ opacity: 0, y: reduceMotion ? 0 : 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.05 }}
+                  >
                     <div className="league-q-meta">
                       {question.monthLabel} Sorusu · Hafta {question.weekIndex}/
                       {question.weekTotal} · {question.department}
                     </div>
                     <h2 className="league-q-prompt">{question.prompt}</h2>
-                  </div>
-                  <div className="league-card league-q-card">
+                  </motion.div>
+                  <motion.div
+                    className="league-card league-q-card league-card-interactive league-card-hud"
+                    initial={{ opacity: 0, y: reduceMotion ? 0 : 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.12 }}
+                    {...cardSpring}
+                  >
                     {storedGuess && (
                       <p className="league-result-badge">
                         Demo: önceki tahminin {storedGuess.guess} — yeniden gönderebilirsin
@@ -831,19 +1055,20 @@ export default function LeagueClient({ lang }: { lang: string }) {
                       İpucu: {question.hintLabel} →
                     </Link>
                     {error && <p className="league-error">{error}</p>}
-                    <button
+                    <motion.button
                       type="button"
                       className="league-btn"
                       disabled={busy}
                       onClick={() => void submitGuess()}
+                      {...btnMotion}
                     >
                       {busy
                         ? "Kaydediliyor…"
                         : storedGuess
                           ? "Tahmini Güncelle"
                           : "Tahminimi Gönder"}
-                    </button>
-                  </div>
+                    </motion.button>
+                  </motion.div>
                 </div>
               )}
             </motion.section>
@@ -857,7 +1082,12 @@ export default function LeagueClient({ lang }: { lang: string }) {
               exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
               transition={transition}
             >
-              <div className="league-card">
+              <motion.div
+                className="league-card league-card-interactive league-card-hud"
+                initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.94 }}
+                animate={{ opacity: 1, scale: 1 }}
+                {...cardSpring}
+              >
                 {revealInfo || storedGuess?.revealed ? (
                   <>
                     <p className="league-result-badge">
@@ -877,13 +1107,18 @@ export default function LeagueClient({ lang }: { lang: string }) {
                         {revealInfo?.correctAnswer ?? "Netleşecek"}
                       </strong>
                     </p>
-                    <div className="league-result-pts">
+                    <motion.div
+                      className="league-result-pts"
+                      initial={{ scale: reduceMotion ? 1 : 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 18, delay: 0.15 }}
+                    >
                       +
                       {revealInfo?.score?.total ??
                         storedGuess?.totalPts ??
                         storedGuess?.participationPts ??
                         10}
-                    </div>
+                    </motion.div>
                     {revealInfo?.score && (
                       <p className="league-hint">
                         Katılım {revealInfo.score.participation}P
@@ -900,12 +1135,17 @@ export default function LeagueClient({ lang }: { lang: string }) {
                   <>
                     <p className="league-result-badge">Tahminin kaydedildi</p>
                     <h2 className="league-screen-title">Harika, ligdesin</h2>
-                    <div className="league-result-pts">
+                    <motion.div
+                      className="league-result-pts"
+                      initial={{ scale: reduceMotion ? 1 : 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 18, delay: 0.15 }}
+                    >
                       +
                       {storedGuess?.totalPts ??
                         storedGuess?.participationPts ??
                         season.scoring.participation}
-                    </div>
+                    </motion.div>
                     <p className="league-sub">
                       Katılım puanın eklendi. Tahminin:{" "}
                       <strong style={{ color: "var(--text)" }}>
@@ -937,21 +1177,23 @@ export default function LeagueClient({ lang }: { lang: string }) {
                 )}
 
                 <div className="league-actions">
-                  <button
+                  <motion.button
                     type="button"
                     className="league-btn"
                     onClick={() => setScreen("league")}
+                    {...btnMotion}
                   >
                     Lig Tablosunu Gör →
-                  </button>
+                  </motion.button>
                   {question?.status === "open" && (
-                    <button
+                    <motion.button
                       type="button"
                       className="league-btn ghost"
                       onClick={() => setScreen("question")}
+                      {...btnMotion}
                     >
                       Tekrar Cevapla
-                    </button>
+                    </motion.button>
                   )}
                   {question?.hintHref && (
                     <Link
@@ -963,7 +1205,7 @@ export default function LeagueClient({ lang }: { lang: string }) {
                     </Link>
                   )}
                 </div>
-              </div>
+              </motion.div>
             </motion.section>
           )}
 
@@ -975,7 +1217,7 @@ export default function LeagueClient({ lang }: { lang: string }) {
               exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
               transition={transition}
             >
-              <h2 className="league-screen-title">Lig tablosu</h2>
+              <h2 className="league-screen-title league-screen-title--game">Lig tablosu</h2>
               <p className="league-sub">
                 Kişisel puanın gerçek; sıralama atmosferi Phase 1’de örnek satırlarla
                 tamamlanır.
@@ -996,7 +1238,14 @@ export default function LeagueClient({ lang }: { lang: string }) {
                   {season.label}
                 </button>
               </div>
-              <div className="league-card" style={{ padding: "12px 8px 8px" }}>
+              <motion.div
+                className="league-card league-card-interactive league-card-hud"
+                style={{ padding: "12px 8px 8px" }}
+                initial={{ opacity: 0, y: reduceMotion ? 0 : 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                {...cardSpring}
+              >
                 <table className="league-board">
                   <thead>
                     <tr>
@@ -1007,17 +1256,23 @@ export default function LeagueClient({ lang }: { lang: string }) {
                   </thead>
                   <tbody>
                     {boardRows.map((row, i) => (
-                      <tr key={`${row.name}-${i}`} className={row.me ? "me" : undefined}>
+                      <motion.tr
+                        key={`${row.name}-${i}`}
+                        className={row.me ? "me" : undefined}
+                        initial={{ opacity: 0, x: reduceMotion ? 0 : -12 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: reduceMotion ? 0 : 0.05 + i * 0.04 }}
+                      >
                         <td className="rank">
                           {i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}
                         </td>
                         <td>{row.me ? `${row.name} (sen)` : row.name}</td>
                         <td>{row.pts}</td>
-                      </tr>
+                      </motion.tr>
                     ))}
                   </tbody>
                 </table>
-              </div>
+              </motion.div>
               <div className="league-prize-strip">
                 <strong style={{ color: "var(--text)" }}>Sezon ödülleri</strong>
                 <div className="league-prize-strip-grid">
@@ -1037,15 +1292,16 @@ export default function LeagueClient({ lang }: { lang: string }) {
                 </div>
               </div>
               <div className="league-actions">
-                <button
+                <motion.button
                   type="button"
                   className="league-btn"
                   onClick={() =>
                     setScreen(question?.status === "open" ? "question" : "result")
                   }
+                  {...btnMotion}
                 >
                   Geri Dön
-                </button>
+                </motion.button>
                 <button
                   type="button"
                   className="league-btn ghost"
@@ -1057,7 +1313,8 @@ export default function LeagueClient({ lang }: { lang: string }) {
             </motion.section>
           )}
         </AnimatePresence>
-      </div>
+        </div>
+      </PerspectiveStage>
     </div>
   );
 }

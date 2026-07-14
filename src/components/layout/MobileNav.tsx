@@ -130,7 +130,6 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
             { title: t("resources", "successStories", "Başarı Hikayeleri", "Success Stories"), href: p("/resources/success-stories"), icon: Heart },
             { title: t("resources", "infographics", "İnfografikler", "Infographics"), href: p("/resources/infographics"), icon: BarChart3 },
             { title: t("resources", "partners", "İş Ortakları", "Business Partners"), href: p("/partnerships"), icon: Layers },
-            { title: t("resources", "analyses", "Analizler", "Analyses"), href: p("/resources/analyses"), icon: FileText },
           ]
         }
       ]
@@ -146,6 +145,19 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
             { title: t("careers", "careerPaths", "Kariyer Yolları", "Career Paths"), href: p("/career-paths"), icon: Rocket },
             { title: t("careers", "learning", "Eğitim ve Gelişim", "Training & Development"), href: p("/learning"), icon: GraduationCap },
             { title: t("careers", "social", "Sürdürülebilir Değer Programı", "Sustainable Value Program"), href: p("/social-contribution"), icon: Heart },
+          ]
+        }
+      ]
+    },
+    {
+      name: t("analyses", "name", "Analizler", "Analyses"),
+      id: "analyses",
+      href: p("/resources/analyses"),
+      subGroups: [
+        {
+          heading: t("analyses", "heading", "Son Makaleler", "Latest Articles"),
+          links: [
+            { title: t("analyses", "allArticles", "Tüm Analizler", "All Analyses"), href: p("/resources/analyses"), icon: FileText },
           ]
         }
       ]
