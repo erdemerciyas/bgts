@@ -5,26 +5,11 @@ import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import ReactMarkdown, { Components } from "react-markdown"
+import remarkGfm from "remark-gfm"
 import { X, Calendar, Clock, ExternalLink } from "lucide-react"
 import type { Article } from "@/data/articles.tr"
-import { getAuthorAvatar, hasAuthorPortrait, getArticleLinkedInUrl } from "@/lib/articles"
-import { cn } from "@/lib/utils"
-
-/* ── Category badge colors (mirrors ArticlesClient) ── */
-const CATEGORY_COLORS: Record<string, string> = {
-    // TR
-    "Yapay Zeka":    "bg-blue-100 text-blue-700 border-blue-200",
-    "Otomasyon":     "bg-amber-100 text-amber-700 border-amber-200",
-    "Güvenlik":      "bg-rose-100 text-rose-700 border-rose-200",
-    "Yönetişim":     "bg-violet-100 text-violet-700 border-violet-200",
-    "Altyapı":       "bg-emerald-100 text-emerald-700 border-emerald-200",
-    // EN
-    "Artificial Intelligence": "bg-blue-100 text-blue-700 border-blue-200",
-    "Automation":              "bg-amber-100 text-amber-700 border-amber-200",
-    "Security":                "bg-rose-100 text-rose-700 border-rose-200",
-    "Governance":              "bg-violet-100 text-violet-700 border-violet-200",
-    "Infrastructure":          "bg-emerald-100 text-emerald-700 border-emerald-200",
-}
+import { getArticleLinkedInUrl, stripDuplicateTitleHeading } from "@/lib/articles"
+import { ArticleCardHeader } from "@/components/resources/ArticleCardHeader"
 
 interface ArticleModalProps {
     article: Article | null
@@ -42,22 +27,22 @@ interface ArticleModalProps {
 /* ── Custom markdown renderers ── */
 const markdownComponents: Components = {
     h2: ({ children }) => (
-        <h2 className="text-2xl font-black text-slate-900 mt-8 mb-4 tracking-tight leading-tight">
+        <h2 className="mb-4 mt-8 text-2xl font-bold leading-snug tracking-tight text-slate-900">
             {children}
         </h2>
     ),
     h3: ({ children }) => (
-        <h3 className="text-xl font-bold text-slate-800 mt-6 mb-3 tracking-tight leading-snug">
+        <h3 className="mb-3 mt-6 text-xl font-semibold leading-snug tracking-tight text-slate-800">
             {children}
         </h3>
     ),
     h4: ({ children }) => (
-        <h4 className="text-lg font-semibold text-slate-700 mt-5 mb-2">
+        <h4 className="mb-2 mt-5 text-lg font-semibold leading-snug text-slate-700">
             {children}
         </h4>
     ),
     p: ({ children }) => (
-        <p className="text-slate-600 leading-relaxed mb-4 text-base">
+        <p className="mb-4 text-base leading-[1.7] text-slate-600">
             {children}
         </p>
     ),
@@ -72,10 +57,10 @@ const markdownComponents: Components = {
         </ol>
     ),
     li: ({ children }) => (
-        <li className="leading-relaxed text-base">{children}</li>
+        <li className="text-base leading-[1.7]">{children}</li>
     ),
     blockquote: ({ children }) => (
-        <blockquote className="border-l-4 border-blue-400 bg-blue-50/60 pl-5 pr-4 py-4 my-6 italic text-slate-700 rounded-r-lg">
+        <blockquote className="my-6 rounded-r-lg border-l-4 border-blue-400 bg-blue-50/60 py-4 pl-5 pr-4 text-base italic leading-[1.7] text-slate-700">
             {children}
         </blockquote>
     ),
@@ -137,6 +122,12 @@ const markdownComponents: Components = {
     ),
     thead: ({ children }) => (
         <thead className="bg-slate-50">{children}</thead>
+    ),
+    tbody: ({ children }) => (
+        <tbody>{children}</tbody>
+    ),
+    tr: ({ children }) => (
+        <tr className="even:bg-slate-50/40">{children}</tr>
     ),
     th: ({ children }) => (
         <th className="text-left font-bold text-slate-700 px-4 py-3 border-b border-slate-200">
@@ -212,15 +203,16 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
         }
     }, [article, handleEsc, handleTabTrap])
 
-    const categoryClass =
-        article ? (CATEGORY_COLORS[article.category] ?? "bg-slate-100 text-slate-600 border-slate-200") : ""
-
     /* Format date based on lang */
     const formattedDate = article
         ? new Date(article.date).toLocaleDateString(
               lang === "eng" ? "en-US" : "tr-TR",
               { year: "numeric", month: "long", day: "numeric" }
           )
+        : ""
+
+    const articleBody = article
+        ? stripDuplicateTitleHeading(article.body, article.title)
         : ""
 
     return createPortal(
@@ -263,53 +255,14 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                     >
                         {/* ── Scrollable content (cover + header + body) ── */}
                         <div className="min-h-0 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
-                            {/* Cover image */}
-                            <div className="relative shrink-0 overflow-hidden bg-slate-50">
-                                <Image
-                                    src={article.coverImage}
-                                    alt={article.title}
-                                    width={1920}
-                                    height={768}
-                                    className="block w-full h-auto md:-my-[50px]"
-                                    priority
-                                    sizes="(max-width: 768px) 100vw, 1024px"
-                                />
+                            <ArticleCardHeader article={article} lang={lang} variant="modal" />
 
-                                {/* Category badge over image */}
-                                <div className="absolute top-2 left-3 sm:top-4 sm:left-5 md:left-7">
-                                    <span
-                                        className={`inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider border backdrop-blur-sm ${categoryClass}`}
-                                    >
-                                        {article.category}
-                                    </span>
-                                </div>
-                            </div>
-
-                            {/* Header */}
-                            <div className="border-b border-slate-100 px-4 py-3 sm:px-7 sm:pt-6 sm:pb-4">
-                                <h2 className="mb-2 text-xl font-black leading-tight tracking-tight text-slate-900 sm:mb-4 sm:text-3xl">
+                            <div className="border-b border-slate-100 px-6 py-4 sm:px-8 sm:py-5">
+                                <h2 className="mb-3 break-words text-xl font-bold leading-snug text-slate-900 sm:mb-4 sm:text-2xl">
                                     {article.title}
                                 </h2>
 
-                                {/* Meta row */}
-                                <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-500 sm:gap-x-5 sm:gap-y-2 sm:text-sm">
-                                    <span className="flex items-center gap-1.5">
-                                        <span className={cn(
-                                            "relative h-7 w-7 shrink-0 overflow-hidden rounded-full border border-slate-200",
-                                            !hasAuthorPortrait(article.author) && "bg-white"
-                                        )}>
-                                            <Image
-                                                src={getAuthorAvatar(article.author)}
-                                                alt={article.author}
-                                                fill
-                                                className={hasAuthorPortrait(article.author) ? "object-cover" : "object-contain p-0.5"}
-                                                sizes="28px"
-                                            />
-                                        </span>
-                                        <span className="font-semibold text-slate-700">
-                                            {article.author}
-                                        </span>
-                                    </span>
+                                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500">
                                     <span className="flex items-center gap-1.5">
                                         <Calendar className="w-4 h-4 text-slate-400" />
                                         {formattedDate}
@@ -332,11 +285,13 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                                 </div>
                             </div>
 
-                            {/* Markdown body */}
-                            <div className="px-4 py-4 sm:px-7 sm:py-6">
-                                {article.body ? (
-                                    <ReactMarkdown components={markdownComponents}>
-                                        {article.body}
+                            <div className="px-4 py-4 sm:px-8 sm:py-6">
+                                {articleBody ? (
+                                    <ReactMarkdown
+                                        remarkPlugins={[remarkGfm]}
+                                        components={markdownComponents}
+                                    >
+                                        {articleBody}
                                     </ReactMarkdown>
                                 ) : (
                                     <p className="text-slate-500 italic text-center py-8">

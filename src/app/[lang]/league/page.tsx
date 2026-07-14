@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
 import LeagueClient from "./LeagueClient";
 
 export const metadata: Metadata = {
@@ -17,5 +18,9 @@ export default async function LeaguePage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  return <LeagueClient lang={lang} />;
+  return (
+    <div className={`${GeistSans.variable} ${GeistSans.className}`}>
+      <LeagueClient lang={lang} />
+    </div>
+  );
 }

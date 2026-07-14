@@ -5,52 +5,17 @@ import { useSearchParams, useRouter, usePathname } from "next/navigation"
 import dynamic from "next/dynamic"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
-import { Heading, Text } from "@/components/ui/Typography"
+import { Heading } from "@/components/ui/Typography"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import type { Article } from "@/data/articles.tr"
-import { cn } from "@/lib/utils"
+import {
+    ArticleCardTags,
+    ArticleCardQuoteRow,
+    ArticleCardDivider,
+    articleTypography,
+    CARD_THEMES,
+} from "@/components/resources/ArticleCardHeader"
 import ArticlesHero from "@/components/resources/ArticlesHero"
-
-/* Soft accents — same layout, gentle visual separation */
-const RANK_TONES = [
-    {
-        card: "bg-white border-slate-100 hover:border-blue-200/70",
-        footer: "bg-slate-50/70 border-slate-100",
-        accent: "from-blue-500/80 to-sky-400/60",
-        titleHover: "group-hover:text-blue-700",
-    },
-    {
-        card: "bg-[#FBFCFD] border-slate-100 hover:border-teal-200/70",
-        footer: "bg-teal-50/40 border-teal-100/60",
-        accent: "from-teal-500/80 to-emerald-400/60",
-        titleHover: "group-hover:text-teal-700",
-    },
-    {
-        card: "bg-white border-slate-100 hover:border-amber-200/70",
-        footer: "bg-amber-50/35 border-amber-100/60",
-        accent: "from-amber-500/80 to-orange-400/60",
-        titleHover: "group-hover:text-amber-700",
-    },
-    {
-        card: "bg-[#FBFBFD] border-slate-100 hover:border-violet-200/70",
-        footer: "bg-violet-50/40 border-violet-100/60",
-        accent: "from-violet-500/80 to-indigo-400/60",
-        titleHover: "group-hover:text-violet-700",
-    },
-    {
-        card: "bg-white border-slate-100 hover:border-rose-200/70",
-        footer: "bg-rose-50/35 border-rose-100/60",
-        accent: "from-rose-500/80 to-pink-400/60",
-        titleHover: "group-hover:text-rose-700",
-    },
-    {
-        card: "bg-[#FAFCFB] border-slate-100 hover:border-cyan-200/70",
-        footer: "bg-cyan-50/40 border-cyan-100/60",
-        accent: "from-cyan-500/80 to-sky-400/60",
-        titleHover: "group-hover:text-cyan-700",
-    },
-] as const
 
 const ArticleModal = dynamic(() => import("@/components/resources/ArticleModal"), { ssr: false })
 
@@ -83,16 +48,22 @@ export default function ArticlesClient(props: ArticlesClientProps) {
 
 function ArticlesPageFallback({ articles, dict }: ArticlesClientProps) {
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-[#F8F9FA] min-h-screen">
             <ArticlesHero dict={dict} />
-            <Section background="default" className="py-16 md:py-24">
+            <Section background="default" className="bg-[#F8F9FA] py-16 md:py-24">
                 <Container>
-                    <Heading variant="h2" className="text-slate-900 font-black text-3xl mb-12 tracking-tight">
+                    <Heading
+                        variant="h2"
+                        className="mb-12 text-3xl font-bold tracking-tight text-slate-900"
+                    >
                         {dict.allArticles}
                     </Heading>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 gap-6 [grid-template-columns:repeat(1,minmax(0,1fr))] md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:[grid-template-columns:repeat(3,minmax(0,1fr))]">
                         {articles.map((article) => (
-                            <div key={article.id} className="h-72 rounded-3xl bg-slate-100 animate-pulse" />
+                            <div
+                                key={article.id}
+                                className="h-80 animate-pulse rounded-xl border border-slate-100 bg-white"
+                            />
                         ))}
                     </div>
                 </Container>
@@ -133,31 +104,31 @@ function ArticlesClientInner({ articles, dict, lang }: ArticlesClientProps) {
     )
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-[#F8F9FA] min-h-screen">
             <ArticlesHero dict={dict} />
 
-            {/* ══════════════════════════════════════════════════════
-                ARTICLES GRID
-            ══════════════════════════════════════════════════════ */}
-            <Section background="default" className="py-16 md:py-24">
+            <Section background="default" className="bg-[#F8F9FA] py-16 md:py-24">
                 <Container>
-                    {/* Section header */}
-                    <div className="mb-12 flex flex-wrap items-center gap-3 pb-6 border-b border-slate-100">
-                        <Heading variant="h2" className="text-slate-900 font-black text-3xl tracking-tight">
+                    <div className="mb-12 flex flex-wrap items-center gap-3 border-b border-slate-200/80 pb-6">
+                        <Heading
+                            variant="h2"
+                            className="text-3xl font-bold tracking-tight text-slate-900"
+                        >
                             {dict.allArticles}
                         </Heading>
-                        <span className="inline-flex items-center justify-center bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-0.5 rounded-full">
+                        <span className="inline-flex items-center justify-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-700">
                             {articles.length}
                         </span>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 gap-6 [grid-template-columns:repeat(1,minmax(0,1fr))] md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:[grid-template-columns:repeat(3,minmax(0,1fr))]">
                         {articles.map((article, index) => (
                             <ArticleCard
                                 key={article.id}
                                 article={article}
                                 index={index}
                                 dict={dict}
+                                lang={lang}
                                 onClick={() => openArticle(article)}
                             />
                         ))}
@@ -165,7 +136,6 @@ function ArticlesClientInner({ articles, dict, lang }: ArticlesClientProps) {
                 </Container>
             </Section>
 
-            {/* Article detail modal */}
             <ArticleModal
                 article={selectedArticle}
                 onClose={closeModal}
@@ -176,19 +146,20 @@ function ArticlesClientInner({ articles, dict, lang }: ArticlesClientProps) {
     )
 }
 
-/* ── Article Card ── */
 function ArticleCard({
     article,
     index,
     dict,
+    lang,
     onClick,
 }: {
     article: Article
     index: number
     dict: ArticlesDict
+    lang: string
     onClick: () => void
 }) {
-    const tone = RANK_TONES[index % RANK_TONES.length]
+    const theme = CARD_THEMES[article.cardTheme]
 
     return (
         <motion.article
@@ -206,51 +177,44 @@ function ArticleCard({
             tabIndex={0}
             role="button"
             aria-label={article.title}
-            className={cn(
-                "group relative rounded-3xl overflow-hidden border shadow-sm hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 flex flex-col cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
-                tone.card
-            )}
+            className="group grid h-full min-w-0 cursor-pointer grid-rows-subgrid rounded-xl border border-slate-100 bg-white shadow-[0_4px_6px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 [grid-row:span_4]"
         >
-            {/* Cover image */}
-            <div className="relative aspect-video w-full overflow-hidden">
-                <Image
-                    src={article.coverImage}
-                    alt={article.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className={cn("absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r", tone.accent)} />
+            <div className="px-6 pt-6">
+                <ArticleCardTags article={article} variant="card" />
             </div>
 
-            {/* Content */}
-            <div className="flex flex-col flex-grow px-6 pt-5 pb-4">
-                <Heading
-                    variant="h3"
-                    className={cn(
-                        "text-[1.05rem] font-extrabold text-slate-900 leading-snug line-clamp-2 mb-3 transition-colors duration-200",
-                        tone.titleHover
-                    )}
-                >
-                    {article.title}
-                </Heading>
-
-                <Text variant="muted" className="text-slate-500 text-sm leading-relaxed line-clamp-3 flex-grow">
-                    {article.excerpt}
-                </Text>
+            <div className="px-6 pb-1">
+                <ArticleCardQuoteRow article={article} lang={lang} variant="card" />
             </div>
 
-            {/* Footer */}
-            <div className={cn("px-6 py-4 border-t flex items-center justify-between text-xs text-slate-500", tone.footer)}>
-                <span className="font-semibold text-slate-700 truncate max-w-[60%]">
-                    {article.author}
-                </span>
-                <span className="flex items-center gap-1 shrink-0">
-                    <svg className="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" strokeWidth="2" />
-                        <polyline points="12 6 12 12 16 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    {article.readTime} {dict.readTime}
-                </span>
+            <ArticleCardDivider article={article} />
+
+            <div className="flex min-h-0 flex-col gap-3.5 p-6 pt-5">
+                <h3 className={articleTypography.cardTitle}>{article.title}</h3>
+
+                <p className={articleTypography.cardExcerpt}>{article.excerpt}</p>
+
+                <div className={`mt-auto flex items-center justify-between pt-2 ${articleTypography.cardFooter}`}>
+                    <span
+                        className="inline-flex items-center gap-1 font-semibold transition-opacity group-hover:opacity-80"
+                        style={{ color: theme.accent }}
+                    >
+                        {dict.readMore}
+                        <span aria-hidden>&rarr;</span>
+                    </span>
+                    <span className="flex shrink-0 items-center gap-1.5 text-slate-400">
+                        <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" strokeWidth="2" />
+                            <polyline
+                                points="12 6 12 12 16 14"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                        {article.readTime} {dict.readTime}
+                    </span>
+                </div>
             </div>
         </motion.article>
     )

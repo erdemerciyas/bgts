@@ -54,7 +54,7 @@ export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
   },
   '/products/cv-converter': { tr: '/urunler/cv-donusturucu', eng: '/products/cv-converter' },
   '/resources/analyses': { tr: '/bilgi-merkezi/analizler', eng: '/resources/analyses' },
-  '/league': { tr: '/league', eng: '/league' },
+  '/league': { tr: '/lig', eng: '/lig' },
 };
 
 /** Top-level Turkish aliases without a dedicated page — redirect targets (internal path). */
@@ -129,6 +129,7 @@ export const TR_LEGACY_REDIRECTS: Record<string, string> = {
   '/products/docmind': '/urunler/docmind',
   '/products/ai-hiring-assistant': '/urunler/yapay-zeka-ise-alim-asistani',
   '/products/cv-converter': '/urunler/cv-donusturucu',
+  '/league': '/lig',
 };
 
 function normalizePath(path: string): string {
@@ -209,6 +210,7 @@ export function resolveTrLegacyRedirect(urlPath: string): string | null {
 export const ENG_LEGACY_REDIRECTS: Record<string, string> = {
   '/products/praxila': '/products/praxilla',
   '/resources/articles': '/resources/analyses',
+  '/league': '/lig',
 };
 
 /** Resolve middleware redirect: legacy English slug on /tr/en/ → updated English slug. */

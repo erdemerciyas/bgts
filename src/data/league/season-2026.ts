@@ -101,20 +101,6 @@ export const SEASON_2026: SeasonConfig = {
       detail: "Okuma keyfi seninle",
       image: "/images/league/prize-kindle.png",
     },
-    {
-      rank: 4,
-      label: "5.000 TL hediye çeki",
-      hook: "Alışveriş özgürlüğü",
-      detail: "İstediğin yerde kullan",
-      image: "/images/league/prize-voucher-5k.png",
-    },
-    {
-      rank: 5,
-      label: "3.000 TL hediye çeki",
-      hook: "Sürpriz hediye",
-      detail: "Sezon top 5 ödülü",
-      image: "/images/league/prize-voucher-3k.png",
-    },
   ],
   monthlyBonusNote: "Her ay en yüksek puanı alan oyuncuya sürpriz mini ödül",
   scoring: {

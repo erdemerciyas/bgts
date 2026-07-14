@@ -1,6 +1,32 @@
 import type { Article } from "@/data/articles.tr"
+import type { Locale } from "@/i18n-config"
 
 export const AUTHOR_AVATAR_FALLBACK = "/BGTS_logo.png"
+
+export type AuthorProfile = {
+  title: string
+  department?: string
+}
+
+const AUTHOR_PROFILES: Record<string, Record<Locale, AuthorProfile>> = {
+  "Alper Önsoy": {
+    tr: { title: "Genel Müdür Yardımcısı", department: "Teknoloji Servisleri" },
+    eng: { title: "Deputy General Manager", department: "Technology Services" },
+  },
+  "Erdoğan Bilici": {
+    tr: { title: "Çözüm Mimarı", department: "Teknoloji Servisleri" },
+    eng: { title: "Solution Architect", department: "Technology Services" },
+  },
+  "Sinan Demirci": {
+    tr: { title: "Müşteri Başarı Yöneticisi", department: "Teknoloji Servisleri" },
+    eng: { title: "Customer Success Manager", department: "Technology Services" },
+  },
+}
+
+export function getAuthorProfile(author: string, lang: string): AuthorProfile | undefined {
+  const locale = (lang === "eng" ? "eng" : "tr") as Locale
+  return AUTHOR_PROFILES[author]?.[locale]
+}
 
 /** Local writer portraits under /public/images/articles/writer */
 export const AUTHOR_AVATARS: Record<string, string> = {
@@ -32,6 +58,16 @@ export function getAuthorAvatar(author: string): string {
 
 export function hasAuthorPortrait(author: string): boolean {
   return author in AUTHOR_AVATARS
+}
+
+/** Removes the leading `##` heading — the modal header already shows the article title. */
+export function stripDuplicateTitleHeading(body: string, _title?: string): string {
+  const lines = body.split("\n")
+  const first = lines[0]?.trim() ?? ""
+  if (/^##\s+/.test(first)) {
+    return lines.slice(1).join("\n").trimStart()
+  }
+  return body
 }
 
 /** Returns the most recent articles sorted by date (newest first). */

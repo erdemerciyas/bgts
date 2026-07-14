@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Container } from "@/components/ui/Container"
-import { Heading, Text } from "@/components/ui/Typography"
+import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 
 type ArticlesHeroDict = {
     title: string
@@ -18,75 +18,40 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 export default function ArticlesHero({ dict }: ArticlesHeroProps) {
     return (
-        <section className="relative isolate overflow-hidden min-h-[42vh] lg:min-h-[48vh] flex items-end">
-            {/* Full-bleed visual plane */}
+        <section className="relative flex min-h-[40vh] items-center overflow-hidden bg-[#F4F6F8] pt-16 pb-12 lg:pt-28 lg:pb-16">
             <motion.div
                 aria-hidden
                 className="absolute inset-0"
-                initial={{ scale: 1.06 }}
+                initial={{ scale: 1.04 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1.4, ease }}
             >
                 <Image
-                    src="/images/headers/analizler.png"
+                    src="/images/headers/analizler-hero.png"
                     alt=""
                     fill
                     priority
                     sizes="100vw"
-                    className="object-cover object-[center_35%]"
+                    className="object-cover object-center"
                 />
             </motion.div>
 
-            {/* Layered atmosphere */}
             <div aria-hidden className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-r from-corporate-dark via-corporate-dark/88 to-corporate-dark/55" />
-                <div className="absolute inset-0 bg-gradient-to-t from-corporate-dark via-corporate-dark/40 to-corporate-dark/20" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_20%,rgba(58,124,181,0.28),transparent_55%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_15%_85%,rgba(212,168,83,0.14),transparent_45%)]" />
-                <div className="absolute inset-0 opacity-[0.35] mix-blend-soft-light bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/88 via-white/45 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/15" />
             </div>
 
-            {/* Soft top highlight */}
-            <div
-                aria-hidden
-                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
-            />
+            <Container className="relative z-10 w-full">
+                <AnimatedDiv className="max-w-2xl">
+                    <h1 className="mb-8 text-5xl font-black leading-[1.1] tracking-tight text-corporate-dark lg:text-[4.5rem]">
+                        {dict.title}
+                    </h1>
 
-            <Container className="relative z-10 w-full pt-32 pb-14 lg:pt-40 lg:pb-20">
-                <div className="max-w-2xl">
-                    <motion.div
-                        initial={{ opacity: 0, y: 28 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, ease }}
-                    >
-                        <Heading
-                            variant="h1"
-                            className="mb-6 text-white text-4xl font-black tracking-[-0.035em] sm:text-5xl lg:text-[4rem] lg:leading-[1.02]"
-                        >
-                            {dict.title}
-                        </Heading>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 22 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.65, delay: 0.18, ease }}
-                    >
-                        <Text
-                            variant="lead"
-                            className="max-w-lg text-[1.05rem] leading-relaxed text-slate-200/90 sm:text-lg font-normal"
-                        >
-                            {dict.subtitle}
-                        </Text>
-                    </motion.div>
-                </div>
+                    <p className="max-w-lg text-lg font-normal leading-relaxed text-slate-600 lg:text-xl">
+                        {dict.subtitle}
+                    </p>
+                </AnimatedDiv>
             </Container>
-
-            {/* Bottom edge accent */}
-            <div
-                aria-hidden
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-corporate-secondary via-corporate-highlight/80 to-corporate-tertiary/70"
-            />
         </section>
     )
 }

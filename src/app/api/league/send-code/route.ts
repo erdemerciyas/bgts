@@ -100,7 +100,7 @@ export async function POST(req: Request) {
     try {
       await sendEmail({
         to: email,
-        subject: "BGTS League — Doğrulama Kodu",
+        subject: "BGTS Lig — Doğrulama Kodu",
         html: buildLeagueOtpEmailHtml(name, code),
       });
     } catch (error) {

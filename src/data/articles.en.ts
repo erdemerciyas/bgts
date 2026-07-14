@@ -11,6 +11,10 @@ export const ARTICLES_EN: Article[] = [
     date: "2026-03-18",
     category: "Artificial Intelligence",
     readTime: 4,
+    cardTags: ["AI Governance", "C-Suite", "AI Roles"],
+    cardQuote: "Who Should Be Entrusted with the AI Initiative in Enterprises?",
+    cardQuoteHighlight: "AI Initiative",
+    cardTheme: "blue",
     body: `## Who Is Entrusted with the AI Initiative at C-Level in Enterprises?
 
 The question of who should be entrusted with AI at the executive level — one of the most strategic and challenging topics in enterprises — has been a significant concern for many large organizations from day one.
@@ -59,6 +63,10 @@ Perhaps the solution is not to entrust the organization to a single power, but t
     date: "2026-03-08",
     category: "Artificial Intelligence",
     readTime: 3,
+    cardTags: ["AI Insight"],
+    cardQuote: "DSLM and SLM architectures lay the foundation for a new era in artificial intelligence.",
+    cardQuoteHighlight: "artificial intelligence",
+    cardTheme: "green",
     body: `## The Transition from Costly and Unregulated LLMs to DSLMs
 
 AI is evolving from "LLMs that have access to the most data and provide information on many topics" toward domain-specific language models (DSLMs). Regulations expected to come into effect in August will begin to enforce this, and it is predicted that by the end of 2027, **50% of models will be domain-specific** (currently this figure is 1%).
@@ -89,6 +97,10 @@ As a pioneering example, we currently use our own local **"Operational Excellenc
     date: "2026-03-25",
     category: "Artificial Intelligence",
     readTime: 3,
+    cardTags: ["Agentic Commerce"],
+    cardQuote: "Marketing's New Customer: AI Agents",
+    cardQuoteHighlight: "AI Agents",
+    cardTheme: "orange",
     body: `## Marketing's New Customer: AI Agents
 
 Combining an article by Kartik Hosanagar from Harvard Business Review with a conversation we had with the CEO of one of Turkey's leading e-commerce organizations, some small but highly impactful insights emerged in my mind.
@@ -127,6 +139,10 @@ When I put all this together, one question comes to mind: **Have you ever though
     date: "2026-03-22",
     category: "Governance",
     readTime: 5,
+    cardTags: ["AI Governance", "Regulation"],
+    cardQuote: "AI governance is the fundamental framework for sustainable use.",
+    cardQuoteHighlight: "AI governance",
+    cardTheme: "violet",
     body: `## AI Governance 101
 
 ### Risk, Transparency, and the Balance of Responsibility
@@ -177,6 +193,10 @@ In the coming period, the key differentiator for organizations seeking to genera
     date: "2025-02-05",
     category: "Automation",
     readTime: 4,
+    cardTags: ["AIOps", "Automation"],
+    cardQuote: "AI tools free the technical team from the shackles of routine.",
+    cardQuoteHighlight: "AI tools",
+    cardTheme: "rose",
     body: `## How Smart Automation Liberates the Technical Team
 
 In the managed services ecosystem, the most critical front where customer satisfaction is won or lost is typically the call center and "First Contact Resolution" (FCR) teams. Today, many organizations fall into the misconception of viewing AI as a cost-cutting tool or an alternative to human resources. However, the real formula for success is based on a very different vision: **AI tools exist not to replace the technical team, but to free them from the shackles of routine.**
@@ -230,6 +250,10 @@ The table below clearly shows how the vision change is reflected in operational 
     date: "2026-03-12",
     category: "Security",
     readTime: 3,
+    cardTags: ["Cybersecurity", "AI Agents"],
+    cardQuote: "Attackers now target AI agents, not applications.",
+    cardQuoteHighlight: "AI agents",
+    cardTheme: "cyan",
     body: `## From Computer Viruses to the "Malicious MCP Server" Era
 
 Cybersecurity threats have undergone a serious evolution over the decades:
@@ -295,6 +319,10 @@ Because the question is no longer: "Is this code secure?" The question now is: *
     date: "2025-02-15",
     category: "Infrastructure",
     readTime: 3,
+    cardTags: ["MSP", "Customer Success"],
+    cardQuote: "True success goes beyond standard contract terms.",
+    cardQuoteHighlight: "True success",
+    cardTheme: "blue",
     body: `## Beyond SLA Numbers: Delivering "Value-Added" Services to Customers
 
 Is it enough for an IT service to be considered successful if only the Service Level Agreement (SLA) success rates are green and incident-to-request ratios are at target levels? Most of the time, no.

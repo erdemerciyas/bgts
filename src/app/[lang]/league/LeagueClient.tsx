@@ -13,7 +13,6 @@ import {
   upsertGuess,
   type LeagueLocalState,
 } from "@/lib/league/storage";
-import { getLeagueAbsoluteUrl, getLeagueDisplayUrl } from "@/lib/league/urls";
 import "./league.css";
 
 type Screen =
@@ -45,6 +44,13 @@ type SeasonPayload = {
     closePct: number;
     closePts: number;
   };
+  announcement: {
+    greeting: string;
+    body: string[];
+    goals: string[];
+    closing: string;
+    signOff: string;
+  };
   atmosphereLeaderboard: { name: string; seasonPts: number; monthPts: number }[];
 };
 
@@ -59,33 +65,9 @@ type Bootstrap = {
 
 type BoardTab = "month" | "season";
 
-function BrandBar() {
-  return (
-    <div className="league-brand">
-      <Image
-        src="/BGTS_logo_white.png"
-        alt="BGTS"
-        width={140}
-        height={34}
-        priority
-        className="league-logo-img"
-      />
-    </div>
-  );
-}
-
-const PRIZE_MEDALS = ["🥇", "🥈", "🥉"];
-
-const LANDING_FEATURES = [
-  { icon: "📣", text: "Bu ayın tahmini yayında" },
-  { icon: "✉️", text: "BGTS e-posta adresinle giriş yap" },
-  { icon: "🎯", text: "Tahminini yap, puanını topla" },
-  { icon: "📈", text: "Sezon boyunca ligde yüksel" },
-];
-
 function formatCountdown(targetIso: string, nowMs: number): string {
   const diff = new Date(targetIso).getTime() - nowMs;
-  if (diff <= 0) return "çok yakında";
+  if (diff <= 0) return "Şimdi";
   const totalMin = Math.floor(diff / 60000);
   const days = Math.floor(totalMin / (60 * 24));
   const hours = Math.floor((totalMin % (60 * 24)) / 60);
@@ -93,24 +75,6 @@ function formatCountdown(targetIso: string, nowMs: number): string {
   if (days > 0) return `${days} gün ${hours} saat ${mins} dk`;
   if (hours > 0) return `${hours} saat ${mins} dk`;
   return `${mins} dk`;
-}
-
-function formatRevealDate(iso: string): string {
-  return new Date(iso).toLocaleString("tr-TR", {
-    day: "numeric",
-    month: "long",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-}
-
-function formatNextQuestionDate(iso: string): string {
-  return (
-    new Date(iso).toLocaleDateString("tr-TR", {
-      day: "numeric",
-      month: "long",
-    }) + " 09:00"
-  );
 }
 
 function parseGuessInput(raw: string): number | null {
@@ -122,8 +86,60 @@ function parseGuessInput(raw: string): number | null {
   return n;
 }
 
-function monthTabLabel(monthLeg: string): string {
-  return monthLeg.replace(/\s*Ayağı\s*$/, "");
+function GeometryBackdrop() {
+  return (
+    <div className="league-geometry" aria-hidden>
+      <svg className="g1" viewBox="0 0 80 80" fill="currentColor">
+        <path d="M8 8h28v18H26v28H8V8zm36 18h28v46H44V46h18V26H44z" />
+      </svg>
+      <svg className="g2" viewBox="0 0 80 80" fill="currentColor">
+        <path d="M12 12h36v16H28v40H12V12zm40 24h16v32H52V36z" />
+      </svg>
+      <svg className="g3" viewBox="0 0 80 80" fill="currentColor">
+        <path d="M10 50h20V10h20v60H10V50zm44-20h16v40H54V30z" />
+      </svg>
+      <svg className="g4" viewBox="0 0 80 80" fill="currentColor">
+        <path d="M6 6h32v20H24v36H6V6zm38 22h30v46H44V48h20V28H44z" />
+      </svg>
+    </div>
+  );
+}
+
+function BgtsLockup({
+  subtitle = "Dahili Lig",
+  size = "md",
+}: {
+  subtitle?: string;
+  size?: "md" | "lg";
+}) {
+  const width = size === "lg" ? 200 : 156;
+  const height = size === "lg" ? 54 : 42;
+  return (
+    <div className={`league-lockup${size === "lg" ? " league-lockup--lg" : ""}`}>
+      <Image
+        src="/BGTS_logo_white.png"
+        alt="BGTS"
+        width={width}
+        height={height}
+        priority
+        className="league-lockup-logo"
+      />
+      <div className="league-lockup-text">
+        <div className="league-lockup-title">
+          BGTS <span>Lig</span>
+        </div>
+        {subtitle ? <div className="league-lockup-sub">{subtitle}</div> : null}
+      </div>
+    </div>
+  );
+}
+
+function BrandBar({ seasonLabel }: { seasonLabel: string }) {
+  return (
+    <div className="league-brand">
+      <BgtsLockup subtitle={seasonLabel} />
+    </div>
+  );
 }
 
 export default function LeagueClient({ lang }: { lang: string }) {
@@ -213,11 +229,11 @@ export default function LeagueClient({ lang }: { lang: string }) {
     const trimmedName = name.trim();
     const trimmedEmail = email.trim().toLowerCase();
     if (trimmedName.length < 3) {
-      setError("Lütfen ad soyad gir.");
+      setError("Ad soyad en az 3 karakter olmalı.");
       return;
     }
     if (!/^[a-z0-9._%+-]+@bgts\.com$/.test(trimmedEmail)) {
-      setError("Geçerli bir @bgts.com adresi gerekli.");
+      setError("Yalnızca @bgts.com e-posta adresi kabul edilir.");
       return;
     }
     setBusy(true);
@@ -399,12 +415,6 @@ export default function LeagueClient({ lang }: { lang: string }) {
     };
   }, [screen, question, local]);
 
-  const adjustGuess = (delta: number) => {
-    const current = parseGuessInput(guessText) ?? 0;
-    const next = Math.max(0, Math.min(999, current + delta));
-    setGuessText(String(next));
-  };
-
   const onOtpChange = (index: number, value: string) => {
     const digit = value.replace(/\D/g, "").slice(-1);
     const next = [...otp];
@@ -448,36 +458,15 @@ export default function LeagueClient({ lang }: { lang: string }) {
   }, [season, local, boardTab]);
 
   const myRank = boardRows.findIndex((r) => r.me) + 1;
-  const participantCount = boardRows.length * 14;
 
   const countdownTarget =
     question?.status === "open" || question?.status === "closed"
       ? question.revealAt
       : boot?.nextOpensAt;
 
-  const nextQuestionTarget = boot?.nextOpensAt ?? question?.opensAt ?? null;
-
-  const monthPts = useMemo(() => {
-    if (!local) return 0;
-    return Object.values(local.guesses).reduce(
-      (sum, g) => sum + (g.totalPts ?? g.participationPts),
-      0
-    );
-  }, [local]);
-
-  const isRevealed = Boolean(revealInfo || storedGuess?.revealed);
-  const earnedPts =
-    revealInfo?.score?.total ??
-    storedGuess?.totalPts ??
-    storedGuess?.participationPts ??
-    season?.scoring.participation ??
-    10;
-
   const transition = reduceMotion
     ? { duration: 0 }
-    : { duration: 0.35, ease: [0.16, 1, 0.3, 1] as const };
-
-  const shellClass = "league-shell";
+    : { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const };
 
   if (loadError) {
     return (
@@ -500,58 +489,66 @@ export default function LeagueClient({ lang }: { lang: string }) {
   }
 
   return (
-    <div
-      className={`league-root${screen === "announce" ? " league-on-announce" : ""}`}
-    >
-      <div className={shellClass}>
-        {screen !== "announce" && <BrandBar />}
+    <div className="league-root">
+      <div className="league-glow" aria-hidden />
+      <GeometryBackdrop />
+      <div className="league-shell">
+        {screen !== "announce" && (
+          <BrandBar seasonLabel={season.label} />
+        )}
 
         <AnimatePresence mode="wait">
           {screen === "announce" && (
             <motion.section
               key="announce"
-              initial={{ opacity: 0, y: reduceMotion ? 0 : 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 14, scale: reduceMotion ? 1 : 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: reduceMotion ? 0 : -10 }}
               transition={transition}
               className="league-ann-wrap"
             >
+              <p className="league-ann-eyebrow">İnsan Kaynakları · Dahili Duyuru</p>
               <div className="league-ann-card">
                 <div className="league-ann-top">
-                  <Image
-                    src="/BGTS_logo_white.png"
-                    alt="BGTS"
-                    width={180}
-                    height={48}
-                    priority
-                    className="league-ann-logo"
-                  />
+                  <BgtsLockup size="lg" subtitle="Şirketi En İyi Kim Tanıyor?" />
                   <h1 className="league-ann-title">
-                    BGTS <em>Lig</em> başlıyor! 🏆
+                    BGTS <em>Lig</em>
                   </h1>
+                  <p className="league-ann-sub">
+                    {season.titles.main}
+                    <br />
+                    {season.titles.sub}
+                  </p>
                 </div>
                 <div className="league-ann-body">
-                  <p className="league-ann-text">
-                    Bu ayın tahmini yayında. Tahminini yap, puanını topla, ligde yüksel.
+                  <p>{season.announcement.greeting}</p>
+                  {season.announcement.body.map((p) => (
+                    <p key={p.slice(0, 24)}>{p}</p>
+                  ))}
+                  <p>
+                    <strong>Bu uygulama ile;</strong>
                   </p>
-                  <p className="league-ann-text">
-                    Sezon sonunda zirvedekileri <b>sürpriz hediyeler</b> bekliyor. 🎁
+                  <ul className="league-goals">
+                    {season.announcement.goals.map((g) => (
+                      <li key={g}>{g}</li>
+                    ))}
+                  </ul>
+                  <p>{season.announcement.closing}</p>
+                  <p style={{ whiteSpace: "pre-line", marginTop: 16 }}>
+                    {season.announcement.signOff}
                   </p>
-                  <div className="league-ann-cta">
-                    <button
-                      type="button"
-                      className="league-btn"
-                      onClick={() => setScreen("landing")}
-                    >
-                      Tahminimi Yap →
-                    </button>
-                    <a
-                      href={getLeagueAbsoluteUrl(locale)}
-                      className="league-ann-link"
-                    >
-                      {getLeagueDisplayUrl(locale)}
-                    </a>
-                  </div>
+                  <button
+                    type="button"
+                    className="league-btn"
+                    onClick={() => setScreen("landing")}
+                  >
+                    Yarışmaya Katıl →
+                  </button>
+                </div>
+                <div className="league-ann-meta">
+                  <span>{season.label}</span>
+                  <span>·</span>
+                  <span>{season.monthLeg}</span>
                 </div>
               </div>
             </motion.section>
@@ -560,80 +557,103 @@ export default function LeagueClient({ lang }: { lang: string }) {
           {screen === "landing" && (
             <motion.section
               key="landing"
-              initial={{ opacity: 0, y: reduceMotion ? 0 : 8 }}
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 14 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
+              exit={{ opacity: 0, y: reduceMotion ? 0 : -10 }}
               transition={transition}
-              className="league-landing-stack"
             >
-              <div className="league-card league-block">
-                <div className="league-block-label">Nasıl Çalışır?</div>
-                <h2 className="league-screen-title league-screen-title--sm">
-                  Yarışmaya Katıl
-                </h2>
-                <ul className="league-feat-list">
-                  {LANDING_FEATURES.map((f) => (
-                    <li key={f.text}>
-                      <span className="league-feat-icon">{f.icon}</span>
-                      {f.text}
-                    </li>
-                  ))}
-                </ul>
+              <div className="league-chip-row">
+                <span className="league-chip">Haftalık soru</span>
+                <span className="league-chip gold">Aylık zirve</span>
+                <span className="league-chip">Sezon ödülleri</span>
               </div>
 
-              <div className="league-card league-block">
-                <div className="league-block-label">Katılım Formu</div>
-                <label htmlFor="league-name">Ad Soyad</label>
-                <input
-                  id="league-name"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  autoComplete="name"
-                  placeholder="Ör. Deniz Yılmaz"
-                />
-                <label htmlFor="league-email">BGTS E-posta Adresi</label>
-                <input
-                  id="league-email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  autoComplete="email"
-                  placeholder="ad.soyad@bgts.com"
-                />
-                <p className="league-hint">
-                  Sadece <b>@bgts.com</b> uzantılı adresler kabul edilir.
-                </p>
-                {error && <p className="league-error">{error}</p>}
-                <button
-                  type="button"
-                  className="league-btn league-btn-block"
-                  disabled={busy}
-                  onClick={() => void sendCode(false)}
-                >
-                  {busy ? "Gönderiliyor…" : "Doğrulama Kodu Gönder"}
-                </button>
-              </div>
+              <div className="league-grid-2">
+                <div className="league-card league-prizes-panel">
+                  <div className="league-prizes-title">Sezon Sonu Ödülleri</div>
+                  <p className="league-prizes-lead">
+                    Zirveye çık, hediyeyi kap. İlk üçe özel sürprizler seni bekliyor.
+                  </p>
 
-              <div className="league-card league-block">
-                <div className="league-block-label">🏆 Sezon Sonu Ödülleri</div>
-                <div className="league-prz-grid">
-                  {season.prizes.slice(0, 3).map((p, i) => (
-                    <div key={p.rank} className={`league-prz${i === 0 ? " p1" : ""}`}>
-                      <div className="league-prz-photo">
+                  {season.prizes[0] && (
+                    <div className="league-prize-hero">
+                      <div className="league-prize-hero-media">
                         <Image
-                          src={p.image}
-                          alt={p.label}
-                          width={120}
-                          height={80}
+                          src={season.prizes[0].image}
+                          alt={season.prizes[0].label}
+                          width={280}
+                          height={280}
+                          className="league-prize-img"
                         />
+                        <span className="league-prize-badge">1.</span>
                       </div>
-                      <div className="league-prz-rank">{PRIZE_MEDALS[i] ?? `${p.rank}.`}</div>
-                      <div className="league-prz-name">{p.label}</div>
+                      <div className="league-prize-hero-copy">
+                        <p className="league-prize-hook">{season.prizes[0].hook}</p>
+                        <h3 className="league-prize-name">{season.prizes[0].label}</h3>
+                        {season.prizes[0].detail && (
+                          <p className="league-prize-detail">{season.prizes[0].detail}</p>
+                        )}
+                      </div>
                     </div>
-                  ))}
+                  )}
+
+                  <div className="league-prize-grid">
+                    {season.prizes.slice(1).map((p) => (
+                      <article key={p.rank} className="league-prize-tile">
+                        <div className="league-prize-tile-media">
+                          <Image
+                            src={p.image}
+                            alt={p.label}
+                            width={160}
+                            height={160}
+                            className="league-prize-img"
+                          />
+                          <span className="league-prize-badge">{p.rank}.</span>
+                        </div>
+                        <p className="league-prize-hook">{p.hook}</p>
+                        <h4 className="league-prize-name">{p.label}</h4>
+                        {p.detail && <p className="league-prize-detail">{p.detail}</p>}
+                      </article>
+                    ))}
+                  </div>
+
+                  <p className="league-hint league-prizes-bonus">
+                    {season.monthlyBonusNote}
+                  </p>
                 </div>
-                <p className="league-prize-foot">{season.monthlyBonusNote} 🎁</p>
+
+                <div className="league-card league-join-pulse">
+                  <h2 className="league-screen-title">Hemen katıl</h2>
+                  <p className="league-sub">Sadece @bgts.com uzantılı adresler kabul edilir.</p>
+                  <label htmlFor="league-name">Ad Soyad</label>
+                  <input
+                    id="league-name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    autoComplete="name"
+                    placeholder="Adın Soyadın"
+                  />
+                  <label htmlFor="league-email">Kurumsal E-posta</label>
+                  <input
+                    id="league-email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="email"
+                    placeholder="ad.soyad@bgts.com"
+                  />
+                  <p className="league-hint">Doğrulama kodu bu adrese gelir.</p>
+                  {error && <p className="league-error">{error}</p>}
+                  <button
+                    type="button"
+                    className="league-btn"
+                    disabled={busy}
+                    onClick={() => void sendCode(false)}
+                  >
+                    {busy ? "Gönderiliyor…" : "Doğrulama Kodunu Gönder"}
+                  </button>
+                </div>
               </div>
             </motion.section>
           )}
@@ -641,18 +661,20 @@ export default function LeagueClient({ lang }: { lang: string }) {
           {screen === "verify" && (
             <motion.section
               key="verify"
-              initial={{ opacity: 0, y: reduceMotion ? 0 : 8 }}
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
               transition={transition}
-              className="league-auth-section"
+              className="league-auth-wrap"
             >
-              <h2 className="league-screen-title">E-postanı doğrula</h2>
-              <p className="league-sub">
-                <b>{email}</b> adresine 6 haneli tek
-                kullanımlık kod gönderildi. Kod 10 dakika geçerlidir.
-              </p>
               <div className="league-card league-auth-card">
+                <p className="league-auth-eyebrow">E-posta doğrulama</p>
+                <h2 className="league-screen-title">Tekrar hoş geldin</h2>
+                <p className="league-sub league-auth-copy">
+                  <strong>{email}</strong> adresine 6 haneli kod gönderdik.
+                  Gelen kutunu kontrol et ve kodu aşağıya gir.
+                </p>
+
                 <div className="league-otp-row" onPaste={onOtpPaste}>
                   {otp.map((d, i) => (
                     <input
@@ -670,28 +692,43 @@ export default function LeagueClient({ lang }: { lang: string }) {
                     />
                   ))}
                 </div>
+
                 {error && <p className="league-error">{error}</p>}
-                {info && <p className="league-info">{info}</p>}
-                <div className="league-auth-actions">
+                {info && <p className="league-auth-info">{info}</p>}
+
+                <button
+                  type="button"
+                  className="league-btn league-btn-block"
+                  disabled={busy}
+                  onClick={() => void verifyCode()}
+                >
+                  {busy ? "Doğrulanıyor…" : "Kodu Doğrula"}
+                </button>
+
+                <div className="league-auth-footer">
                   <button
                     type="button"
-                    className="league-btn league-btn-block"
+                    className="league-link-btn"
                     disabled={busy}
-                    onClick={() => void verifyCode()}
+                    onClick={() => void sendCode(true)}
                   >
-                    {busy ? "Doğrulanıyor…" : "Kodu Doğrula"}
+                    Kodu tekrar gönder
                   </button>
-                  <div className="league-auth-footer">
-                    <button
-                      type="button"
-                      className="league-link-btn"
-                      disabled={busy}
-                      onClick={() => void sendCode(true)}
-                    >
-                      Kodu tekrar gönder
-                    </button>
-                  </div>
+                  <button
+                    type="button"
+                    className="league-link-btn"
+                    disabled={busy}
+                    onClick={() => {
+                      setError(null);
+                      setInfo(null);
+                      setScreen("landing");
+                    }}
+                  >
+                    E-postayı değiştir
+                  </button>
                 </div>
+
+                <p className="league-auth-meta">Kod 10 dakika geçerlidir · @bgts.com</p>
               </div>
             </motion.section>
           )}
@@ -699,11 +736,10 @@ export default function LeagueClient({ lang }: { lang: string }) {
           {screen === "question" && (
             <motion.section
               key="question"
-              initial={{ opacity: 0, y: reduceMotion ? 0 : 8 }}
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
               transition={transition}
-              className="league-flow-section"
             >
               {!question ? (
                 <div className="league-card">
@@ -731,111 +767,84 @@ export default function LeagueClient({ lang }: { lang: string }) {
                   </button>
                 </div>
               ) : (
-                <>
-                  <div className="league-q-label">
-                    {question.monthLabel} Sorusu · Soru {question.weekIndex}/
-                    {question.weekTotal}
+                <div className="league-q-stage">
+                  <div className="league-q-head">
+                    <div className="league-q-meta">
+                      {question.monthLabel} Sorusu · Hafta {question.weekIndex}/
+                      {question.weekTotal} · {question.department}
+                    </div>
+                    <h2 className="league-q-prompt">{question.prompt}</h2>
                   </div>
-                  <h2 className="league-q-text">{question.prompt}</h2>
-                  <div className="league-card">
+                  <div className="league-card league-q-card">
                     {storedGuess && (
-                      <p className="league-hint league-hint--spaced">
-                        Önceki tahminin: <b>{storedGuess.guess}</b> — yeniden gönderebilirsin
+                      <p className="league-result-badge">
+                        Demo: önceki tahminin {storedGuess.guess} — yeniden gönderebilirsin
                       </p>
                     )}
-                    <div className="league-guess-board">
-                      <button
-                        type="button"
-                        className="league-guess-btn"
-                        aria-label="Azalt"
-                        onClick={() => adjustGuess(-1)}
-                      >
-                        −
-                      </button>
-                      <div className="league-guess-value">
-                        <input
-                          id="league-guess"
-                          inputMode="numeric"
-                          autoComplete="off"
-                          placeholder="0"
-                          value={guessText}
-                          onChange={(e) =>
-                            setGuessText(e.target.value.replace(/\D/g, "").slice(0, 6))
-                          }
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter") void submitGuess();
-                            if (e.key === "ArrowUp") {
-                              e.preventDefault();
-                              adjustGuess(1);
-                            }
-                            if (e.key === "ArrowDown") {
-                              e.preventDefault();
-                              adjustGuess(-1);
-                            }
-                          }}
-                          aria-label="Tahminin"
-                        />
-                      </div>
-                      <button
-                        type="button"
-                        className="league-guess-btn"
-                        aria-label="Artır"
-                        onClick={() => adjustGuess(1)}
-                      >
-                        +
-                      </button>
+                    <label htmlFor="league-guess">Cevabın</label>
+                    <div className="league-guess-field">
+                      <input
+                        id="league-guess"
+                        className="league-guess-input"
+                        type="text"
+                        inputMode="numeric"
+                        autoComplete="off"
+                        placeholder="Örn. 1396"
+                        value={guessText}
+                        onChange={(e) => setGuessText(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") void submitGuess();
+                        }}
+                        aria-label="Tahmin cevabı"
+                      />
                     </div>
-                    <p className="league-guess-caption">
-                      Tahminini yaz ya da ok tuşlarıyla ayarla
-                    </p>
-
-                    <div className="league-tip">
-                      💡{" "}
-                      <span>
-                        <b>İpucu:</b> Cevabı bulmak için{" "}
-                        <Link href={localizedHref(locale, question.hintHref)} target="_blank">
-                          {question.hintLabel}
-                        </Link>{" "}
-                        ziyaret edebilirsin. Bazı aylar soru tamamen tahmine dayalı olur — bu
-                        ay cevap sitede saklı.
-                      </span>
-                    </div>
-
+                    <p className="league-hint">Cevabı klavyeden yazabilirsin.</p>
                     <div className="league-points-legend">
-                      <span className="league-pt">
-                        Doğru cevap <b>{season.scoring.exact} P</b>
+                      <span>
+                        <strong>{season.scoring.exact}P</strong>Tam isabet
                       </span>
-                      <span className="league-pt">
-                        En yakın tahmin <b>{season.scoring.nearPts} P</b>
+                      <span>
+                        <strong>{season.scoring.nearPts}P</strong>±%{season.scoring.nearPct}
                       </span>
-                      <span className="league-pt">
-                        Yakın tahmin <b>{season.scoring.closePts} P</b>
+                      <span>
+                        <strong>{season.scoring.closePts}P</strong>±%{season.scoring.closePct}
                       </span>
-                      <span className="league-pt">
-                        Katılım <b>{season.scoring.participation} P</b>
+                      <span>
+                        <strong>{season.scoring.participation}P</strong>Katılım
                       </span>
                     </div>
-                    <p className="league-hint league-hint--center">
-                      Katılım puanı anında hesabına geçer. Doğru cevap ve en yakın tahmin
-                      puanları, tüm tahminler toplandıktan sonra <b>ay sonunda</b> açıklanır.
+                    <p className="league-hint">
+                      Katılım puanı hemen yazılır. Doğru cevap ve bonuslar{" "}
+                      {new Date(question.revealAt).toLocaleString("tr-TR", {
+                        day: "numeric",
+                        month: "long",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}{" "}
+                      itibarıyla açıklanır.
                     </p>
+                    <Link
+                      className="league-tip-link"
+                      href={localizedHref(locale, question.hintHref)}
+                      target="_blank"
+                    >
+                      İpucu: {question.hintLabel} →
+                    </Link>
                     {error && <p className="league-error">{error}</p>}
-                    <div className="league-card-actions">
-                      <button
-                        type="button"
-                        className="league-btn league-btn-block"
-                        disabled={busy}
-                        onClick={() => void submitGuess()}
-                      >
-                        {busy
-                          ? "Kaydediliyor…"
-                          : storedGuess
-                            ? "Tahmini Güncelle"
-                            : "Tahminimi Gönder"}
-                      </button>
-                    </div>
+                    <button
+                      type="button"
+                      className="league-btn"
+                      disabled={busy}
+                      onClick={() => void submitGuess()}
+                    >
+                      {busy
+                        ? "Kaydediliyor…"
+                        : storedGuess
+                          ? "Tahmini Güncelle"
+                          : "Tahminimi Gönder"}
+                    </button>
                   </div>
-                </>
+                </div>
               )}
             </motion.section>
           )}
@@ -843,76 +852,117 @@ export default function LeagueClient({ lang }: { lang: string }) {
           {screen === "result" && (
             <motion.section
               key="result"
-              initial={{ opacity: 0, y: reduceMotion ? 0 : 8 }}
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
               transition={transition}
-              className="league-result-section"
             >
-              <div className="league-result-hero">
-                <span className="league-badge">
-                  {isRevealed ? "Skor güncellendi" : "✓ Tahminin kaydedildi"}
-                </span>
-                <div className="league-earned">+{earnedPts}</div>
-                <div className="league-earned-label">
-                  {isRevealed ? "toplam puanın güncellendi" : "katılım puanı hesabına geçti"}
-                </div>
-                {isRevealed ? (
-                  <p className="league-deferred-note">
-                    Senin tahminin: <b>{storedGuess?.guess ?? "—"}</b> · Doğru cevap:{" "}
-                    <b>{revealInfo?.correctAnswer ?? "—"}</b>
-                    {revealInfo?.explanation ? (
-                      <>
-                        <br />
-                        {revealInfo.explanation}
-                      </>
-                    ) : null}
-                  </p>
-                ) : (
-                  <p className="league-deferred-note">
-                    🔒 Tahminin: <b>{storedGuess?.guess ?? guessText ?? "—"}</b> · Doğru
-                    cevap ve <b>en yakın tahmin</b> bonusları ({season.scoring.exact} /{" "}
-                    {season.scoring.nearPts} / {season.scoring.closePts} P){" "}
-                    {question ? (
-                      <b>{formatRevealDate(question.revealAt)}</b>
-                    ) : (
-                      <b>ay sonunda</b>
+              <div className="league-card">
+                {revealInfo || storedGuess?.revealed ? (
+                  <>
+                    <p className="league-result-badge">
+                      {revealInfo?.correctAnswer != null || storedGuess?.band === "exact"
+                        ? "Skor güncellendi"
+                        : "Sonuç"}
+                    </p>
+                    <h2 className="league-screen-title">Sonuç</h2>
+                    <p className="league-sub">
+                      Senin tahminin:{" "}
+                      <strong style={{ color: "var(--text)" }}>
+                        {storedGuess?.guess ?? "—"}
+                      </strong>
+                      {" · "}
+                      Doğru cevap:{" "}
+                      <strong style={{ color: "var(--teal)" }}>
+                        {revealInfo?.correctAnswer ?? "Netleşecek"}
+                      </strong>
+                    </p>
+                    <div className="league-result-pts">
+                      +
+                      {revealInfo?.score?.total ??
+                        storedGuess?.totalPts ??
+                        storedGuess?.participationPts ??
+                        10}
+                    </div>
+                    {revealInfo?.score && (
+                      <p className="league-hint">
+                        Katılım {revealInfo.score.participation}P
+                        {revealInfo.score.bonus > 0
+                          ? ` · Bonus ${revealInfo.score.bonus}P (${revealInfo.score.band})`
+                          : " · Bonus yok"}
+                      </p>
                     )}
-                    &apos;de açıklanacak.
-                  </p>
+                    {revealInfo?.explanation && (
+                      <p className="league-sub">{revealInfo.explanation}</p>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <p className="league-result-badge">Tahminin kaydedildi</p>
+                    <h2 className="league-screen-title">Harika, ligdesin</h2>
+                    <div className="league-result-pts">
+                      +
+                      {storedGuess?.totalPts ??
+                        storedGuess?.participationPts ??
+                        season.scoring.participation}
+                    </div>
+                    <p className="league-sub">
+                      Katılım puanın eklendi. Tahminin:{" "}
+                      <strong style={{ color: "var(--text)" }}>
+                        {storedGuess?.guess ?? (guessText || "—")}
+                      </strong>
+                    </p>
+                  </>
                 )}
-              </div>
 
-              <div className="league-stat-row">
-                <div className="league-stat">
-                  <div className="v">{local?.seasonPts ?? monthPts}</div>
-                  <div className="k">Toplam puanın</div>
+                <div className="league-stat-row">
+                  <div className="league-stat">
+                    <b>{local?.seasonPts ?? 0}</b>
+                    <span>Sezon puanı</span>
+                  </div>
+                  <div className="league-stat">
+                    <b>{myRank > 0 ? `#${myRank}` : "—"}</b>
+                    <span>Geçici sıra</span>
+                  </div>
+                  <div className="league-stat">
+                    <b>{Object.keys(local?.guesses ?? {}).length}</b>
+                    <span>Katıldığın soru</span>
+                  </div>
                 </div>
-                <div className="league-stat">
-                  <div className="v">{myRank > 0 ? `${myRank}.` : "—"}</div>
-                  <div className="k">Bu ayki sıralaman</div>
-                </div>
-                <div className="league-stat">
-                  <div className="v">{participantCount || "—"}</div>
-                  <div className="k">Katılımcı</div>
-                </div>
-              </div>
 
-              {nextQuestionTarget && (
-                <p className="league-countdown-note">
-                  Sonraki soru <b>{formatNextQuestionDate(nextQuestionTarget)}</b> tarihinde
-                  açılacak · <b>{formatCountdown(nextQuestionTarget, nowTick)}</b>
-                </p>
-              )}
+                {countdownTarget && !revealInfo && !storedGuess?.revealed && (
+                  <div className="league-countdown">
+                    Açıklamaya kalan: {formatCountdown(countdownTarget, nowTick)}
+                  </div>
+                )}
 
-              <div className="league-center-actions">
-                <button
-                  type="button"
-                  className="league-btn"
-                  onClick={() => setScreen("league")}
-                >
-                  Lig Tablosunu Gör
-                </button>
+                <div className="league-actions">
+                  <button
+                    type="button"
+                    className="league-btn"
+                    onClick={() => setScreen("league")}
+                  >
+                    Lig Tablosunu Gör →
+                  </button>
+                  {question?.status === "open" && (
+                    <button
+                      type="button"
+                      className="league-btn ghost"
+                      onClick={() => setScreen("question")}
+                    >
+                      Tekrar Cevapla
+                    </button>
+                  )}
+                  {question?.hintHref && (
+                    <Link
+                      className="league-btn ghost"
+                      href={localizedHref(locale, question.hintHref)}
+                      style={{ textDecoration: "none" }}
+                    >
+                      Siteye Göz At
+                    </Link>
+                  )}
+                </div>
               </div>
             </motion.section>
           )}
@@ -920,39 +970,33 @@ export default function LeagueClient({ lang }: { lang: string }) {
           {screen === "league" && (
             <motion.section
               key="league"
-              initial={{ opacity: 0, y: reduceMotion ? 0 : 8 }}
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
               transition={transition}
-              className="league-flow-section"
             >
-              <div className="league-lg-head">
-                <h2 className="league-screen-title league-screen-title--flush">
-                  Lig Tablosu
-                </h2>
-                <div className="league-toggle" role="tablist" aria-label="Lig dönemi">
-                  <button
-                    type="button"
-                    className={boardTab === "month" ? "active" : ""}
-                    role="tab"
-                    aria-selected={boardTab === "month"}
-                    onClick={() => setBoardTab("month")}
-                  >
-                    {monthTabLabel(season.monthLeg)}
-                  </button>
-                  <button
-                    type="button"
-                    className={boardTab === "season" ? "active" : ""}
-                    role="tab"
-                    aria-selected={boardTab === "season"}
-                    onClick={() => setBoardTab("season")}
-                  >
-                    {season.label}
-                  </button>
-                </div>
+              <h2 className="league-screen-title">Lig tablosu</h2>
+              <p className="league-sub">
+                Kişisel puanın gerçek; sıralama atmosferi Phase 1’de örnek satırlarla
+                tamamlanır.
+              </p>
+              <div className="league-toggle" role="tablist">
+                <button
+                  type="button"
+                  className={boardTab === "month" ? "active" : ""}
+                  onClick={() => setBoardTab("month")}
+                >
+                  {season.monthLeg}
+                </button>
+                <button
+                  type="button"
+                  className={boardTab === "season" ? "active" : ""}
+                  onClick={() => setBoardTab("season")}
+                >
+                  {season.label}
+                </button>
               </div>
-
-              <div className="league-card league-card--board">
+              <div className="league-card" style={{ padding: "12px 8px 8px" }}>
                 <table className="league-board">
                   <thead>
                     <tr>
@@ -965,48 +1009,49 @@ export default function LeagueClient({ lang }: { lang: string }) {
                     {boardRows.map((row, i) => (
                       <tr key={`${row.name}-${i}`} className={row.me ? "me" : undefined}>
                         <td className="rank">
-                          {PRIZE_MEDALS[i] ?? ""}
-                          {i + 1}
+                          {i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}
                         </td>
                         <td>{row.me ? `${row.name} (sen)` : row.name}</td>
-                        <td className="pts">{row.pts}</td>
+                        <td>{row.pts}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
-
               <div className="league-prize-strip">
-                {season.prizes.slice(0, 3).map((p, i) => (
-                  <span key={p.rank} className="league-ps-item">
-                    {PRIZE_MEDALS[i]} {p.label}
-                  </span>
-                ))}
+                <strong style={{ color: "var(--text)" }}>Sezon ödülleri</strong>
+                <div className="league-prize-strip-grid">
+                  {season.prizes.map((p) => (
+                    <div key={p.rank} className="league-prize-strip-item">
+                      <Image
+                        src={p.image}
+                        alt={p.label}
+                        width={96}
+                        height={96}
+                      />
+                      <span>
+                        {p.rank}. {p.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-
-              {nextQuestionTarget && (
-                <p className="league-countdown-note">
-                  Bir sonraki soru: <b>{formatNextQuestionDate(nextQuestionTarget)}</b> ·
-                  Puanını korumak için her ay geri gel 🏁
-                </p>
-              )}
-
-              <div className="league-center-actions">
+              <div className="league-actions">
+                <button
+                  type="button"
+                  className="league-btn"
+                  onClick={() =>
+                    setScreen(question?.status === "open" ? "question" : "result")
+                  }
+                >
+                  Geri Dön
+                </button>
                 <button
                   type="button"
                   className="league-btn ghost"
-                  onClick={() => {
-                    setName("");
-                    setEmail("");
-                    setGuessText("");
-                    setOtp(["", "", "", "", "", ""]);
-                    setRevealInfo(null);
-                    setError(null);
-                    setInfo(null);
-                    setScreen("announce");
-                  }}
+                  onClick={() => setScreen("announce")}
                 >
-                  Demoyu Baştan Başlat
+                  Duyuruyu Oku
                 </button>
               </div>
             </motion.section>
