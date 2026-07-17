@@ -1567,7 +1567,7 @@
     },
     "analyses": {
       "name": "Analizler",
-      "heading": "Son Makaleler",
+      "heading": "Son Analizler",
       "allArticles": "Tüm Analizler"
     },
     "quickLinks": {
@@ -3378,7 +3378,7 @@
   "articles": {
     "title": "Analizler",
     "subtitle": "Teknoloji dünyasına dair güncel içgörüler ve uzman analizler",
-    "readMore": "Makaleyi Oku",
+    "readMore": "Analizi Oku",
     "allArticles": "Tüm Analizler",
     "closeModal": "Kapat",
     "readTime": "dk okuma",

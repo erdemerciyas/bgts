@@ -155,7 +155,7 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
       href: p("/resources/analyses"),
       subGroups: [
         {
-          heading: t("analyses", "heading", "Son Makaleler", "Latest Articles"),
+          heading: t("analyses", "heading", "Son Analizler", "Latest Analyses"),
           links: [
             { title: t("analyses", "allArticles", "Tüm Analizler", "All Analyses"), href: p("/resources/analyses"), icon: FileText },
           ]

@@ -1,11 +1,10 @@
 "use client"
 
-import { useState, useEffect, useCallback, Suspense } from "react"
+import { useState, useEffect, useCallback, useMemo, Suspense } from "react"
 import { useSearchParams, useRouter, usePathname } from "next/navigation"
 import dynamic from "next/dynamic"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
-import { Heading } from "@/components/ui/Typography"
 import { motion } from "framer-motion"
 import type { Article } from "@/data/articles.tr"
 import {
@@ -16,6 +15,7 @@ import {
     CARD_THEMES,
 } from "@/components/resources/ArticleCardHeader"
 import ArticlesHero from "@/components/resources/ArticlesHero"
+import { getLatestArticles } from "@/lib/articles"
 
 const ArticleModal = dynamic(() => import("@/components/resources/ArticleModal"), { ssr: false })
 
@@ -47,19 +47,15 @@ export default function ArticlesClient(props: ArticlesClientProps) {
 }
 
 function ArticlesPageFallback({ articles, dict }: ArticlesClientProps) {
+    const sortedArticles = getLatestArticles(articles, articles.length)
+
     return (
         <div className="bg-[#F8F9FA] min-h-screen">
             <ArticlesHero dict={dict} />
             <Section background="default" className="bg-[#F8F9FA] py-16 md:py-24">
                 <Container>
-                    <Heading
-                        variant="h2"
-                        className="mb-12 text-3xl font-bold tracking-tight text-slate-900"
-                    >
-                        {dict.allArticles}
-                    </Heading>
                     <div className="grid grid-cols-1 gap-6 [grid-template-columns:repeat(1,minmax(0,1fr))] md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:[grid-template-columns:repeat(3,minmax(0,1fr))]">
-                        {articles.map((article) => (
+                        {sortedArticles.map((article) => (
                             <div
                                 key={article.id}
                                 className="h-80 animate-pulse rounded-xl border border-slate-100 bg-white"
@@ -77,13 +73,17 @@ function ArticlesClientInner({ articles, dict, lang }: ArticlesClientProps) {
     const router = useRouter()
     const pathname = usePathname()
     const [selectedArticle, setSelectedArticle] = useState<Article | null>(null)
+    const sortedArticles = useMemo(
+        () => getLatestArticles(articles, articles.length),
+        [articles]
+    )
 
     useEffect(() => {
         const articleId = searchParams.get("article")
         if (!articleId) return
-        const article = articles.find((a) => a.id === articleId)
+        const article = sortedArticles.find((a) => a.id === articleId)
         if (article) setSelectedArticle(article)
-    }, [searchParams, articles])
+    }, [searchParams, sortedArticles])
 
     const closeModal = useCallback(() => {
         setSelectedArticle(null)
@@ -109,20 +109,8 @@ function ArticlesClientInner({ articles, dict, lang }: ArticlesClientProps) {
 
             <Section background="default" className="bg-[#F8F9FA] py-16 md:py-24">
                 <Container>
-                    <div className="mb-12 flex flex-wrap items-center gap-3 border-b border-slate-200/80 pb-6">
-                        <Heading
-                            variant="h2"
-                            className="text-3xl font-bold tracking-tight text-slate-900"
-                        >
-                            {dict.allArticles}
-                        </Heading>
-                        <span className="inline-flex items-center justify-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-700">
-                            {articles.length}
-                        </span>
-                    </div>
-
                     <div className="grid grid-cols-1 gap-6 [grid-template-columns:repeat(1,minmax(0,1fr))] md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:[grid-template-columns:repeat(3,minmax(0,1fr))]">
-                        {articles.map((article, index) => (
+                        {sortedArticles.map((article, index) => (
                             <ArticleCard
                                 key={article.id}
                                 article={article}
@@ -177,7 +165,8 @@ function ArticleCard({
             tabIndex={0}
             role="button"
             aria-label={article.title}
-            className="group grid h-full min-w-0 cursor-pointer grid-rows-subgrid rounded-xl border border-slate-100 bg-white shadow-[0_4px_6px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 [grid-row:span_4]"
+            className="group grid h-full min-w-0 cursor-pointer grid-rows-subgrid rounded-xl border bg-white shadow-[0_4px_6px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 [grid-row:span_4]"
+            style={{ borderColor: `color-mix(in srgb, ${theme.accent} 32%, transparent)` }}
         >
             <div className="px-6 pt-6">
                 <ArticleCardTags article={article} variant="card" />

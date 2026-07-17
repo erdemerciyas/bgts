@@ -1,9 +1,5 @@
-"use client"
-
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { Container } from "@/components/ui/Container"
-import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 
 type ArticlesHeroDict = {
     title: string
@@ -14,44 +10,39 @@ interface ArticlesHeroProps {
     dict: ArticlesHeroDict
 }
 
-const ease = [0.22, 1, 0.36, 1] as const
-
 export default function ArticlesHero({ dict }: ArticlesHeroProps) {
     return (
-        <section className="relative flex min-h-[40vh] items-center overflow-hidden bg-[#F4F6F8] pt-16 pb-12 lg:pt-28 lg:pb-16">
-            <motion.div
-                aria-hidden
-                className="absolute inset-0"
-                initial={{ scale: 1.04 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1.4, ease }}
-            >
+        <div className="relative min-h-[40vh] w-full overflow-hidden bg-slate-900 flex items-center">
+            <div className="absolute inset-0 z-0">
                 <Image
                     src="/images/headers/analizler-hero.png"
-                    alt=""
+                    alt={dict.title.replace(/\n/g, " ")}
                     fill
                     priority
+                    className="object-cover scale-105"
                     sizes="100vw"
-                    className="object-cover object-center"
                 />
-            </motion.div>
-
-            <div aria-hidden className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-r from-white/88 via-white/45 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/15" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-slate-900/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60" />
             </div>
 
-            <Container className="relative z-10 w-full">
-                <AnimatedDiv className="max-w-2xl">
-                    <h1 className="mb-8 text-5xl font-black leading-[1.1] tracking-tight text-corporate-dark lg:text-[4.5rem]">
-                        {dict.title}
-                    </h1>
-
-                    <p className="max-w-lg text-lg font-normal leading-relaxed text-slate-600 lg:text-xl">
-                        {dict.subtitle}
-                    </p>
-                </AnimatedDiv>
+            <Container className="relative z-10 w-full pt-20 pb-12 lg:pt-28 lg:pb-16">
+                <div className="w-full md:px-14 lg:px-20">
+                    <div className="max-w-4xl">
+                        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 leading-[1.1] drop-shadow-2xl font-semibold tracking-tight">
+                            {dict.title.split("\n").map((line, i) => (
+                                <span key={i}>
+                                    {i > 0 && <br />}
+                                    {line}
+                                </span>
+                            ))}
+                        </h1>
+                        <p className="text-slate-200 text-base md:text-xl mb-6 md:mb-8 max-w-2xl font-light leading-relaxed drop-shadow-lg opacity-90">
+                            {dict.subtitle}
+                        </p>
+                    </div>
+                </div>
             </Container>
-        </section>
+        </div>
     )
 }

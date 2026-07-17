@@ -1567,7 +1567,7 @@
     },
     "analyses": {
       "name": "Analyses",
-      "heading": "Latest Articles",
+      "heading": "Latest Analyses",
       "allArticles": "All Analyses"
     },
     "quickLinks": {
@@ -3347,7 +3347,7 @@
   "articles": {
     "title": "Analyses",
     "subtitle": "Current insights and expert analyses on the world of technology",
-    "readMore": "Read Article",
+    "readMore": "Read Analysis",
     "allArticles": "All Analyses",
     "closeModal": "Close",
     "readTime": "min read",

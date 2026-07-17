@@ -20,8 +20,18 @@ import { getLocaleFromPathname } from "@/lib/base-path"
 import type { Locale } from "@/i18n-config"
 import { ARTICLES_TR } from "@/data/articles.tr"
 import { ARTICLES_EN } from "@/data/articles.en"
-import { getLatestArticles, formatArticleDate } from "@/lib/articles"
+import {
+    getStableRandomAnalysesMenuArticles,
+    formatArticleDate,
+    getAuthorAvatar,
+    getAuthorProfile,
+} from "@/lib/articles"
 import type { Article, ArticleCardTheme } from "@/data/articles.tr"
+import {
+    ArticleCardTags,
+    HighlightedQuote,
+    CARD_THEMES,
+} from "@/components/resources/ArticleCardHeader"
 
 const BackgroundPattern = () => (
     <div className="absolute -bottom-24 -right-24 w-64 h-64 opacity-[0.03] pointer-events-none z-0 rotate-12 text-slate-900">
@@ -668,9 +678,17 @@ function articleMenuHref(lang: string, articleId: string) {
 export const AnalysesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
     const lang = useLang()
     const articles = lang === "eng" ? ARTICLES_EN : ARTICLES_TR
-    const latestArticles = useMemo(() => getLatestArticles(articles, 5), [articles])
-    const featuredArticle = latestArticles[0] ?? null
-    const quoteArticles = latestArticles.slice(1, 5)
+    const { featuredArticle, quoteArticles } = useMemo(() => {
+        const { featured, side } = getStableRandomAnalysesMenuArticles(articles, lang, 3)
+        return { featuredArticle: featured, quoteArticles: side }
+    }, [articles, lang])
+    const featuredTheme = featuredArticle ? CARD_THEMES[featuredArticle.cardTheme] : null
+    const featuredMenuTheme = featuredArticle
+        ? ARTICLE_MENU_THEMES[featuredArticle.cardTheme]
+        : null
+    const featuredAuthorProfile = featuredArticle
+        ? getAuthorProfile(featuredArticle.author, lang)
+        : undefined
 
     return (
         <motion.div
@@ -678,65 +696,159 @@ export const AnalysesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.98 }}
             transition={{ duration: 0.2 }}
-            className={cn(STYLES.megaMenuWrapperAnalyses, "p-5")}
+            className={cn(STYLES.megaMenuWrapperAnalyses, "p-4")}
             role="menu"
             aria-label={t(lang, "Analizler menüsü", "Analyses menu")}
         >
-            <div className="grid grid-cols-5 gap-4 h-[400px]">
+            <div className="grid grid-cols-[1.08fr_1fr] gap-3">
 
-                {/* CARD 1: Featured latest article */}
-                {featuredArticle ? (
-                    <Link
-                        href={articleMenuHref(lang, featuredArticle.id)}
-                        onClick={closeMenu}
-                        className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg flex flex-col"
-                    >
-                        <div className="relative h-[52%] shrink-0 overflow-hidden">
-                            <Image
-                                src={featuredArticle.coverImage}
-                                alt={featuredArticle.title}
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                sizes="480px"
+                {/* Left height follows the right column; content clips if needed */}
+                <div className="relative min-h-0">
+                    {featuredArticle && featuredTheme && featuredMenuTheme ? (
+                        <Link
+                            href={articleMenuHref(lang, featuredArticle.id)}
+                            onClick={closeMenu}
+                            className={cn(
+                                "absolute inset-0 group flex flex-col overflow-hidden rounded-2xl border bg-gradient-to-br p-5 shadow-lg transition-shadow hover:shadow-xl",
+                                featuredMenuTheme.bg,
+                                featuredMenuTheme.border
+                            )}
+                            style={{
+                                borderColor: `color-mix(in srgb, ${featuredTheme.accent} 42%, transparent)`,
+                            }}
+                        >
+                            <div
+                                aria-hidden
+                                className="absolute inset-x-0 top-0 h-1"
+                                style={{ backgroundColor: featuredTheme.accent }}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent" />
-                        </div>
+                            <div
+                                aria-hidden
+                                className="pointer-events-none absolute inset-0 overflow-hidden"
+                            >
+                                <div
+                                    className="absolute inset-0 opacity-[0.35]"
+                                    style={{
+                                        backgroundImage: `radial-gradient(circle at 1px 1px, ${featuredTheme.accent} 1px, transparent 0)`,
+                                        backgroundSize: "18px 18px",
+                                    }}
+                                />
+                                <div
+                                    className="absolute -right-10 -top-14 h-40 w-40 rounded-full blur-2xl"
+                                    style={{
+                                        backgroundColor: `color-mix(in srgb, ${featuredTheme.accent} 28%, transparent)`,
+                                    }}
+                                />
+                                <div
+                                    className="absolute -bottom-12 -left-10 h-40 w-40 rounded-full blur-3xl"
+                                    style={{
+                                        backgroundColor: `color-mix(in srgb, ${featuredTheme.accent} 20%, transparent)`,
+                                    }}
+                                />
+                                <svg
+                                    className="absolute bottom-2 right-2 h-20 w-20 opacity-[0.14]"
+                                    style={{ color: featuredTheme.accent }}
+                                    viewBox="0 0 100 100"
+                                    fill="none"
+                                    stroke="currentColor"
+                                >
+                                    <circle cx="50" cy="50" r="44" strokeWidth="1.5" />
+                                    <circle cx="50" cy="50" r="30" strokeWidth="1.2" />
+                                    <circle cx="50" cy="50" r="16" strokeWidth="1" />
+                                </svg>
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/35 via-transparent to-transparent" />
+                            </div>
 
-                        <div className="relative flex flex-1 flex-col justify-between p-6 z-10 bg-slate-900">
-                            <div className="flex items-center gap-2">
-                                <div className="w-7 h-7 rounded-full bg-white/15 backdrop-blur flex items-center justify-center">
-                                    <FileText className="w-3.5 h-3.5 text-white" />
+                            <div className="relative z-10 mb-2 flex shrink-0 items-center gap-2">
+                                <div
+                                    className={cn(
+                                        "flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br text-white shadow-sm",
+                                        featuredMenuTheme.iconBg
+                                    )}
+                                >
+                                    <FileText className="h-3 w-3" />
                                 </div>
-                                <span className="text-[10px] font-black text-white/70 tracking-[0.2em] uppercase">
-                                    {t(lang, "Son Makale", "Latest Article")}
+                                <span
+                                    className="text-[10px] font-black uppercase tracking-[0.2em]"
+                                    style={{ color: featuredTheme.accent }}
+                                >
+                                    {t(lang, "Öne Çıkan", "Featured")}
                                 </span>
                             </div>
 
-                            <div>
-                                <h3 className="text-lg font-black text-white mb-2 leading-snug line-clamp-2">
-                                    {featuredArticle.title}
-                                </h3>
-                                <p className="text-white/60 text-xs mb-4">
-                                    {formatArticleDate(featuredArticle.date, lang, "long")}
+                            <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-hidden">
+                                <div className="flex shrink-0 items-start gap-4">
+                                    <div className="flex min-w-0 flex-1 flex-col">
+                                        <ArticleCardTags article={featuredArticle} variant="card" className="mb-2" />
+
+                                        <h3 className="text-lg font-black leading-snug tracking-tight text-slate-900 line-clamp-3">
+                                            <HighlightedQuote
+                                                quote={featuredArticle.cardQuote || featuredArticle.title}
+                                                highlight={featuredArticle.cardQuoteHighlight}
+                                                accent={featuredTheme.accent}
+                                            />
+                                        </h3>
+
+                                        <p className="mt-1.5 text-xs font-medium text-slate-500">
+                                            {formatArticleDate(featuredArticle.date, lang, "long")}
+                                        </p>
+                                    </div>
+
+                                    <div className="flex w-[6.25rem] shrink-0 flex-col items-center text-center">
+                                        <div
+                                            className="relative h-[5rem] w-[5rem] overflow-hidden rounded-full ring-4 ring-white/90 shadow-md"
+                                            style={{
+                                                boxShadow: `0 0 0 2px color-mix(in srgb, ${featuredTheme.accent} 35%, transparent)`,
+                                            }}
+                                        >
+                                            <Image
+                                                src={getAuthorAvatar(featuredArticle.author)}
+                                                alt={featuredArticle.author}
+                                                fill
+                                                className="object-cover object-top"
+                                                sizes="80px"
+                                            />
+                                        </div>
+                                        <p
+                                            className="mt-1.5 text-sm font-bold leading-snug"
+                                            style={{ color: featuredTheme.accent }}
+                                        >
+                                            {featuredArticle.author}
+                                        </p>
+                                        {featuredAuthorProfile?.title && (
+                                            <p className="mt-0.5 text-[11px] font-medium leading-snug text-slate-500">
+                                                {featuredAuthorProfile.title}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <p className="mt-2 min-h-0 flex-1 overflow-hidden text-[13px] leading-relaxed text-slate-600 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:5]">
+                                    {featuredArticle.excerpt}
                                 </p>
-                                <div className="inline-flex items-center gap-2 bg-white text-slate-900 pl-4 pr-3 py-2 rounded-full font-bold text-xs hover:bg-blue-50 transition-all group-hover:gap-3">
-                                    {t(lang, "Makaleyi Oku", "Read Article")} <ArrowRight className="w-3.5 h-3.5" />
+
+                                <div
+                                    className="mt-2 inline-flex shrink-0 items-center gap-2 text-sm font-bold transition-all group-hover:gap-3"
+                                    style={{ color: featuredTheme.accent }}
+                                >
+                                    {t(lang, "Analizi Oku", "Read Analysis")}
+                                    <ArrowRight className="h-4 w-4" />
                                 </div>
                             </div>
-                        </div>
-                    </Link>
-                ) : (
-                    <Link
-                        href={lh(lang, "/resources/analyses")}
-                        onClick={closeMenu}
-                        className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg flex items-center justify-center p-7"
-                    >
-                        <h3 className="text-2xl font-black text-white">{t(lang, "Analizler", "Analyses")}</h3>
-                    </Link>
-                )}
+                        </Link>
+                    ) : (
+                        <Link
+                            href={lh(lang, "/resources/analyses")}
+                            onClick={closeMenu}
+                            className="absolute inset-0 group flex items-center justify-center overflow-hidden rounded-2xl bg-slate-900 p-7 shadow-lg"
+                        >
+                            <h3 className="text-2xl font-black text-white">{t(lang, "Analizler", "Analyses")}</h3>
+                        </Link>
+                    )}
+                </div>
 
-                {/* MIDDLE COLUMN - 4 quote-style article cards */}
-                <div className="col-span-3 flex flex-col gap-3">
+                {/* RIGHT COLUMN - random analyses + all analyses CTA (defines row height) */}
+                <div className="flex flex-col gap-2.5">
                     {quoteArticles.map((article: Article) => {
                         const theme = ARTICLE_MENU_THEMES[article.cardTheme]
                         return (
@@ -745,29 +857,48 @@ export const AnalysesMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                                 href={articleMenuHref(lang, article.id)}
                                 onClick={closeMenu}
                                 className={cn(
-                                    "flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br border p-4 flex items-start gap-4 hover:shadow-lg transition-all hover:-translate-y-0.5",
+                                    "relative group overflow-hidden rounded-2xl bg-gradient-to-br border px-3.5 py-3 flex items-start gap-3 hover:shadow-lg transition-all hover:-translate-y-0.5",
                                     theme.bg,
                                     theme.border
                                 )}
                             >
                                 <div className={cn(
-                                    "w-10 h-10 rounded-2xl bg-gradient-to-br text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-md",
+                                    "w-9 h-9 rounded-xl bg-gradient-to-br text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-md",
                                     theme.iconBg
                                 )}>
-                                    <Quote className="w-4 h-4 fill-current" />
+                                    <Quote className="w-3.5 h-3.5 fill-current" />
                                 </div>
-                                <div className="flex-1 min-w-0 flex flex-col h-full pr-16">
+                                <div className="flex-1 min-w-0 flex flex-col pr-14">
                                     <p className="text-slate-700 text-[13px] font-semibold leading-snug line-clamp-2 italic">
                                         {article.title}
                                     </p>
-                                    <span className="absolute bottom-4 right-4 text-[10px] font-semibold text-slate-400">
+                                    <span className="mt-1.5 text-[10px] font-semibold text-slate-400">
                                         {formatArticleDate(article.date, lang, "short")}
                                     </span>
                                 </div>
-                                <ArrowUpRight className={cn("absolute top-4 right-4 w-4 h-4 transition-colors shrink-0", theme.arrowColor)} />
+                                <ArrowUpRight className={cn("absolute top-3 right-3 w-4 h-4 transition-colors shrink-0", theme.arrowColor)} />
                             </Link>
                         )
                     })}
+
+                    <Link
+                        href={lh(lang, "/resources/analyses")}
+                        onClick={closeMenu}
+                        className="relative group overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 px-3.5 py-3 flex items-center gap-3 hover:shadow-lg hover:border-slate-300 transition-all hover:-translate-y-0.5"
+                    >
+                        <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-900 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-md">
+                            <FileText className="w-4 h-4" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <p className="text-slate-900 text-[13px] font-bold leading-snug">
+                                {t(lang, "Tüm Analizler", "All Analyses")}
+                            </p>
+                            <p className="mt-0.5 text-[11px] font-medium text-slate-500">
+                                {t(lang, "Tüm içerikleri görüntüle", "View all content")}
+                            </p>
+                        </div>
+                        <ArrowRight className="w-4 h-4 shrink-0 text-slate-400 transition-colors group-hover:text-slate-700" />
+                    </Link>
                 </div>
 
             </div>

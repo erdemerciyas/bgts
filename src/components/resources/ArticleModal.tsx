@@ -296,8 +296,8 @@ export default function ArticleModal({ article, onClose, lang, dict }: ArticleMo
                                 ) : (
                                     <p className="text-slate-500 italic text-center py-8">
                                         {lang === "eng"
-                                            ? "Content for this article will be added soon."
-                                            : "Bu makalenin içeriği yakında eklenecektir."}
+                                            ? "Content for this analysis will be added soon."
+                                            : "Bu analizin içeriği yakında eklenecektir."}
                                     </p>
                                 )}
                             </div>

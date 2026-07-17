@@ -87,6 +87,51 @@ export function getRandomFromLatestArticles(
   return latest[Math.floor(Math.random() * latest.length)]
 }
 
+/** Shuffles articles and returns one featured + side list without duplicates. */
+export function getRandomAnalysesMenuArticles(
+  articles: Article[],
+  sideCount = 3
+): { featured: Article | null; side: Article[] } {
+  const pool = [...articles]
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[pool[i], pool[j]] = [pool[j], pool[i]]
+  }
+  return {
+    featured: pool[0] ?? null,
+    side: pool.slice(1, 1 + sideCount),
+  }
+}
+
+type AnalysesMenuSelection = {
+  featured: Article | null
+  side: Article[]
+}
+
+/** Page-load cache: stable across mega-menu remounts/hovers, resets on full refresh. */
+let analysesMenuSelectionCache: {
+  key: string
+  selection: AnalysesMenuSelection
+} | null = null
+
+/**
+ * Random analyses for the nav mega menu.
+ * Selection is fixed for the current page load; a full refresh picks a new set.
+ */
+export function getStableRandomAnalysesMenuArticles(
+  articles: Article[],
+  lang: string,
+  sideCount = 3
+): AnalysesMenuSelection {
+  const key = `${lang}:${sideCount}:${articles.map((a) => a.id).join(",")}`
+  if (analysesMenuSelectionCache?.key === key) {
+    return analysesMenuSelectionCache.selection
+  }
+  const selection = getRandomAnalysesMenuArticles(articles, sideCount)
+  analysesMenuSelectionCache = { key, selection }
+  return selection
+}
+
 export function formatArticleDate(
   date: string,
   lang: string,
