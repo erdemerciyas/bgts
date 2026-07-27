@@ -54,7 +54,7 @@ function ArticlesPageFallback({ articles, dict }: ArticlesClientProps) {
             <ArticlesHero dict={dict} />
             <Section background="default" className="bg-[#F8F9FA] py-16 md:py-24">
                 <Container>
-                    <div className="grid grid-cols-1 gap-6 [grid-template-columns:repeat(1,minmax(0,1fr))] md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:[grid-template-columns:repeat(3,minmax(0,1fr))]">
+                    <div className="grid grid-cols-1 gap-8 md:gap-10 [grid-template-columns:repeat(1,minmax(0,1fr))] md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:[grid-template-columns:repeat(3,minmax(0,1fr))]">
                         {sortedArticles.map((article) => (
                             <div
                                 key={article.id}
@@ -109,7 +109,7 @@ function ArticlesClientInner({ articles, dict, lang }: ArticlesClientProps) {
 
             <Section background="default" className="bg-[#F8F9FA] py-16 md:py-24">
                 <Container>
-                    <div className="grid grid-cols-1 gap-6 [grid-template-columns:repeat(1,minmax(0,1fr))] md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:[grid-template-columns:repeat(3,minmax(0,1fr))]">
+                    <div className="grid grid-cols-1 gap-8 md:gap-10 [grid-template-columns:repeat(1,minmax(0,1fr))] md:[grid-template-columns:repeat(2,minmax(0,1fr))] lg:[grid-template-columns:repeat(3,minmax(0,1fr))]">
                         {sortedArticles.map((article, index) => (
                             <ArticleCard
                                 key={article.id}

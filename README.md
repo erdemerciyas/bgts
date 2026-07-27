@@ -88,7 +88,7 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 - Varsayılan dil: Türkçe (`tr`)
 
 ### Tasarım ve Kullanıcı Deneyimi
-- **Mega Menu Navigasyon:** Hizmetler, Ürünler, Sektörler ve Bilgi Merkezi için tam genişlikte mega menüler; Bilgi Merkezi sol panelinde EBINTEC etkinlik kartı (`ResourcesMenuLeftPanel.tsx`); Analizler menüsünde sayfa yüklemesine sabit rastgele **1 öne çıkan + 3 yan analiz** (görselsiz kart meta, yazar portresi, `?article=` deep link)
+- **Mega Menu Navigasyon:** Hizmetler, Ürünler, Sektörler ve Bilgi Merkezi için tam genişlikte mega menüler; Bilgi Merkezi sol panelinde EBINTEC etkinlik kartı (`ResourcesMenuLeftPanel.tsx`); Analizler menüsünde sayfa yüklemesine sabit rastgele **1 öne çıkan + 3 yan analiz**, seçilen set tarihe göre yeniden eskiye sıralanır (en yeni solda/üstte; görselsiz kart meta, yazar portresi, `?article=` deep link)
 - **Site İçi Arama:** 30+ öğeli arama endeksi — ürünler, sektörler, kariyer sayfaları, kurumsal sayfalar, hizmetler ve makaleler arasında zengin etiketli hızlı arama
 - **Responsive Tasarım:** Mobil öncelikli yaklaşım; mobil navigasyon (accordion menü, scroll lock, backdrop overlay)
 - **Hero Slider:** Ana sayfada çok slaytlı, otomatik ilerleyen, swipe destekli animasyonlu kahraman alanı
@@ -134,9 +134,9 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 ### Makaleler / Analizler
 - **Analizler sayfası:** `/bilgi-merkezi/analizler` (TR) / `/resources/analyses` (EN) — kurumsal blog ve teknik analizler
 - **ArticlesHero:** Koyu kurumsal hero (`analizler-hero.png` + slate gradient overlay); slider görseli (`analizler.png`) ayrı tutulur; beyaz başlık/alt metin tipografisi diğer fotoğraflı hero sayfalarıyla uyumlu
-- **Görselsiz kart tasarımı:** Liste kartlarında kapak görseli yok; etiketler, vurgulu alıntı, yazar bilgisi (ünvan + Teknoloji Servisleri), renkli ayırıcı çizgi, tema renkli kenarlık, başlık, özet ve okuma süresi; liste tarihe göre yeniden eskiye sıralanır
+- **Görselsiz kart tasarımı:** Liste kartlarında kapak görseli yok; etiketler, vurgulu alıntı, yazar bilgisi (ünvan + Teknoloji Servisleri), renkli ayırıcı çizgi, tema renkli kenarlık, başlık, özet ve okuma süresi; liste tarihe göre yeniden eskiye sıralanır; kart grid aralığı `gap-8 md:gap-10` ile okunabilirlik için genişletildi
 - **CSS subgrid:** Aynı satırdaki kartlarda renkli ayırıcı çizgiler hizalı kalır; metin kırılması `line-clamp` ve sabit yükseklik yerine esnek layout ile önlenir
-- **Analizler mega menü (`AnalysesMenu`):** Sayfa yüklemesinde sabit rastgele seçim (`getStableRandomAnalysesMenuArticles`) — 1 öne çıkan + 3 yan analiz; görselsiz `ArticleCardHeader` meta (etiket, alıntı, tema); menü genişliği ~1080px
+- **Analizler mega menü (`AnalysesMenu`):** Sayfa yüklemesinde sabit rastgele seçim (`getStableRandomAnalysesMenuArticles`) — 1 öne çıkan + 3 yan analiz; rastgele set seçildikten sonra yeniden eskiye sıralama (en yeni öne çıkan, yan liste üstten alta); görselsiz `ArticleCardHeader` meta (etiket, alıntı, tema); menü genişliği ~1080px
 - **7 analiz** — Yapay Zeka, Otomasyon, Güvenlik, Yönetişim, Altyapı; `cardTags`, `cardQuote`, `cardTheme` alanları ile kart meta verisi
 - **Yazar profilleri:** `getAuthorProfile()` (`src/lib/articles.ts`) — Alper Önsoy, Erdoğan Bilici, Sinan Demirci için ünvan ve departman
 - **Modal detay görünümü** (`ArticleModal.tsx`) — kapak görseli yerine `ArticleCardHeader` ile liste ile aynı header sistemi; Markdown gövde, tarih, okuma süresi, LinkedIn linki
@@ -841,7 +841,7 @@ Proje, içerik verilerini TypeScript objeleri olarak yönetir (headless CMS kull
 |-------|--------|
 | `src/content/home.ts` | Ana sayfa tüm bölüm verileri |
 | `src/dictionaries/*.json` | Hizmet, ürün ve kurumsal sayfa içerikleri (TR/EN) |
-| `src/lib/articles.ts` | Analiz yardımcıları — yazar profili, LinkedIn URL, `getStableRandomAnalysesMenuArticles` (sayfa yüklemesine sabit menü seçimi) |
+| `src/lib/articles.ts` | Analiz yardımcıları — yazar profili, LinkedIn URL, `getStableRandomAnalysesMenuArticles` (sayfa yüklemesine sabit rastgele menü seçimi + yeniden eskiye sıralama) |
 | `src/data/articles.tr.ts` | Analizler — Türkçe (kart meta, özet, body, tema) |
 | `src/data/articles.en.ts` | Analizler — İngilizce |
 | `src/data/case-studies.tr.ts` | 20+ vaka çalışması — Türkçe (başlık, gereksinim, çözüm, teknolojiler) |
@@ -980,6 +980,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.50.0 | 2026-07 | **Analizler menü ve liste UX:** Mega menüde rastgele seçilen analiz seti tarihe göre yeniden eskiye sıralanır (en yeni öne çıkan, yan liste üstten alta); listeleme sayfası kart grid aralığı `gap-8 md:gap-10` ile genişletildi. |
 | v0.49.0 | 2026-07 | **Analizler mega menü ve hero revizyonu:** `AnalysesMenu` görselsiz öne çıkan + 3 yan analiz düzeni; `getStableRandomAnalysesMenuArticles` ile sayfa yüklemesine sabit rastgele seçim; menü genişliği ~1080px; Analizler hero koyu kurumsal overlay’e geçiş; liste tarihe göre sıralama ve tema renkli kart kenarlıkları; UI terminolojisi makale → analiz (TR/EN). |
 | v0.48.0 | 2026-07 | **BGTS League UI revizyonu:** URL `/lig` → `/league` (legacy redirect); açık kurumsal-gaming tema; EA Sports tarzı `BGTS LİG` başlık animasyonu; `PerspectiveStage` ile hafif 3D perspektif; perspektif grid zemin; yumuşak cursor aura (`CursorParticles` canvas); kurumsal OTP e-posta şablonu; league sayfasında özel Chakra Petch font. |
 | v0.47.0 | 2026-07 | **Analizler sayfası revizyonu:** Görselsiz kart tasarımı (`ArticleCardHeader`, tema renkleri, subgrid hizalı ayırıcı); modalda kapak yerine aynı header sistemi; ayrı hero görseli (`analizler-hero.png`, slider `analizler.png` korundu); standart hero tipografisi; TR makale metinlerinde yazım/dil düzeltmeleri; `getAuthorProfile()` ve kart meta alanları (`cardTags`, `cardQuote`, `cardTheme`). |

@@ -87,7 +87,7 @@ export function getRandomFromLatestArticles(
   return latest[Math.floor(Math.random() * latest.length)]
 }
 
-/** Shuffles articles and returns one featured + side list without duplicates. */
+/** Shuffles articles, picks a set, then orders newest-first (featured = newest). */
 export function getRandomAnalysesMenuArticles(
   articles: Article[],
   sideCount = 3
@@ -97,9 +97,13 @@ export function getRandomAnalysesMenuArticles(
     const j = Math.floor(Math.random() * (i + 1))
     ;[pool[i], pool[j]] = [pool[j], pool[i]]
   }
+  const selected = pool.slice(0, 1 + sideCount)
+  const sorted = selected.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
   return {
-    featured: pool[0] ?? null,
-    side: pool.slice(1, 1 + sideCount),
+    featured: sorted[0] ?? null,
+    side: sorted.slice(1),
   }
 }
 
@@ -116,6 +120,7 @@ let analysesMenuSelectionCache: {
 
 /**
  * Random analyses for the nav mega menu.
+ * Picks a random set per page load, then orders newest-first (featured = newest).
  * Selection is fixed for the current page load; a full refresh picks a new set.
  */
 export function getStableRandomAnalysesMenuArticles(
