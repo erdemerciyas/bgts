@@ -24,7 +24,7 @@ export const ARTICLES_TR: Article[] = [
     excerpt:
       "Kurumlardaki en stratejik konulardan biri olan yapay zekanın üst yönetim seviyesinde kime emanet edilmesi gerektiği sorusu, birçok büyük kurumda önemli bir soru işareti oluşturuyor. CDO'lar, CIO'lar, COO'lar ve CFO'lar arasındaki yetki-sorumluluk dengesizliği, yapay zeka projelerinin başarısını doğrudan etkiliyor.",
     coverImage: "/images/articles/kurumlarda-yapay-zeka.jpg",
-    date: "2026-03-18",
+    date: "2026-06-24",
     category: "Yapay Zeka",
     readTime: 4,
     cardTags: ["AI Governance", "C-Suite", "AI Roles"],
@@ -76,7 +76,7 @@ Belki de çözüm, organizasyonu tek bir güce teslim etmek değil; CDO'nun vizy
     excerpt:
       "Yapay zeka artık en çok veriye erişen LLM'lerden alan bazlı dil modellerine (DSLM) doğru evriliyor. Yüksek maliyetli ve yeterince regüle edilmeyen LLM'lerden, yapay zeka marketplace'lerinde sunulacak SLM'lere geçiş süreci kurumlar için maliyet ve verimlilik avantajları sağlıyor.",
     coverImage: "/images/articles/llm-lerden-dslm-lere-donusum.jpg",
-    date: "2026-03-08",
+    date: "2026-05-11",
     category: "Yapay Zeka",
     readTime: 3,
     cardTags: ["AI Insight"],
@@ -110,7 +110,7 @@ Biz de bunun öncü örneklerinden biri olarak, şu an MSP hizmeti sunduğumuz m
     excerpt:
       "Yapay zeka ajanlarının kendi aralarında alışveriş yapmasını sağlayan protokoller her geçen gün gelişiyor. Uyum sağlayamayan markalar, müşteriyle bağını koparıp yalnızca büyük yapay zeka modellerinin sipariş geçtiği arka plan depolarına dönüşme riski taşıyor.",
     coverImage: "/images/articles/pazarlamanin-yeni-musterisi-yapay-zeka-ajanlari.jpg",
-    date: "2026-03-25",
+    date: "2026-07-02",
     category: "Yapay Zeka",
     readTime: 3,
     cardTags: ["Agentic Commerce"],
@@ -152,7 +152,7 @@ Tüm bunları birleştirdiğimde aklımda şu soru var: **Her gün kullandığı
     excerpt:
       "Yapay zeka yönetişiminin temel prensiplerini, regülasyon gereksinimlerini ve kurumsal AI politikalarının oluşturulmasını ele alan kapsamlı bir rehber. AB Yapay Zeka Yasası ve global yönetişim standartları ışığında kurumların izlemesi gereken yol haritası.",
     coverImage: "/images/articles/ai-governance-101.jpg",
-    date: "2026-03-22",
+    date: "2026-07-01",
     category: "Yönetişim",
     readTime: 5,
     cardTags: ["AI Governance", "Regülasyon"],
@@ -206,7 +206,7 @@ Küresel ölçekte bakıldığında yapay zeka yönetişimi, etik ilkelerden ç�
     excerpt:
       "Yönetilen hizmetler ekosisteminde yapay zeka araçları, teknik ekibi yerinden etmek için değil, onları rutinin prangalarından kurtarıp özgürleştirmek için var. Tekrarlayan taleplerin otomasyonu, analitik görevlere odaklanma ve 7/24 kesintisiz müşteri deneyimi.",
     coverImage: "/images/articles/akilli-otomasyon.png",
-    date: "2025-02-05",
+    date: "2026-07-07",
     category: "Otomasyon",
     readTime: 4,
     cardTags: ["AIOps", "Otomasyon"],
@@ -263,7 +263,7 @@ Aşağıdaki tablo, vizyon değişiminin operasyonel çıktılara nasıl yansıd
     excerpt:
       "1990'lardaki bilgisayar virüslerinden 2020'lerde AI ajanlarını hedefleyen saldırılara kadar siber güvenlik tehditlerinin evrimi. Malicious MCP Server'lar, yapay zeka ajanlarının karar mekanizmalarını manipüle eden yeni nesil saldırı yüzeyleri olarak ortaya çıkıyor.",
     coverImage: "/images/articles/malicious-server-cagi.jpg",
-    date: "2026-03-12",
+    date: "2026-06-02",
     category: "Güvenlik",
     readTime: 3,
     cardTags: ["Siber Güvenlik", "AI Agents"],

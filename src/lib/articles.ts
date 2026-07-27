@@ -46,6 +46,8 @@ export const ARTICLE_LINKEDIN_URLS: Record<string, string> = {
     "https://www.linkedin.com/feed/update/urn:li:ugcPost:7478014456204161024/",
   "pazarlamanin-yeni-musterisi-yapay-zeka-ajanalari":
     "https://www.linkedin.com/feed/update/urn:li:ugcPost:7478413649469054976/",
+  "akilli-otomasyon":
+    "https://www.linkedin.com/posts/bilgeadam_ai-destekli-operasyonlar-teknik-ekiplere-activity-7480253182271737858-eRfS",
 }
 
 export function getArticleLinkedInUrl(articleId: string): string | undefined {

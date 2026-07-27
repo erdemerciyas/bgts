@@ -8,7 +8,7 @@ export const ARTICLES_EN: Article[] = [
     excerpt:
       "The question of who should be entrusted with AI at the executive level remains a significant challenge for many large organizations. The imbalance of authority and responsibility among CDOs, CIOs, COOs, and CFOs directly impacts the success of AI projects.",
     coverImage: "/images/articles/kurumlarda-yapay-zeka.jpg",
-    date: "2026-03-18",
+    date: "2026-06-24",
     category: "Artificial Intelligence",
     readTime: 4,
     cardTags: ["AI Governance", "C-Suite", "AI Roles"],
@@ -60,7 +60,7 @@ Perhaps the solution is not to entrust the organization to a single power, but t
     excerpt:
       "AI is evolving from LLMs with the most data to domain-specific language models (DSLMs). The transition from costly and unregulated LLMs to SLMs offered in AI marketplaces provides cost and efficiency advantages for organizations.",
     coverImage: "/images/articles/llm-lerden-dslm-lere-donusum.jpg",
-    date: "2026-03-08",
+    date: "2026-05-11",
     category: "Artificial Intelligence",
     readTime: 3,
     cardTags: ["AI Insight"],
@@ -94,7 +94,7 @@ As a pioneering example, we currently use our own local **"Operational Excellenc
     excerpt:
       "Protocols enabling AI agents to shop among themselves are evolving every day. Brands that fail to adapt risk losing their connection with customers and becoming mere back-end warehouses where only large AI models place orders.",
     coverImage: "/images/articles/pazarlamanin-yeni-musterisi-yapay-zeka-ajanlari.jpg",
-    date: "2026-03-25",
+    date: "2026-07-02",
     category: "Artificial Intelligence",
     readTime: 3,
     cardTags: ["Agentic Commerce"],
@@ -136,7 +136,7 @@ When I put all this together, one question comes to mind: **Have you ever though
     excerpt:
       "A comprehensive guide covering the fundamental principles of AI governance, regulatory requirements, and the creation of corporate AI policies. The roadmap organizations should follow in light of the EU AI Act and global governance standards.",
     coverImage: "/images/articles/ai-governance-101.jpg",
-    date: "2026-03-22",
+    date: "2026-07-01",
     category: "Governance",
     readTime: 5,
     cardTags: ["AI Governance", "Regulation"],
@@ -190,7 +190,7 @@ In the coming period, the key differentiator for organizations seeking to genera
     excerpt:
       "In the managed services ecosystem, AI tools exist not to replace the technical team but to free them from the shackles of routine. Automation of repetitive requests, focus on analytical tasks, and 24/7 uninterrupted customer experience.",
     coverImage: "/images/articles/akilli-otomasyon.png",
-    date: "2025-02-05",
+    date: "2026-07-07",
     category: "Automation",
     readTime: 4,
     cardTags: ["AIOps", "Automation"],
@@ -247,7 +247,7 @@ The table below clearly shows how the vision change is reflected in operational 
     excerpt:
       "The evolution of cybersecurity threats from computer viruses in the 1990s to attacks targeting AI agents in the 2020s. Malicious MCP Servers emerge as next-generation attack surfaces that manipulate AI agents' decision-making mechanisms.",
     coverImage: "/images/articles/malicious-server-cagi.jpg",
-    date: "2026-03-12",
+    date: "2026-06-02",
     category: "Security",
     readTime: 3,
     cardTags: ["Cybersecurity", "AI Agents"],
