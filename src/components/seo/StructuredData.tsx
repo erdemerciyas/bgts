@@ -1,4 +1,5 @@
 import type { Locale } from '@/i18n-config'
+import { SITE_URL } from '@/lib/seo'
 
 const ORG_DESCRIPTION: Record<Locale, string> = {
   tr: 'Finans, Savunma, Perakende ve Telekom sektörleri için lider teknoloji ortağı. 25 yılı aşkın deneyimle, 1,400+ mühendis ile dijital dönüşüm çözümleri sunuyoruz.',
@@ -10,8 +11,8 @@ export function OrganizationStructuredData({ locale }: { locale: Locale }) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'BGTS - Business & Global Technology Solutions',
-    url: 'https://bgts.com.tr',
-    logo: 'https://bgts.com.tr/BGTS_logo.png',
+    url: SITE_URL,
+    logo: `${SITE_URL}/BGTS_logo.png`,
     description: ORG_DESCRIPTION[locale],
     address: {
       '@type': 'PostalAddress',
@@ -48,7 +49,7 @@ export function WebSiteStructuredData({ locale }: { locale: Locale }) {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'BGTS - Business & Global Technology Solutions',
-    url: 'https://bgts.com.tr',
+    url: SITE_URL,
     description: ORG_DESCRIPTION[locale],
     inLanguage: ['tr', 'en'],
   }
@@ -73,7 +74,7 @@ export function BreadcrumbStructuredData({ items }: BreadcrumbProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://bgts.com.tr${item.url}`,
+      item: `${SITE_URL}${item.url}`,
     })),
   }
 
@@ -97,7 +98,7 @@ export function SoftwareApplicationStructuredData({ name, description, url }: Pr
     '@type': 'SoftwareApplication',
     name,
     description,
-    url: `https://bgts.com.tr${url}`,
+    url: `${SITE_URL}${url}`,
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
     offers: {
@@ -109,7 +110,7 @@ export function SoftwareApplicationStructuredData({ name, description, url }: Pr
     creator: {
       '@type': 'Organization',
       name: 'BGTS',
-      url: 'https://bgts.com.tr',
+      url: SITE_URL,
     },
   }
 
@@ -133,11 +134,11 @@ export function ServiceStructuredData({ name, description, url }: ServiceSchemaP
     '@type': 'Service',
     name,
     description,
-    url: `https://bgts.com.tr${url}`,
+    url: `${SITE_URL}${url}`,
     provider: {
       '@type': 'Organization',
       name: 'BGTS - Business & Global Technology Solutions',
-      url: 'https://bgts.com.tr',
+      url: SITE_URL,
     },
     areaServed: {
       '@type': 'Country',
@@ -159,7 +160,7 @@ export function LocalBusinessStructuredData() {
     '@type': 'LocalBusiness',
     name: 'BGTS - Business & Global Technology Solutions',
     description: 'Finans, Savunma, Perakende ve Telekom sektörleri için lider teknoloji ortağı. 25 yılı aşkın deneyimle, 1,400+ mühendis ile dijital dönüşüm çözümleri sunuyoruz.',
-    url: 'https://bgts.com.tr',
+    url: SITE_URL,
     telephone: '+90 444 3330',
     email: 'info@bgts.com.tr',
     address: {
@@ -233,14 +234,14 @@ export function ArticleStructuredData({ title, author, date, excerpt, coverImage
     datePublished: date,
     description: excerpt,
     image: coverImage,
-    url: `https://bgts.com.tr${url}`,
+    url: `${SITE_URL}${url}`,
     publisher: {
       '@type': 'Organization',
       name: 'BGTS - Business & Global Technology Solutions',
-      url: 'https://bgts.com.tr',
+      url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
-        url: 'https://bgts.com.tr/BGTS_logo.png',
+        url: `${SITE_URL}/BGTS_logo.png`,
       },
     },
   }

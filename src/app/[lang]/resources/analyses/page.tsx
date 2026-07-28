@@ -4,6 +4,7 @@ import { ARTICLES_TR } from "@/data/articles.tr"
 import { ARTICLES_EN } from "@/data/articles.en"
 import { getLocalePrefix } from "@/lib/base-path"
 import { getLocalizedPath } from "@/lib/routes"
+import { SITE_URL } from "@/lib/seo"
 import ArticlesClient from "./ArticlesClient"
 import { ArticleStructuredData } from "@/components/seo/StructuredData"
 
@@ -29,7 +30,7 @@ export default async function ArticlesPage({
                     author={article.author}
                     date={article.date}
                     excerpt={article.excerpt}
-                    coverImage={`https://bgts.com.tr${article.coverImage}`}
+                    coverImage={`${SITE_URL}${article.coverImage}`}
                     url={`${prefix}${articlesPath}/${article.id}`}
                 />
             ))}

@@ -4,7 +4,7 @@ import { getLocalePrefix } from "@/lib/base-path";
 import { getLocalizedPath } from "@/lib/routes";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://bgts.com.tr";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://bgts.com";
 
 /**
  * Returns the canonical URL plus hreflang alternates for a given path.

@@ -35,7 +35,7 @@ export default function Breadcrumb({ items, className, showHome = true, homeLabe
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://bgts.com.tr'}${item.href}`
+      "item": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://bgts.com'}${item.href}`
     }))
   }
 
