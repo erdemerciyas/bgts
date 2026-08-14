@@ -37,6 +37,7 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
 
   // Kariyer
   { path: '/career-paths', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/connected', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/culture', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/learning', priority: 0.6, changeFrequency: 'monthly' },
 

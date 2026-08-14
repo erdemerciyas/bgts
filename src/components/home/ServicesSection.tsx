@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils"
 import { GradientMesh } from "@/components/ui/GradientMesh"
 
 export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?: string }) {
-    const { heading, description, ctaText, image, sections } = content || getHomeContent().servicesSummary;
+    const { heading, description, stats, ctaText, image, sections } = content || getHomeContent().servicesSummary;
 
     return (
         <Section background="muted" className="pt-0 pb-0 overflow-visible relative">
@@ -28,6 +28,23 @@ export function ServicesSection({ content, lang = "tr" }: { content?: any; lang?
                             <Text variant="large" className="text-slate-600 mb-8 leading-relaxed">
                                 {description}
                             </Text>
+                            {stats?.length > 0 && (
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                                    {stats.map((stat: { val: string; label: string }) => (
+                                        <div
+                                            key={stat.label}
+                                            className="rounded-xl border border-slate-100 bg-slate-50/80 px-4 py-3 text-center"
+                                        >
+                                            <div className="text-2xl font-black text-corporate-secondary tracking-tight">
+                                                {stat.val}
+                                            </div>
+                                            <div className="mt-1 text-xs font-semibold text-slate-600 leading-snug">
+                                                {stat.label}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                             <Link href="#is-modelleri" className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-corporate-secondary px-8 font-bold text-white transition-all hover:bg-corporate-dark hover:shadow-lg hover:-translate-y-1">
                                 {ctaText} <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>

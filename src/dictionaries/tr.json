@@ -49,6 +49,12 @@
     "servicesSummary": {
       "heading": "Kurumsal Ölçekte\nGüvenilir Teknoloji Ortağınız",
       "description": "30+ yıllık deneyimimiz ve 1000+ proje tecrübemizle, operasyonlarınızı güvenle büyütüyoruz.",
+      "stats": [
+        { "val": "30+", "label": "Yıllık Deneyim" },
+        { "val": "1.400+", "label": "Mühendis" },
+        { "val": "1.500+", "label": "Tamamlanan Proje" },
+        { "val": "50+", "label": "Yetenek Gelişim Programı" }
+      ],
       "ctaText": "İş Modellerimizi Keşfedin",
       "sections": [
         {
@@ -1560,6 +1566,7 @@
     "careers": {
       "name": "Yerini Al",
       "lifeCareer": "Yaşam & Kariyer",
+      "connected": "ConnectED",
       "culture": "Kültür",
       "careerPaths": "Kariyer Yolları",
       "learning": "Eğitim ve Gelişim",
@@ -2161,6 +2168,88 @@
         "abroadDesc": "Dünyanın 4 Farklı Noktası",
         "projectDesc": "İnsan ve Teknoloji odağında <span className=\"font-bold text-slate-900\">1000+ IT projesi</span> gerçekleştirdik."
       }
+    }
+  },
+  "careers_connected": {
+    "hero": {
+      "title": "ConnectED",
+      "tagline": "Connect Experience and Development",
+      "paragraph1": "ConnectED programımızda deneyim gelişimle buluşuyor.",
+      "paragraph2": "Yetenekler ile iş dünyası arasında güçlü bir bağ kuruyor, yalnızca bir kariyer yolu değil, sürekli gelişen bir deneyim ağı sunuyoruz."
+    },
+    "cta": "Aramıza Katıl",
+    "ctaExplore": "Programı Keşfet",
+    "intro": {
+      "title": "Yetenekler ile iş dünyası arasında güçlü bir bağ kuruyoruz.",
+      "desc": "Farklı sektörleri tanıma, farklı projelerde deneyim kazanma olanakları ile genç yeteneklere gelişmeye, öğrenmeye, katkıda bulunulmaya açık bir çalışma ortamı sunuyoruz."
+    },
+    "journey": {
+      "title": "Gelişim ve Deneyimin İlk Adımı Bağ Kurmak",
+      "subtitle": "Farklı projeler, güçlü ekipler ve gelişim olanakları sunuyor, genç yeteneklerin potansiyellerini keşfetmelerini destekliyoruz.",
+      "steps": [
+        {
+          "title": "Bağ Kur",
+          "desc": "Farklı projeler, güçlü ekipler ve gelişim olanakları ile geleceğini şekillendirirsin."
+        },
+        {
+          "title": "Deneyim Kazan",
+          "desc": "Sektörün önde gelen kuruluşlarında deneyim kazanır, odaklı projelerde katma değer yaratırsın."
+        },
+        {
+          "title": "Yeteneklerini Geliştir",
+          "desc": "Teknik ve profesyonel yetkinliklerini güçlendirerek, potansiyelini geliştirirsin."
+        },
+        {
+          "title": "İlerle",
+          "desc": "Farklı projelerde yer alma fırsatı bulur, kariyerinde ilerlersin."
+        }
+      ]
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "Bağlantı Kur, Deneyim Kazan!",
+          "points": [
+            "Uzman ekiplere dâhil olma",
+            "İş birliği kültürü içinde çalışma",
+            "Büyük resmin parçası olma fırsatı"
+          ]
+        },
+        {
+          "title": "Potansiyelini Gerçekleştir, Değer Yarat!",
+          "points": [
+            "Farklı sektörleri tanıma",
+            "Farklı projelerde yer alma",
+            "Deneyim kazanma olanakları"
+          ]
+        },
+        {
+          "title": "Gelişim Olanaklarından Faydalan!",
+          "points": [
+            "Bireysel & teknik eğitimlere katılma",
+            "Sertifikasyonlara hak kazanma",
+            "İş başında öğrenme olanakları"
+          ]
+        },
+        {
+          "title": "Deneyim Kazan, Kariyerinde İlerle!",
+          "points": [
+            "Dikey ve yatay kariyer yolları",
+            "Farklı kariyer imkânları"
+          ]
+        }
+      ]
+    },
+    "value": {
+      "title": "Güçlü bağlar kurarak değer yaratıyoruz.",
+      "desc": "Uzman Seçme ve Yerleştirme ekibimiz ile farklı sektörlerin ihtiyaç duyduğu yazılım ve altyapı yeteneklerine ulaşıyor, bu yetenekleri geliştirerek iş süreçlerine değer katıyoruz."
+    },
+    "gallery": {
+      "title": "Deneyim ve Gelişim ConnectED Programımızda buluşuyor!"
+    },
+    "closingCta": {
+      "title": "Deneyimin Gelişimle Buluştuğu Yer",
+      "subtitle": "Bağlantı kur. Deneyim kazan. Geliş."
     }
   },
   "careers_culture": {
@@ -3329,6 +3418,7 @@
     "yerini-al": "Yerini Al",
     "kariyer-yollari": "Kariyer Yolları",
     "calisma-kulturu": "Çalışma Kültürü",
+    "connected": "ConnectED",
     "basari-hikayeleri": "Başarı Hikayeleri",
     "makaleler": "Analizler",
     "analizler": "Analizler",

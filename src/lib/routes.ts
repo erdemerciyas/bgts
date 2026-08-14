@@ -43,6 +43,7 @@ export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
   '/resources/infographics': { tr: '/infografikler', eng: '/resources/infographics' },
   '/partnerships': { tr: '/is-ortaklari', eng: '/partnerships' },
   '/learning': { tr: '/egitim-ve-gelisim', eng: '/learning' },
+  '/connected': { tr: '/connected', eng: '/connected' },
   '/meetsense-viewer': { tr: '/meetsense-goruntuleyici', eng: '/meetsense-viewer' },
   '/products/cortex': { tr: '/urunler/cortex', eng: '/products/cortex' },
   '/products/meetsense': { tr: '/urunler/meetsense', eng: '/products/meetsense' },

@@ -12,6 +12,12 @@ export const getHomeContent = (dict?: any) => {
             badge: "Hizmetlerimiz",
             heading: sDict.heading || "Kurumsal Ölçekte\nGüvenilir Teknoloji Ortağınız",
             description: sDict.description || "30+ yıllık deneyimimiz ve 1000+ proje tecrübemizle, operasyonlarınızı güvenle büyütüyoruz.",
+            stats: sDict.stats || [
+                { val: "30+", label: "Yıllık Deneyim" },
+                { val: "1.400+", label: "Mühendis" },
+                { val: "1.500+", label: "Tamamlanan Proje" },
+                { val: "50+", label: "Yetenek Gelişim Programı" },
+            ],
             ctaText: sDict.ctaText || "İş Modellerimizi Keşfedin",
             image: "/images/home/bgts-oduller.jpg",
             sections: [

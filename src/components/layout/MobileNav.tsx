@@ -15,7 +15,7 @@ import {
   Server, Activity, Terminal, FileText,
   Globe, Shield, ShoppingBag,
   CheckCircle2, Briefcase, Bot, Mic,
-  GraduationCap, Heart, Rocket, Smile,
+  GraduationCap, Heart, Rocket, Smile, Network,
   BarChart3, Linkedin
 } from "lucide-react"
 
@@ -141,6 +141,7 @@ function getMobileNavData(lang: string, dict?: Record<string, Record<string, str
         {
           heading: t("careers", "lifeCareer", "Yaşam & Kariyer", "Life & Career"),
           links: [
+            { title: t("careers", "connected", "ConnectED", "ConnectED"), href: p("/connected"), icon: Network },
             { title: t("careers", "culture", "Kültür", "Culture"), href: p("/culture"), icon: Smile },
             { title: t("careers", "careerPaths", "Kariyer Yolları", "Career Paths"), href: p("/career-paths"), icon: Rocket },
             { title: t("careers", "learning", "Eğitim ve Gelişim", "Training & Development"), href: p("/learning"), icon: GraduationCap },

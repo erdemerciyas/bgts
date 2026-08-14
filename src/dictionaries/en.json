@@ -49,6 +49,12 @@
     "servicesSummary": {
       "heading": "Your Reliable Technology Partner\nat Corporate Scale",
       "description": "With our 30+ years of experience and 1000+ projects, we confidently grow your operations.",
+      "stats": [
+        { "val": "30+", "label": "Years of Experience" },
+        { "val": "1,400+", "label": "Engineers" },
+        { "val": "1,500+", "label": "Completed Projects" },
+        { "val": "50+", "label": "Talent Development Programs" }
+      ],
       "ctaText": "Explore Our Business Models",
       "sections": [
         {
@@ -1560,6 +1566,7 @@
     "careers": {
       "name": "Careers",
       "lifeCareer": "Life & Career",
+      "connected": "ConnectED",
       "culture": "Culture",
       "careerPaths": "Career Paths",
       "learning": "Training & Development",
@@ -2161,6 +2168,88 @@
         "abroadDesc": "4 Different Points in the World",
         "projectDesc": "We have completed <span className=\"font-bold text-slate-900\">1000+ IT projects</span> with a focus on People and Technology."
       }
+    }
+  },
+  "careers_connected": {
+    "hero": {
+      "title": "ConnectED",
+      "tagline": "Connect Experience and Development",
+      "paragraph1": "In our ConnectED program, experience meets development.",
+      "paragraph2": "We build a strong bridge between talent and the business world, offering not just a career path but a continuously evolving network of experience."
+    },
+    "cta": "Join Us",
+    "ctaExplore": "Explore the Program",
+    "intro": {
+      "title": "We build a strong bridge between talent and the business world.",
+      "desc": "We offer young talents an open work environment for growth, learning, and contribution — with opportunities to explore different sectors and gain experience across diverse projects."
+    },
+    "journey": {
+      "title": "Connecting Is the First Step of Growth and Experience",
+      "subtitle": "We offer diverse projects, strong teams, and development opportunities — supporting young talents as they discover their potential.",
+      "steps": [
+        {
+          "title": "Connect",
+          "desc": "Shape your future through diverse projects, strong teams, and development opportunities."
+        },
+        {
+          "title": "Gain Experience",
+          "desc": "Build experience at leading organizations in the industry and create value in focused projects."
+        },
+        {
+          "title": "Develop Your Skills",
+          "desc": "Strengthen your technical and professional competencies and unlock your potential."
+        },
+        {
+          "title": "Advance",
+          "desc": "Find opportunities to take part in different projects and progress in your career."
+        }
+      ]
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "Connect and Gain Experience!",
+          "points": [
+            "Join expert teams",
+            "Work within a culture of collaboration",
+            "Opportunity to be part of the bigger picture"
+          ]
+        },
+        {
+          "title": "Realize Your Potential, Create Value!",
+          "points": [
+            "Explore different sectors",
+            "Take part in diverse projects",
+            "Opportunities to gain experience"
+          ]
+        },
+        {
+          "title": "Benefit from Development Opportunities!",
+          "points": [
+            "Attend individual and technical training",
+            "Earn certifications",
+            "On-the-job learning opportunities"
+          ]
+        },
+        {
+          "title": "Gain Experience, Advance Your Career!",
+          "points": [
+            "Vertical and horizontal career paths",
+            "Diverse career opportunities"
+          ]
+        }
+      ]
+    },
+    "value": {
+      "title": "We create value by building strong connections.",
+      "desc": "With our Expert Selection and Placement team, we reach the software and infrastructure talents needed by different sectors and add value to business processes by developing these talents."
+    },
+    "gallery": {
+      "title": "Experience and Development Meet in Our ConnectED Program!"
+    },
+    "closingCta": {
+      "title": "Where Experience Meets Development",
+      "subtitle": "Connect. Gain experience. Grow."
     }
   },
   "careers_culture": {
@@ -3327,6 +3416,7 @@
     "consultancy": "Consultancy",
     "career-paths": "Career Paths",
     "culture": "Work Culture",
+    "connected": "ConnectED",
     "learning": "Learning & Development",
     "partnerships": "Business Partnerships",
     "resources": "Resources",

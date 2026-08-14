@@ -213,6 +213,15 @@ export const SEARCH_ITEMS: SearchItem[] = [
 
     // Kariyer
     {
+        title: "ConnectED",
+        description: "Deneyim gelişimle buluşuyor. Bağlantı kur, deneyim kazan, geliş.",
+        titleEn: "ConnectED",
+        descriptionEn: "Where experience meets development. Connect, gain experience, and grow.",
+        href: "/connected",
+        category: "Kariyer",
+        tags: ["connected", "connectED", "deneyim", "gelişim", "bağlantı", "kariyer", "experience", "development", "connection", "career", "hire to deploy", "genç yetenek", "young talent"]
+    },
+    {
         title: "Kariyer Yolları",
         description: "Potansiyelinizi ortaya çıkaran net ve şeffaf kariyer haritaları.",
         titleEn: "Career Paths",

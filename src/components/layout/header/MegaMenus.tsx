@@ -10,7 +10,7 @@ import {
     CheckCircle2, ArrowRight, Briefcase, FileText, Linkedin,
     Bot, Landmark, TrendingUp, Radio, ShieldAlert, RefreshCw, Layers,
     ArrowUpRight, BarChart3, Quote,
-    GraduationCap, Heart, Rocket, Smile
+    GraduationCap, Heart, Rocket, Smile, Network
 } from "lucide-react"
 import { STYLES } from "./data"
 import { ResourcesMenuLeftPanel } from "./ResourcesMenuLeftPanel"
@@ -528,29 +528,29 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
             role="menu"
             aria-label={t(lang, "Kariyer menüsü", "Careers menu")}
         >
-            <div className="grid grid-cols-5 gap-4 h-[400px]">
+            <div className="grid grid-cols-5 gap-4 h-[420px]">
 
-                {/* CARD 1: CULTURE - Hero Card */}
-                <Link href={lh(lang, '/culture')} onClick={closeMenu}
+                {/* CARD 1: CONNECTED - Hero Card */}
+                <Link href={lh(lang, '/connected')} onClick={closeMenu}
                     className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
-                    <Image src="/images/headers/bgts-hakkimizda-ekip.jpg" alt="Culture" fill
+                    <Image src="/images/connected/hero.webp" alt="ConnectED" fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />
 
                     <div className="relative h-full flex flex-col justify-between p-7 z-10">
                         <div className="flex items-center gap-2">
                             <div className="w-7 h-7 rounded-full bg-white/15 backdrop-blur flex items-center justify-center">
-                                <Smile className="w-3.5 h-3.5 text-white" />
+                                <Network className="w-3.5 h-3.5 text-white" />
                             </div>
                             <span className="text-[10px] font-black text-white/70 tracking-[0.2em] uppercase">{t(lang, "Yaşam & Kültür", "Life & Culture")}</span>
                         </div>
 
                         <div>
                             <h3 className="text-2xl font-black text-white mb-2 leading-tight">
-                                {t(lang, "Birlikte", "Growing")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">{t(lang, "Büyüyoruz", "Together")}</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Connected</span>
                             </h3>
                             <p className="text-white/60 text-xs leading-relaxed mb-5 max-w-[280px]">
-                                {t(lang, "Ortak değerler, güçlü ekip ruhu ve sürekli gelişim. Geleceği birlikte inşa ediyoruz.", "Shared values, strong team spirit and continuous development. We build the future together.")}
+                                {t(lang, "Bağlantı kur. Deneyim kazan. Geliş.", "Connect. Gain experience. Grow.")}
                             </p>
                             <div className="inline-flex items-center gap-2 bg-white text-slate-900 pl-4 pr-3 py-2 rounded-full font-bold text-xs hover:bg-amber-50 transition-all group-hover:gap-3">
                                 {t(lang, "Keşfet", "Explore")} <ArrowRight className="w-3.5 h-3.5" />
@@ -559,41 +559,53 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
                 </Link>
 
-                {/* MIDDLE COLUMN - 3 Stacked Cards */}
-                <div className="col-span-2 flex flex-col gap-3">
+                {/* MIDDLE COLUMN - 4 Stacked Cards */}
+                <div className="col-span-2 flex flex-col gap-2.5">
+
+                    <Link href={lh(lang, '/culture')} onClick={closeMenu}
+                        className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 border border-blue-100/80 p-4 flex items-center gap-4 hover:shadow-lg transition-all hover:-translate-y-0.5">
+                        <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-500 to-sky-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-blue-200">
+                            <Smile className="w-5 h-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <h4 className="font-bold text-slate-800 text-sm">{t(lang, "Çalışma Kültürü", "Work Culture")}</h4>
+                            <p className="text-slate-500 text-xs mt-0.5 leading-snug line-clamp-2">{t(lang, "Ortak değerler, güçlü ekip ruhu ve sürekli gelişim.", "Shared values, strong team spirit and continuous development.")}</p>
+                        </div>
+                        <ArrowUpRight className="w-4 h-4 text-blue-300 group-hover:text-blue-600 transition-colors shrink-0" />
+                    </Link>
 
                     <Link href={lh(lang, '/career-paths')} onClick={closeMenu}
-                        className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-violet-200">
-                            <Rocket className="w-6 h-6" />
+                        className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-100/80 p-4 flex items-center gap-4 hover:shadow-lg transition-all hover:-translate-y-0.5">
+                        <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-violet-200">
+                            <Rocket className="w-5 h-5" />
                         </div>
                         <div className="flex-1 min-w-0">
                             <h4 className="font-bold text-slate-800 text-sm">{t(lang, "Kariyer Yolları", "Career Paths")}</h4>
-                            <p className="text-slate-500 text-xs mt-0.5 leading-snug">{t(lang, "Potansiyelinizi ortaya çıkaran net ve şeffaf kariyer haritaları.", "Clear career maps that unlock your potential.")}</p>
+                            <p className="text-slate-500 text-xs mt-0.5 leading-snug line-clamp-2">{t(lang, "Potansiyelinizi ortaya çıkaran net ve şeffaf kariyer haritaları.", "Clear career maps that unlock your potential.")}</p>
                         </div>
                         <ArrowUpRight className="w-4 h-4 text-violet-300 group-hover:text-violet-600 transition-colors shrink-0" />
                     </Link>
 
                     <Link href={lh(lang, '/learning')} onClick={closeMenu}
-                        className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-200">
-                            <GraduationCap className="w-6 h-6" />
+                        className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100/80 p-4 flex items-center gap-4 hover:shadow-lg transition-all hover:-translate-y-0.5">
+                        <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-200">
+                            <GraduationCap className="w-5 h-5" />
                         </div>
                         <div className="flex-1 min-w-0">
                             <h4 className="font-bold text-slate-800 text-sm">{t(lang, "Eğitim ve Sürekli Gelişim", "Training & Continuous Development")}</h4>
-                            <p className="text-slate-500 text-xs mt-0.5 leading-snug">{t(lang, "Sürekli öğrenme ve gelişim fırsatları.", "Continuous learning and development opportunities.")}</p>
+                            <p className="text-slate-500 text-xs mt-0.5 leading-snug line-clamp-2">{t(lang, "Sürekli öğrenme ve gelişim fırsatları.", "Continuous learning and development opportunities.")}</p>
                         </div>
                         <ArrowUpRight className="w-4 h-4 text-emerald-300 group-hover:text-emerald-600 transition-colors shrink-0" />
                     </Link>
 
                     <Link href={lh(lang, '/social-contribution')} onClick={closeMenu}
-                        className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-100/80 p-5 flex items-center gap-5 hover:shadow-lg transition-all hover:-translate-y-0.5">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-rose-200">
-                            <Heart className="w-6 h-6" />
+                        className="flex-1 relative group overflow-hidden rounded-2xl bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-100/80 p-4 flex items-center gap-4 hover:shadow-lg transition-all hover:-translate-y-0.5">
+                        <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-rose-200">
+                            <Heart className="w-5 h-5" />
                         </div>
                         <div className="flex-1 min-w-0">
                             <h4 className="font-bold text-slate-800 text-sm">{t(lang, "Sürdürülebilir Değer Programı", "Sustainable Value Program")}</h4>
-                            <p className="text-slate-500 text-xs mt-0.5 leading-snug">{t(lang, "Eğitim, sürdürülebilirlik ve sosyal sorumluluk projelerimiz.", "Our education, sustainability and social responsibility projects.")}</p>
+                            <p className="text-slate-500 text-xs mt-0.5 leading-snug line-clamp-2">{t(lang, "Eğitim, sürdürülebilirlik ve sosyal sorumluluk projelerimiz.", "Our education, sustainability and social responsibility projects.")}</p>
                         </div>
                         <ArrowUpRight className="w-4 h-4 text-rose-300 group-hover:text-rose-600 transition-colors shrink-0" />
                     </Link>
