@@ -20,6 +20,7 @@
 - [Proje Yapısı](#proje-yapısı)
 - [Kurulum](#kurulum)
 - [Ortam Değişkenleri](#ortam-değişkenleri)
+- [Google Entegrasyonları Kurulumu](#google-entegrasyonları-kurulumu)
 - [Komutlar](#komutlar)
 - [Sayfalar ve Rotalar](#sayfalar-ve-rotalar)
 - [API Rotaları](#api-rotaları)
@@ -29,7 +30,9 @@
 - [İçerik Yönetimi](#içerik-yönetimi)
 - [Güvenlik](#güvenlik)
 - [SEO ve Performans](#seo-ve-performans)
+- [Google Marka Araması ve Sitelinks](#google-marka-araması-ve-sitelinks)
 - [Tasarım Sistemi](#tasarım-sistemi)
+- [Deploy](#deploy)
 - [Test](#test)
 - [Versiyon Geçmişi](#versiyon-geçmişi)
 - [Çoklu Dil Desteği (i18n)](#çoklu-dil-desteği-i18n)
@@ -51,6 +54,22 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 - Personel için gizli URL üzerinden **BGTS League** bilgi yarışması sunmak
 
 **Canlı Site:** [https://bgts.com.tr](https://bgts.com.tr)
+
+### Mimari Özet
+
+```
+Ziyaretçi → middleware.ts (locale routing, rate limiting)
+         → [lang]/layout.tsx (Header, Footer, GA, CookieConsent, JSON-LD)
+         → Sayfa bileşenleri (Server + Client Components)
+         → API Routes (/api/contact, /api/league/*, /api/chat)
+```
+
+| Katman | Dosya / Klasör |
+|--------|----------------|
+| Routing & i18n | `middleware.ts`, `src/lib/routes.ts`, `src/lib/base-path.ts` |
+| SEO | `src/lib/seo.ts`, `src/components/seo/StructuredData.tsx`, `sitemap.ts`, `robots.ts` |
+| İçerik | `src/dictionaries/*.json`, `src/data/*.ts`, `src/content/` |
+| UI | `src/components/layout/`, `src/components/ui/`, `src/components/home/` |
 
 ---
 
@@ -123,7 +142,7 @@ Bu proje, **BGTS** (Business & Global Technology Solutions) şirketinin kurumsal
 - `sitemap.ts` ile 30+ URL'lik otomatik sitemap üretimi (hreflang desteği)
 - `robots.ts` ile dinamik robots.txt üretimi (basePath desteği)
 - `manifest.ts` ile PWA web app manifest (ikon, tema rengi, start_url)
-- Schema.org yapılandırılmış veri (Organization, WebSite, LocalBusiness, Breadcrumb, Product, Service, FAQPage, HowTo, VideoObject JSON-LD)
+- Schema.org yapılandırılmış veri (Organization, WebSite, LocalBusiness, BreadcrumbList, SoftwareApplication, Service, Article JSON-LD)
 - Google Search Console doğrulama meta tag desteği
 - `next/image` ile otomatik görsel optimizasyonu (AVIF/WebP, lazy loading)
 - Güvenlik başlıkları (HSTS, X-Frame-Options, CSP, Permissions-Policy)
@@ -182,7 +201,7 @@ bgts-web/
 │   │   ├── api/
 │   │   │   ├── chat/           # AI chatbot endpoint (Edge Runtime)
 │   │   │   ├── contact/        # İletişim formu e-posta API
-│   │   │   └── league/         # BGTS League API (OTP, soru, tahmin, skor)
+│   │   │   └── league/         # BGTS League API (OTP, soru, tahmin, skor, health)
 │   │   │
 │   │   ├── [lang]/             # 🌐 i18n dinamik rota segmenti (tr/eng)
 │   │   │   ├── about/          # Hakkımızda (+ AboutStatsSection, AboutValuesSection, AboutPartnersSection, AboutCertificationsSection, LocationsMap)
@@ -192,6 +211,7 @@ bgts-web/
 │   │   │   ├── learning/       # Eğitim ve Gelişim
 │   │   │   ├── partnerships/   # İş Ortakları
 │   │   │   ├── social-contribution/ # Sürdürülebilir Değer / Yerini Al
+│   │   │   ├── connected/          # ConnectED kariyer programı sayfası
 │   │   │   ├── league/             # BGTS League (personel yarışması — gizli)
 │   │   │   │   ├── LeagueClient.tsx    # Ekran akışı, gaming backdrop, EA-style başlık
 │   │   │   │   ├── CursorParticles.tsx # Yumuşak cursor aura (canvas)
@@ -283,6 +303,7 @@ bgts-web/
 │   │   ├── seo.ts              # Canonical + hreflang helper'ları (locale-aware slug)
 │   │   ├── email.ts            # Gmail API OAuth 2.0 e-posta gönderimi
 │   │   ├── cookie-consent.ts   # Çerez tercih yönetimi (localStorage)
+│   │   ├── league/             # BGTS League (OTP, session, skor, storage, demo)
 │   │   └── utils.ts            # cn() class merge yardımcısı
 │   │
 │   ├── middleware.ts            # Locale prefix, TR slug rewrite/redirect + API rate limiting
@@ -290,9 +311,10 @@ bgts-web/
 │       └── setup.ts            # Vitest test setup
 │
 ├── scripts/
-│   ├── find-unused-images.js       # Kullanılmayan görsel tespit scripti
 │   └── gmail-get-refresh-token.mjs # Gmail OAuth refresh token alma
 │
+├── PLESK_DEPLOY.md             # Plesk Node.js production deploy rehberi
+├── PLESK_ENV.md                # Plesk ortam değişkenleri checklist
 ├── FRONTEND_STANDARDS.md       # Tasarım sistemi dokümantasyonu
 ├── next.config.ts              # Next.js yapılandırması (güvenlik başlıkları, CSP)
 ├── tsconfig.json               # TypeScript yapılandırması
@@ -345,48 +367,6 @@ npm start
 
 ---
 
-## Vercel Deploy
-
-Bu proje Vercel üzerinde sorunsuz çalışacak şekilde yapılandırılmıştır.
-
-### Otomatik Deploy
-
-1. [Vercel](https://vercel.com) hesabınıza giriş yapın
-2. "New Project" ile GitHub repo'nuzu bağlayın (`erdemerciyas/bgts`)
-3. Framework: **Next.js** (otomatik algılanır)
-4. Root Directory: `.` (varsayılan)
-5. **Environment Variables** ekleyin:
-
-| Değişken | Açıklama |
-|----------|----------|
-| `GROQ_API_KEY` | Groq AI API key (chatbot için) |
-| `GMAIL_CLIENT_ID` | Google OAuth 2.0 Client ID |
-| `GMAIL_CLIENT_SECRET` | Google OAuth 2.0 Client Secret |
-| `GMAIL_REFRESH_TOKEN` | Gmail API refresh token |
-| `GMAIL_USER` | Sistem gönderici Gmail adresi (`bgtsweb@gmail.com`) |
-| `CONTACT_EMAIL` | Form mesajlarının iletileceği adres (`info@bgts.com`) |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics Measurement ID (G-XXXXXXXXXX) |
-| `NEXT_PUBLIC_GSC_VERIFICATION` | Google Search Console HTML tag doğrulama kodu |
-
-6. **Deploy** butonuna tıklayın
-
-### Önemli Notlar
-
-- **Edge Runtime:** `/api/chat` endpoint Edge Runtime üzerinde çalışır — Vercel Edge Functions uyumluluğu sağlanmıştır
-- **Image Optimization:** `next.config.ts`'de `images.unsplash.com` ve `i.pravatar.cc` remote patterns olarak tanımlıdır
-- **Security Headers:** CSP, HSTS, X-Frame-Options gibi güvenlik başlıkları `next.config.ts` içinde yapılandırılmıştır
-- **Build Command:** `npm run build`
-- **Install Command:** `npm install`
-
-### Vercel CLI ile Deploy
-
-```bash
-npm i -g vercel
-vercel
-```
-
----
-
 ## Ortam Değişkenleri
 
 `.env.local` dosyası oluşturun ve aşağıdaki değerleri doldurun:
@@ -414,8 +394,9 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 # Google Search Console (site canlı olduktan sonra)
 NEXT_PUBLIC_GSC_VERIFICATION=
 
-# Canonical site URL (opsiyonel)
-# NEXT_PUBLIC_SITE_URL=https://bgts.com.tr
+# Canonical site URL — production'da birincil domain ile eşleşmeli
+# Canlı site: https://bgts.com.tr
+NEXT_PUBLIC_SITE_URL=https://bgts.com.tr
 
 # BGTS League (personel yarışması)
 LEAGUE_SECRET=change-me-to-a-long-random-string
@@ -520,6 +501,7 @@ Doğrulama meta tag'i `generateMetadata()` üzerinden env'den okunur; env boşke
 
 | Değişken | Zorunlu |
 |----------|---------|
+| `NEXT_PUBLIC_SITE_URL` | Evet (`https://bgts.com.tr`) |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Evet |
 | `NEXT_PUBLIC_GSC_VERIFICATION` | Site canlı olunca |
 | `GMAIL_CLIENT_ID` | Evet (iletişim formu) |
@@ -579,6 +561,7 @@ Plesk'te `NEXT_PUBLIC_*` değişkenleri **build öncesi** ayarlanmalıdır.
 | `/products/docmind` | `/urunler/docmind` |
 | `/products/ai-hiring-assistant` | `/urunler/yapay-zeka-ise-alim-asistani` |
 | `/products/cv-converter` | `/urunler/cv-donusturucu` |
+| `/connected` | `/connected` |
 | `/league` | `/league` (gizli personel yarışması; nav/sitemap'te yok; eski `/lig` → `/league` 301) |
 | `/career-paths` | `/kariyer-yollari` |
 | `/culture` | `/calisma-kulturu` |
@@ -647,6 +630,7 @@ localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /tr/en/contact
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
 | `/tr/kariyer-yollari` | `/tr/en/career-paths` | Kariyer Yolları (staj, Genç Mühendis, açık pozisyonlar) |
+| `/tr/connected` | `/tr/en/connected` | ConnectED — deneyim ve gelişim programı |
 | `/tr/calisma-kulturu` | `/tr/en/culture` | Çalışma Kültürü |
 | `/tr/egitim-ve-gelisim` | `/tr/en/learning` | Eğitim ve Gelişim |
 | `/tr/yerini-al` | `/tr/en/social-contribution` | Sürdürülebilir Değer / Yerini Al |
@@ -726,6 +710,7 @@ Personel bilgi yarışması endpoint'leri. Nav/sitemap'te yer almaz; erişim giz
 | `GET` | `/api/league/question` | Aktif soru + sezon meta (cevap yok) | — |
 | `POST` | `/api/league/submit` | Tahmin kaydı; demo modunda skor döner | 10/dk |
 | `GET` | `/api/league/reveal` | `revealAt` sonrası (veya demo) doğru cevap + skor | — |
+| `GET` | `/api/league/health` | Ortam değişkenlerinin yüklü olup olmadığını kontrol eder (değerleri göstermez) | — |
 
 **Send-code body:** `{ "name": "Ad Soyad", "email": "ad.soyad@bgts.com" }`  
 **Verify body:** `{ "email": "ad.soyad@bgts.com", "code": "123456" }`  
@@ -897,27 +882,130 @@ Proje, içerik verilerini TypeScript objeleri olarak yönetir (headless CMS kull
 - OpenGraph (`url`, `locale`) ve Twitter Card meta tag'leri locale ile eşlenir
 - **Canonical URL'ler locale-aware:** Her sayfa kendi diline ait canonical üretir (`/tr/hakkimizda`, `/tr/en/about`)
 - Tüm metadata mantığı `src/lib/seo.ts` + `src/lib/routes.ts` üzerinden locale slug eşlemesi yapılır
+- `NEXT_PUBLIC_SITE_URL` production'da birincil domain ile eşleşmeli (`https://bgts.com.tr`)
 
 ### hreflang ve Çoklu Dil SEO
-- Her sayfada otomatik `<link rel="alternate" hreflang="tr">`, `hreflang="eng">`, `hreflang="x-default">` etiketleri
+- Her sayfada otomatik `<link rel="alternate" hreflang="tr">`, `hreflang="en">`, `hreflang="x-default">` etiketleri
 - Next.js `Metadata.alternates.languages` API'si üzerinden üretim
-- Google'a iki dilli içerik açıkça bildirilir → duplicate content riski yoktur
+- Google'a iki dilli içerik açıkça bildirilir → duplicate content riski azaltılır
 
 ### Yapılandırılmış Veri (JSON-LD)
-- **Organization:** Şirket bilgileri
-- **Breadcrumb:** Sayfa hiyerarşisi
-- **Product:** Ürün sayfalarında detaylı ürün bilgisi
 
-### Sitemap
-- `src/app/sitemap.ts` ile dinamik üretim
-- **Locale-aware slug'lar:** Her route için TR ve EN canonical URL'ler ayrı slug ile listelenir
-- Her sitemap girdisinde `alternates.languages` ile hreflang eşleşmesi
-- Öncelik ve değişim sıklığı bilgileri
+Tüm schema bileşenleri `src/components/seo/StructuredData.tsx` içinde tanımlıdır.
+
+| Schema | Durum | Nerede kullanılır |
+|--------|-------|-------------------|
+| `Organization` | ✅ Aktif | Root layout — şirket bilgileri, logo, iletişim, `sameAs` (LinkedIn) |
+| `WebSite` | ✅ Aktif | Root layout — site adı, URL, dil bilgisi |
+| `LocalBusiness` | ✅ Aktif | Root layout — ofis adresi, telefon, çalışma saatleri, `sameAs` (LinkedIn, Twitter) |
+| `BreadcrumbList` | ✅ Aktif | Ana sayfa + `Breadcrumb.tsx` bileşeni |
+| `SoftwareApplication` | ✅ Aktif | Ürün sayfaları (Cortex, HCM, Praxilla, MeetSense vb.) |
+| `Service` | ✅ Aktif | Hizmet sayfaları |
+| `Article` | ✅ Aktif | Analizler sayfası |
+| `SiteNavigationElement` | ❌ Yok | — |
+| `FAQPage` | ❌ Yok | — |
+| `HowTo` | ❌ Yok | — |
+| `VideoObject` | ❌ Yok | — |
+
+**Global schema enjeksiyonu** (`src/app/[lang]/layout.tsx`):
+
+```tsx
+<OrganizationStructuredData locale={lang} />
+<LocalBusinessStructuredData />
+<WebSiteStructuredData locale={lang} />
+```
+
+### Sitemap ve robots.txt
+- `src/app/sitemap.ts` — 30+ dahili route × 2 locale; `alternates.languages` ile hreflang eşleşmesi
+- `src/app/robots.ts` — dinamik robots.txt; `/api/` disallow; sitemap URL referansı
+- `src/app/manifest.ts` — PWA web app manifest
+- **Sitemap'te olmayan:** `/league` (`noindex`, gizli personel sayfası)
+
+### Google Search Console
+- `NEXT_PUBLIC_GSC_VERIFICATION` env ile HTML tag doğrulama desteği
+- Site canlı olduktan sonra sitemap gönderimi: `https://bgts.com.tr/sitemap.xml`
+- Hem `bgts.com` hem `bgts.com.tr` kullanılıyorsa her iki property doğrulanmalı; birincil domain 301 ile birleştirilmeli
 
 ### Görsel Optimizasyonu
-- `next/image` ile otomatik WebP dönüşümü ve lazy loading
+- `next/image` ile otomatik AVIF/WebP dönüşümü ve lazy loading
 - Responsive srcset üretimi
-- Uzak görseller için whitelist (Unsplash, Pravatar)
+- Uzak görseller için whitelist (`next.config.ts` remote patterns)
+
+### Performans
+- Güvenlik başlıkları (HSTS, CSP, X-Frame-Options) — `next.config.ts`
+- Google Analytics (GA4) yalnızca analitik çerez onayı sonrası yüklenir
+- Core Web Vitals odaklı görsel format ve cache stratejisi
+
+---
+
+## Google Marka Araması ve Sitelinks
+
+Google'da marka adıyla arama yapıldığında (ör. `bgts`) sonuçların **tek ana blok altında sitelinks** (Hizmetler, Sektörler, Ürünler vb.) ile görünmesi — BilgeAdam Akademi örneğindeki gibi — tamamen Google algoritmasına bağlıdır. Kod veya schema ile doğrudan zorlanamaz; ancak aşağıdaki sinyaller sitelinks oluşumunu destekler.
+
+### Mevcut durum
+
+| Güçlü yön | Eksik / iyileştirilebilir |
+|-----------|---------------------------|
+| Organization + WebSite + LocalBusiness schema | `SiteNavigationElement` schema yok |
+| Dinamik sitemap + hreflang | Üst menüde 4 ana bölüm `href="#"` (crawl edilemez) |
+| Canonical + OpenGraph her sayfada | `Organization.sameAs` yalnızca LinkedIn |
+| İç linkleme (footer, mega menü, arama) | `@id` ile schema graph bağlantısı yok |
+| GSC doğrulama hook'u | `bgts.com` vs `bgts.com.tr` domain tutarlılığı |
+
+### Önerilen iyileştirme yol haritası
+
+1. **Domain birleştirme** — `NEXT_PUBLIC_SITE_URL=https://bgts.com.tr`; ikincil domain'den 301 yönlendirme
+2. **Menü URL'leri** — Hizmetler, Sektörler, Ürünler, Bilgi Merkezi için gerçek landing URL'leri (`/hizmetler`, `/sektorler` vb.)
+3. **`SiteNavigationElement` JSON-LD** — Ana menü + footer linklerini schema olarak tanımlama
+4. **`Organization` zenginleştirme** — `ImageObject` logo, genişletilmiş `sameAs`, `@id` graph
+5. **Ana sayfa marka optimizasyonu** — Title/description'da BGTS markası net vurgulanmalı
+6. **GSC izleme** — "bgts" sorgusu için hangi sayfaların tıklandığını takip; istenmeyen sitelink varsa "Demote" kullanılabilir (ekleme aracı yoktur)
+
+> Sitelinks sonuçları haftalar–aylar içinde değişebilir. Teknik düzenleme sonrası anında görünmez.
+
+---
+
+## Deploy
+
+### Vercel
+
+Bu proje Vercel üzerinde sorunsuz çalışacak şekilde yapılandırılmıştır.
+
+**Otomatik deploy adımları:**
+
+1. [Vercel](https://vercel.com) → GitHub repo bağlantısı (`erdemerciyas/bgts`)
+2. Framework: **Next.js** (otomatik algılanır)
+3. **Environment Variables** ekleyin (bkz. [Ortam Değişkenleri](#ortam-değişkenleri))
+4. Deploy
+
+| Değişken | Açıklama |
+|----------|----------|
+| `NEXT_PUBLIC_SITE_URL` | `https://bgts.com.tr` |
+| `GROQ_API_KEY` | Groq AI API key (chatbot için) |
+| `GMAIL_CLIENT_ID` | Google OAuth 2.0 Client ID |
+| `GMAIL_CLIENT_SECRET` | Google OAuth 2.0 Client Secret |
+| `GMAIL_REFRESH_TOKEN` | Gmail API refresh token |
+| `GMAIL_USER` | Sistem gönderici Gmail adresi |
+| `CONTACT_EMAIL` | Form mesajlarının iletileceği adres |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics Measurement ID |
+| `NEXT_PUBLIC_GSC_VERIFICATION` | Google Search Console doğrulama kodu |
+| `LEAGUE_SECRET` | BGTS League cookie imza anahtarı (min 16 karakter) |
+
+**Vercel CLI:**
+
+```bash
+npm i -g vercel
+vercel
+```
+
+### Plesk (Production)
+
+Canlı site Plesk üzerinde Node.js ile çalıştırılmaktadır. Detaylı adımlar için:
+
+- **[PLESK_DEPLOY.md](./PLESK_DEPLOY.md)** — Node.js uygulama kurulumu, build, `server.js`, alt klasör deploy
+- **[PLESK_ENV.md](./PLESK_ENV.md)** — Ortam değişkenleri checklist
+
+**Önemli:** `NEXT_PUBLIC_*` değişkenleri **build öncesi** ayarlanmalıdır. `NEXT_PUBLIC_BASE_PATH` yalnızca alt klasör deploy'da gereklidir (ör. `/tr3`).
 
 ---
 
@@ -980,6 +1068,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.51.0 | 2026-08 | **README revizyonu:** SEO schema tablosu gerçek implementasyonla hizalandı (FAQPage/HowTo/VideoObject kaldırıldı); Google sitelinks / marka araması yol haritası eklendi; ConnectED (`/connected`) sayfası, `/api/league/health` ve `src/lib/league/` dokümante edildi; Plesk deploy referansları; `NEXT_PUBLIC_SITE_URL` domain tutarlılığı notları. |
 | v0.50.0 | 2026-07 | **Analizler menü ve liste UX:** Mega menüde rastgele seçilen analiz seti tarihe göre yeniden eskiye sıralanır (en yeni öne çıkan, yan liste üstten alta); listeleme sayfası kart grid aralığı `gap-8 md:gap-10` ile genişletildi. |
 | v0.49.0 | 2026-07 | **Analizler mega menü ve hero revizyonu:** `AnalysesMenu` görselsiz öne çıkan + 3 yan analiz düzeni; `getStableRandomAnalysesMenuArticles` ile sayfa yüklemesine sabit rastgele seçim; menü genişliği ~1080px; Analizler hero koyu kurumsal overlay’e geçiş; liste tarihe göre sıralama ve tema renkli kart kenarlıkları; UI terminolojisi makale → analiz (TR/EN). |
 | v0.48.0 | 2026-07 | **BGTS League UI revizyonu:** URL `/lig` → `/league` (legacy redirect); açık kurumsal-gaming tema; EA Sports tarzı `BGTS LİG` başlık animasyonu; `PerspectiveStage` ile hafif 3D perspektif; perspektif grid zemin; yumuşak cursor aura (`CursorParticles` canvas); kurumsal OTP e-posta şablonu; league sayfasında özel Chakra Petch font. |
