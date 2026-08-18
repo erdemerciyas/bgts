@@ -533,7 +533,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                 {/* CARD 1: CONNECTED - Hero Card */}
                 <Link href={lh(lang, '/connected')} onClick={closeMenu}
                     className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
-                    <Image src="/images/connected/hero.webp" alt="ConnectED" fill
+                    <Image src="/images/connected/hero.webp" alt="" fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />
 
@@ -546,9 +546,15 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         </div>
 
                         <div>
-                            <h3 className="text-2xl font-black text-white mb-2 leading-tight">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400">ConnectED</span>
-                            </h3>
+                            <div className="relative mb-3 h-[56px] w-[240px]">
+                                <Image
+                                    src="/images/connected/logo-on-dark.png"
+                                    alt="ConnectED"
+                                    fill
+                                    sizes="240px"
+                                    className="object-contain object-left brightness-0 invert"
+                                />
+                            </div>
                             <p className="text-white/60 text-xs leading-relaxed mb-5 max-w-[280px]">
                                 {t(lang, "Bağlantı kur. Deneyim kazan. Geliş.", "Connect. Gain experience. Grow.")}
                             </p>
