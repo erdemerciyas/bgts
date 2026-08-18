@@ -2172,43 +2172,145 @@
   },
   "careers_connected": {
     "hero": {
-      "title": "ConnectED",
-      "tagline": "Connect Experience and Development",
-      "paragraph1": "ConnectED programımızda deneyim gelişimle buluşuyor.",
-      "paragraph2": "Yetenekler ile iş dünyası arasında güçlü bir bağ kuruyor, yalnızca bir kariyer yolu değil, sürekli gelişen bir deneyim ağı sunuyoruz."
+      "title": "Deneyim ve gelişim,\ntek bir programda buluşuyor.",
+      "subtitle": "ConnectED; genç yetenekleri seçmeden başlayıp teknik yetkinlik geliştirme, gerçek proje deneyimi ve müşteride çalışma adımlarıyla ilerleyen, sektörün önde gelen kurumlarında yerleştirmeyle sonuçlanan bir deneyim ve gelişim programıdır.",
+      "stats": [
+        { "value": "50+", "label": "tamamlanan program" },
+        { "value": "1.412", "label": "mezun olan yetenek" },
+        { "value": "43", "label": "yerleştirme yapılan kurum" },
+        { "value": "%75", "label": "program sonrası devam oranı" }
+      ]
     },
     "cta": "Aramıza Katıl",
     "ctaExplore": "Programı Keşfet",
-    "intro": {
-      "title": "Yetenekler ile iş dünyası arasında güçlü bir bağ kuruyoruz.",
-      "desc": "Farklı sektörleri tanıma, farklı projelerde deneyim kazanma olanakları ile genç yeteneklere gelişmeye, öğrenmeye, katkıda bulunulmaya açık bir çalışma ortamı sunuyoruz."
-    },
-    "journey": {
-      "title": "Gelişim ve Deneyimin İlk Adımı Bağ Kurmak",
-      "subtitle": "Farklı projeler, güçlü ekipler ve gelişim olanakları sunuyor, genç yeteneklerin potansiyellerini keşfetmelerini destekliyoruz.",
-      "steps": [
+    "ctaPositions": "Açık pozisyonları incele",
+    "ctaAsk": "Bize soru sor",
+    "pillars": {
+      "words": "Connect & Experience & Development",
+      "items": [
         {
-          "title": "Bağ Kur",
-          "desc": "Farklı projeler, güçlü ekipler ve gelişim olanakları ile geleceğini şekillendirirsin."
+          "letter": "C",
+          "title": "Connect — Bağ kur",
+          "desc": "Yetenek ile iş dünyası arasındaki ilk bağ: seçme süreci, mentor eşleşmesi ve uzman ekiplere dâhil olma.",
+          "points": [
+            "Yapılandırılmış seçme ve değerlendirme",
+            "Mentor ve ekip eşleşmesi",
+            "İş birliği kültürü içinde çalışma"
+          ]
         },
         {
-          "title": "Deneyim Kazan",
-          "desc": "Sektörün önde gelen kuruluşlarında deneyim kazanır, odaklı projelerde katma değer yaratırsın."
+          "letter": "E",
+          "title": "Experience — Deneyim kazan",
+          "desc": "Gerçek projelerde ve gerçek müşteri ekiplerinde çalışarak kazanılan saha deneyimi.",
+          "points": [
+            "Farklı sektörlerde canlı projeler",
+            "Müşteride çalışma imkânı",
+            "İş başında öğrenme"
+          ]
         },
         {
-          "title": "Yeteneklerini Geliştir",
-          "desc": "Teknik ve profesyonel yetkinliklerini güçlendirerek, potansiyelini geliştirirsin."
-        },
-        {
-          "title": "İlerle",
-          "desc": "Farklı projelerde yer alma fırsatı bulur, kariyerinde ilerlersin."
+          "letter": "D",
+          "title": "Development — Gelişimini sürdür",
+          "desc": "Teknik ve profesyonel yetkinliklerin plana bağlı, ölçülebilir biçimde geliştirilmesi.",
+          "points": [
+            "Rol bazlı teknik eğitimler",
+            "Sertifikasyon olanakları",
+            "Dikey ve yatay kariyer yolları"
+          ]
         }
       ]
     },
+    "intro": {
+      "title": "Yetenekler ile iş dünyası arasında güçlü bir bağ kuruyoruz.",
+      "desc": "Farklı sektörleri tanıma ve farklı projelerde deneyim kazanma olanakları ile genç yeteneklere gelişmeye, öğrenmeye ve katkıda bulunmaya açık bir çalışma ortamı sunuyoruz.",
+      "desc2": "Kurduğumuz bağ tek seferlik bir işe alım değil; seçme sürecinden yerleştirmeye, yerleştirmeden sonraki kariyer adımlarına kadar devam eden uzun soluklu bir yol.",
+      "minis": [
+        { "value": "50+", "label": "program dönemi" },
+        { "value": "1.412", "label": "mezun olan yetenek" },
+        { "value": "43", "label": "kurumda yerleştirme" }
+      ]
+    },
+    "kpi": {
+      "title": "50+ programla sektöre yetenek kazandırdık",
+      "desc": "ConnectED mezunları bugün bankacılıktan telekoma, sigortadan perakendeye kadar birçok sektörde; sektörün önde gelen kurumlarının yazılım ve altyapı projelerinde çalışıyor.",
+      "items": [
+        { "value": "50+", "label": "tamamlanan ConnectED programı" },
+        { "value": "1.412", "label": "programdan mezun olan yetenek" },
+        { "value": "43", "label": "yerleştirme yapılan kurum" },
+        { "value": "%75", "label": "program sonrası devam oranı" }
+      ],
+      "sectors": ["Bankacılık", "Sigorta", "Telekom", "Perakende", "Üretim", "Enerji", "Kamu", "Sağlık"],
+      "disclaimer": "Referans izni alınırsa bu bölümün altına müşteri logoları şeridi eklenebilir."
+    },
+    "program": {
+      "title": "Başvurudan yerleştirmeye, program nasıl işliyor?",
+      "subtitle": "Her ConnectED dönemi aynı beş adımdan geçer. Hangi adımda olduğunu, sırada ne olduğunu ve senden ne beklendiğini her zaman bilirsin.",
+      "steps": [
+        {
+          "title": "Seçme",
+          "desc": "Başvuruların teknik ve yetkinlik bazlı değerlendirilmesi, görüşmeler ve programa kabul.",
+          "points": [
+            "Online başvuru ve ön değerlendirme",
+            "Teknik değerlendirme",
+            "İK ve teknik ekip görüşmesi"
+          ],
+          "badge": "Connect"
+        },
+        {
+          "title": "Teknik yetkinlik geliştirme",
+          "desc": "Rol bazlı eğitim programı, mentor eşliğinde uygulama ve sertifikasyon olanakları.",
+          "points": [
+            "Rol bazlı eğitim planı",
+            "Mentor eşliğinde uygulama",
+            "Sertifikasyon hazırlığı"
+          ],
+          "badge": "Development"
+        },
+        {
+          "title": "Proje deneyimi",
+          "desc": "Uzman ekiplerin içinde gerçek projelerde görev alarak iş başında öğrenme.",
+          "points": [
+            "Ekip içinde görev alma",
+            "Gerçek iş talepleri üzerinde çalışma",
+            "Düzenli geri bildirim"
+          ],
+          "badge": "Experience"
+        },
+        {
+          "title": "Yerleştirme ve kariyer",
+          "desc": "Program sonunda uygun role yerleştirme ve sonrasında devam eden gelişim planı.",
+          "points": [
+            "Rol ve proje eşleştirmesi",
+            "Dikey ve yatay kariyer yolları",
+            "Yerleştirme sonrası takip"
+          ],
+          "badge": "Connect + Development"
+        }
+      ],
+      "disclaimer": "Her adımın süresi (örn. “2 hafta”, “3 ay”) netleştiğinde kartların altına süre etiketi olarak eklenecek."
+    },
+    "tracks": {
+      "title": "Teknik yetkinlik geliştirme başlıklarımız",
+      "subtitle": "Programa kabul edilen her yetenek, ilgi alanına ve projenin ihtiyacına göre bir gelişim hattına yerleşir.",
+      "items": [
+        { "title": "Yazılım geliştirme", "desc": "Backend ve frontend geliştirme, kod kalitesi ve sürüm yönetimi." },
+        { "title": "Altyapı ve sistem", "desc": "Sistem yönetimi, ağ, sanallaştırma ve altyapı operasyonları." },
+        { "title": "Veri ve raporlama", "desc": "Veri tabanı, veri hazırlama ve raporlama araçları." },
+        { "title": "Bulut ve DevOps", "desc": "Bulut servisleri, otomasyon ve sürekli entegrasyon." },
+        { "title": "Test ve kalite", "desc": "Test senaryoları, otomasyon ve kalite güvence süreçleri." },
+        { "title": "Siber güvenlik", "desc": "Güvenlik temelleri, izleme ve güvenli geliştirme." },
+        { "title": "İş analizi", "desc": "İhtiyaç analizi, süreç modelleme ve dokümantasyon." },
+        { "title": "Profesyonel gelişim", "desc": "İletişim, sunum, ekip çalışması ve zaman yönetimi." }
+      ],
+      "disclaimer": "Başlıklar örnek olarak yerleştirildi; programın gerçek eğitim hatlarına göre güncellenecek."
+    },
     "benefits": {
+      "title": "Programın sana kazandırdıkları",
+      "subtitle": "Her kazanım, ConnectED'in üç kavramından birine bağlıdır.",
       "items": [
         {
-          "title": "Bağlantı Kur, Deneyim Kazan!",
+          "title": "Bağlantı kur, deneyim kazan!",
+          "badge": "Connect",
           "points": [
             "Uzman ekiplere dâhil olma",
             "İş birliği kültürü içinde çalışma",
@@ -2216,40 +2318,116 @@
           ]
         },
         {
-          "title": "Potansiyelini Gerçekleştir, Değer Yarat!",
+          "title": "Potansiyelini gerçekleştir, değer yarat!",
+          "badge": "Experience",
           "points": [
             "Farklı sektörleri tanıma",
             "Farklı projelerde yer alma",
-            "Deneyim kazanma olanakları"
+            "Müşteride çalışma imkânı"
           ]
         },
         {
-          "title": "Gelişim Olanaklarından Faydalan!",
+          "title": "Gelişim olanaklarından faydalan!",
+          "badge": "Development",
           "points": [
-            "Bireysel & teknik eğitimlere katılma",
+            "Bireysel ve teknik eğitimlere katılma",
             "Sertifikasyonlara hak kazanma",
             "İş başında öğrenme olanakları"
           ]
         },
         {
-          "title": "Deneyim Kazan, Kariyerinde İlerle!",
+          "title": "Deneyim kazan, kariyerinde ilerle!",
+          "badge": "Development",
           "points": [
             "Dikey ve yatay kariyer yolları",
-            "Farklı kariyer imkânları"
+            "Farklı kariyer imkânları",
+            "Program sonrası yerleştirme"
           ]
         }
       ]
     },
     "value": {
       "title": "Güçlü bağlar kurarak değer yaratıyoruz.",
-      "desc": "Uzman Seçme ve Yerleştirme ekibimiz ile farklı sektörlerin ihtiyaç duyduğu yazılım ve altyapı yeteneklerine ulaşıyor, bu yetenekleri geliştirerek iş süreçlerine değer katıyoruz."
+      "desc": "Uzman Seçme ve Yerleştirme ekibimiz ile farklı sektörlerin ihtiyaç duyduğu yazılım ve altyapı yeteneklerine ulaşıyor, bu yetenekleri geliştirerek iş süreçlerine değer katıyoruz.",
+      "desc2": "Aynı ekip, program boyunca yeteneği doğru projeye ve doğru kuruma yönlendiren tarafta da yer alır. Yerleştirme, programın sonunda gelen tek seferlik bir adım değil; ilk görüşmeden itibaren birlikte planlanan bir sonuçtur."
+    },
+    "audience": {
+      "title": "ConnectED kimler için?",
+      "subtitle": "Teknik temeli olan, öğrenmeye ve sahada çalışmaya istekli herkes için.",
+      "groups": [
+        {
+          "title": "Yeni mezunlar",
+          "desc": "Mühendislik ve ilgili bölümlerden mezun, kariyerinin ilk adımını gerçek projelerle atmak isteyenler."
+        },
+        {
+          "title": "Son sınıf öğrencileri",
+          "desc": "Ders programına uyumlu şekilde iş dünyasıyla erken bağ kurmak isteyen son sınıf öğrencileri."
+        },
+        {
+          "title": "Kariyerine yön verenler",
+          "desc": "Teknik alana geçiş yapmak ya da uzmanlığını yeni bir alana taşımak isteyen genç profesyoneller."
+        }
+      ],
+      "reqs": [
+        "Teknoloji alanında temel bilgi ve öğrenme isteği",
+        "Ekip içinde çalışma ve iletişim becerisi",
+        "Proje ve müşteri ortamında çalışmaya açıklık",
+        "İyi derecede teknik İngilizce okuma"
+      ]
     },
     "gallery": {
-      "title": "Deneyim ve Gelişim ConnectED Programımızda buluşuyor!"
+      "title": "Deneyim ve gelişim ConnectED programımızda buluşuyor!"
+    },
+    "quotes": [
+      {
+        "text": "Son sınıftayken başvurdum, üç ay sonra ilk canlı projede kod yazıyordum. Ekipteki herkes sorularıma zaman ayırdı; öğrenmek için beklemek zorunda kalmadım.",
+        "name": "Elif Demir",
+        "role": "Yazılım Geliştirme Uzmanı · 2023 dönemi"
+      },
+      {
+        "text": "Programda aldığım bulut eğitimlerinin sonunda sertifikamı aldım. Aynı dönemde bulunduğum ekipte otomasyon tarafında görev almaya başladım.",
+        "name": "Mert Yılmaz",
+        "role": "DevOps Mühendisi · 2022 dönemi"
+      },
+      {
+        "text": "Program bittiğinde çalıştığım projede kalmayı seçtim. Bugün aynı ekipte yeni katılan arkadaşlara mentorluk yapıyorum.",
+        "name": "Zeynep Kaya",
+        "role": "Kıdemli İş Analisti · 2021 dönemi"
+      }
+    ],
+    "faq": {
+      "title": "Merak edilenler",
+      "items": [
+        {
+          "q": "ConnectED ne kadar sürüyor?",
+          "a": "[Program süresi] boyunca eğitim, proje ve müşteride çalışma adımları birlikte ilerler. Süre, gelişim hattına göre değişebilir."
+        },
+        {
+          "q": "Program ücretli mi?",
+          "a": "[İstihdam ve ücret modeli buraya yazılacak.]"
+        },
+        {
+          "q": "Seçme sürecinde neler oluyor?",
+          "a": "Başvuru sonrası ön değerlendirme, teknik değerlendirme ve görüşmeler yapılır. Her adımın sonucunda geri bildirim paylaşılır."
+        },
+        {
+          "q": "Program sonunda yerleştirme garanti mi?",
+          "a": "Program, yerleştirmeyi hedefleyerek kurgulanır. Rol eşleştirmesi; gelişim hattı, proje ihtiyacı ve program performansı birlikte değerlendirilerek yapılır."
+        },
+        {
+          "q": "Hangi şehirlerde çalışılıyor?",
+          "a": "[Lokasyon ve çalışma modeli bilgisi buraya yazılacak.]"
+        },
+        {
+          "q": "Başvuru dönemleri ne zaman?",
+          "a": "Yeni dönem açıldığında açık pozisyonlar sayfasında ve LinkedIn hesabımızda duyurulur."
+        }
+      ]
     },
     "closingCta": {
-      "title": "Deneyimin Gelişimle Buluştuğu Yer",
-      "subtitle": "Bağlantı kur. Deneyim kazan. Geliş."
+      "title": "Sıradaki ConnectED dönemine katıl",
+      "subtitle": "Açık pozisyonları incele, başvurunu bırak. Seçme sürecinden yerleştirmeye kadar her adımda yanındayız.",
+      "cta": "Açık pozisyonlar"
     }
   },
   "careers_culture": {

@@ -15,8 +15,8 @@ export async function generateMetadata({
 
   const title = isTr ? "ConnectED | BGTS" : "ConnectED | BGTS";
   const description = isTr
-    ? "ConnectED programında deneyim gelişimle buluşuyor. Bağlantı kur, deneyim kazan, geliş. BGTS ile yetenekler ve iş dünyası arasında güçlü bir köprü kurun."
-    : "In the ConnectED program, experience meets development. Connect, gain experience, and grow. Build a strong bridge between talent and the business world with BGTS.";
+    ? "ConnectED; seçmeden teknik yetkinlik geliştirmeye, gerçek proje deneyiminden yerleştirmeye uzanan BGTS deneyim ve gelişim programı."
+    : "ConnectED is BGTS's experience and development program — from selection and technical upskilling to real project experience and placement.";
 
   return {
     title,

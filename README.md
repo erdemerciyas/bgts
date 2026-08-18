@@ -113,7 +113,7 @@ Ziyaretçi → middleware.ts (locale routing, rate limiting)
 - **Hero Slider:** Ana sayfada çok slaytlı, otomatik ilerleyen, swipe destekli animasyonlu kahraman alanı
 - **Framer Motion Animasyonları:** Scroll-triggered reveal, spring animasyonları, stagger efektleri
 - **Glassmorphism & Gradient Efektler:** Cam efektli kart tasarımları, gradient mesh arka planlar, geometrik dekorasyonlar
-- **Fotoğraflı Hero Alanları:** Kariyer, Öğrenme, Genç Mühendis, Kültür sayfalarında gerçek fotoğraflı hero bölümleri (gradient overlay)
+- **Fotoğraflı Hero Alanları:** Kariyer, ConnectED, Öğrenme, Genç Mühendis, Kültür sayfalarında gerçek fotoğraflı hero bölümleri (gradient overlay)
 - **Kolaj Tasarım:** Sürdürülebilir Değer sayfasında dağınık fotoğraf kolajı ile duygusal hikaye anlatımı
 
 ### AI Destekli Chatbot (Ayla) — *Şu anda pasif*
@@ -211,7 +211,10 @@ bgts-web/
 │   │   │   ├── learning/       # Eğitim ve Gelişim
 │   │   │   ├── partnerships/   # İş Ortakları
 │   │   │   ├── social-contribution/ # Sürdürülebilir Değer / Yerini Al
-│   │   │   ├── connected/          # ConnectED kariyer programı sayfası
+│   │   │   ├── connected/          # ConnectED deneyim ve gelişim programı
+│   │   │   │   ├── ConnectedClient.tsx # Hero, C-E-D, program akışı, SSS, başvuru CTA
+│   │   │   │   ├── layout.tsx
+│   │   │   │   └── page.tsx
 │   │   │   ├── league/             # BGTS League (personel yarışması — gizli)
 │   │   │   │   ├── LeagueClient.tsx    # Ekran akışı, gaming backdrop, EA-style başlık
 │   │   │   │   ├── CursorParticles.tsx # Yumuşak cursor aura (canvas)
@@ -630,7 +633,7 @@ localizedPathForLang(lang, '/contact')  // → /tr/iletisim veya /tr/en/contact
 | TR URL | EN URL | Sayfa |
 |--------|--------|-------|
 | `/tr/kariyer-yollari` | `/tr/en/career-paths` | Kariyer Yolları (staj, Genç Mühendis, açık pozisyonlar) |
-| `/tr/connected` | `/tr/en/connected` | ConnectED — deneyim ve gelişim programı |
+| `/tr/connected` | `/tr/en/connected` | ConnectED — seçmeden yerleştirmeye deneyim ve gelişim programı |
 | `/tr/calisma-kulturu` | `/tr/en/culture` | Çalışma Kültürü |
 | `/tr/egitim-ve-gelisim` | `/tr/en/learning` | Eğitim ve Gelişim |
 | `/tr/yerini-al` | `/tr/en/social-contribution` | Sürdürülebilir Değer / Yerini Al |
@@ -762,7 +765,7 @@ Chatbot, "Ayla" adında bir BGTS kurumsal danışmanı kimliğiyle yapılandır�
 - Tüm hizmetler (Yazılım Geliştirme, MSP) ve teknik detayları
 - Tüm ürünler (8 AI/kurumsal ürün) ve kullanım senaryoları
 - Sektör çözümleri (Bankacılık, Savunma, Telekom, Perakende)
-- Kariyer yolları, Genç Mühendis Programı, şirket kültürü
+- Kariyer yolları, ConnectED programı, Genç Mühendis Programı, şirket kültürü
 - İletişim yönlendirmeleri ve fiyatlandırma politikası
 
 ### Özellikler
@@ -1068,6 +1071,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.52.0 | 2026-08 | **ConnectED sayfa içeriği:** Referans HTML ile `ConnectedClient` yeniden kurgulandı (C·E·D kartları, KPI, program akışı, gelişim hatları, kimler için, mezun alıntıları, SSS); ConnectED logoları hero (beyaz) ve açık zemin için eklendi; TR/EN sözlükler HTML metniyle hizalandı. |
 | v0.51.0 | 2026-08 | **README revizyonu:** SEO schema tablosu gerçek implementasyonla hizalandı (FAQPage/HowTo/VideoObject kaldırıldı); Google sitelinks / marka araması yol haritası eklendi; ConnectED (`/connected`) sayfası, `/api/league/health` ve `src/lib/league/` dokümante edildi; Plesk deploy referansları; `NEXT_PUBLIC_SITE_URL` domain tutarlılığı notları. |
 | v0.50.0 | 2026-07 | **Analizler menü ve liste UX:** Mega menüde rastgele seçilen analiz seti tarihe göre yeniden eskiye sıralanır (en yeni öne çıkan, yan liste üstten alta); listeleme sayfası kart grid aralığı `gap-8 md:gap-10` ile genişletildi. |
 | v0.49.0 | 2026-07 | **Analizler mega menü ve hero revizyonu:** `AnalysesMenu` görselsiz öne çıkan + 3 yan analiz düzeni; `getStableRandomAnalysesMenuArticles` ile sayfa yüklemesine sabit rastgele seçim; menü genişliği ~1080px; Analizler hero koyu kurumsal overlay’e geçiş; liste tarihe göre sıralama ve tema renkli kart kenarlıkları; UI terminolojisi makale → analiz (TR/EN). |

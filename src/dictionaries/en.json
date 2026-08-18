@@ -2172,43 +2172,145 @@
   },
   "careers_connected": {
     "hero": {
-      "title": "ConnectED",
-      "tagline": "Connect Experience and Development",
-      "paragraph1": "In our ConnectED program, experience meets development.",
-      "paragraph2": "We build a strong bridge between talent and the business world, offering not just a career path but a continuously evolving network of experience."
+      "title": "Experience and development\nmeet in a single program.",
+      "subtitle": "ConnectED is an experience and development program that starts with talent selection and continues through technical upskilling, real project experience and on-site client work — concluding with placement at leading organizations in the industry.",
+      "stats": [
+        { "value": "50+", "label": "completed programs" },
+        { "value": "1,412", "label": "program graduates" },
+        { "value": "43", "label": "organizations with placements" },
+        { "value": "75%", "label": "continuation rate after the program" }
+      ]
     },
     "cta": "Join Us",
     "ctaExplore": "Explore the Program",
-    "intro": {
-      "title": "We build a strong bridge between talent and the business world.",
-      "desc": "We offer young talents an open work environment for growth, learning, and contribution — with opportunities to explore different sectors and gain experience across diverse projects."
-    },
-    "journey": {
-      "title": "Connecting Is the First Step of Growth and Experience",
-      "subtitle": "We offer diverse projects, strong teams, and development opportunities — supporting young talents as they discover their potential.",
-      "steps": [
+    "ctaPositions": "View open positions",
+    "ctaAsk": "Ask us a question",
+    "pillars": {
+      "words": "Connect & Experience & Development",
+      "items": [
         {
-          "title": "Connect",
-          "desc": "Shape your future through diverse projects, strong teams, and development opportunities."
+          "letter": "C",
+          "title": "Connect — Build a connection",
+          "desc": "The first link between talent and the business world: the selection process, mentor matching, and joining expert teams.",
+          "points": [
+            "Structured selection and assessment",
+            "Mentor and team matching",
+            "Working within a culture of collaboration"
+          ]
         },
         {
-          "title": "Gain Experience",
-          "desc": "Build experience at leading organizations in the industry and create value in focused projects."
+          "letter": "E",
+          "title": "Experience — Gain experience",
+          "desc": "Field experience gained by working on real projects and in real client teams.",
+          "points": [
+            "Live projects across different sectors",
+            "Opportunity to work at the client",
+            "On-the-job learning"
+          ]
         },
         {
-          "title": "Develop Your Skills",
-          "desc": "Strengthen your technical and professional competencies and unlock your potential."
-        },
-        {
-          "title": "Advance",
-          "desc": "Find opportunities to take part in different projects and progress in your career."
+          "letter": "D",
+          "title": "Development — Keep growing",
+          "desc": "Technical and professional competencies developed in a planned, measurable way.",
+          "points": [
+            "Role-based technical training",
+            "Certification opportunities",
+            "Vertical and horizontal career paths"
+          ]
         }
       ]
     },
+    "intro": {
+      "title": "We build a strong connection between talent and the business world.",
+      "desc": "We offer young talents an open environment for growth, learning and contribution — with opportunities to explore different sectors and gain experience across diverse projects.",
+      "desc2": "The connection we build is not a one-off hire; it is a long-term path that continues from selection through placement and the career steps that follow.",
+      "minis": [
+        { "value": "50+", "label": "program cycles" },
+        { "value": "1,412", "label": "program graduates" },
+        { "value": "43", "label": "placements at organizations" }
+      ]
+    },
+    "kpi": {
+      "title": "We have brought talent to the industry through 50+ programs",
+      "desc": "ConnectED graduates work today across banking, telecom, insurance and retail — on software and infrastructure projects at leading organizations in the industry.",
+      "items": [
+        { "value": "50+", "label": "completed ConnectED programs" },
+        { "value": "1,412", "label": "program graduates" },
+        { "value": "43", "label": "organizations with placements" },
+        { "value": "75%", "label": "continuation rate after the program" }
+      ],
+      "sectors": ["Banking", "Insurance", "Telecom", "Retail", "Manufacturing", "Energy", "Public", "Healthcare"],
+      "disclaimer": "A client logo strip can be added under this section once reference permission is obtained."
+    },
+    "program": {
+      "title": "From application to placement, how does the program work?",
+      "subtitle": "Every ConnectED cycle follows the same five steps. You always know where you are, what comes next, and what is expected of you.",
+      "steps": [
+        {
+          "title": "Selection",
+          "desc": "Technical and competency-based assessment of applications, interviews, and admission to the program.",
+          "points": [
+            "Online application and pre-assessment",
+            "Technical assessment",
+            "HR and technical team interviews"
+          ],
+          "badge": "Connect"
+        },
+        {
+          "title": "Technical upskilling",
+          "desc": "A role-based training program, mentor-guided practice, and certification opportunities.",
+          "points": [
+            "Role-based training plan",
+            "Mentor-guided practice",
+            "Certification preparation"
+          ],
+          "badge": "Development"
+        },
+        {
+          "title": "Project experience",
+          "desc": "On-the-job learning by taking part in real projects within expert teams.",
+          "points": [
+            "Taking on tasks within the team",
+            "Working on real business requests",
+            "Regular feedback"
+          ],
+          "badge": "Experience"
+        },
+        {
+          "title": "Placement and career",
+          "desc": "Placement into a suitable role at the end of the program, with a development plan that continues afterwards.",
+          "points": [
+            "Role and project matching",
+            "Vertical and horizontal career paths",
+            "Follow-up after placement"
+          ],
+          "badge": "Connect + Development"
+        }
+      ],
+      "disclaimer": "Duration labels (e.g. “2 weeks”, “3 months”) will be added under the cards once each step’s length is confirmed."
+    },
+    "tracks": {
+      "title": "Our technical development tracks",
+      "subtitle": "Every talent admitted to the program is placed on a development track based on their interests and the needs of the project.",
+      "items": [
+        { "title": "Software development", "desc": "Backend and frontend development, code quality and version control." },
+        { "title": "Infrastructure and systems", "desc": "Systems administration, networking, virtualization and infrastructure operations." },
+        { "title": "Data and reporting", "desc": "Databases, data preparation and reporting tools." },
+        { "title": "Cloud and DevOps", "desc": "Cloud services, automation and continuous integration." },
+        { "title": "Testing and quality", "desc": "Test scenarios, automation and quality assurance processes." },
+        { "title": "Cybersecurity", "desc": "Security fundamentals, monitoring and secure development." },
+        { "title": "Business analysis", "desc": "Requirements analysis, process modeling and documentation." },
+        { "title": "Professional development", "desc": "Communication, presentation, teamwork and time management." }
+      ],
+      "disclaimer": "Titles are placed as examples and will be updated to match the program’s actual training tracks."
+    },
     "benefits": {
+      "title": "What the program gives you",
+      "subtitle": "Every outcome is tied to one of ConnectED's three concepts.",
       "items": [
         {
-          "title": "Connect and Gain Experience!",
+          "title": "Connect and gain experience!",
+          "badge": "Connect",
           "points": [
             "Join expert teams",
             "Work within a culture of collaboration",
@@ -2216,15 +2318,17 @@
           ]
         },
         {
-          "title": "Realize Your Potential, Create Value!",
+          "title": "Realize your potential, create value!",
+          "badge": "Experience",
           "points": [
             "Explore different sectors",
             "Take part in diverse projects",
-            "Opportunities to gain experience"
+            "Opportunity to work at the client"
           ]
         },
         {
-          "title": "Benefit from Development Opportunities!",
+          "title": "Benefit from development opportunities!",
+          "badge": "Development",
           "points": [
             "Attend individual and technical training",
             "Earn certifications",
@@ -2232,24 +2336,98 @@
           ]
         },
         {
-          "title": "Gain Experience, Advance Your Career!",
+          "title": "Gain experience, advance your career!",
+          "badge": "Development",
           "points": [
             "Vertical and horizontal career paths",
-            "Diverse career opportunities"
+            "Diverse career opportunities",
+            "Placement after the program"
           ]
         }
       ]
     },
     "value": {
       "title": "We create value by building strong connections.",
-      "desc": "With our Expert Selection and Placement team, we reach the software and infrastructure talents needed by different sectors and add value to business processes by developing these talents."
+      "desc": "With our Expert Selection and Placement team, we reach the software and infrastructure talents needed by different sectors and add value to business processes by developing these talents.",
+      "desc2": "The same team also guides each talent toward the right project and the right organization throughout the program. Placement is not a one-off step at the end; it is a result planned together from the first conversation."
+    },
+    "audience": {
+      "title": "Who is ConnectED for?",
+      "subtitle": "Anyone with a technical foundation who is eager to learn and work in the field.",
+      "groups": [
+        {
+          "title": "Recent graduates",
+          "desc": "Graduates of engineering and related programs who want to take their first career step on real projects."
+        },
+        {
+          "title": "Final-year students",
+          "desc": "Final-year students who want to build an early connection with the business world, in a way that fits their course schedule."
+        },
+        {
+          "title": "Those shaping their career",
+          "desc": "Young professionals who want to move into a technical field or take their expertise into a new domain."
+        }
+      ],
+      "reqs": [
+        "Foundational knowledge in technology and a willingness to learn",
+        "Teamwork and communication skills",
+        "Openness to working in project and client environments",
+        "Strong technical English reading skills"
+      ]
     },
     "gallery": {
-      "title": "Experience and Development Meet in Our ConnectED Program!"
+      "title": "Experience and development meet in our ConnectED program!"
+    },
+    "quotes": [
+      {
+        "text": "I applied in my final year and three months later I was writing code on a live project. Everyone on the team made time for my questions; I never had to wait to learn.",
+        "name": "Elif Demir",
+        "role": "Software Development Specialist · 2023 cohort"
+      },
+      {
+        "text": "I earned my certification at the end of the cloud training I took in the program. In the same period I started taking on automation work in my team.",
+        "name": "Mert Yılmaz",
+        "role": "DevOps Engineer · 2022 cohort"
+      },
+      {
+        "text": "When the program ended I chose to stay on the project I was working on. Today I mentor newcomers on the same team.",
+        "name": "Zeynep Kaya",
+        "role": "Senior Business Analyst · 2021 cohort"
+      }
+    ],
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "How long does ConnectED last?",
+          "a": "Training, project work and on-site client steps run together throughout [program duration]. The length may vary by development track."
+        },
+        {
+          "q": "Is the program paid?",
+          "a": "[Employment and compensation model to be added here.]"
+        },
+        {
+          "q": "What happens during the selection process?",
+          "a": "After you apply, we run a pre-assessment, a technical assessment and interviews. Feedback is shared after each step."
+        },
+        {
+          "q": "Is placement guaranteed at the end of the program?",
+          "a": "The program is designed with placement as the goal. Role matching is based on the development track, project needs and program performance together."
+        },
+        {
+          "q": "Which cities does the program run in?",
+          "a": "[Location and working model details to be added here.]"
+        },
+        {
+          "q": "When can I apply?",
+          "a": "When a new cycle opens, it is announced on the open positions page and on our LinkedIn account."
+        }
+      ]
     },
     "closingCta": {
-      "title": "Where Experience Meets Development",
-      "subtitle": "Connect. Gain experience. Grow."
+      "title": "Join the next ConnectED cycle",
+      "subtitle": "Review open positions and submit your application. We are with you at every step from selection to placement.",
+      "cta": "Open positions"
     }
   },
   "careers_culture": {

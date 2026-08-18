@@ -547,7 +547,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
                         <div>
                             <h3 className="text-2xl font-black text-white mb-2 leading-tight">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Connected</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400">ConnectED</span>
                             </h3>
                             <p className="text-white/60 text-xs leading-relaxed mb-5 max-w-[280px]">
                                 {t(lang, "Bağlantı kur. Deneyim kazan. Geliş.", "Connect. Gain experience. Grow.")}
