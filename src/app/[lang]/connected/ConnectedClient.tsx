@@ -146,16 +146,24 @@ function Logo({
     onDark?: boolean
     className?: string
 }) {
-    return (
+    const image = (
         <div className={`relative mx-auto ${className}`}>
             <Image
                 src={onDark ? IMAGES.logo.dark : IMAGES.logo.src}
                 alt={IMAGES.logo.alt}
                 fill
                 priority={onDark}
-                sizes="280px"
-                className={onDark ? "object-contain brightness-0 invert" : "object-contain"}
+                sizes="300px"
+                className="object-contain"
             />
+        </div>
+    )
+
+    if (!onDark) return image
+
+    return (
+        <div className="inline-flex items-center rounded-2xl bg-white px-5 py-3 shadow-sm">
+            {image}
         </div>
     )
 }
@@ -187,7 +195,7 @@ export default function ConnectedClient({
 
                 <Container className="relative z-10">
                     <div className="mx-auto max-w-3xl space-y-6 text-center">
-                        <AnimatedDiv>
+                        <AnimatedDiv className="flex justify-center">
                             <Logo onDark className="h-[64px] w-[300px]" />
                         </AnimatedDiv>
 

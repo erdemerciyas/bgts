@@ -546,14 +546,16 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         </div>
 
                         <div>
-                            <div className="relative mb-3 h-[56px] w-[240px]">
-                                <Image
-                                    src="/images/connected/logo-on-dark.png"
-                                    alt="ConnectED"
-                                    fill
-                                    sizes="240px"
-                                    className="object-contain object-left brightness-0 invert"
-                                />
+                            <div className="mb-3 inline-flex max-w-full items-center rounded-xl bg-white px-3 py-2 shadow-sm">
+                                <div className="relative h-[44px] w-[200px]">
+                                    <Image
+                                        src="/images/connected/logo-on-dark.png"
+                                        alt="ConnectED"
+                                        fill
+                                        sizes="200px"
+                                        className="object-contain object-left"
+                                    />
+                                </div>
                             </div>
                             <p className="text-white/60 text-xs leading-relaxed mb-5 max-w-[280px]">
                                 {t(lang, "Bağlantı kur. Deneyim kazan. Geliş.", "Connect. Gain experience. Grow.")}
