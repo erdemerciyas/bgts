@@ -110,6 +110,7 @@ function isDevBadge(badge: string) {
 function Badge({ label }: { label: string }) {
     return (
         <span
+            lang="en"
             className={`inline-block self-start rounded-full px-2.5 py-1 text-[10.5px] font-heading font-semibold uppercase tracking-[0.12em] ${
                 isDevBadge(label)
                     ? "bg-[#E7EFFB] text-[#1F4E9C]"
@@ -250,7 +251,7 @@ export default function ConnectedClient({
                 <Container>
                     <div className="mx-auto max-w-3xl space-y-6 text-center">
                         <Logo className="h-[62px] w-[300px]" />
-                        <Text as="p" variant="large" className="font-heading text-base font-semibold uppercase tracking-[0.16em] text-corporate-dark md:text-[23px]">
+                        <Text as="p" lang="en" variant="large" className="font-heading text-base font-semibold uppercase tracking-[0.16em] text-corporate-dark md:text-[23px]">
                             {wordParts.map((word, i) => (
                                 <span key={word}>
                                     {i > 0 && <span className="mx-1.5 text-corporate-tertiary">&amp;</span>}
