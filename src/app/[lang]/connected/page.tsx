@@ -9,5 +9,5 @@ export default async function ConnectedPage({
 }) {
     const { lang } = await params
     const dict = await getDictionary(lang as Locale)
-    return <ConnectedClient dict={dict.careers_connected} lang={lang} />
+    return <ConnectedClient dict={dict.careers_connected} />
 }

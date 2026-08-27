@@ -1276,11 +1276,11 @@
               "features": [
                 {
                   "title": "Süreç Olgunluk Analizi",
-                  "description": "Mevcut durumunuzu değerlendiriyor; doğru iyileştirme yol haritasını kurguluyoruz."
+                  "description": "Mevcut durumunuzu değerlendirerek doğru iyileştirme yol haritasını kurgularız."
                 },
                 {
                   "title": "Süreç Tasarımı & Uygulama",
-                  "description": "Rollerin ve araç entegrasyonlarının tasarlanması ve hayata geçirilmesi."
+                  "description": "Rolleri ve araç entegrasyonlarını tasarlayıp hayata geçiririz."
                 },
                 {
                   "title": "Sürekli İyileştirme & KPI",
@@ -1377,7 +1377,7 @@
               "features": [
                 {
                   "title": "İşletim Sistemi Sıkılaştırma",
-                  "description": "Gereksiz portları kapatır, sunucular üzerinde tam sertleşme sağlarız."
+                  "description": "Gereksiz portları kapatır, sunucular üzerinde tam sıkılaştırma sağlarız."
                 },
                 {
                   "title": "Active Directory Güvenliği",
@@ -2183,8 +2183,6 @@
     },
     "cta": "Aramıza Katıl",
     "ctaExplore": "Programı Keşfet",
-    "ctaPositions": "Açık pozisyonları incele",
-    "ctaAsk": "Bize soru sor",
     "pillars": {
       "words": "Connect & Experience & Development",
       "items": [
@@ -2425,9 +2423,9 @@
       ]
     },
     "closingCta": {
-      "title": "Sıradaki ConnectED dönemine katıl",
+      "title": "ConnectED Programına Katıl",
       "subtitle": "Açık pozisyonları incele, başvurunu bırak. Seçme sürecinden yerleştirmeye kadar her adımda yanındayız.",
-      "cta": "Açık pozisyonlar"
+      "cta": "BGTS'de Yerini Al"
     }
   },
   "careers_culture": {

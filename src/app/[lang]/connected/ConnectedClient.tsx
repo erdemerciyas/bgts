@@ -6,7 +6,6 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Heading, Text } from "@/components/ui/Typography"
 import { AnimatedDiv } from "@/components/ui/AnimatedElements"
-import { localizedPathForLang } from "@/lib/routes"
 import {
     ArrowRight,
     Check,
@@ -21,7 +20,8 @@ import {
     Users,
 } from "lucide-react"
 
-const LINKEDIN_JOBS = "https://www.linkedin.com/company/bilgeadam/jobs/"
+const APPLY_FORM =
+    "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=1C_AnU3vWE2CLmh88-G621dwCQF5et1CuSvVsbV3b2ZUMDRYTkdFSVlNOTA1V1c3NjhIQTRXNEJNTi4u"
 
 const IMAGES = {
     hero: {
@@ -87,8 +87,6 @@ type ConnectedDict = {
     hero: { title: string; subtitle: string; stats: Stat[] }
     cta: string
     ctaExplore: string
-    ctaPositions: string
-    ctaAsk: string
     pillars: { words: string; items: Pillar[] }
     intro: { title: string; desc: string; desc2: string; minis: Stat[] }
     kpi: { title: string; desc: string; items: Stat[]; sectors: string[]; disclaimer: string }
@@ -169,14 +167,7 @@ function Logo({
     )
 }
 
-export default function ConnectedClient({
-    dict: d,
-    lang,
-}: {
-    dict: ConnectedDict
-    lang: string
-}) {
-    const contactHref = localizedPathForLang(lang, "/contact")
+export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
     const wordParts = d.pillars.words.split(" & ")
 
     return (
@@ -521,16 +512,6 @@ export default function ConnectedClient({
                             <Text variant="bodyLg" className="text-text-secondary">
                                 {d.value.desc2}
                             </Text>
-                            <div className="pt-2">
-                                <Link
-                                    href={LINKEDIN_JOBS}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center rounded-full border border-[#C9D6EA] px-8 py-3.5 font-bold text-corporate-dark transition-all duration-300 hover:-translate-y-0.5 hover:border-corporate-secondary/40 hover:bg-corporate-surface"
-                                >
-                                    {d.ctaPositions} <ArrowRight className="ml-2 h-5 w-5" />
-                                </Link>
-                            </div>
                         </AnimatedDiv>
 
                         <AnimatedDiv className="order-1 lg:order-2">
@@ -678,20 +659,14 @@ export default function ConnectedClient({
                         <Text variant="bodyLg" className="text-[#C7D8EE]">
                             {d.closingCta.subtitle}
                         </Text>
-                        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                        <div className="flex justify-center pt-2">
                             <Link
-                                href={LINKEDIN_JOBS}
+                                href={APPLY_FORM}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 font-bold text-corporate-dark shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-corporate-surface"
                             >
                                 {d.closingCta.cta} <ArrowRight className="ml-2 h-5 w-5" />
-                            </Link>
-                            <Link
-                                href={contactHref}
-                                className="inline-flex items-center justify-center rounded-full border border-white/55 px-8 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/12"
-                            >
-                                {d.ctaAsk}
                             </Link>
                         </div>
                     </AnimatedDiv>

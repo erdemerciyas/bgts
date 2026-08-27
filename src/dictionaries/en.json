@@ -1182,15 +1182,15 @@
               "features": [
                 {
                   "title": "Process Maturity Analysis",
-                  "description": "Evaluating your current state to set up the right improvement roadmap."
+                  "description": "We evaluate your current state and set up the right improvement roadmap."
                 },
                 {
                   "title": "Process Design & Implementation",
-                  "description": "Designing and deploying roles and tool integrations."
+                  "description": "We design and implement roles and tool integrations."
                 },
                 {
                   "title": "Continuous Improvement & KPI",
-                  "description": "Providing data-driven improvements by continuously measuring process performance."
+                  "description": "We provide data-driven improvements by regularly measuring process performance."
                 }
               ]
             }
@@ -2183,8 +2183,6 @@
     },
     "cta": "Join Us",
     "ctaExplore": "Explore the Program",
-    "ctaPositions": "View open positions",
-    "ctaAsk": "Ask us a question",
     "pillars": {
       "words": "Connect & Experience & Development",
       "items": [
@@ -2425,9 +2423,9 @@
       ]
     },
     "closingCta": {
-      "title": "Join the next ConnectED cycle",
+      "title": "Join the ConnectED Program",
       "subtitle": "Review open positions and submit your application. We are with you at every step from selection to placement.",
-      "cta": "Open positions"
+      "cta": "Take Your Place at BGTS"
     }
   },
   "careers_culture": {
