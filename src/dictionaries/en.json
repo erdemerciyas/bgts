@@ -2230,12 +2230,6 @@
     "kpi": {
       "title": "We have brought talent to the industry through 50+ programs",
       "desc": "ConnectED graduates work today across banking, telecom, insurance and retail — on software and infrastructure projects at leading organizations in the industry.",
-      "items": [
-        { "label": "completed ConnectED programs" },
-        { "label": "program graduates" },
-        { "label": "organizations with placements" },
-        { "label": "continuation rate after the program" }
-      ],
       "sectors": ["Banking", "Insurance", "Telecom", "Retail", "Manufacturing", "Energy", "Public", "Healthcare"]
     },
     "program": {

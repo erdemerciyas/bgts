@@ -2230,12 +2230,6 @@
     "kpi": {
       "title": "50+ programla sektöre yetenek kazandırdık",
       "desc": "ConnectED mezunları bugün bankacılıktan telekoma, sigortadan perakendeye kadar birçok sektörde; sektörün önde gelen kurumlarının yazılım ve altyapı projelerinde çalışıyor.",
-      "items": [
-        { "label": "tamamlanan ConnectED programı" },
-        { "label": "programdan mezun olan yetenek" },
-        { "label": "yerleştirme yapılan kurum" },
-        { "label": "program sonrası devam oranı" }
-      ],
       "sectors": ["Bankacılık", "Sigorta", "Telekom", "Perakende", "Üretim", "Enerji", "Kamu", "Sağlık"]
     },
     "program": {
