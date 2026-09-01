@@ -2176,12 +2176,11 @@
       "subtitle": "ConnectED is an experience and development program that starts with talent selection and continues through technical upskilling, real project experience and on-site client work — concluding with placement at leading organizations in the industry.",
       "stats": [
         { "value": "50+", "label": "completed programs" },
-        { "value": "1,412", "label": "program graduates" },
-        { "value": "43", "label": "organizations with placements" },
-        { "value": "75%", "label": "continuation rate after the program" }
+        { "value": "1,500+", "label": "program graduates" },
+        { "value": "45", "label": "organizations with placements" },
+        { "value": "80%", "label": "continuation rate after the program" }
       ]
     },
-    "cta": "Join Us",
     "ctaExplore": "Explore the Program",
     "pillars": {
       "words": "Connect & Experience & Development",
@@ -2201,9 +2200,9 @@
           "title": "Experience — Gain experience",
           "desc": "Field experience gained by working on real projects and in real client teams.",
           "points": [
-            "Live projects across different sectors",
-            "Opportunity to work at the client",
-            "On-the-job learning"
+            "Different sectors",
+            "Different projects",
+            "Gaining experience through role-based technical training"
           ]
         },
         {
@@ -2211,7 +2210,7 @@
           "title": "Development — Keep growing",
           "desc": "Technical and professional competencies developed in a planned, measurable way.",
           "points": [
-            "Role-based technical training",
+            "On-the-job learning",
             "Certification opportunities",
             "Vertical and horizontal career paths"
           ]
@@ -2224,21 +2223,20 @@
       "desc2": "The connection we build is not a one-off hire; it is a long-term path that continues from selection through placement and the career steps that follow.",
       "minis": [
         { "value": "50+", "label": "program cycles" },
-        { "value": "1,412", "label": "program graduates" },
-        { "value": "43", "label": "placements at organizations" }
+        { "value": "1,500+", "label": "program graduates" },
+        { "value": "45", "label": "placements at organizations" }
       ]
     },
     "kpi": {
       "title": "We have brought talent to the industry through 50+ programs",
       "desc": "ConnectED graduates work today across banking, telecom, insurance and retail — on software and infrastructure projects at leading organizations in the industry.",
       "items": [
-        { "value": "50+", "label": "completed ConnectED programs" },
-        { "value": "1,412", "label": "program graduates" },
-        { "value": "43", "label": "organizations with placements" },
-        { "value": "75%", "label": "continuation rate after the program" }
+        { "label": "completed ConnectED programs" },
+        { "label": "program graduates" },
+        { "label": "organizations with placements" },
+        { "label": "continuation rate after the program" }
       ],
-      "sectors": ["Banking", "Insurance", "Telecom", "Retail", "Manufacturing", "Energy", "Public", "Healthcare"],
-      "disclaimer": "A client logo strip can be added under this section once reference permission is obtained."
+      "sectors": ["Banking", "Insurance", "Telecom", "Retail", "Manufacturing", "Energy", "Public", "Healthcare"]
     },
     "program": {
       "title": "From application to placement, how does the program work?",
@@ -2249,7 +2247,7 @@
           "desc": "Technical and competency-based assessment of applications, interviews, and admission to the program.",
           "points": [
             "Online application and pre-assessment",
-            "Technical assessment",
+            "Technical exam",
             "HR and technical team interviews"
           ],
           "badge": "Connect"
@@ -2284,8 +2282,7 @@
           ],
           "badge": "Connect + Development"
         }
-      ],
-      "disclaimer": "Duration labels (e.g. “2 weeks”, “3 months”) will be added under the cards once each step’s length is confirmed."
+      ]
     },
     "tracks": {
       "title": "Our technical development tracks",
@@ -2298,9 +2295,8 @@
         { "title": "Testing and quality", "desc": "Test scenarios, automation and quality assurance processes." },
         { "title": "Cybersecurity", "desc": "Security fundamentals, monitoring and secure development." },
         { "title": "Business analysis", "desc": "Requirements analysis, process modeling and documentation." },
-        { "title": "Professional development", "desc": "Communication, presentation, teamwork and time management." }
-      ],
-      "disclaimer": "Titles are placed as examples and will be updated to match the program’s actual training tracks."
+        { "title": "Artificial Intelligence", "desc": "AI fundamentals, generative AI tools and their use in business processes" }
+      ]
     },
     "benefits": {
       "title": "What the program gives you",
@@ -2349,30 +2345,6 @@
       "desc": "With our Expert Selection and Placement team, we reach the software and infrastructure talents needed by different sectors and add value to business processes by developing these talents.",
       "desc2": "The same team also guides each talent toward the right project and the right organization throughout the program. Placement is not a one-off step at the end; it is a result planned together from the first conversation."
     },
-    "audience": {
-      "title": "Who is ConnectED for?",
-      "subtitle": "Anyone with a technical foundation who is eager to learn and work in the field.",
-      "groups": [
-        {
-          "title": "Recent graduates",
-          "desc": "Graduates of engineering and related programs who want to take their first career step on real projects."
-        },
-        {
-          "title": "Final-year students",
-          "desc": "Final-year students who want to build an early connection with the business world, in a way that fits their course schedule."
-        },
-        {
-          "title": "Those shaping their career",
-          "desc": "Young professionals who want to move into a technical field or take their expertise into a new domain."
-        }
-      ],
-      "reqs": [
-        "Foundational knowledge in technology and a willingness to learn",
-        "Teamwork and communication skills",
-        "Openness to working in project and client environments",
-        "Strong technical English reading skills"
-      ]
-    },
     "gallery": {
       "title": "Experience and development meet in our ConnectED program!"
     },
@@ -2397,35 +2369,47 @@
       "title": "Frequently asked questions",
       "items": [
         {
-          "q": "How long does ConnectED last?",
-          "a": "Training, project work and on-site client steps run together throughout [program duration]. The length may vary by development track."
+          "q": "Who is ConnectED for?",
+          "list": [
+            "Graduates of engineering programs",
+            "Recent graduates or professionals with 1–3 years of experience in the field, depending on program needs",
+            "Candidates with foundational knowledge in technology and a willingness to learn",
+            "Eager to work on different projects",
+            "Open to candidates who are collaborative and team-oriented."
+          ]
         },
         {
-          "q": "Is the program paid?",
-          "a": "[Employment and compensation model to be added here.]"
+          "q": "Which city or cities can I apply from?",
+          "a": "Depending on program requirements, applications are accepted from all provinces of Turkey."
         },
         {
-          "q": "What happens during the selection process?",
-          "a": "After you apply, we run a pre-assessment, a technical assessment and interviews. Feedback is shared after each step."
+          "q": "What are the stages of the selection process?",
+          "list": [
+            "Online application",
+            "CV / application pre-assessment",
+            "Information session (project and process briefing for successful candidates)",
+            "Technical exam",
+            "HR interview",
+            "Technical interview",
+            "Evaluation / candidate selection",
+            "Training"
+          ],
+          "ordered": true
         },
         {
-          "q": "Is placement guaranteed at the end of the program?",
-          "a": "The program is designed with placement as the goal. Role matching is based on the development track, project needs and program performance together."
+          "q": "How long does the training phase last?",
+          "a": "Depending on program requirements, our technical and vertical specialization training is completed within 8–12 weeks."
         },
         {
-          "q": "Which cities does the program run in?",
-          "a": "[Location and working model details to be added here.]"
-        },
-        {
-          "q": "When can I apply?",
-          "a": "When a new cycle opens, it is announced on the open positions page and on our LinkedIn account."
+          "q": "Is the ConnectED program paid?",
+          "a": "There is no fee for participation in the ConnectED program or for the training received within the scope of the program."
         }
       ]
     },
     "closingCta": {
-      "title": "Join the ConnectED Program",
-      "subtitle": "Review open positions and submit your application. We are with you at every step from selection to placement.",
-      "cta": "Take Your Place at BGTS"
+      "title": "To Join the ConnectED Program",
+      "subtitle": "Follow our LinkedIn page and job postings.",
+      "cta": "Follow us"
     }
   },
   "careers_culture": {

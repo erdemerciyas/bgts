@@ -212,7 +212,7 @@ bgts-web/
 │   │   │   ├── partnerships/   # İş Ortakları
 │   │   │   ├── social-contribution/ # Sürdürülebilir Değer / Yerini Al
 │   │   │   ├── connected/          # ConnectED deneyim ve gelişim programı
-│   │   │   │   ├── ConnectedClient.tsx # Hero, C-E-D, program akışı, SSS, başvuru CTA
+│   │   │   │   ├── ConnectedClient.tsx # Hero, C-E-D, KPI, program akışı, gelişim hatları, SSS, LinkedIn CTA
 │   │   │   │   ├── layout.tsx
 │   │   │   │   └── page.tsx
 │   │   │   ├── league/             # BGTS League (personel yarışması — gizli)
@@ -1071,6 +1071,7 @@ npm run test:coverage
 
 | Versiyon | Tarih | Öne Çıkan Değişiklikler |
 |----------|-------|-------------------------|
+| v0.53.0 | 2026-09 | **ConnectED içerik revizyonu:** Hero istatistikleri güncellendi (1.500+, 45, %80); hero "Aramıza Katıl" CTA kaldırıldı; C·E·D maddeleri, KPI etiket-only kartlar, program adımı "Teknik sınav", Yapay Zeka gelişim hattı, placeholder metinler kaldırıldı; "Kimler için?" bölümü SSS'ye taşındı (5 soru, madde/numaralı cevap desteği); kapanış CTA LinkedIn açık pozisyonlara yönlendirildi; `next.config.ts` `images.qualities: [75, 85]`; Hero test mock düzeltmesi. |
 | v0.52.0 | 2026-08 | **ConnectED sayfa içeriği:** Referans HTML ile `ConnectedClient` yeniden kurgulandı (C·E·D kartları, KPI, program akışı, gelişim hatları, kimler için, mezun alıntıları, SSS); ConnectED logoları hero (beyaz) ve açık zemin için eklendi; TR/EN sözlükler HTML metniyle hizalandı. |
 | v0.51.0 | 2026-08 | **README revizyonu:** SEO schema tablosu gerçek implementasyonla hizalandı (FAQPage/HowTo/VideoObject kaldırıldı); Google sitelinks / marka araması yol haritası eklendi; ConnectED (`/connected`) sayfası, `/api/league/health` ve `src/lib/league/` dokümante edildi; Plesk deploy referansları; `NEXT_PUBLIC_SITE_URL` domain tutarlılığı notları. |
 | v0.50.0 | 2026-07 | **Analizler menü ve liste UX:** Mega menüde rastgele seçilen analiz seti tarihe göre yeniden eskiye sıralanır (en yeni öne çıkan, yan liste üstten alta); listeleme sayfası kart grid aralığı `gap-8 md:gap-10` ile genişletildi. |

@@ -1,6 +1,10 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import Hero from '../Hero'
+
+vi.mock('next/navigation', () => ({
+  usePathname: () => '/tr',
+}))
 
 describe('Hero Component', () => {
   it('renders title and subtitle correctly', () => {
@@ -17,7 +21,7 @@ describe('Hero Component', () => {
     expect(screen.getByText('Test Subtitle')).toBeInTheDocument()
   })
 
-  it('renders badge when provided', () => {
+  it('still renders title when an unused badge prop is provided', () => {
     render(
       <Hero
         title="Test Title"
@@ -26,7 +30,8 @@ describe('Hero Component', () => {
       />
     )
 
-    expect(screen.getByText('Test Badge')).toBeInTheDocument()
+    expect(screen.getByText('Test Title')).toBeInTheDocument()
+    expect(screen.queryByText('Test Badge')).not.toBeInTheDocument()
   })
 
   it('renders CTA button when ctaLink is provided', () => {

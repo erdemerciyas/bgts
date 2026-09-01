@@ -8,7 +8,6 @@ import { Heading, Text } from "@/components/ui/Typography"
 import { AnimatedDiv } from "@/components/ui/AnimatedElements"
 import {
     ArrowRight,
-    Check,
     GraduationCap,
     Layers,
     Link2,
@@ -20,8 +19,7 @@ import {
     Users,
 } from "lucide-react"
 
-const APPLY_FORM =
-    "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=1C_AnU3vWE2CLmh88-G621dwCQF5et1CuSvVsbV3b2ZUMDRYTkdFSVlNOTA1V1c3NjhIQTRXNEJNTi4u"
+const LINKEDIN_JOBS = "https://www.linkedin.com/company/bilgeadam/jobs/"
 
 const IMAGES = {
     hero: {
@@ -79,22 +77,20 @@ type Pillar = { letter: string; title: string; desc: string; points: string[] }
 type ProgramStep = { title: string; desc: string; points: string[]; badge: string }
 type Benefit = { title: string; badge: string; points: string[] }
 type Track = { title: string; desc: string }
-type AudienceGroup = { title: string; desc: string }
-type FaqItem = { q: string; a: string }
+type KpiItem = { label: string }
+type FaqItem = { q: string; a?: string; list?: string[]; ordered?: boolean }
 type Quote = { text: string; name: string; role: string }
 
 type ConnectedDict = {
     hero: { title: string; subtitle: string; stats: Stat[] }
-    cta: string
     ctaExplore: string
     pillars: { words: string; items: Pillar[] }
     intro: { title: string; desc: string; desc2: string; minis: Stat[] }
-    kpi: { title: string; desc: string; items: Stat[]; sectors: string[]; disclaimer: string }
-    program: { title: string; subtitle: string; steps: ProgramStep[]; disclaimer: string }
-    tracks: { title: string; subtitle: string; items: Track[]; disclaimer: string }
+    kpi: { title: string; desc: string; items: KpiItem[]; sectors: string[] }
+    program: { title: string; subtitle: string; steps: ProgramStep[] }
+    tracks: { title: string; subtitle: string; items: Track[] }
     benefits: { title: string; subtitle: string; items: Benefit[] }
     value: { title: string; desc: string; desc2: string }
-    audience: { title: string; subtitle: string; groups: AudienceGroup[]; reqs: string[] }
     gallery: { title: string }
     quotes: Quote[]
     faq: { title: string; items: FaqItem[] }
@@ -203,13 +199,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                             {d.hero.subtitle}
                         </Text>
 
-                        <AnimatedDiv delay={0.15} className="flex flex-col justify-center gap-4 pt-2 sm:flex-row">
-                            <Link
-                                href="#basvuru"
-                                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 font-bold text-corporate-dark shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-corporate-surface"
-                            >
-                                {d.cta} <ArrowRight className="ml-2 h-5 w-5" />
-                            </Link>
+                        <AnimatedDiv delay={0.15} className="flex justify-center pt-2">
                             <Link
                                 href="#program"
                                 className="inline-flex items-center justify-center rounded-full border border-white/55 px-8 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/12"
@@ -339,11 +329,8 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                     <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
                         {d.kpi.items.map((item, i) => (
                             <AnimatedDiv key={item.label} delay={i * 0.06}>
-                                <div className="rounded-2xl border border-border bg-white px-5 py-7 text-center">
-                                    <div className="font-heading text-[38px] font-bold leading-none text-corporate-secondary">
-                                        {item.value}
-                                    </div>
-                                    <Text variant="caption" className="mt-2.5 text-[13.5px] text-text-secondary">
+                                <div className="flex h-full items-center justify-center rounded-2xl border border-border bg-white px-5 py-7 text-center">
+                                    <Text variant="caption" className="text-[14px] font-medium text-corporate-dark">
                                         {item.label}
                                     </Text>
                                 </div>
@@ -361,9 +348,6 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                             </span>
                         ))}
                     </div>
-                    <Text variant="caption" className="mx-auto mt-5 max-w-2xl text-center text-[13px] text-[#93A1B5]">
-                        {d.kpi.disclaimer}
-                    </Text>
                 </Container>
             </Section>
 
@@ -414,9 +398,6 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                             )
                         })}
                     </div>
-                    <Text variant="caption" className="mx-auto mt-5 max-w-2xl text-center text-[13px] text-[#93A1B5]">
-                        {d.program.disclaimer}
-                    </Text>
                 </Container>
             </Section>
 
@@ -446,9 +427,6 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                             </AnimatedDiv>
                         ))}
                     </div>
-                    <Text variant="caption" className="mx-auto mt-5 max-w-2xl text-center text-[13px] text-[#93A1B5]">
-                        {d.tracks.disclaimer}
-                    </Text>
                 </Container>
             </Section>
 
@@ -521,44 +499,6 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </AnimatedDiv>
-                    </div>
-                </Container>
-            </Section>
-
-            {/* Audience */}
-            <Section background="muted" className="py-20 lg:py-24">
-                <Container>
-                    <div className="mx-auto mb-12 max-w-2xl space-y-4 text-center">
-                        <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
-                            {d.audience.title}
-                        </Heading>
-                        <Text variant="bodyLg" className="mx-auto text-text-secondary">
-                            {d.audience.subtitle}
-                        </Text>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-                        {d.audience.groups.map((group, i) => (
-                            <AnimatedDiv key={group.title} delay={i * 0.08}>
-                                <article className="h-full rounded-2xl border border-border bg-white p-7 text-left">
-                                    <Heading variant="h3" className="mb-2.5 text-[17px]">
-                                        {group.title}
-                                    </Heading>
-                                    <Text variant="default" className="text-[14.5px] text-text-secondary">
-                                        {group.desc}
-                                    </Text>
-                                </article>
-                            </AnimatedDiv>
-                        ))}
-                    </div>
-
-                    <div className="mx-auto mt-9 grid max-w-[900px] grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-x-8">
-                        {d.audience.reqs.map((req) => (
-                            <div key={req} className="flex items-start gap-3 text-left text-[14.5px] text-text-primary">
-                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-corporate-tertiary" strokeWidth={2.5} />
-                                {req}
-                            </div>
-                        ))}
                     </div>
                 </Container>
             </Section>
@@ -637,9 +577,29 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                                     {item.q}
                                     <Plus className="h-5 w-5 shrink-0 text-corporate-secondary transition-transform duration-200 group-open:rotate-45" />
                                 </summary>
-                                <Text variant="default" className="mt-3 text-[14.5px] text-text-secondary">
-                                    {item.a}
-                                </Text>
+                                {item.a && (
+                                    <Text variant="default" className="mt-3 text-[14.5px] text-text-secondary">
+                                        {item.a}
+                                    </Text>
+                                )}
+                                {item.list && (
+                                    item.ordered ? (
+                                        <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-[14.5px] text-text-secondary">
+                                            {item.list.map((entry) => (
+                                                <li key={entry}>{entry}</li>
+                                            ))}
+                                        </ol>
+                                    ) : (
+                                        <ul className="mt-3 space-y-1.5">
+                                            {item.list.map((entry) => (
+                                                <li key={entry} className="flex items-start gap-2.5 text-[14.5px] text-text-secondary">
+                                                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-corporate-secondary" />
+                                                    {entry}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )
+                                )}
                             </details>
                         ))}
                     </div>
@@ -661,7 +621,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                         </Text>
                         <div className="flex justify-center pt-2">
                             <Link
-                                href={APPLY_FORM}
+                                href={LINKEDIN_JOBS}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 font-bold text-corporate-dark shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-corporate-surface"

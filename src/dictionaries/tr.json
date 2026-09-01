@@ -2176,12 +2176,11 @@
       "subtitle": "ConnectED; genç yetenekleri seçmeden başlayıp teknik yetkinlik geliştirme, gerçek proje deneyimi ve müşteride çalışma adımlarıyla ilerleyen, sektörün önde gelen kurumlarında yerleştirmeyle sonuçlanan bir deneyim ve gelişim programıdır.",
       "stats": [
         { "value": "50+", "label": "tamamlanan program" },
-        { "value": "1.412", "label": "mezun olan yetenek" },
-        { "value": "43", "label": "yerleştirme yapılan kurum" },
-        { "value": "%75", "label": "program sonrası devam oranı" }
+        { "value": "1.500+", "label": "mezun olan yetenek" },
+        { "value": "45", "label": "yerleştirme yapılan kurum" },
+        { "value": "%80", "label": "program sonrası devam oranı" }
       ]
     },
-    "cta": "Aramıza Katıl",
     "ctaExplore": "Programı Keşfet",
     "pillars": {
       "words": "Connect & Experience & Development",
@@ -2201,9 +2200,9 @@
           "title": "Experience — Deneyim kazan",
           "desc": "Gerçek projelerde ve gerçek müşteri ekiplerinde çalışarak kazanılan saha deneyimi.",
           "points": [
-            "Farklı sektörlerde canlı projeler",
-            "Müşteride çalışma imkânı",
-            "İş başında öğrenme"
+            "Farklı sektörler",
+            "Farklı projeler",
+            "Rol bazlı teknik eğitimlerle deneyim kazanma"
           ]
         },
         {
@@ -2211,7 +2210,7 @@
           "title": "Development — Gelişimini sürdür",
           "desc": "Teknik ve profesyonel yetkinliklerin plana bağlı, ölçülebilir biçimde geliştirilmesi.",
           "points": [
-            "Rol bazlı teknik eğitimler",
+            "İş başında öğrenme",
             "Sertifikasyon olanakları",
             "Dikey ve yatay kariyer yolları"
           ]
@@ -2224,21 +2223,20 @@
       "desc2": "Kurduğumuz bağ tek seferlik bir işe alım değil; seçme sürecinden yerleştirmeye, yerleştirmeden sonraki kariyer adımlarına kadar devam eden uzun soluklu bir yol.",
       "minis": [
         { "value": "50+", "label": "program dönemi" },
-        { "value": "1.412", "label": "mezun olan yetenek" },
-        { "value": "43", "label": "kurumda yerleştirme" }
+        { "value": "1.500+", "label": "mezun olan yetenek" },
+        { "value": "45", "label": "kurumda yerleştirme" }
       ]
     },
     "kpi": {
       "title": "50+ programla sektöre yetenek kazandırdık",
       "desc": "ConnectED mezunları bugün bankacılıktan telekoma, sigortadan perakendeye kadar birçok sektörde; sektörün önde gelen kurumlarının yazılım ve altyapı projelerinde çalışıyor.",
       "items": [
-        { "value": "50+", "label": "tamamlanan ConnectED programı" },
-        { "value": "1.412", "label": "programdan mezun olan yetenek" },
-        { "value": "43", "label": "yerleştirme yapılan kurum" },
-        { "value": "%75", "label": "program sonrası devam oranı" }
+        { "label": "tamamlanan ConnectED programı" },
+        { "label": "programdan mezun olan yetenek" },
+        { "label": "yerleştirme yapılan kurum" },
+        { "label": "program sonrası devam oranı" }
       ],
-      "sectors": ["Bankacılık", "Sigorta", "Telekom", "Perakende", "Üretim", "Enerji", "Kamu", "Sağlık"],
-      "disclaimer": "Referans izni alınırsa bu bölümün altına müşteri logoları şeridi eklenebilir."
+      "sectors": ["Bankacılık", "Sigorta", "Telekom", "Perakende", "Üretim", "Enerji", "Kamu", "Sağlık"]
     },
     "program": {
       "title": "Başvurudan yerleştirmeye, program nasıl işliyor?",
@@ -2249,7 +2247,7 @@
           "desc": "Başvuruların teknik ve yetkinlik bazlı değerlendirilmesi, görüşmeler ve programa kabul.",
           "points": [
             "Online başvuru ve ön değerlendirme",
-            "Teknik değerlendirme",
+            "Teknik sınav",
             "İK ve teknik ekip görüşmesi"
           ],
           "badge": "Connect"
@@ -2284,8 +2282,7 @@
           ],
           "badge": "Connect + Development"
         }
-      ],
-      "disclaimer": "Her adımın süresi (örn. “2 hafta”, “3 ay”) netleştiğinde kartların altına süre etiketi olarak eklenecek."
+      ]
     },
     "tracks": {
       "title": "Teknik yetkinlik geliştirme başlıklarımız",
@@ -2298,9 +2295,8 @@
         { "title": "Test ve kalite", "desc": "Test senaryoları, otomasyon ve kalite güvence süreçleri." },
         { "title": "Siber güvenlik", "desc": "Güvenlik temelleri, izleme ve güvenli geliştirme." },
         { "title": "İş analizi", "desc": "İhtiyaç analizi, süreç modelleme ve dokümantasyon." },
-        { "title": "Profesyonel gelişim", "desc": "İletişim, sunum, ekip çalışması ve zaman yönetimi." }
-      ],
-      "disclaimer": "Başlıklar örnek olarak yerleştirildi; programın gerçek eğitim hatlarına göre güncellenecek."
+        { "title": "Yapay Zeka", "desc": "Yapay zeka temelleri, üretken yapay zeka araçları ve iş süreçlerinde kullanım" }
+      ]
     },
     "benefits": {
       "title": "Programın sana kazandırdıkları",
@@ -2349,30 +2345,6 @@
       "desc": "Uzman Seçme ve Yerleştirme ekibimiz ile farklı sektörlerin ihtiyaç duyduğu yazılım ve altyapı yeteneklerine ulaşıyor, bu yetenekleri geliştirerek iş süreçlerine değer katıyoruz.",
       "desc2": "Aynı ekip, program boyunca yeteneği doğru projeye ve doğru kuruma yönlendiren tarafta da yer alır. Yerleştirme, programın sonunda gelen tek seferlik bir adım değil; ilk görüşmeden itibaren birlikte planlanan bir sonuçtur."
     },
-    "audience": {
-      "title": "ConnectED kimler için?",
-      "subtitle": "Teknik temeli olan, öğrenmeye ve sahada çalışmaya istekli herkes için.",
-      "groups": [
-        {
-          "title": "Yeni mezunlar",
-          "desc": "Mühendislik ve ilgili bölümlerden mezun, kariyerinin ilk adımını gerçek projelerle atmak isteyenler."
-        },
-        {
-          "title": "Son sınıf öğrencileri",
-          "desc": "Ders programına uyumlu şekilde iş dünyasıyla erken bağ kurmak isteyen son sınıf öğrencileri."
-        },
-        {
-          "title": "Kariyerine yön verenler",
-          "desc": "Teknik alana geçiş yapmak ya da uzmanlığını yeni bir alana taşımak isteyen genç profesyoneller."
-        }
-      ],
-      "reqs": [
-        "Teknoloji alanında temel bilgi ve öğrenme isteği",
-        "Ekip içinde çalışma ve iletişim becerisi",
-        "Proje ve müşteri ortamında çalışmaya açıklık",
-        "İyi derecede teknik İngilizce okuma"
-      ]
-    },
     "gallery": {
       "title": "Deneyim ve gelişim ConnectED programımızda buluşuyor!"
     },
@@ -2397,35 +2369,47 @@
       "title": "Merak edilenler",
       "items": [
         {
-          "q": "ConnectED ne kadar sürüyor?",
-          "a": "[Program süresi] boyunca eğitim, proje ve müşteride çalışma adımları birlikte ilerler. Süre, gelişim hattına göre değişebilir."
+          "q": "ConnectED kimler için?",
+          "list": [
+            "Mühendislik bölümlerini bitirmiş",
+            "Program ihtiyacına göre yeni mezun ya da alanında 1-3 yıl tecrübe sahibi",
+            "Teknoloji alanında temel bilgi ve öğrenme isteğine sahip",
+            "Farklı projelerde çalışmaya istekli",
+            "İş birliğine ve takım çalışmasına yatkın adayların başvurularına açık."
+          ]
         },
         {
-          "q": "Program ücretli mi?",
-          "a": "[İstihdam ve ücret modeli buraya yazılacak.]"
+          "q": "Hangi şehir/şehirlerden başvurabilirim?",
+          "a": "Programın gereksinimlerine bağlı olarak Türkiye'nin tüm illerinden başvuru yapılabilir."
         },
         {
-          "q": "Seçme sürecinde neler oluyor?",
-          "a": "Başvuru sonrası ön değerlendirme, teknik değerlendirme ve görüşmeler yapılır. Her adımın sonucunda geri bildirim paylaşılır."
+          "q": "Seçme süreci aşamaları neler?",
+          "list": [
+            "Online başvuru",
+            "Özgeçmiş/ başvuru ön değerlendirmesi",
+            "Bilgilendirme toplantısı (Olumlu adaylar için proje ve süreç bilgilendirmesi)",
+            "Teknik sınav",
+            "İK görüşmesi",
+            "Teknik mülakat",
+            "Değerlendirme/ aday seçimi",
+            "Eğitim"
+          ],
+          "ordered": true
         },
         {
-          "q": "Program sonunda yerleştirme garanti mi?",
-          "a": "Program, yerleştirmeyi hedefleyerek kurgulanır. Rol eşleştirmesi; gelişim hattı, proje ihtiyacı ve program performansı birlikte değerlendirilerek yapılır."
+          "q": "Eğitim aşaması ne kadar sürüyor?",
+          "a": "Program gereksinimlerine bağlı olarak teknik ve dikey uzmanlık eğitimlerimiz 8 - 12 hafta içinde tamamlanıyor."
         },
         {
-          "q": "Hangi şehirlerde çalışılıyor?",
-          "a": "[Lokasyon ve çalışma modeli bilgisi buraya yazılacak.]"
-        },
-        {
-          "q": "Başvuru dönemleri ne zaman?",
-          "a": "Yeni dönem açıldığında açık pozisyonlar sayfasında ve LinkedIn hesabımızda duyurulur."
+          "q": "ConnectED programı ücretli mi?",
+          "a": "ConnectED programına katılım ve program kapsamında alınan eğitimler için herhangi bir ücret söz konusu değildir."
         }
       ]
     },
     "closingCta": {
-      "title": "ConnectED Programına Katıl",
-      "subtitle": "Açık pozisyonları incele, başvurunu bırak. Seçme sürecinden yerleştirmeye kadar her adımda yanındayız.",
-      "cta": "BGTS'de Yerini Al"
+      "title": "ConnectED Programına Katılmak için",
+      "subtitle": "Linkedin sayfamızı ve ilanlarımızı takip et.",
+      "cta": "Bizi takip et"
     }
   },
   "careers_culture": {
