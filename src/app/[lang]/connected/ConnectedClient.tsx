@@ -85,7 +85,6 @@ type ConnectedDict = {
     ctaExplore: string
     pillars: { words: string; items: Pillar[] }
     intro: { title: string; desc: string; desc2: string; minis: Stat[] }
-    kpi: { title: string; desc: string; sectors: string[] }
     program: { title: string; subtitle: string; steps: ProgramStep[] }
     tracks: { title: string; subtitle: string; items: Track[] }
     benefits: { title: string; subtitle: string; items: Benefit[] }
@@ -168,7 +167,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="relative overflow-hidden pt-28 text-white lg:pt-40">
+            <section className="relative overflow-hidden pt-20 pb-8 text-white lg:pt-32 lg:pb-12">
                 <Image
                     src={IMAGES.hero.src}
                     alt={IMAGES.hero.alt}
@@ -227,7 +226,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </section>
 
             {/* C · E · D */}
-            <Section className="py-16 lg:py-20">
+            <Section className="py-12 lg:py-16">
                 <Container>
                     <div className="mx-auto max-w-3xl space-y-6 text-center">
                         <Logo className="h-[62px] w-[300px]" />
@@ -274,7 +273,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </Section>
 
             {/* Intro */}
-            <Section background="muted" className="py-16 lg:py-20">
+            <Section background="muted" className="py-12 lg:py-16">
                 <Container>
                     <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                         <AnimatedDiv>
@@ -313,33 +312,9 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                 </Container>
             </Section>
 
-            {/* KPI */}
-            <Section className="py-16 lg:py-20">
-                <Container>
-                    <div className="mx-auto mb-6 max-w-2xl space-y-3 text-center">
-                        <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
-                            {d.kpi.title}
-                        </Heading>
-                        <Text variant="bodyLg" className="mx-auto text-text-secondary">
-                            {d.kpi.desc}
-                        </Text>
-                    </div>
-
-                    <div className="flex flex-wrap justify-center gap-2.5">
-                        {d.kpi.sectors.map((sector) => (
-                            <span
-                                key={sector}
-                                className="rounded-full border border-border bg-white px-5 py-2 text-sm text-corporate-dark"
-                            >
-                                {sector}
-                            </span>
-                        ))}
-                    </div>
-                </Container>
-            </Section>
 
             {/* Program flow */}
-            <Section id="program" background="muted" className="scroll-mt-24 py-16 lg:py-20">
+            <Section id="program" background="muted" className="scroll-mt-24 py-12 lg:py-16">
                 <Container>
                     <div className="mx-auto mb-8 max-w-2xl space-y-4 text-center">
                         <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
@@ -389,7 +364,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </Section>
 
             {/* Tracks */}
-            <Section className="py-16 lg:py-20">
+            <Section className="py-12 lg:py-16">
                 <Container>
                     <div className="mx-auto mb-8 max-w-2xl space-y-4 text-center">
                         <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
@@ -463,7 +438,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </Section>
 
             {/* Value */}
-            <Section className="py-16 lg:py-20">
+            <Section className="py-12 lg:py-16">
                 <Container>
                     <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                         <AnimatedDiv className="order-2 space-y-5 lg:order-1">
@@ -491,7 +466,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </Section>
 
             {/* Gallery */}
-            <Section className="py-16 lg:py-20">
+            <Section className="py-12 lg:py-16">
                 <Container>
                     <div className="mx-auto mb-8 max-w-3xl text-center">
                         <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
@@ -545,7 +520,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </Section>
 
             {/* FAQ */}
-            <Section background="muted" className="py-16 lg:py-20">
+            <Section background="muted" className="py-12 lg:py-16">
                 <Container>
                     <div className="mx-auto mb-10 max-w-2xl text-center">
                         <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
@@ -594,7 +569,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </Section>
 
             {/* Closing CTA */}
-            <Section id="basvuru" background="dark" className="relative scroll-mt-24 overflow-hidden py-16 lg:py-20">
+            <Section id="basvuru" background="dark" className="relative scroll-mt-24 overflow-hidden py-12 lg:py-16">
                 <div className="absolute inset-0 bg-gradient-to-br from-corporate-dark via-[#1B3E77] to-corporate-accent" />
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(58,124,181,0.25),transparent_60%)]" />
 

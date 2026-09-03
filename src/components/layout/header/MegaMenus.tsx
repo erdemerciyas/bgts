@@ -530,39 +530,45 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
         >
             <div className="grid grid-cols-5 gap-4 h-[420px]">
 
-                {/* CARD 1: CONNECTED - Hero Card */}
+                {/* CARD 1: CONNECTED - Two-Zone Layout on the /connected hero recipe */}
                 <Link href={lh(lang, '/connected')} onClick={closeMenu}
-                    className="col-span-2 relative group overflow-hidden rounded-2xl bg-slate-900 shadow-lg">
-                    <Image src="/images/connected/hero.webp" alt="" fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />
+                    className="col-span-2 group relative flex h-full flex-col overflow-hidden rounded-2xl bg-corporate-dark shadow-lg ring-1 ring-corporate-dark/10 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-corporate-dark/25">
 
-                    <div className="relative h-full flex flex-col justify-between p-7 z-10">
-                        <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-white/15 backdrop-blur flex items-center justify-center">
-                                <Network className="w-3.5 h-3.5 text-white" />
-                            </div>
-                            <span className="text-[10px] font-black text-white/70 tracking-[0.2em] uppercase">{t(lang, "Yaşam & Kültür", "Life & Culture")}</span>
+                    {/* Full-bleed photo + navy wash (same recipe as the /connected hero) */}
+                    <div className="absolute inset-0">
+                        <Image src="/images/connected/hero.webp" alt="" fill sizes="470px"
+                            className="object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-corporate-dark/90 via-corporate-dark/88 to-[#0D2344]/94" />
+                    </div>
+
+                    {/* UPPER ZONE: Badge + logo */}
+                    <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-3.5 px-6 pt-6">
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5">
+                            <Network className="h-3.5 w-3.5 text-white/90" />
+                            <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.12em] text-white/85">{t(lang, "Yaşam & Kültür", "Life & Culture")}</span>
                         </div>
 
-                        <div>
-                            <div className="mb-3 inline-flex max-w-full items-center rounded-xl bg-white px-3 py-2 shadow-sm">
-                                <div className="relative h-[44px] w-[200px]">
-                                    <Image
-                                        src="/images/connected/logo-on-dark.png"
-                                        alt="ConnectED"
-                                        fill
-                                        sizes="200px"
-                                        className="object-contain object-left"
-                                    />
-                                </div>
+                        <div className="inline-flex items-center rounded-2xl bg-white px-5 py-3 shadow-sm transition-transform duration-500 group-hover:scale-[1.03]">
+                            <div className="relative h-[42px] w-[210px]">
+                                <Image
+                                    src="/images/connected/logo.png"
+                                    alt="BGTS ConnectED"
+                                    fill
+                                    sizes="210px"
+                                    className="object-contain"
+                                />
                             </div>
-                            <p className="text-white/60 text-xs leading-relaxed mb-5 max-w-[280px]">
-                                {t(lang, "Bağlantı kur. Deneyim kazan. Geliş.", "Connect. Gain experience. Grow.")}
-                            </p>
-                            <div className="inline-flex items-center gap-2 bg-white text-slate-900 pl-4 pr-3 py-2 rounded-full font-bold text-xs hover:bg-amber-50 transition-all group-hover:gap-3">
-                                {t(lang, "Keşfet", "Explore")} <ArrowRight className="w-3.5 h-3.5" />
-                            </div>
+                        </div>
+                    </div>
+
+                    {/* LOWER ZONE: Description + CTA */}
+                    <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-5 border-t border-white/18 px-6 py-6">
+                        <p className="max-w-[265px] text-center text-[15px] font-medium leading-[1.55] text-white [text-shadow:0_1px_6px_rgba(3,10,24,0.7)]">
+                            {t(lang, "Gelişimden kariyere, tek bir programda.", "From growth to career, in a single program.")}
+                        </p>
+
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/55 px-6 py-2.5 text-[12.5px] font-bold text-white transition-all duration-300 group-hover:gap-3 group-hover:border-white group-hover:bg-white/12">
+                            {t(lang, "Keşfet", "Explore")} <ArrowRight className="h-3.5 w-3.5" />
                         </div>
                     </div>
                 </Link>

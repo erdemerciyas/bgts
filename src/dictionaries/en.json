@@ -2187,7 +2187,7 @@
       "items": [
         {
           "letter": "C",
-          "title": "Connect — Build a connection",
+          "title": "Connect — Skilled AI",
           "desc": "The first link between talent and the business world: the selection process, mentor matching, and joining expert teams.",
           "points": [
             "Structured selection and assessment",
@@ -2197,7 +2197,7 @@
         },
         {
           "letter": "E",
-          "title": "Experience — Gain experience",
+          "title": "Experience — Experience Gained",
           "desc": "Field experience gained by working on real projects and in real client teams.",
           "points": [
             "Different sectors",
@@ -2207,7 +2207,7 @@
         },
         {
           "letter": "D",
-          "title": "Development — Keep growing",
+          "title": "Development — Continued Growth",
           "desc": "Technical and professional competencies developed in a planned, measurable way.",
           "points": [
             "On-the-job learning",
@@ -2226,11 +2226,6 @@
         { "value": "1,500+", "label": "program graduates" },
         { "value": "45", "label": "placements at organizations" }
       ]
-    },
-    "kpi": {
-      "title": "We have brought talent to the industry through 50+ programs",
-      "desc": "ConnectED graduates work today across banking, telecom, insurance and retail — on software and infrastructure projects at leading organizations in the industry.",
-      "sectors": ["Banking", "Insurance", "Telecom", "Retail", "Manufacturing", "Energy", "Public", "Healthcare"]
     },
     "program": {
       "title": "From application to placement, how does the program work?",
@@ -2360,7 +2355,7 @@
       }
     ],
     "faq": {
-      "title": "Frequently asked questions",
+      "title": "ConnectED 101",
       "items": [
         {
           "q": "Who is ConnectED for?",

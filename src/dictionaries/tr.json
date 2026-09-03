@@ -2187,7 +2187,7 @@
       "items": [
         {
           "letter": "C",
-          "title": "Connect — Bağ kur",
+          "title": "Connect — Yetni AI",
           "desc": "Yetenek ile iş dünyası arasındaki ilk bağ: seçme süreci, mentor eşleşmesi ve uzman ekiplere dâhil olma.",
           "points": [
             "Yapılandırılmış seçme ve değerlendirme",
@@ -2197,7 +2197,7 @@
         },
         {
           "letter": "E",
-          "title": "Experience — Deneyim kazan",
+          "title": "Experience — Deneyim Kazanı",
           "desc": "Gerçek projelerde ve gerçek müşteri ekiplerinde çalışarak kazanılan saha deneyimi.",
           "points": [
             "Farklı sektörler",
@@ -2207,7 +2207,7 @@
         },
         {
           "letter": "D",
-          "title": "Development — Gelişimini sürdür",
+          "title": "Development — Geliştirimi Sürü",
           "desc": "Teknik ve profesyonel yetkinliklerin plana bağlı, ölçülebilir biçimde geliştirilmesi.",
           "points": [
             "İş başında öğrenme",
@@ -2226,11 +2226,6 @@
         { "value": "1.500+", "label": "mezun olan yetenek" },
         { "value": "45", "label": "kurumda yerleştirme" }
       ]
-    },
-    "kpi": {
-      "title": "50+ programla sektöre yetenek kazandırdık",
-      "desc": "ConnectED mezunları bugün bankacılıktan telekoma, sigortadan perakendeye kadar birçok sektörde; sektörün önde gelen kurumlarının yazılım ve altyapı projelerinde çalışıyor.",
-      "sectors": ["Bankacılık", "Sigorta", "Telekom", "Perakende", "Üretim", "Enerji", "Kamu", "Sağlık"]
     },
     "program": {
       "title": "Başvurudan yerleştirmeye, program nasıl işliyor?",
@@ -2360,7 +2355,7 @@
       }
     ],
     "faq": {
-      "title": "Merak edilenler",
+      "title": "ConnectED 101",
       "items": [
         {
           "q": "ConnectED kimler için?",
