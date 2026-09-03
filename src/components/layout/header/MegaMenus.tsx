@@ -532,7 +532,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
                 {/* CARD 1: CONNECTED - Two-Zone Layout on the /connected hero recipe */}
                 <Link href={lh(lang, '/connected')} onClick={closeMenu}
-                    className="col-span-2 group relative flex h-full flex-col overflow-hidden rounded-2xl bg-corporate-dark shadow-lg ring-1 ring-corporate-dark/10 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-corporate-dark/25">
+                    className="col-span-2 group relative flex h-full flex-col overflow-hidden rounded-2xl bg-corporate-dark shadow-lg ring-1 ring-corporate-dark/10 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-corporate-dark/30">
 
                     {/* Full-bleed photo + navy wash (same recipe as the /connected hero) */}
                     <div className="absolute inset-0">
@@ -543,12 +543,12 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
 
                     {/* UPPER ZONE: Badge + logo */}
                     <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-3.5 px-6 pt-6">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5">
-                            <Network className="h-3.5 w-3.5 text-white/90" />
-                            <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.12em] text-white/85">{t(lang, "Yaşam & Kültür", "Life & Culture")}</span>
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/12 backdrop-blur-sm px-3 py-1.5 transition-all duration-300 group-hover:bg-white/18 group-hover:border-white/50">
+                            <Network className="h-3.5 w-3.5 text-white/95" />
+                            <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.12em] text-white/90">{t(lang, "Yaşam & Kültür", "Life & Culture")}</span>
                         </div>
 
-                        <div className="inline-flex items-center rounded-2xl bg-white px-5 py-3 shadow-sm transition-transform duration-500 group-hover:scale-[1.03]">
+                        <div className="inline-flex items-center rounded-2xl bg-white px-5 py-3 shadow-lg transition-all duration-500 group-hover:scale-[1.04] group-hover:shadow-xl">
                             <div className="relative h-[42px] w-[210px]">
                                 <Image
                                     src="/images/connected/logo.png"
@@ -562,13 +562,13 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                     </div>
 
                     {/* LOWER ZONE: Description + CTA */}
-                    <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-5 border-t border-white/18 px-6 py-6">
-                        <p className="max-w-[265px] text-center text-[15px] font-medium leading-[1.55] text-white [text-shadow:0_1px_6px_rgba(3,10,24,0.7)]">
+                    <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-5 border-t border-white/20 px-6 py-6">
+                        <p className="max-w-[265px] text-center text-[15px] font-semibold leading-[1.6] text-white [text-shadow:0_1px_8px_rgba(3,10,24,0.8)]">
                             {t(lang, "Gelişimden kariyere, tek bir programda.", "From growth to career, in a single program.")}
                         </p>
 
-                        <div className="inline-flex items-center gap-2 rounded-full border border-white/55 px-6 py-2.5 text-[12.5px] font-bold text-white transition-all duration-300 group-hover:gap-3 group-hover:border-white group-hover:bg-white/12">
-                            {t(lang, "Keşfet", "Explore")} <ArrowRight className="h-3.5 w-3.5" />
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/70 px-6 py-2.5 text-[12.5px] font-bold text-white transition-all duration-300 hover:gap-3 hover:border-white hover:bg-white/18">
+                            {t(lang, "Keşfet", "Explore")} <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                         </div>
                     </div>
                 </Link>

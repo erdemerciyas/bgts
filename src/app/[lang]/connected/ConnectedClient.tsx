@@ -100,6 +100,20 @@ function isDevBadge(badge: string) {
     return badge.includes("Development")
 }
 
+function getInitials(name: string): string {
+    return name
+        .split(" ")
+        .slice(0, 2)
+        .map((part) => part[0])
+        .join("")
+        .toUpperCase()
+}
+
+function getAvatarColor(index: number): string {
+    const colors = ["bg-blue-500", "bg-indigo-500", "bg-purple-500", "bg-cyan-500"]
+    return colors[index % colors.length]
+}
+
 function Badge({ label }: { label: string }) {
     return (
         <span
@@ -202,7 +216,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                         <AnimatedDiv delay={0.15} className="flex justify-center pt-2">
                             <Link
                                 href="#program"
-                                className="inline-flex items-center justify-center rounded-full border border-white/55 px-8 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/12"
+                                className="inline-flex items-center justify-center rounded-full border border-white/70 px-8 py-3.5 font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/15 hover:border-white/90"
                             >
                                 {d.ctaExplore}
                             </Link>
@@ -228,7 +242,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </section>
 
             {/* C · E · D */}
-            <Section className="py-12 lg:py-16">
+            <Section className="py-14 lg:py-20">
                 <Container>
                     <div className="mx-auto max-w-3xl space-y-6 text-center">
                         <Text as="p" lang="en" variant="large" className="font-heading text-base font-semibold uppercase tracking-[0.16em] text-corporate-dark md:text-[23px]">
@@ -248,7 +262,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                                 <AnimatedDiv key={pillar.letter} delay={i * 0.08}>
                                     <article className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white p-7 shadow-[0_1px_2px_rgba(16,32,60,0.04),0_20px_40px_-34px_rgba(16,32,60,0.5)]">
                                         <span className={`absolute inset-y-0 left-0 w-[5px] ${accent.bar}`} />
-                                        <div className={`font-heading text-[46px] font-bold leading-none ${accent.letter}`}>
+                                        <div className={`font-heading text-[52px] font-black leading-[0.9] -tracking-wide ${accent.letter}`}>
                                             {pillar.letter}
                                         </div>
                                         <Heading variant="h3" className="mt-3.5 text-[19px]">
@@ -274,7 +288,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </Section>
 
             {/* Intro */}
-            <Section background="muted" className="py-12 lg:py-16">
+            <Section background="muted" className="py-12 lg:py-14">
                 <Container>
                     <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                         <AnimatedDiv>
@@ -296,13 +310,13 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                             <Text variant="bodyLg" className="text-text-secondary">
                                 {d.intro.desc2}
                             </Text>
-                            <div className="grid grid-cols-3 gap-4 pt-4">
+                            <div className="grid grid-cols-3 gap-4 pt-6">
                                 {d.intro.minis.map((mini) => (
-                                    <div key={mini.label} className="border-l-[3px] border-border pl-3.5">
+                                    <div key={mini.label} className="rounded-lg bg-slate-50 border border-slate-200 p-3.5 pl-4">
                                         <div className="font-heading text-[22px] font-bold text-corporate-secondary">
                                             {mini.value}
                                         </div>
-                                        <Text variant="caption" className="mt-0.5 text-[13px] text-text-secondary">
+                                        <Text variant="caption" className="mt-1 text-[13px] text-text-secondary">
                                             {mini.label}
                                         </Text>
                                     </div>
@@ -314,7 +328,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             </Section>
 
             {/* Tracks */}
-            <Section className="py-12 lg:py-16">
+            <Section className="py-14 lg:py-16">
                 <Container>
                     <div className="mx-auto mb-8 max-w-2xl space-y-4 text-center">
                         <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
@@ -326,18 +340,28 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                     </div>
 
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                        {d.tracks.items.map((track, i) => (
-                            <AnimatedDiv key={track.title} delay={i * 0.04}>
-                                <article className="h-full rounded-2xl border border-border bg-white p-5 text-left">
-                                    <Heading variant="h4" className="text-[15.5px]">
-                                        {track.title}
-                                    </Heading>
-                                    <Text variant="caption" className="mt-1.5 text-[13.5px] leading-relaxed text-text-secondary">
-                                        {track.desc}
-                                    </Text>
-                                </article>
-                            </AnimatedDiv>
-                        ))}
+                        {d.tracks.items.map((track, i) => {
+                            const trackAccents = [
+                                { bar: "bg-corporate-tertiary" },
+                                { bar: "bg-corporate-accent" },
+                                { bar: "bg-corporate-secondary" },
+                                { bar: "bg-corporate-dark" },
+                            ]
+                            const accent = trackAccents[i % 4]
+                            return (
+                                <AnimatedDiv key={track.title} delay={i * 0.04}>
+                                    <article className={`relative h-full rounded-2xl border border-border bg-white p-5 text-left overflow-hidden`}>
+                                        <span className={`absolute inset-y-0 left-0 w-[4px] ${accent.bar}`} />
+                                        <Heading variant="h4" className="text-[15.5px]">
+                                            {track.title}
+                                        </Heading>
+                                        <Text variant="caption" className="mt-1.5 text-[13.5px] leading-relaxed text-text-secondary">
+                                            {track.desc}
+                                        </Text>
+                                    </article>
+                                </AnimatedDiv>
+                            )
+                        })}
                     </div>
                 </Container>
             </Section>
@@ -398,7 +422,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                         ))}
                     </AnimatedDiv>
 
-                    <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+                    <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
                         {d.quotes.map((quote, i) => (
                             <AnimatedDiv key={quote.name} delay={i * 0.08}>
                                 <article className="h-full rounded-2xl border border-border bg-white p-6 text-left">
@@ -408,7 +432,9 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                                         <span className="font-heading text-lg font-bold text-[#B9C8DE]">&rdquo;</span>
                                     </Text>
                                     <div className="mt-4 flex items-center gap-3">
-                                        <div className="h-[38px] w-[38px] shrink-0 rounded-full bg-[#DEE6F1]" />
+                                        <div className={`flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full ${getAvatarColor(i)} font-heading text-sm font-bold text-white`}>
+                                            {getInitials(quote.name)}
+                                        </div>
                                         <div>
                                             <Heading variant="h4" className="text-[13.5px]">
                                                 {quote.name}
@@ -438,9 +464,10 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                         {d.faq.items.map((item, i) => (
                             <details
                                 key={item.q}
-                                className="group rounded-2xl border border-border bg-white px-6 py-4"
+                                className="group relative rounded-2xl border border-border bg-white px-6 py-4 overflow-hidden transition-all duration-200 group-open:bg-slate-50"
                                 open={openFaq === i}
                             >
+                                <span className="absolute inset-y-0 left-0 w-[4px] bg-corporate-secondary opacity-0 transition-opacity duration-200 group-open:opacity-100" />
                                 <summary
                                     className="flex cursor-pointer list-none items-center justify-between gap-5 font-heading text-base font-semibold text-corporate-dark [&::-webkit-details-marker]:hidden"
                                     onClick={(e) => {
