@@ -231,7 +231,6 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             <Section className="py-12 lg:py-16">
                 <Container>
                     <div className="mx-auto max-w-3xl space-y-6 text-center">
-                        <Logo className="h-[62px] w-[300px]" />
                         <Text as="p" lang="en" variant="large" className="font-heading text-base font-semibold uppercase tracking-[0.16em] text-corporate-dark md:text-[23px]">
                             {wordParts.map((word, i) => (
                                 <span key={word}>
@@ -314,57 +313,6 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                 </Container>
             </Section>
 
-
-            {/* Program flow */}
-            <Section id="program" background="muted" className="scroll-mt-24 py-12 lg:py-16">
-                <Container>
-                    <div className="mx-auto mb-8 max-w-2xl space-y-4 text-center">
-                        <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
-                            {d.program.title}
-                        </Heading>
-                        <Text variant="bodyLg" className="mx-auto text-text-secondary">
-                            {d.program.subtitle}
-                        </Text>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                        {d.program.steps.map((step, i) => {
-                            const Icon = PROGRAM_ICONS[i] ?? Link2
-                            const stepNum = String(i + 1).padStart(2, "0")
-                            return (
-                                <AnimatedDiv key={step.title} delay={i * 0.08}>
-                                    <article className="relative flex h-full flex-col rounded-2xl border border-border bg-white p-6 shadow-[0_1px_2px_rgba(16,32,60,0.04),0_20px_40px_-34px_rgba(16,32,60,0.5)]">
-                                        <span className="absolute right-5 top-4 grid h-7 w-7 place-items-center rounded-full bg-corporate-dark font-heading text-[13px] font-bold text-white">
-                                            {stepNum}
-                                        </span>
-                                        <div className="grid h-[52px] w-[52px] place-items-center rounded-2xl bg-corporate-secondary text-white">
-                                            <Icon className="h-5 w-5" strokeWidth={1.75} />
-                                        </div>
-                                        <Heading variant="h3" className="mt-4 text-[16.5px]">
-                                            {step.title}
-                                        </Heading>
-                                        <Text variant="default" className="mt-2.5 text-sm text-text-secondary">
-                                            {step.desc}
-                                        </Text>
-                                        <ul className="mt-3.5 mb-4 space-y-1.5">
-                                            {step.points.map((point) => (
-                                                <li key={point} className="flex items-start gap-2 text-[13.5px] text-text-primary">
-                                                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-corporate-tertiary" />
-                                                    {point}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                        <div className="mt-auto">
-                                            <Badge label={step.badge} />
-                                        </div>
-                                    </article>
-                                </AnimatedDiv>
-                            )
-                        })}
-                    </div>
-                </Container>
-            </Section>
-
             {/* Tracks */}
             <Section className="py-12 lg:py-16">
                 <Container>
@@ -390,51 +338,6 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                                 </article>
                             </AnimatedDiv>
                         ))}
-                    </div>
-                </Container>
-            </Section>
-
-            {/* Benefits */}
-            <Section background="muted" className="py-16 lg:py-20">
-                <Container>
-                    <div className="mx-auto mb-8 max-w-2xl space-y-4 text-center">
-                        <Heading variant="h2" className="text-3xl font-black lg:text-4xl">
-                            {d.benefits.title}
-                        </Heading>
-                        <Text variant="bodyLg" className="mx-auto text-text-secondary">
-                            {d.benefits.subtitle}
-                        </Text>
-                    </div>
-
-                    <div className="space-y-4">
-                        {d.benefits.items.map((item, i) => {
-                            const Icon = BENEFIT_ICONS[i] ?? Users
-                            return (
-                                <AnimatedDiv key={item.title} delay={i * 0.06}>
-                                    <div className="grid items-center gap-6 rounded-2xl border border-border bg-white p-6 transition-all duration-300 hover:border-corporate-secondary/30 hover:shadow-md lg:grid-cols-[64px_1.05fr_1.55fr] lg:gap-6 lg:p-7">
-                                        <div className="grid h-[52px] w-[52px] place-items-center rounded-2xl bg-corporate-secondary text-white">
-                                            <Icon className="h-5 w-5" strokeWidth={1.75} />
-                                        </div>
-                                        <div>
-                                            <Heading variant="h3" className="text-[17px]">
-                                                {item.title}
-                                            </Heading>
-                                            <div className="mt-2">
-                                                <Badge label={item.badge} />
-                                            </div>
-                                        </div>
-                                        <ul className="grid gap-2 sm:grid-cols-3 sm:gap-x-5">
-                                            {item.points.map((point) => (
-                                                <li key={point} className="flex items-start gap-2 text-sm text-text-secondary">
-                                                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-corporate-accent" />
-                                                    {point}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </AnimatedDiv>
-                            )
-                        })}
                     </div>
                 </Container>
             </Section>
