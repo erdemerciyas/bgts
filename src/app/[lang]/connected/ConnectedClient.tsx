@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Container } from "@/components/ui/Container"
@@ -163,6 +164,7 @@ function Logo({
 
 export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
     const wordParts = d.pillars.words.split(" & ")
+    const [openFaq, setOpenFaq] = useState<number | null>(0)
 
     return (
         <div className="min-h-screen bg-white">
@@ -497,9 +499,10 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                         {d.quotes.map((quote, i) => (
                             <AnimatedDiv key={quote.name} delay={i * 0.08}>
                                 <article className="h-full rounded-2xl border border-border bg-white p-6 text-left">
-                                    <div className="font-heading text-[38px] font-bold leading-none text-[#D8E2F0]">“</div>
-                                    <Text variant="default" className="mt-2 text-[14.5px] text-text-primary">
+                                    <Text variant="default" className="text-[14.5px] text-text-primary">
+                                        <span className="font-heading text-lg font-bold text-[#B9C8DE]">&ldquo;</span>
                                         {quote.text}
+                                        <span className="font-heading text-lg font-bold text-[#B9C8DE]">&rdquo;</span>
                                     </Text>
                                     <div className="mt-4 flex items-center gap-3">
                                         <div className="h-[38px] w-[38px] shrink-0 rounded-full bg-[#DEE6F1]" />
@@ -533,9 +536,15 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                             <details
                                 key={item.q}
                                 className="group rounded-2xl border border-border bg-white px-6 py-4"
-                                open={i === 0}
+                                open={openFaq === i}
                             >
-                                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-heading text-base font-semibold text-corporate-dark [&::-webkit-details-marker]:hidden">
+                                <summary
+                                    className="flex cursor-pointer list-none items-center justify-between gap-5 font-heading text-base font-semibold text-corporate-dark [&::-webkit-details-marker]:hidden"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        setOpenFaq((prev) => (prev === i ? null : i))
+                                    }}
+                                >
                                     {item.q}
                                     <Plus className="h-5 w-5 shrink-0 text-corporate-secondary transition-transform duration-200 group-open:rotate-45" />
                                 </summary>

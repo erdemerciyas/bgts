@@ -2172,8 +2172,8 @@
   },
   "careers_connected": {
     "hero": {
-      "title": "Deneyim ve gelişim,\ntek bir programda buluşuyor.",
-      "subtitle": "ConnectED; genç yetenekleri seçmeden başlayıp teknik yetkinlik geliştirme, gerçek proje deneyimi ve müşteride çalışma adımlarıyla ilerleyen, sektörün önde gelen kurumlarında yerleştirmeyle sonuçlanan bir deneyim ve gelişim programıdır.",
+      "title": "Gelişimden Kariyere'ye,\nTek Bir Programda",
+      "subtitle": "ConnectED; genç yeteneklerin seçimiyle başlayıp teknik yetkinlik geliştirme ve gerçek proje deneyimiyle ilerleyen, sektörün önde gelen kurumlarında işe yerleştirmeyle tamamlanan kapsamlı bir deneyim ve gelişim programıdır.",
       "stats": [
         { "value": "50+", "label": "tamamlanan program" },
         { "value": "1.500+", "label": "mezun olan yetenek" },
@@ -2208,11 +2208,11 @@
         {
           "letter": "D",
           "title": "Development — Gelişimini Sürdür",
-          "desc": "Teknik ve profesyonel yetkinliklerin plana bağlı, ölçülebilir biçimde geliştirilmesi.",
+          "desc": "Profesyonel çalışma hayatına geçişle birlikte gelişimin düzenli olarak takip edildiği ve desteklendiği süreç.",
           "points": [
-            "İş başında öğrenme",
-            "Sertifikasyon olanakları",
-            "Dikey ve yatay kariyer yolları"
+            "Sektörün önde gelen kurumlarında çalışma fırsatı",
+            "Yetenek Yönetimi ekibiyle düzenli gelişim takibi",
+            "Kariyer gelişimine yönelik sürekli destek"
           ]
         }
       ]
@@ -2274,16 +2274,16 @@
       ]
     },
     "tracks": {
-      "title": "Teknik yetkinlik geliştirme başlıklarımız",
+      "title": "ConnectED Teknoloji ve Uzmanlık Alanları",
       "subtitle": "Programa kabul edilen her yetenek, ilgi alanına ve projenin ihtiyacına göre bir gelişim hattına yerleşir.",
       "items": [
-        { "title": "Yazılım geliştirme", "desc": "Backend ve frontend geliştirme, kod kalitesi ve sürüm yönetimi." },
-        { "title": "Altyapı ve sistem", "desc": "Sistem yönetimi, ağ, sanallaştırma ve altyapı operasyonları." },
-        { "title": "Veri ve raporlama", "desc": "Veri tabanı, veri hazırlama ve raporlama araçları." },
+        { "title": "Yazılım Geliştirme", "desc": "Backend ve frontend geliştirme, kod kalitesi ve sürüm yönetimi." },
+        { "title": "Altyapı ve Sistem", "desc": "Sistem yönetimi, ağ, sanallaştırma ve altyapı operasyonları." },
+        { "title": "Veri ve Raporlama", "desc": "Veri tabanı, veri hazırlama ve raporlama araçları." },
         { "title": "Bulut ve DevOps", "desc": "Bulut servisleri, otomasyon ve sürekli entegrasyon." },
-        { "title": "Test ve kalite", "desc": "Test senaryoları, otomasyon ve kalite güvence süreçleri." },
-        { "title": "Siber güvenlik", "desc": "Güvenlik temelleri, izleme ve güvenli geliştirme." },
-        { "title": "İş analizi", "desc": "İhtiyaç analizi, süreç modelleme ve dokümantasyon." },
+        { "title": "Test ve Kalite", "desc": "Test senaryoları, otomasyon ve kalite güvence süreçleri." },
+        { "title": "Siber Güvenlik", "desc": "Güvenlik temelleri, izleme ve güvenli geliştirme." },
+        { "title": "İş Analizi", "desc": "İhtiyaç analizi, süreç modelleme ve dokümantasyon." },
         { "title": "Yapay Zeka", "desc": "Yapay zeka temelleri, üretken yapay zeka araçları ve iş süreçlerinde kullanım" }
       ]
     },
@@ -2329,10 +2329,15 @@
         }
       ]
     },
+    "industryShowcase": {
+      "title": "50+ programla sektöre yetenek kazandırdık",
+      "desc": "ConnectED mezunları bugün Finans ve Savunma Sanayii başta olmak üzere; Telekom, Otomotiv, Sigorta ve Perakende gibi farklı sektörlerin yazılım ve altyapı projelerinde çalışıyor.",
+      "sectors": ["Finans", "Savunma Sanayi", "Telekom", "Otomotiv", "Sigorta", "Perakende", "Üretim", "Enerji", "Kamu", "Sağlık"]
+    },
     "value": {
-      "title": "Güçlü bağlar kurarak değer yaratıyoruz.",
-      "desc": "Uzman Seçme ve Yerleştirme ekibimiz ile farklı sektörlerin ihtiyaç duyduğu yazılım ve altyapı yeteneklerine ulaşıyor, bu yetenekleri geliştirerek iş süreçlerine değer katıyoruz.",
-      "desc2": "Aynı ekip, program boyunca yeteneği doğru projeye ve doğru kuruma yönlendiren tarafta da yer alır. Yerleştirme, programın sonunda gelen tek seferlik bir adım değil; ilk görüşmeden itibaren birlikte planlanan bir sonuçtur."
+      "title": "Doğru Yeteneği İş Ortaklarımızla Buluşturuyoruz.",
+      "desc": "Uzman Seçme ve Yerleştirme ekibimizle farklı sektörlerdeki kurumların ihtiyaç duyduğu yazılım ve altyapı yeteneklerini belirliyor; seçme, değerlendirme ve gelişim süreçlerini bu ihtiyaçlar doğrultusunda yapılandırıyoruz.",
+      "desc2": "Program boyunca yetenekleri ihtiyaç duyulan yetkinliklere ve çalışma alanlarına hazırlıyor, doğru proje ve kurumlarla buluşturuyoruz. Böylece yerleştirmeyi programın sonunda gerçekleşen tek bir adım olarak değil, kurumun ihtiyacından başlayarak ilk günden planlanan bütünsel bir sürecin parçası olarak ele alıyoruz."
     },
     "gallery": {
       "title": "Deneyim ve gelişim ConnectED programımızda buluşuyor!"
@@ -2386,8 +2391,57 @@
           "ordered": true
         },
         {
+          "q": "Seçme süreci ne kadar sürede tamamlanıyor?",
+          "a": "Seçme süreci yaklaşık 4-6 hafta içinde tamamlanmaktadır."
+        },
+        {
           "q": "Eğitim aşaması ne kadar sürüyor?",
-          "a": "Program gereksinimlerine bağlı olarak teknik ve dikey uzmanlık eğitimlerimiz 8 - 12 hafta içinde tamamlanıyor."
+          "a": "Program gereksinimlerine bağlı olarak teknik ve dikey uzmanlık eğitimlerimiz 8 - 12 hafta içinde tamamlanmaktadır."
+        },
+        {
+          "q": "Eğitimler online mı yüz yüze mi gerçekleştiriliyor?",
+          "a": "Program ihtiyacına göre eğitimler çoğunlukla yüz yüze olarak gerçekleştirilmektedir."
+        },
+        {
+          "q": "Eğitmenler kimler?",
+          "a": "Eğitimler, alanında uzman, profesyonel proje deneyimine sahip donanımlı eğitmenler tarafından verilmektedir."
+        },
+        {
+          "q": "Çalışma modeli nasıl belirleniyor?",
+          "a": "Program ihtiyacına bağlı olmakla birlikte çoğunlukla yerinde çalışma modeli uygulanmaktadır."
+        },
+        {
+          "q": "Hangi teknoloji alanlarında eğitim veriliyor?",
+          "list": [
+            "Yazılım geliştirme",
+            "Altyapı ve sistem",
+            "Veri ve raporlama",
+            "Bulut ve DevOps",
+            "Test ve kalite",
+            "Siber güvenlik",
+            "İş analizi",
+            "Yapay zeka"
+          ]
+        },
+        {
+          "q": "ConnectED mezunları hangi sektörlerde çalışma imkânı buluyor?",
+          "a": "ConnectED mezunları bugün Finans ve Savunma Sanayii başta olmak üzere; Telekom, Otomotiv, Sigorta ve Perakende gibi farklı sektörlerin yazılım ve altyapı projelerinde çalışıyor.",
+          "list": [
+            "Finans",
+            "Savunma Sanayi",
+            "Telekom",
+            "Otomotiv",
+            "Sigorta",
+            "Perakende",
+            "Üretim",
+            "Enerji",
+            "Kamu",
+            "Sağlık"
+          ]
+        },
+        {
+          "q": "ConnectED programı eğitim başarı oranı nedir?",
+          "a": "Programın başarı oranı %90 seviyesinde ilerlemektedir."
         },
         {
           "q": "ConnectED programı ücretli mi?",

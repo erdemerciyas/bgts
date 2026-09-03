@@ -2172,8 +2172,8 @@
   },
   "careers_connected": {
     "hero": {
-      "title": "Experience and development\nmeet in a single program.",
-      "subtitle": "ConnectED is an experience and development program that starts with talent selection and continues through technical upskilling, real project experience and on-site client work — concluding with placement at leading organizations in the industry.",
+      "title": "Growth to Career,\nAll in One Program",
+      "subtitle": "ConnectED is a comprehensive experience and development program that starts with talent selection, progresses through technical upskilling and real project experience, and culminates in placement at leading organizations in the industry.",
       "stats": [
         { "value": "50+", "label": "completed programs" },
         { "value": "1,500+", "label": "program graduates" },
@@ -2208,11 +2208,11 @@
         {
           "letter": "D",
           "title": "Development — Keep Growing",
-          "desc": "Technical and professional competencies developed in a planned, measurable way.",
+          "desc": "Professional development is regularly monitored and supported as you transition into your professional career.",
           "points": [
-            "On-the-job learning",
-            "Certification opportunities",
-            "Vertical and horizontal career paths"
+            "Career opportunities at leading industry organizations",
+            "Regular development tracking with the Talent Management team",
+            "Continuous support for career growth"
           ]
         }
       ]
@@ -2274,16 +2274,16 @@
       ]
     },
     "tracks": {
-      "title": "Our technical development tracks",
+      "title": "ConnectED Technology and Expertise Areas",
       "subtitle": "Every talent admitted to the program is placed on a development track based on their interests and the needs of the project.",
       "items": [
-        { "title": "Software development", "desc": "Backend and frontend development, code quality and version control." },
-        { "title": "Infrastructure and systems", "desc": "Systems administration, networking, virtualization and infrastructure operations." },
-        { "title": "Data and reporting", "desc": "Databases, data preparation and reporting tools." },
+        { "title": "Software Development", "desc": "Backend and frontend development, code quality and version control." },
+        { "title": "Infrastructure and Systems", "desc": "Systems administration, networking, virtualization and infrastructure operations." },
+        { "title": "Data and Reporting", "desc": "Databases, data preparation and reporting tools." },
         { "title": "Cloud and DevOps", "desc": "Cloud services, automation and continuous integration." },
-        { "title": "Testing and quality", "desc": "Test scenarios, automation and quality assurance processes." },
+        { "title": "Testing and Quality", "desc": "Test scenarios, automation and quality assurance processes." },
         { "title": "Cybersecurity", "desc": "Security fundamentals, monitoring and secure development." },
-        { "title": "Business analysis", "desc": "Requirements analysis, process modeling and documentation." },
+        { "title": "Business Analysis", "desc": "Requirements analysis, process modeling and documentation." },
         { "title": "Artificial Intelligence", "desc": "AI fundamentals, generative AI tools and their use in business processes" }
       ]
     },
@@ -2329,10 +2329,15 @@
         }
       ]
     },
+    "industryShowcase": {
+      "title": "50+ programs have built talent across sectors",
+      "desc": "ConnectED graduates work across Finance and Defense Industry, as well as Telecommunications, Automotive, Insurance, and Retail — contributing to software and infrastructure projects at leading organizations.",
+      "sectors": ["Finance", "Defense Industry", "Telecommunications", "Automotive", "Insurance", "Retail", "Manufacturing", "Energy", "Public Sector", "Healthcare"]
+    },
     "value": {
-      "title": "We create value by building strong connections.",
-      "desc": "With our Expert Selection and Placement team, we reach the software and infrastructure talents needed by different sectors and add value to business processes by developing these talents.",
-      "desc2": "The same team also guides each talent toward the right project and the right organization throughout the program. Placement is not a one-off step at the end; it is a result planned together from the first conversation."
+      "title": "Connecting the Right Talent with Our Business Partners.",
+      "desc": "With our Expert Selection and Placement team, we identify the software and infrastructure talents needed by organizations across different sectors; we structure the selection, evaluation, and development processes according to these needs.",
+      "desc2": "Throughout the program, we prepare talents for the required competencies and work areas, connecting them with the right projects and organizations. This way, we view placement not as a single step at the end of the program, but as part of a holistic process planned from day one, starting with the organization's needs."
     },
     "gallery": {
       "title": "Experience and development meet in our ConnectED program!"
@@ -2386,8 +2391,57 @@
           "ordered": true
         },
         {
+          "q": "How long does the selection process take to complete?",
+          "a": "The selection process is completed within approximately 4–6 weeks."
+        },
+        {
           "q": "How long does the training phase last?",
           "a": "Depending on program requirements, our technical and vertical specialization training is completed within 8–12 weeks."
+        },
+        {
+          "q": "Are the trainings held online or in person?",
+          "a": "Depending on program needs, trainings are mostly held in person."
+        },
+        {
+          "q": "Who are the trainers?",
+          "a": "Trainings are delivered by skilled trainers who are experts in their field with professional project experience."
+        },
+        {
+          "q": "How is the working model determined?",
+          "a": "Depending on program needs, an on-site working model is mostly applied."
+        },
+        {
+          "q": "Which technology areas does the training cover?",
+          "list": [
+            "Software development",
+            "Infrastructure and systems",
+            "Data and reporting",
+            "Cloud and DevOps",
+            "Testing and quality",
+            "Cybersecurity",
+            "Business analysis",
+            "Artificial intelligence"
+          ]
+        },
+        {
+          "q": "In which sectors do ConnectED graduates find employment?",
+          "a": "ConnectED graduates today work on software and infrastructure projects across various sectors, led primarily by Finance and Defense Industry, as well as Telecom, Automotive, Insurance, and Retail.",
+          "list": [
+            "Finance",
+            "Defense Industry",
+            "Telecom",
+            "Automotive",
+            "Insurance",
+            "Retail",
+            "Manufacturing",
+            "Energy",
+            "Public Sector",
+            "Healthcare"
+          ]
+        },
+        {
+          "q": "What is the training success rate of the ConnectED program?",
+          "a": "The program's success rate is progressing at around 90%."
         },
         {
           "q": "Is the ConnectED program paid?",
