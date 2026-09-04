@@ -548,16 +548,14 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.12em] text-white/90">{t(lang, "Yaşam & Kültür", "Life & Culture")}</span>
                         </div>
 
-                        <div className="inline-flex items-center rounded-2xl bg-white px-5 py-3 shadow-lg transition-all duration-500 group-hover:scale-[1.04] group-hover:shadow-xl">
-                            <div className="relative h-[42px] w-[210px]">
-                                <Image
-                                    src="/images/connected/logo-on-dark.png"
-                                    alt="BGTS ConnectED"
-                                    fill
-                                    sizes="210px"
-                                    className="object-contain"
-                                />
-                            </div>
+                        <div className="relative h-[42px] w-[210px]">
+                            <Image
+                                src="/images/connected/logo-on-dark.png"
+                                alt="BGTS ConnectED"
+                                fill
+                                sizes="210px"
+                                className="object-contain"
+                            />
                         </div>
                     </div>
 
