@@ -551,7 +551,7 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         <div className="inline-flex items-center rounded-2xl bg-white px-5 py-3 shadow-lg transition-all duration-500 group-hover:scale-[1.04] group-hover:shadow-xl">
                             <div className="relative h-[42px] w-[210px]">
                                 <Image
-                                    src="/images/connected/logo.png"
+                                    src="/images/connected/connectED_white.png"
                                     alt="BGTS ConnectED"
                                     fill
                                     sizes="210px"
