@@ -245,13 +245,17 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
             <Section className="py-14 lg:py-20">
                 <Container>
                     <div className="mx-auto max-w-3xl space-y-6 text-center">
-                        <Text as="p" lang="en" variant="large" className="font-heading text-base font-semibold uppercase tracking-[0.16em] text-corporate-dark md:text-[23px]">
-                            {wordParts.map((word, i) => (
-                                <span key={word}>
-                                    {i > 0 && <span className="mx-1.5 text-corporate-tertiary">&amp;</span>}
-                                    {word}
-                                </span>
-                            ))}
+                        <Text as="p" lang="en" variant="large" className="font-heading text-base font-bold uppercase tracking-[0.16em] md:text-[23px]">
+                            {wordParts.map((word, i) => {
+                                const firstLetterColor = PILLAR_ACCENT[i]?.letter || "text-corporate-dark"
+                                return (
+                                    <span key={word}>
+                                        {i > 0 && <span className="mx-1.5 text-corporate-tertiary">&amp;</span>}
+                                        <span className={firstLetterColor}>{word[0]}</span>
+                                        <span className="text-slate-400">{word.slice(1)}</span>
+                                    </span>
+                                )
+                            })}
                         </Text>
                     </div>
 
@@ -265,7 +269,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                                         <div className={`font-heading text-[52px] font-black leading-[0.9] -tracking-wide ${accent.letter}`}>
                                             {pillar.letter}
                                         </div>
-                                        <Heading variant="h3" className="mt-3.5 text-[19px]">
+                                        <Heading variant="h3" className="mt-3.5 text-[19px] leading-tight">
                                             {pillar.title}
                                         </Heading>
                                         <Text variant="default" className="mt-2.5 text-[14.5px] text-text-secondary">
@@ -274,7 +278,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                                         <ul className="mt-4 space-y-1.5">
                                             {pillar.points.map((point) => (
                                                 <li key={point} className="flex items-start gap-2.5 text-sm text-text-primary">
-                                                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-corporate-secondary" />
+                                                    <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${accent.bar}`} />
                                                     {point}
                                                 </li>
                                             ))}
@@ -285,6 +289,34 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                         })}
                     </div>
                 </Container>
+            </Section>
+
+            {/* Industry Showcase */}
+            <Section className="py-14 lg:py-20">
+                <Container>
+                    <AnimatedDiv className="mx-auto max-w-3xl space-y-6 text-center">
+                        <Heading variant="h2" className="whitespace-pre-line text-3xl font-black leading-tight lg:text-4xl">
+                            {d.industryShowcase.title}
+                        </Heading>
+                        <Text variant="bodyLg" className="text-text-secondary">
+                            {d.industryShowcase.desc}
+                        </Text>
+                    </AnimatedDiv>
+                </Container>
+                <div className="mt-8 w-full">
+                    <Container>
+                        <div className="flex flex-wrap justify-center gap-3">
+                            {d.industryShowcase.sectors.map((sector) => (
+                                <span
+                                    key={sector}
+                                    className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-medium text-text-primary"
+                                >
+                                    {sector}
+                                </span>
+                            ))}
+                        </div>
+                    </Container>
+                </div>
             </Section>
 
             {/* Intro */}

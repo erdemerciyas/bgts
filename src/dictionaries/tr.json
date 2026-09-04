@@ -2172,7 +2172,7 @@
   },
   "careers_connected": {
     "hero": {
-      "title": "Gelişimden Kariyere'ye,\nTek Bir Programda",
+      "title": "Gelişimden Kariyere, Tek Bir Programda",
       "subtitle": "ConnectED; genç yeteneklerin seçimiyle başlayıp teknik yetkinlik geliştirme ve gerçek proje deneyimiyle ilerleyen, sektörün önde gelen kurumlarında işe yerleştirmeyle tamamlanan kapsamlı bir deneyim ve gelişim programıdır.",
       "stats": [
         { "value": "50+", "label": "tamamlanan program" },
@@ -2187,7 +2187,7 @@
       "items": [
         {
           "letter": "C",
-          "title": "Connect — Yetni AI",
+          "title": "Connect — Yerini Al",
           "desc": "Yetenek ile iş dünyası arasındaki ilk bağ: seçme süreci, mentor eşleşmesi ve uzman ekiplere dâhil olma.",
           "points": [
             "Yapılandırılmış seçme ve değerlendirme",
@@ -2330,7 +2330,7 @@
       ]
     },
     "industryShowcase": {
-      "title": "50+ programla sektöre yetenek kazandırdık",
+      "title": "50+ programla sektöre yetenek\nkazandırdık",
       "desc": "ConnectED mezunları bugün Finans ve Savunma Sanayii başta olmak üzere; Telekom, Otomotiv, Sigorta ve Perakende gibi farklı sektörlerin yazılım ve altyapı projelerinde çalışıyor.",
       "sectors": ["Finans", "Savunma Sanayi", "Telekom", "Otomotiv", "Sigorta", "Perakende", "Üretim", "Enerji", "Kamu", "Sağlık"]
     },
