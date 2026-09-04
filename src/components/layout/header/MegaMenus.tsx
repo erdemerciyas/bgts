@@ -541,13 +541,8 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                         <div className="absolute inset-0 bg-gradient-to-b from-corporate-dark/90 via-corporate-dark/88 to-[#0D2344]/94" />
                     </div>
 
-                    {/* UPPER ZONE: Badge + logo */}
-                    <div className="relative z-10 flex flex-1 flex-col items-center justify-center gap-3.5 px-6 pt-6">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/12 backdrop-blur-sm px-3 py-1.5 transition-all duration-300 group-hover:bg-white/18 group-hover:border-white/50">
-                            <Network className="h-3.5 w-3.5 text-white/95" />
-                            <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.12em] text-white/90">{t(lang, "Yaşam & Kültür", "Life & Culture")}</span>
-                        </div>
-
+                    {/* UPPER ZONE: Logo */}
+                    <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 pt-8">
                         <div className="relative h-[60px] w-[280px]">
                             <Image
                                 src="/images/connected/connectED_white.png"
