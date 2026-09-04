@@ -548,12 +548,12 @@ export const CareersMenu = ({ closeMenu }: { closeMenu?: () => void }) => {
                             <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.12em] text-white/90">{t(lang, "Yaşam & Kültür", "Life & Culture")}</span>
                         </div>
 
-                        <div className="relative h-[42px] w-[210px]">
+                        <div className="relative h-[60px] w-[280px]">
                             <Image
-                                src="/images/connected/logo-on-dark.png"
+                                src="/images/connected/connectED_white.png"
                                 alt="BGTS ConnectED"
                                 fill
-                                sizes="210px"
+                                sizes="280px"
                                 className="object-contain"
                             />
                         </div>
