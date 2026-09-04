@@ -89,6 +89,7 @@ type ConnectedDict = {
     program: { title: string; subtitle: string; steps: ProgramStep[] }
     tracks: { title: string; subtitle: string; items: Track[] }
     benefits: { title: string; subtitle: string; items: Benefit[] }
+    industryShowcase: { title: string; desc: string; sectors: string[] }
     value: { title: string; desc: string; desc2: string }
     gallery: { title: string }
     quotes: Quote[]
