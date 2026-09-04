@@ -267,8 +267,10 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                                 <AnimatedDiv key={pillar.letter} delay={i * 0.08}>
                                     <article className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white p-7 shadow-[0_1px_2px_rgba(16,32,60,0.04),0_20px_40px_-34px_rgba(16,32,60,0.5)]">
                                         <span className={`absolute inset-y-0 left-0 w-[5px] ${accent.bar}`} />
-                                        <div className={`font-heading text-[52px] font-black leading-[0.9] -tracking-wide ${accent.letter}`}>
-                                            {pillar.letter}
+                                        <div className="flex h-[47px] items-end">
+                                            <div className={`font-heading text-4xl font-black uppercase leading-[0.9] tracking-tight ${accent.letter}`}>
+                                                {i === 0 ? pillar.title.split("—")[0].trim() : pillar.letter}
+                                            </div>
                                         </div>
                                         <Heading variant="h3" className="mt-3.5 text-[19px] leading-tight">
                                             {pillar.title}
