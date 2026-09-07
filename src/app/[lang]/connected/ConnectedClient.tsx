@@ -457,16 +457,16 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                         ))}
                     </AnimatedDiv>
 
-                    <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
+                    <div className="mt-5 grid grid-cols-1 items-stretch gap-5 md:grid-cols-3">
                         {d.quotes.map((quote, i) => (
-                            <AnimatedDiv key={quote.name} delay={i * 0.08}>
-                                <article className="h-full rounded-2xl border border-border bg-white p-6 text-left">
+                            <AnimatedDiv key={quote.name} className="h-full" delay={i * 0.08}>
+                                <article className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 text-left">
                                     <Text variant="default" className="text-[14.5px] text-text-primary">
                                         <span className="font-heading text-lg font-bold text-[#B9C8DE]">&ldquo;</span>
                                         {quote.text}
                                         <span className="font-heading text-lg font-bold text-[#B9C8DE]">&rdquo;</span>
                                     </Text>
-                                    <div className="mt-4 flex items-center gap-3">
+                                    <div className="mt-auto flex items-center gap-3 pt-4">
                                         <div className={`flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full ${getAvatarColor(i)} font-heading text-sm font-bold text-white`}>
                                             {getInitials(quote.name)}
                                         </div>
