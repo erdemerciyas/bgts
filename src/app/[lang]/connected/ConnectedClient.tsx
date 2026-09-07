@@ -457,7 +457,7 @@ export default function ConnectedClient({ dict: d }: { dict: ConnectedDict }) {
                         ))}
                     </AnimatedDiv>
 
-                    <div className="mt-5 grid grid-cols-1 items-stretch gap-5 md:grid-cols-3">
+                    <div className="mt-5 grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
                         {d.quotes.map((quote, i) => (
                             <AnimatedDiv key={quote.name} className="h-full" delay={i * 0.08}>
                                 <article className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 text-left">
