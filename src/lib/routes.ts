@@ -44,6 +44,7 @@ export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
   '/partnerships': { tr: '/is-ortaklari', eng: '/partnerships' },
   '/learning': { tr: '/egitim-ve-gelisim', eng: '/learning' },
   '/connected': { tr: '/connected', eng: '/connected' },
+  '/scholarship': { tr: '/burs-basvurusu', eng: '/scholarship' },
   '/meetsense-viewer': { tr: '/meetsense-goruntuleyici', eng: '/meetsense-viewer' },
   '/products/cortex': { tr: '/urunler/cortex', eng: '/products/cortex' },
   '/products/meetsense': { tr: '/urunler/meetsense', eng: '/products/meetsense' },
@@ -70,6 +71,7 @@ export const TR_TOP_LEVEL_ALIASES: Record<string, string> = {
 export const TR_LEGACY_REDIRECTS: Record<string, string> = {
   '/about': '/hakkimizda',
   '/contact': '/iletisim',
+  '/scholarship': '/burs-basvurusu',
   '/products/hcm': '/urunler/hcm',
   '/products/praxila': '/urunler/praxilla',
   '/products/praxilla': '/urunler/praxilla',

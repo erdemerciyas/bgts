@@ -61,8 +61,8 @@ export default function ScholarshipWidget({ dict, lang }: Props) {
     const [open, setOpen] = useState(false);
     const [loaded, setLoaded] = useState(false);
 
-    // League sayfalarında site kromu gizli; buton da gösterilmez.
-    if (/\/league(?:\/|$)/.test(pathname ?? "")) return null;
+    // League sayfalarında site kromu gizli; burs sayfasında form zaten açık — buton gösterilmez.
+    if (/\/(?:league|burs-basvurusu|scholarship)(?:\/|$)/.test(pathname ?? "")) return null;
 
     const prefetch = () => void loadModal();
     const [firstWord, ...rest] = dict.button.split(" ");

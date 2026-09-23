@@ -3627,6 +3627,8 @@
     "kariyer-yollari": "Kariyer Yolları",
     "calisma-kulturu": "Çalışma Kültürü",
     "connected": "ConnectED",
+    "burs-basvurusu": "Burs Başvurusu",
+    "scholarship": "Burs Başvurusu",
     "basari-hikayeleri": "Başarı Hikayeleri",
     "makaleler": "Analizler",
     "analizler": "Analizler",
@@ -3687,6 +3689,26 @@
   },
   "scholarship": {
     "button": "Burs Başvuru",
+    "page": {
+      "eyebrow": "BGTS Burs Programı",
+      "title": "Geleceğinize",
+      "highlight": "birlikte yatırım yapalım",
+      "subtitle": "Eğitim hayatını sürdürürken maddi desteğe ihtiyaç duyan üniversite öğrencilerinden burs başvurusu alıyoruz. Formu adım adım doldurarak başvurunuzu birkaç dakikada tamamlayabilirsiniz.",
+      "highlights": [
+        {
+          "title": "Yaklaşık 10 dakika",
+          "text": "6 kısa adımda tamamlanır; bilgileriniz sekme açık kaldıkça saklanır."
+        },
+        {
+          "title": "Verileriniz güvende",
+          "text": "Bilgileriniz KVKK kapsamında yalnızca burs değerlendirmesi için işlenir."
+        },
+        {
+          "title": "Sonuç bildirimi",
+          "text": "Değerlendirme sonrasında size e-posta veya telefonla ulaşılır."
+        }
+      ]
+    },
     "title": "Burs Başvuru Formu",
     "subtitle": "BGTS burs programı için bilgilerinizi adım adım doldurun.",
     "stepOf": "Adım {current} / {total}",
@@ -3868,7 +3890,8 @@
     "success": {
       "title": "Başvurunuz alındı!",
       "message": "Teşekkür ederiz. Başvurunuz değerlendirme ekibimize iletildi; sonuç hakkında size e-posta veya telefon ile ulaşacağız.",
-      "close": "Kapat"
+      "close": "Kapat",
+      "home": "Ana Sayfaya Dön"
     }
   }
 }

@@ -3625,6 +3625,8 @@
     "career-paths": "Career Paths",
     "culture": "Work Culture",
     "connected": "ConnectED",
+    "burs-basvurusu": "Scholarship Application",
+    "scholarship": "Scholarship Application",
     "learning": "Learning & Development",
     "partnerships": "Business Partnerships",
     "resources": "Resources",
@@ -3656,6 +3658,26 @@
   },
   "scholarship": {
     "button": "Scholarship Application",
+    "page": {
+      "eyebrow": "BGTS Scholarship Program",
+      "title": "Let's invest in",
+      "highlight": "your future together",
+      "subtitle": "We accept scholarship applications from university students who need financial support to continue their education. Fill in the form step by step and complete your application in a few minutes.",
+      "highlights": [
+        {
+          "title": "About 10 minutes",
+          "text": "Completed in 6 short steps; your entries are kept while the tab stays open."
+        },
+        {
+          "title": "Your data is safe",
+          "text": "Your information is processed under KVKK solely for scholarship evaluation."
+        },
+        {
+          "title": "Result notification",
+          "text": "After the evaluation, we will contact you by email or phone."
+        }
+      ]
+    },
     "title": "Scholarship Application Form",
     "subtitle": "Fill in your details step by step for the BGTS scholarship program.",
     "stepOf": "Step {current} of {total}",
@@ -3837,7 +3859,8 @@
     "success": {
       "title": "Application received!",
       "message": "Thank you. Your application has been forwarded to our evaluation team; we will contact you by email or phone about the result.",
-      "close": "Close"
+      "close": "Close",
+      "home": "Back to Home"
     }
   }
 }
