@@ -11,6 +11,7 @@ const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMITS: Record<string, { windowMs: number; maxRequests: number }> = {
   '/api/chat': { windowMs: 60_000, maxRequests: 10 },
   '/api/contact': { windowMs: 60_000, maxRequests: 5 },
+  '/api/scholarship': { windowMs: 60_000, maxRequests: 3 },
   '/api/league/send-code': { windowMs: 60_000, maxRequests: 5 },
   '/api/league/verify': { windowMs: 60_000, maxRequests: 10 },
   '/api/league/submit': { windowMs: 60_000, maxRequests: 10 },

@@ -3684,5 +3684,191 @@
     "category": "analiz",
     "publishedOn": "Yayın Tarihi",
     "viewOnLinkedIn": "LinkedIn'de Görüntüle"
+  },
+  "scholarship": {
+    "button": "Burs Başvuru",
+    "title": "Burs Başvuru Formu",
+    "subtitle": "BGTS burs programı için bilgilerinizi adım adım doldurun.",
+    "stepOf": "Adım {current} / {total}",
+    "next": "İleri",
+    "back": "Geri",
+    "submit": "Başvuruyu Gönder",
+    "submitting": "Gönderiliyor...",
+    "close": "Kapat",
+    "edit": "Düzenle",
+    "optional": "opsiyonel",
+    "empty": "—",
+    "steps": [
+      {
+        "title": "Kişisel Bilgiler",
+        "description": "Kimlik ve doğum bilgileriniz"
+      },
+      {
+        "title": "Eğitim",
+        "description": "Üniversite ve akademik durumunuz"
+      },
+      {
+        "title": "Aile & Gelir",
+        "description": "Ailenizin gelir ve konut durumu"
+      },
+      {
+        "title": "Kardeşler",
+        "description": "Kardeşlerinize ait bilgiler"
+      },
+      {
+        "title": "İletişim",
+        "description": "Size ulaşabileceğimiz bilgiler"
+      },
+      {
+        "title": "Onay & Gönder",
+        "description": "Bilgilerinizi kontrol edip gönderin"
+      }
+    ],
+    "labels": {
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "birthCity": "Doğum Yeri (İl)",
+      "birthDistrict": "Doğum Yeri (İlçe)",
+      "birthDate": "Doğum Tarihi",
+      "gender": "Cinsiyet",
+      "maritalStatus": "Medeni Hal",
+      "nationality": "Uyruk",
+      "motherName": "Anne Adı",
+      "fatherName": "Baba Adı",
+      "university": "Üniversite",
+      "faculty": "Fakülte",
+      "department": "Bölüm",
+      "grade": "Sınıf",
+      "entryDate": "Üniversiteye Giriş Tarihi",
+      "prepAttended": "Hazırlık okudunuz mu?",
+      "gpa": "Genel Not Ortalaması (4'lük)",
+      "highSchool": "Mezun Olunan Lise",
+      "fatherAlive": "Babanız hayatta mı?",
+      "fatherJob": "Babanızın İşi",
+      "fatherIncome": "Babanızın Net Maaşı",
+      "motherAlive": "Anneniz hayatta mı?",
+      "motherJob": "Annenizin İşi",
+      "motherIncome": "Annenizin Net Maaşı",
+      "workingCount": "Ailede Çalışan Kişi Sayısı",
+      "otherIncome": "Diğer Gelirler (aylık)",
+      "totalIncome": "Toplam Aylık Aile Geliri",
+      "totalIncomeHint": "Otomatik hesaplanır, gerekirse düzeltebilirsiniz.",
+      "guardianPhone": "Veli Telefonu",
+      "housing": "Ailenin Oturduğu Ev",
+      "rentAmount": "Aylık Kira Tutarı",
+      "hasSiblings": "Kardeşiniz var mı?",
+      "siblingCount": "Kaç kardeşsiniz? (siz dahil)",
+      "siblingCard": "{n}. Kardeş",
+      "siblingFullName": "Ad Soyad",
+      "siblingAge": "Yaş",
+      "siblingSchool": "Okul / Sınıf (okuyorsa)",
+      "siblingJob": "İşi (çalışıyorsa)",
+      "siblingMarital": "Medeni Durum",
+      "address": "Ev Adresi",
+      "phone": "Telefon",
+      "phone2": "İkinci Telefon",
+      "email": "E-posta"
+    },
+    "placeholders": {
+      "firstName": "Adınız",
+      "lastName": "Soyadınız",
+      "birthCity": "Örn. Ankara",
+      "birthDistrict": "Örn. Çankaya",
+      "nationality": "Örn. T.C.",
+      "university": "Örn. Orta Doğu Teknik Üniversitesi",
+      "faculty": "Örn. Mühendislik Fakültesi",
+      "department": "Örn. Bilgisayar Mühendisliği",
+      "gpa": "Örn. 3.25",
+      "highSchool": "Mezun olduğunuz lise",
+      "job": "Mesleği / çalıştığı iş",
+      "workingCount": "Örn. 1",
+      "select": "Seçiniz",
+      "siblingCount": "Örn. 3",
+      "address": "Mahalle, sokak, no, ilçe / il",
+      "phone": "0 (5xx) xxx xx xx",
+      "email": "ornek@eposta.com"
+    },
+    "options": {
+      "gender": {
+        "female": "Kadın",
+        "male": "Erkek"
+      },
+      "maritalStatus": {
+        "single": "Bekâr",
+        "married": "Evli",
+        "divorced": "Boşanmış",
+        "widowed": "Dul"
+      },
+      "yesNo": {
+        "yes": "Evet",
+        "no": "Hayır"
+      },
+      "grade": {
+        "1": "1. Sınıf",
+        "2": "2. Sınıf",
+        "3": "3. Sınıf",
+        "4": "4. Sınıf",
+        "5": "5. Sınıf",
+        "6": "6. Sınıf",
+        "prep": "Hazırlık"
+      },
+      "housing": {
+        "rent": "Kira",
+        "owned": "Mülk"
+      },
+      "housingHint": {
+        "rent": "Aile kirada oturuyor",
+        "owned": "Ev aileye ait"
+      }
+    },
+    "errors": {
+      "required": "Bu alan zorunludur.",
+      "tooLong": "Girilen değer çok uzun.",
+      "invalidEmail": "Geçerli bir e-posta adresi girin.",
+      "invalidPhone": "Geçerli bir telefon numarası girin.",
+      "invalidDate": "Geçerli bir tarih girin.",
+      "invalidGpa": "Not ortalaması 0 ile 4 arasında olmalıdır (örn. 3.25).",
+      "invalidNumber": "Yalnızca rakam girin.",
+      "invalidCount": "Kardeş sayısı 2 ile 11 arasında olmalıdır.",
+      "mustAccept": "Devam etmek için onaylamanız gerekir.",
+      "turnstile": "Lütfen güvenlik doğrulamasını tamamlayın.",
+      "send": "Başvuru gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+      "rateLimit": "Çok fazla deneme yapıldı. Lütfen bir dakika sonra tekrar deneyin."
+    },
+    "review": {
+      "intro": "Göndermeden önce bilgilerinizi kontrol edin.",
+      "siblingsNone": "Kardeş yok",
+      "kvkkTitle": "KVKK Aydınlatma Metni",
+      "kvkkShow": "Metni oku",
+      "kvkkHide": "Metni gizle",
+      "kvkkRead": "Aydınlatma Metni'ni okudum ve anladım.",
+      "consentTitle": "Açık Rıza Beyanı",
+      "consentLabel": "Açık Rıza Beyanı'nı okudum; kişisel verilerimin ve aile gelir bilgilerimin burs değerlendirmesi amacıyla işlenmesine açık rıza veriyorum.",
+      "verify": "Güvenlik doğrulaması",
+      "kvkkText":[
+        "Veri Sorumlusu: 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") uyarınca, kişisel verileriniz veri sorumlusu sıfatıyla BGTS – Business & Global Technology Solutions (\"BGTS\") (Adres: Maslak Mahallesi, Büyükdere Caddesi No:128, 34398 Sarıyer/İstanbul · Telefon: 444 3330 · E-posta: info@bgts.com.tr) tarafından aşağıda açıklanan kapsamda işlenecektir.",
+        "İşlenen Kişisel Veriler: Kimlik (ad, soyad, doğum yeri ve tarihi, cinsiyet, medeni hal, uyruk, anne ve baba adı), eğitim (üniversite, fakülte, bölüm, sınıf, üniversiteye giriş tarihi, hazırlık durumu, not ortalaması, mezun olunan lise), aile ve gelir (ebeveynlerin hayatta olup olmadığı, meslekleri ve net gelirleri, ailede çalışan kişi sayısı, diğer gelirler, toplam aile geliri, konut durumu ve kira tutarı), kardeş bilgileri (ad soyad, yaş, okul, iş ve medeni durum) ile iletişim (ev adresi, telefon, veli telefonu, e-posta) verileriniz. Formda özel nitelikli kişisel veri (sağlık, din, etnik köken vb.) talep edilmez; lütfen bu tür bilgi paylaşmayınız.",
+        "Aile gelir bilgileri KVKK md. 6 kapsamında özel nitelikli kişisel veri olmamakla birlikte hassas nitelik taşıdığından, yalnızca BGTS bünyesindeki yetkili burs değerlendirme ekibinin erişebileceği şekilde ve ek teknik ve idari güvenlik önlemleriyle korunur.",
+        "Aile Bireylerine Ait Veriler: Formda anne, baba, kardeşler ve veliniz gibi üçüncü kişilere ait bilgiler de yer almaktadır. Bu bilgileri paylaşmadan önce ilgili kişileri bu Aydınlatma Metni hakkında bilgilendirmeniz gerekmektedir.",
+        "İşleme Amaçları: Burs başvurunuzun alınması ve kayda geçirilmesi, burs kriterlerine uygunluğunuzun ve ekonomik durumunuzun değerlendirilmesi, başvuru sonucunun size bildirilmesi, burs sürecine ilişkin sizinle ve velinizle iletişim kurulması ile form güvenliğinin sağlanması ve kötüye kullanımın önlenmesi.",
+        "Toplama Yöntemi ve Hukuki Sebepler: Verileriniz bu internet sitesindeki çevrim içi burs başvuru formu aracılığıyla elektronik ortamda toplanır. Verileriniz KVKK md. 5/2(c) uyarınca burs ilişkisinin kurulmasıyla doğrudan ilgili olması, md. 5/2(f) uyarınca form güvenliğinin sağlanmasına yönelik meşru menfaatimiz ve aile gelir bilgileriniz ile yurt dışına aktarım bakımından md. 5/1 uyarınca açık rızanız hukuki sebeplerine dayanılarak işlenir.",
+        "Aktarım: Verileriniz yasal zorunluluklar kapsamında yetkili kamu kurum ve kuruluşları dışında üçüncü kişilerle paylaşılmaz. Ancak başvuru formunun çalışabilmesi için hizmet aldığımız ve sunucuları yurt dışında bulunan tedarikçiler kullanılmaktadır: internet sitesinin barındırıldığı Vercel Inc. (ABD), başvurunun BGTS'ye e-posta olarak iletildiği Google LLC (Gmail, ABD) ve robot doğrulaması için Cloudflare, Inc. (Cloudflare Turnstile; yalnızca IP adresi ve tarayıcı bilgileri). Bu aktarımlar KVKK md. 9 hükümlerine uygun olarak gerçekleştirilir.",
+        "Saklama Süresi: Başvurunuz, değerlendirme süreci boyunca ve sonuçlanmasından itibaren en fazla 2 (iki) yıl süreyle saklanır; süre sonunda silinir, yok edilir veya anonim hale getirilir. Burs almaya hak kazanmanız halinde verileriniz, burs süresi ve ilgili mevzuatta öngörülen süreler boyunca saklanabilir.",
+        "Haklarınız: KVKK md. 11 uyarınca; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, KVKK md. 7 çerçevesinde silinmesini veya yok edilmesini isteme, bu işlemlerin aktarıldığı üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve kanuna aykırı işleme sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme haklarına sahipsiniz.",
+        "Başvuru Yöntemi: Haklarınıza ilişkin taleplerinizi, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun olarak kimliğinizi tespit edici bilgilerle birlikte yazılı olarak Maslak Mahallesi, Büyükdere Caddesi No:128, 34398 Sarıyer/İstanbul adresine iletebilir veya sistemimizde kayıtlı e-posta adresinizden info@bgts.com.tr adresine gönderebilirsiniz. Başvurunuz en geç 30 (otuz) gün içinde ücretsiz olarak sonuçlandırılır."
+      ],
+      "consentText":"BGTS – Business & Global Technology Solutions tarafından sunulan Aydınlatma Metni'ni okudum ve anladım. Burs başvurum kapsamında paylaştığım kimlik, eğitim, iletişim, aile ve gelir bilgilerimin başvurumun değerlendirilmesi ve sonucun bildirilmesi amacıyla işlenmesine; başvurunun Google LLC (Gmail) e-posta altyapısı üzerinden iletilmesi, sitenin Vercel Inc. altyapısında barındırılması ve Cloudflare, Inc. robot doğrulama hizmetinin kullanılması nedeniyle bu verilerin yurt dışında (ABD) bulunan sunuculara aktarılmasına ve Aydınlatma Metni'nde belirtilen süre boyunca saklanmasına özgür irademle açık rıza veriyorum. Rızamı dilediğim zaman info@bgts.com.tr adresine başvurarak geri alabileceğimi biliyorum."
+    },
+    "exit": {
+      "title": "Formu kapatmak istediğinize emin misiniz?",
+      "message": "Girdiğiniz bilgiler bu tarayıcı sekmesi açık kaldığı sürece saklanır; daha sonra kaldığınız yerden devam edebilirsiniz.",
+      "stay": "Forma Dön",
+      "leave": "Kapat"
+    },
+    "success": {
+      "title": "Başvurunuz alındı!",
+      "message": "Teşekkür ederiz. Başvurunuz değerlendirme ekibimize iletildi; sonuç hakkında size e-posta veya telefon ile ulaşacağız.",
+      "close": "Kapat"
+    }
   }
 }
