@@ -5,12 +5,15 @@
  * 1. .env.local dosyanıza GMAIL_CLIENT_ID ve GMAIL_CLIENT_SECRET ekleyin
  * 2. node scripts/gmail-get-refresh-token.mjs
  * 3. Tarayıcıda açılan URL'ye gidin, izin verin
- * 4. Dönen refresh token'ı .env.local dosyanıza GMAIL_REFRESH_TOKEN olarak kaydedin
+ * 4. Yeni refresh token otomatik olarak .env.local dosyasına GMAIL_REFRESH_TOKEN olarak yazılır
+ *
+ * Not: Google Cloud'da OAuth onay ekranı "Testing" durumundaysa refresh token 7 gün sonra
+ * geçersiz olur (invalid_grant). Kalıcı çözüm için uygulamayı "In production" durumuna alın.
  */
 
 import { createServer } from "node:http";
 import { google } from "googleapis";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 function loadEnvFile(filename) {
@@ -31,6 +34,17 @@ function loadEnvFile(filename) {
             process.env[key] = value;
         }
     }
+}
+
+/** .env.local içindeki GMAIL_REFRESH_TOKEN satırını günceller (yoksa ekler). */
+function saveRefreshToken(token) {
+    const filePath = resolve(process.cwd(), ".env.local");
+    const content = existsSync(filePath) ? readFileSync(filePath, "utf8") : "";
+    const line = `GMAIL_REFRESH_TOKEN=${token}`;
+    const next = /^GMAIL_REFRESH_TOKEN=.*$/m.test(content)
+        ? content.replace(/^GMAIL_REFRESH_TOKEN=.*$/m, line)
+        : `${content.replace(/\s*$/, "")}\n${line}\n`;
+    writeFileSync(filePath, next);
 }
 
 loadEnvFile(".env.local");
@@ -75,10 +89,13 @@ const server = createServer(async (req, res) => {
         res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
         res.end("<h1>Refresh token alındı.</h1><p>Bu pencereyi kapatabilirsiniz. Terminal çıktısına bakın.</p>");
 
-        console.log("\nGmail API token bilgileri:\n");
-        console.log(`GMAIL_REFRESH_TOKEN=${tokens.refresh_token || ""}`);
         if (!tokens.refresh_token) {
             console.log("\nUyarı: refresh_token dönmedi. Google hesabından uygulama erişimini kaldırıp tekrar deneyin.");
+        } else {
+            saveRefreshToken(tokens.refresh_token);
+            const t = tokens.refresh_token;
+            console.log(`\nYeni GMAIL_REFRESH_TOKEN .env.local dosyasına yazıldı (${t.slice(0, 6)}…${t.slice(-4)}).`);
+            console.log("Dev sunucusunu yeniden başlatın ve aynı değeri Vercel ortam değişkenlerinde de güncelleyin.");
         }
     } catch (error) {
         res.writeHead(500);
