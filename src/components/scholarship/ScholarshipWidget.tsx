@@ -20,7 +20,6 @@ const YELLOW = "#fbbf24";
 
 type Props = {
     dict: ScholarshipDict;
-    lang: string;
 };
 
 /** Sarı kıvılcım çizgileri; `reduce` kapalıyken hafifçe yanıp söner. */
@@ -55,7 +54,7 @@ function Cap() {
     );
 }
 
-export default function ScholarshipWidget({ dict, lang }: Props) {
+export default function ScholarshipWidget({ dict }: Props) {
     const pathname = usePathname();
     const reduce = !!useReducedMotion();
     const [open, setOpen] = useState(false);
@@ -112,7 +111,7 @@ export default function ScholarshipWidget({ dict, lang }: Props) {
                 </motion.button>
             </div>
 
-            {loaded && <ScholarshipModal open={open} onClose={() => setOpen(false)} dict={dict} lang={lang} />}
+            {loaded && <ScholarshipModal open={open} onClose={() => setOpen(false)} dict={dict} />}
         </>
     );
 }

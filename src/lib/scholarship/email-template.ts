@@ -234,7 +234,7 @@ export function buildScholarshipEmail(d: ScholarshipData, reference: string, sen
     <div style="margin-top:12px">
       ${consentBadge("KVKK Aydınlatma Metni okundu", d.kvkkRead)}
       ${consentBadge("Açık rıza verildi", d.consent)}
-      ${consentBadge("Robot doğrulaması geçti", true)}
+      ${consentBadge("Güvenlik sorusu doğrulandı", true)}
     </div>
   </td></tr>
 

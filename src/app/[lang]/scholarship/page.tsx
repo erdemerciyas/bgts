@@ -47,7 +47,6 @@ export default async function ScholarshipPage({
                         </div>
                         <ScholarshipWizard
                             dict={dict}
-                            lang={lang}
                             variant="page"
                             doneHref={localizedHref(lang, "/")}
                             doneLabel={dict.success.home}

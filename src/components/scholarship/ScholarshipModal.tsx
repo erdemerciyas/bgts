@@ -11,12 +11,11 @@ type Props = {
     open: boolean;
     onClose: () => void;
     dict: ScholarshipDict;
-    lang: string;
 };
 
 const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])';
 
-export default function ScholarshipModal({ open, onClose, dict, lang }: Props) {
+export default function ScholarshipModal({ open, onClose, dict }: Props) {
     const reduce = useReducedMotion();
     const [confirmExit, setConfirmExit] = useState(false);
     // Başarılı gönderimden sonra kapatınca wizard sıfırdan başlasın diye yeniden mount edilir.
@@ -140,7 +139,6 @@ export default function ScholarshipModal({ open, onClose, dict, lang }: Props) {
                         <ScholarshipWizard
                             key={wizardKey}
                             dict={dict}
-                            lang={lang}
                             variant="modal"
                             onStateChange={onStateChange}
                             onDone={finish}

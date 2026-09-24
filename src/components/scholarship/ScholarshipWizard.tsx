@@ -21,13 +21,13 @@ import FamilyStep from "./steps/FamilyStep";
 import SiblingsStep from "./steps/SiblingsStep";
 import ContactStep from "./steps/ContactStep";
 import ReviewStep from "./steps/ReviewStep";
+import type { CaptchaValue } from "./MathCaptcha";
 import type { ScholarshipDict, StepProps } from "./types";
 
 export type WizardStatus = "idle" | "submitting" | "success";
 
 type Props = {
     dict: ScholarshipDict;
-    lang: string;
     /** modal: gövde kendi içinde kayar · page: sayfa akışında, alt çubuk yapışkan. */
     variant: "modal" | "page";
     /** Kapatma kararları için (modal) güncel durum bildirimi. */
@@ -40,11 +40,6 @@ type Props = {
 
 // Hassas veri: taslak yalnızca sessionStorage'da (sekme kapanınca silinir) tutulur.
 const DRAFT_KEY = "bgts-scholarship-draft";
-// Cloudflare test anahtarı her zaman geçer — yalnızca geliştirmede yedek olarak kullanılır.
-const SITE_KEY =
-    process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ||
-    (process.env.NODE_ENV !== "production" ? "1x00000000000000000000AA" : "");
-
 const STEPS: ComponentType<StepProps>[] = [PersonalStep, EducationStep, FamilyStep, SiblingsStep, ContactStep];
 const REVIEW_STEP = STEP_COUNT - 1;
 const EMPTY_JSON = JSON.stringify(EMPTY_SCHOLARSHIP);
@@ -72,7 +67,7 @@ function writeDraft(draft: Draft | null) {
     }
 }
 
-export default function ScholarshipWizard({ dict, lang, variant, onStateChange, onDone, doneHref, doneLabel }: Props) {
+export default function ScholarshipWizard({ dict, variant, onStateChange, onDone, doneHref, doneLabel }: Props) {
     const reduce = useReducedMotion();
     const isModal = variant === "modal";
     const [initial] = useState(readDraft);
@@ -82,8 +77,8 @@ export default function ScholarshipWizard({ dict, lang, variant, onStateChange, 
     const [direction, setDirection] = useState(1);
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [shake, setShake] = useState(0);
-    const [token, setToken] = useState<string | null>(null);
-    const [turnstileKey, setTurnstileKey] = useState(0);
+    const [captcha, setCaptcha] = useState<CaptchaValue>(null);
+    const [captchaKey, setCaptchaKey] = useState(0);
     const [status, setStatus] = useState<WizardStatus>("idle");
     const [sendError, setSendError] = useState<string | null>(null);
 
@@ -199,8 +194,8 @@ export default function ScholarshipWizard({ dict, lang, variant, onStateChange, 
     const submit = async () => {
         const result = validateScholarship(data);
         if (!result.success) return showServerErrors(result.errors);
-        if (!token) {
-            setSendError(dict.errors.turnstile);
+        if (!captcha) {
+            setSendError(dict.errors.captcha);
             return;
         }
 
@@ -210,7 +205,12 @@ export default function ScholarshipWizard({ dict, lang, variant, onStateChange, 
             const res = await fetch("/api/scholarship", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ data, turnstileToken: token, website: honeypotRef.current?.value ?? "" }),
+                body: JSON.stringify({
+                    data,
+                    captchaToken: captcha.token,
+                    captchaAnswer: captcha.answer,
+                    website: honeypotRef.current?.value ?? "",
+                }),
             });
             if (res.ok) {
                 writeDraft(null);
@@ -220,16 +220,16 @@ export default function ScholarshipWizard({ dict, lang, variant, onStateChange, 
             }
             const body = (await res.json().catch(() => ({}))) as { code?: string; errors?: Record<string, string> };
             if (res.status === 429) setSendError(dict.errors.rateLimit);
-            else if (body.code === "turnstile") setSendError(dict.errors.turnstile);
+            else if (body.code === "captcha") setSendError(dict.errors.captcha);
             else if (body.errors && Object.keys(body.errors).length) showServerErrors(body.errors);
             else setSendError(dict.errors.send);
         } catch {
             setSendError(dict.errors.send);
         }
-        // Turnstile token'ı tek kullanımlıktır; her denemeden sonra widget yenilenir.
+        // Güvenlik sorusu tek kullanımlıktır; her denemeden sonra yeni soru alınır.
         setStatus("idle");
-        setToken(null);
-        setTurnstileKey((k) => k + 1);
+        setCaptcha(null);
+        setCaptchaKey((k) => k + 1);
     };
 
     /* ── Animasyonlar ── */
@@ -242,7 +242,7 @@ export default function ScholarshipWizard({ dict, lang, variant, onStateChange, 
     const stepProps: StepProps = { data, update, err, dict };
     const StepComponent = STEPS[step];
     const isReview = step === REVIEW_STEP;
-    const canSubmit = data.kvkkRead && data.consent && !!token && status === "idle";
+    const canSubmit = data.kvkkRead && data.consent && !!captcha && status === "idle";
     const stepLabel = dict.stepOf.replace("{current}", String(step + 1)).replace("{total}", String(STEP_COUNT));
 
     if (status === "success") {
@@ -301,12 +301,10 @@ export default function ScholarshipWizard({ dict, lang, variant, onStateChange, 
                                 </div>
                                 {isReview ? (
                                     <ReviewStep
-                                        key={turnstileKey}
+                                        key={captchaKey}
                                         {...stepProps}
-                                        lang={lang}
-                                        siteKey={SITE_KEY}
                                         onEdit={goTo}
-                                        onToken={setToken}
+                                        onCaptcha={setCaptcha}
                                     />
                                 ) : (
                                     <StepComponent {...stepProps} />

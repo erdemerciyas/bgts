@@ -3853,7 +3853,7 @@
       "invalidNumber": "Yalnızca rakam girin.",
       "invalidCount": "Kardeş sayısı 2 ile 11 arasında olmalıdır.",
       "mustAccept": "Devam etmek için onaylamanız gerekir.",
-      "turnstile": "Lütfen güvenlik doğrulamasını tamamlayın.",
+      "captcha": "Güvenlik sorusunun cevabı hatalı veya süresi dolmuş. Lütfen yeni soruyu cevaplayın.",
       "send": "Başvuru gönderilemedi. Lütfen daha sonra tekrar deneyin.",
       "rateLimit": "Çok fazla deneme yapıldı. Lütfen bir dakika sonra tekrar deneyin."
     },
@@ -3866,7 +3866,10 @@
       "kvkkRead": "Aydınlatma Metni'ni okudum ve anladım.",
       "consentTitle": "Açık Rıza Beyanı",
       "consentLabel": "Açık Rıza Beyanı'nı okudum; kişisel verilerimin ve aile gelir bilgilerimin burs değerlendirmesi amacıyla işlenmesine açık rıza veriyorum.",
-      "verify": "Güvenlik doğrulaması",
+      "verify": "Güvenlik sorusu: işlemin sonucunu yazın",
+      "captchaPlaceholder": "Cevap",
+      "captchaRefresh": "Yeni soru",
+      "captchaLoadError": "Soru yüklenemedi",
       "kvkkText":[
         "Veri Sorumlusu: 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") uyarınca, kişisel verileriniz veri sorumlusu sıfatıyla BGTS – Business & Global Technology Solutions (\"BGTS\") (Adres: Maslak Mahallesi, Büyükdere Caddesi No:128, 34398 Sarıyer/İstanbul · Telefon: 444 3330 · E-posta: info@bgts.com.tr) tarafından aşağıda açıklanan kapsamda işlenecektir.",
         "İşlenen Kişisel Veriler: Kimlik (ad, soyad, doğum yeri ve tarihi, cinsiyet, medeni hal, uyruk, anne ve baba adı), eğitim (üniversite, fakülte, bölüm, sınıf, üniversiteye giriş tarihi, hazırlık durumu, not ortalaması, mezun olunan lise), aile ve gelir (ebeveynlerin hayatta olup olmadığı, meslekleri ve net gelirleri, ailede çalışan kişi sayısı, diğer gelirler, toplam aile geliri, konut durumu ve kira tutarı), kardeş bilgileri (ad soyad, yaş, okul, iş ve medeni durum) ile iletişim (ev adresi, telefon, veli telefonu, e-posta) verileriniz. Formda özel nitelikli kişisel veri (sağlık, din, etnik köken vb.) talep edilmez; lütfen bu tür bilgi paylaşmayınız.",
@@ -3874,12 +3877,12 @@
         "Aile Bireylerine Ait Veriler: Formda anne, baba, kardeşler ve veliniz gibi üçüncü kişilere ait bilgiler de yer almaktadır. Bu bilgileri paylaşmadan önce ilgili kişileri bu Aydınlatma Metni hakkında bilgilendirmeniz gerekmektedir.",
         "İşleme Amaçları: Burs başvurunuzun alınması ve kayda geçirilmesi, burs kriterlerine uygunluğunuzun ve ekonomik durumunuzun değerlendirilmesi, başvuru sonucunun size bildirilmesi, burs sürecine ilişkin sizinle ve velinizle iletişim kurulması ile form güvenliğinin sağlanması ve kötüye kullanımın önlenmesi.",
         "Toplama Yöntemi ve Hukuki Sebepler: Verileriniz bu internet sitesindeki çevrim içi burs başvuru formu aracılığıyla elektronik ortamda toplanır. Verileriniz KVKK md. 5/2(c) uyarınca burs ilişkisinin kurulmasıyla doğrudan ilgili olması, md. 5/2(f) uyarınca form güvenliğinin sağlanmasına yönelik meşru menfaatimiz ve aile gelir bilgileriniz ile yurt dışına aktarım bakımından md. 5/1 uyarınca açık rızanız hukuki sebeplerine dayanılarak işlenir.",
-        "Aktarım: Verileriniz yasal zorunluluklar kapsamında yetkili kamu kurum ve kuruluşları dışında üçüncü kişilerle paylaşılmaz. Ancak başvuru formunun çalışabilmesi için hizmet aldığımız ve sunucuları yurt dışında bulunan tedarikçiler kullanılmaktadır: internet sitesinin barındırıldığı Vercel Inc. (ABD), başvurunun BGTS'ye e-posta olarak iletildiği Google LLC (Gmail, ABD) ve robot doğrulaması için Cloudflare, Inc. (Cloudflare Turnstile; yalnızca IP adresi ve tarayıcı bilgileri). Bu aktarımlar KVKK md. 9 hükümlerine uygun olarak gerçekleştirilir.",
+        "Aktarım: Verileriniz yasal zorunluluklar kapsamında yetkili kamu kurum ve kuruluşları dışında üçüncü kişilerle paylaşılmaz. Ancak başvuru formunun çalışabilmesi için hizmet aldığımız ve sunucuları yurt dışında bulunan tedarikçiler kullanılmaktadır: internet sitesinin barındırıldığı Vercel Inc. (ABD) ve başvurunun BGTS'ye e-posta olarak iletildiği Google LLC (Gmail, ABD). Bu aktarımlar KVKK md. 9 hükümlerine uygun olarak gerçekleştirilir.",
         "Saklama Süresi: Başvurunuz, değerlendirme süreci boyunca ve sonuçlanmasından itibaren en fazla 2 (iki) yıl süreyle saklanır; süre sonunda silinir, yok edilir veya anonim hale getirilir. Burs almaya hak kazanmanız halinde verileriniz, burs süresi ve ilgili mevzuatta öngörülen süreler boyunca saklanabilir.",
         "Haklarınız: KVKK md. 11 uyarınca; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, KVKK md. 7 çerçevesinde silinmesini veya yok edilmesini isteme, bu işlemlerin aktarıldığı üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve kanuna aykırı işleme sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme haklarına sahipsiniz.",
         "Başvuru Yöntemi: Haklarınıza ilişkin taleplerinizi, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun olarak kimliğinizi tespit edici bilgilerle birlikte yazılı olarak Maslak Mahallesi, Büyükdere Caddesi No:128, 34398 Sarıyer/İstanbul adresine iletebilir veya sistemimizde kayıtlı e-posta adresinizden info@bgts.com.tr adresine gönderebilirsiniz. Başvurunuz en geç 30 (otuz) gün içinde ücretsiz olarak sonuçlandırılır."
       ],
-      "consentText":"BGTS – Business & Global Technology Solutions tarafından sunulan Aydınlatma Metni'ni okudum ve anladım. Burs başvurum kapsamında paylaştığım kimlik, eğitim, iletişim, aile ve gelir bilgilerimin başvurumun değerlendirilmesi ve sonucun bildirilmesi amacıyla işlenmesine; başvurunun Google LLC (Gmail) e-posta altyapısı üzerinden iletilmesi, sitenin Vercel Inc. altyapısında barındırılması ve Cloudflare, Inc. robot doğrulama hizmetinin kullanılması nedeniyle bu verilerin yurt dışında (ABD) bulunan sunuculara aktarılmasına ve Aydınlatma Metni'nde belirtilen süre boyunca saklanmasına özgür irademle açık rıza veriyorum. Rızamı dilediğim zaman info@bgts.com.tr adresine başvurarak geri alabileceğimi biliyorum."
+      "consentText":"BGTS – Business & Global Technology Solutions tarafından sunulan Aydınlatma Metni'ni okudum ve anladım. Burs başvurum kapsamında paylaştığım kimlik, eğitim, iletişim, aile ve gelir bilgilerimin başvurumun değerlendirilmesi ve sonucun bildirilmesi amacıyla işlenmesine; başvurunun Google LLC (Gmail) e-posta altyapısı üzerinden iletilmesi ve sitenin Vercel Inc. altyapısında barındırılması nedeniyle bu verilerin yurt dışında (ABD) bulunan sunuculara aktarılmasına ve Aydınlatma Metni'nde belirtilen süre boyunca saklanmasına özgür irademle açık rıza veriyorum. Rızamı dilediğim zaman info@bgts.com.tr adresine başvurarak geri alabileceğimi biliyorum."
     },
     "exit": {
       "title": "Formu kapatmak istediğinize emin misiniz?",

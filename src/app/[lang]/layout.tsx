@@ -142,7 +142,7 @@ export default async function RootLayout(props: {
           {children}
         </SiteChrome>
         <CookieConsent dict={dict.cookies} />
-        <ScholarshipWidget dict={dict.scholarship} lang={params.lang} />
+        <ScholarshipWidget dict={dict.scholarship} />
         <GoogleAnalytics />
         <Suspense fallback={null}>
           <GoogleAnalyticsPageView />
