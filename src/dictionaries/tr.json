@@ -3688,7 +3688,6 @@
     "viewOnLinkedIn": "LinkedIn'de Görüntüle"
   },
   "scholarship": {
-    "button": "Burs Başvuru",
     "page": {
       "eyebrow": "BGTS Burs Programı",
       "title": "Geleceğinize",
@@ -3716,7 +3715,6 @@
     "back": "Geri",
     "submit": "Başvuruyu Gönder",
     "submitting": "Gönderiliyor...",
-    "close": "Kapat",
     "edit": "Düzenle",
     "optional": "opsiyonel",
     "empty": "—",
@@ -3904,16 +3902,9 @@
       ],
       "consentText":"BGTS – Business & Global Technology Solutions tarafından sunulan Aydınlatma Metni'ni okudum ve anladım. Burs başvurum kapsamında paylaştığım kimlik, eğitim, iletişim, aile ve gelir bilgilerimin başvurumun değerlendirilmesi ve sonucun bildirilmesi amacıyla işlenmesine; başvurunun Google LLC (Gmail) e-posta altyapısı üzerinden iletilmesi ve sitenin Vercel Inc. altyapısında barındırılması nedeniyle bu verilerin yurt dışında (ABD) bulunan sunuculara aktarılmasına ve Aydınlatma Metni'nde belirtilen süre boyunca saklanmasına özgür irademle açık rıza veriyorum. Rızamı dilediğim zaman info@bgts.com.tr adresine başvurarak geri alabileceğimi biliyorum."
     },
-    "exit": {
-      "title": "Formu kapatmak istediğinize emin misiniz?",
-      "message": "Girdiğiniz bilgiler bu tarayıcı sekmesi açık kaldığı sürece saklanır; daha sonra kaldığınız yerden devam edebilirsiniz.",
-      "stay": "Forma Dön",
-      "leave": "Kapat"
-    },
     "success": {
       "title": "Başvurunuz alındı!",
       "message": "Teşekkür ederiz. Başvurunuz değerlendirme ekibimize iletildi; sonuç hakkında size e-posta veya telefon ile ulaşacağız.",
-      "close": "Kapat",
       "home": "Ana Sayfaya Dön"
     }
   }

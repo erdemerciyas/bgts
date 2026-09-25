@@ -50,6 +50,38 @@ if (typeof globalThis !== 'undefined') {
   }, 60_000);
 }
 
+// === BURS YÖNETİMİ — HTTP Basic Auth ===
+const ADMIN_PATHS = ['/burs-yonetim', '/api/scholarship/export'];
+
+function isAdminPath(pathname: string): boolean {
+  return ADMIN_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
+}
+
+function safeEqual(a: string, b: string): boolean {
+  let diff = a.length ^ b.length;
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    diff |= (a.charCodeAt(i) || 0) ^ (b.charCodeAt(i) || 0);
+  }
+  return diff === 0;
+}
+
+function isAdminAuthorized(request: NextRequest): boolean {
+  const user = process.env.SCHOLARSHIP_ADMIN_USER;
+  const password = process.env.SCHOLARSHIP_ADMIN_PASSWORD;
+  if (!user || !password) return false;
+
+  const header = request.headers.get('authorization') ?? '';
+  if (!header.startsWith('Basic ')) return false;
+  try {
+    const decoded = new TextDecoder().decode(Uint8Array.from(atob(header.slice(6)), (c) => c.charCodeAt(0)));
+    const sep = decoded.indexOf(':');
+    if (sep < 0) return false;
+    return safeEqual(decoded.slice(0, sep), user) && safeEqual(decoded.slice(sep + 1), password);
+  } catch {
+    return false;
+  }
+}
+
 // === I18N LOCALE — her zaman varsayılan dil (tr) kullan, tarayıcı diline bakma ===
 
 function nextWithPathname(request: NextRequest, pathname: string): NextResponse {
@@ -74,6 +106,17 @@ function rewriteWithPathname(
 
 export function middleware(request: NextRequest) {
   const pathname = stripBasePath(request.nextUrl.pathname);
+
+  // 0. Burs yönetimi: yetkisizse 401, yetkiliyse locale yönlendirmesi yapmadan geçir
+  if (isAdminPath(pathname)) {
+    if (!isAdminAuthorized(request)) {
+      return new NextResponse('Yetkisiz erişim.', {
+        status: 401,
+        headers: { 'WWW-Authenticate': 'Basic realm="BGTS Burs", charset="UTF-8"', 'Cache-Control': 'no-store' },
+      });
+    }
+    return NextResponse.next();
+  }
 
   // 1. API Rotaları için Rate Limiting Kontrolü
   if (pathname.startsWith('/api/') && request.method === 'POST') {

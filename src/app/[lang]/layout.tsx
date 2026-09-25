@@ -10,7 +10,6 @@ import { OrganizationStructuredData, WebSiteStructuredData, LocalBusinessStructu
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { GoogleAnalyticsPageView } from "@/components/analytics/GoogleAnalyticsPageView";
 import CookieConsent from "@/components/cookies/CookieConsent";
-import ScholarshipWidget from "@/components/scholarship/ScholarshipWidget";
 import { buildAlternates, buildOgUrl, ogLocale, SITE_URL } from "@/lib/seo";
 import { getDictionary } from "@/get-dictionary";
 import { htmlLang, i18n, type Locale } from "@/i18n-config";
@@ -142,7 +141,6 @@ export default async function RootLayout(props: {
           {children}
         </SiteChrome>
         <CookieConsent dict={dict.cookies} />
-        <ScholarshipWidget dict={dict.scholarship} />
         <GoogleAnalytics />
         <Suspense fallback={null}>
           <GoogleAnalyticsPageView />

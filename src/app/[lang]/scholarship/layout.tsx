@@ -21,6 +21,8 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // Form yalnızca özel link ile paylaşılır; arama motorlarında listelenmez.
+    robots: { index: false, follow: false },
     alternates: buildAlternates(PATH, locale),
     openGraph: {
       title,

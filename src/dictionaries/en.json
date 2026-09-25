@@ -3657,7 +3657,6 @@
     "viewOnLinkedIn": "View on LinkedIn"
   },
   "scholarship": {
-    "button": "Scholarship Application",
     "page": {
       "eyebrow": "BGTS Scholarship Program",
       "title": "Let's invest in",
@@ -3685,7 +3684,6 @@
     "back": "Back",
     "submit": "Submit Application",
     "submitting": "Submitting...",
-    "close": "Close",
     "edit": "Edit",
     "optional": "optional",
     "empty": "—",
@@ -3853,16 +3851,9 @@
       ],
       "consentText":"I have read and understood the Privacy Notice provided by BGTS – Business & Global Technology Solutions. I freely give my explicit consent to the processing of the identity, education, contact, family and income information I share in my scholarship application for the purpose of evaluating my application and informing me of the result; to the transfer of this data to servers located abroad (USA) because the application is delivered via Google LLC (Gmail) email infrastructure and the website is hosted on Vercel Inc. infrastructure; and to its retention for the period stated in the Privacy Notice. I understand that I may withdraw my consent at any time by contacting info@bgts.com.tr."
     },
-    "exit": {
-      "title": "Are you sure you want to close the form?",
-      "message": "Your entries are kept while this browser tab stays open, so you can continue where you left off.",
-      "stay": "Back to Form",
-      "leave": "Close"
-    },
     "success": {
       "title": "Application received!",
       "message": "Thank you. Your application has been forwarded to our evaluation team; we will contact you by email or phone about the result.",
-      "close": "Close",
       "home": "Back to Home"
     }
   }

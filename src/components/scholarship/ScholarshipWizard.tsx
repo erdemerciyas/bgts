@@ -12,7 +12,6 @@ import {
     validateStep,
     type ScholarshipData,
 } from "@/lib/scholarship/schema";
-import { cn } from "@/lib/utils";
 import { ShakeContext } from "./fields";
 import WizardStepper from "./WizardStepper";
 import PersonalStep from "./steps/PersonalStep";
@@ -24,18 +23,13 @@ import ReviewStep from "./steps/ReviewStep";
 import type { CaptchaValue } from "./MathCaptcha";
 import type { ScholarshipDict, StepProps } from "./types";
 
-export type WizardStatus = "idle" | "submitting" | "success";
+type WizardStatus = "idle" | "submitting" | "success";
 
 type Props = {
     dict: ScholarshipDict;
-    /** modal: gövde kendi içinde kayar · page: sayfa akışında, alt çubuk yapışkan. */
-    variant: "modal" | "page";
-    /** Kapatma kararları için (modal) güncel durum bildirimi. */
-    onStateChange?: (state: { dirty: boolean; status: WizardStatus }) => void;
-    /** Başarı ekranındaki buton: callback (modal) veya bağlantı (sayfa). */
-    onDone?: () => void;
-    doneHref?: string;
-    doneLabel?: string;
+    /** Başarı ekranındaki bağlantı. */
+    doneHref: string;
+    doneLabel: string;
 };
 
 // Hassas veri: taslak yalnızca sessionStorage'da (sekme kapanınca silinir) tutulur.
@@ -67,9 +61,8 @@ function writeDraft(draft: Draft | null) {
     }
 }
 
-export default function ScholarshipWizard({ dict, variant, onStateChange, onDone, doneHref, doneLabel }: Props) {
+export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) {
     const reduce = useReducedMotion();
-    const isModal = variant === "modal";
     const [initial] = useState(readDraft);
     const [data, setData] = useState<ScholarshipData>(initial?.data ?? EMPTY_SCHOLARSHIP);
     const [step, setStep] = useState(initial?.step ?? 0);
@@ -88,10 +81,6 @@ export default function ScholarshipWizard({ dict, variant, onStateChange, onDone
     const pendingFocus = useRef(false);
 
     const dirty = useMemo(() => JSON.stringify(data) !== EMPTY_JSON, [data]);
-
-    useEffect(() => {
-        onStateChange?.({ dirty, status });
-    }, [dirty, status, onStateChange]);
 
     /* ── Taslak ── */
     useEffect(() => {
@@ -149,14 +138,10 @@ export default function ScholarshipWizard({ dict, variant, onStateChange, onDone
     }, [shake, focusFirstError]);
 
     const scrollToTop = useCallback(() => {
-        if (isModal) {
-            bodyRef.current?.scrollTo({ top: 0 });
-            return;
-        }
         const top = rootRef.current?.getBoundingClientRect().top ?? 0;
         // Kartın üstü sabit header'ın (~80px) altında kalıyorsa, 112px pay bırakarak yukarı kaydırılır.
         if (top < 112) window.scrollTo({ top: window.scrollY + top - 112, behavior: reduce ? "auto" : "smooth" });
-    }, [isModal, reduce]);
+    }, [reduce]);
 
     const goTo = useCallback(
         (target: number) => {
@@ -247,22 +232,19 @@ export default function ScholarshipWizard({ dict, variant, onStateChange, onDone
 
     if (status === "success") {
         return (
-            <div ref={rootRef} className={cn(isModal && "flex flex-1 flex-col")}>
-                <SuccessView dict={dict} reduce={!!reduce} onDone={onDone} doneHref={doneHref} doneLabel={doneLabel} />
+            <div ref={rootRef}>
+                <SuccessView dict={dict} reduce={!!reduce} doneHref={doneHref} doneLabel={doneLabel} />
             </div>
         );
     }
 
     return (
-        <div ref={rootRef} className={cn("flex flex-col", isModal && "min-h-0 flex-1")}>
+        <div ref={rootRef} className="flex flex-col">
             <WizardStepper steps={dict.steps} current={step} maxStep={maxStep} label={stepLabel} onJump={jump} />
 
             <div
                 ref={bodyRef}
-                className={cn(
-                    "relative overflow-x-hidden px-5 py-6 sm:px-8",
-                    isModal && "flex-1 overflow-y-auto overscroll-contain"
-                )}
+                className="relative overflow-x-hidden px-5 py-6 sm:px-8"
             >
                 <form
                     noValidate
@@ -271,7 +253,7 @@ export default function ScholarshipWizard({ dict, variant, onStateChange, onDone
                         if (isReview) void submit();
                         else next();
                     }}
-                    id={`sch-form-${variant}`}
+                    id="sch-form"
                 >
                     {/* Honeypot — kullanıcılara görünmez */}
                     <input
@@ -316,14 +298,7 @@ export default function ScholarshipWizard({ dict, variant, onStateChange, onDone
             </div>
 
             {/* Alt çubuk */}
-            <footer
-                className={cn(
-                    "shrink-0 border-t border-slate-100 bg-white px-5 py-4 sm:px-8",
-                    isModal
-                        ? "pb-[max(1rem,env(safe-area-inset-bottom))]"
-                        : "sticky bottom-0 z-10 rounded-b-3xl bg-white/95 backdrop-blur"
-                )}
-            >
+            <footer className="sticky bottom-0 z-10 shrink-0 rounded-b-3xl border-t border-slate-100 bg-white/95 px-5 py-4 backdrop-blur sm:px-8">
                 <AnimatePresence>
                     {sendError && (
                         <motion.p
@@ -349,7 +324,7 @@ export default function ScholarshipWizard({ dict, variant, onStateChange, onDone
                     </button>
                     <button
                         type="submit"
-                        form={`sch-form-${variant}`}
+                        form="sch-form"
                         disabled={isReview && !canSubmit}
                         className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:from-blue-700 hover:to-blue-800 hover:shadow-blue-500/30 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:ring-offset-2"
                     >
@@ -379,8 +354,8 @@ export default function ScholarshipWizard({ dict, variant, onStateChange, onDone
 }
 
 function SuccessView({
-    dict, reduce, onDone, doneHref, doneLabel,
-}: { dict: ScholarshipDict; reduce: boolean; onDone?: () => void; doneHref?: string; doneLabel?: string }) {
+    dict, reduce, doneHref, doneLabel,
+}: { dict: ScholarshipDict; reduce: boolean; doneHref: string; doneLabel: string }) {
     const draw = (delay: number) => ({
         initial: { pathLength: reduce ? 1 : 0, opacity: reduce ? 0 : 1 },
         animate: { pathLength: 1, opacity: 1 },
@@ -390,7 +365,7 @@ function SuccessView({
         "mt-8 inline-block rounded-xl bg-[#0056A7] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/20 hover:bg-[#004a90] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:ring-offset-2";
 
     return (
-        <div role="status" className="flex flex-1 flex-col items-center justify-center px-6 py-14 text-center">
+        <div role="status" className="flex flex-col items-center justify-center px-6 py-14 text-center">
             <svg viewBox="0 0 96 96" className="h-24 w-24" aria-hidden>
                 <motion.circle cx="48" cy="48" r="42" fill="none" stroke="#dbeafe" strokeWidth="6" {...draw(0)} />
                 <motion.circle
@@ -410,15 +385,9 @@ function SuccessView({
             >
                 <h3 className="mt-6 text-xl font-bold text-slate-900">{dict.success.title}</h3>
                 <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-slate-600">{dict.success.message}</p>
-                {onDone ? (
-                    <button type="button" onClick={onDone} className={buttonClass}>
-                        {doneLabel ?? dict.success.close}
-                    </button>
-                ) : doneHref ? (
-                    <Link href={doneHref} className={buttonClass}>
-                        {doneLabel ?? dict.success.close}
-                    </Link>
-                ) : null}
+                <Link href={doneHref} className={buttonClass}>
+                    {doneLabel}
+                </Link>
             </motion.div>
         </div>
     );
