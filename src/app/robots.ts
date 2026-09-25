@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/burs-yonetim"],
+      disallow: ["/api/", "/burs-yonetim", "/tr/burs-yonetim", "/tr/en/burs-yonetim"],
     },
     sitemap: `${SITE_URL}${basePath}/sitemap.xml`,
   }

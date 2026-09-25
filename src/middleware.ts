@@ -51,10 +51,15 @@ if (typeof globalThis !== 'undefined') {
 }
 
 // === BURS YÖNETİMİ — HTTP Basic Auth ===
-const ADMIN_PATHS = ['/burs-yonetim', '/api/scholarship/export'];
+// Panel sayfası dil önekli adreslerden (/tr/…, /tr/en/…) iç rotaya (/burs-yonetim) rewrite edilir.
+const ADMIN_PAGE = '/burs-yonetim';
+const ADMIN_PAGE_URLS = ['/tr/burs-yonetim', '/tr/en/burs-yonetim'];
+const ADMIN_PATHS = [...ADMIN_PAGE_URLS, '/api/scholarship/export'];
+
+const matchesPath = (pathname: string, p: string) => pathname === p || pathname.startsWith(`${p}/`);
 
 function isAdminPath(pathname: string): boolean {
-  return ADMIN_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
+  return ADMIN_PATHS.some((p) => matchesPath(pathname, p));
 }
 
 function safeEqual(a: string, b: string): boolean {
@@ -108,12 +113,23 @@ export function middleware(request: NextRequest) {
   const pathname = stripBasePath(request.nextUrl.pathname);
 
   // 0. Burs yönetimi: yetkisizse 401, yetkiliyse locale yönlendirmesi yapmadan geçir
+  if (matchesPath(pathname, ADMIN_PAGE)) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = withBasePath(`/tr${pathname}`);
+    return NextResponse.redirect(redirectUrl, 308);
+  }
   if (isAdminPath(pathname)) {
     if (!isAdminAuthorized(request)) {
       return new NextResponse('Yetkisiz erişim.', {
         status: 401,
         headers: { 'WWW-Authenticate': 'Basic realm="BGTS Burs", charset="UTF-8"', 'Cache-Control': 'no-store' },
       });
+    }
+    const pageUrl = ADMIN_PAGE_URLS.find((p) => matchesPath(pathname, p));
+    if (pageUrl) {
+      const rewriteUrl = request.nextUrl.clone();
+      rewriteUrl.pathname = withBasePath(ADMIN_PAGE + pathname.slice(pageUrl.length));
+      return NextResponse.rewrite(rewriteUrl);
     }
     return NextResponse.next();
   }
