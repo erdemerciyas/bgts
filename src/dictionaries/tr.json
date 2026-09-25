@@ -3851,7 +3851,6 @@
       "invalidNumber": "Yalnızca rakam girin.",
       "invalidCount": "Kardeş sayısı 2 ile 11 arasında olmalıdır.",
       "mustAccept": "Devam etmek için onaylamanız gerekir.",
-      "captcha": "Güvenlik sorusunun cevabı hatalı veya süresi dolmuş. Lütfen yeni soruyu cevaplayın.",
       "send": "Başvuru gönderilemedi. Lütfen daha sonra tekrar deneyin.",
       "rateLimit": "Çok fazla deneme yapıldı. Lütfen bir dakika sonra tekrar deneyin."
     },
@@ -3864,10 +3863,6 @@
       "kvkkRead": "Aydınlatma Metni'ni okudum ve anladım.",
       "consentTitle": "Açık Rıza Beyanı",
       "consentLabel": "Açık Rıza Beyanı'nı okudum; kişisel verilerimin ve aile gelir bilgilerimin burs değerlendirmesi amacıyla işlenmesine açık rıza veriyorum.",
-      "verify": "Güvenlik sorusu: işlemin sonucunu yazın",
-      "captchaPlaceholder": "Cevap",
-      "captchaRefresh": "Yeni soru",
-      "captchaLoadError": "Soru yüklenemedi",
       "kvkkText": [
         "BGTS Teknoloji ve Yazılım A.Ş. – Business & Global Technology Solutions (\"BGTS\") (Adres: Reşitpaşa Mah. Katar Cad. İTÜ ARI Teknokent Arı 3 Binası Blok No: 4 İç Kapı No: B303 Sarıyer / İstanbul · Telefon: 444 3330 · E-posta: info@bgts.com.tr) olarak, burs başvurularınızda verilerinizi veri sorumlusu sıfatıyla 6698 sayılı Kişisel Verilerin Korunması Kanunu ve İş Mevzuatı başta olmak üzere, yürürlükte bulunan ilgili mevzuat hükümlerine uygun olarak ve aşağıda açıklanan kapsamda işliyoruz.",
         "1. Hangi Kişisel Verilerinizi Topluyoruz ve İşliyoruz?",

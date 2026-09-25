@@ -20,7 +20,6 @@ import FamilyStep from "./steps/FamilyStep";
 import SiblingsStep from "./steps/SiblingsStep";
 import ContactStep from "./steps/ContactStep";
 import ReviewStep from "./steps/ReviewStep";
-import type { CaptchaValue } from "./MathCaptcha";
 import type { ScholarshipDict, StepProps } from "./types";
 
 type WizardStatus = "idle" | "submitting" | "success";
@@ -70,8 +69,6 @@ export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) 
     const [direction, setDirection] = useState(1);
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [shake, setShake] = useState(0);
-    const [captcha, setCaptcha] = useState<CaptchaValue>(null);
-    const [captchaKey, setCaptchaKey] = useState(0);
     const [status, setStatus] = useState<WizardStatus>("idle");
     const [sendError, setSendError] = useState<string | null>(null);
 
@@ -179,10 +176,6 @@ export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) 
     const submit = async () => {
         const result = validateScholarship(data);
         if (!result.success) return showServerErrors(result.errors);
-        if (!captcha) {
-            setSendError(dict.errors.captcha);
-            return;
-        }
 
         setStatus("submitting");
         setSendError(null);
@@ -192,8 +185,6 @@ export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) 
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     data,
-                    captchaToken: captcha.token,
-                    captchaAnswer: captcha.answer,
                     website: honeypotRef.current?.value ?? "",
                 }),
             });
@@ -205,16 +196,12 @@ export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) 
             }
             const body = (await res.json().catch(() => ({}))) as { code?: string; errors?: Record<string, string> };
             if (res.status === 429) setSendError(dict.errors.rateLimit);
-            else if (body.code === "captcha") setSendError(dict.errors.captcha);
             else if (body.errors && Object.keys(body.errors).length) showServerErrors(body.errors);
             else setSendError(dict.errors.send);
         } catch {
             setSendError(dict.errors.send);
         }
-        // Güvenlik sorusu tek kullanımlıktır; her denemeden sonra yeni soru alınır.
         setStatus("idle");
-        setCaptcha(null);
-        setCaptchaKey((k) => k + 1);
     };
 
     /* ── Animasyonlar ── */
@@ -227,7 +214,7 @@ export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) 
     const stepProps: StepProps = { data, update, err, dict };
     const StepComponent = STEPS[step];
     const isReview = step === REVIEW_STEP;
-    const canSubmit = data.kvkkRead && data.consent && !!captcha && status === "idle";
+    const canSubmit = data.kvkkRead && data.consent && status === "idle";
     const stepLabel = dict.stepOf.replace("{current}", String(step + 1)).replace("{total}", String(STEP_COUNT));
 
     if (status === "success") {
@@ -282,12 +269,7 @@ export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) 
                                     <p className="mt-0.5 text-sm text-slate-500">{dict.steps[step].description}</p>
                                 </div>
                                 {isReview ? (
-                                    <ReviewStep
-                                        key={captchaKey}
-                                        {...stepProps}
-                                        onEdit={goTo}
-                                        onCaptcha={setCaptcha}
-                                    />
+                                    <ReviewStep {...stepProps} onEdit={goTo} />
                                 ) : (
                                     <StepComponent {...stepProps} />
                                 )}

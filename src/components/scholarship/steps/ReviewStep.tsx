@@ -5,7 +5,6 @@ import { ChevronDown, FileText, PencilLine, ShieldCheck } from "lucide-react";
 import { normalizeScholarship, type ScholarshipData } from "@/lib/scholarship/schema";
 import { cn } from "@/lib/utils";
 import { CheckboxField, Reveal } from "../fields";
-import MathCaptcha, { type CaptchaValue } from "../MathCaptcha";
 import type { StepProps } from "../types";
 
 type Field = keyof ScholarshipData & string;
@@ -27,10 +26,9 @@ const OPTION_GROUP: Partial<Record<Field, string>> = {
 
 type Props = StepProps & {
     onEdit: (step: number) => void;
-    onCaptcha: (value: CaptchaValue) => void;
 };
 
-export default function ReviewStep({ dict, data, update, err, onEdit, onCaptcha }: Props) {
+export default function ReviewStep({ dict, data, update, err, onEdit }: Props) {
     const [showKvkk, setShowKvkk] = useState(false);
     const n = normalizeScholarship(data);
     const L = dict.labels as Record<string, string>;
@@ -141,16 +139,6 @@ export default function ReviewStep({ dict, data, update, err, onEdit, onCaptcha 
                     error={err("consent")}
                 />
             </section>
-
-            <MathCaptcha
-                labels={{
-                    question: dict.review.verify,
-                    placeholder: dict.review.captchaPlaceholder,
-                    refresh: dict.review.captchaRefresh,
-                    loadError: dict.review.captchaLoadError,
-                }}
-                onChange={onCaptcha}
-            />
         </div>
     );
 }

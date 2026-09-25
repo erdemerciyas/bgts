@@ -3,21 +3,15 @@ import { sendEmail } from "@/lib/email";
 import { normalizeScholarship, validateScholarship } from "@/lib/scholarship/schema";
 import { buildConfirmationEmail, scholarshipReference } from "@/lib/scholarship/email-template";
 import { EMAIL_LOGO_CID, EMAIL_LOGO_PNG_BASE64 } from "@/lib/scholarship/email-logo";
-import { verifyChallenge } from "@/lib/scholarship/captcha";
 import { insertApplication } from "@/lib/scholarship/db";
 
 export async function POST(req: Request) {
     try {
-        const body = (await req.json()) as { data?: unknown; captchaToken?: unknown; captchaAnswer?: unknown; website?: unknown };
+        const body = (await req.json()) as { data?: unknown; website?: unknown };
 
         // Honeypot: bot'a başarılı gibi görün, kayıt yapma.
         if (typeof body.website === "string" && body.website.trim() !== "") {
             return NextResponse.json({ message: "Başvuru alındı." });
-        }
-
-        // Matematik güvenlik sorusu (imzalı, süreli, tek kullanımlık)
-        if (!verifyChallenge(body.captchaToken, body.captchaAnswer)) {
-            return NextResponse.json({ message: "Güvenlik sorusu yanlış veya süresi dolmuş.", code: "captcha" }, { status: 400 });
         }
 
         const result = validateScholarship(body.data);

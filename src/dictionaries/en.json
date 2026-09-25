@@ -3820,7 +3820,6 @@
       "invalidNumber": "Digits only.",
       "invalidCount": "Number of siblings must be between 2 and 11.",
       "mustAccept": "You must confirm to continue.",
-      "captcha": "The security answer is incorrect or has expired. Please answer the new question.",
       "send": "Your application could not be sent. Please try again later.",
       "rateLimit": "Too many attempts. Please try again in a minute."
     },
@@ -3833,10 +3832,6 @@
       "kvkkRead": "I have read and understood the Privacy Notice.",
       "consentTitle": "Explicit Consent",
       "consentLabel": "I have read the Explicit Consent Statement and consent to the processing of my personal data and family income information for scholarship evaluation.",
-      "verify": "Security question: enter the result",
-      "captchaPlaceholder": "Answer",
-      "captchaRefresh": "New question",
-      "captchaLoadError": "Could not load question",
       "kvkkText":[
         "Data Controller: Under the Turkish Personal Data Protection Law No. 6698 (\"KVKK\"), your personal data will be processed by BGTS – Business & Global Technology Solutions (\"BGTS\") (Address: Maslak Mahallesi, Büyükdere Caddesi No:128, 34398 Sarıyer/Istanbul, Türkiye · Phone: 444 3330 · Email: info@bgts.com.tr) as the data controller, within the scope described below.",
         "Personal Data Processed: Identity (name, surname, place and date of birth, gender, marital status, nationality, parents' names), education (university, faculty, department, year, university entry date, preparatory year, GPA, high school), family and income (whether your parents are alive, their occupations and net income, number of working family members, other income, total family income, housing status and rent), sibling details (full name, age, school, occupation and marital status) and contact information (home address, phone, guardian's phone, email). The form does not request special-category personal data (health, religion, ethnic origin, etc.); please do not share such information.",
