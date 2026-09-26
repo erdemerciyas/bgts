@@ -94,7 +94,6 @@ export const SECTIONS: { title: string; columns: Column[] }[] = [
         title: "Onaylar",
         columns: [
             { header: "KVKK Okundu", width: 10, value: (d) => (d.kvkkRead ? "Evet" : "Hayır") },
-            { header: "Açık Rıza", width: 10, value: (d) => (d.consent ? "Evet" : "Hayır") },
         ],
     },
 ];

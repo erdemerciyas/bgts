@@ -215,7 +215,7 @@ export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) 
     const stepProps: StepProps = { data, update, err, dict };
     const StepComponent = STEPS[step];
     const isReview = step === REVIEW_STEP;
-    const canSubmit = data.kvkkRead && data.consent && status === "idle";
+    const canSubmit = data.kvkkRead && status === "idle";
     const stepLabel = dict.stepOf.replace("{current}", String(step + 1)).replace("{total}", String(STEP_COUNT));
 
     if (status === "success") {

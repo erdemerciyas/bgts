@@ -3861,8 +3861,6 @@
       "kvkkShow": "Metni oku",
       "kvkkHide": "Metni gizle",
       "kvkkRead": "Aydınlatma Metni'ni okudum ve anladım.",
-      "consentTitle": "Açık Rıza Beyanı",
-      "consentLabel": "Açık Rıza Beyanı'nı okudum; kişisel verilerimin ve aile gelir bilgilerimin burs değerlendirmesi amacıyla işlenmesine açık rıza veriyorum.",
       "kvkkText": [
         "BGTS Teknoloji ve Yazılım A.Ş. – Business & Global Technology Solutions (\"BGTS\") (Adres: Reşitpaşa Mah. Katar Cad. İTÜ ARI Teknokent Arı 3 Binası Blok No: 4 İç Kapı No: B303 Sarıyer / İstanbul · Telefon: 444 3330 · E-posta: info@bgts.com.tr) olarak, burs başvurularınızda verilerinizi veri sorumlusu sıfatıyla 6698 sayılı Kişisel Verilerin Korunması Kanunu ve İş Mevzuatı başta olmak üzere, yürürlükte bulunan ilgili mevzuat hükümlerine uygun olarak ve aşağıda açıklanan kapsamda işliyoruz.",
         "1. Hangi Kişisel Verilerinizi Topluyoruz ve İşliyoruz?",
@@ -3894,8 +3892,7 @@
         "BGTS’ye iletebilirsiniz. Talebinizin niteliğine göre en kısa sürede ve en geç otuz gün içinde başvurularınız sonuçlandırılacaktır.",
         "Aydınlatma Metninde Gerçekleşecek Değişiklikler",
         "Bu aydınlatma metni zaman zaman BGTS tarafından güncellenebilir. Aydınlatma metninde önemli bir değişiklik yaptığımız takdirde sizlere e-posta veya diğer yollarla gerekli bilgilendirmeler yapılacaktır."
-      ],
-      "consentText":"BGTS – Business & Global Technology Solutions tarafından sunulan Aydınlatma Metni'ni okudum ve anladım. Burs başvurum kapsamında paylaştığım kimlik, eğitim, iletişim, aile ve gelir bilgilerimin başvurumun değerlendirilmesi ve sonucun bildirilmesi amacıyla işlenmesine; başvurunun Google LLC (Gmail) e-posta altyapısı üzerinden iletilmesi ve sitenin Vercel Inc. altyapısında barındırılması nedeniyle bu verilerin yurt dışında (ABD) bulunan sunuculara aktarılmasına ve Aydınlatma Metni'nde belirtilen süre boyunca saklanmasına özgür irademle açık rıza veriyorum. Rızamı dilediğim zaman info@bgts.com.tr adresine başvurarak geri alabileceğimi biliyorum."
+      ]
     },
     "success": {
       "title": "Başvurunuz alındı!",

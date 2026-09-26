@@ -166,7 +166,6 @@ function refineStep5(d: Raw, add: Add) {
 /* ── Adım 6: Onaylar ── */
 const step6Shape = {
     kvkkRead: z.boolean({ message: ERR.accept }).refine((v) => v, ERR.accept),
-    consent: z.boolean({ message: ERR.accept }).refine((v) => v, ERR.accept),
 };
 
 const STEPS = [
@@ -238,7 +237,7 @@ export const EMPTY_SCHOLARSHIP = {
     housing: "", rentAmount: "",
     hasSiblings: "", siblingCount: "", siblings: [],
     address: "", phone: "", phone2: "", email: "",
-    kvkkRead: false, consent: false,
+    kvkkRead: false,
 } as unknown as ScholarshipData;
 
 export const EMPTY_SIBLING = { fullName: "", age: "", school: "", job: "", maritalStatus: "" } as unknown as Sibling;

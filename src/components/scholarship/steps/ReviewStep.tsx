@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, FileText, PencilLine, ShieldCheck } from "lucide-react";
+import { ChevronDown, FileText, PencilLine } from "lucide-react";
 import { normalizeScholarship, type ScholarshipData } from "@/lib/scholarship/schema";
 import { cn } from "@/lib/utils";
 import { CheckboxField, Reveal } from "../fields";
@@ -122,22 +122,6 @@ export default function ReviewStep({ dict, data, update, err, onEdit }: Props) {
                         error={err("kvkkRead")}
                     />
                 </div>
-            </section>
-
-            {/* Açık Rıza Beyanı */}
-            <section className="rounded-2xl border border-slate-200 p-4 sm:p-5">
-                <h4 className="mb-2 flex items-center gap-2 text-sm font-bold text-slate-800">
-                    <ShieldCheck className="h-4 w-4 text-[#0056A7]" />
-                    {dict.review.consentTitle}
-                </h4>
-                <p className="mb-4 rounded-xl bg-slate-50 p-4 text-xs leading-relaxed text-slate-600">{dict.review.consentText}</p>
-                <CheckboxField
-                    id="consent"
-                    label={dict.review.consentLabel}
-                    checked={data.consent}
-                    onChange={(consent) => update({ consent })}
-                    error={err("consent")}
-                />
             </section>
         </div>
     );

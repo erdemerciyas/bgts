@@ -13,7 +13,7 @@ const base: ScholarshipData = {
         { fullName: "Mehmet Yılmaz", age: "15", school: "Lise 9", job: "", maritalStatus: "single" },
         { fullName: "Zeynep Yılmaz", age: "28", school: "", job: "Öğretmen", maritalStatus: "married" },
     ],
-    kvkkRead: true, consent: true,
+    kvkkRead: true,
 };
 
 const cell = (d: ScholarshipData, header: string) => toRow(d)[EXPORT_COLUMNS.findIndex((c) => c.header === header)];

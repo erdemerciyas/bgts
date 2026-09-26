@@ -23,7 +23,7 @@ const valid: ScholarshipData = {
     hasSiblings: "yes", siblingCount: "2",
     siblings: [{ fullName: "Mehmet Yılmaz", age: "15", school: "Lise 9", job: "", maritalStatus: "single" }],
     address: "Örnek Mah. 1. Sok. No:1", phone: "05321234567", phone2: "", email: "ayse@example.com",
-    kvkkRead: true, consent: true,
+    kvkkRead: true,
 };
 
 describe("scholarship schema", () => {
@@ -85,9 +85,9 @@ describe("scholarship schema", () => {
     });
 
     it("onaylar olmadan gönderim geçersiz", () => {
-        const result = validateScholarship({ ...valid, consent: false });
+        const result = validateScholarship({ ...valid, kvkkRead: false });
         expect(result.success).toBe(false);
-        if (!result.success) expect(result.errors.consent).toBe("mustAccept");
+        if (!result.success) expect(result.errors.kvkkRead).toBe("mustAccept");
     });
 
     it("normalize gizli alanları temizler", () => {

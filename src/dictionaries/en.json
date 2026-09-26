@@ -3830,8 +3830,6 @@
       "kvkkShow": "Read notice",
       "kvkkHide": "Hide notice",
       "kvkkRead": "I have read and understood the Privacy Notice.",
-      "consentTitle": "Explicit Consent",
-      "consentLabel": "I have read the Explicit Consent Statement and consent to the processing of my personal data and family income information for scholarship evaluation.",
       "kvkkText":[
         "Data Controller: Under the Turkish Personal Data Protection Law No. 6698 (\"KVKK\"), your personal data will be processed by BGTS – Business & Global Technology Solutions (\"BGTS\") (Address: Maslak Mahallesi, Büyükdere Caddesi No:128, 34398 Sarıyer/Istanbul, Türkiye · Phone: 444 3330 · Email: info@bgts.com.tr) as the data controller, within the scope described below.",
         "Personal Data Processed: Identity (name, surname, place and date of birth, gender, marital status, nationality, parents' names), education (university, faculty, department, year, university entry date, preparatory year, GPA, high school), family and income (whether your parents are alive, their occupations and net income, number of working family members, other income, total family income, housing status and rent), sibling details (full name, age, school, occupation and marital status) and contact information (home address, phone, guardian's phone, email). The form does not request special-category personal data (health, religion, ethnic origin, etc.); please do not share such information.",
@@ -3843,8 +3841,7 @@
         "Retention: Your application is kept during the evaluation process and for up to 2 (two) years after it is concluded, after which it is deleted, destroyed or anonymised. If you are awarded a scholarship, your data may be retained for the duration of the scholarship and the periods required by applicable legislation.",
         "Your Rights: Under Article 11 of the KVKK you have the right to learn whether your personal data is processed and request information about it, learn the purpose of processing and whether it is used accordingly, know the third parties in Türkiye or abroad to whom it is transferred, request correction of incomplete or inaccurate data, request deletion or destruction under Article 7, request that these actions be notified to third parties, object to adverse results arising exclusively from automated analysis, and claim compensation for damages caused by unlawful processing.",
         "How to Apply: In accordance with the Communiqué on the Procedures and Principles of Application to the Data Controller, you may submit your requests in writing, together with information identifying you, to Maslak Mahallesi, Büyükdere Caddesi No:128, 34398 Sarıyer/Istanbul, or send them to info@bgts.com.tr from your registered email address. Requests are concluded free of charge within 30 (thirty) days at the latest."
-      ],
-      "consentText":"I have read and understood the Privacy Notice provided by BGTS – Business & Global Technology Solutions. I freely give my explicit consent to the processing of the identity, education, contact, family and income information I share in my scholarship application for the purpose of evaluating my application and informing me of the result; to the transfer of this data to servers located abroad (USA) because the application is delivered via Google LLC (Gmail) email infrastructure and the website is hosted on Vercel Inc. infrastructure; and to its retention for the period stated in the Privacy Notice. I understand that I may withdraw my consent at any time by contacting info@bgts.com.tr."
+      ]
     },
     "success": {
       "title": "Application received!",
