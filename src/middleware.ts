@@ -110,7 +110,17 @@ function rewriteWithPathname(
 }
 
 export function middleware(request: NextRequest) {
-  const pathname = stripBasePath(request.nextUrl.pathname);
+  const rawPathname = stripBasePath(request.nextUrl.pathname);
+  // Canlı alan adında (bgts.com) yalnızca /tr/* bu uygulamaya yönleniyor; kök /api/* WordPress'e düşüyor.
+  // Bu yüzden istemci API çağrıları /tr/api/* ile yapılır ve burada /api/*'ye rewrite edilir.
+  const isApiAlias = rawPathname.startsWith('/tr/api/');
+  const pathname = isApiAlias ? rawPathname.slice(3) : rawPathname;
+  const passThrough = () => {
+    if (!isApiAlias) return NextResponse.next();
+    const rewriteUrl = request.nextUrl.clone();
+    rewriteUrl.pathname = withBasePath(pathname);
+    return NextResponse.rewrite(rewriteUrl);
+  };
 
   // 0. Burs yönetimi: yetkisizse 401, yetkiliyse locale yönlendirmesi yapmadan geçir
   if (matchesPath(pathname, ADMIN_PAGE)) {
@@ -131,7 +141,7 @@ export function middleware(request: NextRequest) {
       rewriteUrl.pathname = withBasePath(ADMIN_PAGE + pathname.slice(pageUrl.length));
       return NextResponse.rewrite(rewriteUrl);
     }
-    return NextResponse.next();
+    return passThrough();
   }
 
   // 1. API Rotaları için Rate Limiting Kontrolü
@@ -152,7 +162,7 @@ export function middleware(request: NextRequest) {
         );
       }
     }
-    return NextResponse.next(); // API rotalarında locale kontrolü yapma
+    return passThrough(); // API rotalarında locale kontrolü yapma
   }
 
   // API veya izole edilmiş public rotalar için atla
@@ -161,7 +171,7 @@ export function middleware(request: NextRequest) {
     pathname.startsWith('/_next') ||
     pathname.match(/\.(png|jpg|jpeg|gif|webp|ico|css|js|woff|woff2)$/)
   ) {
-    return NextResponse.next();
+    return passThrough();
   }
 
   // Legacy /en/ ve /eng/ → /tr/en/ (301)

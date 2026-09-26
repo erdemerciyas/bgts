@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType }
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion";
 import { ArrowLeft, ArrowRight, Loader2, Send } from "lucide-react";
+import { withBasePath } from "@/lib/base-path";
 import {
     EMPTY_SCHOLARSHIP,
     STEP_COUNT,
@@ -180,7 +181,7 @@ export default function ScholarshipWizard({ dict, doneHref, doneLabel }: Props) 
         setStatus("submitting");
         setSendError(null);
         try {
-            const res = await fetch("/api/scholarship", {
+            const res = await fetch(withBasePath("/tr/api/scholarship"), {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

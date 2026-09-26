@@ -20,7 +20,7 @@ type Props = {
     pageSizes: number[];
 };
 
-const EXPORT_URL = withBasePath("/api/scholarship/export");
+const EXPORT_URL = withBasePath("/tr/api/scholarship/export");
 
 const formatDate = (value: string) =>
     new Date(value).toLocaleString("tr-TR", { timeZone: "Europe/Istanbul", dateStyle: "short", timeStyle: "short" });
