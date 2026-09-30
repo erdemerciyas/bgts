@@ -2600,6 +2600,48 @@
       "title": "Teknoloji İle<br /> <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-corporate-secondary to-blue-500\">Dönüşen Kurumlar</span>",
       "subtitle": "Finans, savunma ve telekomünikasyonun lider markalarıyla hayata geçirdiğimiz, <strong className=\"text-slate-800 font-bold\">teknoloji yığınlarıyla kanıtlanmış</strong> dijital dönüşüm projeleri."
     },
+    "featured": {
+      "badge": "Öne Çıkan Başarı Hikayesi",
+      "title": "STFA, BGTS'nin geliştirdiği Claude tabanlı asistanla ihale dosyalarını günler yerine saatler içinde inceliyor",
+      "lead": "BGTS, STFA İnşaat Grubu'nun her ihale dosyasının ilk okumasını Claude'a devretmesini sağladı; böylece mühendisler zamanlarını fiyatlandırma ve teknik kararlara ayırabiliyor.",
+      "facts": [
+        { "label": "Müşteri", "value": "STFA İnşaat Grubu" },
+        { "label": "Sektör", "value": "İnşaat: deniz yapıları, altyapı, EPC" },
+        { "label": "Çözüm", "value": "Claude üzerine kurulu sözleşme ve ihale analiz asistanı" },
+        { "label": "Canlıda", "value": "Ağustos 2026'dan beri" },
+        { "label": "Temel sonuç", "value": "İlk ihale incelemesi 2 günden 4 saate indi" }
+      ],
+      "intro": "STFA İnşaat Grubu, 1938'den bu yana 24 ülkede deniz yapıları, altyapı ve EPC projeleri hayata geçirdi. Bu işleri kazanmak, inşaattan çok önce ihale dosyasıyla başlıyor. STFA'nın ihale ekipleri Ağustos 2026'dan bu yana, gelen her dosyanın ilk incelemesini BGTS'nin Anthropic'in Claude modeli üzerine kurduğu bir asistanla yapıyor. Eskiden iki gün süren ilk inceleme artık dört saatte tamamlanıyor.",
+      "challengeTitle": "İhtiyaç",
+      "challenge": [
+        "Her ihale beraberinde yığınla belge getiriyor: teknik şartnameler, metraj cetvelleri, sözleşme koşulları, çizim listeleri ve yerel mevzuat; çoğu zaman birden fazla dilde. STFA ekipleri her teklif için bunların tamamını okumak ve gecikme cezaları, ödeme koşulları, sorumluluk limitleri ve performans teminatları gibi risk taşıyan maddeleri bulmak zorundaydı. Ardından belirli bir son tarihten önce teklif verip vermeme kararına varmaları gerekiyordu.",
+        "İş manuel ve tekrarlıydı. Zamanı zaten paralel yürüyen birden fazla teklif arasında bölünmüş, küçük bir kıdemli mühendis ve sözleşme uzmanı grubuna dayanıyordu. Okumaya harcanan her fazladan gün, fiyatlandırma ve teknik planlamadan eksilen bir gün demekti."
+      ],
+      "solutionTitle": "Çözüm",
+      "solutionIntro": "BGTS, asistanı STFA'nın ihale ve hukuk ekipleriyle birlikte tasarlayıp geliştirdi. Asistan, STFA'nın kendi hesabı altında Claude üzerinde çalışıyor ve doğrudan her ihale dosyasındaki belgeler üzerinde işlem yapıyor. Asistan:",
+      "solutionItems": [
+        { "title": "Dosyanın tamamını özetliyor.", "text": "Kapsamı, takvimi, ticari koşulları ve temel riskleri tek bir yapılandırılmış özete dönüştürüyor; her madde geldiği sayfaya bağlanıyor." },
+        { "title": "Sözleşmeyi kontrol ediyor.", "text": "Sözleşme koşullarını STFA'nın standart pozisyonlarıyla karşılaştırıyor ve her sapmayı incelenmek üzere işaretliyor." },
+        { "title": "Soruları sade bir dille yanıtlıyor.", "text": "Mühendisler dosya hakkında bir meslektaşlarına sorar gibi soru soruyor; her yanıt dayandığı maddeye atıf yapıyor." },
+        { "title": "Bir sonraki adımı hazırlıyor.", "text": "Müşteriye iletilecek netleştirme sorularını taslak olarak hazırlıyor ve teklif verme/vermeme kontrol listesini dolduruyor." }
+      ],
+      "solutionOutro": [
+        "Kontrol insanlarda kalıyor. Her işaret adı belirli bir incelemeciye gidiyor ve asistan hiçbir şeyi kendi başına göndermiyor ya da sunmuyor.",
+        "BGTS, ekiplerin asistanın bulgularını kendi bulgularıyla karşılaştırabilmesi için geçmiş ihaleler üzerinde bir pilotla başladı. Ardından asistanı ekip ekip devreye aldı ve tüm kullanıcılara eğitim verdi."
+      ],
+      "resultsTitle": "Sonuçlar",
+      "resultsIntro": "Ağustos 2026'da canlıya geçişten bu yana:",
+      "stats": [
+        { "value": "2 gün → 4 saat", "label": "ihale dosyası başına ilk inceleme süresi" },
+        { "value": "200+", "label": "ihale ve sözleşme belgesi analiz edildi, toplamda 5.000'den fazla sayfa" },
+        { "value": "10+", "label": "mühendis asistanı her hafta kullanıyor" }
+      ],
+      "quote": "Mühendislerimiz her ihalenin ilk günlerini yalnızca okumakla geçiriyordu. Artık net bir özet ve önceden işaretlenmiş risklerle başlıyorlar; böylece zamanları fiyatlandırma ve teknik kararlara gidiyor. Daha fazla fırsatı değerlendirebiliyor ve riskleri çok daha erken görüyoruz.",
+      "quoteAuthor": "Gürol Can",
+      "quoteRole": "Bilgi Teknolojileri Müdürü, STFA İnşaat Grubu",
+      "readMore": "Hikayenin tamamını okuyun",
+      "readLess": "Daha az göster"
+    },
     "grid": {
       "title": "Tüm Projeler",
       "subtitle": "proje — her biri gereksinim, çözüm ve teknoloji yığınıyla belgelenmiş",
@@ -3692,7 +3734,7 @@
       "eyebrow": "BGTS Burs Programı",
       "title": "Geleceğinize",
       "highlight": "birlikte yatırım yapalım",
-      "subtitle": "Eğitim hayatını sürdürürken maddi desteğe ihtiyaç duyan üniversite öğrencilerinden burs başvurusu alıyoruz. Formu adım adım doldurarak başvurunuzu birkaç dakikada tamamlayabilirsiniz.",
+      "subtitle": "Üniversite öğrencilerinin eğitim yolculuklarını desteklediğimiz BGTS Burs Programı ile bu yıl da öğrencilerin yanındayız. Formu adım adım doldurarak başvurunuzu birkaç dakikada tamamlayabilirsiniz.",
       "highlights": [
         {
           "title": "Yaklaşık 10 dakika",

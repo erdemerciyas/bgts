@@ -7,9 +7,33 @@ import { CaseStudyCard } from "@/components/resources/CaseStudyCard"
 import { AnimatedDiv, ScaleIn } from "@/components/ui/AnimatedElements"
 import Image from "next/image"
 import type { CaseStudy } from "@/data/case-studies.en"
+import { useState } from "react"
+
+type FeaturedStory = {
+    badge: string
+    title: string
+    lead: string
+    facts: { label: string; value: string }[]
+    intro: string
+    challengeTitle: string
+    challenge: string[]
+    solutionTitle: string
+    solutionIntro: string
+    solutionItems: { title: string; text: string }[]
+    solutionOutro: string[]
+    resultsTitle: string
+    resultsIntro: string
+    stats: { value: string; label: string }[]
+    quote: string
+    quoteAuthor: string
+    quoteRole: string
+    readMore: string
+    readLess: string
+}
 
 type SuccessStoriesDict = {
     hero: { title: string; subtitle: string }
+    featured: FeaturedStory
     grid: {
         title: string;
         subtitle: string;
@@ -97,6 +121,8 @@ export default function SuccessStoriesClient({ dict: d, cases, lang }: { dict: S
                         </div>
                     </div>
 
+                    <FeaturedStoryBlock f={d.featured} />
+
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                         {cases.map((study, index) => (
                             <CaseStudyCard key={study.id} study={study} index={index} lang={lang} />
@@ -105,5 +131,109 @@ export default function SuccessStoriesClient({ dict: d, cases, lang }: { dict: S
                 </Container>
             </Section>
         </div>
+    )
+}
+
+function FeaturedStoryBlock({ f }: { f: FeaturedStory }) {
+    const [open, setOpen] = useState(false)
+
+    return (
+        <AnimatedDiv className="mb-12">
+            <article className="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-corporate-dark via-[#0f2340] to-corporate-secondary text-white shadow-xl">
+                <div className="pointer-events-none absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full bg-blue-500/20 blur-[100px]" />
+
+                <div className="relative p-6 sm:p-10 lg:p-12">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-corporate-highlight/15 border border-corporate-highlight/40 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-corporate-highlight">
+                        <span className="w-1.5 h-1.5 rounded-full bg-corporate-highlight" />
+                        {f.badge}
+                    </span>
+
+                    <div className="mt-6 grid lg:grid-cols-[1.4fr_1fr] gap-10">
+                        <div>
+                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
+                                {f.title}
+                            </h3>
+                            <p className="mt-5 text-base lg:text-lg text-blue-100/90 leading-relaxed">
+                                {f.lead}
+                            </p>
+                        </div>
+
+                        <dl className="rounded-2xl bg-white/5 border border-white/10 divide-y divide-white/10 text-sm">
+                            {f.facts.map((fact) => (
+                                <div key={fact.label} className="grid grid-cols-[120px_1fr] gap-3 px-5 py-3">
+                                    <dt className="text-blue-200/70 font-semibold">{fact.label}</dt>
+                                    <dd className="text-white">{fact.value}</dd>
+                                </div>
+                            ))}
+                        </dl>
+                    </div>
+
+                    <div className="mt-10 grid sm:grid-cols-3 gap-4">
+                        {f.stats.map((s) => (
+                            <div key={s.value} className="rounded-2xl bg-white/5 border border-white/10 p-5">
+                                <div className="text-2xl lg:text-3xl font-black text-corporate-highlight">{s.value}</div>
+                                <div className="mt-1.5 text-sm text-blue-100/80 leading-snug">{s.label}</div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <figure className="mt-10 border-l-4 border-corporate-highlight pl-5 lg:pl-6">
+                        <blockquote className="text-lg lg:text-xl italic leading-relaxed text-white/95">
+                            &ldquo;{f.quote}&rdquo;
+                        </blockquote>
+                        <figcaption className="mt-3 text-sm">
+                            <span className="font-bold">{f.quoteAuthor}</span>
+                            <span className="text-blue-200/70">, {f.quoteRole}</span>
+                        </figcaption>
+                    </figure>
+
+                    {open && (
+                        <div className="mt-10 pt-10 border-t border-white/10 grid lg:grid-cols-2 gap-10 text-[15px] leading-relaxed text-blue-50/90">
+                            <div className="space-y-4 lg:col-span-2">
+                                <p>{f.intro}</p>
+                            </div>
+                            <div className="space-y-4">
+                                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-highlight">{f.challengeTitle}</h4>
+                                {f.challenge.map((p) => <p key={p}>{p}</p>)}
+                            </div>
+                            <div className="space-y-4">
+                                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-highlight">{f.solutionTitle}</h4>
+                                <p>{f.solutionIntro}</p>
+                                <ul className="space-y-3">
+                                    {f.solutionItems.map((item) => (
+                                        <li key={item.title} className="flex gap-3">
+                                            <span className="mt-2 w-1.5 h-1.5 rounded-full bg-corporate-highlight shrink-0" />
+                                            <span><strong className="text-white">{item.title}</strong> {item.text}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                {f.solutionOutro.map((p) => <p key={p}>{p}</p>)}
+                            </div>
+                            <div className="space-y-2 lg:col-span-2">
+                                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-highlight">{f.resultsTitle}</h4>
+                                <p>{f.resultsIntro}</p>
+                                <ul className="space-y-1.5">
+                                    {f.stats.map((s) => (
+                                        <li key={s.value}><strong className="text-white">{s.value}</strong> {s.label}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    )}
+
+                    <button
+                        type="button"
+                        onClick={() => setOpen((v) => !v)}
+                        aria-expanded={open}
+                        className="mt-10 inline-flex items-center gap-2 rounded-full bg-white text-corporate-dark px-5 py-2.5 text-sm font-bold hover:bg-blue-50 transition-colors"
+                    >
+                        {open ? f.readLess : f.readMore}
+                        <svg className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </div>
+            </article>
+        </AnimatedDiv>
     )
 }

@@ -2571,6 +2571,48 @@
       "title": "Organizations Transformed<br /> <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-corporate-secondary to-blue-500\">By Technology</span>",
       "subtitle": "Digital transformation projects that are <strong className=\"text-slate-800 font-bold\">proven with tech stacks</strong>, implemented with leading brands in finance, defense, and telecommunications."
     },
+    "featured": {
+      "badge": "Featured Success Story",
+      "title": "STFA reviews tender packages in hours instead of days with a Claude-based assistant built by BGTS",
+      "lead": "BGTS helped STFA Construction Group hand the first read of every tender package to Claude, so its engineers can spend their time on pricing and technical decisions.",
+      "facts": [
+        { "label": "Customer", "value": "STFA Construction Group" },
+        { "label": "Industry", "value": "Construction: marine works, infrastructure, EPC" },
+        { "label": "Solution", "value": "Contract and tender analysis assistant built on Claude" },
+        { "label": "In production since", "value": "August 2026" },
+        { "label": "Key result", "value": "First-pass tender review cut from 2 days to 4 hours" }
+      ],
+      "intro": "STFA Construction Group has delivered marine, infrastructure and EPC projects in 24 countries since 1938. Winning that work starts long before construction, with the tender package. Since August 2026, STFA's tender teams have used an assistant that BGTS built on Anthropic's Claude to do the first review of every incoming package. A first-pass review that used to take two days now takes four hours.",
+      "challengeTitle": "The challenge",
+      "challenge": [
+        "Every tender brings a stack of documents: technical specifications, bills of quantities, contract conditions, drawing lists and local regulations, often in more than one language. For every bid, STFA's teams had to read all of it and find the clauses that carry risk, such as delay penalties, payment terms, liability caps and performance guarantees. Then they had to reach a bid/no-bid decision before a fixed deadline.",
+        "The work was manual and repetitive. It relied on a small group of senior engineers and contract specialists whose time was already split across several parallel bids. Every extra day spent reading was a day less for pricing and technical planning."
+      ],
+      "solutionTitle": "The solution",
+      "solutionIntro": "BGTS designed and built the assistant together with STFA's tender and legal teams. It runs on Claude under STFA's own account and works directly on the documents in each tender package. The assistant:",
+      "solutionItems": [
+        { "title": "Summarises the full package.", "text": "It turns scope, schedule, commercial terms and key risks into one structured brief, with every point linked to the page it came from." },
+        { "title": "Checks the contract.", "text": "It compares contract conditions against STFA's standard positions and flags every deviation for review." },
+        { "title": "Answers questions in plain language.", "text": "Engineers ask about a package the way they would ask a colleague, and every answer cites the clause it relies on." },
+        { "title": "Prepares the next step.", "text": "It drafts clarification questions for the client and fills in the bid/no-bid checklist." }
+      ],
+      "solutionOutro": [
+        "People stay in control. Every flag goes to a named reviewer, and the assistant never sends or submits anything on its own.",
+        "BGTS started with a pilot on past tenders, so the teams could compare the assistant's findings with their own. It then rolled the assistant out team by team and trained every user."
+      ],
+      "resultsTitle": "The results",
+      "resultsIntro": "Since going live in August 2026:",
+      "stats": [
+        { "value": "2 days → 4 hours", "label": "first-pass review time per tender package" },
+        { "value": "200+", "label": "tender and contract documents analysed, more than 5,000 pages in total" },
+        { "value": "10+", "label": "engineers use the assistant every week" }
+      ],
+      "quote": "Our engineers used to spend the first days of every tender just reading. Now they start with a clear brief and the risks already flagged, so their time goes into pricing and technical decisions. We can look at more opportunities, and we see the risks much earlier.",
+      "quoteAuthor": "Gürol Can",
+      "quoteRole": "Information Technology Manager, STFA Construction Group",
+      "readMore": "Read the full story",
+      "readLess": "Show less"
+    },
     "grid": {
       "title": "All Projects",
       "subtitle": "projects — each documented with requirement, solution, and tech stack",
