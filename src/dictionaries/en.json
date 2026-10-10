@@ -3717,7 +3717,12 @@
           "title": "Result notification",
           "text": "After the evaluation, we will contact you by email or phone."
         }
-      ]
+      ],
+      "closed": {
+        "title": "Our Application Period Has Ended",
+        "text": "Thank you for your interest in the BGTS Scholarship Program.",
+        "note": "We look forward to seeing you in the next application period!"
+      }
     },
     "title": "Scholarship Application Form",
     "subtitle": "Fill in your details step by step for the BGTS scholarship program.",

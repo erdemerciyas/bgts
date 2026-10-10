@@ -1,11 +1,14 @@
 import { NextResponse } from "next/server";
 import { sendEmail } from "@/lib/email";
-import { normalizeScholarship, validateScholarship } from "@/lib/scholarship/schema";
+import { SCHOLARSHIP_APPLICATIONS_OPEN, normalizeScholarship, validateScholarship } from "@/lib/scholarship/schema";
 import { buildConfirmationEmail, scholarshipReference } from "@/lib/scholarship/email-template";
 import { EMAIL_LOGO_CID, EMAIL_LOGO_PNG_BASE64 } from "@/lib/scholarship/email-logo";
 import { insertApplication } from "@/lib/scholarship/db";
 
 export async function POST(req: Request) {
+    if (!SCHOLARSHIP_APPLICATIONS_OPEN) {
+        return NextResponse.json({ message: "Başvuru dönemi sona erdi." }, { status: 403 });
+    }
     try {
         const body = (await req.json()) as { data?: unknown; website?: unknown };
 

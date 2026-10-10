@@ -1,4 +1,5 @@
-import { Clock, Mail, ShieldCheck } from "lucide-react";
+import { CalendarX, Clock, Mail, ShieldCheck } from "lucide-react";
+import { SCHOLARSHIP_APPLICATIONS_OPEN } from "@/lib/scholarship/schema";
 import { getDictionary } from "@/get-dictionary";
 import type { Locale } from "@/i18n-config";
 import { localizedHref } from "@/lib/routes";
@@ -39,6 +40,16 @@ export default async function ScholarshipPage({
 
             {/* FORM */}
             <Container className="relative z-20 -mt-20 pb-20 lg:-mt-24">
+                {!SCHOLARSHIP_APPLICATIONS_OPEN ? (
+                    <div className="mx-auto max-w-2xl rounded-3xl border border-slate-200 bg-white px-6 py-12 text-center shadow-xl shadow-slate-900/5 sm:px-10">
+                        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-[#0056A7]">
+                            <CalendarX className="h-7 w-7" />
+                        </span>
+                        <h2 className="mt-5 text-2xl font-bold text-slate-900 sm:text-3xl">{d.closed.title}</h2>
+                        <p className="mt-3 text-base leading-relaxed text-slate-600">{d.closed.text}</p>
+                        <p className="mt-1 text-base font-medium text-[#0056A7]">{d.closed.note}</p>
+                    </div>
+                ) : (
                 <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1fr_280px] lg:items-start">
                     <div className="rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-900/5">
                         <div className="border-b border-slate-100 px-5 pb-1 pt-6 sm:px-8">
@@ -67,6 +78,7 @@ export default async function ScholarshipPage({
                         })}
                     </aside>
                 </div>
+                )}
             </Container>
         </div>
     );

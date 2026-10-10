@@ -3748,7 +3748,12 @@
           "title": "Sonuç bildirimi",
           "text": "Değerlendirme sonrasında size e-posta veya telefonla ulaşılır."
         }
-      ]
+      ],
+      "closed": {
+        "title": "Başvuru Dönemimiz Sona Erdi",
+        "text": "BGTS Burs Programı'na gösterdiğiniz ilgi için teşekkür ederiz.",
+        "note": "Bir sonraki başvuru döneminde yeniden görüşmek üzere!"
+      }
     },
     "title": "Burs Başvuru Formu",
     "subtitle": "BGTS burs programı için bilgilerinizi adım adım doldurun.",

@@ -5,7 +5,10 @@ import { z } from "zod";
  * aynı kuralları kullanır. Hata mesajları sözlükteki `scholarship.errors` anahtarlarıdır.
  */
 
-export const GENDERS = ["female", "male"] as const;
+/** Başvuru dönemi açık mı? Kapalıyken form gizlenir ve API yeni başvuru kabul etmez. */
+export const SCHOLARSHIP_APPLICATIONS_OPEN = false;
+
+export const GENDERS =["female", "male"] as const;
 export const MARITAL_STATUSES = ["single", "married", "divorced", "widowed"] as const;
 export const GRADES = ["prep", "1", "2", "3", "4", "5", "6"] as const;
 export const YES_NO = ["yes", "no"] as const;
