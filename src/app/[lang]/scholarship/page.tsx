@@ -33,7 +33,7 @@ export default async function ScholarshipPage({
                             <br />
                             <span className="bg-gradient-to-r from-amber-300 to-yellow-200 bg-clip-text text-transparent">{d.highlight}</span>
                         </h1>
-                        <p className="mt-4 max-w-xl text-lg leading-relaxed text-blue-100/90">{d.subtitle}</p>
+                        <p className="mt-4 max-w-xl text-lg leading-relaxed text-blue-100/90">{SCHOLARSHIP_APPLICATIONS_OPEN ? d.subtitle : d.closed.subtitle}</p>
                     </div>
                 </Container>
             </section>
