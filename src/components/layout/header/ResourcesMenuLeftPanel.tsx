@@ -39,25 +39,25 @@ export function ResourcesMenuLeftPanel({ lang, closeMenu }: ResourcesMenuLeftPan
                         <Calendar className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/90">
-                        {t(lang, "Gerçekleşen Etkinlik", "Past Event")}
+                        {t(lang, "Yaklaşan Etkinlik", "Upcoming Event")}
                     </span>
                 </div>
 
                 <div className="min-h-0">
                     <h3 className="mb-2.5 text-2xl font-black leading-snug text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.5)]">
-                        EBINTEC BANKING INNOVATION{" "}
+                        IFINTEC FINANCE TECHNOLOGIES{" "}
                         <span className="text-rose-300">CONFERENCE</span>
                     </h3>
                     <p className="mb-4 max-w-md text-sm leading-relaxed text-slate-200/95 [text-shadow:0_1px_4px_rgba(0,0,0,0.45)]">
                         {t(
                             lang,
-                            "Ana sponsor olarak yer aldığımız etkinlikte, finans sektörünün dönüşümüne dair güncel içgörüleri paylaştık.",
-                            "As the main sponsor of the event, we shared up-to-date insights on the transformation of the finance sector."
+                            "IFINTEC, bankacılık ve finans teknolojilerindeki güncel çözümleri ve sektör profesyonellerini bir araya getirecek.",
+                            "IFINTEC will bring together the latest solutions in banking and financial technologies and industry professionals."
                         )}
                     </p>
                     <p className="flex items-center gap-2.5 text-xs font-semibold text-white/90">
                         <span className="rounded bg-white/15 px-2.5 py-1 backdrop-blur-sm">
-                            {t(lang, "14 Nisan", "April 14")}
+                            {t(lang, "13 Ekim", "October 13")}
                         </span>
                         <span>İstanbul</span>
                     </p>
