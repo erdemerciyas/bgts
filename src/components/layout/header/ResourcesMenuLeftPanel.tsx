@@ -16,7 +16,7 @@ function t(lang: string, tr: string, en: string) {
 export function ResourcesMenuLeftPanel({ lang, closeMenu }: ResourcesMenuLeftPanelProps) {
     return (
         <Link
-            href="https://www.linkedin.com/feed/update/urn:li:activity:7449781930562101248"
+            href="https://www.linkedin.com/feed/update/urn:li:activity:7515338995699003393/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
