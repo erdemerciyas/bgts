@@ -14,14 +14,12 @@ export async function generateMetadata({
     const locale = lang as Locale
     const { meta } = (await getDictionary(locale)).legal.cookiePolicy
 
-    const title = `${meta.title} | BGTS`
-
     return {
-        title,
+        title: meta.title,
         description: meta.description,
         alternates: buildAlternates(PATH, locale),
         openGraph: {
-            title,
+            title: `${meta.title} | BGTS`,
             description: meta.description,
             url: buildOgUrl(PATH, locale),
         },

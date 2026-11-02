@@ -45,8 +45,8 @@ export default function LegalDocument({ dict, eyebrow, related }: LegalDocumentP
                         <Heading variant="h1" className="text-white mb-5">
                             {dict.hero.title}
                         </Heading>
-                        <Text className="text-white/70 mb-6">{dict.hero.subtitle}</Text>
-                        <Text variant="caption" className="text-white/40">
+                        <Text className="text-white/80 mb-6">{dict.hero.subtitle}</Text>
+                        <Text variant="caption" className="text-white/60">
                             {dict.hero.updated}
                         </Text>
                     </div>
