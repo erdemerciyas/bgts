@@ -3604,6 +3604,7 @@
     "rejectAll": "Tümünü Reddet",
     "acceptAll": "Tümünü Kabul Et",
     "revisitLabel": "Onay Tercihleri",
+    "policyLink": "Çerez Politikası",
     "preferenceTitle": "Onay Tercihlerini Özelleştir",
     "preferenceIntro": [
       "Sitede verimli gezinmenize ve belirli işlevleri yerine getirmenize yardımcı olmak için çerezler kullanıyoruz. Tüm çerezlere ilişkin ayrıntılı bilgileri aşağıdaki onay kategorilerinde bulabilirsiniz.",
@@ -3946,6 +3947,361 @@
       "title": "Başvurunuz alındı!",
       "message": "Teşekkür ederiz. Başvurunuz değerlendirme ekibimize iletildi; sonuç hakkında size e-posta veya telefon ile ulaşacağız.",
       "home": "Ana Sayfaya Dön"
+    }
+  },
+  "legal": {
+    "common": {
+      "eyebrow": "Yasal Bilgilendirme",
+      "relatedTitle": "İlgili yasal metinler",
+      "cookiePolicy": "Çerez Politikası",
+      "termsOfUse": "Web Sitesi Kullanım Politikası",
+      "privacyNotice": "Müşteri Aydınlatma Metni"
+    },
+    "cookiePolicy": {
+      "meta": {
+        "title": "Çerez Politikası",
+        "description": "BGTS Teknoloji ve Yazılım A.Ş. web sitesinde kullanılan çerezler, türleri, saklama süreleri ve çerez tercihlerinin yönetimi hakkında bilgilendirme."
+      },
+      "hero": {
+        "title": "Çerez Politikası",
+        "subtitle": "BGTS Teknoloji ve Yazılım A.Ş. tarafından işletilen web sitesinde kullanılan çerezler ve benzer teknolojiler hakkında bilgilendirme.",
+        "updated": "Son güncelleme: 20.10.2026"
+      },
+      "sections": [
+        {
+          "heading": "1. Amaç ve Kapsam",
+          "paragraphs": [
+            "Bu Çerez Politikası (\"Politika\"), BGTS (\"Şirket\") tarafından işletilen https://bgts.com internet sitesi (\"Web Sitesi\") ziyaret edildiğinde kullanılan çerezler ve benzer teknolojiler hakkında kullanıcıları bilgilendirmek amacıyla hazırlanmıştır.",
+            "Bu Politika, Web Sitesi'ni ziyaret eden tüm kullanıcılar için geçerlidir ve Şirket'in Web Sitesi Kullanım Politikası ile KVKK Müşteri Aydınlatma Metni'nin tamamlayıcısı niteliğindedir."
+          ]
+        },
+        {
+          "heading": "2. Çerez Nedir?",
+          "paragraphs": [
+            "Çerezler (cookies), bir internet sitesi ziyaret edildiğinde tarayıcı aracılığıyla kullanıcının cihazına (bilgisayar, tablet, akıllı telefon vb.) kaydedilen ve çoğunlukla harf ve sayı kombinasyonlarından oluşan düşük boyutlu küçük metin dosyalarıdır. Çerezler, kullanıcı tercihlerinin hatırlanması, site performansının ölçülmesi, kullanıcı deneyiminin iyileştirilmesi ve site trafiğinin analiz edilmesi gibi amaçlarla kullanılır."
+          ]
+        },
+        {
+          "heading": "3. Kullanılan Çerez Türleri",
+          "paragraphs": [
+            "3.1. Saklanma Sürelerine Göre"
+          ],
+          "bullets": [
+            "Oturum Çerezleri (Session Cookies): Tarayıcı kapatıldığında otomatik olarak silinen, geçici çerezlerdir.",
+            "Kalıcı Çerezler (Persistent Cookies): Kullanıcı tarafından silinene veya belirlenen süre dolana kadar cihazda saklanan çerezlerdir."
+          ]
+        },
+        {
+          "paragraphs": [
+            "3.2. Taraf Durumuna Göre"
+          ],
+          "bullets": [
+            "Birinci Taraf Çerezler: Doğrudan Web Sitesi tarafından yerleştirilen çerezlerdir.",
+            "Üçüncü Taraf Çerezler: Web Sitesi dışındaki hizmet sağlayıcılar (analiz, reklam, sosyal medya platformları vb.) tarafından yerleştirilen çerezlerdir."
+          ]
+        },
+        {
+          "paragraphs": [
+            "3.3. Kullanım Amacına Göre"
+          ],
+          "bullets": [
+            "Zorunlu Çerezler: Web Sitesi'nin temel işlevlerinin (oturum açma, güvenlik, gezinme vb.) çalışması için gereklidir; devre dışı bırakılamaz.",
+            "Performans/Analitik Çerezler: Site trafiğini, ziyaret sıklığını ve kullanıcı davranışlarını anonim olarak ölçmek amacıyla kullanılır.",
+            "İşlev Çerezleri: Dil, bölge gibi kullanıcı tercihlerinin hatırlanmasını sağlar.",
+            "Pazarlama/Hedefleme Çerezleri: Kullanıcının ilgi alanlarına uygun içerik ve reklam sunulması amacıyla kullanılır."
+          ]
+        },
+        {
+          "heading": "4. Web Sitesi'nde Kullanılan Çerezler",
+          "table": {
+            "headers": [
+              "Çerez Adı",
+              "Türü",
+              "Saklama Süresi",
+              "Amacı"
+            ],
+            "rows": [
+              [
+                "bgts_cookie_consent (tarayıcı yerel depolama)",
+                "Zorunlu / Birinci Taraf",
+                "1 yıl",
+                "Kullanıcının çerez onay tercihlerinin saklanması ve hatırlanması."
+              ],
+              [
+                "_ga, _ga_FSY3WLT3M7 (Google Analytics 4)",
+                "Analitik / Üçüncü Taraf",
+                "2 yıl",
+                "Ziyaretçi davranışlarının ve site performansının analiz edilmesi. Yalnızca kullanıcının onay vermesi hâlinde çalışır."
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "5. Çerezlerin Kullanım Amaçları",
+          "paragraphs": [
+            "Şirket, Web Sitesi'nde çerezleri aşağıdaki amaçlarla kullanmaktadır:"
+          ],
+          "bullets": [
+            "Web Sitesi'nin güvenli ve düzgün şekilde çalışmasının sağlanması.",
+            "Kullanıcı deneyiminin ve site performansının iyileştirilmesi.",
+            "Site trafiğinin, ziyaret istatistiklerinin ve kullanım eğilimlerinin analiz edilmesi.",
+            "Kullanıcı tercihlerinin (çerez onay tercihleri) hatırlanması.",
+            "Yasal düzenlemelerin öngördüğü hâllerde hukuki yükümlülüklerin yerine getirilmesi."
+          ]
+        },
+        {
+          "heading": "6. Çerez Tercihlerinin Yönetilmesi",
+          "paragraphs": [
+            "Zorunlu çerezler dışındaki tüm çerezlerin kullanımı için Web Sitesi'ne ilk girişte kullanıcıdan onay alınır. Kullanıcılar, çerez tercihlerini diledikleri zaman Web Sitesi üzerindeki \"Onay Tercihleri\" (Consent Preferences) bölümünden değiştirebilir.",
+            "Ayrıca kullanıcılar, kullandıkları internet tarayıcısının ayarları üzerinden çerezleri kabul etme, reddetme veya cihazlarına kaydedilen çerezleri silme imkânına sahiptir. Zorunlu çerezlerin devre dışı bırakılması, web sitesinin bazı özelliklerinin düzgün çalışmamasına neden olabilecektir."
+          ],
+          "bullets": [
+            "Google Chrome: Tarayıcınızın adres bölümünde yer alan \"kilit işareti\"ni tıklayarak, \"çerezler\" sekmesinden çerezlere izin verebilir veya engelleyebilirsiniz.",
+            "Microsoft Edge: Tarayıcınızın sağ üst bölümünde yer alan \"Araçlar\" bölümünden güvenlik sekmesine tıklayarak çerezleri \"izin ver\" veya \"izin verme\" şeklinde yönetebilirsiniz.",
+            "Mozilla Firefox: Tarayıcınızın sağ üst köşesinde yer alan \"menüyü aç\" sekmesini tıklayınız. \"Seçenekler\" görselini tıklayarak \"Gizlilik ve Güvenlik\" butonunu kullanarak çerezleri yönetebilirsiniz.",
+            "Opera: Tarayıcınızın \"Tercihler\" bölümünde \"Gelişmiş\"i seçerek \"çerezler\" bölümünden çerez yönetimini yapabilirsiniz.",
+            "Safari: Tarayıcınızın \"Ayarlar\" bölümünden \"Safari\" sekmesini seçip, \"Gizlilik ve Güvenlik\" bölümünden tüm çerez yönetiminizi yapabilirsiniz."
+          ]
+        },
+        {
+          "heading": "7. Üçüncü Taraf Çerezler",
+          "paragraphs": [
+            "Web Sitesi'nde, yalnızca kullanıcının onay vermesi hâlinde analiz amacıyla üçüncü taraf hizmet sağlayıcılara (Google LLC – Google Analytics 4) ait çerezler kullanılmaktadır. Bu çerezlerin toplanması, işlenmesi ve saklanması, ilgili üçüncü tarafın kendi gizlilik politikalarına tabidir; Şirket bu üçüncü taraf uygulamaların gizlilik pratiklerinden sorumlu değildir."
+          ]
+        },
+        {
+          "heading": "8. Kişisel Verilerin Korunması",
+          "paragraphs": [
+            "Çerezler aracılığıyla elde edilen veriler, niteliğine göre 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") kapsamında kişisel veri sayılabilir. Bu verilerin işlenmesine ilişkin detaylı bilgiye, Şirketin ayrı olarak yayımladığı Müşteri Aydınlatma Metni üzerinden ulaşılabilir."
+          ]
+        },
+        {
+          "heading": "9. İletişim",
+          "paragraphs": [
+            "BGTS Teknoloji ve Yazılım A.Ş.",
+            "Reşitpaşa Mah. Katar Cad. İTÜ Teknokent Arı 3 No:4 B303 Sarıyer / İSTANBUL",
+            "bgtsteknoloji@hs01.kep.tr veya kvkk@bgts.com"
+          ]
+        }
+      ]
+    },
+    "termsOfUse": {
+      "meta": {
+        "title": "Web Sitesi Kullanım Politikası",
+        "description": "BGTS Teknoloji ve Yazılım A.Ş. web sitesinin kullanımına ilişkin şart ve koşullar, fikri mülkiyet hakları, izin verilmeyen kullanımlar ve sorumluluğun sınırlandırılması."
+      },
+      "hero": {
+        "title": "Web Sitesi Kullanım Politikası",
+        "subtitle": "BGTS Teknoloji ve Yazılım A.Ş. tarafından işletilen web sitesinin kullanımına ilişkin şart ve koşullar.",
+        "updated": "Son güncelleme: 20.10.2026"
+      },
+      "sections": [
+        {
+          "heading": "1. Amaç ve Kapsam",
+          "paragraphs": [
+            "Bu Web Sitesi Kullanım Politikası (\"Politika\"), BGTS Teknoloji ve Yazılım A.Ş. (\"Şirket\") tarafından işletilen internet sitesi https://bgts.com ve bağlı alt alan adlarının (\"Web Sitesi\") kullanımına ilişkin şart ve koşulları düzenlemektedir.",
+            "Bu Politika, Web Sitesi'ni ziyaret eden, görüntüleyen veya herhangi bir şekilde kullanan tüm gerçek ve tüzel kişileri (\"Kullanıcı\") kapsar. Web Sitesi'nin kullanılması, işbu Politika'da yer alan tüm şart ve koşulların kabul edildiği anlamına gelir. Bu şartları kabul etmeyen kullanıcıların Web Sitesi'ni kullanmaması gerekmektedir."
+          ]
+        },
+        {
+          "heading": "2. Tanımlar",
+          "table": {
+            "headers": [
+              "Kavram",
+              "Tanım"
+            ],
+            "rows": [
+              [
+                "Şirket",
+                "BGTS ve bağlı şirketleri."
+              ],
+              [
+                "Web Sitesi",
+                "Şirket'e ait, Şirket tarafından işletilen internet sitesi ve mobil uzantıları."
+              ],
+              [
+                "Kullanıcı",
+                "Web Sitesi'ni herhangi bir şekilde ziyaret eden veya kullanan gerçek/tüzel kişi."
+              ],
+              [
+                "İçerik",
+                "Web Sitesi'nde yer alan yazı, görsel, video, logo, tasarım, yazılım ve benzeri tüm materyaller."
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "3. Fikri Mülkiyet Hakları",
+          "paragraphs": [
+            "Web Sitesi'nde yer alan tüm içerik (metin, görsel, logo, marka, tasarım, veri tabanı, yazılım kodu vb.) BGTS'ye veya lisans veren üçüncü kişilere aittir ve 5846 sayılı Fikir ve Sanat Eserleri Kanunu, 6769 sayılı Sınai Mülkiyet Kanunu ile ilgili diğer mevzuat kapsamında korunmaktadır.",
+            "Web Sitesi içeriğinin tamamı veya bir kısmı, Şirket'in önceden yazılı izni olmaksızın çoğaltılamaz, dağıtılamaz, işlenemez, kamuya iletilemez veya ticari amaçla kullanılamaz. Kullanıcılar, Web Sitesi'ni yalnızca bilgi edinme veya iş ile ilgili amaçlarla, işbu Politika'ya uygun şekilde kullanabilir."
+          ]
+        },
+        {
+          "heading": "4. Kullanım Şartları",
+          "paragraphs": [
+            "Kullanıcılar, Web Sitesi'ni kullanırken aşağıdaki kurallara uymayı kabul eder:"
+          ],
+          "bullets": [
+            "Web Sitesi, yürürlükteki mevzuata, etik kurallara ve iyi niyet ilkelerine uygun şekilde kullanılacaktır.",
+            "Web Sitesi üzerinden Şirket'e iletilen bilgilerin doğru, güncel ve eksiksiz olması Kullanıcı'nın sorumluluğundadır.",
+            "Web Sitesi üzerinden paylaşılan yorum, geri bildirim veya diğer içerikler hukuka, üçüncü kişilerin haklarına ve genel ahlaka aykırı olmayacaktır."
+          ]
+        },
+        {
+          "heading": "5. İzin Verilmeyen Kullanımlar",
+          "paragraphs": [
+            "Kullanıcılar, Web Sitesi'ni kullanırken aşağıdaki davranışlardan kaçınmakla yükümlüdür:"
+          ],
+          "bullets": [
+            "Web Sitesi'nin işleyişini bozacak veya erişilemez hale getirecek yazılım, virüs, kötü amaçlı kod veya otomatik araç (bot, scraper vb.) kullanmak.",
+            "Web Sitesi'ne veya Şirket sistemlerine yetkisiz erişim sağlamaya çalışmak.",
+            "Web Sitesi üzerinden elde edilen bilgi ve içerikleri, Şirket'in izni olmaksızın ticari amaçla kullanmak veya üçüncü kişilere aktarmak.",
+            "Web Sitesi üzerinden yanıltıcı bilgi paylaşmak.",
+            "Web Sitesi'nin kaynak kodunu, algoritmalarını veya tasarımını izinsiz olarak kopyalamak, tersine mühendislik yapmak."
+          ]
+        },
+        {
+          "heading": "6. Çerezler (Cookies)",
+          "paragraphs": [
+            "Web Sitesi, kullanıcı deneyimini geliştirmek, site trafiğini analiz etmek ve içerikleri kişiselleştirmek amacıyla çerezler (cookies) kullanmaktadır. Çerezlerin türleri, kullanım amaçları ve yönetimine ilişkin detaylı bilgiye ayrı bir BGTS Çerez Politikası üzerinden ulaşılabilir. Kullanıcılar, tarayıcı ayarları üzerinden çerez tercihlerini yönetebilir."
+          ]
+        },
+        {
+          "heading": "7. Kişisel Verilerin Korunması",
+          "paragraphs": [
+            "Web Sitesi üzerinden toplanan kişisel veriler, 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") ve ilgili mevzuata uygun olarak işlenmektedir. Kişisel verilerin işlenmesine ilişkin detaylı bilgi, Şirket'in ayrı olarak yayımladığı aydınlatma metinleri ve KVKK'ya ilişkin diğer politikalar içerisinde yer almaktadır."
+          ]
+        },
+        {
+          "heading": "8. Bağlantı Verilen Üçüncü Taraf Siteler",
+          "paragraphs": [
+            "Web Sitesi, bilgilendirme amacıyla üçüncü taraf internet sitelerine bağlantı (link) içerebilir. Şirket, bu üçüncü taraf sitelerin içeriğinden, gizlilik uygulamalarından veya güvenliğinden sorumlu değildir. Kullanıcıların bu sitelere erişimi kendi sorumluluklarındadır."
+          ]
+        },
+        {
+          "heading": "9. Sorumluluğun Sınırlandırılması",
+          "paragraphs": [
+            "Şirket, Web Sitesi'nin kesintisiz, hatasız veya güvenlik açıklarından tamamen arındırılmış şekilde çalışacağına ilişkin özen yükümlülüğünü azami düzeyde yerine getirir. Şirket, Web Sitesi'nin kullanımından, erişilememesinden veya içeriğindeki hata ve eksikliklerden doğabilecek doğrudan veya dolaylı zararlardan, yürürlükteki mevzuatın izin verdiği azami ölçüde sorumlu tutulamaz.",
+            "Şirket, Web Sitesi içeriğini önceden bildirimde bulunmaksızın değiştirme, güncelleme, yayından kaldırma veya Web Sitesi'ne erişimi geçici/kalıcı olarak durdurma hakkını saklı tutar."
+          ]
+        },
+        {
+          "heading": "10. Politikada Değişiklik",
+          "paragraphs": [
+            "Şirket, işbu Politika'yı yürürlükteki mevzuata uygun şekilde değiştirme hakkını saklı tutar. Güncel Politika, yayımlandığı andan itibaren Web Sitesi üzerinden geçerli olur. Kullanıcıların Web Sitesi'ni kullanmaya devam etmesi, güncellenmiş Politika'nın kabul edildiği anlamına gelir."
+          ]
+        }
+      ]
+    },
+    "privacyNotice": {
+      "meta": {
+        "title": "Kurumsal Müşteri Çalışanı/Temsilcisi Aydınlatma Metni",
+        "description": "BGTS Teknoloji ve Yazılım A.Ş. tarafından kurumsal müşteri çalışanı ve temsilcilerinin kişisel verilerinin 6698 sayılı KVKK kapsamında işlenmesine ilişkin aydınlatma metni."
+      },
+      "hero": {
+        "title": "Kurumsal Müşteri Çalışanı/Temsilcisi Aydınlatma Metni",
+        "subtitle": "Kişisel verilerinizin 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu sıfatıyla işlenmesine ilişkin bilgilendirme.",
+        "updated": "Son güncelleme: 24.08.2026"
+      },
+      "sections": [
+        {
+          "paragraphs": [
+            "BGTS Teknoloji ve Yazılım A.Ş. (\"BGTS\", Reşitpaşa Mah. Katar Cad. İTÜ Teknokent Arı 3 No:4 B303 Sarıyer / İSTANBUL) olarak, hizmet verdiğimiz veya potansiyel olarak hizmet verebileceğimiz müşterilerimize hizmet verilebilmesi için kişisel verilerinizi veri sorumlusu sıfatıyla 6698 sayılı Kişisel Verilerin Korunması Kanunu başta olmak üzere, yürürlükte bulunan ilgili mevzuat hükümlerine uygun olarak ve aşağıda açıklanan kapsamda işliyoruz."
+          ]
+        },
+        {
+          "heading": "Hangi Kişisel Verilerinizi Topluyoruz ve İşliyoruz?",
+          "paragraphs": [
+            "Ad, soyad, telefon numarası ve e-posta."
+          ]
+        },
+        {
+          "heading": "Kişisel Verilerinizi Hangi Amaçla ve Hukuki Sebeple İşliyoruz?",
+          "paragraphs": [
+            "Toplanan kişisel verileriniz, KVKK'da öngörülen temel ilkelere uygun olarak aşağıdaki hukuki sebeplerden birinin veya bir kaçının varlığı hâlinde işlenebilecektir:"
+          ],
+          "bullets": [
+            "Kanunlarda açıkça öngörülmesi.",
+            "Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması.",
+            "Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması.",
+            "Bir hakkın tesisi, kullanılması veya korunması için veri işlemenin zorunlu olması."
+          ]
+        },
+        {
+          "heading": "Kişisel Veri İşleme Amaçları",
+          "bullets": [
+            "Hizmetin yürütülmesi.",
+            "İş geliştirme süreçlerinin planlanması, yönetimi ve yürütülmesi.",
+            "Kurumsal şirketlere verilen hizmetlerin yürütülmesi.",
+            "Müşteri memnuniyeti süreçlerinin yürütülmesi.",
+            "Hizmetlerle ilgili tanıtım, bilgilendirme ve pazarlama faaliyetlerinin yürütülmesi.",
+            "Hukuki süreçlerin yürütülmesi.",
+            "Kamu kurum ve kuruluşlarına gerektiğinde bilgi verilmesi."
+          ]
+        },
+        {
+          "heading": "Kişisel Verilerinizi Hangi Yöntemle Topluyoruz?",
+          "paragraphs": [
+            "Kişisel verileriniz, şirketimiz tarafından yukarıda sıralanan amaçlar kapsamında, elektronik ve fiziksel formlar, e-posta, canlı sohbet ve WhatsApp aracılığıyla toplanmakta ve işlenmektedir."
+          ]
+        },
+        {
+          "heading": "Kişisel Verilerinizi Kimlere ve Hangi Amaçlarla Aktarıyoruz?",
+          "paragraphs": [
+            "Kişisel verileriniz yukarıda açıklamış olduğumuz faaliyetler kapsamında ve amaçlarla sınırlı olmak üzere:"
+          ],
+          "bullets": [
+            "Mevzuat gereği bu verileri talep etmeye yetkili olan kamu kurum veya kuruluşlarına,",
+            "Teknoloji alanındaki altyapı tedarikçilerimiz tarafından sağlanan sistemlerimize,",
+            "Hizmetlerin yürütülmesi için bize destek olan iş ortaklarımıza,",
+            "Yetkili kamu kurum ve kuruluşlarına aktarılabilecektir."
+          ]
+        },
+        {
+          "heading": "Kişisel Verilerinizi Ne Kadar Süre İle Saklıyoruz?",
+          "paragraphs": [
+            "Kişisel verileriniz, BGTS Veri Saklama ve İmha Prosedürüne uygun olarak saklanmakta ve saklanma sürelerinin sonunda silinmekte veya imha edilmektedir."
+          ]
+        },
+        {
+          "heading": "İlgili Kişi Olarak KVKK'nın 11. Maddesinde Sayılan Haklarınız Nelerdir?",
+          "paragraphs": [
+            "Kişisel veri sahibi olarak KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahip olduğunuzu bildiririz:"
+          ],
+          "bullets": [
+            "Kişisel verilerinizin işlenip işlenmediğini öğrenme,",
+            "Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme,",
+            "Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,",
+            "Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme,",
+            "Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme ve bu kapsamda yapılan işlemin kişisel verilerinizin aktarıldığı üçüncü kişilere bildirilmesini isteme,",
+            "KVKK'ya ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel verilerin silinmesini veya yok edilmesini isteme ve bu kapsamda yapılan işlemin kişisel verilerinizin aktarıldığı üçüncü kişilere bildirilmesini isteme,",
+            "İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkması durumunda buna itiraz etme,",
+            "Kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme."
+          ]
+        },
+        {
+          "heading": "Başvuru Yöntemleri",
+          "paragraphs": [
+            "Söz konusu haklarınızı kullanmak istediğiniz hâllerde, başvurularınızı BGTS KVK Başvuru Formu ile:"
+          ],
+          "bullets": [
+            "Kimlik bilgileri ile Reşitpaşa Mah. Katar Cad. Teknokent Arı 3 No:4 B303 Sarıyer / İSTANBUL (İ.T.Ü. Ayazağa Kampüsü) adresine göndererek,",
+            "Kayıtlı elektronik posta (KEP) adresi ve güvenli elektronik imza ya da mobil imza kullanmak suretiyle bgtsteknoloji@hs01.kep.tr kayıtlı elektronik posta veya kvkk@bgts.com adresimize göndererek şirketimize iletebilirsiniz."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Talebinizin niteliğine göre en kısa sürede ve en geç otuz gün içinde başvurularınız sonuçlandırılacaktır."
+          ]
+        },
+        {
+          "heading": "Aydınlatma Metninde Gerçekleşecek Değişiklikler",
+          "paragraphs": [
+            "Bu aydınlatma metni zaman zaman BGTS tarafından güncellenebilir. Aydınlatma metninde önemli bir değişiklik yaptığımız takdirde sizlere e-posta veya diğer yollarla gerekli bilgilendirmeler yapılacaktır."
+          ]
+        }
+      ]
     }
   }
 }

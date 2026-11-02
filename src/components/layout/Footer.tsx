@@ -2,9 +2,18 @@ import Link from "next/link"
 import Image from "next/image"
 import { MapPin } from "lucide-react"
 import { localizedHref } from "@/lib/routes"
+import { LEGAL_PATHS, type LegalCommonDict } from "@/components/legal/related"
 import type { Locale } from "@/i18n-config"
 
-export default function Footer({ dict, lang = "tr" }: { dict: any; lang?: string }) {
+export default function Footer({
+    dict,
+    legal,
+    lang = "tr",
+}: {
+    dict: any;
+    legal?: LegalCommonDict;
+    lang?: string;
+}) {
     if (!dict) return null;
     const locale = lang as Locale;
     const href = (path: string) => localizedHref(locale, path);
@@ -93,6 +102,13 @@ export default function Footer({ dict, lang = "tr" }: { dict: any; lang?: string
                         <p className="text-white/30 text-sm">
                             {dict.copyright}
                         </p>
+                        {legal && (
+                            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-white/50 text-sm">
+                                <li><Link href={href(LEGAL_PATHS.privacyNotice)} className="hover:text-corporate-accent transition-colors">{legal.privacyNotice}</Link></li>
+                                <li><Link href={href(LEGAL_PATHS.cookiePolicy)} className="hover:text-corporate-accent transition-colors">{legal.cookiePolicy}</Link></li>
+                                <li><Link href={href(LEGAL_PATHS.termsOfUse)} className="hover:text-corporate-accent transition-colors">{legal.termsOfUse}</Link></li>
+                            </ul>
+                        )}
                     </div>
                 </div>
             </div>
