@@ -45,6 +45,11 @@ const ROUTES: { path: string; priority: number; changeFrequency: 'monthly' | 'we
   { path: '/resources/analyses', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/resources/success-stories', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/resources/infographics', priority: 0.5, changeFrequency: 'monthly' },
+
+  // Yasal
+  { path: '/legal/privacy-notice', priority: 0.3, changeFrequency: 'monthly' },
+  { path: '/legal/cookie-policy', priority: 0.3, changeFrequency: 'monthly' },
+  { path: '/legal/terms-of-use', priority: 0.3, changeFrequency: 'monthly' },
 ]
 
 function localeUrl(locale: Locale, internalPath: string): string {

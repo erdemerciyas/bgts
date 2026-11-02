@@ -136,7 +136,7 @@ export default async function RootLayout(props: {
         <SiteChrome
           header={<Header dict={dict.header} />}
           breadcrumb={<GlobalBreadcrumb />}
-          footer={<Footer dict={dict.footer} lang={params.lang} />}
+          footer={<Footer dict={dict.footer} legal={dict.legal.common} lang={params.lang} />}
         >
           {children}
         </SiteChrome>

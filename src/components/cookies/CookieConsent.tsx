@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Cookie, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -13,6 +15,9 @@ import {
   type CookiePreferences,
   type StoredConsent,
 } from "@/lib/cookie-consent";
+import { getLocaleFromPathname } from "@/lib/base-path";
+import { localizedPathForLang } from "@/lib/routes";
+import { LEGAL_PATHS } from "@/components/legal/related";
 
 type CookieCategoryDict = {
   title: string;
@@ -28,6 +33,7 @@ export type CookieConsentDict = {
   rejectAll: string;
   acceptAll: string;
   revisitLabel: string;
+  policyLink: string;
   preferenceTitle: string;
   preferenceIntro: string[];
   savePreferences: string;
@@ -149,6 +155,7 @@ function CategoryAccordion({
 }
 
 export default function CookieConsent({ dict }: { dict: CookieConsentDict }) {
+  const lang = getLocaleFromPathname(usePathname());
   const [mounted, setMounted] = useState(false);
   const [storedConsent, setStoredConsent] = useState<StoredConsent | null>(null);
   const [showBanner, setShowBanner] = useState(false);
@@ -214,9 +221,15 @@ export default function CookieConsent({ dict }: { dict: CookieConsentDict }) {
             >
               {dict.title}
             </h2>
-            <p className="text-sm text-[#212121]/85 leading-relaxed mb-5">
+            <p className="text-sm text-[#212121]/85 leading-relaxed mb-3">
               {dict.description}
             </p>
+            <Link
+              href={localizedPathForLang(lang, LEGAL_PATHS.cookiePolicy)}
+              className="mb-5 inline-block text-sm font-semibold text-[#1863DC] underline underline-offset-2 hover:text-[#1454BD]"
+            >
+              {dict.policyLink}
+            </Link>
             <div className="flex flex-nowrap items-stretch gap-2">
               <button
                 type="button"

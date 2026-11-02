@@ -57,6 +57,12 @@ export const ROUTE_MAP: Record<string, { tr: string; eng: string }> = {
   '/products/cv-converter': { tr: '/urunler/cv-donusturucu', eng: '/products/cv-converter' },
   '/resources/analyses': { tr: '/bilgi-merkezi/analizler', eng: '/resources/analyses' },
   '/league': { tr: '/league', eng: '/league' },
+  '/legal/cookie-policy': { tr: '/cerez-politikasi', eng: '/legal/cookie-policy' },
+  '/legal/terms-of-use': {
+    tr: '/web-sitesi-kullanim-politikasi',
+    eng: '/legal/terms-of-use',
+  },
+  '/legal/privacy-notice': { tr: '/aydinlatma-metni', eng: '/legal/privacy-notice' },
 };
 
 /** Top-level Turkish aliases without a dedicated page — redirect targets (internal path). */
@@ -133,6 +139,9 @@ export const TR_LEGACY_REDIRECTS: Record<string, string> = {
   '/products/ai-hiring-assistant': '/urunler/yapay-zeka-ise-alim-asistani',
   '/products/cv-converter': '/urunler/cv-donusturucu',
   '/lig': '/league',
+  '/legal/cookie-policy': '/cerez-politikasi',
+  '/legal/terms-of-use': '/web-sitesi-kullanim-politikasi',
+  '/legal/privacy-notice': '/aydinlatma-metni',
 };
 
 function normalizePath(path: string): string {

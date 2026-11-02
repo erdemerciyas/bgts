@@ -304,4 +304,31 @@ export const SEARCH_ITEMS: SearchItem[] = [
         category: "Kurumsal",
         tags: ["veri", "istatistik", "grafik", "infografik", "infographics", "data", "statistics", "chart", "trend", "analiz"]
     },
+    {
+        title: "Müşteri Aydınlatma Metni",
+        description: "Kişisel verilerinizin KVKK kapsamında işlenmesine ilişkin bilgilendirme.",
+        titleEn: "Customer Privacy Notice",
+        descriptionEn: "Information on the processing of your personal data under the KVKK.",
+        href: "/legal/privacy-notice",
+        category: "Kurumsal",
+        tags: ["kvkk", "aydınlatma", "kişisel veri", "gizlilik", "privacy", "gdpr", "personal data", "veri sorumlusu", "6698", "başvuru"]
+    },
+    {
+        title: "Çerez Politikası",
+        description: "Web sitesinde kullanılan çerezler, türleri ve tercih yönetimi.",
+        titleEn: "Cookie Policy",
+        descriptionEn: "Cookies used on the website, their types and preference management.",
+        href: "/legal/cookie-policy",
+        category: "Kurumsal",
+        tags: ["çerez", "cookie", "cookies", "analytics", "google analytics", "onay", "consent", "tercih"]
+    },
+    {
+        title: "Web Sitesi Kullanım Politikası",
+        description: "Web sitesinin kullanımına ilişkin şart ve koşullar.",
+        titleEn: "Website Terms of Use",
+        descriptionEn: "Terms and conditions for using the website.",
+        href: "/legal/terms-of-use",
+        category: "Kurumsal",
+        tags: ["kullanım koşulları", "şartlar", "terms", "terms of use", "fikri mülkiyet", "telif", "sorumluluk", "yasal"]
+    },
 ];

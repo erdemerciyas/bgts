@@ -3604,6 +3604,7 @@
     "rejectAll": "Reject All",
     "acceptAll": "Accept All",
     "revisitLabel": "Consent Preferences",
+    "policyLink": "Cookie Policy",
     "preferenceTitle": "Customise Consent Preferences",
     "preferenceIntro": [
       "We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.",
@@ -3895,6 +3896,361 @@
       "title": "Application received!",
       "message": "Thank you. Your application has been forwarded to our evaluation team; we will contact you by email or phone about the result.",
       "home": "Back to Home"
+    }
+  },
+  "legal": {
+    "common": {
+      "eyebrow": "Legal Notices",
+      "relatedTitle": "Related legal documents",
+      "cookiePolicy": "Cookie Policy",
+      "termsOfUse": "Website Terms of Use",
+      "privacyNotice": "Customer Privacy Notice"
+    },
+    "cookiePolicy": {
+      "meta": {
+        "title": "Cookie Policy",
+        "description": "Information on the cookies used on the BGTS Teknoloji ve Yazılım A.Ş. website, their types, retention periods and how to manage your cookie preferences."
+      },
+      "hero": {
+        "title": "Cookie Policy",
+        "subtitle": "Information on the cookies and similar technologies used on the website operated by BGTS Teknoloji ve Yazılım A.Ş.",
+        "updated": "Last updated: 20.10.2026"
+      },
+      "sections": [
+        {
+          "heading": "1. Purpose and Scope",
+          "paragraphs": [
+            "This Cookie Policy (the \"Policy\") has been prepared to inform users about the cookies and similar technologies used when visiting the website https://bgts.com (the \"Website\") operated by BGTS (the \"Company\").",
+            "This Policy applies to all users visiting the Website and is complementary to the Company's Website Terms of Use and its KVKK Customer Privacy Notice."
+          ]
+        },
+        {
+          "heading": "2. What Is a Cookie?",
+          "paragraphs": [
+            "Cookies are small, low-volume text files, mostly consisting of combinations of letters and numbers, that are stored on a user's device (computer, tablet, smartphone, etc.) through the browser when a website is visited. Cookies are used for purposes such as remembering user preferences, measuring site performance, improving the user experience and analysing site traffic."
+          ]
+        },
+        {
+          "heading": "3. Types of Cookies Used",
+          "paragraphs": [
+            "3.1. By Retention Period"
+          ],
+          "bullets": [
+            "Session Cookies: Temporary cookies that are deleted automatically when the browser is closed.",
+            "Persistent Cookies: Cookies stored on the device until deleted by the user or until the specified period expires."
+          ]
+        },
+        {
+          "paragraphs": [
+            "3.2. By Party"
+          ],
+          "bullets": [
+            "First-Party Cookies: Cookies placed directly by the Website.",
+            "Third-Party Cookies: Cookies placed by service providers outside the Website (analytics, advertising, social media platforms, etc.)."
+          ]
+        },
+        {
+          "paragraphs": [
+            "3.3. By Purpose of Use"
+          ],
+          "bullets": [
+            "Strictly Necessary Cookies: Required for the core functions of the Website (sign-in, security, navigation, etc.) to work; they cannot be disabled.",
+            "Performance/Analytics Cookies: Used to measure site traffic, visit frequency and user behaviour anonymously.",
+            "Functional Cookies: Allow user preferences such as language and region to be remembered.",
+            "Marketing/Targeting Cookies: Used to present content and advertising matching the user's interests."
+          ]
+        },
+        {
+          "heading": "4. Cookies Used on the Website",
+          "table": {
+            "headers": [
+              "Cookie Name",
+              "Type",
+              "Retention Period",
+              "Purpose"
+            ],
+            "rows": [
+              [
+                "bgts_cookie_consent (browser local storage)",
+                "Strictly Necessary / First Party",
+                "1 year",
+                "Storing and remembering the user's cookie consent preferences."
+              ],
+              [
+                "_ga, _ga_FSY3WLT3M7 (Google Analytics 4)",
+                "Analytics / Third Party",
+                "2 years",
+                "Analysing visitor behaviour and site performance. Runs only if the user has given consent."
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "5. Purposes for Which Cookies Are Used",
+          "paragraphs": [
+            "The Company uses cookies on the Website for the following purposes:"
+          ],
+          "bullets": [
+            "Ensuring the secure and proper operation of the Website.",
+            "Improving the user experience and site performance.",
+            "Analysing site traffic, visit statistics and usage trends.",
+            "Remembering user preferences (cookie consent preferences).",
+            "Fulfilling legal obligations where required by legislation."
+          ]
+        },
+        {
+          "heading": "6. Managing Cookie Preferences",
+          "paragraphs": [
+            "Consent is obtained from the user on their first visit to the Website for the use of all cookies other than strictly necessary ones. Users may change their cookie preferences at any time through the \"Consent Preferences\" section on the Website.",
+            "Users may also accept or reject cookies, or delete cookies stored on their devices, through the settings of the internet browser they use. Disabling strictly necessary cookies may cause some features of the website to stop working properly."
+          ],
+          "bullets": [
+            "Google Chrome: Click the \"padlock icon\" in your browser's address bar and allow or block cookies from the \"cookies\" tab.",
+            "Microsoft Edge: Click the security tab under \"Tools\" at the top right of your browser and manage cookies as \"allow\" or \"do not allow\".",
+            "Mozilla Firefox: Click the \"open menu\" tab at the top right of your browser. Click \"Options\" and manage cookies using the \"Privacy and Security\" button.",
+            "Opera: Select \"Advanced\" under your browser's \"Preferences\" section and manage cookies from the \"cookies\" section.",
+            "Safari: Select the \"Safari\" tab under your browser's \"Settings\" section and manage all your cookies from the \"Privacy and Security\" section."
+          ]
+        },
+        {
+          "heading": "7. Third-Party Cookies",
+          "paragraphs": [
+            "Cookies belonging to third-party service providers (Google LLC – Google Analytics 4) are used on the Website for analytics purposes only where the user has given consent. The collection, processing and storage of these cookies is subject to the relevant third party's own privacy policies; the Company is not responsible for the privacy practices of these third-party applications."
+          ]
+        },
+        {
+          "heading": "8. Protection of Personal Data",
+          "paragraphs": [
+            "Depending on their nature, data obtained through cookies may qualify as personal data under Law No. 6698 on the Protection of Personal Data (\"KVKK\"). Detailed information on the processing of such data is available in the Customer Privacy Notice published separately by the Company."
+          ]
+        },
+        {
+          "heading": "9. Contact",
+          "paragraphs": [
+            "BGTS Teknoloji ve Yazılım A.Ş.",
+            "Reşitpaşa Mah. Katar Cad. İTÜ Teknokent Arı 3 No:4 B303 Sarıyer / İSTANBUL",
+            "bgtsteknoloji@hs01.kep.tr or kvkk@bgts.com"
+          ]
+        }
+      ]
+    },
+    "termsOfUse": {
+      "meta": {
+        "title": "Website Terms of Use",
+        "description": "Terms and conditions for using the BGTS Teknoloji ve Yazılım A.Ş. website, including intellectual property rights, prohibited uses and limitation of liability."
+      },
+      "hero": {
+        "title": "Website Terms of Use",
+        "subtitle": "Terms and conditions governing the use of the website operated by BGTS Teknoloji ve Yazılım A.Ş.",
+        "updated": "Last updated: 20.10.2026"
+      },
+      "sections": [
+        {
+          "heading": "1. Purpose and Scope",
+          "paragraphs": [
+            "These Website Terms of Use (the \"Policy\") govern the terms and conditions for the use of the website https://bgts.com and its associated subdomains (the \"Website\") operated by BGTS Teknoloji ve Yazılım A.Ş. (the \"Company\").",
+            "This Policy covers all natural and legal persons (the \"User\") who visit, view or in any way use the Website. Use of the Website means that all terms and conditions set out in this Policy are accepted. Users who do not accept these terms should not use the Website."
+          ]
+        },
+        {
+          "heading": "2. Definitions",
+          "table": {
+            "headers": [
+              "Term",
+              "Definition"
+            ],
+            "rows": [
+              [
+                "Company",
+                "BGTS and its affiliated companies."
+              ],
+              [
+                "Website",
+                "The website and its mobile extensions owned and operated by the Company."
+              ],
+              [
+                "User",
+                "The natural or legal person who visits or uses the Website in any way."
+              ],
+              [
+                "Content",
+                "All materials on the Website, including text, images, video, logos, design and software."
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "3. Intellectual Property Rights",
+          "paragraphs": [
+            "All content on the Website (text, images, logos, trademarks, design, databases, software code, etc.) belongs to BGTS or to third-party licensors and is protected under Law No. 5846 on Intellectual and Artistic Works, Law No. 6769 on Industrial Property and other relevant legislation.",
+            "The Website content may not be reproduced, distributed, adapted, communicated to the public or used for commercial purposes, in whole or in part, without the Company's prior written permission. Users may use the Website solely for information or business-related purposes and in accordance with this Policy."
+          ]
+        },
+        {
+          "heading": "4. Conditions of Use",
+          "paragraphs": [
+            "Users agree to comply with the following rules when using the Website:"
+          ],
+          "bullets": [
+            "The Website shall be used in accordance with applicable legislation, ethical rules and the principle of good faith.",
+            "It is the User's responsibility to ensure that the information submitted to the Company through the Website is accurate, current and complete.",
+            "Comments, feedback or other content shared through the Website shall not violate the law, the rights of third parties or public morals."
+          ]
+        },
+        {
+          "heading": "5. Prohibited Uses",
+          "paragraphs": [
+            "Users are obliged to refrain from the following when using the Website:"
+          ],
+          "bullets": [
+            "Using software, viruses, malicious code or automated tools (bots, scrapers, etc.) that would disrupt the operation of the Website or make it inaccessible.",
+            "Attempting to gain unauthorised access to the Website or to the Company's systems.",
+            "Using information and content obtained through the Website for commercial purposes or transferring it to third parties without the Company's permission.",
+            "Sharing misleading information through the Website.",
+            "Copying or reverse engineering the Website's source code, algorithms or design without permission."
+          ]
+        },
+        {
+          "heading": "6. Cookies",
+          "paragraphs": [
+            "The Website uses cookies to improve the user experience, analyse site traffic and personalise content. Detailed information on the types of cookies, their purposes and their management is available in the separate BGTS Cookie Policy. Users may manage their cookie preferences through their browser settings."
+          ]
+        },
+        {
+          "heading": "7. Protection of Personal Data",
+          "paragraphs": [
+            "Personal data collected through the Website is processed in accordance with Law No. 6698 on the Protection of Personal Data (\"KVKK\") and related legislation. Detailed information on the processing of personal data is set out in the privacy notices and other KVKK-related policies published separately by the Company."
+          ]
+        },
+        {
+          "heading": "8. Linked Third-Party Websites",
+          "paragraphs": [
+            "The Website may contain links to third-party websites for informational purposes. The Company is not responsible for the content, privacy practices or security of these third-party sites. Users access these sites at their own responsibility."
+          ]
+        },
+        {
+          "heading": "9. Limitation of Liability",
+          "paragraphs": [
+            "The Company exercises the utmost duty of care to ensure that the Website operates without interruption, without error and free of security vulnerabilities. To the maximum extent permitted by applicable legislation, the Company cannot be held liable for any direct or indirect damages arising from the use of the Website, its unavailability, or errors and omissions in its content.",
+            "The Company reserves the right to change, update or withdraw the Website content, or to suspend access to the Website temporarily or permanently, without prior notice."
+          ]
+        },
+        {
+          "heading": "10. Changes to the Policy",
+          "paragraphs": [
+            "The Company reserves the right to amend this Policy in line with applicable legislation. The current Policy takes effect through the Website from the moment it is published. Continued use of the Website by Users means that the updated Policy is accepted."
+          ]
+        }
+      ]
+    },
+    "privacyNotice": {
+      "meta": {
+        "title": "Privacy Notice for Corporate Customer Employees/Representatives",
+        "description": "Privacy notice on the processing by BGTS Teknoloji ve Yazılım A.Ş. of personal data belonging to corporate customer employees and representatives under Law No. 6698 (KVKK)."
+      },
+      "hero": {
+        "title": "Privacy Notice for Corporate Customer Employees/Representatives",
+        "subtitle": "Information on the processing of your personal data in the capacity of data controller under Law No. 6698 on the Protection of Personal Data.",
+        "updated": "Last updated: 24.08.2026"
+      },
+      "sections": [
+        {
+          "paragraphs": [
+            "As BGTS Teknoloji ve Yazılım A.Ş. (\"BGTS\", Reşitpaşa Mah. Katar Cad. İTÜ Teknokent Arı 3 No:4 B303 Sarıyer / İSTANBUL), we process your personal data in the capacity of data controller, in order to serve our existing and potential customers, in accordance with Law No. 6698 on the Protection of Personal Data and other applicable legislation in force, and within the scope explained below."
+          ]
+        },
+        {
+          "heading": "Which Personal Data Do We Collect and Process?",
+          "paragraphs": [
+            "Name, surname, telephone number and e-mail address."
+          ]
+        },
+        {
+          "heading": "For Which Purposes and on Which Legal Grounds Do We Process Your Personal Data?",
+          "paragraphs": [
+            "Your collected personal data may be processed in line with the fundamental principles set out in the KVKK, where one or more of the following legal grounds exists:"
+          ],
+          "bullets": [
+            "It is expressly provided for by law.",
+            "It is necessary to process the personal data of the parties to a contract, provided that it is directly related to the conclusion or performance of that contract.",
+            "It is mandatory for the data controller to fulfil its legal obligations.",
+            "Data processing is mandatory for the establishment, exercise or protection of a right."
+          ]
+        },
+        {
+          "heading": "Purposes of Personal Data Processing",
+          "bullets": [
+            "Carrying out the service.",
+            "Planning, managing and carrying out business development processes.",
+            "Carrying out services provided to corporate companies.",
+            "Carrying out customer satisfaction processes.",
+            "Carrying out promotional, informational and marketing activities relating to our services.",
+            "Carrying out legal processes.",
+            "Providing information to public institutions and organisations where required."
+          ]
+        },
+        {
+          "heading": "By Which Method Do We Collect Your Personal Data?",
+          "paragraphs": [
+            "Your personal data is collected and processed by our company within the scope of the purposes listed above, through electronic and physical forms, e-mail, live chat and WhatsApp."
+          ]
+        },
+        {
+          "heading": "To Whom and for Which Purposes Do We Transfer Your Personal Data?",
+          "paragraphs": [
+            "Your personal data may be transferred, limited to the activities and purposes explained above, to:"
+          ],
+          "bullets": [
+            "Public institutions or organisations authorised by legislation to request such data,",
+            "Our systems provided by our infrastructure suppliers in the technology field,",
+            "Our business partners who support us in carrying out the services,",
+            "Authorised public institutions and organisations."
+          ]
+        },
+        {
+          "heading": "For How Long Do We Retain Your Personal Data?",
+          "paragraphs": [
+            "Your personal data is retained in accordance with the BGTS Data Retention and Destruction Procedure and is deleted or destroyed at the end of the retention periods."
+          ]
+        },
+        {
+          "heading": "What Are Your Rights as a Data Subject Under Article 11 of the KVKK?",
+          "paragraphs": [
+            "As the owner of personal data, we inform you that you have the following rights pursuant to Article 11 of the KVKK:"
+          ],
+          "bullets": [
+            "To learn whether your personal data is being processed,",
+            "To request information if your personal data has been processed,",
+            "To learn the purpose of processing your personal data and whether it is used in accordance with that purpose,",
+            "To know the third parties in Türkiye or abroad to whom your personal data has been transferred,",
+            "To request the correction of your personal data if it has been processed incompletely or inaccurately, and to request that this be notified to the third parties to whom your personal data has been transferred,",
+            "To request the deletion or destruction of your personal data if the reasons requiring its processing cease to exist, even though it has been processed in accordance with the KVKK and other applicable laws, and to request that this be notified to the third parties to whom your personal data has been transferred,",
+            "To object to a result arising against you through the analysis of the processed data exclusively by automated systems,",
+            "To claim compensation for damage if you suffer loss due to the unlawful processing of your personal data."
+          ]
+        },
+        {
+          "heading": "How to Submit a Request",
+          "paragraphs": [
+            "Should you wish to exercise these rights, you may submit your request to our company using the BGTS KVK Application Form:"
+          ],
+          "bullets": [
+            "By sending it together with your identity information to Reşitpaşa Mah. Katar Cad. Teknokent Arı 3 No:4 B303 Sarıyer / İSTANBUL (İ.T.Ü. Ayazağa Campus),",
+            "By sending it, using a registered electronic mail (KEP) address and a secure electronic signature or mobile signature, to our registered electronic mail address bgtsteknoloji@hs01.kep.tr or to kvkk@bgts.com."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Depending on the nature of your request, your application will be concluded as soon as possible and within thirty days at the latest."
+          ]
+        },
+        {
+          "heading": "Changes to This Privacy Notice",
+          "paragraphs": [
+            "This privacy notice may be updated from time to time by BGTS. If we make a significant change to the notice, we will inform you by e-mail or by other means."
+          ]
+        }
+      ]
     }
   }
 }
