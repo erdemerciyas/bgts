@@ -77,7 +77,7 @@ Ziyaretçi → middleware.ts (locale routing, rate limiting)
 
 | Katman | Teknoloji | Versiyon |
 |--------|-----------|----------|
-| Framework | Next.js (App Router) | 16.1.1 |
+| Framework | Next.js (App Router) | 16.4.3 |
 | Dil | TypeScript | ^5 |
 | UI Kütüphanesi | React | 19.2.3 |
 | Stillendirme | Tailwind CSS (PostCSS) | v4 |
@@ -334,7 +334,7 @@ bgts-web/
 
 ### Ön Gereksinimler
 
-- **Node.js** 18 veya üzeri
+- **Node.js** 24 veya üzeri
 - **npm** (veya yarn / pnpm)
 
 ### Adım Adım

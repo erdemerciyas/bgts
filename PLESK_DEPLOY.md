@@ -8,7 +8,7 @@ Bu doküman, **bgts-web** (Next.js 16) projesinin Plesk paneli üzerinden produc
 
 | Gereksinim | Değer |
 |------------|-------|
-| Node.js | **18+** (tercihen **20 LTS**) |
+| Node.js | **24 LTS** |
 | RAM | Build için en az **2 GB** (4 GB önerilir) |
 | Plesk | **Node.js eklentisi** yüklü olmalı |
 
@@ -41,7 +41,7 @@ git clone https://github.com/erdemerciyas/bgts.git .
 
 | Ayar | Değer | Not |
 |------|-------|-----|
-| Node.js version | `20.3.0` (veya 20.x) | ✓ |
+| Node.js version | `24.x` | ✓ |
 | Package Manager | `npm` | ✓ |
 | Application mode | `production` | ✓ |
 | Application root | `/httpdocs/tr3` | `package.json` burada olmalı |
@@ -232,7 +232,7 @@ npm run build
 
 ## Deploy Kontrol Listesi
 
-- [ ] Node.js 20 LTS seçildi
+- [ ] Node.js 24 LTS seçildi
 - [ ] Proje dosyaları sunucuda (`package.json` mevcut)
 - [ ] `npm install` tamamlandı
 - [ ] Ortam değişkenleri Plesk panelinde tanımlı
