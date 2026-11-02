@@ -124,7 +124,12 @@ export default async function RootLayout(props: {
   const dict = await getDictionary(params.lang as Locale);
 
   return (
-    <html lang={htmlLang(params.lang as Locale)} className="scroll-smooth">
+    // Font degiskenleri :root'ta (html) tanimli olmali; @theme icindeki
+    // --font-sans: var(--font-inter) ancak o zaman cozulur.
+    <html
+      lang={htmlLang(params.lang as Locale)}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} scroll-smooth`}
+    >
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/icon.png" />
@@ -132,7 +137,7 @@ export default async function RootLayout(props: {
         <LocalBusinessStructuredData />
         <WebSiteStructuredData locale={params.lang as Locale} />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased text-[#212121] bg-white`}>
+      <body className="font-sans antialiased text-[#212121] bg-white">
         <SiteChrome
           header={<Header dict={dict.header} />}
           breadcrumb={<GlobalBreadcrumb />}
