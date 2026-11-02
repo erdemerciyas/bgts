@@ -3,6 +3,9 @@ import type { NextConfig } from "next";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH?.replace(/\/$/, "") || "";
 
 const nextConfig: NextConfig = {
+  ...(process.env.BGTS_BUILD_DIR
+    ? { distDir: process.env.BGTS_BUILD_DIR }
+    : {}),
   ...(basePath ? { basePath } : {}),
   images: {
     qualities: [75, 85],
