@@ -19,11 +19,23 @@ import { getLocaleFromPathname } from "@/lib/base-path";
 import { localizedPathForLang } from "@/lib/routes";
 import { LEGAL_PATHS } from "@/components/legal/related";
 
+type CookieEntryDict = {
+  name: string;
+  duration: string;
+  description: string;
+};
+
 type CookieCategoryDict = {
   title: string;
   description: string;
   alwaysActive: string;
   noCookies: string;
+  cookies: CookieEntryDict[];
+};
+
+type CookieTableDict = {
+  name: string;
+  duration: string;
 };
 
 export type CookieConsentDict = {
@@ -34,6 +46,7 @@ export type CookieConsentDict = {
   acceptAll: string;
   revisitLabel: string;
   policyLink: string;
+  cookieTable: CookieTableDict;
   preferenceTitle: string;
   preferenceIntro: string[];
   savePreferences: string;
@@ -87,11 +100,13 @@ function Toggle({
 function CategoryAccordion({
   slug,
   category,
+  labels,
   enabled,
   onToggle,
 }: {
   slug: CookieCategorySlug;
   category: CookieCategoryDict;
+  labels: CookieTableDict;
   enabled: boolean;
   onToggle: (value: boolean) => void;
 }) {
@@ -145,9 +160,30 @@ function CategoryAccordion({
 
       {open && (
         <div className="px-4 pb-4">
-          <div className="rounded-md border border-[#EBEBEB] bg-[#F4F4F4] px-4 py-3 text-sm text-[#212121]/70">
-            {category.noCookies}
-          </div>
+          {category.cookies.length === 0 ? (
+            <div className="rounded-md border border-[#EBEBEB] bg-[#F4F4F4] px-4 py-3 text-sm text-[#212121]/70">
+              {category.noCookies}
+            </div>
+          ) : (
+            <ul className="divide-y divide-[#EBEBEB] rounded-md border border-[#EBEBEB] bg-[#F4F4F4]">
+              {category.cookies.map((cookie) => (
+                <li key={cookie.name} className="px-4 py-3">
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <span className="sr-only">{labels.name}: </span>
+                    <code className="font-mono text-sm font-semibold text-[#212121]">
+                      {cookie.name}
+                    </code>
+                    <span className="rounded-full bg-white px-2 py-0.5 text-xs font-medium text-[#212121]/70">
+                      {labels.duration}: {cookie.duration}
+                    </span>
+                  </div>
+                  <p className="mt-1.5 text-sm leading-relaxed text-[#212121]/70">
+                    {cookie.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
     </div>
@@ -301,6 +337,7 @@ export default function CookieConsent({ dict }: { dict: CookieConsentDict }) {
                     key={slug}
                     slug={slug}
                     category={dict.categories[slug]}
+                    labels={dict.cookieTable}
                     enabled={
                       slug === "necessary"
                         ? true

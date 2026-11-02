@@ -3605,6 +3605,10 @@
     "acceptAll": "Accept All",
     "revisitLabel": "Consent Preferences",
     "policyLink": "Cookie Policy",
+    "cookieTable": {
+      "name": "Cookie",
+      "duration": "Duration"
+    },
     "preferenceTitle": "Customise Consent Preferences",
     "preferenceIntro": [
       "We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.",
@@ -3619,31 +3623,53 @@
         "title": "Necessary",
         "description": "Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.",
         "alwaysActive": "Always Active",
-        "noCookies": "No cookies to display."
+        "noCookies": "No cookies to display.",
+        "cookies": [
+          {
+            "name": "bgts_cookie_consent",
+            "duration": "1 year",
+            "description": "Stores your cookie consent preferences and remembers them on later visits. Kept in your browser local storage."
+          }
+        ]
       },
       "functional": {
         "title": "Functional",
         "description": "Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.",
         "alwaysActive": "Always Active",
-        "noCookies": "No cookies to display."
+        "noCookies": "No cookies to display.",
+        "cookies": []
       },
       "analytics": {
         "title": "Analytics",
         "description": "Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.",
         "alwaysActive": "Always Active",
-        "noCookies": "No cookies to display."
+        "noCookies": "No cookies to display.",
+        "cookies": [
+          {
+            "name": "_ga",
+            "duration": "2 years",
+            "description": "Used by Google Analytics 4 to distinguish visitors from one another."
+          },
+          {
+            "name": "_ga_FSY3WLT3M7",
+            "duration": "2 years",
+            "description": "Used by Google Analytics 4 to persist session state."
+          }
+        ]
       },
       "performance": {
         "title": "Performance",
         "description": "Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors.",
         "alwaysActive": "Always Active",
-        "noCookies": "No cookies to display."
+        "noCookies": "No cookies to display.",
+        "cookies": []
       },
       "advertisement": {
         "title": "Advertisement",
         "description": "Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns.",
         "alwaysActive": "Always Active",
-        "noCookies": "No cookies to display."
+        "noCookies": "No cookies to display.",
+        "cookies": []
       }
     }
   },
@@ -3984,6 +4010,11 @@
               ]
             ]
           }
+        },
+        {
+          "paragraphs": [
+            "In addition to the cookies listed in the table above, the cookie consent panel also offers the \"Functional\", \"Performance\" and \"Advertisement\" categories as preferences. No cookies in these categories are currently used on the Website; should cookies in these categories be used in the future, they will run only where the user has given consent and this Policy will be updated."
+          ]
         },
         {
           "heading": "5. Purposes for Which Cookies Are Used",

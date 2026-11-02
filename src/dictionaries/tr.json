@@ -3605,6 +3605,10 @@
     "acceptAll": "Tümünü Kabul Et",
     "revisitLabel": "Onay Tercihleri",
     "policyLink": "Çerez Politikası",
+    "cookieTable": {
+      "name": "Çerez",
+      "duration": "Süre"
+    },
     "preferenceTitle": "Onay Tercihlerini Özelleştir",
     "preferenceIntro": [
       "Sitede verimli gezinmenize ve belirli işlevleri yerine getirmenize yardımcı olmak için çerezler kullanıyoruz. Tüm çerezlere ilişkin ayrıntılı bilgileri aşağıdaki onay kategorilerinde bulabilirsiniz.",
@@ -3619,31 +3623,53 @@
         "title": "Gerekli",
         "description": "Gerekli çerezler, güvenli oturum açma veya onay tercihlerinizi ayarlama gibi sitenin temel özelliklerini etkinleştirmek için zorunludur. Bu çerezler kişisel olarak tanımlanabilir veri saklamaz.",
         "alwaysActive": "Her Zaman Etkin",
-        "noCookies": "Gösterilecek çerez yok."
+        "noCookies": "Gösterilecek çerez yok.",
+        "cookies": [
+          {
+            "name": "bgts_cookie_consent",
+            "duration": "1 yıl",
+            "description": "Çerez onay tercihlerinizi saklar ve sonraki ziyaretlerinizde hatırlar. Tarayıcınızın yerel depolama alanında tutulur."
+          }
+        ]
       },
       "functional": {
         "title": "İşlevsel",
         "description": "İşlevsel çerezler, web sitesi içeriğini sosyal medya platformlarında paylaşma, geri bildirim toplama ve diğer üçüncü taraf özellikleri gibi belirli işlevleri yerine getirmeye yardımcı olur.",
         "alwaysActive": "Her Zaman Etkin",
-        "noCookies": "Gösterilecek çerez yok."
+        "noCookies": "Gösterilecek çerez yok.",
+        "cookies": []
       },
       "analytics": {
         "title": "Analitik",
         "description": "Analitik çerezler, ziyaretçilerin web sitesiyle nasıl etkileşime girdiğini anlamak için kullanılır. Ziyaretçi sayısı, hemen çıkma oranı, trafik kaynağı gibi metrikler hakkında bilgi sağlarlar.",
         "alwaysActive": "Her Zaman Etkin",
-        "noCookies": "Gösterilecek çerez yok."
+        "noCookies": "Gösterilecek çerez yok.",
+        "cookies": [
+          {
+            "name": "_ga",
+            "duration": "2 yıl",
+            "description": "Google Analytics 4 tarafından ziyaretçileri birbirinden ayırmak için kullanılır."
+          },
+          {
+            "name": "_ga_FSY3WLT3M7",
+            "duration": "2 yıl",
+            "description": "Google Analytics 4 tarafından oturum durumunu sürdürmek için kullanılır."
+          }
+        ]
       },
       "performance": {
         "title": "Performans",
         "description": "Performans çerezleri, web sitesinin temel performans göstergelerini anlamak ve analiz etmek için kullanılır; bu da ziyaretçiler için daha iyi bir kullanıcı deneyimi sunulmasına yardımcı olur.",
         "alwaysActive": "Her Zaman Etkin",
-        "noCookies": "Gösterilecek çerez yok."
+        "noCookies": "Gösterilecek çerez yok.",
+        "cookies": []
       },
       "advertisement": {
         "title": "Reklam",
         "description": "Reklam çerezleri, daha önce ziyaret ettiğiniz sayfalara göre özelleştirilmiş reklamlar sunmak ve reklam kampanyalarının etkinliğini analiz etmek için kullanılır.",
         "alwaysActive": "Her Zaman Etkin",
-        "noCookies": "Gösterilecek çerez yok."
+        "noCookies": "Gösterilecek çerez yok.",
+        "cookies": []
       }
     }
   },
@@ -4035,6 +4061,11 @@
               ]
             ]
           }
+        },
+        {
+          "paragraphs": [
+            "Çerez onay panelinde, yukarıdaki tabloda yer alan çerezlere ek olarak \"İşlevsel\", \"Performans\" ve \"Reklam\" kategorileri de tercih olarak sunulmaktadır. Bu kategorilerde hâlen Web Sitesi'nde kullanılan bir çerez bulunmamaktadır; ileride bu kategorilerde çerez kullanılması hâlinde ilgili çerezler yalnızca kullanıcının onay vermesi durumunda çalıştırılacak ve işbu Politika güncellenecektir."
+          ]
         },
         {
           "heading": "5. Çerezlerin Kullanım Amaçları",
