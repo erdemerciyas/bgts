@@ -109,7 +109,7 @@ function rewriteWithPathname(
   });
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const rawPathname = stripBasePath(request.nextUrl.pathname);
   // Canlı alan adında (bgts.com) yalnızca /tr/* bu uygulamaya yönleniyor; kök /api/* WordPress'e düşüyor.
   // Bu yüzden istemci API çağrıları /tr/api/* ile yapılır ve burada /api/*'ye rewrite edilir.
