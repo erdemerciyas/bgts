@@ -12,7 +12,7 @@ export function OrganizationStructuredData({ locale }: { locale: Locale }) {
     '@type': 'Organization',
     name: 'BGTS - Business & Global Technology Solutions',
     url: SITE_URL,
-    logo: `${SITE_URL}/BGTS_logo.png`,
+    logo: `${SITE_URL}/icon.png`,
     description: ORG_DESCRIPTION[locale],
     address: {
       '@type': 'PostalAddress',

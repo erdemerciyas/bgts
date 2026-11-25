@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH?.replace(/\/$/, "") || "";
+// React dev modu eval() kullanir; CSP'de unsafe-eval sadece development'ta acilir.
+const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
   ...(process.env.BGTS_BUILD_DIR
@@ -29,6 +31,9 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  experimental: {
+    agentUpgrade: "security",
+  },
   async rewrites() {
     return [
       // Locale altından istenen manifest kök dosyaya yönlendirilir
@@ -66,7 +71,7 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://vercel.live",
+              `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://*.googletagmanager.com https://*.google-analytics.com https://vercel.live`,
               "style-src 'self' 'unsafe-inline' https://vercel.live",
               "img-src 'self' data: blob: https://*.unsplash.com https://i.pravatar.cc https://*.vidyard.com https://vercel.live https://*.vercel.com",
               "font-src 'self' data:",

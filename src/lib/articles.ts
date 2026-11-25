@@ -21,6 +21,10 @@ const AUTHOR_PROFILES: Record<string, Record<Locale, AuthorProfile>> = {
     tr: { title: "Müşteri Başarı Yöneticisi", department: "Teknoloji Servisleri" },
     eng: { title: "Customer Success Manager", department: "Technology Services" },
   },
+  "Ömer Yavuz": {
+    tr: { title: "Direktör", department: "Yapay Zeka ve Yazılım Mühendisliği" },
+    eng: { title: "Director", department: "AI and Software Engineering" },
+  },
 }
 
 export function getAuthorProfile(author: string, lang: string): AuthorProfile | undefined {
@@ -33,6 +37,7 @@ export const AUTHOR_AVATARS: Record<string, string> = {
   "Alper Önsoy": "/images/articles/writer/alper-onsoy.png",
   "Erdoğan Bilici": "/images/articles/writer/erdogan-bilici.png",
   "Sinan Demirci": "/images/articles/writer/sinan-dermirci.png",
+  "Ömer Yavuz": "/images/articles/writer/omer-yavuz.png",
 }
 
 export const ARTICLE_LINKEDIN_URLS: Record<string, string> = {
